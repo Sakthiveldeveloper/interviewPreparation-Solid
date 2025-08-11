@@ -1,0 +1,77 @@
+📌 SQL Coding Questions
+1. Basic Queries
+Write a query to select all columns from a table called employees.
+Retrieve only name and salary from employees.
+Write a query to find all employees whose salary is greater than 50,000.
+Fetch all employees whose name starts with 'A'.
+Retrieve the top 5 highest-paid employees.
+
+2. Filtering & Sorting
+Get employees whose joining date is between '2020-01-01' and '2021-01-01'.
+Fetch employees from HR or Finance department.
+Get all employees excluding those from Sales.
+Sort employees by salary in descending order.
+Sort employees by department ASC, then salary DESC.
+
+3. Aggregate Functions
+Count the total number of employees.
+Find the average salary in each department.
+Get the maximum and minimum salary from employees.
+Count how many employees have a non-null phone number.
+Get total salary paid in each department.
+
+4. Joins
+Retrieve all orders with their corresponding customer names.
+Find all customers who placed no orders.
+List all employees along with their manager names.
+Show products with their supplier details.
+Get employees working in the same department as 'John'.
+
+5. Grouping & HAVING
+Find departments with more than 5 employees.
+Get departments with an average salary greater than 60,000.
+Count employees in each job title.
+Get the total number of orders placed each month.
+List all countries with more than 10 customers.
+
+6. Subqueries
+Get employees with salary above the company average.
+Find employees who earn more than their manager.
+Retrieve employees working in departments located in 'New York'.
+Get the second-highest salary from employees.
+Get the Nth highest salary using subquery.
+
+7. CTEs & Window Functions
+Rank employees by salary within their department.
+Get the difference between each employee’s salary and the department average.
+Show previous and next salaries for each employee (LEAD & LAG).
+Assign row numbers to each order based on order date.
+Calculate running total of salaries.
+
+8. Set Operations
+Get all customers from TableA or TableB (UNION).
+Get customers who exist in both tables (INTERSECT).
+Get customers from TableA but not in TableB (EXCEPT).
+Merge duplicate customer records into one.
+Find employees present in one list but not the other.
+
+9. Updates & Deletes
+Increase salary of all employees in IT department by 10%.
+Delete all records from temp_data.
+Update phone number of employee with ID = 5.
+Delete orders older than 2018.
+Increase all salaries by 5% where salary < average salary.
+
+10. Views, Procedures & Triggers
+Create a view to list high-salary employees.
+Write a stored procedure to get employees by department.
+Create a trigger to log salary changes.
+Write a function to return employee full name.
+Create a trigger to prevent deletion from critical_table.
+
+11. Performance & Optimization
+Add an index to speed up search by email.
+Check query execution plan for a slow query.
+Partition a large orders table by year.
+Optimize a query using indexes and avoiding subqueries.
+Identify and remove unused indexes.

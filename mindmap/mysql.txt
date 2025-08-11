@@ -1,127 +1,150 @@
-SQL (Structured Query Language)
 ├── 1. Basics
-│ ├── What is SQL? (Definition, Purpose)
-│ ├── Uses of SQL (Querying, Data Manipulation, DB Management)
-│ ├── Categories of SQL Commands
-│ │ ├── DDL (Data Definition Language)
-│ │ ├── DML (Data Manipulation Language)
-│ │ ├── DQL (Data Query Language)
-│ │ ├── DCL (Data Control Language)
-│ │ └── TCL (Transaction Control Language)
-│ └── Popular SQL Databases (MySQL, PostgreSQL, SQL Server, Oracle)
+│   ├── What is SQL? (Definition, Purpose)
+│   ├── Uses of SQL (Querying, Data Manipulation, DB Management)
+│   ├── Categories of SQL Commands
+│   │   ├── DDL (Data Definition Language)
+│   │   ├── DML (Data Manipulation Language)
+│   │   ├── DQL (Data Query Language)
+│   │   ├── DCL (Data Control Language)
+│   │   └── TCL (Transaction Control Language)
+│   └── Popular SQL Databases (MySQL, PostgreSQL, SQL Server, Oracle)
 
 ├── 2. Data Types
-│ ├── Numeric (INT, DECIMAL, FLOAT)
-│ ├── String/Text (CHAR, VARCHAR, TEXT)
-│ ├── Date/Time (DATE, DATETIME, TIMESTAMP)
-│ ├── Boolean (TRUE/FALSE)
-│ └── Other (BLOB, JSON)
+│   ├── Numeric (INT, DECIMAL, FLOAT)
+│   ├── String/Text (CHAR, VARCHAR, TEXT)
+│   ├── Date/Time (DATE, DATETIME, TIMESTAMP)
+│   ├── Boolean (TRUE/FALSE)
+│   └── Other (BLOB, JSON)
 
 ├── 3. DDL – Data Definition Language
-│ ├── CREATE (Database, Table, Index, View)
-│ ├── ALTER (Add/Modify Columns, Constraints)
-│ ├── DROP (Database, Table, Index, View)
-│ └── TRUNCATE (Remove All Rows)
+│   ├── CREATE (Database, Table, Index, View)
+│   ├── ALTER (Add/Modify Columns, Constraints)
+│   ├── DROP (Database, Table, Index, View)
+│   └── TRUNCATE (Remove All Rows)
 
 ├── 4. DML – Data Manipulation Language
-│ ├── SELECT (Retrieve Data)
-│ ├── INSERT (Add Data)
-│ ├── UPDATE (Modify Data)
-│ └── DELETE (Remove Data)
+│   ├── SELECT (Retrieve Data)
+│   ├── INSERT (Add Data)
+│   ├── UPDATE (Modify Data)
+│   └── DELETE (Remove Data)
 
 ├── 5. DQL – Data Query Language
-│ ├── SELECT Basics
-│ ├── Filtering (WHERE, AND, OR, NOT, BETWEEN, LIKE, IN)
-│ ├── Sorting (ORDER BY ASC/DESC)
-│ ├── Limiting (LIMIT / TOP)
-│ └── Aliases (AS for Tables & Columns)
+│   ├── SELECT Basics
+│   ├── Filtering (WHERE, AND, OR, NOT, BETWEEN, LIKE, IN)
+│   ├── Sorting (ORDER BY ASC/DESC)
+│   ├── Limiting (LIMIT / TOP)
+│   └── Aliases (AS for Tables & Columns)
 
 ├── 6. DCL – Data Control Language
-│ ├── GRANT (Provide Access)
-│ └── REVOKE (Remove Access)
+│   ├── GRANT (Provide Access)
+│   └── REVOKE (Remove Access)
 
 ├── 7. TCL – Transaction Control Language
-│ ├── COMMIT
-│ ├── ROLLBACK
-│ ├── SAVEPOINT
-│ └── SET TRANSACTION
+│   ├── COMMIT
+│   ├── ROLLBACK
+│   ├── SAVEPOINT
+│   └── SET TRANSACTION
 
 ├── 8. Constraints
-│ ├── NOT NULL
-│ ├── UNIQUE
-│ ├── PRIMARY KEY
-│ ├── FOREIGN KEY
-│ ├── CHECK
-│ └── DEFAULT
+│   ├── NOT NULL
+│   ├── UNIQUE
+│   ├── PRIMARY KEY
+│   ├── FOREIGN KEY
+│   ├── CHECK
+│   └── DEFAULT
 
 ├── 9. Joins
-│ ├── INNER JOIN
-│ ├── LEFT JOIN
-│ ├── RIGHT JOIN
-│ ├── FULL JOIN
-│ ├── CROSS JOIN
-│ └── SELF JOIN
+│   ├── INNER JOIN
+│   ├── LEFT JOIN
+│   ├── RIGHT JOIN
+│   ├── FULL JOIN
+│   ├── CROSS JOIN
+│   └── SELF JOIN
 
-├── 10. Aggregations & Grouping
-│ ├── COUNT
-│ ├── SUM
-│ ├── AVG
-│ ├── MIN
-│ ├── MAX
-│ ├── GROUP BY
-│ └── HAVING
+├── 10. Set Operations
+│   ├── UNION
+│   ├── UNION ALL
+│   ├── INTERSECT
+│   └── EXCEPT / MINUS
 
-├── 11. Subqueries
-│ ├── Single-row Subquery
-│ ├── Multi-row Subquery (IN, ANY, ALL)
-│ ├── Correlated Subquery
-│ └── EXISTS / NOT EXISTS
+├── 11. Aggregations & Grouping
+│   ├── COUNT
+│   ├── SUM
+│   ├── AVG
+│   ├── MIN
+│   ├── MAX
+│   ├── GROUP BY
+│   └── HAVING
 
-├── 12. Advanced SQL
-│ ├── CASE Statement
-│ ├── COALESCE & NULLIF
-│ ├── Window Functions (ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG)
-│ ├── Common Table Expressions (CTEs)
-│ └── Recursive Queries
+├── 12. Subqueries
+│   ├── Single-row Subquery
+│   ├── Multi-row Subquery (IN, ANY, ALL)
+│   ├── Correlated Subquery
+│   └── EXISTS / NOT EXISTS
 
-├── 13. Indexing
-│ ├── Clustered Index
-│ ├── Non-Clustered Index
-│ ├── Composite Index
-│ └── Covering Index
+├── 13. Advanced SQL
+│   ├── CASE Statement
+│   ├── COALESCE & NULLIF
+│   ├── Window Functions (ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG)
+│   ├── Common Table Expressions (CTEs)
+│   └── Recursive Queries
 
-├── 14. Views
-│ ├── CREATE VIEW
-│ ├── UPDATE VIEW
-│ └── DROP VIEW
+├── 14. Indexing
+│   ├── Clustered Index
+│   ├── Non-Clustered Index
+│   ├── Composite Index
+│   └── Covering Index
 
-├── 15. Stored Procedures & Functions
-│ ├── CREATE PROCEDURE
-│ ├── CREATE FUNCTION
-│ ├── Parameters (IN, OUT, INOUT)
-│ └── Advantages
+├── 15. Views
+│   ├── CREATE VIEW
+│   ├── UPDATE VIEW
+│   ├── DROP VIEW
+│   └── Materialized Views (Refresh strategies)
 
-├── 16. Triggers
-│ ├── BEFORE Trigger
-│ ├── AFTER Trigger
-│ ├── Row-level Trigger
-│ └── Statement-level Trigger
+├── 16. Temporary Tables
+│   ├── Local Temporary Tables
+│   ├── Global Temporary Tables
+│   └── Use cases
 
-├── 17. Transactions & ACID
-│ ├── Atomicity
-│ ├── Consistency
-│ ├── Isolation (Levels: READ UNCOMMITTED → SERIALIZABLE)
-│ └── Durability
+├── 17. Stored Procedures & Functions
+│   ├── CREATE PROCEDURE
+│   ├── CREATE FUNCTION
+│   ├── Parameters (IN, OUT, INOUT)
+│   ├── Error Handling in Procedures
+│   └── Advantages
 
-├── 18. Optimization & Performance
-│ ├── Query Optimization (EXPLAIN / EXPLAIN ANALYZE)
-│ ├── Indexing Strategies
-│ ├── Partitioning
-│ ├── Caching
-│ └── Denormalization for Performance
+├── 18. Triggers
+│   ├── BEFORE Trigger
+│   ├── AFTER Trigger
+│   ├── Row-level Trigger
+│   └── Statement-level Trigger
 
-└── 19. Security
-├── User Privileges
-├── Roles
-├── SQL Injection Prevention
-└── Parameterized Queries
+├── 19. Transactions & ACID
+│   ├── Atomicity
+│   ├── Consistency
+│   ├── Isolation (Levels: READ UNCOMMITTED → SERIALIZABLE)
+│   └── Durability
+
+├── 20. Optimization & Performance
+│   ├── Query Optimization (EXPLAIN / EXPLAIN ANALYZE)
+│   ├── Indexing Strategies
+│   ├── Partitioning
+│   ├── Caching
+│   └── Denormalization for Performance
+
+├── 21. JSON in SQL
+│   ├── JSON Functions (JSON_EXTRACT, JSONB, etc.)
+│   ├── Storing JSON Data
+│   └── Querying JSON
+
+├── 22. Data Import & Export
+│   ├── LOAD DATA INFILE
+│   ├── COPY (PostgreSQL)
+│   ├── BULK INSERT
+│   └── Export to CSV/Excel
+
+└── 23. Security
+    ├── User Privileges
+    ├── Roles
+    ├── SQL Injection Prevention
+    └── Parameterized Queries

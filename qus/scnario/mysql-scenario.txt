@@ -1,0 +1,37 @@
+📌 SQL Scenario-Based Questions
+1. Employee & Department
+Write a query to find the highest-paid employee in each department.
+Get the average salary of employees who joined in the last 2 years, grouped by department.
+Find all employees who earn more than the average salary of their department.
+Get the names of employees who work in the same department as "John Smith".
+
+2. E-commerce Orders
+List the top 3 customers by total purchase amount.
+Find the most sold product in each category.
+Identify customers who have not placed any orders in the last 6 months.
+Get monthly sales totals for the current year, including months with zero sales.
+
+3. Library / Book Rentals
+Retrieve the names of members who have borrowed all available books by a specific author.
+Find members who have overdue books by more than 10 days.
+Get the most frequently borrowed book and how many times it was borrowed.
+Find the average borrow duration for each book category.
+
+4. Sales & Targets
+Find salespersons who achieved more than 120% of their monthly sales target.
+Get the top 5 salespersons by revenue for the last quarter.
+Identify months where sales dropped compared to the previous month.
+Find total sales by region, but only show regions with sales above the overall average.
+
+5. Social Media Platfor
+Find the top 5 most active users (posts + comments).
+Get the number of followers for each user, sorted in descending order.
+Find users who follow everyone who follows them back (mutual followers).
+Identify the most used hashtags in the last 30 days.
+
+6. Mixed Advanced
+Retrieve the Nth highest salary from the employees table without using LIMIT or TOP.
+Get customers who bought more than 5 different products in the last month.
+Find orders where the total amount is above the average order amount for that customer.
+Calculate the running total of sales for each salesperson.
+Identify products whose sales increased for 3 consecutive months.

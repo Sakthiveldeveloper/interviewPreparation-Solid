@@ -1,0 +1,77 @@
+Most Asked SQL Theory Questions
+1. Basics
+What is SQL and why is it used?
+Explain the difference between SQL and NoSQL databases.
+What are the different categories of SQL commands? Give examples.
+What is the difference between DDL, DML, DCL, DQL, and TCL?
+
+2. Data Types & Constraints
+What are the different data types supported in SQL?
+Difference between CHAR and VARCHAR.
+What is a constraint in SQL?
+Explain PRIMARY KEY vs UNIQUE KEY.
+Difference between PRIMARY KEY and FOREIGN KEY.
+What is a CHECK constraint and when is it used?
+
+3. Joins & Relationships
+What is a JOIN?
+Difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN.
+What is the difference between CROSS JOIN and SELF JOIN?
+How do you find matching and non-matching rows between two tables?
+
+4. Queries & Filtering
+Difference between WHERE and HAVING.
+What is the difference between ORDER BY and GROUP BY?
+Difference between LIMIT and TOP.
+What are Aliases in SQL and why are they used?
+
+5. Aggregations & Functions
+What are aggregate functions in SQL? Name some examples.
+Difference between COUNT(*) and COUNT(column).
+Difference between SUM and AVG.
+Explain COALESCE and NULLIF with examples.
+
+6. Subqueries & CTEs
+What is a subquery?
+Difference between correlated and non-correlated subqueries.
+Difference between CTE and subquery.
+What are recursive CTEs and when do you use them?
+
+7. Indexing & Optimization
+What is an index in SQL and why is it used?
+Difference between clustered and non-clustered indexes.
+What is a composite index?
+How does indexing improve performance?
+What is query optimization and how do you check it?
+
+8. Views & Temporary Tables
+What is a view in SQL?
+Difference between normal view and materialized view.
+Can we insert or update data using a view?
+What are temporary tables and when should you use them?
+
+9. Stored Procedures, Functions & Triggers
+What is the difference between stored procedures and functions?
+What are the advantages of using stored procedures?
+What are IN, OUT, and INOUT parameters?
+What is a trigger and how does it work?
+Difference between BEFORE and AFTER triggers.
+
+10. Transactions & ACID
+What is a transaction in SQL?
+Explain the ACID properties.
+What is the difference between COMMIT and ROLLBACK?
+What is a SAVEPOINT in SQL?
+What are different isolation levels in SQL?
+
+11. Security
+What is SQL injection and how do you prevent it?
+What are GRANT and REVOKE statements?
+What are roles in SQL and how do they help in security?
+
+12. Advanced & Special Topics
+What are window functions in SQL? Give examples.
+Difference between RANK, DENSE_RANK, and ROW_NUMBER.
+How to work with JSON data in SQL?
+Difference between UNION and UNION ALL.
+Difference between INTERSECT and EXCEPT.
