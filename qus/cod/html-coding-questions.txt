@@ -1,0 +1,20 @@
+Examples of HTML Coding Questions:
+Write a basic HTML page structure with a header, main content, and footer.
+
+Create a responsive navigation bar using semantic HTML5 elements.
+
+Build a form with various input types, including validation attributes.
+
+Create an accessible image gallery using <figure> and <figcaption>.
+
+Write HTML code to create a table with merged cells (using colspan and rowspan).
+
+Create a nested list combining ordered and unordered lists.
+
+Build a simple modal popup structure using HTML only.
+
+Use semantic tags to mark up a blog post with header, article, section, and footer.
+
+Write HTML to embed a video and include fallback content.
+
+Create a simple multi-step form layout using HTML and explain how you’d enhance it with JavaScript.

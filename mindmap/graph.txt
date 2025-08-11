@@ -1,0 +1,64 @@
+GraphQL
+│
+├── Overview
+│   ├── Query language for APIs
+│   ├── Single endpoint for all requests
+│   ├── Developed by Facebook (2012, public in 2015)
+│   └── Client defines the data shape
+│
+├── Core Concepts
+│   ├── Schema
+│   │   ├── Defines API structure
+│   │   ├── Types (Object, Scalar, Enum, Interface, Union, Input)
+│   │   └── Written in SDL (Schema Definition Language)
+│   ├── Queries
+│   │   ├── Read data (like GET in REST)
+│   │   ├── Select only needed fields
+│   │   └── Nested queries supported
+│   ├── Mutations
+│   │   ├── Create, update, delete data
+│   │   └── Can return updated data
+│   ├── Subscriptions
+│   │   ├── Real-time updates via WebSockets
+│   │   └── Event-driven
+│   └── Resolvers
+│       ├── Functions mapping queries to backend logic
+│       └── Handle data fetching
+│
+├── Advantages
+│   ├── Fetch only what’s needed
+│   ├── Reduce over-fetching & under-fetching
+│   ├── Strongly typed schema
+│   ├── Single endpoint for all requests
+│   ├── Better developer tooling (GraphiQL, Playground)
+│   └── Real-time support with Subscriptions
+│
+├── Limitations
+│   ├── Complex for simple APIs
+│   ├── Caching is harder than REST
+│   ├── File uploads need extra handling
+│   ├── Performance issues if queries are too deep
+│   └── Requires learning curve for schema & resolvers
+│
+├── Tools & Libraries
+│   ├── Apollo Server / Apollo Client
+│   ├── GraphQL Yoga
+│   ├── Relay
+│   ├── Hasura
+│   ├── GraphQL Code Generator
+│   └── GraphiQL / GraphQL Playground
+│
+├── Best Practices
+│   ├── Use query complexity analysis
+│   ├── Apply authentication & authorization
+│   ├── Paginate large lists
+│   ├── Use schema versioning
+│   ├── Avoid deep nesting
+│   └── Document schema clearly
+│
+└── Common Use Cases
+    ├── Mobile apps needing optimized payloads
+    ├── Multiple clients consuming the same API
+    ├── Microservices aggregation
+    ├── Real-time apps (chat, live feed)
+    └── APIs with rapidly evolving data needs

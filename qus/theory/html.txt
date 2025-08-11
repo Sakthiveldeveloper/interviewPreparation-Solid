@@ -1,0 +1,117 @@
+What is HTML, and why is it used?
+What is the purpose of <!DOCTYPE>?
+What are HTML tags and attributes?
+Difference between block-level and inline elements.
+What are semantic HTML elements? Give examples.
+Difference between <div> and <span>.
+What are HTML entities? Give examples.
+What are self-closing (void) elements? Give examples.
+What is the difference between HTML and HTML5?
+What are some new features in HTML5?
+Difference between GET and POST methods in forms.
+Purpose of id vs class attributes.
+Purpose of the alt attribute in images.
+Difference between <b> and <strong>, <i> and <em>.
+Difference between <link> and <a> tags.
+What are meta tags, and why are they important?
+Difference between <section>, <article>, <aside>, and <nav>.
+What is localStorage and sessionStorage, and how do they differ from cookies?
+Difference between <iframe>, <embed>, and <object>.
+What is ARIA in HTML, and why is it important for accessibility?\
+----------------------------------------------------------------(optional quwstions)
+What are some new HTML5 input types? (e.g., date, email, color, range, tel, url, search)
+What are some built-in form validation attributes? (e.g., required, pattern, min, max, maxlength)
+What is the difference between inline styles, IDs, and classes for applying CSS?
+What is the purpose of defer and async attributes in the <script> tag?
+Why is the viewport meta tag important in responsive web design? Show an example.
+How does keyboard navigation improve accessibility in HTML?
+What are common ARIA roles used in web development? Give examples.
+What are HTML comments and how are they written?
+What are HTML entities, and why are they necessary? Give examples of commonly used entities.
+What is the difference between the hidden attribute and CSS display: none;?
+What are global attributes in HTML? List some examples.
+Explain the difference between localStorage and sessionStorage with examples of when to use each.
+How do HTML forms interact with JavaScript for client-side validation?
+What are the deprecated or obsolete HTML tags? Why should they be avoided?
+What is the purpose of the <noscript> tag?
+What are data-* attributes and how are they used in HTML?
+What is the difference between semantic and non-semantic elements in HTML? Give examples.
+How do you ensure cross-browser compatibility in HTML?
+Explain how HTML interacts with CSS and JavaScript to create a web page.
+What are void elements in HTML and why do they not need a closing tag?
+--------------------------------------*****-----------------------------------
+What is HTML, and why is it used?
+HTML (HyperText Markup Language) is the standard language for creating web pages and defining their structure.
+What is the purpose of <!DOCTYPE>?
+It tells the browser which version of HTML is being used so it can render the page correctly.
+
+What are HTML tags and attributes?
+Tags define elements (<p>, <h1>), while attributes provide extra info (id, class, src).
+
+Difference between block-level and inline elements.
+Block-level elements start on a new line and take full width (<div>), inline elements stay in line and take only needed width (<span>).
+
+What are semantic HTML elements? Give examples.
+Elements that convey meaning about their content, e.g., <header>, <article>, <footer>.
+
+Difference between <div> and <span>.
+<div> is a block-level container; <span> is an inline container for styling small text parts.
+
+What are HTML entities? Give examples.
+Special codes for reserved characters, e.g., &lt; for <, &amp; for &.
+
+What are self-closing (void) elements? Give examples.
+Elements with no closing tag, e.g., <img>, <br>, <hr>.
+
+What is the difference between HTML and HTML5?
+HTML5 adds semantic tags, multimedia support, and APIs like localStorage and canvas.
+
+What are some new features in HTML5?
+Semantic tags (<article>, <nav>), <audio>, <video>, <canvas>, localStorage, geolocation API.
+
+Difference between GET and POST methods in forms.
+GET sends data in the URL (less secure, good for read-only requests), POST sends in the body (secure for sensitive data).
+
+Purpose of id vs class attributes.
+id is unique for one element; class can be shared by multiple elements.
+
+Purpose of the alt attribute in images.
+Provides alternative text for accessibility and when the image can’t load.
+
+Difference between <b> and <strong>, <i> and <em>.
+<b> and <i> are for visual styling; <strong> and <em> add semantic meaning (important/emphasized).
+
+Difference between <link> and <a> tags.
+<link> connects external resources (CSS, favicon), <a> creates hyperlinks.
+
+What are meta tags, and why are they important?
+Metadata for a page (SEO, viewport, description) — they don’t display content.
+
+Difference between <section>, <article>, <aside>, and <nav>.
+
+<section>: thematic grouping of content
+
+<article>: standalone content piece
+
+<aside>: side content
+
+<nav>: navigation links
+
+What is localStorage and sessionStorage, and how do they differ from cookies?
+
+localStorage: stores data with no expiry
+
+sessionStorage: clears on tab close
+
+cookies: sent with every request, smaller storage size.
+
+Difference between <iframe>, <embed>, and <object>.
+
+<iframe>: embed another HTML page
+
+<embed>: embed external content (e.g., video, PDF)
+
+<object>: general container for embedding resources.
+
+What is ARIA in HTML, and why is it important for accessibility?
+Accessible Rich Internet Applications — attributes that make web content usable for screen readers.

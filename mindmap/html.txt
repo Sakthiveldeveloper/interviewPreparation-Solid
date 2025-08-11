@@ -1,0 +1,75 @@
+HTML (HyperText Markup Language)
+├── 1. Basics
+│   ├── What is HTML?
+│   ├── Structure of an HTML document
+│   │   ├── <!DOCTYPE html>
+│   │   ├── <html>
+│   │   ├── <head>
+│   │   └── <body>
+│   ├── HTML Editors (VS Code, Sublime, etc.)
+│   └── File extension: .html
+│
+├── 2. Elements & Tags
+│   ├── Headings: <h1> to <h6>
+│   ├── Paragraphs: <p>
+│   ├── Line Breaks & Horizontal Rules: <br>, <hr>
+│   ├── Text Formatting: <b>, <i>, <strong>, <em>, <mark>, <small>, <del>, <ins>, <sub>, <sup>
+│   ├── Comments: <!-- comment -->
+│   └── Semantic vs. Non-semantic Elements
+│
+├── 3. Attributes
+│   ├── Global Attributes (id, class, style, title)
+│   ├── Inline CSS (style attribute)
+│   ├── Boolean Attributes (disabled, checked)
+│   └── Custom data attributes (data-*)
+│
+├── 4. Links & Media
+│   ├── Anchor tag: <a href="">
+│   ├── Images: <img src="" alt="">
+│   ├── Audio: <audio controls>
+│   ├── Video: <video controls>
+│   └── Embedding: <iframe>, <embed>, <object>
+│
+├── 5. Lists
+│   ├── Ordered List: <ol>
+│   ├── Unordered List: <ul>
+│   └── Description List: <dl>, <dt>, <dd>
+│
+├── 6. Tables
+│   ├── Table: <table>
+│   ├── Rows & Cells: <tr>, <td>, <th>
+│   ├── Caption: <caption>
+│   ├── Table Sections: <thead>, <tbody>, <tfoot>
+│   └── Attributes: colspan, rowspan
+│
+├── 7. Forms
+│   ├── Form tag: <form>
+│   ├── Input fields: <input type="">
+│   │   ├── text, password, email, number, checkbox, radio, etc.
+│   ├── Textarea: <textarea>
+│   ├── Select & Options: <select>, <option>
+│   ├── Labels: <label for="">
+│   └── Buttons: <button>, <input type="submit">
+│
+├── 8. Semantic HTML5 Elements
+│   ├── Structural: <header>, <nav>, <main>, <section>, <article>, <footer>, <aside>
+│   └── Media: <figure>, <figcaption>
+│
+├── 9. Metadata & Head
+│   ├── <title>
+│   ├── <meta> (charset, viewport, description, etc.)
+│   ├── <link> (external CSS)
+│   ├── <style> (internal CSS)
+│   └── <script> (JavaScript)
+│
+├── 10. Accessibility
+│   ├── alt text
+│   ├── ARIA roles
+│   └── Keyboard navigation
+│
+└── 11. Best Practices
+    ├── Use semantic tags
+    ├── Proper nesting
+    ├── Alt text for images
+    ├── Mobile-first responsive layout
+    └── Validate HTML (W3C Validator)

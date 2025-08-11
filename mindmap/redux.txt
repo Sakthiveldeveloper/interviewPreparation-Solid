@@ -1,0 +1,72 @@
+Redux
+├── 1. Basics
+│ ├── What is Redux? (Predictable state container)
+│ ├── Benefits (centralized store, predictable state updates)
+│ ├── When to use Redux (complex state, multiple components sharing data)
+│ ├── Core Principles (Single source of truth, State is read-only, Changes via pure functions)
+│ └── Redux vs Context API
+│
+├── 2. Core Concepts
+│ ├── Store (holds the state)
+│ ├── Actions (describe what happened)
+│ ├── Action Creators (functions returning actions)
+│ ├── Reducers (pure functions to update state)
+│ ├── Dispatch (send action to reducer)
+│ └── One-way data flow
+│
+├── 3. Setting Up Redux
+│ ├── Installing Redux (npm install redux)
+│ ├── Installing React-Redux (npm install react-redux)
+│ ├── Creating the Store (createStore)
+│ ├── Connecting with <Provider>
+│ ├── Using useSelector to read state
+│ └── Using useDispatch to send actions
+│
+├── 4. Redux Toolkit (RTK)
+│ ├── Installing Redux Toolkit (@reduxjs/toolkit)
+│ ├── configureStore()
+│ ├── createSlice() (reducers + actions)
+│ ├── Immer (immutable updates)
+│ ├── createAsyncThunk() for async logic
+│ └── Benefits over plain Redux (less boilerplate)
+│
+├── 5. Middleware
+│ ├── What is middleware?
+│ ├── Redux Thunk (async actions)
+│ ├── Redux Saga (side effects with generators)
+│ ├── Logger middleware (debugging)
+│ └── Custom middleware creation
+│
+├── 6. Async Data Fetching
+│ ├── Using Thunk to call APIs
+│ ├── Loading & error states in store
+│ ├── Normalizing API data
+│ └── Caching & re-fetch strategies
+│
+├── 7. State Management Patterns
+│ ├── Normalized state shape
+│ ├── Feature-based slices
+│ ├── Selector functions (memoization with Reselect)
+│ ├── Splitting reducers (combineReducers)
+│ └── Avoiding deeply nested state
+│
+├── 8. Testing Redux
+│ ├── Testing reducers (pure functions)
+│ ├── Testing action creators
+│ ├── Testing connected components
+│ └── Using mock store for testing async flows
+│
+├── 9. Best Practices
+│ ├── Keep state minimal
+│ ├── Avoid storing non-serializable values
+│ ├── Use Redux DevTools for debugging
+│ ├── Organize files by feature (ducks pattern)
+│ ├── Keep reducers pure
+│ └── Prefer Redux Toolkit over plain Redux
+│
+└── 10. Resources
+├── Official Redux Docs (redux.js.org)
+├── Redux Toolkit Docs (redux-toolkit.js.org)
+├── Redux Essentials Tutorial
+├── Reselect Library Docs
+└── Redux DevTools Extension

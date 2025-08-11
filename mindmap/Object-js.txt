@@ -1,0 +1,67 @@
+JavaScript Objects
+├── 1. Basics
+│   ├── What is an Object? (Collection of key–value pairs)
+│   ├── Keys are strings/symbols, values can be any type
+│   ├── Properties vs. Methods (function values)
+│   └── Real-world analogy (e.g., car with properties & behaviors)
+│
+├── 2. Creating Objects
+│   ├── Object literal: const obj = { key: value }
+│   ├── new Object() constructor
+│   ├── Object.create(proto)
+│   ├── Class-based (ES6 `class` syntax)
+│   └── Factory functions
+│
+├── 3. Accessing Properties
+│   ├── Dot notation: obj.key
+│   ├── Bracket notation: obj["key"]
+│   └── Accessing nested properties: obj.nested.key
+│
+├── 4. Modifying Objects
+│   ├── Add property: obj.newKey = value
+│   ├── Update property: obj.key = newValue
+│   ├── Delete property: delete obj.key
+│   └── Optional chaining (?.) for safe access
+│
+├── 5. Object Methods
+│   ├── Functions inside objects
+│   ├── `this` keyword context
+│   ├── Method shorthand: greet() { ... }
+│   └── Arrow functions & `this` binding
+│
+├── 6. Built-in Object Methods
+│   ├── Object.keys(obj) → array of keys
+│   ├── Object.values(obj) → array of values
+│   ├── Object.entries(obj) → array of [key, value]
+│   ├── Object.assign(target, source)
+│   └── Object.freeze() & Object.seal()
+│
+├── 7. Prototypes & Inheritance
+│   ├── Prototype chain
+│   ├── __proto__ property
+│   ├── Object.getPrototypeOf(obj)
+│   └── Object.setPrototypeOf(obj, proto)
+│
+├── 8. Destructuring
+│   ├── Extract properties: const { key } = obj
+│   ├── Rename: const { key: newName } = obj
+│   └── Default values: const { key = default } = obj
+│
+├── 9. Nested & Complex Objects
+│   ├── Objects inside objects
+│   ├── Arrays inside objects
+│   ├── Deep access & deep cloning
+│   └── JSON for storing/transferring objects
+│
+├── 10. Iterating Over Objects
+│   ├── for...in loop
+│   ├── Object.keys().forEach(...)
+│   ├── Object.entries().map(...)
+│   └── Reflect.ownKeys(obj)
+│
+└── 11. Best Practices
+    ├── Use `const` for object references
+    ├── Prefer object literals for simple objects
+    ├── Avoid deep nesting when possible
+    ├── Use descriptive property names
+    └── Freeze or seal objects to prevent changes when needed

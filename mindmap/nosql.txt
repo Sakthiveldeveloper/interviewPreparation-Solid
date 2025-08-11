@@ -1,0 +1,76 @@
+NoSQL
+├── 1. Basics
+│ ├── What is NoSQL? (Non-relational database)
+│ ├── Difference between SQL & NoSQL
+│ ├── Schema-less / flexible schema
+│ ├── Horizontal scalability
+│ └── When to use NoSQL
+│
+├── 2. Types of NoSQL Databases
+│ ├── Document-oriented
+│ │ ├── JSON/BSON documents
+│ │ ├── Examples: MongoDB, CouchDB
+│ │ └── Use cases: CMS, product catalogs
+│ ├── Key-Value Stores
+│ │ ├── Key-value pair storage
+│ │ ├── Examples: Redis, DynamoDB
+│ │ └── Use cases: Caching, session storage
+│ ├── Column-family Stores
+│ │ ├── Wide-column storage
+│ │ ├── Examples: Cassandra, HBase
+│ │ └── Use cases: Analytics, time-series data
+│ └── Graph Databases
+│ ├── Nodes, edges, relationships
+│ ├── Examples: Neo4j, ArangoDB
+│ └── Use cases: Social networks, recommendations
+│
+├── 3. Core Concepts
+│ ├── Data modeling (denormalization)
+│ ├── Sharding & partitioning
+│ ├── Replication & high availability
+│ ├── CAP Theorem (CP, AP)
+│ ├── Indexing strategies
+│ └── Query optimization
+│
+├── 4. CRUD Operations
+│ ├── Create (Insert documents/records)
+│ ├── Read (Find/query data)
+│ ├── Update (Modify existing data)
+│ └── Delete (Remove data)
+│
+├── 5. Advanced Features
+│ ├── Aggregation pipelines (MongoDB)
+│ ├── MapReduce
+│ ├── Full-text search
+│ ├── Geospatial queries
+│ └── Multi-document transactions
+│
+├── 6. Scaling & Performance
+│ ├── Horizontal scaling
+│ ├── Load balancing
+│ ├── Caching strategies
+│ ├── Read/write optimization
+│ └── Backup & restore
+│
+├── 7. Security
+│ ├── Authentication & authorization
+│ ├── Role-based access control (RBAC)
+│ ├── Encryption (at rest & in transit)
+│ ├── Injection prevention
+│ └── Database auditing & monitoring
+│
+├── 8. Integration with Applications
+│ ├── Connecting with Node.js, Python, Java
+│ ├── Using ORMs/ODMs (Mongoose for MongoDB)
+│ ├── REST API integration
+│ ├── GraphQL API integration
+│ └── Real-time apps (WebSockets, change streams)
+│
+└── 9. Popular NoSQL Databases
+├── MongoDB
+├── Redis
+├── Cassandra
+├── CouchDB
+├── Neo4j
+└── DynamoDB
+

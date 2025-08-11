@@ -1,0 +1,21 @@
+You need to create an accessible form for user registration. What HTML elements and attributes would you use to ensure good usability and accessibility?
+(Expect discussion about <label>, aria-* attributes, proper input types, error messaging, etc.)
+
+How would you structure the HTML for a blog post page with a header, navigation, main article, sidebar, and footer? Which semantic tags would you choose?
+
+You’re asked to improve the SEO and accessibility of an existing website with poor HTML structure. What changes would you recommend?
+
+How do you handle responsive images in HTML to optimize for different screen sizes and bandwidth?
+(Talk about <picture>, srcset, sizes attributes.)
+
+You have to embed a video that should work on all browsers, with fallback content for unsupported browsers. How do you write the HTML?
+
+Explain how you’d create a navigation menu that is keyboard accessible and screen reader friendly using HTML.
+
+If you needed to add custom data to an HTML element for JavaScript to use later, how would you do it? Why?
+
+How would you mark up a product listing page so it’s both semantic and accessible? What HTML elements and attributes would you use?
+
+Explain how you would structure a multi-step form in HTML and what considerations you’d keep in mind for usability and validation.
+
+A client wants to improve page load times by lazy-loading images. How would you implement this with HTML?

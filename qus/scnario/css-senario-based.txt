@@ -1,0 +1,11 @@
+CSS Scenario-Based Questions:
+You need to build a responsive layout that works well on desktop, tablet, and mobile. How would you approach it using CSS?
+A client reports that their website looks broken on some devices due to overlapping elements. How would you diagnose and fix this with CSS?
+You have a long form with many input fields. How would you style it for better usability and accessibility?
+Explain how you would make images load faster and adapt to different screen sizes using CSS.
+You need to create a reusable button component that can have different colors and sizes using CSS. How would you structure your CSS?
+Describe how you would handle browser compatibility issues with CSS features that aren’t widely supported.
+How would you implement a sticky footer that always stays at the bottom of the page even if the content is short?
+Your design calls for a complex grid with items that span multiple rows and columns. How do you achieve this in CSS?
+You want to animate a menu opening and closing smoothly using only CSS. What properties and techniques would you use?
+How would you structure your CSS for a large-scale web application to keep styles maintainable and avoid conflicts?

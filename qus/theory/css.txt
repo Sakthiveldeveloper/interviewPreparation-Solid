@@ -1,0 +1,155 @@
+Top 20 CSS Questions & Answers
+
+What is CSS, and why is it used?
+What is the difference between inline, internal, and external CSS?
+What is the difference between relative, absolute, fixed, and sticky positioning?
+What are pseudo-classes and pseudo-elements?
+What is the difference between em, rem, %, and px units?
+What is the difference between relative and absolute units in CSS?
+What is the difference between inline, block, and inline-block display types?
+What is the difference between absolute, relative, and static positioning?
+What is the difference between relative positioning and transform: translate() for positioning?
+What is the difference between min-width, max-width, and width?
+What is the difference between inline styles and CSS classes in terms of specificity?
+What is the difference between id and class selectors in CSS?
+What is the difference between relative and absolute paths in CSS url()?
+What is the difference between position: sticky and position: fixed?
+What is the difference between CSS transitions and animations?
+What is a CSS media query?
+What is the difference between relative, fixed, fluid, and responsive design?
+What is the difference between inline SVG and background-image SVG?
+What is the difference between relative and absolute positioning with z-index?
+What is the difference between relative and fixed background images?
+------------------------------------------------------------------------------
+optional questions
+What is the CSS Box Model? Explain its components.
+What is the difference between content-box and border-box in the box-sizing property?
+How do margin, padding, and border affect the size and layout of an element?
+Explain the difference between Flexbox and CSS Grid. When would you use each?
+What are CSS variables (custom properties), and how do you use them?
+How does the calc() function work in CSS? Give examples of its use.
+What is CSS specificity? How is it calculated?
+What is the CSS cascade? How does the browser determine which styles apply?
+What are inheritable CSS properties? Give examples.
+How do attribute selectors work in CSS? Provide examples.
+What are some commonly used pseudo-classes other than :hover and :focus?
+What is the BEM (Block Element Modifier) naming methodology? Why is it used?
+How can you modularize CSS for better maintainability?
+What are CSS preprocessors? Name a few and explain their benefits.
+How can you ensure cross-browser compatibility when writing CSS?
+How do you create accessible focus styles using CSS?
+What techniques are used to visually hide elements but keep them accessible to screen readers?
+Explain the difference between relative and absolute units and how they affect responsive design.
+How do media queries work, and what are common use cases?
+What are common pitfalls with CSS floats, and how do you clear floats?
+------------------------------------------------------------------------------
+What is CSS, and why is it used?
+CSS (Cascading Style Sheets) styles HTML elements — controls layout, colors, fonts, etc.
+
+Difference between inline, internal, and external CSS.
+
+Inline: in style attribute
+
+Internal: in <style> tag inside HTML
+
+External: separate .css file linked with <link>.
+
+What is the difference between relative, absolute, fixed, and sticky positioning?
+
+Relative: positioned relative to itself
+
+Absolute: positioned relative to nearest positioned ancestor
+
+Fixed: relative to viewport
+
+Sticky: switches between relative and fixed based on scroll.
+
+What are pseudo-classes and pseudo-elements?
+
+Pseudo-class: special state (:hover, :focus)
+
+Pseudo-element: style a part of an element (::before, ::after).
+
+Difference between em, rem, %, and px.
+
+px: fixed size
+
+em: relative to parent font size
+
+rem: relative to root font size
+
+%: relative to parent size.
+
+What is the difference between relative and absolute units in CSS?
+Relative units adapt to surroundings (em, %), absolute units stay fixed (px, cm).
+
+Difference between inline, block, and inline-block.
+
+Inline: no new line, can’t set width/height
+
+Block: starts new line, full width
+
+Inline-block: inline but allows width/height.
+
+What is the difference between absolute, relative, and static positioning?
+
+Static: default
+
+Relative: offset from normal position
+
+Absolute: positioned relative to nearest non-static ancestor.
+
+Difference between relative and transform: translate() for positioning.
+Relative moves layout space, translate() moves visually without affecting surrounding flow.
+
+What is the difference between min-width, max-width, and width?
+
+width: fixed size
+
+min-width: minimum limit
+
+max-width: maximum limit.
+
+Difference between inline styles and CSS classes in terms of specificity.
+Inline styles have highest specificity (except !important).
+
+What is the difference between id and class selectors in CSS?
+id: unique (#id) — higher specificity
+class: reusable (.class).
+
+What is the difference between relative and absolute paths in CSS url()?
+
+Relative: path based on CSS file location
+
+Absolute: full URL or from root /.
+
+What is the difference between position: sticky and fixed?
+Sticky sticks only within parent container, fixed sticks to viewport.
+
+Difference between transitions and animations.
+
+Transition: change on event (hover)
+
+Animation: continuous or keyframe-based movement.
+
+What is a CSS media query?
+A rule to apply styles based on screen size or conditions (@media (max-width: 600px)).
+
+Difference between relative, fixed, fluid, and responsive design.
+
+Relative: uses % for scaling
+
+Fixed: fixed px sizes
+
+Fluid: adapts proportionally
+
+Responsive: adapts to device & user needs.
+
+What is the difference between inline SVG and background-image SVG?
+Inline allows styling with CSS, background-image is just decorative.
+
+What is the difference between relative and absolute positioning with z-index?
+Both can use z-index but absolute layers relative to positioned ancestors.
+
+What is the difference between relative and fixed background images?
+Fixed stays still while scrolling, relative moves with content.

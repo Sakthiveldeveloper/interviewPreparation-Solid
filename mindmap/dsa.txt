@@ -1,0 +1,102 @@
+DATA STRUCTURES & ALGORITHMS (DSA)
+│
+├── 1. Fundamentals
+│ ├── Complexity Analysis
+│ │ ├── Time Complexity (Big O, Ω, Θ)
+│ │ ├── Space Complexity
+│ │ ├── Best, Worst, Average Case Analysis
+│ │ └── Amortized Analysis
+│ ├── Recursion
+│ │ ├── Base & Recursive Cases
+│ │ ├── Tail vs Non-tail Recursion
+│ │ └── Recurrence Relations & Master Theorem
+│ └── Problem-Solving Techniques
+│ ├── Brute Force
+│ ├── Greedy
+│ ├── Divide & Conquer
+│ ├── Dynamic Programming
+│ └── Backtracking
+│
+├── 2. Linear Data Structures
+│ ├── Arrays
+│ │ ├── Traversal, Insertion, Deletion
+│ │ ├── Prefix Sum, Sliding Window, Two-pointer
+│ │ └── Multi-dimensional Arrays
+│ ├── Strings
+│ │ ├── Palindrome, Anagram
+│ │ ├── String Matching (KMP, Rabin-Karp, Z-algorithm)
+│ │ └── Pattern Searching
+│ ├── Linked Lists
+│ │ ├── Singly, Doubly, Circular
+│ │ ├── Reverse Linked List
+│ │ └── Detect & Remove Cycle
+│ ├── Stacks
+│ │ ├── LIFO Principle
+│ │ ├── Balanced Parentheses
+│ │ └── Next Greater Element
+│ └── Queues
+│ ├── FIFO Principle
+│ ├── Circular Queue, Deque
+│ └── Priority Queue & Heap
+│
+├── 3. Non-linear Data Structures
+│ ├── Trees
+│ │ ├── Binary Tree
+│ │ ├── Binary Search Tree
+│ │ ├── Traversals (DFS, BFS)
+│ │ ├── Heap (Min/Max)
+│ │ ├── Trie (Prefix Tree)
+│ │ ├── Segment Tree
+│ │ └── Fenwick Tree (Binary Indexed Tree)
+│ ├── Graphs
+│ │ ├── Representations (Adjacency List/Matrix)
+│ │ ├── BFS, DFS
+│ │ ├── Shortest Path (Dijkstra, Bellman-Ford, Floyd-Warshall)
+│ │ ├── Minimum Spanning Tree (Kruskal, Prim)
+│ │ └── Union-Find (Disjoint Set)
+│ └── Hashing
+│ ├── HashMap, HashSet
+│ ├── Collision Handling (Chaining, Open Addressing)
+│ └── Applications (Counting, Lookup)
+│
+├── 4. Algorithms
+│ ├── Sorting
+│ │ ├── Bubble, Selection, Insertion
+│ │ ├── Merge Sort, Quick Sort, Heap Sort
+│ │ └── Counting, Radix, Bucket Sort
+│ ├── Searching
+│ │ ├── Linear Search
+│ │ ├── Binary Search
+│ │ └── Search in Rotated Array
+│ ├── Greedy Algorithms
+│ │ ├── Activity Selection
+│ │ ├── Huffman Coding
+│ │ └── Minimum Spanning Tree (Greedy version)
+│ ├── Dynamic Programming
+│ │ ├── Memoization & Tabulation
+│ │ ├── Knapsack Problem
+│ │ ├── Longest Common Subsequence
+│ │ ├── Longest Increasing Subsequence
+│ │ └── Coin Change
+│ ├── Backtracking
+│ │ ├── N-Queens Problem
+│ │ ├── Rat in a Maze
+│ │ └── Sudoku Solver
+│ └── Bit Manipulation
+│ ├── Set, Clear, Toggle Bits
+│ ├── XOR Tricks
+│ └── Subset Generation Using Bits
+│
+├── 5. Problem-Solving & Practice
+│ ├── Competitive Programming Basics
+│ ├── LeetCode Patterns
+│ ├── Codeforces/CodeChef Problems
+│ ├── Interview Preparation
+│ └── Mock Contests
+│
+└── 6. Best Practices
+├── Analyze Before Coding
+├── Optimize Step-by-step
+├── Use Appropriate Data Structures
+├── Write Clean, Modular Code
+└── Practice Consistently

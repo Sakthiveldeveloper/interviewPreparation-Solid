@@ -1,0 +1,121 @@
+React.js
+├── 1. Basics
+│   ├── What is React? (UI library, component-based)
+│   ├── Single Page Applications (SPA)
+│   ├── Declarative vs Imperative
+│   ├── Virtual DOM
+│   └── JSX (JavaScript XML)
+│
+├── 2. Setting Up
+│   ├── Create React App (CRA)
+│   ├── Vite
+│   ├── Next.js (SSR/SSG)
+│   └── Adding React via CDN
+│
+├── 3. Components
+│   ├── Functional Components
+│   ├── Class Components
+│   ├── Props (read-only data)
+│   ├── State (useState, this.state)
+│   ├── Component Lifecycle (class) / Hooks (functional)
+│   ├── Conditional Rendering
+│   ├── Lists & Keys
+│   └── Fragments
+│
+├── 4. JSX
+│   ├── Embedding expressions
+│   ├── Attributes in JSX (camelCase)
+│   ├── JSX must return single parent element
+│   └── Conditional & loop rendering
+│
+├── 5. Hooks (Functional Components)
+│   ├── Basic Hooks
+│   │   ├── useState
+│   │   ├── useEffect
+│   │   ├── useRef
+│   │   ├── useContext
+│   │   └── useReducer
+│   ├── Additional Hooks
+│   │   ├── useMemo
+│   │   ├── useCallback
+│   │   └── useLayoutEffect
+│   └── Custom Hooks
+│
+├── 6. State Management
+│   ├── Lifting state up
+│   ├── Context API
+│   ├── Redux
+│   ├── Redux Toolkit
+│   ├── Zustand, Jotai, Recoil
+│   └── MobX
+│
+├── 7. Event Handling
+│   ├── onClick, onChange, onSubmit
+│   ├── Passing arguments to event handlers
+│   ├── Synthetic Events
+│   └── Event delegation in React
+│
+├── 8. Forms
+│   ├── Controlled Components
+│   ├── Uncontrolled Components
+│   ├── Form validation (manual, libraries)
+│   └── Libraries: Formik, React Hook Form
+│
+├── 9. Conditional Rendering
+│   ├── if/else
+│   ├── Ternary operator
+│   ├── Logical && operator
+│   └── Switch rendering
+│
+├── 10. Lists & Keys
+│   ├── Rendering arrays
+│   ├── Unique keys for elements
+│   └── Map function usage
+│
+├── 11. Styling
+│   ├── CSS Modules
+│   ├── Styled Components
+│   ├── Tailwind CSS
+│   ├── Inline styles
+│   └── Emotion
+│
+├── 12. Routing
+│   ├── React Router
+│   │   ├── <BrowserRouter>
+│   │   ├── <Routes> & <Route>
+│   │   ├── useNavigate, useParams
+│   │   ├── Nested routes
+│   │   └── Route guards
+│   └── Next.js routing
+│
+├── 13. Data Fetching
+│   ├── Fetch API
+│   ├── Axios
+│   ├── SWR
+│   └── React Query
+│
+├── 14. Performance Optimization
+│   ├── useMemo & useCallback
+│   ├── React.memo
+│   ├── Code splitting & lazy loading
+│   └── Avoid unnecessary re-renders
+│
+├── 15. Testing
+│   ├── Jest
+│   ├── React Testing Library
+│   └── Cypress (E2E testing)
+│
+├── 16. Advanced Concepts
+│   ├── Portals
+│   ├── Error Boundaries
+│   ├── Suspense & Lazy Loading
+│   ├── Server-Side Rendering (SSR)
+│   ├── Static Site Generation (SSG)
+│   └── Hydration
+│
+├── 17. Best Practices
+│   ├── Component reusability
+│   ├── Keep components small
+│   ├── Use semantic naming
+│   ├── Optimize for accessibility
+│   └── Follow folder structure conventions

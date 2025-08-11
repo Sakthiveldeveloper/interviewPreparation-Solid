@@ -1,0 +1,20 @@
+Write CSS to center a div horizontally and vertically in the viewport.
+Create a responsive navigation bar using Flexbox.
+Build a 3-column grid layout using CSS Grid.
+Style a button with hover, active, and focus states.
+Create a tooltip that appears when hovering over an element using only CSS.
+Make an image responsive so it scales properly on different screen sizes.
+Implement a sticky header that stays at the top when scrolling.
+Use media queries to change the layout for mobile devices.
+Create equal-height columns using Flexbox or Grid.
+Write CSS to hide an element visually but keep it accessible for screen readers.
+Style a form with focus styles for input fields.
+Use CSS variables to define a color theme and apply it to multiple elements.
+Create a custom checkbox or radio button style using CSS only.
+Implement a CSS-only modal popup (structure + styles).
+Write CSS to truncate overflowing text with an ellipsis.
+Create a card UI component with shadow, padding, and rounded corners.
+Build a responsive image gallery with flexible rows and columns.
+Write CSS to create a simple loader animation using keyframes.
+Implement a dropdown menu that appears on hover using CSS.
+Use Flexbox to create a footer that sticks to the bottom of the page regardless of content height.

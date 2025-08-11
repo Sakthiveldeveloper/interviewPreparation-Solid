@@ -1,0 +1,124 @@
+DBMS (Database Management System)
+├── 1. Basics
+│   ├── What is DBMS? (Definition, Purpose)
+│   ├── Types of DBMS
+│   │   ├── Relational (RDBMS)
+│   │   ├── Hierarchical
+│   │   ├── Network
+│   │   └── Object-Oriented
+│   ├── Examples: MySQL, PostgreSQL, Oracle, MongoDB
+│   └── Difference: DBMS vs RDBMS
+│
+├── 2. Data Models
+│   ├── Hierarchical Model
+│   ├── Network Model
+│   ├── Relational Model (tables)
+│   └── Entity-Relationship Model
+│
+├── 3. Database Architecture
+│   ├── 1-Tier
+│   ├── 2-Tier
+│   ├── 3-Tier
+│   └── Client-Server Architecture
+│
+├── 4. Keys
+│   ├── Primary Key
+│   ├── Foreign Key
+│   ├── Candidate Key
+│   ├── Composite Key
+│   ├── Alternate Key
+│   └── Super Key
+│
+├── 5. SQL Basics
+│   ├── DDL (Data Definition Language)
+│   │   ├── CREATE
+│   │   ├── ALTER
+│   │   ├── DROP
+│   │   └── TRUNCATE
+│   ├── DML (Data Manipulation Language)
+│   │   ├── SELECT
+│   │   ├── INSERT
+│   │   ├── UPDATE
+│   │   └── DELETE
+│   ├── DCL (Data Control Language)
+│   │   ├── GRANT
+│   │   └── REVOKE
+│   └── TCL (Transaction Control Language)
+│       ├── COMMIT
+│       ├── ROLLBACK
+│       └── SAVEPOINT
+│
+├── 6. Constraints
+│   ├── NOT NULL
+│   ├── UNIQUE
+│   ├── CHECK
+│   ├── DEFAULT
+│   ├── PRIMARY KEY
+│   └── FOREIGN KEY
+│
+├── 7. Normalization
+│   ├── 1NF
+│   ├── 2NF
+│   ├── 3NF
+│   ├── BCNF
+│   └── Denormalization
+│
+├── 8. Indexing
+│   ├── Clustered Index
+│   ├── Non-Clustered Index
+│   ├── Composite Index
+│   └── Full-Text Index
+│
+├── 9. Transactions
+│   ├── ACID Properties
+│   │   ├── Atomicity
+│   │   ├── Consistency
+│   │   ├── Isolation
+│   │   └── Durability
+│   ├── Concurrency Control
+│   ├── Deadlock
+│   └── Isolation Levels
+│
+├── 10. Joins
+│   ├── INNER JOIN
+│   ├── LEFT JOIN
+│   ├── RIGHT JOIN
+│   ├── FULL JOIN
+│   ├── CROSS JOIN
+│   └── SELF JOIN
+│
+├── 11. Views
+│   ├── Creating views
+│   ├── Updating views
+│   └── Dropping views
+│
+├── 12. Stored Procedures & Functions
+│   ├── Creating procedures
+│   ├── Creating functions
+│   ├── Parameters (IN, OUT, INOUT)
+│   └── Advantages
+│
+├── 13. Triggers
+│   ├── BEFORE triggers
+│   ├── AFTER triggers
+│   ├── Row-level triggers
+│   └── Statement-level triggers
+│
+├── 14. NoSQL Databases
+│   ├── Document-based (MongoDB)
+│   ├── Key-Value (Redis)
+│   ├── Column-based (Cassandra)
+│   └── Graph-based (Neo4j)
+│
+├── 15. Backup & Recovery
+│   ├── Full backup
+│   ├── Incremental backup
+│   ├── Point-in-time recovery
+│   └── Disaster recovery
+│
+└── 16. Best Practices
+    ├── Use proper indexing
+    ├── Normalize for efficiency
+    ├── Secure sensitive data
+    ├── Regular backups
+    └── Optimize queries

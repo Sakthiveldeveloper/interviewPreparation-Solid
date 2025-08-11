@@ -1,0 +1,37 @@
+
+Node.js Samsung interview preparation
+1. Node.js Concepts
+2. Database Knowledge (MongoDB)
+3. System Design (Basics)
+4. Data Structures & Algorithms (DSA)
+--------------------------------------------
+1. Node.js Concepts
+Event Loop & Async: Understand how Node.js handles async operations with event loop.
+Callbacks, Promises, async/await: Know how to write async code cleanly.
+Modules: CommonJS vs ES Modules, how to import/export.
+Express.js basics: Routing, middleware, request & response objects.
+Error handling: Try/catch, error-first callbacks.
+Basic knowledge: process, buffer, streams (optional but helpful).
+REST API basics: Creating endpoints, handling GET/POST requests.
+2.Database Knowledge (MongoDB)
+Basics: What is MongoDB, document-oriented DB, collections vs tables.
+CRUD operations: Insert, Find, Update, Delete commands.
+Mongoose (if applicable): Schemas, models, validation.
+Aggregation basics: Simple pipeline concepts.
+Indexing: Why indexes matter (basic idea).
+3. System Design (Basics)
+You won’t be expected to do a full design but:
+Know the difference between monolithic and microservices.
+Understand scalability (horizontal vs vertical scaling).
+Basics of caching.
+4. Data Structures & Algorithms (DSA)
+Why: They will test your problem-solving and coding skills.
+Focus on:
+Arrays, Strings basics
+Linked Lists
+Stacks and Queues
+Hash Maps / Hash Sets
+Basic sorting and searching
+Simple recursion
+How Node.js apps scale (clustering, load balancers).
+Simple API design principles.

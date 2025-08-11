@@ -1,0 +1,80 @@
+REST API
+├── 1. Basics
+│   ├── What is REST? (Representational State Transfer)
+│   ├── Stateless architecture
+│   ├── Client-Server separation
+│   ├── Uniform interface
+│   ├── Cacheable responses
+│   └── Layered system
+│
+├── 2. Core Concepts
+│   ├── Resources & URIs
+│   ├── HTTP Methods
+│   │   ├── GET (Retrieve)
+│   │   ├── POST (Create)
+│   │   ├── PUT (Replace)
+│   │   ├── PATCH (Partial update)
+│   │   └── DELETE (Remove)
+│   ├── HTTP Status Codes
+│   │   ├── 2xx (Success)
+│   │   ├── 4xx (Client errors)
+│   │   └── 5xx (Server errors)
+│   ├── Headers (Content-Type, Accept, Authorization)
+│   └── Idempotency
+│
+├── 3. Request & Response
+│   ├── Request components
+│   │   ├── Method
+│   │   ├── URL
+│   │   ├── Headers
+│   │   └── Body (JSON, XML, form-data)
+│   ├── Response components
+│   │   ├── Status code
+│   │   ├── Headers
+│   │   └── Body
+│
+├── 4. Best Practices
+│   ├── Use nouns for resources (/users, /orders)
+│   ├── Plural naming
+│   ├── Versioning (/api/v1)
+│   ├── Consistent error responses
+│   ├── Pagination for large datasets
+│   ├── Filtering & sorting
+│   └── Use proper status codes
+│
+├── 5. Security
+│   ├── Authentication
+│   │   ├── Basic Auth
+│   │   ├── Token-based
+│   │   ├── OAuth 2.0
+│   │   └── JWT
+│   ├── Authorization
+│   ├── HTTPS
+│   ├── Rate limiting
+│   ├── Input validation
+│   └── Data sanitization
+│
+├── 6. Advanced Topics
+│   ├── HATEOAS
+│   ├── OpenAPI / Swagger
+│   ├── CORS
+│   ├── API Gateway
+│   └── Error handling patterns
+│
+├── 7. Testing & Tools
+│   ├── Manual testing (Postman, Insomnia)
+│   ├── Automated testing (Jest, Mocha, Supertest)
+│   ├── API monitoring (New Relic, Datadog)
+│   └── Mock servers (JSON Server, Mockoon)
+│
+├── 8. Performance
+│   ├── Caching
+│   ├── Compression
+│   ├── Minimize payload size
+│   └── Optimize queries
+│
+└── 9. Deployment
+    ├── CI/CD pipelines
+    ├── API documentation hosting
+    ├── Cloud deployment (AWS, Azure, GCP)
+    └── Monitoring & logging

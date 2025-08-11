@@ -1,0 +1,122 @@
+✅ MERN Stack Core Coverage Checklist
+1. MongoDB
+Basics: Collections, Documents, BSON, CRUD operations
+
+Data modeling & schema design
+
+Indexing for performance
+
+Aggregation pipeline
+
+Relationships: Embedded vs. referenced
+
+Transactions
+
+MongoDB Atlas & local setup
+
+Mongoose ODM (Schemas, Models, Middleware, Virtuals)
+
+2. Express.js
+Middleware (built-in, third-party, custom)
+
+Routing (basic, nested, dynamic)
+
+Error handling middleware
+
+Request validation (Joi, Zod, express-validator)
+
+Environment variables (dotenv)
+
+CORS handling
+
+Security (helmet, rate-limiting, sanitization)
+
+Logging (morgan, winston, log4js)
+
+3. React.js
+React fundamentals (JSX, Components, Props, State)
+
+Component lifecycle (class-based & hooks)
+
+Hooks: useState, useEffect, useRef, useReducer, useMemo, useCallback, custom hooks
+
+Event handling
+
+Conditional rendering & list rendering
+
+Forms & controlled/uncontrolled components
+
+Context API
+
+State management (Redux Toolkit, Zustand, Recoil)
+
+Routing (react-router-dom, protected routes)
+
+Performance optimization (memoization, lazy loading, code splitting)
+
+Error boundaries
+
+Testing (React Testing Library, Jest)
+
+Styling (CSS Modules, Styled Components, Tailwind, MUI, Ant Design)
+
+4. Node.js
+Event loop & async programming
+
+Modules (CommonJS, ES Modules)
+
+File system operations
+
+Streams
+
+Events & EventEmitter
+
+Child processes
+
+Cluster mode
+
+API development (REST, GraphQL basics if needed)
+
+Authentication (JWT, OAuth2, sessions)
+
+WebSockets (Socket.IO)
+
+API rate limiting & caching (Redis)
+
+Deployment (PM2, Nginx, Docker)
+
+5. Full-Stack MERN Integration
+Connecting React frontend with Express backend
+
+API consumption (fetch, axios)
+
+File uploads (multer, cloud storage)
+
+Payment gateway integration (Stripe, Razorpay)
+
+Email sending (Nodemailer, SendGrid)
+
+Real-time features (chat, notifications)
+
+SSR/SSG basics (Next.js if needed)
+
+Testing full stack (supertest, Cypress)
+
+CI/CD pipelines (GitHub Actions, Jenkins)
+
+6. Additional Skills (Boost Career)
+TypeScript in MERN projects
+
+GraphQL (Apollo Server & Client)
+
+Microservices architecture
+
+Message queues (RabbitMQ, Kafka)
+
+Containerization (Docker, Kubernetes)
+
+Monitoring (New Relic, Grafana)
+
+Cloud hosting (AWS, GCP, Vercel, Netlify)
+
+Performance profiling (Lighthouse, MongoDB profiler)

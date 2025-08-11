@@ -1,0 +1,102 @@
+Node.js
+├── 1. Basics
+│   ├── What is Node.js? (JS runtime built on V8)
+│   ├── Non-blocking I/O
+│   ├── Single-threaded event loop
+│   ├── REPL (Read-Eval-Print Loop)
+│   └── Installing Node & npm
+│
+├── 2. Core Concepts
+│   ├── Modules
+│   │   ├── CommonJS (require, module.exports)
+│   │   ├── ES Modules (import, export)
+│   │   └── Built-in modules (fs, path, http, os, events)
+│   ├── Package Management (npm, yarn, pnpm)
+│   ├── EventEmitter
+│   ├── Streams (Readable, Writable, Duplex, Transform)
+│   └── Buffer
+│
+├── 3. File System
+│   ├── Reading/Writing files
+│   ├── Synchronous vs Asynchronous methods
+│   ├── Creating/Deleting directories
+│   └── Watching files
+│
+├── 4. HTTP & Servers
+│   ├── http module (createServer)
+│   ├── Handling requests & responses
+│   ├── Status codes
+│   ├── Routing basics
+│   └── Serving static files
+│
+├── 5. Express.js
+│   ├── Installing & setting up
+│   ├── Routing
+│   ├── Middleware
+│   │   ├── Built-in
+│   │   ├── Third-party
+│   │   └── Custom
+│   ├── Handling requests (GET, POST, PUT, DELETE)
+│   ├── Serving static files
+│   └── Error handling
+│
+├── 6. Databases
+│   ├── Relational (MySQL, PostgreSQL)
+│   ├── NoSQL (MongoDB)
+│   ├── ORM/ODM
+│   │   ├── Sequelize
+│   │   └── Mongoose
+│   └── CRUD operations
+│
+├── 7. Asynchronous Programming
+│   ├── Callbacks
+│   ├── Promises
+│   ├── async/await
+│   └── Error handling in async code
+│
+├── 8. APIs
+│   ├── REST API
+│   ├── GraphQL API
+│   ├── JSON handling
+│   ├── CORS
+│   └── API versioning
+│
+├── 9. Authentication & Security
+│   ├── JWT (JSON Web Tokens)
+│   ├── OAuth
+│   ├── Password hashing (bcrypt)
+│   ├── Helmet.js (security headers)
+│   └── Rate limiting
+│
+├── 10. Environment Variables
+│   ├── process.env
+│   └── dotenv package
+│
+├── 11. File Uploads
+│   ├── multer
+│   ├── Streaming uploads
+│   └── Cloud storage integration (AWS S3, MinIO)
+│
+├── 12. Real-Time Communication
+│   ├── WebSockets
+│   ├── Socket.IO
+│   └── Server-Sent Events (SSE)
+│
+├── 13. Testing
+│   ├── Mocha
+│   ├── Chai
+│   ├── Jest
+│   └── Supertest
+│
+├── 14. Deployment
+│   ├── PM2
+│   ├── Docker
+│   ├── CI/CD pipelines
+│   └── Cloud platforms (AWS, Azure, GCP, Vercel, Heroku)
+│
+├── 15. Best Practices
+│   ├── Use async/await
+│   ├── Keep code modular
+│   ├── Handle errors properly
+│   ├── Secure environment variables
+│   └── Log & monitor (Winston, Morgan)

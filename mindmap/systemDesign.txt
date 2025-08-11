@@ -1,0 +1,81 @@
+SYSTEM DESIGN
+│
+├── 1. Fundamentals
+│ ├── Basics of System Design
+│ │ ├── Functional vs Non-Functional Requirements
+│ │ ├── Monolith vs Microservices
+│ │ ├── Scalability, Reliability, Maintainability
+│ │ ├── CAP Theorem
+│ │ └── Latency vs Throughput
+│ ├── Networking Basics
+│ │ ├── HTTP, HTTPS, WebSockets
+│ │ ├── REST vs gRPC
+│ │ ├── Load Balancers
+│ │ └── DNS
+│ └── Storage Basics
+│ ├── Relational Databases (SQL)
+│ ├── NoSQL (Document, Key-Value, Column, Graph)
+│ ├── Indexing
+│ └── Caching Basics
+│
+├── 2. Components of System Design
+│ ├── Frontend Layer
+│ │ ├── Web & Mobile Clients
+│ │ ├── CDN
+│ │ └── Edge Caching
+│ ├── Backend Layer
+│ │ ├── API Gateway
+│ │ ├── Application Servers
+│ │ ├── Service Discovery
+│ │ └── Microservices / Serverless
+│ ├── Data Layer
+│ │ ├── Primary Database
+│ │ ├── Caching Layer (Redis, Memcached)
+│ │ ├── Data Warehousing & Analytics
+│ │ └── Search (Elasticsearch, Solr)
+│ └── Infrastructure
+│ ├── Load Balancing
+│ ├── Reverse Proxy
+│ ├── Message Queues (Kafka, RabbitMQ, SQS)
+│ ├── Stream Processing
+│ └── Storage Systems (S3, Blob)
+│
+├── 3. Design Principles
+│ ├── Horizontal vs Vertical Scaling
+│ ├── Database Sharding & Replication
+│ ├── Event-Driven Architecture
+│ ├── CQRS & Event Sourcing
+│ ├── Fault Tolerance
+│ ├── Graceful Degradation
+│ └── Data Consistency Models
+│
+├── 4. Reliability & Performance
+│ ├── Caching Strategies
+│ │ ├── Write-through / Write-behind
+│ │ ├── Cache Invalidation
+│ │ └── CDN Edge Cache
+│ ├── Rate Limiting & Throttling
+│ ├── Auto-Scaling
+│ ├── Health Checks
+│ └── Circuit Breaker Pattern
+│
+├── 5. Security & Compliance
+│ ├── Authentication (OAuth2, JWT, SSO)
+│ ├── Authorization (RBAC, ABAC)
+│ ├── Data Encryption (at rest & in transit)
+│ ├── Input Validation & Sanitization
+│ └── Audit Logging & Compliance (GDPR, HIPAA)
+│
+├── 6. Observability & Maintenance
+│ ├── Logging (Structured, Centralized)
+│ ├── Metrics & Monitoring (Prometheus, Grafana)
+│ ├── Tracing (Jaeger, OpenTelemetry)
+│ ├── Alerting
+│ └── Chaos Engineering
+│
+└── 7. Case Studies & Practice
+├── Design a URL Shortener
+├── Design Instagram
+├── Design a Messaging System (WhatsApp)
+├── Design an E-Commerce System
+└── Design a Real-time Collaboration Tool

@@ -1,0 +1,143 @@
+CSS (Cascading Style Sheets)
+├── 1. Basics
+│   ├── What is CSS?
+│   ├── Types of CSS
+│   │   ├── Inline CSS
+│   │   ├── Internal CSS
+│   │   └── External CSS
+│   ├── Syntax: selector { property: value; }
+│   └── File extension: .css
+│
+├── 2. Selectors
+│   ├── Basic Selectors
+│   │   ├── Universal (*)
+│   │   ├── Type (p, h1, div)
+│   │   ├── Class (.classname)
+│   │   ├── ID (#id)
+│   │   └── Grouping (,)
+│   ├── Combinators
+│   │   ├── Descendant ( )
+│   │   ├── Child (>)
+│   │   ├── Adjacent sibling (+)
+│   │   └── General sibling (~)
+│   ├── Attribute selectors
+│   │   ├── [attr]
+│   │   ├── [attr="value"]
+│   │   └── [attr^="start"], [attr$="end"], [attr*="contains"]
+│   └── Pseudo-classes & Pseudo-elements
+│       ├── Pseudo-classes (:hover, :focus, :nth-child)
+│       └── Pseudo-elements (::before, ::after, ::first-letter)
+│       └── content property (used with pseudo-elements)
+│
+├── 3. Colors & Units
+│   ├── Color formats: name, HEX, RGB, RGBA, HSL, HSLA
+│   ├── Units: px, %, em, rem, vw, vh
+│   ├── Transparent colors
+│   └── Opacity
+│
+├── 4. Box Model
+│   ├── Content
+│   ├── Padding
+│   ├── Border
+│   ├── Margin
+│   ├── box-sizing: content-box | border-box
+│   ├── box-shadow
+│   └── text-shadow
+│
+├── 5. Typography
+│   ├── font-family
+│   ├── font-size
+│   ├── font-weight
+│   ├── line-height
+│   ├── text-align
+│   ├── text-decoration
+│   ├── letter-spacing, word-spacing
+│   └── responsive typography (fluid typography, clamp())
+│
+├── 6. Backgrounds & Visual Effects
+│   ├── background-color
+│   ├── background-image
+│   ├── background-repeat
+│   ├── background-position
+│   ├── background-size
+│   ├── background-attachment
+│   ├── opacity
+│   └── box-shadow, text-shadow (also in Box Model)
+│
+├── 7. Layout
+│   ├── Display
+│   │   ├── block, inline, inline-block
+│   │   ├── flex, grid
+│   │   └── none
+│   ├── Position
+│   │   ├── static
+│   │   ├── relative
+│   │   ├── absolute
+│   │   ├── fixed
+│   │   └── sticky
+│   ├── Float & Clear
+│   ├── Z-index
+│   ├── Overflow
+│   │   ├── overflow-x
+│   │   └── overflow-y
+│   ├── Visibility
+│   │   ├── visible
+│   │   └── hidden
+│   ├── pointer-events
+│   └── CSS `calc()` (for dynamic sizing & layout)
+│
+├── 8. Flexbox
+│   ├── display: flex
+│   ├── flex-direction
+│   ├── justify-content
+│   ├── align-items
+│   ├── flex-wrap
+│   └── align-content
+│
+├── 9. CSS Grid
+│   ├── display: grid
+│   ├── grid-template-rows
+│   ├── grid-template-columns
+│   ├── grid-gap
+│   ├── grid-row & grid-column
+│   ├── justify-items & align-items
+│   ├── grid-auto-flow
+│   └── grid-template-areas
+│
+├── 10. Transitions & Animations
+│   ├── transition-property, duration, timing-function, delay
+│   ├── @keyframes
+│   └── animation properties (name, duration, iteration-count)
+│
+├── 11. Transformations
+│   ├── rotate()
+│   ├── scale()
+│   ├── translate()
+│   └── skew()
+│
+├── 12. Responsive Design
+│   ├── Media queries
+│   ├── Mobile-first approach
+│   ├── Relative units (%, em, rem, vw, vh)
+│   ├── Responsive images & typography
+│   └── fluid typography & clamp() (also in Typography)
+│
+├── 13. Variables & Functions
+│   ├── CSS variables (--var-name)
+│   ├── var()
+│   ├── calc()
+│   ├── min(), max(), clamp()
+│   └── Custom properties
+│
+├── 14. CSS Specificity & Inheritance
+│   ├── Specificity hierarchy
+│   ├── !important usage
+│   └── Inheritable properties
+│
+└── 15. Best Practices
+    ├── Keep styles modular
+    ├── Use external CSS for maintainability
+    ├── Prefer semantic class names
+    ├── Avoid overusing !important
+    ├── Validate CSS (W3C Validator)
+    └── Consider CSS preprocessors (Sass, LESS) — optional for advanced users

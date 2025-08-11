@@ -1,0 +1,85 @@
+CI/CD
+│
+├── Continuous Integration (CI)
+│   ├── Code Commit
+│   │   ├── Version Control (Git)
+│   │   └── Branching Strategy (Git Flow, Trunk Based)
+│   ├── Automated Build
+│   │   ├── Compile Code
+│   │   └── Package Artifacts
+│   ├── Automated Testing
+│   │   ├── Unit Tests
+│   │   ├── Integration Tests
+│   │   └── Static Code Analysis (Lint, SonarQube)
+│   ├── Feedback Loop
+│   │   ├── Build Status Reports
+│   │   └── Slack/Email Notifications
+│   └── Artifact Storage (Nexus, Artifactory)
+│
+├── Continuous Delivery (CD)
+│   ├── Staging Deployment
+│   │   ├── Deploy to Test/Staging Env
+│   │   └── Run Automated Acceptance Tests
+│   ├── Manual Approval Gate
+│   ├── Configuration Management (Ansible, Chef, Puppet)
+│   └── Environment Parity
+│
+└── Continuous Deployment (CD)
+    ├── Automated Production Deployment
+    │   ├── Blue-Green Deployment
+    │   ├── Canary Release
+    │   └── Rolling Update
+    ├── Monitoring & Logging
+    │   ├── Application Monitoring (Prometheus, Grafana)
+    │   ├── Log Management (ELK, Loki)
+    │   └── Alerts (PagerDuty, Opsgenie)
+    └── Rollback Strategy
+        ├── Automated Rollback on Failure
+        └── Feature Toggles
+ ┌─────────────────────────────────────────┐
+             │              CI/CD Pipeline              │
+             └─────────────────────────────────────────┘
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+   Continuous           Continuous         Continuous
+  Integration           Delivery          Deployment
+        │                   │                   │
+        ▼                   ▼                   ▼
+1️⃣ Continuous Integration (CI)
+
+Code Management → Git, GitHub, GitLab, Bitbucket
+
+Build Automation → Jenkins, GitHub Actions, GitLab CI, CircleCI, Azure DevOps
+
+Testing → Jest, Mocha, Cypress, Selenium, JUnit, PyTest
+
+Code Quality & Security → SonarQube, ESLint, Prettier, Checkmarx, Snyk
+
+2️⃣ Continuous Delivery (CD)
+
+Artifact Management → Nexus, Artifactory, GitHub Packages, AWS CodeArtifact
+
+Staging Environment → Docker, Kubernetes, AWS Elastic Beanstalk
+
+Configuration Management → Ansible, Chef, Puppet, Terraform
+
+Approval Gates → Jira, ServiceNow, GitLab Approval Rules
+
+3️⃣ Continuous Deployment
+
+Orchestration & Deployment → Kubernetes, Docker Swarm, Helm
+
+Cloud Providers → AWS (CodePipeline, ECS, EKS), Azure DevOps, Google Cloud Build
+
+Monitoring & Logging → Prometheus, Grafana, ELK Stack, Datadog, Splunk
+
+Alerts & Incident Management → PagerDuty, Opsgenie, Slack, Microsoft Teams
+
+🔄 Supporting Practices
+
+Version Control → Git, GitHub, GitLab
+
+Secrets Management → HashiCorp Vault, AWS Secrets Manager, Azure Key Vault
+
+Infrastructure as Code → Terraform, Pulumi, AWS CloudFormation

@@ -1,0 +1,60 @@
+Top 20 Node.js Questions & Answers
+What is Node.js?
+Node.js is a JavaScript runtime built on Chrome’s V8 engine to run JS on the server-side.
+
+What is the event-driven architecture in Node.js?
+Node.js uses events and callbacks to handle asynchronous operations efficiently.
+
+What is the difference between blocking and non-blocking code?
+Blocking code waits for tasks to finish before continuing; non-blocking allows other tasks to run while waiting.
+
+What is the role of the event loop in Node.js?
+It manages the execution of asynchronous callbacks and tasks.
+
+What are callbacks in Node.js?
+Functions passed as arguments to be executed after an async operation completes.
+
+What are Promises and how are they different from callbacks?
+Promises provide a cleaner way to handle async operations and avoid callback hell.
+
+What is process.nextTick() in Node.js?
+Schedules a callback to run immediately after the current operation completes, before the event loop continues.
+
+What is the difference between require and import?
+require is CommonJS syntax; import is ES6 module syntax.
+
+What is middleware in Node.js?
+Functions that execute during request-response cycle in frameworks like Express.js.
+
+What is the purpose of package.json?
+It manages project metadata, dependencies, scripts, and configurations.
+
+What is the difference between readFile and readFileSync?
+readFile is async (non-blocking), readFileSync is blocking.
+
+What is a stream in Node.js?
+Streams are data flows that allow reading/writing data piece-by-piece instead of all at once.
+
+What is the difference between process.env and configuration files?
+process.env stores environment variables accessible during runtime.
+
+How does Node.js handle child processes?
+Via the child_process module to spawn and communicate with subprocesses.
+
+What is clustering in Node.js?
+Running multiple Node.js processes to utilize multi-core CPU for better performance.
+
+How does Node.js handle concurrency?
+Uses a single-threaded event loop with async callbacks, not multi-threading.
+
+What is the difference between res.send() and res.json() in Express?
+res.send() sends various types, res.json() sends JSON with proper headers.
+
+What is CORS and how do you enable it in Node.js?
+Cross-Origin Resource Sharing — allow/disallow requests from other origins, enabled via middleware.
+
+What is the difference between __dirname and process.cwd()?
+__dirname is the directory of the current module; process.cwd() is the current working directory.
+
+How do you handle errors in Node.js?
+Using callbacks with error-first pattern, try-catch for sync code, and Promise .catch() or async/await error handling.

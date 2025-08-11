@@ -1,0 +1,60 @@
+Top 20 React Questions & Answers
+What is React?
+React is a JavaScript library for building user interfaces using reusable components.
+
+What are components in React?
+Components are independent, reusable pieces of UI, either functional or class-based.
+
+What is JSX?
+JSX is a syntax extension that looks like HTML but allows writing React elements in JavaScript.
+
+What is the virtual DOM?
+A lightweight copy of the real DOM that React uses to efficiently update the UI.
+
+What are props in React?
+Props are read-only inputs passed from parent to child components.
+
+What is state in React?
+State is an object that holds data that can change over time within a component.
+
+What is the difference between state and props?
+Props are passed from parent, immutable inside child; state is managed within the component and can change.
+
+What are lifecycle methods?
+Methods in class components that run at different stages: mounting, updating, unmounting (e.g., componentDidMount).
+
+What are React hooks?
+Functions like useState, useEffect that let you use state and other React features in functional components.
+
+What does useState do?
+Declares state variables in functional components.
+
+What is useEffect used for?
+Runs side effects like data fetching or subscriptions after render.
+
+How do you pass data between components?
+Using props for parent-to-child; use context or state management libraries for complex cases.
+
+What is lifting state up?
+Moving state to a common ancestor to share data between sibling components.
+
+What is a controlled component?
+Form elements where React state controls the input value.
+
+What is a key in React lists, and why is it important?
+A unique identifier for list items to help React efficiently update the DOM.
+
+What is reconciliation in React?
+React’s process of comparing virtual DOM trees to update the real DOM efficiently.
+
+What are higher-order components (HOCs)?
+Functions that take a component and return a new enhanced component.
+
+What is React Context?
+A way to share data globally without passing props manually at every level.
+
+What is the difference between React and ReactDOM?
+React is the core library; ReactDOM handles rendering React components to the DOM.
+
+How do you optimize performance in React?
+Using React.memo, lazy loading, code splitting, avoiding unnecessary re-renders.

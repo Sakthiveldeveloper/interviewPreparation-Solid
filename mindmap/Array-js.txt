@@ -1,0 +1,86 @@
+JavaScript Arrays
+├── 1. Basics
+│ ├── What is an Array? (Ordered collection of values)
+│ ├── Indexed (zero-based index)
+│ ├── Can store multiple data types (mixed types allowed)
+│ ├── Mutable (can add, remove, or change elements)
+│ └── Stored as objects internally in JavaScript
+│
+├── 2. Creating Arrays
+│ ├── Array literal syntax: let arr = [1, 2, 3];
+│ ├── Using new Array(): let arr = new Array(3);
+│ ├── Empty array: let arr = [];
+│ └── Nested arrays (arrays inside arrays)
+│
+├── 3. Accessing Elements
+│ ├── Using index: arr[0]
+│ ├── First element: arr[0]
+│ ├── Last element: arr[arr.length - 1]
+│ └── Out-of-range returns undefined
+│
+├── 4. Modifying Arrays
+│ ├── Change element: arr[1] = 'newValue'
+│ ├── Add element at end: arr.push('value')
+│ ├── Add element at start: arr.unshift('value')
+│ ├── Remove last element: arr.pop()
+│ ├── Remove first element: arr.shift()
+│ └── Delete element: delete arr[index] (leaves hole)
+│
+├── 5. Properties
+│ ├── length – number of elements
+│ └── Auto-updates when elements are added/removed
+│
+├── 6. Array Methods
+│ ├── Adding/Removing
+│ │ ├── push() – add to end
+│ │ ├── pop() – remove from end
+│ │ ├── shift() – remove from start
+│ │ ├── unshift() – add to start
+│ │ ├── splice(start, deleteCount, ...items) – add/remove
+│ │ └── slice(start, end) – copy portion
+│ ├── Searching
+│ │ ├── indexOf() / lastIndexOf()
+│ │ └── includes()
+│ ├── Iterating
+│ │ ├── forEach() – loop through
+│ │ ├── map() – transform values
+│ │ ├── filter() – filter values
+│ │ ├── reduce() / reduceRight() – accumulate
+│ │ ├── find() – find first match
+│ │ └── findIndex() – find index of match
+│ ├── Combining
+│ │ ├── concat() – merge arrays
+│ │ └── join() – array to string
+│ └── Sorting/Reversing
+│ ├── sort() – sort elements
+│ └── reverse() – reverse order
+│
+├── 7. Iterating Over Arrays
+│ ├── Classic for loop
+│ ├── for...of loop
+│ ├── forEach() method
+│ └── map(), filter(), reduce()
+│
+├── 8. Multi-dimensional Arrays
+│ ├── Array of arrays
+│ ├── Access: arr[row][col]
+│ └── Useful for matrices or grids
+│
+├── 9. Array-Like Objects
+│ ├── arguments object in functions
+│ ├── NodeList from DOM queries
+│ └── Convert with Array.from()
+│
+├── 10. Best Practices
+│ ├── Prefer array literals over new Array()
+│ ├── Use const for arrays to prevent reassignment (still mutable)
+│ ├── Avoid sparse arrays (holes)
+│ ├── Use appropriate iteration method for readability
+│ └── Avoid using delete for removing elements (use splice)
+│
+└── 11. Advanced Topics
+├── Destructuring arrays: [a, b] = arr
+├── Spread operator: [...arr]
+├── Rest parameters: (...args) => {}
+├── Flat arrays: arr.flat(depth)
+└── Immutable updates with spread & map

@@ -1,0 +1,94 @@
+Microservices Architecture
+├── 1. Basics
+│   ├── What are Microservices? (Small, independent services)
+│   ├── Benefits
+│   │   ├── Independent deployability
+│   │   ├── Scalability
+│   │   └── Fault isolation
+│   ├── Drawbacks
+│   │   ├── Increased operational complexity
+│   │   └── Distributed systems challenges
+│   └── When to use vs Monolith
+│
+├── 2. Service Design
+│   ├── Bounded Context (Domain-Driven Design)
+│   ├── Single Responsibility per service
+│   ├── Data ownership (Database per service)
+│   ├── Stateless services (state in DB / cache)
+│   └── API Contracts (clear request/response shapes)
+│
+├── 3. Communication Patterns
+│   ├── Synchronous
+│   │   ├── HTTP/REST
+│   │   └── gRPC
+│   ├── Asynchronous
+│   │   ├── Message queues (RabbitMQ, ActiveMQ)
+│   │   └── Event streaming (Kafka)
+│   ├── Event-driven architecture
+│   └── API Gateway (routing, auth, rate-limit)
+│
+├── 4. Data Management
+│   ├── Decentralized data (no shared DB)
+│   ├── Data replication & CQRS
+│   ├── Event sourcing (optional)
+│   └── Transactions
+│       ├── Local transactions
+│       └── Distributed patterns (Saga)
+│
+├── 5. Resilience & Reliability
+│   ├── Circuit Breaker (Resilience4j, Hystrix)
+│   ├── Retry & Backoff strategies
+│   ├── Bulkhead isolation
+│   └── Timeouts & fallback handling
+│
+├── 6. Observability
+│   ├── Logging (centralized - ELK, Loki)
+│   ├── Metrics (Prometheus, Grafana)
+│   ├── Distributed Tracing (Jaeger, Zipkin, OpenTelemetry)
+│   └── Health checks / readiness & liveness probes
+│
+├── 7. Security
+│   ├── Authentication (OAuth2, OpenID Connect)
+│   ├── Authorization (RBAC / ABAC)
+│   ├── API security (JWT, mTLS)
+│   └── Secrets management (Vault, cloud secrets)
+│
+├── 8. Deployment & Infrastructure
+│   ├── Containerization (Docker)
+│   ├── Orchestration (Kubernetes)
+│   ├── Service discovery (Consul, Eureka)
+│   ├── CI/CD pipelines (automated builds, canary, blue/green)
+│   └── Infrastructure as Code (Terraform, CloudFormation)
+│
+├── 9. Scalability & Performance
+│   ├── Horizontal scaling of services
+│   ├── Auto-scaling policies
+│   ├── Caching strategies (Redis, CDN)
+│   └── Load balancing (Ingress, service mesh)
+│
+├── 10. Service Mesh
+│   ├── Istio / Linkerd (sidecar pattern)
+│   ├── Traffic management (routing, retries)
+│   ├── Security (mTLS between services)
+│   └── Observability features (metrics/tracing)
+│
+├── 11. Testing Strategies
+│   ├── Unit tests for services
+│   ├── Contract tests (Pact)
+│   ├── Integration tests
+│   └── End-to-end tests (test environments, mock services)
+│
+├── 12. Governance & Team Organization
+│   ├── Dev teams own services end-to-end
+│   ├── Standardized CI/CD & observability patterns
+│   └── API versioning & backward compatibility
+│
+└── 13. Challenges & Patterns
+    ├── Challenges
+    │   ├── Distributed transactions & consistency
+    │   ├── Debugging across services
+    │   └── Operational overhead
+    └── Common Patterns
+        ├── Saga pattern (long-running transactions)
+        ├── Backends for Frontends (BFF)
+        └── Strangler pattern (migrating from monolith)

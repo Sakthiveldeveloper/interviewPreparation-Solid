@@ -1,0 +1,92 @@
+TypeScript
+├── 1. Basics
+│ ├── What is TypeScript?
+│ ├── Differences from JavaScript
+│ ├── Advantages & Disadvantages
+│ ├── TypeScript Compiler (tsc)
+│ ├── Installing TypeScript (npm install -g typescript)
+│ └── Configuration file: tsconfig.json
+│
+├── 2. Basic Types
+│ ├── string, number, boolean
+│ ├── null, undefined
+│ ├── any, unknown, never
+│ ├── void
+│ ├── Arrays: number[], Array<number>
+│ ├── Tuples: [string, number]
+│ └── Enums: Numeric, String, Heterogeneous
+│
+├── 3. Type Assertions
+│ ├── as syntax
+│ └── <type> syntax
+│
+├── 4. Functions
+│ ├── Parameter Types
+│ ├── Return Types
+│ ├── Optional Parameters (?)
+│ ├── Default Parameters
+│ ├── Rest Parameters (...args)
+│ └── Function Overloading
+│
+├── 5. Objects & Interfaces
+│ ├── Object Type Annotations
+│ ├── interface vs type
+│ ├── Optional & readonly properties
+│ ├── Extending Interfaces
+│ └── Intersection Types (&)
+│
+├── 6. Classes
+│ ├── Fields & Constructors
+│ ├── Access Modifiers: public, private, protected
+│ ├── readonly properties
+│ ├── Inheritance (extends)
+│ ├── Method Overriding
+│ ├── abstract classes
+│ └── implements keyword
+│
+├── 7. Generics
+│ ├── Generic Functions
+│ ├── Generic Interfaces
+│ ├── Generic Classes
+│ ├── Constraints (extends)
+│ └── Default Generic Types
+│
+├── 8. Advanced Types
+│ ├── Union Types (|)
+│ ├── Intersection Types (&)
+│ ├── Literal Types ("yes" | "no")
+│ ├── Type Aliases
+│ ├── Mapped Types
+│ ├── Conditional Types
+│ └── Utility Types: Partial, Pick, Omit, Readonly, Record, ReturnType
+│
+├── 9. Type Narrowing
+│ ├── typeof checks
+│ ├── instanceof checks
+│ ├── Type Guards (Custom functions)
+│ └── Discriminated Unions
+│
+├── 10. Modules & Namespaces
+│ ├── ES Modules: import, export
+│ ├── Default vs Named Exports
+│ └── Namespaces
+│
+├── 11. Decorators (Experimental)
+│ ├── Class Decorators
+│ ├── Method Decorators
+│ ├── Property Decorators
+│ └── Parameter Decorators
+│
+├── 12. Tooling & Ecosystem
+│ ├── ts-node
+│ ├── ESLint + TypeScript
+│ ├── Babel with TypeScript
+│ ├── TypeScript with React (TSX)
+│ └── TypeScript with Node.js
+│
+└── 13. Best Practices
+├── Enable strict mode in tsconfig.json
+├── Avoid any where possible
+├── Use interfaces for public APIs
+├── Keep types DRY (Don’t Repeat Yourself)
+└── Prefer union types over enums where appropriate

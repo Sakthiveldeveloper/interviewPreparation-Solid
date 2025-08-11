@@ -1,0 +1,93 @@
+ Top 20 JavaScript Questions & Answers
+What is JavaScript, and why is it used?
+JavaScript is a programming language for adding interactivity, dynamic content, and logic to web pages.
+
+Difference between var, let, and const.
+
+var: function-scoped, hoisted, can be redeclared
+
+let: block-scoped, no redeclaration
+
+const: block-scoped, must be initialized, no reassignment.
+
+What is hoisting in JavaScript?
+JS moves variable and function declarations to the top before execution.
+
+Difference between == and ===.
+== compares values (performs type conversion), === compares values and types (strict).
+
+What is a closure?
+A closure is when a function remembers variables from its outer scope even after that scope has closed.
+
+Difference between function declaration and function expression.
+
+Declaration: hoisted (function test(){})
+
+Expression: not hoisted (const test = function(){}).
+
+What is the difference between synchronous and asynchronous code?
+Synchronous runs line-by-line, asynchronous allows other tasks to run while waiting (e.g., setTimeout, fetch).
+
+What is the Event Loop in JavaScript?
+Mechanism that handles async callbacks by moving them from the task queue to the call stack when free.
+
+Difference between null and undefined.
+
+null: intentional empty value
+
+undefined: variable declared but not assigned.
+
+What are template literals in JavaScript?
+Strings using backticks (`\``) with embedded expressions ${value}`.
+
+Difference between map(), forEach(), and filter().
+
+map: returns a new array with transformed values
+
+forEach: loops but returns undefined
+
+filter: returns a new array with matching values.
+
+What is this in JavaScript?
+Refers to the object that owns the current execution context (depends on how the function is called).
+
+What are arrow functions, and how are they different from normal functions?
+Arrow functions are shorter, don’t have their own this, arguments, or prototype.
+
+What is the difference between shallow copy and deep copy in JS?
+
+Shallow: copies references (nested objects still linked)
+
+Deep: completely independent copy.
+
+What is async/await in JavaScript?
+Syntax for writing asynchronous code that looks synchronous, built on top of Promises.
+
+Difference between localStorage, sessionStorage, and cookies.
+
+localStorage: no expiry
+
+sessionStorage: clears on tab close
+
+cookies: small data sent with every request.
+
+What is event delegation in JavaScript?
+Attaching one event listener to a parent to handle events for its children via bubbling.
+
+Difference between call(), apply(), and bind().
+
+call: calls with given this & args (comma-separated)
+
+apply: calls with given this & args (array)
+
+bind: returns a new function with given this.
+
+What is the difference between == and Object.is()?
+Object.is() is like === but handles NaN and -0 correctly.
+
+What is debouncing and throttling in JavaScript?
+
+Debounce: delay execution until after no calls for a set time
+
+Throttle: limit execution to once per set time interval.
+

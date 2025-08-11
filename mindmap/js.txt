@@ -1,0 +1,136 @@
+
+JavaScript (JS)
+├── 1. Basics
+│   ├── What is JavaScript? (client-side, server-side)
+│   ├── Adding JS to HTML
+│   │   ├── Inline: <button onclick="...">
+│   │   ├── Internal: <script>...</script>
+│   │   └── External: <script src="app.js"></script>
+│   ├── Syntax & Case Sensitivity
+│   └── Comments: // single-line, /* multi-line */
+│
+├── 2. Variables
+│   ├── var (function-scoped)
+│   ├── let (block-scoped)
+│   ├── const (block-scoped, constant reference)
+│   ├── Hoisting behavior
+│   └── Naming rules
+│
+├── 3. Data Types
+│   ├── Primitive Types
+│   │   ├── string
+│   │   ├── number
+│   │   ├── boolean
+│   │   ├── null
+│   │   ├── undefined
+│   │   └── symbol, bigint
+│   └── Non-primitive
+│       ├── object
+│       ├── array
+│       └── function
+│
+├── 4. Operators
+│   ├── Arithmetic (+, -, *, /, %, **)
+│   ├── Assignment (=, +=, -=, etc.)
+│   ├── Comparison (==, ===, !=, !==, >, <, >=, <=)
+│   ├── Logical (&&, ||, !)
+│   ├── Ternary (condition ? value1 : value2)
+│   └── Spread & Rest (...)
+│
+├── 5. Control Flow
+│   ├── if, else if, else
+│   ├── switch
+│   ├── for, while, do...while
+│   ├── break, continue
+│   └── try...catch...finally
+│
+├── 6. Functions
+│   ├── Function Declaration
+│   ├── Function Expression
+│   ├── Arrow Functions
+│   ├── Parameters & Arguments
+│   ├── Default Parameters
+│   ├── Rest Parameters
+│   ├── Return values
+│   └── IIFE (Immediately Invoked Function Expressions)
+│
+├── 7. Objects
+│   ├── Object creation (literal, constructor)
+│   ├── Properties & Methods
+│   ├── this keyword
+│   ├── Object destructuring
+│   ├── Object.assign()
+│   └── Object.keys(), Object.values(), Object.entries()
+│
+├── 8. Arrays
+│   ├── Array creation
+│   ├── Array methods
+│   │   ├── push(), pop(), shift(), unshift()
+│   │   ├── map(), filter(), reduce()
+│   │   ├── forEach(), some(), every(), find()
+│   │   └── concat(), slice(), splice()
+│   ├── Spread & Destructuring
+│   └── Iteration with for...of
+│
+├── 9. Strings
+│   ├── Template literals
+│   ├── String methods: length, toUpperCase(), toLowerCase()
+│   ├── trim(), split(), replace(), includes()
+│   └── charAt(), indexOf(), substring(), slice()
+│
+├── 10. Dates & Math
+│   ├── Date object & methods
+│   ├── Math object: round(), floor(), ceil(), random(), min(), max()
+│   └── Date formatting
+│
+├── 11. DOM Manipulation
+│   ├── Selecting elements
+│   │   ├── getElementById(), getElementsByClassName(), querySelector()
+│   ├── Changing content: textContent, innerHTML
+│   ├── Changing styles: element.style.property
+│   ├── Creating/Removing elements: createElement(), append(), remove()
+│   └── Event listeners: addEventListener()
+│
+├── 12. Events
+│   ├── Mouse events (click, dblclick, mouseover)
+│   ├── Keyboard events (keydown, keyup)
+│   ├── Form events (submit, change, input)
+│   └── Event bubbling & capturing
+│
+├── 13. ES6+ Features
+│   ├── let & const
+│   ├── Arrow functions
+│   ├── Template literals
+│   ├── Destructuring
+│   ├── Default parameters
+│   ├── Modules (import/export)
+│   └── async/await
+│
+├── 14. JSON
+│   ├── JSON.parse()
+│   ├── JSON.stringify()
+│   └── Data exchange with APIs
+│
+├── 15. Asynchronous JS
+│   ├── setTimeout(), setInterval()
+│   ├── Callbacks
+│   ├── Promises
+│   ├── async/await
+│   └── Fetch API / AJAX
+│
+├── 16. Error Handling
+│   ├── try...catch
+│   ├── throw
+│   └── finally
+│
+├── 17. Storage
+│   ├── localStorage
+│   ├── sessionStorage
+│   └── cookies
+│
+├── 18. Best Practices
+│   ├── Use strict mode
+│   ├── Write clean, readable code
+│   ├── Avoid global variables
+│   ├── Use const/let over var
+│   └── Keep functions small & reusable
