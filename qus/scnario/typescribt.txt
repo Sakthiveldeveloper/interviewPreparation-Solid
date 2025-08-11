@@ -1,0 +1,33 @@
+TypeScript Scenario-Based Questions
+(These test real-world problem-solving using TypeScript features)
+
+You are designing a library API — how would you ensure all exposed methods are strongly typed and maintain backward compatibility?
+
+A backend API returns inconsistent data types for a property (sometimes string, sometimes number). How do you type it safely in TypeScript?
+
+You need to enforce that an object must have certain properties but can have additional dynamic properties as well — how do you design this type?
+
+You have a React component that accepts props, some of which are optional. How do you enforce type safety for optional props?
+
+You are building a form handler — how do you type it so that it works with multiple form field shapes using generics?
+
+A function takes a configuration object — how do you ensure the caller cannot pass unknown properties?
+
+You have a class hierarchy with shared methods but different implementations — do you use abstract class or interface and why?
+
+Your API response can either be an error or a success object. How would you type this to enforce safe property access?
+
+You have an object where keys are fixed but values are all strings — how would you type it?
+
+You are working on a project that uses a JavaScript library without TypeScript support — how do you add type definitions for it?
+
+How do you type a function so that the return type depends on the type of the input parameter?
+
+You need to restrict a generic type to only extend from an array or object — how do you do it?
+
+You have a list of constants and want to create a type from their values — how do you do it?
+
+How do you handle JSON parsing in TypeScript to ensure type safety at runtime?
+
+You have a function that accepts an event listener — how do you type the event parameter correctly?
+

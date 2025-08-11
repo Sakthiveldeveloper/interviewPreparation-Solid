@@ -1,0 +1,60 @@
+Most-Asked TypeScript Theory Questions
+What is TypeScript and how is it different from JavaScript?
+
+Why should you use TypeScript instead of JavaScript?
+
+How does TypeScript provide static typing?
+
+What are the benefits of type inference in TypeScript?
+
+What is the difference between any, unknown, and never types?
+
+What is the difference between interface and type in TypeScript?
+
+What are union and intersection types? Give examples.
+
+What is type narrowing and how is it done in TypeScript?
+
+What are generics in TypeScript and why are they used?
+
+Explain the difference between null and undefined in TypeScript.
+
+What is the purpose of readonly in TypeScript?
+
+How do access modifiers (public, private, protected) work in classes?
+
+What is the difference between abstract classes and interfaces?
+
+What is the difference between compile-time and run-time type checking?
+
+What are decorators in TypeScript? Are they stable?
+
+What are utility types in TypeScript? Name a few.
+
+How do declaration files (.d.ts) work in TypeScript?
+
+What is the difference between type assertion and type casting?
+
+How does TypeScript handle this keyword differently from JavaScript?
+
+What are mapped types in TypeScript? Give examples.
+
+What are template literal types in TypeScript?
+
+How do you make properties optional in TypeScript?
+
+What is the difference between keyof and typeof in TypeScript?
+
+What are discriminated unions? Give examples.
+
+How do you enforce strict null checks in TypeScript?
+
+How does Partial<T> differ from Pick<T, K>?
+
+What is the purpose of never type?
+
+How do namespaces differ from modules in TypeScript?
+
+What is tsconfig.json and what are some important compiler options?
+
+How do you use ts-node and how is it different from tsc?

@@ -1,92 +1,128 @@
-TypeScript
-├── 1. Basics
-│ ├── What is TypeScript?
-│ ├── Differences from JavaScript
-│ ├── Advantages & Disadvantages
-│ ├── TypeScript Compiler (tsc)
-│ ├── Installing TypeScript (npm install -g typescript)
-│ └── Configuration file: tsconfig.json
-│
-├── 2. Basic Types
-│ ├── string, number, boolean
-│ ├── null, undefined
-│ ├── any, unknown, never
-│ ├── void
-│ ├── Arrays: number[], Array<number>
-│ ├── Tuples: [string, number]
-│ └── Enums: Numeric, String, Heterogeneous
-│
-├── 3. Type Assertions
-│ ├── as syntax
-│ └── <type> syntax
-│
-├── 4. Functions
-│ ├── Parameter Types
-│ ├── Return Types
-│ ├── Optional Parameters (?)
-│ ├── Default Parameters
-│ ├── Rest Parameters (...args)
-│ └── Function Overloading
-│
-├── 5. Objects & Interfaces
-│ ├── Object Type Annotations
-│ ├── interface vs type
-│ ├── Optional & readonly properties
-│ ├── Extending Interfaces
-│ └── Intersection Types (&)
-│
-├── 6. Classes
-│ ├── Fields & Constructors
-│ ├── Access Modifiers: public, private, protected
-│ ├── readonly properties
-│ ├── Inheritance (extends)
-│ ├── Method Overriding
-│ ├── abstract classes
-│ └── implements keyword
-│
-├── 7. Generics
-│ ├── Generic Functions
-│ ├── Generic Interfaces
-│ ├── Generic Classes
-│ ├── Constraints (extends)
-│ └── Default Generic Types
-│
-├── 8. Advanced Types
-│ ├── Union Types (|)
-│ ├── Intersection Types (&)
-│ ├── Literal Types ("yes" | "no")
-│ ├── Type Aliases
-│ ├── Mapped Types
-│ ├── Conditional Types
-│ └── Utility Types: Partial, Pick, Omit, Readonly, Record, ReturnType
-│
-├── 9. Type Narrowing
-│ ├── typeof checks
-│ ├── instanceof checks
-│ ├── Type Guards (Custom functions)
-│ └── Discriminated Unions
-│
-├── 10. Modules & Namespaces
-│ ├── ES Modules: import, export
-│ ├── Default vs Named Exports
-│ └── Namespaces
-│
-├── 11. Decorators (Experimental)
-│ ├── Class Decorators
-│ ├── Method Decorators
-│ ├── Property Decorators
-│ └── Parameter Decorators
-│
-├── 12. Tooling & Ecosystem
-│ ├── ts-node
-│ ├── ESLint + TypeScript
-│ ├── Babel with TypeScript
-│ ├── TypeScript with React (TSX)
-│ └── TypeScript with Node.js
-│
-└── 13. Best Practices
-├── Enable strict mode in tsconfig.json
-├── Avoid any where possible
-├── Use interfaces for public APIs
-├── Keep types DRY (Don’t Repeat Yourself)
-└── Prefer union types over enums where appropriate
+1. Basics
+   ├── What is TypeScript? (Definition, Purpose)
+   ├── Benefits over JavaScript (Static typing, Tooling, Maintainability)
+   ├── TypeScript vs JavaScript
+   ├── How TypeScript works (Compilation to JavaScript)
+   └── Installing & Running (tsc, ts-node)
+
+2. Basic Types
+   ├── number, string, boolean
+   ├── null, undefined
+   ├── any, unknown, never
+   ├── arrays (number[], string[])
+   ├── tuples ([string, number])
+   ├── enums (Numeric, String)
+   └── type inference
+
+3. Functions
+   ├── Function parameter types
+   ├── Return type annotations
+   ├── Optional parameters
+   ├── Default parameters
+   ├── Rest parameters
+   └── Function overloads
+
+4. Objects & Interfaces
+   ├── Object type annotation
+   ├── Optional & readonly properties
+   ├── Index signatures
+   ├── Extending interfaces
+   ├── Merging interfaces
+   └── Interface vs Type alias
+
+5. Classes
+   ├── Class properties & methods
+   ├── Access modifiers (public, private, protected)
+   ├── readonly properties
+   ├── Constructors
+   ├── Inheritance (extends, super)
+   ├── Abstract classes
+   ├── Getters & setters
+   └── Static properties/methods
+
+6. Advanced Types
+   ├── Union types
+   ├── Intersection types
+   ├── Literal types
+   ├── Type aliases
+   ├── Type assertions (as, <type>)
+   ├── Non-null assertion (!)
+   ├── keyof operator
+   ├── typeof operator
+   ├── Conditional types
+   └── Mapped types
+
+7. Generics
+   ├── Generic functions
+   ├── Generic classes
+   ├── Generic constraints (extends)
+   └── Default generic types
+
+8. Modules & Namespaces
+   ├── ES Modules (import/export)
+   ├── Default exports
+   ├── Type-only imports/exports
+   ├── Namespaces
+   └── Declaration merging
+
+9. Type Guards & Narrowing
+   ├── typeof checks
+   ├── instanceof checks
+   ├── in operator
+   ├── Custom type predicates
+   └── Discriminated unions
+
+10. Utility Types
+    ├── Partial
+    ├── Required
+    ├── Readonly
+    ├── Pick
+    ├── Omit
+    ├── Record
+    ├── Exclude
+    ├── Extract
+    ├── NonNullable
+    ├── ReturnType
+    └── Parameters
+
+11. Decorators (Experimental)
+    ├── Class decorators
+    ├── Method decorators
+    ├── Property decorators
+    └── Parameter decorators
+
+12. Working with External Code
+    ├── Declaration files (.d.ts)
+    ├── DefinitelyTyped (@types packages)
+    ├── Type casting for third-party libraries
+    └── Ambient declarations
+
+13. Configuration & Compilation
+    ├── tsconfig.json
+    │    ├── compilerOptions
+    │    ├── include / exclude
+    │    ├── strict mode
+    │    ├── module, target, lib
+    │    └── sourceMap
+    ├── Compiling TypeScript (tsc)
+    ├── Watch mode
+    └── Project references
+
+14. Advanced Features
+    ├── Indexed access types
+    ├── Template literal types
+    ├── Readonly arrays & tuples
+    ├── Conditional mapped types
+    └── Recursive types
+
+15. Error Handling
+    ├── Type-safe error handling
+    ├── unknown vs any for errors
+    └── never in exhaustive checks
+
+16. Performance & Best Practices
+    ├── Avoid overusing any
+    ├── Use strict null checks
+    ├── Favor interfaces over types for objects
+    ├── Keep tsconfig strict
+    └── Use utility types effectively
