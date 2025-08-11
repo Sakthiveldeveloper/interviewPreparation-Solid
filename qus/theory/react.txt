@@ -1,3 +1,38 @@
+
+Top 20 React Fundamentals (Must-Kow)
+What is React, and why is it used?
+What are components in React?
+What is JSX, and why do we use it?
+What is the Virtual DOM, and how does React use it?
+What are props in React?
+What is state in React?
+Difference between state and props.
+What are lifecycle methods in React class components?
+What are React hooks?
+What does useState do?
+What is useEffect used for?
+How do you pass data between components?
+What is lifting state up?
+What is a controlled component?
+What is a key in React lists, and why is it important?
+What is reconciliation in React?
+What are higher-order components (HOCs)?
+What is React Context, and when would you use it?
+Difference between React and ReactDOM.
+How do you optimize performance in React?
+Top 10 Advanced React Questions (ommon in Mid/Senior Interviews)
+Explain useRef and when to use it.
+What are useMemo and useCallback, and how do they help performance?
+What is useReducer, and when would you use it instead of useState?
+Difference between useEffect and useLayoutEffect.
+How does React Router work? (Basics of <BrowserRouter>, <Routes>, <Route>, useNavigate, useParams)
+What are Error Boundaries in React?
+What are React Portals, and when would you use them?
+What is Suspense in React, and how is it used for lazy loading?
+What are the differences between Context API and Redux for state management?
+How does Server-Side Rendering (SSR) work in React (e.g., Next.js)?
+
+=================================================================================================
 Top 20 React Questions & Answers
 What is React?
 React is a JavaScript library for building user interfaces using reusable components.

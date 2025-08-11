@@ -1,0 +1,22 @@
+Top 20 React Coding Question
+(From beginner to advanced, arranged logically)
+Create a functional component that displays “Hello, World!”
+Pass props to a child component and display them.
+Create a counter app using useState with increment & decrement buttons.
+Build a to-do list with add, delete, and mark-as-complete functionality.
+Implement conditional rendering: show “Login” if the user is not logged in, otherwise “Logout.”
+Render a list of items using .map() and unique key props.
+Build a form with controlled inputs for name and email, and display entered data on submit.
+Create a search filter that filters a list of items in real-time.
+Fetch data from an API (e.g., JSONPlaceholder) using useEffect and display it.
+Implement pagination for API results.
+Use useContext to share state between multiple components without props.
+Create a custom hook for fetching data from an API.
+Build a theme switcher (light/dark mode) using Context API.
+Optimize performance by using React.memo for a child component.
+Prevent unnecessary re-renders using useCallback and useMemo.
+Build a modal using React Portals.
+Handle form validation manually without libraries.
+Implement debouncing for an input field that fetches API data after the user stops typing.
+Lazy load a component using React.lazy and Suspense.
+Error handling in React using Error Boundaries.

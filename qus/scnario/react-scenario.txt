@@ -1,0 +1,41 @@
+Top 20 React Scenario-Based Questions
+Multiple API Calls in One Component
+You have to fetch data from two different APIs and combine the results before rendering. How would you do it?
+Parent State Update Causing All Children to Re-render
+How would you optimize so only the changed child re-renders?
+Handling Slow API Responses
+How would you show a loading spinner while fetching, and an error message if it fails?
+Login Authentication Flow
+How would you protect certain routes so they are only accessible to logged-in users?
+Theme Toggle (Light/Dark) Across the App
+Without passing props manually everywhere, how would you implement this?
+Updating Data Without Refresh
+How would you update the UI after adding or deleting an item from a list without reloading the page?
+Form with Multiple Input Fields
+How would you manage state efficiently without writing separate useState for each field?
+Preserving State Between Page Navigations
+How would you keep data in memory when navigating between pages in React Router?
+Search Results Caching
+How would you avoid fetching the same search results again if the user types the same query twice?
+Conditional Rendering of Components Based on Role
+How would you show different UIs for admin and normal users?
+Debouncing Search API Calls
+How would you prevent the API from being called on every keystroke?
+Infinite Scroll Implementation
+How would you load more content when the user scrolls to the bottom of the page?
+Image Lazy Loading
+How would you improve page performance by loading images only when they appear in the viewport?
+Handling Complex Form Validation
+How would you handle dependent validation (e.g., field B is required only if field A has a certain value)?
+Displaying Data in a Table with Sorting & Filtering
+How would you build a reusable table component for this?
+Updating Document Title Dynamically
+How would you set the browser tab title based on the current page content?
+React Component Flicker During Re-render
+How would you debug and fix unnecessary flickering when state updates?
+WebSocket Live Data Updates
+How would you integrate real-time data updates into your UI?
+Fallback UI for Suspense
+How would you show a loader while a lazy-loaded component is being fetched?
+Error Logging in Production
+How would you capture and log errors happening in the UI without crashing the app?
