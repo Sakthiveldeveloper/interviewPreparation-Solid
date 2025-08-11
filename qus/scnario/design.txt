@@ -1,0 +1,44 @@
+A. HLD Scenario Questions
+You’re designing a food delivery platform — how would you handle sudden spikes in traffic during peak meal times?
+
+In a video streaming service, how would you ensure smooth playback for users with unstable internet connections?
+
+You need to design a search engine for an e-commerce platform — how would you handle millions of products with fast search response times?
+
+For a payment gateway, how would you ensure idempotency of transactions?
+
+You’re designing a URL shortener — how would you make sure generated links remain unique and are distributed evenly?
+
+B. LLD Scenario Questions
+In a parking lot system, how would you handle reserved parking spots for VIP customers?
+
+In a library management system, how would you prevent multiple users from borrowing the same book at the same time?
+
+For a chat application, how would you implement typing indicators efficiently?
+
+You’re building a hotel booking system — how would you avoid double bookings for the same room?
+
+In an elevator control system, how would you optimize routes to reduce wait times during rush hours?
+
+C. System Design Scenario Questions
+Your social media app needs to display real-time notifications — would you use polling, long-polling, or WebSockets, and why?
+
+You’re tasked with designing a distributed logging system — how would you ensure logs remain in the correct order?
+
+In a microservices architecture, how would you handle service discovery when services are constantly scaling up and down?
+
+You’re building a distributed file storage system — how would you handle replication and consistency?
+
+For an online multiplayer game, how would you manage synchronization between players without noticeable lag?
+
+D. Hybrid Scenario Questions
+Your ride-hailing app is facing delays in matching drivers to riders — how would you improve the matching logic?
+
+In a food ordering app, some orders are being lost — how would you debug and prevent message loss in the order pipeline?
+
+Your e-commerce website is struggling with slow search speeds — how would you identify and fix the bottleneck?
+
+A news feed system is showing old posts first — how would you redesign ranking to prioritize fresh and relevant posts?
+
+In a video conferencing system, audio is sometimes out of sync with video — how would you troubleshoot and fix this?
+

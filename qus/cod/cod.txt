@@ -1,0 +1,44 @@
+A. HLD-Oriented Coding Questions (High-Level + Key Module Implementation)
+URL Shortener Service – Implement Base62 encoding & decoding for short links.
+
+Message Queue Core – Implement an in-memory queue with publish/subscribe.
+
+API Gateway Rate Limiter – Implement token bucket algorithm.
+
+Distributed ID Generator – Create Snowflake-style unique ID generation logic.
+
+Search Suggestion Module – Implement Trie-based search autocomplete.
+
+B. LLD-Oriented Coding Questions (Class Design + Implementation)
+Parking Lot System – Classes, methods for park, unpark, and fee calculation.
+
+Library Management System – Search, borrow, return book flow.
+
+Elevator System – Handle requests, move up/down, manage multiple elevators.
+
+Splitwise App – Implement balance tracking and settlement logic.
+
+Hotel Booking System – Check room availability, make bookings, cancel bookings.
+
+C. System Design-Oriented Coding Questions (Core System Components)
+LRU Cache – HashMap + Doubly Linked List implementation.
+
+Leader Election Algorithm – Implement Bully or Raft leader selection logic.
+
+Consistent Hashing – For distributed load balancing.
+
+File Storage Service Module – Chunk and merge files for large uploads.
+
+Notification Service – Priority queue for sending notifications in order.
+
+D. Hybrid (HLD + LLD + System Design)
+Chat Application Message Store – Design and implement storing & retrieving chats.
+
+Order Processing Pipeline – Queue + worker model to process orders.
+
+Payment Gateway Simulator – Simple transaction processing with retries.
+
+Social Media Feed Ranking – Implement priority-based feed ordering.
+
+Ride Matching Service (Uber-like) – Match riders with nearest drivers.
+

@@ -1,81 +1,126 @@
-SYSTEM DESIGN
-│
-├── 1. Fundamentals
-│ ├── Basics of System Design
-│ │ ├── Functional vs Non-Functional Requirements
-│ │ ├── Monolith vs Microservices
-│ │ ├── Scalability, Reliability, Maintainability
-│ │ ├── CAP Theorem
-│ │ └── Latency vs Throughput
-│ ├── Networking Basics
-│ │ ├── HTTP, HTTPS, WebSockets
-│ │ ├── REST vs gRPC
-│ │ ├── Load Balancers
-│ │ └── DNS
-│ └── Storage Basics
-│ ├── Relational Databases (SQL)
-│ ├── NoSQL (Document, Key-Value, Column, Graph)
-│ ├── Indexing
-│ └── Caching Basics
-│
-├── 2. Components of System Design
-│ ├── Frontend Layer
-│ │ ├── Web & Mobile Clients
-│ │ ├── CDN
-│ │ └── Edge Caching
-│ ├── Backend Layer
-│ │ ├── API Gateway
-│ │ ├── Application Servers
-│ │ ├── Service Discovery
-│ │ └── Microservices / Serverless
-│ ├── Data Layer
-│ │ ├── Primary Database
-│ │ ├── Caching Layer (Redis, Memcached)
-│ │ ├── Data Warehousing & Analytics
-│ │ └── Search (Elasticsearch, Solr)
-│ └── Infrastructure
-│ ├── Load Balancing
-│ ├── Reverse Proxy
-│ ├── Message Queues (Kafka, RabbitMQ, SQS)
-│ ├── Stream Processing
-│ └── Storage Systems (S3, Blob)
-│
-├── 3. Design Principles
-│ ├── Horizontal vs Vertical Scaling
-│ ├── Database Sharding & Replication
-│ ├── Event-Driven Architecture
-│ ├── CQRS & Event Sourcing
-│ ├── Fault Tolerance
-│ ├── Graceful Degradation
-│ └── Data Consistency Models
-│
-├── 4. Reliability & Performance
-│ ├── Caching Strategies
-│ │ ├── Write-through / Write-behind
-│ │ ├── Cache Invalidation
-│ │ └── CDN Edge Cache
-│ ├── Rate Limiting & Throttling
-│ ├── Auto-Scaling
-│ ├── Health Checks
-│ └── Circuit Breaker Pattern
-│
-├── 5. Security & Compliance
-│ ├── Authentication (OAuth2, JWT, SSO)
-│ ├── Authorization (RBAC, ABAC)
-│ ├── Data Encryption (at rest & in transit)
-│ ├── Input Validation & Sanitization
-│ └── Audit Logging & Compliance (GDPR, HIPAA)
-│
-├── 6. Observability & Maintenance
-│ ├── Logging (Structured, Centralized)
-│ ├── Metrics & Monitoring (Prometheus, Grafana)
-│ ├── Tracing (Jaeger, OpenTelemetry)
-│ ├── Alerting
-│ └── Chaos Engineering
-│
-└── 7. Case Studies & Practice
-├── Design a URL Shortener
-├── Design Instagram
-├── Design a Messaging System (WhatsApp)
-├── Design an E-Commerce System
-└── Design a Real-time Collaboration Tool
+1. Basics
+   ├── What is System Design?
+   ├── High-Level Design (HLD) vs Low-Level Design (LLD)
+   ├── Functional vs Non-Functional Requirements
+   ├── Monolithic vs Microservices Architecture
+   └── Scalability, Reliability, Maintainability
+
+2. Architectural Patterns
+   ├── Client-Server
+   ├── Layered Architecture
+   ├── Microservices
+   ├── Event-Driven Architecture
+   ├── Service-Oriented Architecture (SOA)
+   ├── Peer-to-Peer (P2P)
+   └── Serverless Architecture
+
+3. System Components
+   ├── Web Servers (Nginx, Apache)
+   ├── Application Servers
+   ├── Databases
+       ├── Relational (MySQL, PostgreSQL)
+       └── NoSQL (MongoDB, Cassandra, Redis)
+   ├── Message Brokers (Kafka, RabbitMQ)
+   ├── Cache (Redis, Memcached)
+   ├── Load Balancer
+   ├── API Gateway
+   └── Storage (Block, Object, File)
+
+4. Scalability
+   ├── Horizontal vs Vertical Scaling
+   ├── Load Balancing
+   ├── Sharding
+   ├── Partitioning
+   ├── Replication
+   └── Database Scaling Strategies
+
+5. Caching
+   ├── Client-Side Caching
+   ├── CDN (Content Delivery Network)
+   ├── Database Caching
+   ├── Application-Level Caching
+   ├── Cache Eviction Policies (LRU, LFU, FIFO)
+   └── Write-Through vs Write-Back vs Write-Around
+
+6. Databases
+   ├── CAP Theorem
+   ├── SQL vs NoSQL
+   ├── Indexing
+   ├── Query Optimization
+   ├── Transactions & ACID
+   └── Eventual Consistency
+
+7. Data Modeling
+   ├── ER Diagrams
+   ├── Normalization & Denormalization
+   ├── Document & Key-Value Models
+   └── Graph Databases
+
+8. Networking
+   ├── HTTP vs HTTPS
+   ├── WebSockets
+   ├── gRPC
+   ├── DNS
+   ├── REST APIs vs GraphQL
+   ├── API Rate Limiting
+   └── CDN Basics
+
+9. Security
+   ├── Authentication (OAuth, JWT, SSO)
+   ├── Authorization (RBAC, ABAC)
+   ├── Data Encryption (At Rest, In Transit)
+   ├── HTTPS/TLS
+   ├── CSRF, XSS, SQL Injection Prevention
+   └── API Security Best Practices
+
+10. Messaging & Queues
+    ├── Asynchronous Processing
+    ├── Pub/Sub Model
+    ├── Kafka, RabbitMQ, SQS
+    ├── Dead Letter Queues
+    └── Event Sourcing
+
+11. Logging & Monitoring
+    ├── Centralized Logging
+    ├── Metrics Collection (Prometheus, Grafana)
+    ├── Distributed Tracing
+    ├── Alerts & Notifications
+    └── Error Tracking (Sentry, ELK Stack)
+
+12. Availability & Reliability
+    ├── High Availability (HA)
+    ├── Fault Tolerance
+    ├── Failover & Disaster Recovery
+    ├── Redundancy
+    ├── Backups & Restore
+    └── SLA, SLO, SLI
+
+13. Performance Optimization
+    ├── Profiling
+    ├── Query Optimization
+    ├── Caching Strategies
+    ├── Asynchronous Processing
+    ├── CDN Usage
+    └── Code & Infra Optimization
+
+14. Design Principles
+    ├── SOLID Principles
+    ├── DRY, KISS, YAGNI
+    ├── Twelve-Factor App
+    ├── API Design Best Practices
+    └── Idempotency
+
+15. Real-World System Design Examples
+    ├── Design a URL Shortener (Bitly)
+    ├── Design a Social Media Feed
+    ├── Design an E-commerce Platform
+    ├── Design a Messaging Service (WhatsApp)
+    ├── Design a Video Streaming Service (YouTube/Netflix)
+    └── Design a Ride-Sharing App (Uber)
+
+16. Trade-offs & Considerations
+    ├── Latency vs Throughput
+    ├── Consistency vs Availability (CAP)
+    ├── Cost vs Performance
+    ├── Build vs Buy Decisions
+    └── Complexity vs Maintainability

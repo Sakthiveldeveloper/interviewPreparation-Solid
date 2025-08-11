@@ -1,0 +1,113 @@
+High-Level Design (HLD) – Theory Questions
+What is High-Level Design (HLD) in system design?
+
+Why is HLD important in large-scale software development?
+
+What are the key deliverables of HLD?
+
+How do you decide between monolithic and microservices architecture?
+
+What are functional and non-functional requirements? Give examples.
+
+How do you design for scalability at a high level?
+
+What are the common architecture patterns used in HLD?
+
+How do you ensure security in HLD design?
+
+What’s the role of caching in high-level design?
+
+What factors influence technology stack selection in HLD?
+
+How do you document external integrations in HLD?
+
+What is a Data Flow Diagram (DFD) and how is it used?
+
+How do you approach designing APIs at a high level?
+
+How do you plan for fault tolerance in HLD?
+
+How is HLD different from system requirements specification (SRS)?
+
+Low-Level Design (LLD) – Theory Questions
+What is Low-Level Design (LLD)?
+
+How does LLD differ from HLD?
+
+What are the main deliverables of LLD?
+
+What is the role of UML diagrams in LLD?
+
+How do you create a class diagram for a given problem?
+
+How do you handle database schema design in LLD?
+
+What’s the purpose of sequence diagrams in LLD?
+
+How do you define API request/response formats in LLD?
+
+How do you ensure security implementation in LLD?
+
+What is the importance of validations in LLD?
+
+How do you handle error and exception design in LLD?
+
+How do you incorporate unit and integration test plans in LLD?
+
+What are design patterns and how do they fit into LLD?
+
+What is the role of mock data in LLD testing?
+
+How do you map business logic to code structure in LLD?
+
+--------------------------------------------------------------
+System Design – Theory Questions
+What is system design, and why is it important?
+
+Difference between high-level design (HLD) and low-level design (LLD)?
+
+What is scalability, and how do you achieve it in a system?
+
+What’s the difference between vertical scaling and horizontal scaling?
+
+What is load balancing? How does it work?
+
+Explain CAP theorem and its implications.
+
+What are different types of databases (SQL vs NoSQL) and when to use each?
+
+What is database sharding, and why is it used?
+
+What is data replication, and what are the pros and cons?
+
+What’s the difference between synchronous and asynchronous communication?
+
+Explain message queues and their use cases.
+
+What is caching, and what are different caching strategies?
+
+What’s the difference between CDN and cache?
+
+How do you ensure high availability in system design?
+
+What’s fault tolerance, and how do you design for it?
+
+What is consistency vs eventual consistency?
+
+How do you approach designing an API for a large-scale system?
+
+What are microservices? Advantages and challenges?
+
+Difference between monolithic, SOA, and microservices architectures?
+
+What is database indexing, and how does it improve performance?
+
+What is rate limiting, and why is it important?
+
+How do you design for disaster recovery?
+
+What’s the difference between stateful and stateless services?
+
+What is partition tolerance in distributed systems?
+
+What’s the role of observability, logging, and monitoring in system design?

@@ -1,0 +1,44 @@
+1. Basics
+   ├── Definition of HLD
+   ├── Purpose of HLD
+   ├── When to create HLD
+   └── Stakeholders (Architects, Product Managers, Senior Devs)
+
+2. Components
+   ├── System Architecture Diagram
+   ├── Technology Stack (Frontend, Backend, Database, Infra)
+   ├── Module Breakdown
+   ├── Data Flow Diagram (DFD)
+   ├── Integration Points
+   └── External Dependencies
+
+3. Functional & Non-Functional Requirements
+   ├── Functional (What system should do)
+   ├── Non-Functional (Performance, Security, Scalability)
+   └── Constraints & Assumptions
+
+4. Architecture Patterns
+   ├── Monolithic
+   ├── Microservices
+   ├── Event-Driven
+   ├── Serverless
+   └── Layered
+
+5. Scalability & Reliability Plan
+   ├── Load Balancing
+   ├── Caching
+   ├── Database Scaling
+   ├── Redundancy
+   └── Disaster Recovery
+
+6. Security Considerations
+   ├── Authentication & Authorization
+   ├── Data Encryption
+   ├── Network Security
+   └── Compliance (GDPR, HIPAA)
+
+7. Deliverables
+   ├── Architecture Diagrams
+   ├── Component Descriptions
+   ├── Data Flow Descriptions
+   └── Integration Design
