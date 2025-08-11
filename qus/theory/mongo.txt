@@ -1,0 +1,115 @@
+1. Basics & Fundamentals
+What is MongoDB, and how is it different from SQL databases?
+
+What is a document in MongoDB?
+
+What is a collection?
+
+What is BSON, and why does MongoDB use it?
+
+Explain the difference between JSON and BSON.
+
+What are the advantages of using MongoDB?
+
+What is ObjectId and its structure?
+
+2. CRUD & Queries
+How do you insert data in MongoDB?
+
+How do you retrieve only specific fields from a document?
+
+What is the difference between find() and findOne()?
+
+How can you update multiple documents in MongoDB?
+
+How do you delete documents?
+
+How do you query documents in an array field?
+
+3. Data Modeling
+What’s the difference between embedding and referencing in MongoDB?
+
+When would you choose embedding vs referencing?
+
+Explain One-to-One, One-to-Many, and Many-to-Many relationships in MongoDB.
+
+What is denormalization, and why is it common in MongoDB?
+
+4. Indexing
+What is an index in MongoDB, and why is it important?
+
+Difference between a single field index and a compound index.
+
+What is a multikey index?
+
+What is a text index, and how is it used?
+
+How do you check if a query is using an index? (explain() method)
+
+5. Aggregation Framework
+What is the MongoDB Aggregation Framework?
+
+Explain $match, $group, $project, $sort, $lookup.
+
+Difference between Aggregation and MapReduce.
+
+How do you perform joins in MongoDB?
+
+6. Transactions
+What is atomicity in MongoDB?
+
+How do multi-document transactions work in MongoDB?
+
+What are ACID properties, and how does MongoDB support them?
+
+7. Replication
+What is replication in MongoDB?
+
+What is a replica set?
+
+Difference between primary and secondary nodes.
+
+What is an oplog?
+
+8. Sharding & Scalability
+What is sharding in MongoDB?
+
+What is a shard key, and how is it chosen?
+
+Difference between vertical scaling and horizontal scaling in MongoDB.
+
+What are config servers in sharding?
+
+9. Security
+How does MongoDB handle authentication?
+
+What are roles in MongoDB?
+
+How do you prevent unauthorized access in MongoDB?
+
+How to protect MongoDB from SQL injection-like attacks?
+
+10. Performance & Optimization
+How do you analyze query performance?
+
+How to optimize a slow query in MongoDB?
+
+Why might too many indexes cause performance issues?
+
+What is the difference between limit() and skip() performance-wise?
+
+11. Tools & Utilities
+What is MongoDB Compass, and what is it used for?
+
+Difference between mongod and mongos.
+
+How do you back up and restore a MongoDB database? (mongodump, mongorestore)
+
+12. Advanced
+What are change streams in MongoDB?
+
+What are time series collections?
+
+How does MongoDB handle schema validation?
+
+Explain capped collections.

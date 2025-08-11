@@ -1,0 +1,56 @@
+MongoDB Scenario-Based Questions
+1. Basic CRUD Scenarios
+A collection users stores name, email, and isActive. Find all active users who registered in the last 30 days.
+
+In a products collection, increase the price of all items in category "Electronics" by 10%.
+
+Remove all documents from logs collection where createdAt is older than 90 days.
+
+You have orders with a status field. Change status from "pending" to "shipped" only if paymentStatus is "paid".
+
+Add a lastUpdated timestamp to all documents in a collection.
+
+2. Query & Filter Scenarios
+Find all customers who have placed more than 5 orders.
+
+In employees, find people whose skills array contains both "MongoDB" and "Node.js".
+
+From articles, find all documents where tags contain the word "database", ignoring case.
+
+Find all students whose marks.math is greater than marks.science.
+
+Get all users where phoneNumber is missing or null.
+
+3. Aggregation Scenarios
+From sales, calculate total revenue per product category.
+
+From transactions, find the top 5 customers by total amount spent.
+
+In blogPosts, count how many posts each author has written.
+
+From orders, find the average delivery time (difference between orderDate and deliveryDate).
+
+In reviews, find the highest-rated product in each category.
+
+Join orders with customers to list order details with customer names.
+
+From orders, find the month with the highest sales in 2024.
+
+4. Array & Nested Document Scenarios
+In products, find all items where reviews.rating contains at least one rating less than 3.
+
+From users, update all documents to add "emailVerified": false if it doesn’t already exist.
+
+Remove "draft" status posts from posts.tags array for all documents.
+
+5. Index & Performance Scenarios
+You have a slow query on orders filtering by customerId and status. How would you speed it up?
+
+Given a query filtering by email and sorting by createdAt, what index would you create?
+
+How would you check if a query is using an index?
+
+6. Transaction Scenarios
+In an e-commerce app, when a user places an order, deduct the product stock and create an order document atomically.
+
+In a banking app, transfer money between two accounts ensuring no partial update occurs.

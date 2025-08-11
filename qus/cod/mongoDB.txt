@@ -1,0 +1,91 @@
+1. CRUD Operations
+Insert a single document into a collection.
+
+Insert multiple documents at once.
+
+Find all documents where a specific field equals a value.
+
+Find documents with a field greater than a given value.
+
+Find documents where a field value is in a given array of values.
+
+Retrieve only specific fields (projection).
+
+Update a single document by _id.
+
+Update multiple documents with a condition.
+
+Replace a document entirely.
+
+Delete a single document by condition.
+
+Delete multiple documents.
+
+2. Query Filters
+Find documents where a string matches a regex pattern.
+
+Find documents where an array contains a given value.
+
+Find documents where an array contains all of a set of values.
+
+Find documents where a field exists or does not exist.
+
+Query documents where a field value is null.
+
+3. Sorting & Pagination
+Sort documents in ascending/descending order.
+
+Skip first n documents and return the next m (pagination).
+
+Limit the number of results.
+
+4. Aggregation Framework
+Count documents per category using $group.
+
+Get average, sum, min, and max of a numeric field.
+
+Match documents with $match before grouping.
+
+Sort results after aggregation using $sort.
+
+Join two collections using $lookup.
+
+Create a new computed field using $project.
+
+Filter array elements inside documents using $filter.
+
+Group by multiple fields.
+
+Use $unwind to flatten arrays.
+
+5. Indexing
+Create a single-field index.
+
+Create a compound index.
+
+Create a text index and search using $text.
+
+Check query execution plan using .explain("executionStats").
+
+6. Transactions
+Perform an atomic update of two related documents.
+
+Use a multi-document transaction with session handling.
+
+7. Schema Validation
+Create a collection with schema validation rules.
+
+Update validation rules for an existing collection.
+
+8. Special Operations
+Use $in and $nin for filtering.
+
+Use $exists for presence check.
+
+Use $type to query by BSON type.
+
+Update an array using $push and $addToSet.
+
+Remove elements from an array using $pull.
+
+Increment a numeric field using $inc.

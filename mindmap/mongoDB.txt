@@ -1,0 +1,118 @@
+MongoDB (NoSQL Document Database)
+
+├── 1. Basics
+│   ├── What is MongoDB? (Definition, Purpose)
+│   ├── Document-Oriented Database
+│   ├── BSON (Binary JSON) Format
+│   ├── Collections & Documents
+│   ├── Advantages (Scalability, Flexibility, Speed)
+│   └── Common Use Cases
+
+├── 2. Data Model
+│   ├── Database → Collection → Document → Field
+│   ├── Schema-less Nature
+│   ├── Nested Documents & Arrays
+│   └── ObjectId
+
+├── 3. CRUD Operations
+│   ├── Create (insertOne, insertMany)
+│   ├── Read (find, findOne)
+│   ├── Update (updateOne, updateMany, replaceOne)
+│   └── Delete (deleteOne, deleteMany)
+
+├── 4. Query Operators
+│   ├── Comparison ($eq, $ne, $gt, $lt, $gte, $lte)
+│   ├── Logical ($and, $or, $not, $nor)
+│   ├── Element ($exists, $type)
+│   ├── Evaluation ($regex, $expr)
+│   ├── Array ($in, $nin, $all, $size, $elemMatch)
+│   └── Projection (Include/Exclude Fields)
+
+├── 5. Aggregation Framework
+│   ├── $match
+│   ├── $group
+│   ├── $project
+│   ├── $sort
+│   ├── $limit & $skip
+│   ├── $unwind
+│   ├── $lookup (Joins)
+│   └── Pipeline Stages
+
+├── 6. Indexing
+│   ├── Single Field Index
+│   ├── Compound Index
+│   ├── Multikey Index (Arrays)
+│   ├── Text Index
+│   ├── Geospatial Index
+│   ├── Unique Index
+│   └── Performance Considerations
+
+├── 7. Data Modeling Best Practices
+│   ├── Embedding vs. Referencing
+│   ├── One-to-One
+│   ├── One-to-Many
+│   ├── Many-to-Many
+│   └── Denormalization for Reads
+
+├── 8. Transactions
+│   ├── Single Document Atomicity
+│   ├── Multi-Document Transactions
+│   ├── ACID Properties in MongoDB
+│   └── Session-Based Transactions
+
+├── 9. Replication
+│   ├── Replica Sets
+│   ├── Primary & Secondary Nodes
+│   ├── Read/Write Concerns
+│   ├── Failover
+│   └── Oplog
+
+├── 10. Sharding
+│   ├── Horizontal Scaling
+│   ├── Shard Key
+│   ├── Config Servers
+│   ├── Query Routing
+│   └── Balancing
+
+├── 11. Security
+│   ├── Authentication
+│   ├── Authorization & Roles
+│   ├── TLS/SSL Encryption
+│   ├── IP Whitelisting
+│   └── Field-Level Encryption
+
+├── 12. Backup & Restore
+│   ├── mongodump & mongorestore
+│   ├── Atlas Backup
+│   └── Point-in-Time Recovery
+
+├── 13. Performance Optimization
+│   ├── Index Usage Analysis (explain())
+│   ├── Query Optimization
+│   ├── Aggregation Optimization
+│   ├── Caching Strategies
+│   └── Schema Design for Performance
+
+├── 14. MongoDB Tools
+│   ├── Mongo Shell
+│   ├── MongoDB Compass (GUI)
+│   ├── MongoDB Atlas (Cloud Service)
+│   ├── Drivers (Node.js, Python, Java, etc.)
+│   └── mongostat & mongotop
+
+├── 15. Change Streams
+│   ├── Real-time Data Updates
+│   ├── Watch Collections
+│   └── Integration with Event-Driven Systems
+
+├── 16. Time Series Collections
+│   ├── Optimized for Time-Stamped Data
+│   ├── Bucketing
+│   └── Querying Time Series
+
+└── 17. Common Interview Topics
+    ├── Differences between SQL & MongoDB
+    ├── When to use MongoDB
+    ├── Data Modeling Strategies
+    ├── Aggregation vs MapReduce
+    └── Common Performance Pitfalls
