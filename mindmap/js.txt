@@ -1,4 +1,3 @@
-
 JavaScript (JS)
 ├── 1. Basics
 │   ├── What is JavaScript? (client-side, server-side)
@@ -7,27 +6,25 @@ JavaScript (JS)
 │   │   ├── Internal: <script>...</script>
 │   │   └── External: <script src="app.js"></script>
 │   ├── Syntax & Case Sensitivity
-│   └── Comments: // single-line, /* multi-line */
+│   ├── Comments: // single-line, /* multi-line */
+│   └── "use strict" mode
 │
-├── 2. Variables
+├── 2. Variables & Scope
 │   ├── var (function-scoped)
 │   ├── let (block-scoped)
 │   ├── const (block-scoped, constant reference)
 │   ├── Hoisting behavior
-│   └── Naming rules
+│   ├── Naming rules
+│   ├── Global scope, function scope, block scope
+│   ├── Lexical scope
+│   └── Closures (data privacy, currying)
 │
 ├── 3. Data Types
-│   ├── Primitive Types
-│   │   ├── string
-│   │   ├── number
-│   │   ├── boolean
-│   │   ├── null
-│   │   ├── undefined
-│   │   └── symbol, bigint
-│   └── Non-primitive
-│       ├── object
-│       ├── array
-│       └── function
+│   ├── Primitive Types: string, number, boolean, null, undefined, symbol, bigint
+│   ├── Non-primitive: object, array, function, date, regex
+│   ├── Type checking: typeof, instanceof
+│   ├── Type conversion: implicit & explicit
+│   └── Truthy & Falsy values
 │
 ├── 4. Operators
 │   ├── Arithmetic (+, -, *, /, %, **)
@@ -35,40 +32,47 @@ JavaScript (JS)
 │   ├── Comparison (==, ===, !=, !==, >, <, >=, <=)
 │   ├── Logical (&&, ||, !)
 │   ├── Ternary (condition ? value1 : value2)
-│   └── Spread & Rest (...)
+│   ├── Spread & Rest (...)
+│   ├── Optional chaining (?.)
+│   └── Nullish coalescing (??)
 │
 ├── 5. Control Flow
 │   ├── if, else if, else
 │   ├── switch
-│   ├── for, while, do...while
+│   ├── for, while, do...while, for...of, for...in
 │   ├── break, continue
 │   └── try...catch...finally
 │
 ├── 6. Functions
 │   ├── Function Declaration
 │   ├── Function Expression
-│   ├── Arrow Functions
-│   ├── Parameters & Arguments
-│   ├── Default Parameters
-│   ├── Rest Parameters
+│   ├── Arrow Functions (this binding differences)
+│   ├── Parameters, Arguments, Default Parameters, Rest Parameters
 │   ├── Return values
-│   └── IIFE (Immediately Invoked Function Expressions)
+│   ├── IIFE (Immediately Invoked Function Expressions)
+│   ├── Higher-order functions
+│   ├── Callback functions
+│   └── Recursion
 │
-├── 7. Objects
-│   ├── Object creation (literal, constructor)
+├── 7. Objects & Prototypes
+│   ├── Object creation: literal, constructor, Object.create()
 │   ├── Properties & Methods
-│   ├── this keyword
+│   ├── this keyword (implicit, explicit, new, arrow functions)
 │   ├── Object destructuring
-│   ├── Object.assign()
-│   └── Object.keys(), Object.values(), Object.entries()
+│   ├── Object.assign(), Object.keys(), Object.values(), Object.entries()
+│   ├── Prototypes & prototype chain
+│   ├── Inheritance: ES5 (prototype), ES6 classes & extends
+│   └── instanceof vs isPrototypeOf
 │
 ├── 8. Arrays
-│   ├── Array creation
+│   ├── Creation & indexing
 │   ├── Array methods
 │   │   ├── push(), pop(), shift(), unshift()
-│   │   ├── map(), filter(), reduce()
-│   │   ├── forEach(), some(), every(), find()
-│   │   └── concat(), slice(), splice()
+│   │   ├── map(), filter(), reduce(), forEach(), some(), every(), find(), findIndex()
+│   │   ├── concat(), slice(), splice()
+│   │   ├── includes(), indexOf(), lastIndexOf()
+│   │   ├── flat(), flatMap()
+│   │   └── sort(), reverse()
 │   ├── Spread & Destructuring
 │   └── Iteration with for...of
 │
@@ -76,61 +80,86 @@ JavaScript (JS)
 │   ├── Template literals
 │   ├── String methods: length, toUpperCase(), toLowerCase()
 │   ├── trim(), split(), replace(), includes()
-│   └── charAt(), indexOf(), substring(), slice()
+│   ├── charAt(), indexOf(), substring(), slice(), substr()
+│   └── padStart(), padEnd(), repeat()
 │
 ├── 10. Dates & Math
 │   ├── Date object & methods
-│   ├── Math object: round(), floor(), ceil(), random(), min(), max()
-│   └── Date formatting
+│   ├── Date formatting
+│   ├── Math methods: round(), floor(), ceil(), random(), min(), max(), abs()
+│   └── Working with timestamps
 │
-├── 11. DOM Manipulation
-│   ├── Selecting elements
-│   │   ├── getElementById(), getElementsByClassName(), querySelector()
+├── 11. Regular Expressions
+│   ├── Creating RegExp (literal, constructor)
+│   ├── Flags: g, i, m, u, s
+│   ├── Common patterns
+│   └── Methods: test(), exec(), match(), replace()
+│
+├── 12. DOM Manipulation
+│   ├── Selecting elements: getElementById(), getElementsByClassName(), querySelector()
 │   ├── Changing content: textContent, innerHTML
-│   ├── Changing styles: element.style.property
+│   ├── Changing styles: element.style.property, classList
 │   ├── Creating/Removing elements: createElement(), append(), remove()
-│   └── Event listeners: addEventListener()
+│   └── Modifying attributes: setAttribute(), getAttribute(), removeAttribute()
 │
-├── 12. Events
-│   ├── Mouse events (click, dblclick, mouseover)
-│   ├── Keyboard events (keydown, keyup)
-│   ├── Form events (submit, change, input)
-│   └── Event bubbling & capturing
+├── 13. Events
+│   ├── Mouse events (click, dblclick, mouseover, mouseout)
+│   ├── Keyboard events (keydown, keyup, keypress)
+│   ├── Form events (submit, change, input, focus, blur)
+│   ├── Event bubbling & capturing
+│   ├── Event delegation
+│   └── Passive event listeners
 │
-├── 13. ES6+ Features
+├── 14. ES6+ Features
 │   ├── let & const
 │   ├── Arrow functions
 │   ├── Template literals
 │   ├── Destructuring
 │   ├── Default parameters
-│   ├── Modules (import/export)
-│   └── async/await
+│   ├── Modules (import/export, default vs named, dynamic imports)
+│   ├── async/await
+│   ├── Object & Array spread/rest
+│   └── New operators: ??, ?., ||=, &&=, ??=
 │
-├── 14. JSON
+├── 15. JSON
 │   ├── JSON.parse()
 │   ├── JSON.stringify()
 │   └── Data exchange with APIs
 │
-├── 15. Asynchronous JS
-│   ├── setTimeout(), setInterval()
+├── 16. Asynchronous JS
+│   ├── setTimeout(), setInterval(), clearTimeout(), clearInterval()
 │   ├── Callbacks
-│   ├── Promises
+│   ├── Promises (resolve, reject, then, catch, finally)
+│   ├── Promise.all(), Promise.race(), Promise.any(), Promise.allSettled()
 │   ├── async/await
-│   └── Fetch API / AJAX
+│   ├── Fetch API / AJAX
+│   └── Event loop, call stack, microtasks vs macrotasks
 │
-├── 16. Error Handling
+├── 17. Error Handling
 │   ├── try...catch
 │   ├── throw
-│   └── finally
+│   ├── finally
+│   ├── Error objects (name, message, stack)
+│   └── Handling async errors
 │
-├── 17. Storage
+├── 18. Storage
 │   ├── localStorage
 │   ├── sessionStorage
-│   └── cookies
+│   ├── cookies
+│   └── IndexedDB basics
 │
-├── 18. Best Practices
-│   ├── Use strict mode
-│   ├── Write clean, readable code
-│   ├── Avoid global variables
-│   ├── Use const/let over var
-│   └── Keep functions small & reusable
+├── 19. Security
+│   ├── Preventing XSS
+│   ├── Avoiding eval()
+│   └── Safe DOM manipulation
+│
+├── 20. Performance
+│   ├── Debouncing & throttling
+│   ├── Lazy loading
+│   ├── Minification & compression
+│   └── Memory management & garbage collection
+│
+├── 21. Testing (Basic)
+│   ├── Unit testing concepts
+│   ├── Simple Jest examples
+│   └── Assertions & mocks

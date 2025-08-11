@@ -1,0 +1,31 @@
+You have a button that adds a new list item when clicked. How would you ensure event handling works for dynamically added items?
+You notice your page freezes while loading large data. How can you improve performance?
+Your API request sometimes returns an error. How would you handle retries?
+You need to load an image only when it comes into view. How would you do this?
+You have multiple async requests. Some are optional, but you must wait for all required ones. How do you handle this?
+You are building a search box that updates results as the user types. How would you prevent unnecessary API calls?
+A variable inside a function must remain private but still accessible for updates. How would you achieve this?
+You want to share constants between multiple JS files without polluting the global scope. How do you do this?
+You have to sort a list of objects by multiple fields (e.g., age, then name). How would you implement this?
+A third-party script is slowing down your page load. What steps can you take to optimize it?
+--------------------------------------------------------------------------------------
+A button should disable itself for 5 seconds after being clicked — how would you implement it?
+You have a large JSON file from an API, but you only need certain keys. How do you extract them efficiently?
+On a search bar, API calls are being made on every keystroke. How would you optimize it?
+You have multiple checkboxes and a “Select All” checkbox. How would you implement the functionality?
+When a user scrolls to the bottom of the page, load more content (infinite scroll). How would you detect it?
+You need to sort an array of objects by a date property. How would you do it?
+A form should not be submitted if required fields are empty. How do you handle this validation in JS?
+A user’s theme preference (dark/light mode) should persist across sessions. How would you store it?
+How would you detect if the user is offline and display a warning message?
+You need to handle a click event on dynamically added elements. How would you do it?
+Given a nested object, retrieve a property value safely without throwing an error if it’s missing.
+How would you merge two arrays of objects based on a unique id key?
+How would you cancel an API request if the user navigates away?
+How do you implement a countdown timer that updates every second?
+You need to store a large amount of data in the browser. Which storage method would you choose and why?
+How would you prevent the same function from running twice at the same time?
+You have a form with multiple inputs. How would you update the state dynamically based on the input name?
+How would you detect which key was pressed during a keyboard event?
+A list of products needs to be filtered by category and price range dynamically. How would you approach it?
+How would you track the time a user spends on a page?

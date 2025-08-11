@@ -1,7 +1,47 @@
+What are the differences between var, let, and const?
+Explain JavaScript hoisting with examples.
+What is the difference between == and ===?
+Explain closures in JavaScript with a practical use case.
+What is the difference between synchronous and asynchronous code?
+What is event delegation and why is it useful?
+Explain the difference between null and undefined.
+What are Promises in JavaScript? How are they different from callbacks?
+Explain the concept of prototype inheritance in JavaScript.
+What is the difference between localStorage, sessionStorage, and cookies?
+
+-------------------------------------------------------------------------------------------
+
+What is JavaScript, and why is it used?
+Difference between var, let, and const.
+What is hoisting in JavaScript?
+Difference between == and ===.
+What is a closure?
+Difference between function declaration and function expression.
+What is the difference between synchronous and asynchronous code?
+What is the Event Loop in JavaScript?
+Difference between null and undefined.
+What are template literals in JavaScript?
+Difference between map(), forEach(), and filter().
+What is this in JavaScript?
+What are arrow functions, and how are they different from normal functions?
+Difference between shallow copy and deep copy in JavaScript.
+What is async/await in JavaScript?
+Difference between localStorage, sessionStorage, and cookies.
+What is event delegation in JavaScript?
+Difference between call(), apply(), and bind().
+What is the difference between == and Object.is()?
+What is debouncing and throttling in JavaScript?
+What is prototypal inheritance in JavaScript?
+Explain the difference between default export and named export in ES6 modules.
+How do you handle errors in JavaScript? (try...catch, throw, finally)
+What is a Promise in JavaScript, and how does it work?
+What are destructuring and the spread/rest operators in JavaScript?
+How do you parse and stringify JSON in JavaScript?
+-----------------------------------------------------------------------------------------
+
  Top 20 JavaScript Questions & Answers
 What is JavaScript, and why is it used?
 JavaScript is a programming language for adding interactivity, dynamic content, and logic to web pages.
-
 Difference between var, let, and const.
 
 var: function-scoped, hoisted, can be redeclared

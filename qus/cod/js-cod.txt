@@ -1,0 +1,31 @@
+Reverse a string without using built-in reverse functions.
+Find the largest number in an array.
+Check if a given string is a palindrome.
+Flatten a nested array (e.g., [1, [2, [3]]] → [1, 2, 3]).
+Write a function to debounce another function.
+Implement a function to check if two objects are deeply equal.
+Write a function to remove duplicates from an array.
+Write a function that returns the Fibonacci sequence up to n.
+Write your own implementation of Array.prototype.map.
+Implement a function that fetches data from an API and logs it using async/await.
+-----------------------------------------
+Reverse a string without using the built-in reverse() method.
+Check if a string is a palindrome.
+Find the factorial of a number (iterative and recursive).
+Find the largest number in an array.
+Find the second largest number in an array.
+Remove duplicates from an array.
+Count the occurrences of each character in a string.
+Check if two strings are anagrams of each other.
+Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
+FizzBuzz problem (print numbers 1–100 with multiples of 3 as “Fizz”, 5 as “Buzz”).
+Find the missing number in an array of 1–N.
+Find the intersection of two arrays.
+Sort an array without using sort().
+Implement a debounce function.
+Implement a throttle function.
+Implement a deep clone of an object
+Create a function that returns the Fibonacci sequence up to N.
+Implement a function to check if an object is empty.
+Implement Array.prototype.myMap() without using map().
+Implement a function to get query parameters from a URL.
