@@ -1,0 +1,20 @@
+Create an HTTP server in Node.js that returns "Hello, World!".
+Read a text file asynchronously and print its contents.
+Write "Hello from Node" into a new file.
+Copy a file using streams.
+Create a custom EventEmitter and emit events.
+Build an Express API with CRUD routes for a users resource.
+Add custom middleware to log incoming requests in Express.
+Implement global error-handling middleware in Express.
+Connect to MongoDB using Mongoose and create a schema.
+Fetch all records from MongoDB in an Express route.
+Fetch data from an external API using axios or node-fetch.
+Demonstrate async/await with try/catch.
+Implement a /login endpoint that returns a JWT token.
+Protect an Express route with JWT authentication.
+Upload an image with multer.
+Serve static files with Express.
+Set up environment variables using dotenv.
+Implement pagination for API results.
+Create a WebSocket server that broadcasts messages to all clients.
+Implement rate limiting in an Express app

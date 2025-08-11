@@ -1,3 +1,42 @@
+
+Top 25 Node.js Theory Questions
+
+1. Basics
+What is Node.js, and how is it different from browser JavaScript?
+Explain the concept of a single-threaded event loop in Node.js.
+What is REPL in Node.js, and what can you do with it?
+What are the global objects in Node.js, and how are they different from the browser’s globals?
+2. Core Concepts
+Difference between CommonJS and ES Modules in Node.js.
+What is the purpose of the EventEmitter class, and where is it used?
+Explain Streams in Node.js and give examples of their types.
+What is a Buffer, and when would you use it?
+What is the Cluster module in Node.js, and why is it important?
+3. File System & HTTP
+How do you read and write files asynchronously in Node.js?
+How do you create a basic HTTP server without Express?
+What are the main differences between HTTP and HTTPS in Node.js?
+4. Express.js
+What are middleware functions in Express, and what are their types?
+How does Express handle routing, and how is it different from Node’s native HTTP module?
+How do you handle errors globally in an Express application?
+5. Databases & Async Programming
+How do you connect Node.js to a MongoDB database using Mongoose?
+Difference between callbacks, promises, and async/await in Node.js.
+How do you handle errors in asynchronous code in Node.js?
+6. APIs & Security
+How do you enable CORS in a Node.js/Express app?
+Explain JWT authentication flow in Node.js.
+How do you prevent SQL Injection and XSS in Node.js apps?
+7. Real-Time & File Upload
+How do WebSockets work in Node.js, and how is Socket.IO different?
+How do you upload files in Node.js using multer?
+8. Deployment & Best Practices
+How do you deploy a Node.js app with PM2 for zero downtime?
+What are some best practices for securing a Node.js application?
+
+
+-----------------------------------------------------------------------------------------------
 Top 20 Node.js Questions & Answers
 What is Node.js?
 Node.js is a JavaScript runtime built on Chrome’s V8 engine to run JS on the server-side.

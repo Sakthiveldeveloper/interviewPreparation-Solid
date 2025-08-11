@@ -1,11 +1,17 @@
 Node.js
+├── 0. JavaScript in Node.js
+│   ├── Difference between Node.js & browser JS
+│   ├── Global objects (global, process, __dirname, __filename)
+│   ├── Timers (setTimeout, setInterval, setImmediate, process.nextTick)
+│   └── console methods (log, error, table, time, timeEnd)
+
 ├── 1. Basics
 │   ├── What is Node.js? (JS runtime built on V8)
 │   ├── Non-blocking I/O
 │   ├── Single-threaded event loop
 │   ├── REPL (Read-Eval-Print Loop)
 │   └── Installing Node & npm
-│
+
 ├── 2. Core Concepts
 │   ├── Modules
 │   │   ├── CommonJS (require, module.exports)
@@ -14,21 +20,25 @@ Node.js
 │   ├── Package Management (npm, yarn, pnpm)
 │   ├── EventEmitter
 │   ├── Streams (Readable, Writable, Duplex, Transform)
-│   └── Buffer
-│
+│   ├── Buffer
+│   ├── Cluster module (multi-core scaling)
+│   └── Worker Threads (parallelism)
+
 ├── 3. File System
 │   ├── Reading/Writing files
 │   ├── Synchronous vs Asynchronous methods
 │   ├── Creating/Deleting directories
 │   └── Watching files
-│
+
 ├── 4. HTTP & Servers
 │   ├── http module (createServer)
+│   ├── HTTPS module & SSL certificates
+│   ├── HTTP/2 basics
 │   ├── Handling requests & responses
 │   ├── Status codes
 │   ├── Routing basics
 │   └── Serving static files
-│
+
 ├── 5. Express.js
 │   ├── Installing & setting up
 │   ├── Routing
@@ -36,67 +46,84 @@ Node.js
 │   │   ├── Built-in
 │   │   ├── Third-party
 │   │   └── Custom
+│   ├── Body parsers (express.json, express.urlencoded)
 │   ├── Handling requests (GET, POST, PUT, DELETE)
+│   ├── CORS middleware
 │   ├── Serving static files
 │   └── Error handling
-│
+
 ├── 6. Databases
 │   ├── Relational (MySQL, PostgreSQL)
 │   ├── NoSQL (MongoDB)
 │   ├── ORM/ODM
 │   │   ├── Sequelize
 │   │   └── Mongoose
-│   └── CRUD operations
-│
+│   ├── CRUD operations
+│   ├── Connection pooling
+│   └── Transactions
+
 ├── 7. Asynchronous Programming
 │   ├── Callbacks
 │   ├── Promises
 │   ├── async/await
 │   └── Error handling in async code
-│
+
 ├── 8. APIs
 │   ├── REST API
 │   ├── GraphQL API
 │   ├── JSON handling
 │   ├── CORS
 │   └── API versioning
-│
+
 ├── 9. Authentication & Security
 │   ├── JWT (JSON Web Tokens)
 │   ├── OAuth
 │   ├── Password hashing (bcrypt)
 │   ├── Helmet.js (security headers)
-│   └── Rate limiting
-│
+│   ├── Rate limiting
+│   ├── CSRF protection (csurf middleware)
+│   └── Data validation & sanitization (Joi, express-validator)
+
 ├── 10. Environment Variables
 │   ├── process.env
 │   └── dotenv package
-│
+
 ├── 11. File Uploads
 │   ├── multer
 │   ├── Streaming uploads
 │   └── Cloud storage integration (AWS S3, MinIO)
-│
+
 ├── 12. Real-Time Communication
 │   ├── WebSockets
 │   ├── Socket.IO
-│   └── Server-Sent Events (SSE)
-│
+│   ├── Server-Sent Events (SSE)
+│   └── Redis pub/sub for scaling Socket.IO
+
 ├── 13. Testing
 │   ├── Mocha
 │   ├── Chai
 │   ├── Jest
-│   └── Supertest
-│
+│   ├── Supertest
+│   ├── Test-driven development (TDD)
+│   └── Mocking/Stubbing (Sinon.js)
+
 ├── 14. Deployment
 │   ├── PM2
 │   ├── Docker
 │   ├── CI/CD pipelines
+│   ├── Environment-specific configs (dev, staging, prod)
+│   ├── Zero downtime deployments
 │   └── Cloud platforms (AWS, Azure, GCP, Vercel, Heroku)
-│
+
 ├── 15. Best Practices
 │   ├── Use async/await
 │   ├── Keep code modular
 │   ├── Handle errors properly
 │   ├── Secure environment variables
-│   └── Log & monitor (Winston, Morgan)
+│   ├── Log & monitor (Winston, Morgan)
+│   └── Follow security best practices
+
+├── 16. Debugging & Profiling
+│   ├── Debugging with Node Inspector / Chrome DevTools
+│   ├── Performance profiling (node --inspect, clinic.js)
+│   └── Memory leak detection

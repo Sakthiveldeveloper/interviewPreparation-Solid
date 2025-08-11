@@ -1,0 +1,21 @@
+These are problem-solving tasks that test architecture, debugging, optimization, and integration skills.
+Your Express API is returning very slow responses for some endpoints. How do you debug and optimize it?
+A file upload endpoint must support files up to 5GB. How would you handle memory efficiently?
+Your Node.js service must process millions of incoming requests daily. What scaling strategies do you apply?
+A MongoDB query is returning incorrect results. How do you debug and fix it?
+How would you secure sensitive API keys in a Node.js application?
+A route in Express needs to handle both JSON and XML responses. How would you design it?
+Your WebSocket connection keeps dropping unexpectedly in production. How do you troubleshoot it?
+An API endpoint is vulnerable to SQL Injection. How do you fix it?
+You must log every API request to a file without affecting performance. How would you do it?
+Your Node.js app needs to run background jobs (like sending emails). How would you implement it?
+You need to throttle incoming API calls to prevent abuse. How do you approach it?
+How would you structure a large Node.js project for maintainability?
+An external API call in your Node.js service is failing intermittently. How do you handle retries?
+Your app must send real-time stock updates to clients. Which approach would you take — WebSockets, SSE, or polling? Why?
+How would you design a Node.js API that supports multiple versions (v1, v2)?
+A critical microservice needs zero downtime deployment. How do you ensure it?
+You receive user-uploaded images that must be resized and stored in S3. How would you implement it?
+You must integrate Google OAuth login into a Node.js app. What’s your plan?
+An Express API suddenly starts returning memory leak warnings. How do you debug it?
+You need to ensure GDPR compliance for stored user data. How do you handle it?
