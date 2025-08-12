@@ -29,3 +29,33 @@ Create a function that returns the Fibonacci sequence up to N.
 Implement a function to check if an object is empty.
 Implement Array.prototype.myMap() without using map().
 Implement a function to get query parameters from a URL.
+
+-----------------------------
+merged top 2 list
+JavaScript Coding Problems (Unique)
+1.Reverse a string without using the built-in reverse() method.
+2.Check if a string is a palindrome.
+4.Find the largest number in an array.
+6.Remove duplicates from an array.
+7.Count the occurrences of each character in a string.
+8.Check if two strings are anagrams of each other.
+9.Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
+11.Find the missing number in an array of 1–N.
+12.Implement a debounce function.
+13.Implement a throttle function.
+14.Implement a deep clone of an object.
+16.Find the intersection of two arrays.
+17.Implement a function to check if two objects are deeply equal.17.Implement a function to check if two objects are deeply equal.
+18.Implement a function to check if an object is empty.
+19.Implement a function that fetches data from an API and logs it using async/await.
+20.Implement a function that fetch as post data in js
+
+-------------------unSolved---------------------
+3.Find the factorial of a number (iterative and recursive).
+5.Find the second largest number in an array.
+10.FizzBuzz problem (1–100, multiples of 3 = "Fizz", 5 = "Buzz").
+15.Sort an array without using sort().
+21.Implement a function to get query parameters from a URL.
+22.Create a function that returns the Fibonacci sequence up to N.
+
+Implement Array.prototype.myMap() without using map().

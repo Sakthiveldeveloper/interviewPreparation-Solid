@@ -131,3 +131,239 @@ Debounce: delay execution until after no calls for a set time
 
 Throttle: limit execution to once per set time interval.
 
+---------------------------------------------------------------------------------------------------
+1. What is JavaScript, and why is it used?
+JavaScript is a high-level, interpreted programming language primarily used to create interactive and dynamic behavior on web pages.
+It can run in browsers (client-side) and on servers (using Node.js).
+
+Why used:
+
+Add interactivity (forms, animations, games)
+
+Manipulate the DOM dynamically
+
+Handle asynchronous requests (AJAX, fetch API)
+
+Power backend systems (Node.js)
+
+2. Difference between var, let, and const
+Feature	var	let	const
+Scope	Function-scoped	Block-scoped	Block-scoped
+Hoisting	Hoisted (initialized as undefined)	Hoisted (in TDZ)	Hoisted (in TDZ)
+Reassignment	Yes	Yes	No
+Redeclaration	Yes	No	No
+
+3. Hoisting in JavaScript
+Hoisting moves declarations to the top of the scope at compile time.
+
+
+console.log(a); // undefined
+var a = 5;
+
+// let and const
+console.log(b); // ReferenceError
+let b = 10;
+var is hoisted and initialized as undefined.
+
+let and const are hoisted but in the Temporal Dead Zone (TDZ) until the declaration is reached.
+
+4. Difference between == and ===
+== → loose equality (performs type coercion)
+
+=== → strict equality (no type coercion)
+
+
+0 == "0"  // true
+0 === "0" // false
+5. Closures
+A closure is when a function remembers the variables from its lexical scope even when executed outside of it.
+
+
+function counter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const c = counter();
+console.log(c()); // 1
+console.log(c()); // 2
+Use cases:
+
+Data privacy
+
+Function factories
+
+Memoization
+
+6. Function Declaration vs Function Expression
+
+// Declaration - hoisted
+function sayHi() { console.log("Hi"); }
+
+// Expression - not hoisted
+const sayHello = function() { console.log("Hello"); };
+7. Synchronous vs Asynchronous
+Synchronous → Code runs line by line, blocking execution until finished.
+
+Asynchronous → Allows non-blocking execution (callbacks, promises, async/await).
+
+
+console.log("1");
+setTimeout(() => console.log("2"), 0);
+console.log("3");
+// Output: 1, 3, 2
+8. Event Loop
+The event loop continuously checks the call stack and callback queue, moving tasks from the queue to the stack when empty — enabling async behavior in JS.
+
+9. Event Delegation
+Attach a single event listener to a parent element to manage events for child elements.
+
+
+document.getElementById("list").addEventListener("click", e => {
+  if (e.target.tagName === "LI") {
+    console.log("Clicked:", e.target.textContent);
+  }
+});
+Benefits: Better performance, handles dynamically added elements.
+
+10. Null vs Undefined
+null → Intentional absence of value.
+
+undefined → Variable declared but not assigned a value.
+
+11. Template Literals
+
+let name = "Sakthi";
+console.log(`Hello, ${name}!`); // Hello, Sakthi!
+Support multi-line strings and interpolation.
+
+12. map() vs forEach() vs filter()
+Method	Returns a new array?	Purpose
+map()	✅ Yes	Transform each element
+forEach()	❌ No	Iterate for side effects
+filter()	✅ Yes	Keep elements that match a condition
+
+13. this Keyword
+Refers to the object that is calling the function.
+
+Changes depending on how the function is called.
+
+14. Arrow Functions vs Normal Functions
+Arrow functions don’t have their own this (lexically bind it).
+
+Cannot be used as constructors.
+
+Shorter syntax.
+
+15. Shallow Copy vs Deep Copy
+Shallow → Copies references of nested objects.
+
+Deep → Copies everything recursively.
+
+
+let obj1 = {a:1, b:{c:2}};
+let shallow = {...obj1};
+let deep = JSON.parse(JSON.stringify(obj1));
+16. Async/Await
+Syntactic sugar over Promises.
+
+
+async function fetchData() {
+  const res = await fetch("/data");
+  return res.json();
+}
+17. localStorage vs sessionStorage vs cookies
+Feature	localStorage	sessionStorage	cookies
+Expiry	Never (manual clear)	On tab close	Can set expiry
+Size	~5MB	~5MB	~4KB
+Sent to server?	No	No	Yes
+
+18. call() vs apply() vs bind()
+
+function greet(greeting, name) { console.log(greeting, name); }
+
+greet.call(null, "Hi", "John"); // args separately
+greet.apply(null, ["Hi", "John"]); // args as array
+const bound = greet.bind(null, "Hi");
+bound("John"); // bound function
+19. == vs Object.is()
+Object.is() is like === but handles NaN and -0 differently.
+
+
+NaN === NaN // false
+Object.is(NaN, NaN) // true
+20. Debouncing vs Throttling
+Debounce → Delay execution until after a pause.
+
+Throttle → Execute at most once per interval.
+
+21. Prototypal Inheritance
+Objects inherit from other objects via the prototype chain.
+
+
+function Person(name) { this.name = name; }
+Person.prototype.sayHi = function() { console.log(`Hi ${this.name}`); };
+22. Default Export vs Named Export
+
+// default export
+export default function() {}
+// named export
+export const a = 1;
+23. Error Handling
+
+try {
+  throw new Error("Oops");
+} catch (err) {
+  console.error(err);
+} finally {
+  console.log("Cleanup");
+}
+24. Promises
+
+new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done"), 1000);
+});
+Difference from callbacks: Avoids “callback hell”, supports chaining.
+
+25. Destructuring & Spread/Rest
+
+let [a, b] = [1, 2];
+let {x, y} = {x:10, y:20};
+let arr2 = [...arr1]; // spread
+function sum(...nums) {} // rest
+26. JSON Parsing & Stringifying
+
+let obj = JSON.parse('{"a":1}');
+let str = JSON.stringify({a:1});
+--------------------------------+++++++++++++-------------------------------------------------------------
+| **Topic / Question**                          | **Answer / Key Points**                                                                                                                                 |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **What is JavaScript?**                       | High-level, interpreted language for creating interactive web pages. Runs in browsers & servers (Node.js).                                              |
+| **var vs let vs const**                       | `var`: function-scoped, hoisted, redeclarable. `let`: block-scoped, hoisted (TDZ), reassignable. `const`: block-scoped, hoisted (TDZ), no reassignment. |
+| **Hoisting**                                  | Declarations moved to top at compile time. `var` → undefined; `let`/`const` → TDZ until declared.                                                       |
+| **== vs ===**                                 | `==` loose equality (type coercion), `===` strict equality (no coercion).                                                                               |
+| **Closures**                                  | Function remembers variables from lexical scope. Used for data privacy, memoization, function factories.                                                |
+| **Function Declaration vs Expression**        | Declaration → hoisted; Expression → not hoisted.                                                                                                        |
+| **Synchronous vs Asynchronous**               | Sync: runs line-by-line, blocks. Async: non-blocking (callbacks, promises, async/await).                                                                |
+| **Event Loop**                                | Moves tasks from queue to stack when stack is empty, enabling async behavior.                                                                           |
+| **Event Delegation**                          | One parent listener handles events for child elements. Efficient, works for dynamic elements.                                                           |
+| **null vs undefined**                         | `null` → intentional empty value; `undefined` → declared but unassigned.                                                                                |
+| **Template Literals**                         | Backticks (`` ` ``), allow `${}` interpolation & multi-line strings.                                                                                    |
+| **map() vs forEach() vs filter()**            | `map`: returns new array (transform). `forEach`: no return (iterate). `filter`: returns new array (condition match).                                    |
+| **this keyword**                              | Refers to calling object; value depends on call context.                                                                                                |
+| **Arrow Functions vs Normal**                 | Arrows have lexical `this`, no `arguments`, can’t be constructors, shorter syntax.                                                                      |
+| **Shallow vs Deep Copy**                      | Shallow copies nested object references. Deep copies recursively clone values.                                                                          |
+| **async/await**                               | Syntactic sugar for promises. Waits for async tasks in sync style.                                                                                      |
+| **localStorage vs sessionStorage vs cookies** | localStorage: permanent, 5MB, no server send. sessionStorage: until tab closes. cookies: small (4KB), sent with HTTP requests.                          |
+| **call() vs apply() vs bind()**               | `call`: args separately. `apply`: args array. `bind`: returns new bound function.                                                                       |
+| **== vs Object.is()**                         | `Object.is()` like `===` but treats `NaN` as equal, and `-0` vs `+0` as different.                                                                      |
+| **Debounce vs Throttle**                      | Debounce: run after pause. Throttle: limit execution rate.                                                                                              |
+| **Prototypal Inheritance**                    | Objects inherit from prototypes via prototype chain.                                                                                                    |
+| **Default vs Named Export**                   | Default: one per file, import with any name. Named: many per file, must match names.                                                                    |
+| **Error Handling**                            | `try...catch...finally`, `throw` to raise errors.                                                                                                       |
+| **Promise**                                   | Represents future value. Avoids callback hell. Has `.then`, `.catch`, `.finally`.                                                                       |
+| **Destructuring / Spread / Rest**             | Destructure arrays/objects. Spread: expand. Rest: gather into array.                                                                                    |
+| **JSON parse/stringify**                      | `JSON.parse(str)` → object. `JSON.stringify(obj)` → string.                                                                                             |

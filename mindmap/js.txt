@@ -7,7 +7,7 @@ JavaScript (JS)
 │   │   └── External: <script src="app.js"></script>
 │   ├── Syntax & Case Sensitivity
 │   ├── Comments: // single-line, /* multi-line */
-│   └── "use strict" mode
+│   └── "use strict" mode -> help to improve code quality and Security
 │
 ├── 2. Variables & Scope
 │   ├── var (function-scoped)
@@ -36,7 +36,7 @@ JavaScript (JS)
 │   ├── Optional chaining (?.)
 │   └── Nullish coalescing (??)
 │
-├── 5. Control Flow
+├── 5. Control Flow(condition statement, loop statement, jump statement)
 │   ├── if, else if, else
 │   ├── switch
 │   ├── for, while, do...while, for...of, for...in
@@ -52,7 +52,7 @@ JavaScript (JS)
 │   ├── IIFE (Immediately Invoked Function Expressions)
 │   ├── Higher-order functions
 │   ├── Callback functions
-│   └── Recursion
+│   └── Recursion -> repeatly call itself for until reach the condition
 │
 ├── 7. Objects & Prototypes
 │   ├── Object creation: literal, constructor, Object.create()
