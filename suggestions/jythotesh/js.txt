@@ -1,0 +1,86 @@
+Basic
+1. Fundamentals
+1.	What are the different data types in JavaScript?
+2.	What is the difference between let, const, and var?
+3.	What is the difference between == and ===?
+4.	Explain the concept of hoisting in JavaScript.
+5.	How do you declare a function in JavaScript?
+2. Objects & Arrays
+6.	How do you create an object in JavaScript?
+7.	What is the difference between null and undefined?
+8.	How do you access and modify object properties?
+9.	What is an array, and how do you manipulate arrays (push, pop, map, filter, reduce)?
+3. Functions & Scope
+10.	What is the difference between function declaration and function expression?
+11.	What is a callback function?
+12.	What is scope, and what are the types of scope in JavaScript?
+13.	What is closure, and why is it useful?
+14.	What is the difference between a normal function and an arrow function?
+4. DOM & Events
+15.	What is the DOM?
+16.	How do you select elements using JavaScript (getElementById, querySelector)?
+17.	How do you handle events in JavaScript (addEventListener)?
+18.	What is event delegation, and why is it useful?
+19.	What are localStorage and sessionStorage?
+5. ES6+ Features
+20.	What is destructuring in JavaScript?
+21.	What is the spread/rest operator?
+22.	What are template literals, and how do they work?
+23.	What is a default parameter in functions?
+24.	How does the for...of loop work?
+________________________________________
+Intermediate
+1. Asynchronous JavaScript
+25.	What is the event loop in JavaScript?
+26.	What are setTimeout, setInterval, and requestAnimationFrame?
+27.	What is the difference between a callback function, promise, and async/await?
+28.	What happens if you await a non-promise value?
+29.	What is the difference between microtasks and macrotasks?
+2. Objects & Prototypes
+30.	What is prototype-based inheritance in JavaScript?
+31.	What is the difference between __proto__ and prototype?
+32.	What is Object.create() used for?
+33.	How does JavaScript handle garbage collection?
+3. Performance Optimization
+34.	What is debouncing and throttling, and how are they different?
+35.	How does requestAnimationFrame improve performance?
+36.	Why is direct DOM manipulation slow, and how can you optimize it?
+37.	What is lazy loading, and how is it implemented in JavaScript?
+4. ES6+ Advanced Features
+38.	What are WeakMap and WeakSet, and when should they be used?
+39.	What is object destructuring, and how does it work?
+40.	What is the difference between shallow copy and deep copy, and how do you create them?
+5. Error Handling & Debugging
+41.	What are try...catch and finally used for?
+42.	How do you create and handle custom errors in JavaScript?
+43.	What are console.time() and console.profile() used for?
+________________________________________
+Advanced
+1. JavaScript Internals & Execution
+44.	How does JavaScript manage memory and prevent memory leaks?
+45.	Explain the concept of Tail Call Optimization (TCO).
+46.	How does this behave in different contexts?
+47.	What is currying, and how do you implement it in JavaScript?
+48.	What are generators, and how do they work?
+2. Web Performance & Best Practices
+49.	What is tree shaking, and how does it help in optimizing JavaScript bundles?
+50.	What is code splitting, and how is it implemented in Webpack?
+51.	What is the difference between repainting and reflow in the browser?
+52.	What is the purpose of a service worker, and how does it improve performance?
+3. Design Patterns & Advanced Concepts
+53.	What are higher-order functions, and why are they useful?
+54.	Explain the Module Pattern in JavaScript.
+55.	How would you implement the Observer Pattern in JavaScript?
+56.	What is a Proxy in JavaScript, and how is it different from Object.defineProperty()?
+57.	How do you implement an LRU (Least Recently Used) Cache in JavaScript?
+4. Security & Best Practices
+58.	What are Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF)?
+59.	What is CORS (Cross-Origin Resource Sharing), and how do you handle it?
+60.	Why is eval() dangerous, and what are safer alternatives?
+61.	What are content security policies (CSP), and how do they prevent attacks?
+5. Advanced JavaScript Performance & Optimization
+62.	How do you optimize performance for large-scale JavaScript applications?
+63.	How do you handle large datasets efficiently in JavaScript?
+64.	What are Web Workers, and how do they help improve performance?
+65.	How do you optimize memory usage in JavaScript applications?
+

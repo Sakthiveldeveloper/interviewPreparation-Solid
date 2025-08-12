@@ -1,0 +1,135 @@
+Basic
+1. React Basics
+1.	What is React, and how does it work?
+2.	What are the main features of React?
+3.	What is JSX, and how is it different from HTML?
+4.	What is the Virtual DOM, and how does it improve performance?
+5.	What are React components?
+2. Components & Props
+6.	What is the difference between functional and class components?
+7.	What are props, and how do you pass data between components?
+8.	What are default props, and how do they work?
+9.	Can we pass functions as props? How?
+10.	What is prop drilling, and how do you avoid it?
+3. State & Lifecycle Methods
+11.	What is state in React, and how is it different from props?
+12.	How do you update state correctly in React?
+13.	What are React lifecycle methods, and when do they execute?
+14.	What is the difference between componentDidMount, componentDidUpdate, and componentWillUnmount?
+15.	What is the best way to handle state in class components?
+4. Event Handling & Forms
+16.	How do you handle events in React?
+17.	What is the difference between onClick={myFunction()} and onClick={myFunction}?
+18.	How do you create controlled and uncontrolled components in React?
+19.	How do you handle form submissions in React?
+20.	What is the purpose of useRef in forms?
+5. Conditional Rendering & Lists
+21.	How do you conditionally render components in React?
+22.	How do you render lists dynamically in React?
+23.	Why is it important to use keys when rendering lists?
+24.	What is the difference between map() and forEach() in React?
+25.	What happens if you don't provide a key while rendering a list?
+________________________________________
+Intermediate
+1. Hooks & Functional Components
+26.	What are React Hooks, and why were they introduced?
+27.	What is the difference between useState and useReducer?
+28.	How does useEffect work, and what are its dependencies?
+29.	How do you prevent unnecessary re-renders in functional components?
+30.	What is the purpose of useMemo and useCallback?
+2. Context API & State Management
+31.	What is the Context API, and how does it work?
+32.	When should you use Context API vs. Redux?
+33.	How do you share state between deeply nested components without prop drilling?
+34.	What is useContext, and how does it simplify state management?
+35.	How do you optimize large-scale state management in React applications?
+3. React Performance Optimization
+36.	How does React.memo help in optimizing performance?
+37.	How do you prevent a component from re-rendering unnecessarily?
+38.	What is the difference between useMemo and React.memo?
+39.	What is lazy loading, and how do you implement it in React?
+40.	How does code splitting work with React?
+4. Routing in React
+41.	What is React Router, and how does it work?
+42.	What is the difference between BrowserRouter and HashRouter?
+43.	How do you pass props in React Router?
+44.	What is the difference between <Link> and <NavLink>?
+45.	What are dynamic routes, and how do you create them?
+5. Forms & Validations
+46.	How do you handle complex forms in React?
+47.	What is Formik, and why is it useful?
+48.	What is Yup, and how does it help in form validation?
+49.	How do you validate form fields dynamically in React?
+50.	What is the difference between controlled and uncontrolled components?
+________________________________________
+Advanced
+1. Advanced Hooks & State Management
+51.	How do you use custom hooks in React?
+52.	What are compound components, and how do they help in React?
+53.	How do you use useImperativeHandle and forwardRef?
+54.	What is the difference between useEffect and useLayoutEffect?
+55.	How does useReducer help in managing complex state?
+2. Redux & Global State Management
+56.	How does Redux work, and why do we use it?
+57.	What is the difference between Redux Toolkit and traditional Redux?
+58.	How do you handle async actions in Redux (Thunk vs. Saga)?
+59.	What is immer.js, and how does it simplify Redux state updates?
+60.	What is the purpose of Redux middleware?
+3. React Performance Tuning
+61.	What is reconciliation, and how does React optimize rendering?
+62.	How does React Fiber improve performance?
+63.	What is React Concurrent Mode, and when should you use it?
+64.	How does React Suspense improve performance?
+65.	What is the difference between server-side rendering (SSR) and client-side rendering (CSR)?
+4. Testing in React
+66.	What is Jest, and how do you use it for unit testing in React?
+67.	What is the difference between shallow rendering and mounting in testing?
+68.	How do you write integration tests in React?
+69.	What is React Testing Library, and how is it different from Enzyme?
+70.	How do you test a React component that uses hooks?
+5. Server-Side Rendering & Next.js
+71.	What is SSR (Server-Side Rendering), and how does it improve performance?
+72.	What is Next.js, and why is it popular for React applications?
+73.	How does static site generation (SSG) differ from SSR?
+74.	How do you implement authentication in Next.js?
+75.	How does API Routes work in Next.js?
+6. Component Architecture
+76.	Smart vs. Dumb Components
+77.	Presentational vs Container Components
+78.	Higher-Order Components (HOCs) (even though Hooks replaced most of their use)
+7. Reusability & Composition
+79.	Render Props Pattern
+80.	Compound Components
+81.	Slot-based Composition (children as functions)
+8. Clean Code & Best Practices
+82.	Folder structure in large apps
+83.	Separation of concerns in React
+84.	Code splitting and dynamic imports
+85.	Environment-specific configurations
+9. Dev Tools & Workflow
+86.	React Developer Tools
+87.	Linting with ESLint + Prettier
+88.	TypeScript in React (strongly recommended for scale)
+10. React with Other Libraries
+89.	React Query / TanStack Query
+90.	Recoil / Zustand / Jotai (modern state managers)
+91.	React + RxJS (for advanced async state)
+92.	Formik / React Hook Form (for large form handling)
+11. SSR & Meta Frameworks (Next.js)
+93.	Static Site Generation (SSG)
+94.	Incremental Static Regeneration (ISR)
+95.	App Directory & Server Components (Next.js 13+)
+96.	API Routes & Middleware
+12. Testing Expanded
+97.	Unit vs Integration vs E2E Testing
+98.	Testing Hooks
+99.	React Testing Library vs Enzyme
+100.	Mocking APIs & Components
+13. Security & Performance
+101.	Cross-site scripting (XSS) prevention
+102.	Avoiding memory leaks
+103.	Strict Mode & Concurrent Features
+104.	Lazy loading with Suspense and React.lazy
+105.	React Profiler
+
+

@@ -1,0 +1,96 @@
+Basic
+1. Node.js Basics
+1.	What is Node.js, and how does it work?
+2.	How is Node.js different from JavaScript in the browser?
+3.	What is the V8 Engine, and why does Node.js use it?
+4.	What is the difference between synchronous and asynchronous programming?
+5.	What is non-blocking I/O, and why is it important?
+2. Modules & NPM
+6.	What are Node.js modules, and how do you use them?
+7.	What is the difference between CommonJS and ES6 Modules?
+8.	What is package.json, and why is it important?
+9.	How do you install global vs. local packages in NPM?
+10.	What is the difference between dependencies and devDependencies?
+3. File System & Streams
+11.	How do you read and write files in Node.js?
+12.	What is the difference between synchronous and asynchronous file operations?
+13.	What are streams, and why are they useful?
+14.	What is a buffer, and how does it work in Node.js?
+15.	What is the difference between fs.readFileSync() and fs.createReadStream()?
+4. Event Loop & Event Emitter
+16.	What is the Event Loop in Node.js?
+17.	What are macrotasks and microtasks in Node.js?
+18.	What is the purpose of the EventEmitter class?
+19.	How do you create and handle custom events in Node.js?
+20.	How does process.nextTick() work?
+5. Express.js Basics
+21.	What is Express.js, and why is it used?
+22.	What is the difference between app.get() and app.post()?
+23.	What are middleware functions in Express?
+24.	How do you handle routes in Express?
+25.	What is req.query vs. req.params in Express?
+________________________________________
+Intermediate
+1. Asynchronous Programming
+26.	What is a callback function, and why is it important in Node.js?
+27.	What is the difference between callback hell and Promise chaining?
+28.	What are async/await, and how do they work in Node.js?
+29.	How do you handle errors in async functions (try...catch vs. .catch())?
+30.	What is the difference between process.nextTick() and setImmediate()?
+2. Middleware & Routing in Express.js
+31.	What is the difference between application-level middleware and router-level middleware?
+32.	What is the purpose of the next() function in Express middleware?
+33.	How do you create a custom error-handling middleware in Express?
+34.	How do you implement CORS (Cross-Origin Resource Sharing) in Express?
+35.	What is the difference between req.body, req.params, and req.query?
+3. Working with Databases
+36.	How do you connect Node.js to a database (MongoDB, PostgreSQL, MySQL)?
+37.	What is the difference between SQL and NoSQL databases?
+38.	What are ORMs and ODMs in Node.js?
+39.	What is Mongoose, and how does it work with MongoDB?
+40.	What is the difference between Mongoose populate and lookup aggregation?
+4. Authentication & Security
+41.	How do you implement JWT-based authentication in Node.js?
+42.	What are bcrypt and argon2, and how do they help secure passwords?
+43.	How do you prevent NoSQL injection in MongoDB?
+44.	How do you protect an Express.js app against CSRF (Cross-Site Request Forgery)?
+45.	What is helmet.js, and how does it improve security in Express?
+5. Performance Optimization & Best Practices
+46.	What is clustering, and how does it improve performance in Node.js?
+47.	How do you optimize memory usage in a Node.js application?
+48.	What is lazy loading, and how can it improve efficiency?
+49.	What is the difference between worker threads and child processes?
+50.	How do you use PM2 to manage and monitor Node.js applications?
+________________________________________
+Advanced
+1. Advanced Node.js Internals
+51.	How does Node.js handle garbage collection?
+52.	What is libuv, and how does it work in Node.js?
+53.	What is event-driven architecture, and how does Node.js utilize it?
+54.	What is Node.js Fiber, and how does it improve performance?
+55.	How do WebSockets work in Node.js?
+2. Advanced Express.js & APIs
+56.	How do you implement rate limiting in an Express app?
+57.	What are GraphQL APIs, and how are they different from REST APIs?
+58.	How do you handle file uploads in Express using multer?
+59.	How do you implement caching in Express.js?
+60.	How do you handle batch requests in an Express API?
+3. Microservices & Scalability
+61.	What is a microservice architecture, and how does it differ from monolithic apps?
+62.	What are the benefits of Dockerizing a Node.js application?
+63.	What is Kubernetes, and how does it help scale Node.js applications?
+64.	What is gRPC, and how does it compare to REST APIs?
+65.	How do you implement message queues (RabbitMQ, Kafka) in Node.js?
+4. Advanced Security & Authentication
+66.	How do you prevent brute force attacks in a Node.js API?
+67.	How do you implement OAuth 2.0 authentication in an Express app?
+68.	What are secure HTTP headers, and how do you set them in Express?
+69.	How do you handle refresh tokens in a JWT authentication system?
+70.	What is the same-site cookie policy, and how does it improve security?
+5. Advanced Performance Optimization
+71.	How do you use Redis caching in a Node.js API?
+72.	How do you implement server-side pagination in Express.js?
+73.	How does event-driven architecture help scale Node.js applications?
+74.	How do you optimize an API for high throughput and low latency?
+75.	How does lazy loading modules improve performance in large-scale Node.js apps?
+
