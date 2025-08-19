@@ -1,0 +1,135 @@
+🧩 Design Patterns – Baby Style Mind Map
+
+👉 Design Patterns = Recipes 🍲 to solve common problems in coding.
+👉 They are divided into 3 main types:
+1️⃣ Creational Patterns – "How to make objects" 🏗️
+Helps in creating objects without exposing complex details.
+Singleton → Only one object allowed (like one TV remote 🧸).
+Factory Method → Ask factory for object, it decides what to give 🚗✈️.
+Abstract Factory → Factory of factories (like Lego shop: car factory, house factory 🏭).
+Builder → Step-by-step construction (like building a burger 🍔 layer by layer).
+Prototype → Copy existing object (like photocopy machine 📄).
+2️⃣ Structural Patterns – "How to arrange objects" 🏠
+Helps in organizing and combining objects like Lego blocks.
+Adapter → Plug adapter, makes things fit 🔌 (2-pin → 3-pin).
+Bridge → Separate abstraction from implementation (like remote works with TV, DVD, etc. 🎮).
+Composite → Tree structure (like folder inside folder 📂).
+Decorator → Add features without changing base (coffee ☕ → add milk 🥛 → add sugar 🍬).
+Facade → Simple interface for big system (like hotel reception 📞).
+Flyweight → Share common parts to save memory (like sharing crayons in class 🖍️).
+Proxy → Someone else acts on your behalf (like friend collecting parcel 📦).
+3️⃣ Behavioral Patterns – "How objects talk" 🗣️
+Helps in communication between objects.
+Chain of Responsibility → Pass request along a chain (like teachers passing homework 📘).
+Command → Wrap request in object (like pressing remote button stores command 🎮).
+Interpreter → Understand language/grammar (like Google Translate 🌐).
+Iterator → Go one by one (like flipping pages of a book 📖).
+Mediator → Middle person for communication (like teacher talking between students 👩‍🏫).
+Memento → Save/restore state (like saving a game 🎮💾).
+Observer → Notify all when something changes (YouTube bell 🔔 for subscribers).
+State → Change behavior when state changes (like traffic light 🚦).
+Strategy → Choose best method (like Google Maps suggesting routes 🗺️).
+Template Method → Base recipe, subclasses fill details (like mom’s cake recipe 🍰).
+Visitor → Add new operation without changing class (like museum guide visiting each room 🏛️).
+🎉 Super Baby Summary:
+Creational = How to make objects 🏗️
+Structural = How to arrange objects 🏠
+Behavioral = How to make them talk 🗣️
+-----------------------------------------------------------------------------------------------------
+Design Patterns
+├── 1. Creational Patterns
+│   ├── Factory Pattern
+│   │   ├── Purpose → Create objects without exposing instantiation logic
+│   │   ├── Example → Component factory (ButtonFactory: primary/secondary)
+│   │   └── Related → Dependency Injection
+│   ├── Abstract Factory
+│   │   ├── Purpose → Create families of related objects
+│   │   ├── Example → UI Theme factory (Material vs AntD components)
+│   │   └── Benefit → Consistency across variants
+│   ├── Singleton
+│   │   ├── Purpose → Ensure only one instance
+│   │   ├── Example → Global Store (Redux, Context API)
+│   │   └── Warning → Overuse = hidden dependencies
+│   ├── Builder
+│   │   ├── Purpose → Construct complex objects step by step
+│   │   ├── Example → Fluent API for form building
+│   │   └── Benefit → Readability, flexibility
+│   └── Prototype
+│       ├── Purpose → Clone existing objects
+│       ├── Example → Object.create in JS
+│       └── Benefit → Performance when cloning configs
+│
+├── 2. Structural Patterns
+│   ├── Adapter
+│   │   ├── Purpose → Convert interface to another
+│   │   ├── Example → Wrap fetch API to behave like Axios
+│   │   └── Benefit → Reusability with legacy APIs
+│   ├── Decorator
+│   │   ├── Purpose → Add behavior dynamically
+│   │   ├── Example → HOCs in React (withAuth, withLogging)
+│   │   └── Related → use hooks instead
+│   ├── Proxy
+│   │   ├── Purpose → Control access to object
+│   │   ├── Example → API request caching / auth check
+│   │   └── JS Feature → ES6 Proxy
+│   ├── Facade
+│   │   ├── Purpose → Simplify complex subsystem
+│   │   ├── Example → APIClient wrapper hiding axios/fetch logic
+│   │   └── Benefit → Cleaner abstraction
+│   ├── Composite
+│   │   ├── Purpose → Tree structure (part-whole hierarchy)
+│   │   ├── Example → React component tree, file explorer UI
+│   │   └── Benefit → Uniform treatment of individual & group
+│   ├── Flyweight
+│   │   ├── Purpose → Optimize memory by sharing state
+│   │   ├── Example → Reuse icons/styles in React instead of duplicates
+│   │   └── Benefit → Performance
+│   └── Bridge
+│       ├── Purpose → Decouple abstraction from implementation
+│       ├── Example → Cross-platform UI with same logic but different renderers
+│       └── Benefit → Scalability
+│
+├── 3. Behavioral Patterns
+│   ├── Observer
+│   │   ├── Purpose → One-to-many dependency, notify subscribers
+│   │   ├── Example → EventEmitter, Redux store subscription
+│   │   └── React Example → useEffect watching state
+│   ├── Strategy
+│   │   ├── Purpose → Define family of algorithms, switch at runtime
+│   │   ├── Example → Payment method (CreditCard, PayPal, UPI)
+│   │   └── React → Different form validators
+│   ├── Command
+│   │   ├── Purpose → Encapsulate requests as objects
+│   │   ├── Example → Undo/Redo stack in editor
+│   │   └── Benefit → History tracking
+│   ├── Mediator
+│   │   ├── Purpose → Centralized communication
+│   │   ├── Example → Chatroom service handling user messages
+│   │   └── React → Context API as mediator
+│   ├── Iterator
+│   │   ├── Purpose → Sequential access without exposing structure
+│   │   ├── Example → for..of in JS, custom iterable
+│   │   └── React → map() to render lists
+│   ├── State
+│   │   ├── Purpose → Object behavior changes with state
+│   │   ├── Example → Auth flow (loggedIn, guest, admin)
+│   │   └── React → useReducer for finite states
+│   ├── Template Method
+│   │   ├── Purpose → Base class defines steps, subclasses override parts
+│   │   ├── Example → AbstractComponent → renderHeader, renderFooter
+│   │   └── React → Layout components
+│   ├── Chain of Responsibility
+│   │   ├── Purpose → Pass request along chain until handled
+│   │   ├── Example → Express middleware pipeline
+│   │   └── React → Redux middleware
+│   └── Memento
+│       ├── Purpose → Save/restore state
+│       ├── Example → Form draft autosave
+│       └── Benefit → Undo functionality
+│
+└── 4. Cross-Cutting Ideas
+    ├── Composition over Inheritance
+    ├── Design Patterns + SOLID → Best synergy
+    ├── Anti-Patterns → God Object, Spaghetti Code, Magic Numbers
+    ├── Use in React → HOCs, Hooks, Context API, Render Props
+    └── Use in Node → Express middleware, services, factories

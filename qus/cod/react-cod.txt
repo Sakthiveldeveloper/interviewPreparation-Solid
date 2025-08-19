@@ -1,5 +1,6 @@
 Top 20 React Coding Question
 (From beginner to advanced, arranged logically)
+
 Create a functional component that displays “Hello, World!”
 Pass props to a child component and display them.
 Create a counter app using useState with increment & decrement buttons.
@@ -20,3 +21,70 @@ Handle form validation manually without libraries.
 Implement debouncing for an input field that fetches API data after the user stops typing.
 Lazy load a component using React.lazy and Suspense.
 Error handling in React using Error Boundaries.
+---------------------------------------------------------------------------------------------------
+Your original “Top 20 React Coding Questions” list
+
+Hello World component
+Pass props to child
+Counter app (useState)
+To-do list (add, delete, complete)
+Conditional rendering (login/logout)
+Render list with .map() and keys
+Controlled form inputs (name/email
+Search filter (real-time)
+Fetch API data with useEffect
+Pagination for API results
+Share state via useContext
+Custom hook for fetching data
+Theme switcher with Context API
+Optimize with React.memo
+Prevent re-renders (useCallback, useMemo)
+Modal with Portals
+Manual form validation
+Debouncing for search/API calls
+Lazy load with React.lazy + Suspense
+Error Boundaries
+
+****************************************************************************************************
+Roadside Coder playlist (Scribd list)
+
+File Explorer
+Pagination
+EMI Calculator
+Password Generator
+Progress Bar
+Grid Lights
+useMemo demo
+Like Button
+Job Board
+useEffect hook polyfill
+Breadcrumbs
+OTP Login
+Multi-select search
+Stepper
+useThrottle hook
+Selectable Grid
+Currency Converter
+Drag-and-drop Notes
+TikTok UI clone
+Memory Game
+
+************************************************************************************************
+Comparison  What’s in playlist but missing from your list
+File Explore
+EMI Calculator
+Password Generator
+Progress Bar
+Grid Lights
+Like Button
+Job Board
+Breadcrumbs
+OTP Login
+Multi-select search (similar to search filter, but more advanced)
+Stepper
+useThrottle hook
+Selectable Grid
+Currency Converter
+Drag-and-drop Notes
+TikTok UI clone
+Memory Game

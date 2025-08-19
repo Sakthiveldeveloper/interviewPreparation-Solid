@@ -93,3 +93,59 @@ React is the core library; ReactDOM handles rendering React components to the DO
 
 How do you optimize performance in React?
 Using React.memo, lazy loading, code splitting, avoiding unnecessary re-renders.
+--------------------------------------------------------------------------------------
+Ultimate React Interview Questions (From Junior to Senior)
+
+Part 1 — Top 20 React Fundamentals (Must-Know)
+What is React, and why is it used?
+What are components in React?
+What is JSX, and why do we use it?
+What is the Virtual DOM, and how does React use it?
+What are props in React?
+What is state in React?
+Difference between state and props.
+What are lifecycle methods in React class components?
+What are React hooks?
+What does useState do?
+What is useEffect used for?
+How do you pass data beteen components?
+What is lifting state up?
+What is a controlled component?
+What is a key in React lists, and why is it important?
+What is reconciliation in React?
+What are higher-order components (HOCs)?
+What is React Context, and when would you use it?
+Difference between React and ReactDOM.
+How do you optimize performance in React?
+Part 2 — Top 10 Advanced React (Common in Mid/Senior Interviews)
+Explain useRef and when to use it.
+What are useMemo and useCallback, and how do they help performance?
+What is useReducer, and when would you use it instead of useState?
+Difference between useEffect and useLayoutEffect.
+How does React Router work? (Basic of <BrowserRouter>, <Routes>, <Route>, useNavigate, useParams)
+What are Error Boundaries in React?
+What are React Portals, and when would you use them?
+What is Suspense in React, and how is it used for lazy loading?
+What are the differences between Context API and Redux for state management?
+How does Server-Side Rendering (SSR) work in React (e.g., Next.js)?
+Part 3 — Expert-Level & Senior Role Questions
+What are the Rules of Hooks, and why do they exist?
+Explain useTransition and useDeferredValue in React 18.
+What is useImperativeHandle, and when would you use it?
+What is useSyncExternalStore, and why is it useful for state libraries?
+What are the differences between server state and UI state?
+How do you implement code-splitting in React?
+What is route-based code splitting, and how does it improve performance?
+Explain virtualization/windowing in React (react-window, react-virtualized).
+What are the limitations of React’s Context API, and how do you optimize it?
+What is Progressive Hydration in React, and why is it important?
+Explain React Server Components and how they differ from traditional SSR
+How does React handle concurrency under the hood? (Fiber architecture basics)
+What is an AbortController, and how do you use it in useEffect for cleanup?
+How do you implement protected routes in React Router?
+How do you handle form validation in React (manual, Formik, React Hook Form)?
+What are ARIA attributes, and why are they important in React apps?
+How would you measure and improve Web Vitals in a React app?
+How do you profile and debug performance issues using React DevTools?
+What are the security best practices in React? (XSS prevention, HTML sanitization)
+How do you set up unit tests, integration tests, and E2E tests in a React project?

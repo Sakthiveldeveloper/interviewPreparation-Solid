@@ -1,11 +1,15 @@
 React.js
 ├── 1. Basics
-│   ├── What is React? (UI library, component-based)
+│   ├── What is React? (UI library, component-based, unidirectional data flow)
+│   ├── History & purpose (Facebook, scalability)
 │   ├── Difference from other frameworks (Angular, Vue)
 │   ├── Single Page Applications (SPA)
 │   ├── Declarative vs Imperative
+│   ├── JSX compilation (Babel, React.createElement) (babel-complier, webpack-bundler)
 │   ├── Virtual DOM & Reconciliation (diffing algorithm)
-│   ├── Fiber architecture basics
+│   ├── Fiber architecture basics -> reimplementaion of reat recongilation 
+│   ├── StrictMode (development-only checks)
+│   ├── Concurrent rendering & scheduling overview
 │   └── React rendering cycle overview
 │
 ├── 2. Setting Up
@@ -13,15 +17,20 @@ React.js
 │   ├── Vite
 │   ├── Next.js (SSR, SSG, ISR)
 │   ├── Adding React via CDN
-│   └── Project folder structure conventions
+│   ├── Project folder structure conventions
+│   └── Environment variables in React -> react key: value pair file 
 │
 ├── 3. Components
 │   ├── Functional Components
 │   ├── Class Components
+│   ├── Pure Components (class) / React.memo (functional)
 │   ├── Props (read-only data)
 │   ├── State (useState, this.state)
 │   ├── Lifting state up
+│   ├── Derived state pitfalls
 │   ├── Component Lifecycle (class) / Hooks (functional)
+│   ├── Higher-Order Components (HOCs)
+│   ├── Render props pattern
 │   ├── Conditional Rendering
 │   ├── Lists & Keys
 │   ├── Fragments (<> </>)
@@ -35,55 +44,65 @@ React.js
 │   └── Shorthand fragments (<> </>)
 │
 ├── 5. Hooks (Functional Components)
+│   ├── Rules of Hooks
 │   ├── Basic Hooks
-│   │   ├── useState
-│   │   ├── useEffect
-│   │   ├── useRef
-│   │   ├── useContext
-│   │   └── useReducer
+│   │   ├── useState -> store data
+│   │   ├── useEffect (cleanup, AbortController) ->side effect
+│   │   ├── useRef -> mutable ref
+│   │   ├── useContext -> single source of data
+│   │   └── useReducer -> complex state managing [purpose]
 │   ├── Additional Hooks
-│   │   ├── useMemo
-│   │   ├── useCallback
-│   │   ├── useLayoutEffect
+│   │   ├── useMemo -> remorize the calculation
+│   │   ├── useCallback -> remoriuze the function
+│   │   ├── useLayoutEffect -> syncronous side effect
 │   │   ├── useImperativeHandle
 │   │   └── useDebugValue (custom hook debugging)
 │   ├── React 18 Concurrent Features
 │   │   ├── useTransition
 │   │   └── useDeferredValue
-│   └── Custom Hooks
+│   └── Custom Hooks (patterns: data fetching, debouncing, forms)
 │
 ├── 6. State Management
 │   ├── Local state
 │   ├── Lifting state up
 │   ├── Context API
 │   ├── Context + Reducer pattern
+│   ├── Immutable updates (Immer.js)
 │   ├── Redux & Redux Toolkit
+│   ├── Redux middlewares (Thunk, Saga)
 │   ├── Zustand, Jotai, Recoil
 │   ├── MobX
 │   ├── Server state vs UI state
-│   └── TanStack Query / SWR
+│   ├── TanStack Query / SWR
+│   └── useSyncExternalStore (React 18)
 │
 ├── 7. Event Handling
 │   ├── onClick, onChange, onSubmit
 │   ├── Passing arguments to event handlers
 │   ├── Synthetic Events
 │   ├── Event pooling
-│   └── Event delegation in React
+│   ├── Event delegation in React
+│   ├── Preventing default behavior
+│   └── Native DOM events vs React events
 │
 ├── 8. Forms
 │   ├── Controlled Components
 │   ├── Uncontrolled Components
 │   ├── Performance trade-offs between controlled/uncontrolled
+│   ├── Multi-step forms
+│   ├── Debounced input handling
 │   ├── Form validation (manual, libraries)
+│   ├── Accessibility in forms (label, aria-*)
 │   └── Libraries: Formik, React Hook Form
 │
 ├── 9. Styling
 │   ├── CSS Modules
-│   ├── Styled Components
+│   ├── Styled Components (theming support)
 │   ├── Tailwind CSS
 │   ├── Inline styles
 │   ├── Emotion
-│   └── Global styles in React
+│   ├── Global styles in React
+│   └── CSS-in-JS performance considerations
 │
 ├── 10. Routing
 │   ├── React Router
@@ -91,7 +110,10 @@ React.js
 │   │   ├── <Routes> & <Route>
 │   │   ├── useNavigate, useParams
 │   │   ├── Nested routes
-│   │   └── Route guards
+│   │   ├── Route guards
+│   │   ├── Data APIs (loader, action in v6.4+)
+│   │   ├── Code-splitting routes
+│   │   └── Scroll restoration
 │   ├── Next.js Routing
 │   │   ├── File-based routing
 │   │   ├── Dynamic routing
@@ -99,10 +121,13 @@ React.js
 │   │   └── API routes
 │
 ├── 11. Data Fetching
-│   ├── Fetch API
+│   ├── Fetch API (with AbortController)
 │   ├── Axios
+│   ├── GraphQL (Apollo, urql)
 │   ├── SWR
 │   ├── React Query (TanStack Query)
+│   ├── WebSockets / SSE
+│   ├── Prefetching data
 │   ├── useEffect data fetching pattern
 │   ├── Suspense for data fetching
 │   └── Streaming SSR (React 18)
@@ -113,7 +138,11 @@ React.js
 │   ├── Code splitting & lazy loading
 │   ├── Avoid unnecessary re-renders
 │   ├── Memoization pitfalls
+│   ├── Windowing & virtualization (react-window, react-virtualized)
 │   ├── Concurrent rendering benefits
+│   ├── Profiling with React DevTools
+│   ├── Image optimization
+│   ├── Web Vitals measurement
 │   └── Context selector optimization
 │
 ├── 13. Testing
@@ -121,10 +150,13 @@ React.js
 │   ├── React Testing Library
 │   ├── Snapshot testing
 │   ├── Mocking fetch/axios
-│   └── Cypress (E2E testing)
+│   ├── Cypress (E2E testing)
+│   ├── MSW (Mock Service Worker)
+│   ├── Integration with CI/CD
+│   └── Test coverage metrics
 │
 ├── 14. Advanced Concepts
-│   ├── Portals
+│   ├── Portals (controlled vs uncontrolled)
 │   ├── Error Boundaries
 │   ├── Suspense & Lazy Loading
 │   ├── Server-Side Rendering (SSR)
@@ -132,15 +164,20 @@ React.js
 │   ├── Incremental Static Regeneration (ISR)
 │   ├── Hydration & Progressive Hydration
 │   ├── Concurrent Mode basics
-│   └── React Server Components
+│   ├── React Server Components
+│   ├── Streaming SSR edge cases
+│   └── Progressive hydration in large apps
 │
 ├── 15. Accessibility
-│   ├── ARIA attributes
+│   ├── ARIA attributes ->Accessible Rich Internet Applications
 │   ├── Keyboard navigation
+│   ├── Focus management
+│   ├── Skip links
 │   ├── Semantic HTML in React
+│   ├── Color contrast tools
 │   └── Accessibility testing tools
-|
-|---   16. Conditional Rendering
+│
+├── 16. Conditional Rendering
 │   ├── if/else
 │   ├── Ternary operator
 │   ├── Logical && operator
@@ -152,4 +189,8 @@ React.js
 │   ├── Folder-by-feature organization
 │   ├── Extract reusable custom hooks
 │   ├── Optimize for accessibility
+│   ├── Avoid anonymous inline functions when possible
+│   ├── Error logging & monitoring (Sentry, LogRocket)
+│   ├── Security best practices (XSS prevention, HTML sanitization)
+│   ├── Optimize bundle size (tree-shaking, webpack-bundle-analyzer)
 │   └── Consistent code formatting
