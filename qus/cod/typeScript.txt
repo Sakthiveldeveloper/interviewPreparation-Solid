@@ -1,32 +1,17 @@
 1. TypeScript Coding Questions
 (These are hands-on coding challenges you might get in interviews)
-
 Write a function that takes a list of numbers and returns only even numbers (with proper TypeScript typing).
-
 Create a generic function to reverse an array of any type.
-
 Implement a function that merges two objects into one using generics.
-
 Write a function to check if a given string is a palindrome using TypeScript.
-
 Create a User interface and write a function that takes an array of users and returns only those above a certain age.
-
 Implement a function that accepts a union type (string | number) and returns the value doubled (string concatenation if string, multiplication if number).
-
 Write a TypeScript program to calculate the factorial of a number (recursive + iterative).
-
 Define an interface for a Car and a class that implements it.
-
 Write a function that accepts an array of objects and a key, and returns an array of values for that key.
-
 Create a type-safe function to fetch data from an API and return the typed response.
-
 Implement a function that uses Partial<T> to update an object’s properties.
-
 Write a generic Stack class in TypeScript with push, pop, and peek methods.
-
 Create a function that takes a discriminated union type and performs different logic based on the type field.
-
 Implement a type-safe debounce function.
-
 Write a TypeScript function that deeply clones an object with generics.
