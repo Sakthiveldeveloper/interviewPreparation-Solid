@@ -117,6 +117,7 @@ What are higher-order components (HOCs)?
 What is React Context, and when would you use it?
 Difference between React and ReactDOM.
 How do you optimize performance in React?
+
 Part 2 — Top 10 Advanced React (Common in Mid/Senior Interviews)
 Explain useRef and when to use it.
 What are useMemo and useCallback, and how do they help performance?
@@ -128,6 +129,7 @@ What are React Portals, and when would you use them?
 What is Suspense in React, and how is it used for lazy loading?
 What are the differences between Context API and Redux for state management?
 How does Server-Side Rendering (SSR) work in React (e.g., Next.js)?
+
 Part 3 — Expert-Level & Senior Role Questions
 What are the Rules of Hooks, and why do they exist?
 Explain useTransition and useDeferredValue in React 18.

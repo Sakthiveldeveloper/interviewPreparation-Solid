@@ -88,3 +88,49 @@ Currency Converter
 Drag-and-drop Notes
 TikTok UI clone
 Memory Game
+-----------------------------------------------------------------------------------
+final list
+Final React Coding Questions List (Beginner → Advanced)
+
+🟢 Beginner
+Create a functional component that displays “Hello, World!”
+Pass props to a child component and display them.
+Create a counter app using useState with increment & decrement buttons.
+Render a list of items using .map() and unique key props.
+Implement conditional rendering: show “Login” if the user is not logged in, otherwise “Logout.”
+Build a to-do list with add, delete, and mark-as-complete functionality.
+Build a form with controlled inputs for name and email, and display entered data on submit.
+Create a search filter that filters a list of items in real-time.
+Create a Like Button component.
+
+🟡 Intermediate
+Fetch data from an API (e.g., JSONPlaceholder) using useEffect and display it.
+Implement pagination for API results.
+File Explorer (nested folder/file structure).
+Build an EMI Calculator.
+Create a Password Generator.
+Implement a Progress Bar.
+Grid Lights game (toggle lights on click).
+OTP Login (6-digit input).
+Build a Multi-select search dropdown.
+Job Board (filter jobs by role, location, etc.).
+Breadcrumbs navigation.
+Stepper component (multi-step form wizard).
+Selectable Grid (select multiple cells).
+Currency Converter (real-time rates).
+
+🔴 Advanced
+Share state between components using useContext.
+Build a Theme Switcher (light/dark mode) using Context API.
+Create a custom hook for fetching data from an API.
+Optimize performance by using React.memo for a child component.
+Prevent unnecessary re-renders using useCallback and useMemo.
+Modal implementation using React Portals.
+Handle form validation manually (without libraries).
+Implement Debouncing for an input field (fetch API after user stops typing).
+Implement useThrottle hook.
+Lazy load a component using React.lazy and Suspense.
+Error handling in React using Error Boundaries.
+Drag-and-drop Notes app.
+TikTok UI clone (infinite scroll + video autoplay).
+Memory Game.
