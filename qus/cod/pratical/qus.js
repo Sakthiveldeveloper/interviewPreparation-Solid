@@ -331,3 +331,153 @@ console.log('coding questions');
 //     }
 // }
 // 21.Implement a function to get query parameters from a URL.
+// ---------------------------------------------------------
+// revised
+// 1
+// function reverseString(params){
+//     // return params.split('').reverse().join('')
+//     let reversedValue = '';
+//     for(let i = params.length-1;i>=0;i--){
+//         reversedValue +=params[i]
+//     }
+//     return reversedValue
+// }
+// console.log(reverseString('sakthi'))
+
+// 2 palindrome
+// function checkPalindrome(params){
+//     let cleaedValue = params.toLowerCase();
+//     function reversedValue(paramsReverse){
+//         return paramsReverse.split('').reverse().join('');
+//     }
+//     return cleaedValue == reversedValue(cleaedValue)
+// }
+// function checkPalindrome(input){
+//     let cleanedValue = input.toLowerCase();
+//     function returnValue (inputreturn){
+//         return inputreturn.split('').reverse().join('')
+//     }
+//     const revisedValue = returnValue(cleanedValue)
+//     return cleanedValue == revisedValue
+// }
+// console.log(checkPalindrome('malayalam'))
+// console.log(checkPalindrome('ram'))
+
+// 3.largsdt number in th array
+// function findLArgestNum(inputArray){
+//     let largestValue = inputArray[0];
+//     for (let index = 0; index < inputArray.length; index++) {
+//         if(inputArray[index]>largestValue){
+//             largestValue = inputArray[index]
+//         }
+//     }
+//     return largestValue
+// }
+// console.log(findLArgestNum([1,66,22,99,23]))
+
+// 6.
+// function removeDuplicate(inputDup){
+//     // set
+//     // return [...new Set(inputDup)]
+//     // filter
+//     // return inputDup.filter((value, index, array)=>(array.indexOf(value)== index))
+//     // reduce
+//     return inputDup.reduce((acc, value)=>(acc.includes(value) ? acc : [...acc, value]), [])
+// }
+
+// console.log(removeDuplicate([1,2,3,4,1,2,5,32]))
+
+7.
+// function countCharater(inputParams){
+//     let finalValue = {};
+//     for ( let element of inputParams){
+//         if(finalValue[element]){
+//             finalValue[element]++
+//         }else{
+//             finalValue[element]=1;
+//         }
+//     }
+//     return finalValue
+// }
+// console.log(countCharater('sakthivel is a boy'))
+8.
+// function checkAnagram(input1, input2){
+//     input1 = input1.replace(/\s+/g, '').toLowerCase();
+//     input2 = input2.replace(/\s+/g, '').toLowerCase();
+
+//     // return input1.split('').sort().join('')== input2.split('').sort().join('')
+//     let input1Sort = {};
+//     for(let element1 of input1){
+//         input1Sort[element1] = element1
+//     }
+//     for(let element12 of input2){
+//         if(input1Sort[element12]){
+//             return true
+//         } else {
+//             return false
+//         }
+//     }
+//     console.log(input1Sort)
+// }
+// console.log(checkAnagram('act', 'cat'))
+// console.log(checkAnagram('man', 'cat'))
+
+9.
+// function FlattenArray()
+function flattenArray(inputArray){
+    let flattedArray = [];
+    for(let i =0; i<inputArray.length; i++){
+        if(Array.isArray(inputArray[i])){
+            flattedArray = flattedArray.concat(flattenArray(inputArray[i]))
+        } else {
+            flattedArray.push(inputArray[i])
+        }
+    }
+    return flattedArray;
+}
+console.log(flattenArray([1,2,[3,4],5,[6,[7,8]]]))
+// function flattenArray(inputArray){
+//     let finalArray = [];
+//     for(let i = 0; i<inputArray.length; i++ ){
+//         if(Array.isArray(inputArray[i])){
+//             finalArray = finalArray.concat(flattenArray[inputArray[i]])
+//         } else {
+//             finalArray.push(inputArray[i])
+//         }
+//     }
+//     console.log(finalArray)
+//     return finalArray;
+// }
+// console.log(flattenArray([1,2,[3,4],5,[6,[7,8]]]))
+10.
+// function findMisssingNum(inputparam){
+//     let n = inputparam.length+1;
+//     const assumedValue = (n*(n+1)/2);
+//     const expectedValue = inputparam.reduce((ass, value)=>(ass+value))
+//     return assumedValue - expectedValue
+// }
+// console.log(findMisssingNum([1,2,4,5]))
+
+// 12.
+// function debounce(func, delay){
+//     // let timeOutId;
+//     // return function(...args){
+//     //     clearTimeout(timeOutId);
+//     //     timeOutId = setTimeout(()=>{
+//     //         func.apply(this, args);
+//     //     }, delay)
+//     // }
+//     let timeOutId = '';
+//     return function(...args){
+//         clearTimeout(timeOutId);
+//         timeOutId = setTimeout(()=>{
+//             func.apply(this, ...args)
+//         }, delay)
+//     }
+// }
+
+// function handleSearchInput(event){
+//     console.log(`searching for:`, event.target.value)
+// }
+// 
+// const debounceSearch = debounce(handleSearchInput, 500);

@@ -41,11 +41,12 @@ JavaScript Coding Problems (Unique)
 8.Check if two strings are anagrams of each other.
 9.Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
 11.Find the missing number in an array of 1–N.
+
 12.Implement a debounce function.
 13.Implement a throttle function.
 14.Implement a deep clone of an object.
 16.Find the intersection of two arrays.
-17.Implement a function to check if two objects are deeply equal.17.Implement a function to check if two objects are deeply equal.
+17.Implement a function to check if two objects are deeply equal.
 18.Implement a function to check if an object is empty.
 19.Implement a function that fetches data from an API and logs it using async/await.
 20.Implement a function that fetch as post data in js
