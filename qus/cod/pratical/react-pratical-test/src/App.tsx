@@ -10,6 +10,7 @@ import TodoApp from './solution/beginner/Todo';
 import ControlInput from './solution/beginner/ControlledInput';
 import SearchFilter from './solution/beginner/SearchFilter';
 import LikeButton from './solution/beginner/LinkButton';
+import FetchData from './solution/medium/FetchData';
 
 const App = () => {
   return (
@@ -23,7 +24,8 @@ const App = () => {
         {/* <TodoApp /> */}
         {/* <ControlInput /> */}
         {/* <SearchFilter/> */}
-        <LikeButton />
+        {/* <LikeButton /> */}
+        <FetchData />
     </div>
   )
 }
