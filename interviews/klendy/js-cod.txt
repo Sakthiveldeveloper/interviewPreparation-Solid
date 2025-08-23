@@ -1,0 +1,33 @@
+Final Klenty JS Coding Prep List
+
+Core Must-Do (High Priority)
+1.Reverse a string without reverse().
+2.Check if a string is a palindrome.
+3.Remove duplicates from an array.
+4.find Largest Number in Array
+5.Find the second largest number in an array.
+6.Find the third maximum number in an array.
+7.Count occurrences of each character in a string.
+8.Check if two strings are anagrams.
+9.Find the missing number in an array (1–N).
+FizzBuzz (1–100, multiples of 3 = "Fizz", 5 = "Buzz").
+
+Array & Object Handling
+10.Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
+11.Find the intersection of two arrays.
+Implement Array.prototype.myMap() without using .map().
+12.Implement a function to check if two objects are deeply equal.
+13.Implement a function to check if an object is empty.
+14.Implement a deep clone of an object.
+15.Sort an array without using .sort().
+
+Recursion & Sequences
+Find factorial of a number (iterative + recursive).
+Generate Fibonacci sequence up to N.
+
+Async & Practical Functions
+16.Implement a debounce function.
+17.Implement a throttle function.
+18.Fetch data from an API using async/await.
+19.POST data using fetch + async/await.
+Implement a function to extract query parameters from a URL.
