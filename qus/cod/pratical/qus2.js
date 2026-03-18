@@ -324,3 +324,92 @@ console.log('run coiding js')
 // const doubled = numbers.myMap(num => num * 2);
 
 // console.log(doubled); // [2, 4, 6, 8]
+// 1.reverse String
+// function reverseString(inputParams){
+//     let finalValue = '';
+//     for(let i = inputParams.length-1; i>=0; i--){
+//         finalValue += inputParams[i]
+//     }
+//     return finalValue;
+// }
+// console.log(reverseString('sakthi'))
+// 2.check palindrom
+// function checkPalindrome(input){
+//     let cleanedInput =  input.toLowerCase();
+//     function reverseValue(inputRevise){
+//         return inputRevise.split('').reverse().join('')
+//     }
+//     return cleanedInput == reverseValue(cleanedInput)
+// }
+// console.log(checkPalindrome('malayalam'))
+// anagram
+// function anagram(input1, input2){
+//     input1 = input1.replace(/\s/g, '').toLowerCase();
+//     input2 = input2.replace(/\s/g, '').toLowerCase();
+//     if(input1.length !== input2.length){
+//         return false
+//     }
+//     // let sortedInpu1 = input1.split('').sort().join('');
+//     // let sortedInpu2 = input2.split('').sort().join('');
+//     // return sortedInpu1 == sortedInpu2
+//     let sortInput = {};
+//     for(let a of input1){
+//         sortInput[a] = (sortInput[a] || 0) +1        
+//     }
+//     console.log(sortInput)
+//     for(let b of input2){
+//         console.log(b)
+//         if(!sortInput[b]){
+//             return false
+//         } else {
+//             sortInput[b] --
+//         }
+//     }
+//         return true
+
+// }
+
+// console.log(anagram('cat', 'act'))
+// console.log(anagram('cat', 'ac'))
+// 4
+// function largestNumber(input){
+//     let largestValue = input[0]
+//     for(let e of input){
+//         if(largestValue<e){
+//             largestValue = e
+//         }
+//     }
+//     return largestValue
+// }
+// console.log(largestNumber([1,2,223,4,5,88]))
+// 5.duplicates
+// function removeDupl(input){
+//     // return [...new Set(input)]
+//     // return input.filter((value, index, array)=> (array.indexOf(value)==index))
+//     return input.reduce((acc, value)=>(acc.includes(value)?acc:[...acc, value]), [])
+// }
+// console.log(removeDupl([1,2,3,2,4,5,6,7,1,2]))
+// 6.
+// function CheckValue(input){
+//     let finalValue= {};
+//     for(let e of input){
+//         if(finalValue[e]){
+//             finalValue[e]++
+//         }else {
+//             finalValue[e]=1
+//         }
+//     }
+//     return finalValue
+// }
+// console.log(CheckValue('satkhi'))
+// missing number
+// function missingNumber(input){
+//     let n = input.length+1;
+//     let expectealue = (n*(n+1))/2;
+//     let assumedValue = input.reduce((acc, value)=> (acc+value));
+//     console.log(expectealue)
+//     console.log(assumedValue)
+//     return assumedValue - expectealue
+// }
+// console.log(missingNumber([1,2,4,5]))
+// f

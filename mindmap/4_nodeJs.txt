@@ -127,3 +127,11 @@ Node.js
 │   ├── Debugging with Node Inspector / Chrome DevTools
 │   ├── Performance profiling (node --inspect, clinic.js)
 │   └── Memory leak detection
+
+
+| Concept          | What it Does                                          | Use Case                         |
+| ---------------- | ----------------------------------------------------- | -------------------------------- |
+| **Stream**       | Handles data in chunks instead of loading it all      | File I/O, video streaming        |
+| **Buffer**       | Temporary memory for raw binary data                  | Handling files, TCP packets      |
+| **Cluster**      | Runs multiple processes (workers) using all CPU cores | Scaling APIs, multi-core usage   |
+| **WorkerThread** | Runs CPU-heavy tasks in parallel threads              | Image processing, encryption, ML |
