@@ -1,0 +1,86 @@
+JavaScript
+1.what is JavaScript?
+    JavaScript (JS) is a high-level, interpreted programming language primarily used to create interactive and dynamic content on the web. While HTML provides the structure and CSS handles the styling, JavaScript defines the behavior of a website, enabling features like animated graphics, interactive forms, and real-time updates without page reloads.
+2.Execution context?
+    In JavaScript, an Execution Context is the environment created by the engine to evaluate and execute code. It acts as a "container" that holds all the information necessary for the currently running code, such as variables, functions, and the value of
+    1. Components of Execution Context
+    Every execution context is logically divided into two parts: 
+    Memory Component (Variable Environment): Where variables and functions are stored as key-value pairs. 
+    Code Component (Thread of Execution): Where code is executed line-by-line. 
+    2. Types of Execution Context
+    Global Execution Context (GEC): Created by default when a script first runs. There is only one GEC per program, and it creates the global object (window in browsers) and the this keyword. 
+    Function Execution Context (FEC): Created every time a function is invoked. Each function call gets its own unique context. 
+    Eval Execution Context: Created when code is executed inside an eval() function (rarely used and generally discouraged). 
+    3. The Two Phases of Execution
+    When code runs, the execution context goes through two distinct phases: 
+
+    Creation Phase (Memory Allocation): The engine scans the code and allocates memory for variables and functions. 
+
+    Functions are stored in their entirety.
+    Variables declared with var are initialized as undefined.
+    Variables declared with let and const are hoisted but remain uninitialized (Temporal Dead Zone).
+    Execution Phase: The engine runs the code line-by-line, assigning actual values to variables and executing function calls. 
+3.Whats is call stack? & code Execution?
+Call stack is manage the order of the code excution in the excution context
+
+    The Call Stack and Code Execution are the mechanisms JavaScript uses to manage the order and environment in which your code runs. Since JavaScript is single-threaded, it can only do one thing at a time, and the Call Stack ensures those tasks happen in the correct sequence. 
+    What is the Call Stack?
+    The Call Stack is a data structure that tracks every function called in your script. It operates on the LIFO (Last-In, First-Out) principle: the last function added to the stack is the first one to be executed and removed. 
+    Pushing: When you call a function, a new Execution Context for that function is created and "pushed" onto the top of the stack. 
+    Executing: The engine always executes the function that is currently at the very top of the stack. 
+    Popping: Once a function finishes (reaches a return or the end of its code), its context is "popped" off the stack, and the engine resumes the function below it. 
+    Global Context: The Global Execution Context (GEC) is the very first item pushed onto the stack and remains at the bottom until the entire script finishes. 
+    How Code Execution Works
+    Code execution happens in two distinct phases within every execution context: 
+    Memory Creation Phase (Hoisting): 
+    The engine scans the code before running it.
+    It allocates memory for all variables and functions.
+    Variables declared with var are set to undefined, while function declarations are stored in their entirety.
+    Code Execution Phase: 
+    The engine runs the code line-by-line.
+    This is where actual values are assigned to variables and functions are physically invoked.
+    If the engine sees a function call, it pauses the current execution, creates a new context, pushes it to the Call Stack, and starts these two phases again for that specific function.
+4.Hoisting
+    Is a JS behavior like move the declarated variable and function to top of the contaning scope before code is execution
+    Hoisting is a JavaScript behavior where the interpreter appears to move variable and function declarations to the top of their containing scope (global or function) before the code is executed.
+    1. How It Works Under the Hood
+    During the Creation Phase of the Execution Context, the JavaScript engine scans the code and allocates memory for all declarations. 
+
+    Declarations are hoisted.
+    Initializations (assignments) are not hoisted; they remain exactly where you wrote them. 
+
+    2. Hoisting by Keyword
+    The way hoisting behaves depends on how the variable or function is declared: 
+    var: The declaration is hoisted and initialized with a default value of undefined.
+    javascript
+    console.log(x); // Output: undefined
+    var x = 5;
+    Use code with caution.
+    let and const: These are hoisted but not initialized. They enter a "Temporal Dead Zone" (TDZ) from the start of the block until the declaration line is reached. Accessing them early throws a ReferenceError.
+    javascript
+    console.log(y); // ReferenceError: Cannot access 'y' before initialization
+    let y = 10;
+    Use code with caution.
+
+    Function Declarations: The entire function (both the name and the body) is hoisted, meaning you can call the function before its definition.
+    javascript
+    greet(); // Output: "Hello!"
+    function greet() { console.log("Hello!"); }
+    Use code with caution.
+
+    Function Expressions & Arrow Functions: These are treated like variables. If declared with var, they are undefined; if with let/const, they are in the TDZ.
+    javascript
+    sayHi(); // TypeError: sayHi is not a function (if using var)
+    var sayHi = function() { console.log("Hi!"); };
+    Use code with caution.
+5.The Temporal Dead Zone (TDZ)?
+    The TDZ is the period between the start of a block and the moment a let or const variable is declared. During this time, the variable exists in memory but is completely inaccessible to prevent bugs caused by using uninitialized values
+        Summary Table
+    Type 	Hoisted?	Initial Value	Result if accessed before declaration
+    var	Yes	undefined	undefined
+    let / const	Yes	None	ReferenceError (TDZ)
+    Function Declaration	Yes	Entire Function	Executes normally
+    Function Expression	Only variable	undefined (for var)	TypeError or ReferenceError    
+6.ReferenceError
+    In JavaScript, a ReferenceError occurs when you attempt to access a variable that either does not exist, has not been declared yet, or is outside the current scope.
+7.Function
