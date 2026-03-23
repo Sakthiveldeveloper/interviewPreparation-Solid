@@ -1,0 +1,66 @@
+Plan As per sitution (10days to offer)
+A.Road map redifined for sitution
+    Phase1:Position Your self(1-2days)
+        1.Finalize Resume
+        2.Prepare
+            Tell me About your self
+            2-3 Strong Project explanation
+        3.Update
+            Naukri/linkedIn/Indeed (very Important)
+        [Goal: Start Getting Calls]
+    Phase2:Start Applyimg + HR Rounds(Day 2 to 10)
+        1.Apply daily(20-30 jobs)
+        2.Talk Confidently with HR
+            Notice Period -> "Immediate / 10 days"
+            Current -> X
+            Expectet -> X + 40 -60 %
+        [Goal:Conver Hr -> Technical Round]
+    Phase3: Technical Preparation(parallel daily)
+        1.Dont wait -> Prepare + attend Interview -> to gether
+        2.Focus Only on Hight ROI Topic
+        [Goal: Crack the Interview While Learning]
+    Phase4: Interview -> offer -> negotition
+        1.Clear Rounds
+        2.Get offer
+        3.Negotiate Salary
+
+    Mistakes
+        wronng ->First i will Prepare, then Apply -> wrong & Market doest wait for you
+        Correct-> Apply + Learn + Interview together
+-------------------------------------------------------------------------------------
+B.Tech Interview flow (Road map)
+1. Core areas
+    Javascript
+        closure
+        Promised/Async, Await
+        Event loop
+        this/bind/call/Apply    
+        Array methods(map, filter , reduce)
+    React
+        Virtual DOM
+        Hooks(useState, UseEffect, UseReducer, UseMemo, useCallback, useLayout, useContext,useRef)
+        Performance Optimization
+        State management
+        Re-render Logic & why
+    System Design
+        How you build
+            micro management,
+            multi-tenant System
+            AIpiper flow
+            They wont ask Theory
+    Backend
+            API Design
+            Module
+            Error handle
+            Scalability Basic
+    Database
+        RDBMS -> SQL, mySql, postgress SQL
+        Indexing
+        Optimization
+2.Questions Types
+    1.theory Questions
+    2.coding Questions
+    3.Scenarios Questions
+
+------------------------------------------------Final-----------------------------------------------------------------
+Preparation + Apply + Interview
