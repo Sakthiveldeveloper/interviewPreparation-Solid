@@ -34,3 +34,17 @@ Testing
 
 Practices
   Agile/Scrum, Code Reviews, Performance Optimization
+
+  ------------------------------------------------------------------------------------------
+  As a Developer need to know this AWS Concepts
+  👉 MUST KNOW:
+    EC2
+    S3
+    RDS
+    VPC
+    IAM
+    Lambda
+  👉 NICE TO HAVE
+    CloudFront
+    API Gateway
+    CloudWatch

@@ -11,5 +11,19 @@ Progress
     Start Preparation for Mock Interview -> In Progress(Only Tech not include the DSA things) 
         Go to start with  revision topics
             1.BE
-            2.DB
-            3.AWS
+                Node.js, Express.js, Fastify
+                REST API, GraphQL, WebSocket / Socket.io
+                ORM: Sequelize, Knex, Prisma
+            2.Architecture
+                Microservices, Micro-Frontend, Module Federation
+                System Design
+            3.DB
+                MySQL, PostgreSQL (RDBMS)
+                MongoDB (NoSQL)
+                Redis (Cache)
+            4.Security & Auth
+                JWT, OAuth 2.0, Keycloak, FusionAuth, RBAC
+            5.DevOps & Cloud
+                Git, GitHub, Jenkins, CI/CD
+                Docker, Kubernetes (basic)
+                AWS (EC2, S3)
