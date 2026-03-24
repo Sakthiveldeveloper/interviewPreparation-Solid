@@ -1,0 +1,185 @@
+1.mindmap
+2.Theory Questions
+
+
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+1. Basics
+   ├── What is TypeScript? (Definition, Purpose)
+   ├── Benefits over JavaScript (Static typing, Tooling, Maintainability)
+   ├── TypeScript vs JavaScript
+   ├── How TypeScript works (Compilation to JavaScript)
+   └── Installing & Running (tsc, ts-node)
+
+2. Basic Types
+   ├── number, string, boolean
+   ├── null, undefined
+   ├── any, unknown, never
+   ├── arrays (number[], string[])
+   ├── tuples ([string, number])
+   ├── enums (Numeric, String)
+   └── type inference
+
+3. Functions
+   ├── Function parameter types
+   ├── Return type annotations
+   ├── Optional parameters
+   ├── Default parameters
+   ├── Rest parameters
+   └── Function overloads
+
+4. Objects & Interfaces
+   ├── Object type annotation
+   ├── Optional & readonly properties
+   ├── Index signatures
+   ├── Extending interfaces
+   ├── Merging interfaces
+   └── Interface vs Type alias
+
+5. Classes
+   ├── Class properties & methods
+   ├── Access modifiers (public, private, protected)
+   ├── readonly properties
+   ├── Constructors
+   ├── Inheritance (extends, super)
+   ├── Abstract classes
+   ├── Getters & setters
+   └── Static properties/methods
+
+6. Advanced Types
+   ├── Union types
+   ├── Intersection types
+   ├── Literal types
+   ├── Type aliases
+   ├── Type assertions (as, <type>)
+   ├── Non-null assertion (!)
+   ├── keyof operator
+   ├── typeof operator
+   ├── Conditional types
+   └── Mapped types
+
+7. Generics
+   ├── Generic functions
+   ├── Generic classes
+   ├── Generic constraints (extends)
+   └── Default generic types
+
+8. Modules & Namespaces
+   ├── ES Modules (import/export)
+   ├── Default exports
+   ├── Type-only imports/exports
+   ├── Namespaces
+   └── Declaration merging
+
+9. Type Guards & Narrowing
+   ├── typeof checks
+   ├── instanceof checks
+   ├── in operator
+   ├── Custom type predicates
+   └── Discriminated unions
+
+10. Utility Types
+    ├── Partial
+    ├── Required
+    ├── Readonly
+    ├── Pick
+    ├── Omit
+    ├── Record
+    ├── Exclude
+    ├── Extract
+    ├── NonNullable
+    ├── ReturnType
+    └── Parameters
+
+11. Decorators (Experimental)
+    ├── Class decorators
+    ├── Method decorators
+    ├── Property decorators
+    └── Parameter decorators
+
+12. Working with External Code
+    ├── Declaration files (.d.ts)
+    ├── DefinitelyTyped (@types packages)
+    ├── Type casting for third-party libraries
+    └── Ambient declarations
+
+13. Configuration & Compilation
+    ├── tsconfig.json
+    │    ├── compilerOptions
+    │    ├── include / exclude
+    │    ├── strict mode
+    │    ├── module, target, lib
+    │    └── sourceMap
+    ├── Compiling TypeScript (tsc)
+    ├── Watch mode
+    └── Project references
+
+14. Advanced Features
+    ├── Indexed access types
+    ├── Template literal types
+    ├── Readonly arrays & tuples
+    ├── Conditional mapped types
+    └── Recursive types
+
+15. Error Handling
+    ├── Type-safe error handling
+    ├── unknown vs any for errors
+    └── never in exhaustive checks
+
+16. Performance & Best Practices
+    ├── Avoid overusing any
+    ├── Use strict null checks
+    ├── Favor interfaces over types for objects
+    ├── Keep tsconfig strict
+    └── Use utility types effectively
+
+2.Theory Questions
+
+Here is a condensed study guide of our conversation. You can copy this directly into your notes.
+1. The Basics
+
+* What is TypeScript? A superset of JavaScript that adds static typing. It catches errors during development instead of at runtime.
+* TypeScript vs. JS: TS requires a build step (transpilation) to turn into JS. JS is dynamic; TS is static and disciplined.
+* Why use it? Better error detection, easier refactoring, and "living documentation" for teams.
+* Large Projects: It improves them by providing clear "contracts" (interfaces) and preventing the "spaghetti code" that happens as apps grow.
+
+2. Essential Types
+
+* Basic Types: number, string, boolean, null, undefined.
+* Any: Turns off type checking. Avoid this as it hides bugs.
+* Unknown: A safer any. You must check the type (e.g., typeof) before using the value.
+* Void: Used for functions that return nothing.
+* Never: For functions that never finish (like throwing an error or infinite loops).
+* Enum: A set of named constants (e.g., Direction.Up).
+* Tuple: An array with a fixed length and specific types at each index (e.g., [number, string]).
+* Union Type: Allows a variable to be one of several types (e.g., string | number).
+
+3. Objects & Custom Types
+
+* Interface: Defines the "shape" of an object. Great for public APIs and classes.
+* Type Alias: A nickname for any type. Better for unions or complex logic.
+* Readonly: Prevents a property or array from being changed after it's created.
+* Partial: A utility that makes every property in an object optional (?).
+
+4. Advanced Concepts
+
+* Generics: Placeholders (like <T>) that allow you to write reusable code that works with many types while staying safe.
+* Assertion (as): Telling the compiler "I know more than you do" about a type. Use sparingly.
+* API Response Type: Use a Generic Wrapper like interface ApiResponse<T> { data: T; success: boolean; }.
+
+5. Safety & Best Practices
+
+* How to avoid any? Use unknown, Union types, Generics, or simply take the time to define an Interface.
+* Handling Optional Data:
+* Optional Chaining (?.): Safe property access.
+   * Nullish Coalescing (??): Providing a fallback value.
+   * Type Guarding: Using if (typeof ...) to prove a type exists.
+
+Would you like a practice quiz based on these notes to test your knowledge?
+
+
+
+3.Coding Questions
+4.Scenarios Questions

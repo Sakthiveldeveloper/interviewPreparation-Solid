@@ -1,0 +1,121 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+1.mindmap
+GIT & GITHUB MIND MAP
+
+1. Basics
+- What is Git? (Version control system)
+- What is GitHub? (Cloud platform for Git repositories)
+- Difference between Git and GitHub
+- Why use Git? (Track changes, collaboration)
+- Git workflow overview
+
+2. Installation & Setup
+- Install Git
+- git config (username, email)
+- git init (initialize repo)
+- git clone (copy remote repo)
+- SSH vs HTTPS
+
+3. Core Commands (VERY IMPORTANT)
+- git status
+- git add (stage changes)
+- git commit (save changes)
+- git log (history)
+- git diff (changes)
+- git restore / git checkout
+
+4. Branching (CRITICAL 🔥)
+- What is branch?
+- git branch
+- git checkout / git switch
+- git merge
+- git rebase
+- Main vs feature branches
+
+5. Remote Repositories
+- git remote add origin
+- git push
+- git pull
+- git fetch
+- origin meaning
+- upstream concept
+
+6. Merge & Conflict Resolution
+- What is merge?
+- Merge conflicts
+- How to resolve conflicts
+- Fast-forward vs non-fast-forward merge
+
+7. GitHub Features
+- Repositories
+- Forking
+- Pull Requests (PR)
+- Code review
+- Issues & discussions
+
+8. Collaboration Workflow
+- Feature branch workflow
+- Fork & PR workflow
+- Code review process
+- Team collaboration best practices
+
+9. Undo & Fix Mistakes (IMPORTANT 🔥)
+- git reset (soft, mixed, hard)
+- git revert
+- git stash
+- git clean
+
+10. Tags & Releases
+- git tag
+- Annotated vs lightweight tags
+- Versioning (v1.0.0)
+
+11. Advanced Git
+- git rebase vs merge
+- cherry-pick
+- squash commits
+- interactive rebase
+
+12. Git Hooks
+- Pre-commit hooks
+- Pre-push hooks
+- Husky integration
+
+13. .gitignore
+- What is .gitignore?
+- Ignoring files/folders
+- Common use cases
+
+14. GitHub Actions (CI/CD)
+- What is CI/CD?
+- GitHub Actions basics
+- Workflow files (.yml)
+- Automating build & deploy
+
+15. Security & Best Practices
+- SSH keys
+- Access tokens
+- Avoid committing secrets
+- Use environment variables
+
+16. Common Workflows
+- Clone → Branch → Commit → Push → PR
+- Sync with main branch
+- Release workflow
+
+17. Troubleshooting
+- Undo last commit
+- Fix wrong commit message
+- Recover deleted branch
+- Resolve push/pull errors
+
+2.Theory Questions
+
+
+3.Coding Questions
+4.Scenarios Questions

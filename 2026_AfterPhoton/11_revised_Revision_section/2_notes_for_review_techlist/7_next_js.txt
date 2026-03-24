@@ -1,0 +1,165 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+NEXT JS MIND MAP
+
+1. Basics
+- What is Next.js? (React Framework)
+- Why Next.js? (SSR, SSG, Performance, SEO)
+- Next.js vs React (CRA/Vite)
+- Folder structure (app / pages)
+- Running app (npx create-next-app)
+
+2. Routing
+- File-based routing
+- Pages Router (/pages)
+- App Router (/app) (modern)
+- Dynamic routes ([id], [...slug])
+- Nested routes
+- Route groups & layouts
+
+3. Rendering Methods
+- CSR (Client Side Rendering)
+- SSR (Server Side Rendering)
+- SSG (Static Site Generation)
+- ISR (Incremental Static Regeneration)
+- Streaming & Partial Rendering (App Router)
+
+4. Data Fetching
+- fetch() in Server Components
+- getServerSideProps (Pages Router)
+- getStaticProps
+- getStaticPaths
+- API Routes (/api)
+- Caching (force-cache, no-store)
+
+5. Components
+- Server Components (default in App Router)
+- Client Components ("use client")
+- Shared components
+- Layouts (layout.js)
+- Templates
+- Loading & Error UI (loading.js, error.js)
+
+6. Styling
+- CSS Modules
+- Global CSS
+- Tailwind CSS
+- Styled-components
+- Sass support
+
+7. Middleware
+- middleware.ts
+- Authentication checks
+- Redirects
+- Rewrites
+- Edge runtime
+
+8. API & Backend Features
+- API Routes (/pages/api)
+- Route Handlers (/app/api)
+- Request & Response handling
+- Authentication (JWT, sessions)
+- Edge Functions
+
+9. Image & Optimization
+- next/image (Image optimization)
+- next/link (Client navigation)
+- Font optimization (next/font)
+- Script optimization (next/script)
+
+10. Authentication
+- NextAuth.js
+- JWT-based auth
+- Session-based auth
+- Middleware protection
+- OAuth (Google, GitHub)
+
+11. Environment & Config
+- .env.local
+- next.config.js
+- Public vs Private env variables
+- Runtime configs
+
+12. Deployment
+- Vercel (recommended)
+- Self-hosting (Node server)
+- Static export
+- Edge deployment
+
+13. Performance Optimization
+- Code splitting
+- Lazy loading (dynamic imports)
+- Image optimization
+- Caching strategies
+- Bundle analysis
+
+14. Advanced Features
+- Server Actions (App Router)
+- Suspense & Streaming
+- Parallel routes
+- Intercepting routes
+- Metadata API (SEO)
+
+15. Error Handling
+- error.js
+- try/catch in server actions
+- 404 handling (not-found.js)
+- Logging & monitoring
+
+16. Best Practices
+- Prefer Server Components
+- Use caching properly
+- Avoid unnecessary client components
+- Structure folders cleanly
+- Keep components small & reusable
+
+2.Theory Questions
+Here is the summary of our Next.js deep dive. You can use these as quick-reference notes to remember the core purpose of each feature.
+1. The Fundamentals
+
+* What is Next.js? A full-stack React framework that adds routing, SSR, and optimizations to standard React.
+* Why use it over React? It provides SEO out of the box, faster performance through pre-rendering, and a built-in backend (API routes).
+* Hydration: The process where React "attaches" JavaScript logic to the static HTML sent by the server to make it interactive.
+
+2. Rendering Strategies
+
+* SSR (Server-Side Rendering): HTML is generated on every request. Best for live, personalized data.
+* SSG (Static Site Generation): HTML is generated once at build time. Best for speed and SEO (blogs, docs).
+* CSR (Client-Side Rendering): The browser builds the page using JS. Best for private dashboards and heavy interactivity.
+* ISR (Incremental Static Regeneration): Updates static pages in the background without a full site rebuild.
+
+3. Routing & API
+
+* File-Based Routing: Folders in the /app or /pages directory automatically become URLs (e.g., app/about/page.js = /about).
+* Dynamic Routing: Using [slug] in folder names to create variable URLs like /blog/my-post.
+* API Routing: Creating backend endpoints (JSON) within your project using route.js files.
+* Middleware: A "gatekeeper" script that runs before a request completes (used for auth/redirects).
+
+4. Data Fetching (Pages Router)
+
+* getStaticProps: Fetches data at build time for SSG.
+* getStaticPaths: Tells Next.js which dynamic paths to pre-build for SSG.
+* getServerSideProps: Fetches data on every request for SSR.
+
+5. Performance & Optimization
+
+* Image Optimization: The <Image> component automatically resizes and compresses images to modern formats (WebP).
+* Code Splitting: Breaking the app into small chunks so users only download the code for the page they are on.
+* Lazy Loading: Delaying the loading of heavy components until they are needed (via next/dynamic).
+* Environment Config: Using .env files to store secrets (server-only) and public keys (NEXT_PUBLIC_).
+
+6. SEO & Auth
+
+* SEO Advantages: Fast load times and pre-rendered HTML make it easy for Google to index your site.
+* Auth Handling: Managed via libraries like Auth.js (NextAuth), Clerk, or Lucia, usually involving secure HTTP-only cookies and Middleware.
+
+Would you like me to create a Next.js Cheat Sheet code file that you can save and refer to later?
+
+
+
+3.Coding Questions
+4.Scenarios Questions

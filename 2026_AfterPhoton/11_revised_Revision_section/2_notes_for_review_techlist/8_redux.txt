@@ -1,0 +1,222 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+1.mindmap
+Redux
+├── 1. Basics
+│ ├── What is Redux? (Predictable state container)
+│ ├── Benefits (centralized store, predictable state updates)
+│ ├── When to use Redux (complex state, multiple components sharing data)
+│ ├── Core Principles (Single source of truth, State is read-only, Changes via pure functions)
+│ └── Redux vs Context API
+│
+├── 2. Core Concepts
+│ ├── Store (holds the state)
+│ ├── Actions (describe what happened)
+│ ├── Action Creators (functions returning actions)
+│ ├── Reducers (pure functions to update state)
+│ ├── Dispatch (send action to reducer)
+│ └── One-way data flow
+│
+├── 3. Setting Up Redux
+│ ├── Installing Redux (npm install redux)
+│ ├── Installing React-Redux (npm install react-redux)
+│ ├── Creating the Store (createStore)
+│ ├── Connecting with <Provider>
+│ ├── Using useSelector to read state
+│ └── Using useDispatch to send actions
+│
+├── 4. Redux Toolkit (RTK)
+│ ├── Installing Redux Toolkit (@reduxjs/toolkit)
+│ ├── configureStore()
+│ ├── createSlice() (reducers + actions)
+│ ├── Immer (immutable updates)
+│ ├── createAsyncThunk() for async logic
+│ └── Benefits over plain Redux (less boilerplate)
+│
+├── 5. Middleware
+│ ├── What is middleware?
+│ ├── Redux Thunk (async actions)
+│ ├── Redux Saga (side effects with generators)
+│ ├── Logger middleware (debugging)
+│ └── Custom middleware creation
+│
+├── 6. Async Data Fetching
+│ ├── Using Thunk to call APIs
+│ ├── Loading & error states in store
+│ ├── Normalizing API data
+│ └── Caching & re-fetch strategies
+│
+├── 7. State Management Patterns
+│ ├── Normalized state shape
+│ ├── Feature-based slices
+│ ├── Selector functions (memoization with Reselect)
+│ ├── Splitting reducers (combineReducers)
+│ └── Avoiding deeply nested state
+│
+├── 8. Testing Redux
+│ ├── Testing reducers (pure functions)
+│ ├── Testing action creators
+│ ├── Testing connected components
+│ └── Using mock store for testing async flows
+│
+├── 9. Best Practices
+│ ├── Keep state minimal
+│ ├── Avoid storing non-serializable values
+│ ├── Use Redux DevTools for debugging
+│ ├── Organize files by feature (ducks pattern)
+│ ├── Keep reducers pure
+│ └── Prefer Redux Toolkit over plain Redux
+│
+└── 10. Resources
+├── Official Redux Docs (redux.js.org)
+├── Redux Toolkit Docs (redux-toolkit.js.org)
+├── Redux Essentials Tutorial
+├── Reselect Library Docs
+└── Redux DevTools Extension
+
+
+2.Theory Questions
+🎯 Redux Interview Questions (4 Years Experience Level)
+🔹 1. Basics (Concept + Real Thinking)
+What problem does Redux solve in large-scale applications?
+When would you choose Redux over Context API?
+Explain Redux core principles with a real-world example.
+How does Redux ensure predictable state management?
+What are the drawbacks of Redux?
+
+👉 Follow-up they ask:
+
+“Why not just use useState or Context everywhere?”
+🔹 2. Core Concepts (Must Be Crystal Clear)
+Explain the complete Redux flow step by step.
+What happens internally when you call dispatch()?
+Why must reducers be pure functions?
+What is the difference between action and action creator?
+Can we have multiple stores in Redux? Why/why not?
+
+👉 Twist question:
+
+What happens if a reducer mutates state directly?
+🔹 3. React-Redux Integration
+What is the role of <Provider>?
+Difference between useSelector and useDispatch?
+How does useSelector optimize re-renders?
+What is shallow equality in Redux?
+How do you prevent unnecessary re-renders?
+
+👉 Real-world:
+
+Your component is re-rendering too much — how will you fix it?
+🔹 4. Redux Toolkit (VERY IMPORTANT 🔥)
+Why Redux Toolkit was introduced?
+Difference between Redux and Redux Toolkit?
+What does createSlice() do internally?
+How does Immer work in Redux Toolkit?
+Why can we “mutate” state in RTK?
+
+👉 Must answer confidently:
+
+What is configureStore() vs createStore()?
+🔹 5. Async & API Handling
+How do you handle API calls in Redux?
+What is createAsyncThunk()?
+Difference between Thunk and Saga?
+How do you manage loading, success, and error states?
+How do you cancel API calls?
+
+👉 Scenario:
+
+Multiple API calls depend on each other — how will you manage?
+🔹 6. Middleware (Mid-Level Depth)
+What is middleware in Redux?
+How Redux Thunk works internally?
+When would you use Redux Saga instead of Thunk?
+Can you create custom middleware?
+
+👉 Practical:
+
+How would you log every action in Redux?
+🔹 7. State Design (VERY IMPORTANT 🔥🔥)
+How do you structure Redux state in a large app?
+What is normalized state?
+Why avoid deeply nested state?
+What are selectors and why use them?
+What is memoization in Redux?
+
+👉 Real-world:
+
+You have 1000+ records — how will you store efficiently?
+🔹 8. Performance Optimization
+How do you optimize Redux performance?
+What causes unnecessary re-renders?
+How does Reselect help?
+Difference between local state vs global state?
+
+👉 Scenario:
+
+Large table data + frequent updates — what approach?
+🔹 9. Debugging & Tools
+How do you debug Redux issues?
+What is Redux DevTools?
+How do you trace state changes?
+
+👉 Practical:
+
+Bug: state not updating — how will you debug?
+🔹 10. Testing
+How do you test reducers?
+How do you test async actions?
+What is a mock store?
+
+👉 Real:
+
+Why reducers are easy to test?
+🔹 11. Advanced / Real Experience Questions
+
+🔥 These separate YOU from beginners:
+
+How do you handle multiple slices in a large app?
+How do you manage shared state between microfrontends?
+Have you faced any Redux performance issues? How did you fix?
+When would you NOT use Redux?
+How do you handle form state — Redux or local state?
+🔹 12. Scenario-Based Questions (VERY IMPORTANT 🚀)
+
+👉 These are asked in good companies:
+
+💥 Scenario 1:
+
+You have multiple components using same API data. How will you manage?
+
+💥 Scenario 2:
+
+API is slow — UI should not freeze. What will you do?
+
+💥 Scenario 3:
+
+State is getting reset on page refresh. Solution?
+
+💥 Scenario 4:
+
+Large app — Redux becoming messy. How will you structure?
+✅ Section-wise count
+Basics → 5
+Core Concepts → 5
+React-Redux → 5
+Redux Toolkit → 5
+Async/API → 5
+Middleware → 4
+State Design → 5
+Performance → 4
+Debugging → 3
+Testing → 3
+Advanced → 5
+Scenario-based → 4
+
+
+3.Coding Questions
+4.Scenarios Questions

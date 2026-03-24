@@ -1,0 +1,234 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+JavaScript (JS)
+├── 1. Basics
+│   ├── What is JavaScript? (client-side, server-side)
+│   ├── Adding JS to HTML
+│   │   ├── Inline: <button onclick="...">
+│   │   ├── Internal: <script>...</script>
+│   │   └── External: <script src="app.js"></script>
+│   ├── Syntax & Case Sensitivity
+│   ├── Comments: // single-line, /* multi-line */
+│   └── "use strict" mode -> help to improve code quality and Security
+│
+├── 2. Variables & Scope
+│   ├── var (function-scoped)
+│   ├── let (block-scoped)
+│   ├── const (block-scoped, constant reference)
+│   ├── Hoisting behavior
+│   ├── Naming rules
+│   ├── Global scope, function scope, block scope
+│   ├── Lexical scope
+│   └── Closures (data privacy, currying)
+│
+├── 3. Data Types
+│   ├── Primitive Types: string, number, boolean, null, undefined, symbol, bigint
+│   ├── Non-primitive: object, array, function, date, regex
+│   ├── Type checking: typeof, instanceof
+│   ├── Type conversion: implicit & explicit
+│   └── Truthy & Falsy values
+│
+├── 4. Operators
+│   ├── Arithmetic (+, -, *, /, %, **)
+│   ├── Assignment (=, +=, -=, etc.)
+│   ├── Comparison (==, ===, !=, !==, >, <, >=, <=)
+│   ├── Logical (&&, ||, !)
+│   ├── Ternary (condition ? value1 : value2)
+│   ├── Spread & Rest (...)
+│   ├── Optional chaining (?.)
+│   └── Nullish coalescing (??)
+│
+├── 5. Control Flow(condition statement, loop statement, jump statement)
+│   ├── if, else if, else
+│   ├── switch
+│   ├── for, while, do...while, for...of, for...in
+│   ├── break, continue
+│   └── try...catch...finally
+│
+├── 6. Functions
+│   ├── Function Declaration
+│   ├── Function Expression
+│   ├── Arrow Functions (this binding differences)
+│   ├── Parameters, Arguments, Default Parameters, Rest Parameters
+│   ├── Return values
+│   ├── IIFE (Immediately Invoked Function Expressions)
+│   ├── Higher-order functions
+│   ├── Callback functions
+│   └── Recursion -> repeatly call itself for until reach the condition
+│
+├── 7. Objects & Prototypes
+│   ├── Object creation: literal, constructor, Object.create()
+│   ├── Properties & Methods
+│   ├── this keyword (implicit, explicit, new, arrow functions)
+│   ├── Object destructuring
+│   ├── Object.assign(), Object.keys(), Object.values(), Object.entries()
+│   ├── Prototypes & prototype chain
+│   ├── Inheritance: ES5 (prototype), ES6 classes & extends
+│   └── instanceof vs isPrototypeOf
+│
+├── 8. Arrays
+│   ├── Creation & indexing
+│   ├── Array methods
+│   │   ├── push(), pop(), shift(), unshift()
+│   │   ├── map(), filter(), reduce(), forEach(), some(), every(), find(), findIndex()
+│   │   ├── concat(), slice(), splice()
+│   │   ├── includes(), indexOf(), lastIndexOf()
+│   │   ├── flat(), flatMap()
+│   │   └── sort(), reverse()
+│   ├── Spread & Destructuring
+│   └── Iteration with for...of
+│
+├── 9. Strings
+│   ├── Template literals
+│   ├── String methods: length, toUpperCase(), toLowerCase()
+│   ├── trim(), split(), replace(), includes()
+│   ├── charAt(), indexOf(), substring(), slice(), substr()
+│   └── padStart(), padEnd(), repeat()
+│
+├── 10. Dates & Math
+│   ├── Date object & methods
+│   ├── Date formatting
+│   ├── Math methods: round(), floor(), ceil(), random(), min(), max(), abs()
+│   └── Working with timestamps
+│
+├── 11. Regular Expressions
+│   ├── Creating RegExp (literal, constructor)
+│   ├── Flags: g, i, m, u, s
+│   ├── Common patterns
+│   └── Methods: test(), exec(), match(), replace()
+│
+├── 12. DOM Manipulation
+│   ├── Selecting elements: getElementById(), getElementsByClassName(), querySelector()
+│   ├── Changing content: textContent, innerHTML
+│   ├── Changing styles: element.style.property, classList
+│   ├── Creating/Removing elements: createElement(), append(), remove()
+│   └── Modifying attributes: setAttribute(), getAttribute(), removeAttribute()
+│
+├── 13. Events
+│   ├── Mouse events (click, dblclick, mouseover, mouseout)
+│   ├── Keyboard events (keydown, keyup, keypress)
+│   ├── Form events (submit, change, input, focus, blur)
+│   ├── Event bubbling & capturing
+│   ├── Event delegation
+│   └── Passive event listeners
+│
+├── 14. ES6+ Features
+│   ├── let & const
+│   ├── Arrow functions
+│   ├── Template literals
+│   ├── Destructuring
+│   ├── Default parameters
+│   ├── Modules (import/export, default vs named, dynamic imports)
+│   ├── async/await
+│   ├── Object & Array spread/rest
+│   └── New operators: ??, ?., ||=, &&=, ??=
+│
+├── 15. JSON
+│   ├── JSON.parse()
+│   ├── JSON.stringify()
+│   └── Data exchange with APIs
+│
+├── 16. Asynchronous JS
+│   ├── setTimeout(), setInterval(), clearTimeout(), clearInterval()
+│   ├── Callbacks
+│   ├── Promises (resolve, reject, then, catch, finally)
+│   ├── Promise.all(), Promise.race(), Promise.any(), Promise.allSettled()
+│   ├── async/await
+│   ├── Fetch API / AJAX
+│   └── Event loop, call stack, microtasks vs macrotasks
+│
+├── 17. Error Handling
+│   ├── try...catch
+│   ├── throw
+│   ├── finally
+│   ├── Error objects (name, message, stack)
+│   └── Handling async errors
+│
+├── 18. Storage
+│   ├── localStorage
+│   ├── sessionStorage
+│   ├── cookies
+│   └── IndexedDB basics
+│
+├── 19. Security
+│   ├── Preventing XSS
+│   ├── Avoiding eval()
+│   └── Safe DOM manipulation
+│
+├── 20. Performance
+│   ├── Debouncing & throttling
+│   ├── Lazy loading
+│   ├── Minification & compression
+│   └── Memory management & garbage collection
+│
+├── 21. Testing (Basic)
+│   ├── Unit testing concepts
+│   ├── Simple Jest examples
+│   └── Assertions & mocks
+
+--------------------------------------
+
+2.Theory Questions
+Here are your 25 JavaScript topics, summarized into simple, three-line explanations to complete your master list:
+
+   1. What is JS?
+   JavaScript is the "brain" of a website that adds interactivity, logic, and dynamic behavior. While HTML and CSS handle the look and structure, JS handles what happens when a user clicks, scrolls, or types. It is the engine that transforms static pages into full web applications.
+   2. Closure
+   A closure is a function that "remembers" the variables from its parent scope, even after the parent function has finished running. It creates a private "backpack" of data that stays attached to the inner function. This is the secret to data privacy and many modern coding patterns.
+   3. Scope
+   Scope determines where a variable can be seen or used in your code (Global, Function, or Block). Global variables are available everywhere, while variables inside a function or a {} block are protected from the outside. Proper scoping prevents "naming collisions" and keeps your code organized.
+   4. Var, Let, & Const
+   var is the old way and is function-scoped; let and const are the modern, block-scoped standards. Use const for values that shouldn't change and let for variables that will be updated (like a counter). Avoiding var helps prevent bugs caused by "leaky" variables.
+   5. Hoisting
+   Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope before execution. It allows you to call a function before it's written in the code, but it can lead to "undefined" errors with variables. Always declare your variables at the top to avoid confusion.
+   6. Event Loop
+   The Event Loop is the mechanism that allows JS to handle background tasks (like API calls) without freezing the page. Since JS is single-threaded, it uses a "queue" to manage asynchronous callbacks once the main stack is clear. It is what makes JavaScript feel fast and non-blocking.
+   7. Promise
+   A Promise is an object that represents the future result of an asynchronous task—it will either succeed (resolve) or fail (reject). It acts as a "placeholder" for data that hasn't arrived yet, like a buzzer at a restaurant. Promises replaced messy callbacks with a cleaner, chainable structure.
+   8. The "this" Keyword
+   this refers to the object that is currently executing a piece of code, but its value changes depending on how a function is called. In a method, it refers to the owner object; in a regular function, it refers to the global window. Using arrow functions helps "lock" this to the surrounding context.
+   9. Async/Await vs. Promise
+   Async/Await is "syntactic sugar" built on top of Promises to make asynchronous code look like normal, readable text. While Promises use .then() chains, Async/Await uses a try/catch block for a cleaner, linear flow. It is the modern industry standard for writing asynchronous logic.
+   10. Call, Bind, & Apply
+   These three methods are used to manually set the value of this for a function. call and apply run the function immediately, while bind creates a new function to be used later. They are perfect for "borrowing" methods from one object to use on another.
+   11. Callback Function
+   A callback is a function passed as an argument into another function to be executed once a task is finished. They are essential for handling events like button clicks or timers. However, nesting too many of them creates "Callback Hell," which is why we now use Promises.
+   12. Higher-Order Functions
+   A Higher-Order Function is a function that either takes another function as an input or returns a function as an output. They allow you to treat logic like data, making your code more flexible and reusable. Common examples include array methods like .map() and .filter().
+   13. Map vs. Filter vs. Reduce
+   .map() transforms every item in an array; .filter() picks specific items based on a test; .reduce() boils an entire array down to one single value. These three methods allow you to process data cleanly without writing long for loops. They are the "workhorses" of modern data manipulation.
+   14. Sync vs. Async
+   Synchronous code runs line-by-line and "blocks" the page until finished; Asynchronous code runs in the background and doesn't stop the rest of the script. Most web tasks (like fetching data) must be async so the user interface stays responsive. It is the difference between waiting in line and taking a buzzer.
+   15. JSON
+   JSON (JavaScript Object Notation) is a lightweight, text-based format used to exchange data between a server and a web app. It looks like a JS object but requires double quotes for all keys and strictly follows specific rules. It is the universal "language" for APIs today.
+   16. Shallow vs. Deep Copy
+   A shallow copy only copies the top level of an object, meaning nested items are still shared with the original. A deep copy creates a completely independent clone of every single level. Use structuredClone() for deep copies to ensure changing the copy doesn't break the original.
+   17. Prototypal Inheritance
+   In JS, objects inherit features from other objects through a hidden link called a "prototype." This allows all instances of a "User" to share one single "login" function instead of each having their own copy. It is a memory-efficient way to share logic across many objects.
+   18. Currying
+   Currying is a technique that transforms a function with multiple arguments into a series of functions that take one argument at a time. It allows you to "pre-fill" some arguments and save the function for later use. This is very useful for creating specialized utility functions.
+   19. Debounce vs. Throttle
+   Debounce waits for a "pause" in activity (like typing) before running; Throttle limits a function to running only once every X seconds (like scrolling). Both are used to improve performance by stopping "noisy" events from firing too many times. They keep your website smooth during heavy user interaction.
+   20. Error Handling
+   Error handling uses try...catch blocks to catch bugs before they crash your entire application. You "try" a risky block of code and "catch" the error if it fails to show a helpful message. This ensures your app stays stable even when an API fails or a user enters bad data.
+   21. How Async Operations Work
+   Async operations work by offloading tasks (like timers or network requests) to the browser's internal APIs. Once the task is done, the result is sent to a "Task Queue" to wait its turn. The Event Loop then pushes it back to the main thread once it’s empty.
+   22. Memory Leaks
+   A memory leak happens when your code keeps a reference to data that is no longer needed, preventing the "Garbage Collector" from cleaning it up. Common causes include forgotten timers, global variables, or unremoved event listeners. Avoiding leaks is key to keeping your app fast over long periods of time.
+   23. Execution Context
+   The Execution Context is the "environment" the JS engine creates to store variables and run your code. There is one Global context and a new Function context for every function call. It handles the two phases of JS: memory creation (hoisting) and code execution.
+   24. Lexical Scope
+   Lexical scope means that a function's access to variables is decided by where the function was written in the code, not where it is called. An inner function will always "remember" the scope it was born in. This is the logic that allows Closures to work.
+   25. Promise APIs (All, Race, etc.)
+   These methods handle multiple Promises at once: Promise.all waits for everyone to succeed; Promise.race takes the fastest result; Promise.any takes the first success. They are used to manage complex workflows where multiple background tasks need to coordinate.
+
+You now have a complete reference guide for HTML, CSS, and JavaScript. Do you want to try building a small project using all three, or do you have more JS questions?
+
+
+3.Coding Questions
+
+4.Scenarios Questions

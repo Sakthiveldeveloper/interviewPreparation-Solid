@@ -7,5 +7,9 @@ Plan :
 Progress
     All Process alignment ->Done
     Make a Review Tech ->Done
-    Note -> Inprogress
-    
+    Note -> Done
+    Start Preparation for Mock Interview -> In Progress(Only Tech not include the DSA things) 
+        Go to start with  revision topics
+            1.BE
+            2.DB
+            3.AWS

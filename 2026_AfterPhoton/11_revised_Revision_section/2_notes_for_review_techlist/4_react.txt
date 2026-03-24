@@ -1,0 +1,252 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+React.js
+├── 1. Basics
+│   ├── What is React? (UI library, component-based, unidirectional data flow)
+│   ├── History & purpose (Facebook, scalability)
+│   ├── Difference from other frameworks (Angular, Vue)
+│   ├── Single Page Applications (SPA)
+│   ├── Declarative vs Imperative
+│   ├── JSX compilation (Babel, React.createElement) (babel-complier, webpack-bundler)
+│   ├── Virtual DOM & Reconciliation (diffing algorithm)
+│   ├── Fiber architecture basics -> reimplementaion of reat recongilation 
+│   ├── StrictMode (development-only checks)
+│   ├── Concurrent rendering & scheduling overview
+│   └── React rendering cycle overview
+│
+├── 2. Setting Up
+│   ├── Create React App (CRA)
+│   ├── Vite
+│   ├── Next.js (SSR, SSG, ISR)
+│   ├── Adding React via CDN
+│   ├── Project folder structure conventions
+│   └── Environment variables in React -> react key: value pair file 
+│
+├── 3. Components
+│   ├── Functional Components
+│   ├── Class Components
+│   ├── Pure Components (class) / React.memo (functional)
+│   ├── Props (read-only data)
+│   ├── State (useState, this.state)
+│   ├── Lifting state up
+│   ├── Derived state pitfalls
+│   ├── Component Lifecycle (class) / Hooks (functional)
+│   ├── Higher-Order Components (HOCs)
+│   ├── Render props pattern
+│   ├── Conditional Rendering
+│   ├── Lists & Keys
+│   ├── Fragments (<> </>)
+│   └── Component reusability
+│
+├── 4. JSX
+│   ├── Embedding expressions
+│   ├── Attributes in JSX (camelCase)
+│   ├── JSX must return a single parent element
+│   ├── Conditional & loop rendering
+│   └── Shorthand fragments (<> </>)
+│
+├── 5. Hooks (Functional Components)
+│   ├── Rules of Hooks
+│   ├── Basic Hooks
+│   │   ├── useState -> store data
+│   │   ├── useEffect (cleanup, AbortController) ->side effect
+│   │   ├── useRef -> mutable ref
+│   │   ├── useContext -> single source of data
+│   │   └── useReducer -> complex state managing [purpose]
+│   ├── Additional Hooks
+│   │   ├── useMemo -> remorize the calculation
+│   │   ├── useCallback -> remoriuze the function
+│   │   ├── useLayoutEffect -> syncronous side effect
+│   │   ├── useImperativeHandle
+│   │   └── useDebugValue (custom hook debugging)
+│   ├── React 18 Concurrent Features
+│   │   ├── useTransition
+│   │   └── useDeferredValue
+│   └── Custom Hooks (patterns: data fetching, debouncing, forms)
+│
+├── 6. State Management
+│   ├── Local state
+│   ├── Lifting state up
+│   ├── Context API
+│   ├── Context + Reducer pattern
+│   ├── Immutable updates (Immer.js)
+│   ├── Redux & Redux Toolkit
+│   ├── Redux middlewares (Thunk, Saga)
+│   ├── Zustand, Jotai, Recoil
+│   ├── MobX
+│   ├── Server state vs UI state
+│   ├── TanStack Query / SWR
+│   └── useSyncExternalStore (React 18)
+│
+├── 7. Event Handling
+│   ├── onClick, onChange, onSubmit
+│   ├── Passing arguments to event handlers
+│   ├── Synthetic Events
+│   ├── Event pooling
+│   ├── Event delegation in React
+│   ├── Preventing default behavior
+│   └── Native DOM events vs React events
+│
+├── 8. Forms
+│   ├── Controlled Components
+│   ├── Uncontrolled Components
+│   ├── Performance trade-offs between controlled/uncontrolled
+│   ├── Multi-step forms
+│   ├── Debounced input handling
+│   ├── Form validation (manual, libraries)
+│   ├── Accessibility in forms (label, aria-*)
+│   └── Libraries: Formik, React Hook Form
+│
+├── 9. Styling
+│   ├── CSS Modules
+│   ├── Styled Components (theming support)
+│   ├── Tailwind CSS
+│   ├── Inline styles
+│   ├── Emotion
+│   ├── Global styles in React
+│   └── CSS-in-JS performance considerations
+│
+├── 10. Routing
+│   ├── React Router
+│   │   ├── <BrowserRouter>
+│   │   ├── <Routes> & <Route>
+│   │   ├── useNavigate, useParams
+│   │   ├── Nested routes
+│   │   ├── Route guards
+│   │   ├── Data APIs (loader, action in v6.4+)
+│   │   ├── Code-splitting routes
+│   │   └── Scroll restoration
+│   ├── Next.js Routing
+│   │   ├── File-based routing
+│   │   ├── Dynamic routing
+│   │   ├── Route transitions
+│   │   └── API routes
+│
+├── 11. Data Fetching
+│   ├── Fetch API (with AbortController)
+│   ├── Axios
+│   ├── GraphQL (Apollo, urql)
+│   ├── SWR
+│   ├── React Query (TanStack Query)
+│   ├── WebSockets / SSE
+│   ├── Prefetching data
+│   ├── useEffect data fetching pattern
+│   ├── Suspense for data fetching
+│   └── Streaming SSR (React 18)
+│
+├── 12. Performance Optimization
+│   ├── useMemo & useCallback
+│   ├── React.memo
+│   ├── Code splitting & lazy loading
+│   ├── Avoid unnecessary re-renders
+│   ├── Memoization pitfalls
+│   ├── Windowing & virtualization (react-window, react-virtualized)
+│   ├── Concurrent rendering benefits
+│   ├── Profiling with React DevTools
+│   ├── Image optimization
+│   ├── Web Vitals measurement
+│   └── Context selector optimization
+│
+├── 13. Testing
+│   ├── Jest (unit testing)
+│   ├── React Testing Library
+│   ├── Snapshot testing
+│   ├── Mocking fetch/axios
+│   ├── Cypress (E2E testing)
+│   ├── MSW (Mock Service Worker)
+│   ├── Integration with CI/CD
+│   └── Test coverage metrics
+│
+├── 14. Advanced Concepts
+│   ├── Portals (controlled vs uncontrolled)
+│   ├── Error Boundaries
+│   ├── Suspense & Lazy Loading
+│   ├── Server-Side Rendering (SSR)
+│   ├── Static Site Generation (SSG)
+│   ├── Incremental Static Regeneration (ISR)
+│   ├── Hydration & Progressive Hydration
+│   ├── Concurrent Mode basics
+│   ├── React Server Components
+│   ├── Streaming SSR edge cases
+│   └── Progressive hydration in large apps
+│
+├── 15. Accessibility
+│   ├── ARIA attributes ->Accessible Rich Internet Applications
+│   ├── Keyboard navigation
+│   ├── Focus management
+│   ├── Skip links
+│   ├── Semantic HTML in React
+│   ├── Color contrast tools
+│   └── Accessibility testing tools
+│
+├── 16. Conditional Rendering
+│   ├── if/else
+│   ├── Ternary operator
+│   ├── Logical && operator
+│   └── Switch rendering
+│
+├── 17. Best Practices
+│   ├── Keep components small
+│   ├── Use semantic naming
+│   ├── Folder-by-feature organization
+│   ├── Extract reusable custom hooks
+│   ├── Optimize for accessibility
+│   ├── Avoid anonymous inline functions when possible
+│   ├── Error logging & monitoring (Sentry, LogRocket)
+│   ├── Security best practices (XSS prevention, HTML sanitization)
+│   ├── Optimize bundle size (tree-shaking, webpack-bundle-analyzer)
+│   └── Consistent code formatting
+
+
+2.Theory Questions
+Here is a summary of the core React concepts we've covered, formatted for quick reference:
+What is React?
+A JavaScript library for building user interfaces based on UI components. It uses a Virtual DOM to make updates fast and efficient.
+What is the Virtual DOM?
+A lightweight copy of the real DOM kept in memory. React compares this copy to the real DOM (diffing) and only updates the parts that changed, improving performance.
+What is a Component?
+The building block of a React app. It is a self-contained, reusable piece of code (usually a function) that returns JSX to describe a part of the UI.
+What is JSX?
+A syntax extension that looks like HTML but lives in JavaScript. It makes writing component structures more visual and is compiled into standard JavaScript objects.
+What are Props vs. State?
+
+* Props: Read-only data passed from a parent to a child (external).
+* State: Data managed locally within a component that can change over time (internal).
+
+What is a Re-render?
+The process where React calls a component function again to update the UI. It is triggered by changes in state, props, or the parent component.
+What are Hooks?
+Functions that let you "hook into" React features in functional components. Examples include useState for data and useEffect for side effects.
+What is the useEffect Dependency Array?
+An array passed as the second argument to useEffect. It tells React to only re-run the effect when specific values inside that array change.
+Controlled vs. Uncontrolled Components?
+
+* Controlled: React state handles the form data (the "React way").
+* Uncontrolled: The DOM handles the form data, accessed via useRef.
+
+What is the key prop?
+A unique string used in lists to help React identify which items changed, were added, or were removed, preventing rendering bugs.
+What is Lifting State Up?
+Moving state to the closest common parent component so multiple child components can share and stay in sync with the same data.
+What is Conditional Rendering?
+Showing different UI elements based on logic, typically using if statements, ternary operators (? :), or logical AND (&&).
+What is a Fragment?
+A syntax (<>...</>) that lets you group multiple elements without adding an extra, unnecessary <div> to the real HTML DOM.
+useMemo vs. useCallback?
+
+* useMemo: Caches the result of an expensive calculation.
+* useCallback: Caches the function definition itself to prevent unnecessary child re-renders.
+
+What is React.memo?
+A tool that wraps a component to prevent it from re-rendering unless its props actually change.
+What is the Context API?
+A way to share data globally across the component tree without "prop drilling" (passing data through every level).
+Would you like to move on to React Router for navigation, or explore API fetching with fetch and axios?
+
+
+3.Coding Questions
+4.Scenarios Questions

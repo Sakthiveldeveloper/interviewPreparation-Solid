@@ -1,0 +1,242 @@
+
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+
+
+1.mindmap
+AWS MIND MAP
+1. Basics
+- What is AWS? (Cloud computing platform)
+- Benefits (Scalability, Pay-as-you-go, High availability)
+- Types of Cloud (Public, Private, Hybrid)
+- Global Infrastructure (Regions, Availability Zones)
+- Shared Responsibility Model
+2. Core Services Overview
+- Compute (EC2, Lambda)
+- Storage (S3, EBS, EFS)
+- Database (RDS, DynamoDB)
+- Networking (VPC, Route 53)
+- Security (IAM)
+
+3. Compute Services
+- EC2 (Virtual servers)
+- EC2 Instance Types
+- AMI (Amazon Machine Image)
+- Auto Scaling
+- Load Balancer (ALB, NLB)
+- Lambda (Serverless functions)
+
+4. Storage Services
+- S3 (Object storage)
+- S3 Storage Classes (Standard, IA, Glacier)
+- EBS (Block storage for EC2)
+- EFS (File storage)
+- Backup & Lifecycle policies
+
+5. Database Services
+- RDS (MySQL, PostgreSQL, etc.)
+- DynamoDB (NoSQL)
+- Aurora
+- Read Replicas
+- Multi-AZ deployment
+
+6. Networking
+- VPC (Virtual Private Cloud)
+- Subnets (Public, Private)
+- Internet Gateway
+- NAT Gateway
+- Route Tables
+- Security Groups vs NACL
+
+7. IAM (Security)
+- Users, Groups, Roles
+- Policies (JSON)
+- Permissions
+- Least privilege principle
+- MFA (Multi-Factor Authentication)
+
+8. Monitoring & Logging
+- CloudWatch (Metrics, Logs, Alarms)
+- CloudTrail (API activity tracking)
+- SNS (Notifications)
+- SQS (Queue service)
+
+9. Serverless
+- Lambda (Event-driven functions)
+- API Gateway
+- EventBridge
+- Step Functions
+
+10. Deployment & DevOps
+- Elastic Beanstalk
+- CodeDeploy
+- CodePipeline
+- CI/CD concepts
+
+11. Scaling & High Availability
+- Auto Scaling Groups
+- Load Balancers
+- Multi-AZ vs Multi-Region
+- Fault tolerance
+
+12. Storage & CDN Optimization
+- CloudFront (CDN)
+- Caching strategies
+- Edge locations
+
+13. Security Best Practices
+- IAM roles instead of access keys
+- Enable MFA
+- Encrypt data (at rest & in transit)
+- Use security groups properly
+
+14. Pricing & Cost Optimization
+- Pay-as-you-go model
+- Reserved instances
+- Spot instances
+- Cost Explorer
+- Budget alerts
+
+15. Common Architectures
+- 3-tier architecture (Frontend, Backend, DB)
+- Serverless architecture
+- Microservices architecture
+
+16. Real-world Use Cases
+- Hosting web app using EC2 + RDS
+- Static site hosting using S3 + CloudFront
+- Serverless APIs using Lambda + API Gateway
+2.Theory Questions
+
+TOP AWS INTERVIEW QUESTIONS (4 YEARS EXPERIENCE)
+
+1. What is AWS?
+AWS is a cloud computing platform that provides services like compute, storage, and databases on a pay-as-you-go basis.
+
+2. What are Regions and Availability Zones?
+Regions are geographic locations, and Availability Zones are isolated data centers within a region.
+
+3. What is the Shared Responsibility Model?
+AWS handles infrastructure security, while the customer is responsible for application and data security.
+
+4. What are the main AWS service categories?
+Compute, Storage, Database, Networking, and Security.
+
+5. What is EC2?
+EC2 is a virtual server in AWS used to run applications.
+
+6. What is AMI?
+AMI (Amazon Machine Image) is a template used to launch EC2 instances.
+
+7. What are EC2 instance types?
+General purpose, Compute optimized, Memory optimized, and Storage optimized.
+
+8. What is Auto Scaling?
+Auto Scaling automatically increases or decreases EC2 instances based on traffic.
+
+9. What is Load Balancer?
+Distributes incoming traffic across multiple servers for better performance and availability.
+
+10. What is S3?
+S3 is an object storage service used to store files like images, videos, and backups.
+
+11. What are S3 storage classes?
+Standard, Intelligent-Tiering, Infrequent Access, and Glacier.
+
+12. What is versioning in S3?
+Versioning keeps multiple versions of an object to prevent data loss.
+
+13. What is lifecycle policy in S3?
+Automatically moves or deletes objects based on rules.
+
+14. Difference between S3 and EBS?
+S3 is object storage, EBS is block storage used with EC2.
+
+15. What is RDS?
+RDS is a managed relational database service.
+
+16. What is DynamoDB?
+DynamoDB is a NoSQL database service with high scalability.
+
+17. RDS vs DynamoDB?
+RDS is relational, DynamoDB is NoSQL and serverless.
+
+18. What is Multi-AZ?
+Multi-AZ provides high availability by replicating data across zones.
+
+19. What are Read Replicas?
+Used to improve read performance by creating copies of database.
+
+20. What is VPC?
+VPC is a virtual network where AWS resources are launched.
+
+21. Public vs Private subnet?
+Public subnet has internet access, private subnet does not.
+
+22. What is Internet Gateway?
+Allows communication between VPC and the internet.
+
+23. What is NAT Gateway?
+Allows private subnet resources to access the internet securely.
+
+24. Security Group vs NACL?
+Security Group is instance-level, NACL is subnet-level.
+
+25. What is IAM?
+IAM manages users, roles, and permissions in AWS.
+
+26. What are Roles vs Users?
+Users are individuals, roles are temporary permissions for services.
+
+27. What is a Policy?
+A JSON document that defines permissions.
+
+28. What is least privilege principle?
+Grant only necessary permissions to users/services.
+
+29. What is AWS Lambda?
+Lambda is a serverless compute service to run code without managing servers.
+
+30. When to use Lambda vs EC2?
+Lambda for event-driven small tasks, EC2 for long-running applications.
+
+31. What is API Gateway?
+API Gateway is used to create and manage APIs for backend services.
+
+32. What is CloudWatch?
+CloudWatch monitors logs, metrics, and system performance.
+
+33. What is CloudTrail?
+CloudTrail tracks API activity and user actions.
+
+34. What is Auto Scaling?
+Automatically adjusts resources based on demand.
+
+35. What is Load Balancer?
+Distributes traffic across multiple servers.
+
+36. What is Elastic Beanstalk?
+A service to deploy and manage applications easily.
+
+37. How do you improve performance in AWS?
+Use Auto Scaling, Load Balancer, caching, and CDN.
+
+38. What is CloudFront?
+CloudFront is a CDN that delivers content faster globally.
+
+39. What are Reserved Instances?
+Prepaid instances for long-term cost savings.
+
+40. What are Spot Instances?
+Low-cost instances using unused AWS capacity.
+
+41. How to reduce AWS cost?
+Use Reserved/Spot instances, monitor usage, and optimize resources.
+
+
+3.Coding Questions
+4.Scenarios Questions
