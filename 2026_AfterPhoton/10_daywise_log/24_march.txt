@@ -26,4 +26,6 @@ Progress
             5.DevOps & Cloud
                 Git, GitHub, Jenkins, CI/CD
                 Docker, Kubernetes (basic)
-                AWS (EC2, S3)
+                AWS (EC2, S3, IAM, Lamda, RDS, VPS, CloudWatch)
+
+            just complete BE only so move another to Next Day 25 March

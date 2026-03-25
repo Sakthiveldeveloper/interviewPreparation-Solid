@@ -4,185 +4,208 @@
 4.Scenarios Questions
 
 1.mindmap
-Node.js
-├── 0. JavaScript in Node.js
-│   ├── Difference between Node.js & browser JS
-│   ├── Global objects (global, process, __dirname, __filename)
-│   ├── Timers (setTimeout, setInterval, setImmediate, process.nextTick)
-│   └── console methods (log, error, table, time, timeEnd)
+   Node.js
+   ├── 0. JavaScript in Node.js
+   │   ├── Difference between Node.js & browser JS
+   │   ├── Global objects (global, process, __dirname, __filename)
+   │   ├── Timers (setTimeout, setInterval, setImmediate, process.nextTick)
+   │   └── console methods (log, error, table, time, timeEnd)
 
-├── 1. Basics
-│   ├── What is Node.js? (JS runtime built on V8)
-│   ├── Non-blocking I/O
-│   ├── Single-threaded event loop
-│   ├── REPL (Read-Eval-Print Loop)
-│   └── Installing Node & npm
+   ├── 1. Basics
+   │   ├── What is Node.js? (JS runtime built on V8)
+   │   ├── Non-blocking I/O
+   │   ├── Single-threaded event loop
+   │   ├── REPL (Read-Eval-Print Loop)
+   │   └── Installing Node & npm
 
-├── 2. Core Concepts
-│   ├── Modules
-│   │   ├── CommonJS (require, module.exports)
-│   │   ├── ES Modules (import, export)
-│   │   └── Built-in modules (fs, path, http, os, events)
-│   ├── Package Management (npm, yarn, pnpm)
-│   ├── EventEmitter
-│   ├── Streams (Readable, Writable, Duplex, Transform)
-│   ├── Buffer
-│   ├── Cluster module (multi-core scaling)
-│   └── Worker Threads (parallelism)
+   ├── 2. Core Concepts
+   │   ├── Modules
+   │   │   ├── CommonJS (require, module.exports)
+   │   │   ├── ES Modules (import, export)
+   │   │   └── Built-in modules (fs, path, http, os, events)
+   │   ├── Package Management (npm, yarn, pnpm)
+   │   ├── EventEmitter
+   │   ├── Streams (Readable, Writable, Duplex, Transform) -> Processes data in incremental chunks.
+   │   ├── Buffer() ->Loads the entire data into memory at once.
+   │   ├── Cluster module (multi-core scaling) -> handle the web traffic(multi process)
+   │   └── Worker Threads (parallelism) -> specific functions block main Threads(multi handling)
 
-├── 3. File System
-│   ├── Reading/Writing files
-│   ├── Synchronous vs Asynchronous methods
-│   ├── Creating/Deleting directories
-│   └── Watching files
+   ├── 3. File System
+   │   ├── Reading/Writing files
+   │   ├── Synchronous vs Asynchronous methods
+   │   ├── Creating/Deleting directories
+   │   └── Watching files
 
-├── 4. HTTP & Servers
-│   ├── http module (createServer)
-│   ├── HTTPS module & SSL certificates
-│   ├── HTTP/2 basics
-│   ├── Handling requests & responses
-│   ├── Status codes
-│   ├── Routing basics
-│   └── Serving static files
+   ├── 4. HTTP & Servers
+   │   ├── http module (createServer)
+   │   ├── HTTPS module & SSL certificates
+   │   ├── HTTP/2 basics
+   │   ├── Handling requests & responses
+   │   ├── Status codes
+   │   ├── Routing basics
+   │   └── Serving static files
 
-├── 5. Express.js
-│   ├── Installing & setting up
-│   ├── Routing
-│   ├── Middleware
-│   │   ├── Built-in
-│   │   ├── Third-party
-│   │   └── Custom
-│   ├── Body parsers (express.json, express.urlencoded)
-│   ├── Handling requests (GET, POST, PUT, DELETE)
-│   ├── CORS middleware
-│   ├── Serving static files
-│   └── Error handling
+   ├── 5. Express.js
+   │   ├── Installing & setting up
+   │   ├── Routing
+   │   ├── Middleware
+   |   | application level , router level, error handling
+   │   │   ├── Built-in
+   │   │   ├── Third-party
+   │   │   └── Custom
+   │   ├── Body parsers (express.json, express.urlencoded)
+   │   ├── Handling requests (GET, POST, PUT, DELETE)
+   │   ├── CORS middleware
+   │   ├── Serving static files
+   │   └── Error handling
 
-├── 6. Databases
-│   ├── Relational (MySQL, PostgreSQL)
-│   ├── NoSQL (MongoDB)
-│   ├── ORM/ODM
-│   │   ├── Sequelize
-│   │   └── Mongoose
-│   ├── CRUD operations
-│   ├── Connection pooling
-│   └── Transactions
+   ├── 6. Databases
+   │   ├── Relational (MySQL, PostgreSQL)
+   │   ├── NoSQL (MongoDB)
+   │   ├── ORM/ODM
+   │   │   ├── Sequelize
+   │   │   └── Mongoose
+   │   ├── CRUD operations
+   │   ├── Connection pooling
+   │   └── Transactions
 
-├── 7. Asynchronous Programming
-│   ├── Callbacks
-│   ├── Promises
-│   ├── async/await
-│   └── Error handling in async code
+   ├── 7. Asynchronous Programming
+   │   ├── Callbacks
+   │   ├── Promises
+   │   ├── async/await
+   │   └── Error handling in async code
 
-├── 8. APIs
-│   ├── REST API
-│   ├── GraphQL API
-│   ├── JSON handling
-│   ├── CORS
-│   └── API versioning
+   ├── 8. APIs
+   │   ├── REST API
+   │   ├── GraphQL API
+   │   ├── JSON handling
+   │   ├── CORS
+   │   └── API versioning
 
-├── 9. Authentication & Security
-│   ├── JWT (JSON Web Tokens)
-│   ├── OAuth
-│   ├── Password hashing (bcrypt)
-│   ├── Helmet.js (security headers)
-│   ├── Rate limiting
-│   ├── CSRF protection (csurf middleware)
-│   └── Data validation & sanitization (Joi, express-validator)
+   ├── 9. Authentication & Security
+   │   ├── JWT (JSON Web Tokens)
+   │   ├── OAuth
+   │   ├── Password hashing (bcrypt)
+   │   ├── Helmet.js (security headers)
+   │   ├── Rate limiting
+   │   ├── CSRF protection (csurf middleware)
+   │   └── Data validation & sanitization (Joi, express-validator)
 
-├── 10. Environment Variables
-│   ├── process.env
-│   └── dotenv package
+   ├── 10. Environment Variables
+   │   ├── process.env
+   │   └── dotenv package
 
-├── 11. File Uploads
-│   ├── multer
-│   ├── Streaming uploads
-│   └── Cloud storage integration (AWS S3, MinIO)
+   ├── 11. File Uploads
+   │   ├── multer
+   │   ├── Streaming uploads
+   │   └── Cloud storage integration (AWS S3, MinIO)
 
-├── 12. Real-Time Communication
-│   ├── WebSockets
-│   ├── Socket.IO
-│   ├── Server-Sent Events (SSE)
-│   └── Redis pub/sub for scaling Socket.IO
+   ├── 12. Real-Time Communication
+   │   ├── WebSockets
+   │   ├── Socket.IO
+   │   ├── Server-Sent Events (SSE)
+   │   └── Redis pub/sub for scaling Socket.IO
 
-├── 13. Testing
-│   ├── Mocha
-│   ├── Chai
-│   ├── Jest
-│   ├── Supertest
-│   ├── Test-driven development (TDD)
-│   └── Mocking/Stubbing (Sinon.js)
+   ├── 13. Testing
+   │   ├── Mocha
+   │   ├── Chai
+   │   ├── Jest
+   │   ├── Supertest
+   │   ├── Test-driven development (TDD)
+   │   └── Mocking/Stubbing (Sinon.js)
 
-├── 14. Deployment
-│   ├── PM2
-│   ├── Docker
-│   ├── CI/CD pipelines
-│   ├── Environment-specific configs (dev, staging, prod)
-│   ├── Zero downtime deployments
-│   └── Cloud platforms (AWS, Azure, GCP, Vercel, Heroku)
+   ├── 14. Deployment
+   │   ├── PM2
+   │   ├── Docker
+   │   ├── CI/CD pipelines
+   │   ├── Environment-specific configs (dev, staging, prod)
+   │   ├── Zero downtime deployments
+   │   └── Cloud platforms (AWS, Azure, GCP, Vercel, Heroku)
 
-├── 15. Best Practices
-│   ├── Use async/await
-│   ├── Keep code modular
-│   ├── Handle errors properly
-│   ├── Secure environment variables
-│   ├── Log & monitor (Winston, Morgan)
-│   └── Follow security best practices
+   ├── 15. Best Practices
+   │   ├── Use async/await
+   │   ├── Keep code modular
+   │   ├── Handle errors properly
+   │   ├── Secure environment variables
+   │   ├── Log & monitor (Winston, Morgan)
+   │   └── Follow security best practices
 
-├── 16. Debugging & Profiling
-│   ├── Debugging with Node Inspector / Chrome DevTools
-│   ├── Performance profiling (node --inspect, clinic.js)
-│   └── Memory leak detection
+   ├── 16. Debugging & Profiling
+   │   ├── Debugging with Node Inspector / Chrome DevTools
+   │   ├── Performance profiling (node --inspect, clinic.js)
+   │   └── Memory leak detection
 
 
-| Concept          | What it Does                                          | Use Case                         |
-| ---------------- | ----------------------------------------------------- | -------------------------------- |
-| **Stream**       | Handles data in chunks instead of loading it all      | File I/O, video streaming        |
-| **Buffer**       | Temporary memory for raw binary data                  | Handling files, TCP packets      |
-| **Cluster**      | Runs multiple processes (workers) using all CPU cores | Scaling APIs, multi-core usage   |
-| **WorkerThread** | Runs CPU-heavy tasks in parallel threads              | Image processing, encryption, ML |
+   | Concept          | What it Does                                          | Use Case                         |
+   | ---------------- | ----------------------------------------------------- | -------------------------------- |
+   | **Stream**       | Handles data in chunks instead of loading it all      | File I/O, video streaming        |
+   | **Buffer**       | Temporary memory for raw binary data                  | Handling files, TCP packets      |
+   | **Cluster**      | Runs multiple processes (workers) using all CPU cores | Scaling APIs, multi-core usage   |
+   | **WorkerThread** | Runs CPU-heavy tasks in parallel threads              | Image processing, encryption, ML |
 
 2.Theory Questions
-Here is a concise summary of the 25 key Node.js topics we covered, organized for quick revision.
-Core Fundamentals
+   Here is a concise summary of the 25 key Node.js topics we covered, organized for quick revision.
+   Core Fundamentals
 
-   1. What is Node.js? A cross-platform, open-source JavaScript runtime built on Chrome's V8 engine that executes JS code outside the browser.
-   2. What is "Non-Blocking"? The ability of Node.js to start an I/O task and move to the next one without waiting for the first to finish.
-   3. What is Event-Driven Architecture? A design where the flow is determined by events (clicks, data arrivals). The "Event Loop" listens for these signals to trigger functions.
-   4. What is the Event Loop? The mechanism that allows Node.js to perform non-blocking I/O operations by offloading tasks to the system kernel whenever possible.
-   5. What are Callbacks? Functions passed as arguments to other functions, executed once an asynchronous task completes (usually following the "error-first" pattern).
-   6. What are Promises? Objects representing the eventual completion (or failure) of an async operation, providing .then() and .catch() methods.
-   7. What is Async/Await? Syntactic sugar built on Promises that allows asynchronous code to be written and read like synchronous code using try/catch.
+      1. What is Node.js? A cross-platform, open-source JavaScript runtime built on Chrome's V8 engine that executes JS code outside the browser.
+      2. What is "Non-Blocking"? The ability of Node.js to start an I/O task and move to the next one without waiting for the first to finish.
+      3. What is Event-Driven Architecture? A design where the flow is determined by events (clicks, data arrivals). The "Event Loop" listens for these signals to trigger functions.
+      4. What is the Event Loop? The mechanism that allows Node.js to perform non-blocking I/O operations by offloading tasks to the system kernel whenever possible.
+      5. What are Callbacks? Functions passed as arguments to other functions, executed once an asynchronous task completes (usually following the "error-first" pattern).
+      6. What are Promises? Objects representing the eventual completion (or failure) of an async operation, providing .then() and .catch() methods.
+      7. What is Async/Await? Syntactic sugar built on Promises that allows asynchronous code to be written and read like synchronous code using try/catch.
 
-Frameworks & APIs
+   Frameworks & APIs
 
-   1. What is Express.js? A minimalist, flexible web framework for Node.js that provides robust features for web and mobile applications (routing, middleware).
-   2. What is Fastify? A high-performance framework focused on low overhead and powerful plugin architecture, often 2x faster than Express.
-   3. What is a REST API? An architectural style for networked applications using HTTP methods (GET, POST, etc.) to manipulate resources at specific URLs.
-   4. What is GraphQL? A query language for APIs that allows clients to request exactly the data they need, preventing over-fetching.
-   5. What are HTTP Methods? Standard "verbs" (GET, POST, PUT, DELETE, PATCH) that define the action a client wants the server to perform.
-   6. What is JSON? (JavaScript Object Notation) A lightweight, text-based data format used to exchange data between a server and a web application.
+      1. What is Express.js? A minimalist, flexible web framework for Node.js that provides robust features for web and mobile applications (routing, middleware).
+      2. What is Fastify? A high-performance framework focused on low overhead and powerful plugin architecture, often 2x faster than Express.
+      3. What is a REST API? An architectural style for networked applications using HTTP methods (GET, POST, etc.) to manipulate resources at specific URLs.
+      4. What is GraphQL? A query language for APIs that allows clients to request exactly the data they need, preventing over-fetching.
+      5. What are HTTP Methods? Standard "verbs" (GET, POST, PUT, DELETE, PATCH) that define the action a client wants the server to perform.
+      6. What is JSON? (JavaScript Object Notation) A lightweight, text-based data format used to exchange data between a server and a web application.
 
-Architecture & Data
+   Architecture & Data
 
-   1. What is Middleware? Functions that have access to the Request and Response objects, sitting "in the middle" to perform tasks like logging or auth.
-   2. What are the Types of Middleware? Application-level, Router-level, Built-in, Error-handling, and Third-party.
-   3. What is an ORM? (Object-Relational Mapping) A tool like Prisma or Sequelize that lets you query a database using JS objects instead of raw SQL.
-   4. What are Environment Variables? External variables (stored in .env files) used to hide sensitive data like API keys and DB passwords from the source code.
-   5. How do you structure a Node project? By using Layered Architecture (Folders for: Routes, Controllers, Services, Models, and Middlewares).
-   6. How do you handle 1 Lakh+ records? By using Pagination (chunks), Streams (processing bit-by-bit), or Database Cursors.
+      1. What is Middleware? Functions that have access to the Request and Response objects, sitting "in the middle" to perform tasks like logging or auth.
+      2. What are the Types of Middleware? Application-level, Router-level, Built-in, Error-handling, and Third-party.
+      3. What is an ORM? (Object-Relational Mapping) A tool like Prisma or Sequelize that lets you query a database using JS objects instead of raw SQL.
+      4. What are Environment Variables? External variables (stored in .env files) used to hide sensitive data like API keys and DB passwords from the source code.
+      5. How do you structure a Node project? By using Layered Architecture (Folders for: Routes, Controllers, Services, Models, and Middlewares).
+      6. How do you handle 1 Lakh+ records? By using Pagination (chunks), Streams (processing bit-by-bit), or Database Cursors.
 
-Security & Production
+   Security & Production
 
-   1. What is JWT? (JSON Web Token) A stateless way to handle authentication by passing a signed token between client and server.
-   2. What is Validation? The process of checking if user input is correct/safe before processing (using libraries like Zod or Joi).
-   3. What is Rate Limiting? Restricting the number of requests a user can make in a certain timeframe to prevent DDoS and brute-force attacks.
-   4. What is Logging? Recording app events/errors (using Winston or Pino) to help debug issues in production.
-   5. How do you handle Concurrency? Through the Event Loop, Worker Threads (for CPU tasks), or Clustering (multiple processes).
-   6. How do you handle Production issues? By using APM tools (Datadog), Error Tracking (Sentry), and Process Managers (PM2) for auto-restarts.
+      1. What is JWT? (JSON Web Token) A stateless way to handle authentication by passing a signed token between client and server.
+      2. What is Validation? The process of checking if user input is correct/safe before processing (using libraries like Zod or Joi).
+      3. What is Rate Limiting? Restricting the number of requests a user can make in a certain timeframe to prevent DDoS and brute-force attacks.
+      4. What is Logging? Recording app events/errors (using Winston or Pino) to help debug issues in production.
+      5. How do you handle Concurrency? Through the Event Loop, Worker Threads (for CPU tasks), or Clustering (multiple processes).
+      6. How do you handle Production issues? By using APM tools (Datadog), Error Tracking (Sentry), and Process Managers (PM2) for auto-restarts.
 
-Would you like me to turn these into a printable PDF or a quiz format for you?
+   Would you like me to turn these into a printable PDF or a quiz format for you?
 
 
 3.Coding Questions
+   🧩 Q1: Handle Async Operations (Very Important)
+      👉Question:
+      Write a function to read 3 files (a.txt, b.txt, c.txt) and return combined content in order.
+   ⚙️ Q2: Build Middleware (Express Core)
+      👉 Question:
+      Create a middleware that logs:
+         method
+         URL
+         timestamp
+      👉 What happens if next() is not called?
+   🔐 Q3: JWT Authentication (Very Common)
+      👉 Question:
+      Write middleware to verify JWT token
+   📦 Q4: Rate Limiter (Advanced)
+      👉 Question:
+      Limit API requests (e.g., 5 requests per minute per user)
+   🔄 Q5: Handle Large Data (Your Real Use Case 👀🔥)
+      👉 Question:
+      Process 1 lakh records in chunks (100 each)
+   🔥 Q6: Error Handling Middleware
+      👉 Question:
+      Create global error handler
 4.Scenarios Questions

@@ -237,6 +237,113 @@ Low-cost instances using unused AWS capacity.
 41. How to reduce AWS cost?
 Use Reserved/Spot instances, monitor usage, and optimize resources.
 
+-----------------------------------------------------------------------------
+🚀 AWS SERVICES YOU MUST KNOW (FULL STACK DEV)
+🧠 1. Compute (Run Your Backend)
+
+👉 You MUST know:
+
+EC2 → Run Node.js backend (like your Express app)
+Lambda → Serverless APIs (no server management)
+
+👉 Interview expectation:
+
+When to use EC2 vs Lambda
+💾 2. Storage (Files, Images, Uploads)
+
+👉 Very important:
+
+S3 → Store images, videos, documents
+CloudFront → Fast delivery (CDN)
+
+👉 Real use:
+
+User profile images → S3
+Faster loading → CloudFront
+🗄️ 3. Database
+
+👉 Must know both:
+
+RDS (MySQL/PostgreSQL) → Structured data
+DynamoDB → NoSQL (high scalability)
+
+👉 Interview:
+
+RDS vs DynamoDB
+🌐 4. Networking (VERY IMPORTANT 🔥)
+VPC → Your private network
+Subnets → Public / Private
+Internet Gateway
+NAT Gateway
+
+👉 Interview:
+
+How to secure backend?
+🔐 5. Security (CRITICAL 🔥🔥🔥)
+IAM → Users, roles, permissions
+
+👉 Must explain:
+
+Roles vs Users
+Least privilege
+⚡ 6. API Layer (Modern Backend)
+API Gateway → Connect frontend to backend
+Lambda → Serverless APIs
+
+👉 Combo:
+
+React + API Gateway + Lambda
+📊 7. Monitoring
+CloudWatch → Logs, metrics
+CloudTrail → Track activity
+
+👉 Real:
+
+Debug production issues
+🚀 8. Deployment (DevOps Basics)
+Elastic Beanstalk → Easy app deployment
+CodePipeline / CodeDeploy → CI/CD
+
+👉 For you:
+
+At least know Beanstalk
+📦 9. Scaling & Performance
+Auto Scaling → Handle traffic
+Load Balancer (ALB) → Distribute traffic
+💰 10. Cost Optimization (Bonus but valuable)
+Reserved Instances
+Spot Instances
+Budget alerts
+🎯 🔥 MOST IMPORTANT (FOCUS LIST)
+
+If you’re short on time, focus ONLY on:
+
+👉 MUST KNOW:
+
+EC2
+S3
+RDS
+VPC
+IAM
+Lambda
+
+👉 NICE TO HAVE:
+
+CloudFront
+API Gateway
+CloudWatch
+🧠 Real Full Stack Architecture (Interview GOLD)
+
+👉 Example you should explain:
+
+React frontend → hosted on S3
+Backend → EC2 / Lambda
+Database → RDS
+Images → S3
+CDN → CloudFront
+Security → IAM
+
+🔥 If you explain this → interviewer impressed
 
 3.Coding Questions
 4.Scenarios Questions
