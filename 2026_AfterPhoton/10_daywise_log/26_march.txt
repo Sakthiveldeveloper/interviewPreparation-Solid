@@ -1,0 +1,30 @@
+Plan :
+    All Process alignment
+    Make a Review Tech 
+    As per review list make strong revision Question in Mindmap, Theory, Coding, Scenarios
+    Start Preparation for Mock Interview
+
+Progress
+    All Process alignment ->Done
+    Make a Review Tech ->Done
+    Note -> Done
+    Mock Interview -> In Progress
+So if i complete this 5 topcis then plan to each day revision of all
+    1.Mindmap, Theory, Coding, Scenarios
+    and 
+    2.MockInterviews
+
+going the mock interviews 
+    1.html, 
+    2.css,
+    3.Js
+
+also study the Capegemini Question for 3 to 5 years Software Engineer
+    11.
+    12.
+    13.
+    14.
+    15.write a simple Promise that resolves after 1 seconds
+    16.React component that Fetches data Using useEffect
+    17.Explain me control & uncontrolled Components with example
+    18.What is Redux? Explain the statement architecture
