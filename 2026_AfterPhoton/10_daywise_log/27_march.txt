@@ -1,0 +1,21 @@
+Plan :
+    All Process alignment
+    Make a Review Tech 
+    As per review list make strong revision Question in Mindmap, Theory, Coding, Scenarios
+    Start Preparation for Mock Interview
+
+Progress
+    All Process alignment ->Done
+    Make a Review Tech ->Done
+    Note -> Done
+    Mock Interview -> In Progress
+So if i complete this 5 topcis then plan to each day revision of all
+    1.Mindmap, Theory, Coding, Scenarios
+    and 
+    2.MockInterviews
+
+going the mock interviews 
+    1.html  ->Done;
+    2.css   ->Done;
+    3.Js     ->Done(coding problems done Today);
+    3.React  ->In Progress;
