@@ -1,0 +1,24 @@
+import react, { useState } from 'react';
+
+export default function App() {
+  const [error, setError] = useState(false);
+  const [name, setName] = useState('')
+  const updateName = (value) =>{
+    setName(value)
+    if(value.length < 4){
+      // setName(value)
+      setError(true)
+    }else{
+      setError(false)
+    }
+  }
+  return (
+    <>
+      <div>
+        <h1>Controlled Input</h1>
+        <input value={name} onChange={(e)=>updateName(e.target.value)}/>
+        {error?<p>Atlest Need 3 latters of value</p>:''}
+      </div>
+    </>
+  )
+}

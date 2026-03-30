@@ -242,7 +242,7 @@ React.js
         A way to share data globally across the component tree without "prop drilling" (passing data through every level).
 
     -------------------------------------------------------------------------------------------------
-    REACT THEORY – TOP ~50 IMPORTANT TOPICS
+REACT THEORY – TOP ~50 IMPORTANT TOPICS
     🧠 1. CORE REACT FUNDAMENTALS (⭐⭐⭐⭐⭐)
         What is React? How it works internally
         JSX (how it converts to JS)
@@ -349,33 +349,29 @@ React.js
         Radio button selection
         Simple todo app
 ⚙️ PHASE 2: COMPONENT LOGIC (⭐⭐⭐⭐⭐)
-
     👉 Core React thinking
-
-    Parent → Child communication
-    Child → Parent callback
-    Sibling communication
-    Props drilling problem demo
-    Lift state up example
-    Create reusable button component
-    Create reusable modal
-    Create reusable input component
-    Dynamic form generation
-    Conditional rendering scenarios
+        Parent → Child communication
+        Child → Parent callback
+        Sibling communication
+        Props drilling problem demo
+        Lift state up example
+        Create reusable button component
+        Create reusable modal
+        Create reusable input component
+        Dynamic form generation
+        Conditional rendering scenarios
 🔥 PHASE 3: HOOKS CODING (VERY IMPORTANT) ⭐⭐⭐⭐⭐
-
     👉 Most asked in interviews
-
-    Implement custom useDebounce hook
-    Implement custom useThrottle hook
-    useEffect API call with cleanup
-    Prevent infinite re-render
-    Track previous value using useRef
-    Build useLocalStorage hook
-    useMemo optimization example
-    useCallback optimization example
-    Custom hook for API fetching
-    Custom hook for window resize
+        Implement custom useDebounce hook
+        Implement custom useThrottle hook
+        useEffect API call with cleanup
+        Prevent infinite re-render
+        Track previous value using useRef
+        Build useLocalStorage hook
+        useMemo optimization example
+        useCallback optimization example
+        Custom hook for API fetching
+        Custom hook for window resize
 ⚡ PHASE 4: API + ASYNC (⭐⭐⭐⭐⭐)
 
     👉 Very real interview scenarios

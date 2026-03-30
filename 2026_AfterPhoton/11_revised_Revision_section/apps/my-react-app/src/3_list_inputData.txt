@@ -1,0 +1,41 @@
+
+import React, { useState } from "react";
+
+export default function App() {
+  const [input, setInput] = useState('');
+  const [item, setItem] = useState([]);
+
+  const addItem = () => {
+    if (!input.trim()) return;
+    setItem([...item, input])
+    setInput("")
+  }
+  const removeItem = (index) =>{
+const updatedData =item.filter((_, i) => i !== index);
+setItem(updatedData)
+  }
+  const removeAllItem = () =>{
+    if(item.length>0){
+      setItem([])
+    }
+  }
+
+  return (
+    <>
+      <div>
+        <h1>List of data</h1>
+        <input value={input} onChange={(e) => setInput(e.target.value)}></input>
+        <button onClick={addItem}>Submit</button>
+        <button onClick={removeAllItem}>ClearAll</button>
+        <ul>
+          {item.map((items, index) => (
+            <li key={index}>
+            {items}
+          <button onClick={()=>removeItem(index)}>x</button>
+          </li>
+        ))}
+        </ul>
+      </div>
+    </>
+  )
+}
