@@ -6,82 +6,211 @@
 
 
 1.mindmap
-NoSQL
-├── 1. Basics
-│ ├── What is NoSQL? (Non-relational database)
-│ ├── Difference between SQL & NoSQL
-│ ├── Schema-less / flexible schema
-│ ├── Horizontal scalability
-│ └── When to use NoSQL
-│
-├── 2. Types of NoSQL Databases
-│ ├── Document-oriented
-│ │ ├── JSON/BSON documents
-│ │ ├── Examples: MongoDB, CouchDB
-│ │ └── Use cases: CMS, product catalogs
-│ ├── Key-Value Stores
-│ │ ├── Key-value pair storage
-│ │ ├── Examples: Redis, DynamoDB
-│ │ └── Use cases: Caching, session storage
-│ ├── Column-family Stores
-│ │ ├── Wide-column storage
-│ │ ├── Examples: Cassandra, HBase
-│ │ └── Use cases: Analytics, time-series data
-│ └── Graph Databases
-│ ├── Nodes, edges, relationships
-│ ├── Examples: Neo4j, ArangoDB
-│ └── Use cases: Social networks, recommendations
-│
-├── 3. Core Concepts
-│ ├── Data modeling (denormalization)
-│ ├── Sharding & partitioning
-│ ├── Replication & high availability
-│ ├── CAP Theorem (CP, AP)
-│ ├── Indexing strategies
-│ └── Query optimization
-│
-├── 4. CRUD Operations
-│ ├── Create (Insert documents/records)
-│ ├── Read (Find/query data)
-│ ├── Update (Modify existing data)
-│ └── Delete (Remove data)
-│
-├── 5. Advanced Features
-│ ├── Aggregation pipelines (MongoDB)
-│ ├── MapReduce
-│ ├── Full-text search
-│ ├── Geospatial queries
-│ └── Multi-document transactions
-│
-├── 6. Scaling & Performance
-│ ├── Horizontal scaling
-│ ├── Load balancing
-│ ├── Caching strategies
-│ ├── Read/write optimization
-│ └── Backup & restore
-│
-├── 7. Security
-│ ├── Authentication & authorization
-│ ├── Role-based access control (RBAC)
-│ ├── Encryption (at rest & in transit)
-│ ├── Injection prevention
-│ └── Database auditing & monitoring
-│
-├── 8. Integration with Applications
-│ ├── Connecting with Node.js, Python, Java
-│ ├── Using ORMs/ODMs (Mongoose for MongoDB)
-│ ├── REST API integration
-│ ├── GraphQL API integration
-│ └── Real-time apps (WebSockets, change streams)
-│
-└── 9. Popular NoSQL Databases
-├── MongoDB
-├── Redis
-├── Cassandra
-├── CouchDB
-├── Neo4j
-└── DynamoDB
+    NoSQL
+    ├── 1. Basics
+    │ ├── What is NoSQL? (Non-relational database)
+    │ ├── Difference between SQL & NoSQL
+    │ ├── Schema-less / flexible schema
+    │ ├── Horizontal scalability
+    │ └── When to use NoSQL
+    │
+    ├── 2. Types of NoSQL Databases
+    │ ├── Document-oriented
+    │ │ ├── JSON/BSON documents
+    │ │ ├── Examples: MongoDB, CouchDB
+    │ │ └── Use cases: CMS, product catalogs
+    │ ├── Key-Value Stores
+    │ │ ├── Key-value pair storage
+    │ │ ├── Examples: Redis, DynamoDB
+    │ │ └── Use cases: Caching, session storage
+    │ ├── Column-family Stores
+    │ │ ├── Wide-column storage
+    │ │ ├── Examples: Cassandra, HBase
+    │ │ └── Use cases: Analytics, time-series data
+    │ └── Graph Databases
+    │ ├── Nodes, edges, relationships
+    │ ├── Examples: Neo4j, ArangoDB
+    │ └── Use cases: Social networks, recommendations
+    │
+    ├── 3. Core Concepts
+    │ ├── Data modeling (denormalization)
+    │ ├── Sharding & partitioning
+    │ ├── Replication & high availability
+    │ ├── CAP Theorem (CP, AP)
+    │ ├── Indexing strategies
+    │ └── Query optimization
+    │
+    ├── 4. CRUD Operations
+    │ ├── Create (Insert documents/records)
+    │ ├── Read (Find/query data)
+    │ ├── Update (Modify existing data)
+    │ └── Delete (Remove data)
+    │
+    ├── 5. Advanced Features
+    │ ├── Aggregation pipelines (MongoDB)
+    │ ├── MapReduce
+    │ ├── Full-text search
+    │ ├── Geospatial queries
+    │ └── Multi-document transactions
+    │
+    ├── 6. Scaling & Performance
+    │ ├── Horizontal scaling
+    │ ├── Load balancing
+    │ ├── Caching strategies
+    │ ├── Read/write optimization
+    │ └── Backup & restore
+    │
+    ├── 7. Security
+    │ ├── Authentication & authorization
+    │ ├── Role-based access control (RBAC)
+    │ ├── Encryption (at rest & in transit)
+    │ ├── Injection prevention
+    │ └── Database auditing & monitoring
+    │
+    ├── 8. Integration with Applications
+    │ ├── Connecting with Node.js, Python, Java
+    │ ├── Using ORMs/ODMs (Mongoose for MongoDB)
+    │ ├── REST API integration
+    │ ├── GraphQL API integration
+    │ └── Real-time apps (WebSockets, change streams)
+    │
+    └── 9. Popular NoSQL Databases
+    ├── MongoDB
+    ├── Redis
+    ├── Cassandra
+    ├── CouchDB
+    ├── Neo4j
+    └── DynamoDB
 
 2.Theory Questions
+🚀 MONGODB (NoSQL) THEORY – TOP IMPORTANT TOPICS
+    🧠 1. NOSQL FUNDAMENTALS (⭐⭐⭐⭐⭐)
+    What is NoSQL?
+    Types of NoSQL (document, key-value, graph, column)
+    Why MongoDB?
+    SQL vs NoSQL difference
+
+    👉 VERY COMMON:
+
+    “When will you choose MongoDB over MySQL?”
+
+    📦 2. MONGODB BASICS (⭐⭐⭐⭐⭐)
+    Database → Collection → Document
+    BSON vs JSON
+    Dynamic schema
+
+    👉 KEY POINT:
+
+    Schema is flexible (not fixed like SQL)
+    🧩 3. CRUD OPERATIONS (⭐⭐⭐⭐⭐)
+    insertOne / insertMany
+    find / findOne
+    updateOne / updateMany
+    deleteOne / deleteMany
+
+    👉 Must be FAST in writing queries 💯
+
+    🔍 4. QUERYING & FILTERING (⭐⭐⭐⭐⭐)
+    Comparison operators ($gt, $lt, $in)
+    Logical operators ($and, $or)
+    Projection (select fields)
+    ⚡ 5. INDEXES (⭐⭐⭐⭐⭐) 🔥
+
+    👉 SAME importance as MySQL
+
+    What is index?
+    Single field / compound index
+    Performance improvement
+
+    👉 COMMON:
+
+    “How Mongo query becomes fast?”
+
+    🔗 6. RELATIONSHIPS (⭐⭐⭐⭐⭐)
+
+    👉 VERY IMPORTANT (INTERVIEW FAVORITE)
+
+    Embedded documents
+    Referenced documents
+
+    👉 COMMON:
+
+    “Embed vs Reference — which to use?”
+
+    🧠 7. SCHEMA DESIGN (⭐⭐⭐⭐⭐)
+
+    👉 MOST IMPORTANT FOR YOU
+
+    Denormalization
+    Data modeling
+    Avoid joins (as much as possible)
+    ⚙️ 8. AGGREGATION PIPELINE (⭐⭐⭐⭐⭐) 🔥
+
+    👉 VERY IMPORTANT
+
+    $match
+    $group
+    $project
+    $sort
+    $lookup
+
+    👉 COMMON:
+
+    “MongoDB alternative for JOIN?”
+
+    🔐 9. MONGOOSE (⭐⭐⭐⭐⭐)
+
+    👉 MUST for MERN dev
+
+    Schema definition
+    Models
+    Validation
+    Middleware (pre/post hooks)
+    ⚡ 10. PERFORMANCE (⭐⭐⭐⭐⭐)
+    Index usage
+    Query optimization
+    Pagination (skip/limit)
+    🌐 11. MONGODB + NODE (⭐⭐⭐⭐⭐)
+
+    👉 YOUR CORE AREA 💯
+
+    Connect using Mongoose
+    CRUD APIs
+    Error handling
+    Async operations
+    🔥 12. REAL-WORLD SCENARIOS (VERY IMPORTANT)
+
+    👉 THIS is what gets you selected
+
+    User + Orders system
+    Chat app messages
+    Logging system
+    Large dataset handling
+    Pagination APIs
 3.Coding Questions
+
+💻 MONGODB CODING QUESTIONS (INTERVIEW STYLE)
+    🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
+    Create collection
+    Insert documents
+    Find data with condition
+    Update document
+    ⚙️ PHASE 2: QUERYING (⭐⭐⭐⭐⭐)
+    Find users age > 25
+    Filter using multiple conditions
+    Select specific fields
+    🔗 PHASE 3: RELATIONSHIPS (⭐⭐⭐⭐⭐)
+    Embed documents example
+    Reference documents example
+    Populate using Mongoose
+    ⚡ PHASE 4: AGGREGATION (⭐⭐⭐⭐⭐)
+    Group users by city
+    Count total orders
+    Join collections using $lookup
+    🧩 PHASE 5: REAL-WORLD (⭐⭐⭐⭐⭐)
+    Build user + order schema
+    Pagination API
+    Search + filter API
+    Logging system
+
 4.Scenarios Questions

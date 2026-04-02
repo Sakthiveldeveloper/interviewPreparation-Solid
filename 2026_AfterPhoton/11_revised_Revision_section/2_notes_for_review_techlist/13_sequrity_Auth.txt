@@ -7,98 +7,99 @@
 
 1.mindmap
 
-SECURITY & AUTHENTICATION MIND MAP (INTERVIEW READY)
+  SECURITY & AUTHENTICATION MIND MAP (INTERVIEW READY)
 
-1. Basics (Must Understand Clearly)
-- Authentication (Who are you?)
-- Authorization (What can you access?)
-- Stateless vs Stateful authentication
-- Tokens vs Sessions
+  1. Basics (Must Understand Clearly)
+  - Authentication (Who are you?)
+  - Authorization (What can you access?)
+  - Stateless vs Stateful authentication
+  - Tokens vs Sessions
 
-2. JWT (JSON Web Token) 🔥🔥
-- What is JWT? (Token-based authentication)
-- Structure:
-  - Header
-  - Payload
-  - Signature
-- Flow:
-  - User login → server generates token
-  - Client stores token
-  - Token sent in Authorization header
-- Advantages:
-  - Stateless
-  - Scalable
-- Disadvantages:
-  - Cannot easily revoke
-- Access Token vs Refresh Token
+  2. JWT (JSON Web Token) 🔥🔥
+  - What is JWT? (Token-based authentication)
+  - Structure:
+    - Header
+    - Payload
+    - Signature
+  - Flow:
+    - User login → server generates token
+    - Client stores token
+    - Token sent in Authorization header
+  - Advantages:
+    - Stateless
+    - Scalable
+  - Disadvantages:
+    - Cannot easily revoke
+  - Access Token vs Refresh Token
 
-3. OAuth 2.0 🔥🔥
-- What is OAuth? (Authorization framework)
-- Used for third-party login (Google, GitHub)
-- Key roles:
-  - Resource Owner (User)
-  - Client (App)
-  - Authorization Server
-  - Resource Server
-- Flow:
-  - User → login via provider → get access token
-- Grant types:
-  - Authorization Code (most common)
-  - Client Credentials
-- Difference from JWT:
-  - OAuth = authorization framework
-  - JWT = token format
+  3. OAuth 2.0 🔥🔥
+  - What is OAuth? (Authorization framework)
+  - Used for third-party login (Google, GitHub)
+  - Key roles:
+    - Resource Owner (User)
+    - Client (App)
+    - Authorization Server
+    - Resource Server
+  - Flow:
+    - User → login via provider → get access token
+  - Grant types:
+    - Authorization Code (most common)
+    - Client Credentials
+  - Difference from JWT:
+    - OAuth = authorization framework
+    - JWT = token format
 
-4. Keycloak 🔥
-- Open-source Identity & Access Management (IAM)
-- Features:
-  - Single Sign-On (SSO)
-  - User management
-  - Role management
-- Concepts:
-  - Realm (tenant)
-  - Client (application)
-  - User & Roles
-- Used for:
-  - Enterprise authentication systems
+  4. Keycloak 🔥
+  - Open-source Identity & Access Management (IAM)
+  - Features:
+    - Single Sign-On (SSO)
+    - User management
+    - Role management
+  - Concepts:
+    - Realm (tenant)
+    - Client (application)
+    - User & Roles
+  - Used for:
+    - Enterprise authentication systems
 
-5. FusionAuth
-- Alternative to Keycloak (modern IAM solution)
-- Features:
-  - User authentication
-  - Social login
-  - Multi-factor authentication
-- Developer-friendly API
-- Hosted or self-hosted
+  5. FusionAuth
+  - Alternative to Keycloak (modern IAM solution)
+  - Features:
+    - User authentication
+    - Social login
+    - Multi-factor authentication
+  - Developer-friendly API
+  - Hosted or self-hosted
 
-6. RBAC (Role-Based Access Control) 🔥🔥
-- Access based on roles (Admin, User, Manager)
-- Example:
-  - Admin → full access
-  - User → limited access
-- Implementation:
-  - Store roles in DB or token
-  - Check role in middleware
-- Benefits:
-  - Simple
-  - Scalable
+  6. RBAC (Role-Based Access Control) 🔥🔥
+  - Access based on roles (Admin, User, Manager)
+  - Example:
+    - Admin → full access
+    - User → limited access
+  - Implementation:
+    - Store roles in DB or token
+    - Check role in middleware
+  - Benefits:
+    - Simple
+    - Scalable
 
-7. Security Best Practices (VERY IMPORTANT)
-- Use HTTPS always
-- Store tokens securely (HTTP-only cookies)
-- Use refresh tokens
-- Implement input validation
-- Prevent SQL Injection
-- Use environment variables for secrets
+  7. Security Best Practices (VERY IMPORTANT)
+  - Use HTTPS always
+  - Store tokens securely (HTTP-only cookies)
+  - Use refresh tokens
+  - Implement input validation
+  - Prevent SQL Injection
+  - Use environment variables for secrets
 
-8. Real-world Flow (MUST EXPLAIN IN INTERVIEW)
-- User logs in
-- Server validates credentials
-- JWT generated
-- Token sent to frontend
-- Frontend sends token in API calls
-- Backend verifies token + role (RBAC)
+  8. Real-world Flow (MUST EXPLAIN IN INTERVIEW)
+  - User logs in
+  - Server validates credentials
+  - JWT generated
+  - Token sent to frontend
+  - Frontend sends token in API calls
+  - Backend verifies token + role (RBAC)
 
 2.Theory Questions
+
 3.Coding Questions
 4.Scenarios Questions
