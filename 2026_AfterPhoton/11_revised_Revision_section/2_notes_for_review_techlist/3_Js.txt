@@ -170,7 +170,7 @@
    │   ├── Simple Jest examples
    │   └── Assertions & mocks
 
---------------------------------------
+-------------------------------------------------------------------------------------------------
 
 2.Theory Questions
 Here are your 25 JavaScript topics, summarized into simple, three-line explanations to complete your master list:

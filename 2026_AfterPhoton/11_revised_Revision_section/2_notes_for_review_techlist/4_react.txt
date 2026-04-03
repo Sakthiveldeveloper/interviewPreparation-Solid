@@ -240,7 +240,8 @@ React.js
         A tool that wraps a component to prevent it from re-rendering unless its props actually change.
     What is the Context API?
         A way to share data globally across the component tree without "prop drilling" (passing data through every level).
-
+    whats is React Fiber
+        
     -------------------------------------------------------------------------------------------------
 REACT THEORY – TOP ~50 IMPORTANT TOPICS
     🧠 1. CORE REACT FUNDAMENTALS (⭐⭐⭐⭐⭐)

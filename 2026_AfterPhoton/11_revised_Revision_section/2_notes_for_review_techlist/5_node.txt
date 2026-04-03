@@ -146,7 +146,6 @@
 2.Theory Questions
    Here is a concise summary of the 25 key Node.js topics we covered, organized for quick revision.
    Core Fundamentals
-
       1. What is Node.js? A cross-platform, open-source JavaScript runtime built on Chrome's V8 engine that executes JS code outside the browser.
       2. What is "Non-Blocking"? The ability of Node.js to start an I/O task and move to the next one without waiting for the first to finish.
       3. What is Event-Driven Architecture? A design where the flow is determined by events (clicks, data arrivals). The "Event Loop" listens for these signals to trigger functions.

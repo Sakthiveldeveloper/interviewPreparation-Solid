@@ -130,7 +130,110 @@
         Local Storage saves data in the browser forever, even if you close the tab. Session Storage only keeps data as long as the tab is open and wipes it once you leave. Both are safer and hold more data than old-fashioned cookies.
    24. Viewport Meta Tag
         The viewport tag is a single line of code that makes your website "mobile-friendly." It tells the browser to match the website's width to the screen's width. Without it, your site will look like a tiny, unreadable desktop version on a phone.
-
+-----------------------------------------------------------------------------------------------
+🚀 HTML THEORY – TOP IMPORTANT TOPICS
+     🧠 1. CORE HTML FUNDAMENTALS (⭐⭐⭐⭐⭐)
+          What is HTML? How browser reads it
+          Structure of HTML document (DOCTYPE, html, head, body)
+          DOM (Document Object Model)
+          HTML parsing & rendering flow
+          Difference: HTML vs CSS vs JavaScript
+          👉 VERY COMMON:
+          “How browser renders a webpage?”
+     ⚙️ 2. ELEMENTS & TAGS (⭐⭐⭐⭐)
+          Block vs Inline elements
+          Semantic vs Non-semantic elements
+          div vs span
+          Self-closing tags
+          Nesting rules
+     👉 Interview focus:
+          Why semantic HTML?
+          When to use div?
+     🏷️ 3. ATTRIBUTES (⭐⭐⭐⭐)
+          Global attributes (id, class, style, title)
+          id vs class (🔥 VERY IMPORTANT)
+          Boolean attributes (disabled, checked)
+          data-* attributes
+          Custom attributes
+     👉 VERY COMMON:
+          “Difference between id and class?”
+     🔗 4. LINKS & MEDIA (⭐⭐⭐⭐)
+          Anchor tag <a>
+          Image <img> + alt (🔥 IMPORTANT)
+          Audio, Video tags
+          iframe (security concerns)
+     👉 Interview focus:
+          Why alt attribute?
+          iframe risks?
+     📋 5. LISTS & TABLES (⭐⭐⭐)
+          ul, ol, dl
+          table, tr, td, th
+          colspan, rowspan
+          thead, tbody, tfoot
+     🧾 6. FORMS (⭐⭐⭐⭐⭐)
+          form tag (action, method)
+          GET vs POST (🔥 VERY IMPORTANT)
+          Input types
+          label (🔥 IMPORTANT)
+          name attribute
+          Validation (required, pattern)
+     👉 VERY COMMON:
+          “Why name attribute is important?”
+     🧠 7. SEMANTIC HTML5 (⭐⭐⭐⭐⭐)
+          header, nav, main, section, article, footer, aside
+          figure, figcaption
+     👉 Interview focus:
+          section vs article
+          Why semantic improves SEO?
+     ⚡ 8. META & HEAD (⭐⭐⭐⭐)
+          meta tags (charset, viewport)
+          title
+          link (CSS)
+          script
+     👉 VERY IMPORTANT:
+          Viewport meta tag (mobile responsiveness)
+     🚀 9. SCRIPT LOADING (VERY IMPORTANT ⭐⭐⭐⭐⭐)
+          async vs defer (🔥 MUST KNOW)
+     👉 REAL QUESTION:
+          Why script blocks UI?
+          When to use defer vs async?
+     ♿ 10. ACCESSIBILITY (a11y) (⭐⭐⭐⭐⭐)
+          alt text
+          label usage
+          ARIA roles
+          Keyboard navigation
+     👉 Interview focus:
+          How to make site accessible?
+     🌐 11. SEO & PERFORMANCE (⭐⭐⭐⭐)
+          Proper heading structure
+          alt text
+          semantic tags
+          meta description
+     🧠 12. BROWSER & STORAGE (⭐⭐⭐⭐)
+          DOM vs HTML
+          Browser rendering process
+          LocalStorage vs SessionStorage
+     🧩 13. REAL-WORLD SCENARIOS (VERY IMPORTANT 🔥)
+     👉 THIS is what interviewers love
+          Why page not responsive?
+          Why form not submitting?
+          Why image not showing?
+          Why script running twice?
+          Why layout breaking?
+     💥 HOW THEY ACTUALLY ASK (IMPORTANT)
+     ❌ Not like:
+          What is HTML?
+          ✅ They ask:
+          “Why your page is not mobile friendly?”
+          “Why form data not coming in backend?”
+          “Why SEO is bad for this page?”
+          “Why script is blocking UI?”
+          “Why accessibility is failing?”
+     🔥 HOW TO PREPARE (SMART WAY)
+          For each topic:
+          Explain in simple words
+          Write small example
+          Give real-world usage
 3.Coding Questions
 
 4.Scenarios Questions
