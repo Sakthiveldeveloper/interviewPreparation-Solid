@@ -1,0 +1,129 @@
+Plan :
+    1.Check the JD
+    2.Prepare the TechList
+    3.Make a plan and time alignment
+    4.Preparation Mindmap, Theory, Coding, Scenarios
+    5.Go with confident
+    6.Self Pitch Practice
+    Tomorrow/interview day:
+        Don’t try to be perfect
+        Try to be clear + confident + honest
+Excute the Progress
+    1.Check JD
+        Node js Devloper
+    2.Tech list
+        JS,
+        Node js,
+        Express/Fastify,
+        Type Script,
+        My sql,
+        Mongodb,
+        ORM,
+        REST/Graphql,
+        JWT/Auth,
+        Middleware,
+        Eventloop,
+        Error handling,
+        performance concepts
+    💯 Final Polished Tech List (Use This in Interview)
+        Instead of listing randomly, group it like this:
+        🧠 Core
+            JavaScript
+            Node.js (Event Loop, async nature)
+            ⚙️ Frameworks
+            Express.js / Fastify
+            Middleware
+        🔌 API Development
+            REST APIs
+            GraphQL
+        🗄️ Database
+            MongoDB
+            MySQL
+            ORM/ODM (Mongoose / Sequelize)
+        🔐 Authentication & Security
+            JWT
+            Auth flows
+        ⚡ Performance & Backend Concepts
+            Event Loop
+            Performance optimization
+            Caching (basic idea if asked)
+        🛠️ Reliability
+            Error handling
+    3.Make a plan and time alignment
+
+    4.Preparation Mindmap, Theory, Coding, Scenarios
+        Tech  wise,
+    5.Go with confident
+    6.Self Pitch Practice
+
+
+
+going interview with this points
+
+
+--------------------------------------------
+Js Coding questions:
+Coding Questions
+   1.write a simple Promise that resolves after 1 seconds
+   2.Reverse string
+   3.Palindrome
+   4.Anagram
+   5.remove Duplicate
+   6.Coucurent words
+   7.Flat Array
+   8.Max number
+   9.debounce
+   10.second largest number
+   11.intersectin of 2 array
+   12. sort withput use sort in built
+   13.throttle
+   14. deep clone of object
+   15.check object is empty
+   16.Find the missing number in an array of 1–N.
+   17.Implement a function that fetches data from an API and logs it using async/await.
+   18.Implement a function that fetch as post data in js
+--------------------------------------------
+node js questions
+🚀 NODE.JS – TOP 30 INTERVIEW QUESTIONS (4 YOE)
+🧠 1. CORE NODE + JS (MUST MASTER)
+Explain the Event Loop in Node.js
+What is non-blocking I/O?
+Difference between process.nextTick() vs setImmediate()
+How Node.js handles concurrency?
+What happens when you run a Node.js app internally?
+Explain streams (Readable, Writable, Duplex)
+Buffer vs Stream
+How does async/await work internally?
+⚙️ 2. EXPRESS + BACKEND (VERY COMMON)
+What is middleware in Express?
+Types of middleware?
+How request flows in Express?
+How to handle global error handling?
+How do you structure a Node project (best practices)?
+How do you handle validation in APIs?
+🔌 3. API DESIGN (IMPORTANT)
+What makes a good REST API?
+REST vs GraphQL
+How do you handle pagination, filtering, sorting?
+How do you version APIs?
+Idempotent APIs — what & why?
+🗄️ 4. DATABASE (REAL-WORLD QUESTIONS)
+MongoDB vs MySQL — when to use what?
+What is indexing? Why important?
+What is aggregation (MongoDB)?
+Explain transactions (basic idea)
+ORM vs raw queries — trade-offs?
+🔐 5. AUTH & SECURITY (VERY IMPORTANT)
+How does JWT authentication work?
+JWT vs Session
+How do you secure Node.js APIs?
+What is bcrypt? Why use it?
+⚡ 6. PERFORMANCE & SCALING (THIS DECIDES SELECTION)
+How to improve Node.js performance?
+How do you handle large data / high traffic APIs?
+
+---------------------
+Axchange Interview Done
+questions:
+
+review:
