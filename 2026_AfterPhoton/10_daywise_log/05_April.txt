@@ -1,12 +1,11 @@
-1.Preapare react coding Round
-2.axchange Level 2 Preparation
-Apply jobs in Online
+Mock interview Preparation
+React -->
+TypeScript
+Next JS
 
------------------
-Study CI/CD
-have knowledge of the CI and CD and also needed packages
+
 ------------------------------------------------------------------------------------------------------
-Plan for Single Day Interview :
+Plan :
     1.Check the JD
     2.Prepare the TechList
     3.Make a plan and time alignment
