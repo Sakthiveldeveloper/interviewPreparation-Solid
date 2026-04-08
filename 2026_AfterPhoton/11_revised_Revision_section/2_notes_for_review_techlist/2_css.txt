@@ -194,7 +194,7 @@
    21. CSS Preprocessors (Sass/LESS)
         Preprocessors add programming features like variables, nesting, and functions to standard CSS. You write code in a "fancy" version (like Sass) which is then compiled into regular CSS for the browser. They help keep large projects organized and reduce repetitive code.
    22. Reflow & Repaint
-        Reflow is when the browser calculates the size and position of elements; Repaint is when it draws the pixels (colors). Reflow is "expensive" and slow, while Repaint is faster. Optimizing CSS means choosing properties that avoid constant Reflows for smoother performance.
+         Reflow is when the browser calculates the size and position of elements; Repaint is when it draws the pixels (colors). Reflow is "expensive" and slow, while Repaint is faster. Optimizing CSS means choosing properties that avoid constant Reflows for smoother performance.
 
 --------------------------------------------------------------------------------------------------------
 🚀 CSS THEORY – TOP IMPORTANT TOPICS
@@ -343,3 +343,4 @@
     
 Follow-up :
     Date 26 march -> read
+    Date 07 April -> read for Axchange L2 round interview
