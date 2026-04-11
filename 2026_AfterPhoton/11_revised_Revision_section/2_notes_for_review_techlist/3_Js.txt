@@ -320,92 +320,92 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
    18.Implement a function that fetch as post data in js
 
 --------------------------------------------------------------------------------------------------------
-   🚀 TOP 50 JavaScript CODING QUESTIONS (4–6 YOE)
-🧠 PHASE 1: MUST-DO (CORE FOUNDATION) — ⭐⭐⭐⭐⭐
-   👉 If you only do these, you can still clear many interviews
-      Reverse a string
-      Check palindrome
-      Find max/min in array
-      Remove duplicates from array
-      Count frequency of elements
-      Find second largest number
-      Find missing number in array
-      Flatten array (1 level)
-      Deep flatten array (nested)
-      Merge two arrays without duplicates
-⚙️ PHASE 2: ARRAY + STRING LOGIC — ⭐⭐⭐⭐⭐
-      Longest substring without repeating characters
-      Anagram check
-      Rotate array by k steps
-      Chunk array into size N
-      Group array of objects by key
-      Sort array without .sort()
-      Find intersection of two arrays
-      Move zeros to end
-      Find pairs with given sum
-      Find first non-repeating character  
-   🔥 PHASE 3: ADVANCED JS (HIGHLY ASKED) — ⭐⭐⭐⭐⭐
-      👉 VERY IMPORTANT FOR YOU
-      Implement debounce
-      Implement throttle
-      Deep clone object
-      Shallow vs deep copy implementation
-      Memoization function
-      Currying function
-      Function composition
-      Infinite currying (sum(1)(2)(3))
-      Once function (execute only once)
-      Pipe / compose utility
-   ⚡ PHASE 4: PROMISE & ASYNC (CRITICAL) — ⭐⭐⭐⭐⭐
-      👉 This is where most people fail
-      Implement Promise.all
-      Implement Promise.race
-      Retry failed API call (with limit)
-      Execute promises in parallel vs sequential
-      Limit concurrent API calls
-      Build async queue system
-   🧱 PHASE 5: POLYFILLS (INTERVIEW FAVORITE) — ⭐⭐⭐⭐⭐
-      👉 MUST prepares
-      Polyfill for bind
-      Polyfill for call
-      Polyfill for apply
-      Polyfill for map
-      Polyfill for filter
-      Polyfill for reduce
-   🧩 PHASE 6: OBJECT & LOGIC — ⭐⭐⭐⭐
-      Deep object comparison
-      Convert flat object → nested object
-      Object flattening
-      Immutable update function
-   🏗️ PHASE 7: REAL-WORLD PROBLEMS — ⭐⭐⭐⭐⭐
-      👉 This will impress interviewer (very important for MERN dev)
-      Search input with debounce
-      Infinite scroll logic
-      Pagination system
-      Cache API response (LRU cache basic)
-   🧠 HOW TO PRACTICE (DON’T SKIP THIS)
-      👉 For EACH question:
-      First try yourself (20–30 mins)
-      Write clean code
-      Optimize (time + space)
-      Explain out loud (VERY IMPORTANT)
-   🔥 PRIORITY (If time is less)
-      Focus first on:
-      👉 Debounce
-      👉 Promise.all
-      👉 Deep clone
-      👉 Currying
-      👉 Polyfills
-      👉 Array problems
+🚀 TOP 50 JavaScript CODING QUESTIONS (4–6 YOE)
+   🧠 PHASE 1: MUST-DO (CORE FOUNDATION) — ⭐⭐⭐⭐⭐
+      👉 If you only do these, you can still clear many interviews
+         Reverse a string
+         Check palindrome
+         Find max/min in array
+         Remove duplicates from array
+         Count frequency of elements
+         Find second largest number
+         Find missing number in array
+         Flatten array (1 level)
+         Deep flatten array (nested)
+         Merge two arrays without duplicates
+   ⚙️ PHASE 2: ARRAY + STRING LOGIC — ⭐⭐⭐⭐⭐
+         Longest substring without repeating characters
+         Anagram check
+         Rotate array by k steps
+         Chunk array into size N
+         Group array of objects by key
+         Sort array without .sort()
+         Find intersection of two arrays
+         Move zeros to end
+         Find pairs with given sum
+         Find first non-repeating character  
+      🔥 PHASE 3: ADVANCED JS (HIGHLY ASKED) — ⭐⭐⭐⭐⭐
+         👉 VERY IMPORTANT FOR YOU
+         Implement debounce
+         Implement throttle
+         Deep clone object
+         Shallow vs deep copy implementation
+         Memoization function
+         Currying function
+         Function composition
+         Infinite currying (sum(1)(2)(3))
+         Once function (execute only once)
+         Pipe / compose utility
+      ⚡ PHASE 4: PROMISE & ASYNC (CRITICAL) — ⭐⭐⭐⭐⭐
+         👉 This is where most people fail
+         Implement Promise.all
+         Implement Promise.race
+         Retry failed API call (with limit)
+         Execute promises in parallel vs sequential
+         Limit concurrent API calls
+         Build async queue system
+      🧱 PHASE 5: POLYFILLS (INTERVIEW FAVORITE) — ⭐⭐⭐⭐⭐
+         👉 MUST prepares
+         Polyfill for bind
+         Polyfill for call
+         Polyfill for apply
+         Polyfill for map
+         Polyfill for filter
+         Polyfill for reduce
+      🧩 PHASE 6: OBJECT & LOGIC — ⭐⭐⭐⭐
+         Deep object comparison
+         Convert flat object → nested object
+         Object flattening
+         Immutable update function
+      🏗️ PHASE 7: REAL-WORLD PROBLEMS — ⭐⭐⭐⭐⭐
+         👉 This will impress interviewer (very important for MERN dev)
+         Search input with debounce
+         Infinite scroll logic
+         Pagination system
+         Cache API response (LRU cache basic)
+      🧠 HOW TO PRACTICE (DON’T SKIP THIS)
+         👉 For EACH question:
+         First try yourself (20–30 mins)
+         Write clean code
+         Optimize (time + space)
+         Explain out loud (VERY IMPORTANT)
+      🔥 PRIORITY (If time is less)
+         Focus first on:
+         👉 Debounce
+         👉 Promise.all
+         👉 Deep clone
+         👉 Currying
+         👉 Polyfills
+         👉 Array problems
 
-   👉 Phase 1:
-      Finish these 50 properly (10–12 days)
-   👉 Phase 2:
-      Practice variations (important)
-   Change conditions
-      Add constraints
-   👉 Phase 3:
-      Mock interviews
+      👉 Phase 1:
+         Finish these 50 properly (10–12 days)
+      👉 Phase 2:
+         Practice variations (important)
+      Change conditions
+         Add constraints
+      👉 Phase 3:
+         Mock interviews
 
 ------------------------------------------------------------------------------------------------------
 

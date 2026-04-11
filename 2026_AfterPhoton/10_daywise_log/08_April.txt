@@ -7,6 +7,7 @@ L2 Interview of Axchange
     Bangalore based interview for software developer Preparation and af is interview
 
 review:
+    Interview is failed Because of the Lack of interest and lack of communication
 ------------------------------------------------------------------------------------------------------
 Plan :
     1.Check the JD
@@ -19,3 +20,233 @@ Plan :
         Don’t try to be perfect
         Try to be clear + confident + honest
 
+
+-====================
+progresss
+js coding quesions revised
+// 1.reverse String
+// function reverseStrin(inputParams){
+//     // use in build
+//     // return inputParams.split('').reverse().join('')
+//     // use for loop
+//     let reversedValue = '';
+//     for(let i = inputParams.length-1; i>=0; i--){
+//         reversedValue += inputParams[i]
+//     }
+//     return reversedValue
+// }
+// console.log(reverseStrin('9876456'))
+// 2.palindrome
+// function palindromeCheck(inputParams){
+//     // use inbuild
+//     // let revesedValue =  inputParams.split('').reverse().join('');
+//     // return  revesedValue === inputParams
+//     // use for loop
+//     let reversedValue = '';
+//     for(let i = inputParams.length-1; i>=0; i--){
+//         reversedValue += inputParams[i]
+//     }
+//     return inputParams ==reversedValue
+// }
+// console.log(palindromeCheck('malayalam'))
+// 3.cound words
+
+// function concurentWords(inputParams){
+//     let trimmervalue =  inputParams.toLowerCase()    ;
+//     let charCount= {};
+//     for (let char of trimmervalue){
+//          charCount[char] = (charCount[char] | 0) +1
+//     }
+//     return  charCount
+// }
+// console.log(concurentWords('Check'))
+
+// 4.Check anagram
+// function  CheckAnagram(inputParams1, inputParams2){
+//     // use inbuild
+//     //  let sortedValue1 = inputParams1.split('').sort().join('');
+//     //  let sortedValue2 = inputParams2.split('').sort().join('');
+//     //  return sortedValue1 == sortedValue2
+//     // use for loop
+//     let charCount = {};
+//     for(let char of inputParams1) {
+//         charCount[char] = (charCount[char] | 0) +1
+//     }
+//     for(let char1 of inputParams2){
+//         if(!charCount[char1]){
+//             return false
+//         } else {
+//           charCount[char1]  -=1
+//         }
+//     }
+//     return true
+// }
+// console.log(CheckAnagram('cat', 'act'))
+// console.log(CheckAnagram('rat', 'act'))
+
+// 5.remove Duplicate
+// function removeDuplicate(inputParams){
+//     // use set
+//     // return new Set(inputParams)
+//     // use filter
+//     // return inputParams.filter((value, index, arra)=>{
+//     //     return inputParams.indexOf(value) == index
+//     // })
+//     // use reduce
+//     return inputParams.reduce((value, acc)=>{
+//         if(!value.includes(acc)){
+//             value.push(acc)
+//         }
+//         return value
+//     },[])
+// }
+// console.log(removeDuplicate([1,2,3,4,1,3,4,5,6,1,2,4]))
+
+// // 6. flat array
+// function flattedArray(inputArray) {
+//     // use For loop
+//     // let flattenArray = [];
+//     // for(let i = 0; i<inputArray.length; i++){
+//     //     if(Array.isArray(inputArray[i])){
+//     //         flattenArray = flattenArray.concat(flattedArray(inputArray[i]))
+//     //     } else {
+//     //         flattenArray.push(inputArray[i])
+//     //     }
+//     // }
+//     // return flattenArray;
+//     // use in build
+//     return inputArray.flat(Infinity)
+// }
+// console.log(flattedArray([1,2,[3,4],5,[6,7,[8,9]]]))
+
+// 7.find max number
+// function findMaxNum(inputArray){
+//     // use for loop
+//     // let maxNumber= inputArray[0];
+//     // for(let i of inputArray){
+//     //     if(minNumber < i){
+//     //         maxNumber = i
+//     //     }
+//     // }
+//     // return maxNumber
+//     // use math in build
+//     // return Math.max(...inputArray)
+//     // min
+//     // return Math.min(...inputArray)
+//     // in for loop for min
+//     let maxNumber= inputArray[0];
+//     for(let i of inputArray){
+//         if(maxNumber > i){
+//             maxNumber = i
+//         }
+//     }
+//     return maxNumber
+// }
+// console.log(findMaxNum([1,2,3,484,5,111,424]))
+
+// 8.debounce
+// function debounce(func,delay){
+//     let timer;
+//     return function (...args){
+//         clearTimeout(timer);
+//         timer = setTimeout(()=>{
+//             func.apply(this, args)
+//         }, delay)
+//     }
+// }
+// const searchDebounce = debounce(()=>{
+//     console.log('Enter Search debounce')
+// }, 100)
+
+// searchDebounce()
+
+// 9.throtller 
+// function throtler(func,limit){
+//     let funcCanRun = true;
+//     return function (...args){
+//         if(!funcCanRun){
+//              func.apply(this, args);
+//              funcCanRun = false;
+//             setTimeout(()=>{
+//                 func.apply(...args);
+//                 funcCanRun = true
+//             }, limit)
+//         }
+//     }
+// }
+// const myThrotlle = throtler(()=>{
+//     console.log('Enter Search My throtlle')
+// }, 1002)
+
+// myThrotlle()
+
+// 10.second Largest Number 
+// function secondLargetNum (input) {
+//     let firstLargestNo = -Infinity;
+//     let secondLargetNo = -Infinity
+//     for(let no of input){
+//         // console.log(no)
+//         if(no > firstLargestNo){
+//             // console.log('enter11', no)
+//             secondLargetNo = firstLargestNo;
+//             firstLargestNo = no
+//         } else if (no > secondLargetNo && no <firstLargestNo){
+//             // console.log('enter22', no)
+//             secondLargetNo = no
+//         }
+//     }
+//     return secondLargetNo
+// }
+// console.log(secondLargetNum([1,2,4,11,3232,168]))
+
+// 11.get call in fetch
+// async function getData (inputUrl){
+//     try{
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         console.log(data)
+//         return data;
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
+// console.log(getData('rtyuidspoadsoifosif'))
+// 12. post url in fetch
+// function postUrl(url, payload) {
+//     try {
+//         const resp = await fetch(url, {
+//             method: 'POST',
+//             header: {
+//                 'Content-Type': 'applcation/json'
+//             },
+//             body: JSON.strigify(payload)
+//         })
+//         const data =  await resp.json();
+//         return data
+//     }catch(error){
+//         console.log(error)
+//     }
+// }
+// console.log(postUrl('www.ewwew.com', {
+//     name:'sakthi', age: 27
+// }))
+
+const myPromise =  new Promise((resolve, reject)=>{
+   const success = true;
+
+    setTimeout(() => {
+        if (success) {
+            resolve("Data received! ✅");
+        } else {
+            reject("Error: Something went wrong ❌");
+        }
+    }, 2000);
+})
+
+myPromise
+    .then((data) => console.log(data))    // Runs if resolved
+    .catch((err) => console.error(err))   // Runs if rejected
+    .finally(() => console.log("Done"));  // Runs always
+
+-------------------------------------------------------
+next React

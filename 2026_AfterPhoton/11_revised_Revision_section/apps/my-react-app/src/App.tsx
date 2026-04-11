@@ -1,25 +1,9 @@
-import react  from  'react';
-import { useDebounce } from './useDebounce';
+import React from "react";
 
-
-export default function App () {
-  function debounce (func, delay){
-    let timmer = '';
-    return function (...args){
-      clearTimeout(timmer);
-     timmer = setTimeout(()=>{
-      func.apply(...args)
-     },delay)
-    }
-  }
-
-  const getData = debounce(()=>{
-    console.log('getDated')
-  },500)
-  getData()
+export default function App(){
   return(
     <>
-      <h1>Debouce Function</h1>
+    <h1>Check Run</h1>
     </>
   )
 }
