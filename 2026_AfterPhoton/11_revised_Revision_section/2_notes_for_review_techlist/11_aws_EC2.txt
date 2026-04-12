@@ -1,0 +1,218 @@
+
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+
+1.mindmap
+Amazon EC2 (Elastic Compute Cloud)
+│
+├── 1. Basics
+│   ├── What is EC2?
+│   ├── Virtual Server (Instance)
+│   ├── Pay-as-you-go pricing
+│
+├── 2. Instance Types
+│   ├── General Purpose (t2, t3)
+│   ├── Compute Optimized (c5)
+│   ├── Memory Optimized (r5)
+│   ├── Storage Optimized (i3)
+│
+├── 3. AMI (Amazon Machine Image)
+│   ├── Pre-configured OS
+│   ├── Linux / Windows
+│   ├── Custom AMI
+│
+├── 4. Instance Lifecycle
+│   ├── Launch
+│   ├── Running
+│   ├── Stop
+│   ├── Terminate
+│
+├── 5. Storage
+│   ├── EBS (Elastic Block Store)
+│   ├── Instance Store
+│   ├── Snapshots
+│
+├── 6. Networking
+│   ├── VPC
+│   ├── Subnets
+│   ├── Public IP / Elastic IP
+│   ├── Security Groups
+│   ├── NACL
+│
+├── 7. Security
+│   ├── Key Pair (SSH)
+│   ├── Security Groups (Firewall)
+│   ├── IAM Roles
+│
+├── 8. Scaling & Load
+│   ├── Auto Scaling
+│   ├── Load Balancer (ALB, NLB)
+│
+├── 9. Pricing Models
+│   ├── On-demand
+│   ├── Reserved
+│   ├── Spot Instances
+│
+├── 10. Monitoring
+│   ├── CloudWatch
+│   ├── Logs & Metrics
+│
+└── 11. Use Cases
+    ├── Web hosting
+    ├── Backend APIs
+    ├── Microservices
+    ├── ML workloads
+------------------------------------------------------------
+📘 EC2 Theory Questions (With Answers)
+🔹 1. What is Amazon EC2?
+
+Answer:
+EC2 is a service that provides resizable virtual servers in the cloud.
+It allows users to run applications without owning physical hardware.
+
+🔹 2. What is an EC2 instance?
+
+Answer:
+An EC2 instance is a virtual machine running in AWS.
+It includes CPU, memory, storage, and OS.
+
+🔹 3. What is AMI?
+
+Answer:
+AMI (Amazon Machine Image) is a template used to launch EC2 instances.
+It contains OS, software, and configurations.
+
+🔹 4. Difference between Stop and Terminate?
+Stop	Terminate
+Instance paused	Instance deleted
+Can restart	Cannot recover
+Data in EBS kept	Data lost
+🔹 5. What is a Security Group?
+
+Answer:
+A Security Group is a virtual firewall that controls inbound and outbound traffic.
+
+👉 Example:
+
+Allow port 22 → SSH
+Allow port 80 → HTTP
+🔹 6. What is a Key Pair?
+
+Answer:
+A Key Pair is used to securely connect to EC2 instances via SSH.
+It contains:
+
+Public key (AWS stores)
+Private key (.pem file)
+🔹 7. What is an Elastic IP?
+
+Answer:
+Elastic IP is a static public IP address that can be attached to an EC2 instance.
+
+🔹 8. What is EBS?
+
+Answer:
+EBS (Elastic Block Store) is persistent storage for EC2.
+
+👉 Even if instance stops → data remains
+
+🔹 9. Difference between EBS and Instance Store?
+EBS	Instance Store
+Persistent	Temporary
+Data safe	Data lost on stop
+Network storage	Local storage
+🔹 10. What is an Instance Type?
+
+Answer:
+Defines hardware configuration (CPU, RAM, storage).
+Example:
+
+t2.micro → small workload
+c5 → compute-heavy
+🔹 11. What is Auto Scaling?
+
+Answer:
+Automatically increases or decreases EC2 instances based on traffic.
+
+🔹 12. What is Load Balancer?
+
+Answer:
+Distributes incoming traffic across multiple EC2 instances to improve performance and availability.
+
+🔹 13. What is VPC?
+
+Answer:
+VPC (Virtual Private Cloud) is a private network inside AWS where EC2 runs.
+
+🔹 14. What is IAM Role in EC2?
+
+Answer:
+IAM Role allows EC2 to access other AWS services securely without credentials.
+
+🔹 15. What is a Snapshot?
+
+Answer:
+A snapshot is a backup of EBS volume stored in AWS.
+
+🔹 16. What happens when EC2 stops?
+
+Answer:
+
+Instance shuts down
+RAM cleared
+EBS data remains
+Public IP may change
+🔹 17. How do you connect to EC2?
+
+Answer:
+Using SSH:
+
+ssh -i key.pem ubuntu@ip
+🔹 18. What are EC2 pricing models?
+
+Answer:
+
+On-demand → pay as you go
+Reserved → long-term cheaper
+Spot → very cheap but can terminate anytime
+🔹 19. How do you secure EC2?
+
+Answer:
+
+Use Security Groups
+Use IAM roles
+Disable root login
+Use HTTPS
+Keep OS updated
+🔹 20. When should you use EC2?
+
+Answer:
+
+Full control needed
+Custom backend setup
+Long-running applications
+Microservices hosting
+🎯 Scenario-Based Questions (VERY IMPORTANT)
+🔹 21. How to host a website using EC2?
+Launch instance
+Install server (Nginx/Node)
+Upload code
+Open ports
+🔹 22. How to handle high traffic?
+Use Auto Scaling + Load Balancer
+🔹 23. How to reduce cost?
+Use Spot Instances
+Stop unused instances
+🔹 24. How to ensure high availability?
+Use multiple EC2 instances
+Deploy in multiple AZs
+🔹 25. EC2 vs Lambda?
+EC2	Lambda
+Full server	Serverless
+Manual scaling	Auto scaling
+Long-running	Event-based
+--------------------------------------

@@ -1,0 +1,12 @@
+plan 
+    React
+    Type Script
+    Next JS
+    vue
+    Angular
+    Node JS
+    CI/CD
+    AWS
+Progess
+    React coding
+    
