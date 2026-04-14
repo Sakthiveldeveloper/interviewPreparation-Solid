@@ -241,7 +241,7 @@ React.js
     What is the Context API?
         A way to share data globally across the component tree without "prop drilling" (passing data through every level).
     whats is React Fiber
-        
+        React Fiber is the internal reconciliation algorithm introduced in React 16 that enables asynchronous, interruptible, and priority-based rendering to improve UI performance and responsiveness.
     -------------------------------------------------------------------------------------------------
 REACT THEORY – TOP ~50 IMPORTANT TOPICS
     🧠 1. CORE REACT FUNDAMENTALS (⭐⭐⭐⭐⭐)
