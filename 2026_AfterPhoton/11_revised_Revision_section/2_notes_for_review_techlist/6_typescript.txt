@@ -179,6 +179,126 @@
 
    Would you like a practice quiz based on these notes to test your knowledge?
 
+-----------------------------------------------------------------------------------------
+✅ TypeScript Theory – Q&A (Interview Revision Notes)
+🔹 Core Fundamentals
+
+1. What is TypeScript?
+TypeScript is a superset of JavaScript that adds static typing, enabling better error checking and improved code quality.
+
+2. Why use TypeScript?
+
+Detect errors at compile time
+Better code readability
+Strong tooling (autocomplete, IntelliSense)
+Easier to maintain large applications
+
+3. What is Static Typing?
+Static typing means defining variable types at compile time, so errors can be caught before execution.
+
+4. What is Type Inference?
+TypeScript automatically determines the type of a variable based on its value.
+
+5. What is the difference between TypeScript and JavaScript?
+TypeScript includes types and compiles to JavaScript, while JavaScript runs directly in the browser without type checking.
+
+🔹 Data Types
+
+6. What are basic types in TypeScript?
+
+string
+number
+boolean
+null
+undefined
+any
+unknown
+void
+
+7. What is the difference between any and unknown?
+
+any: disables type checking
+unknown: safer, requires type checking before usage
+
+8. What is void?
+Used for functions that do not return any value.
+
+9. What is never?
+Represents values that never occur (e.g., function that throws error or infinite loop).
+
+10. What are Union Types?
+A variable can hold multiple types.
+Example: string | number
+
+11. What are Literal Types?
+Specific fixed values as types.
+Example: "success" | "error"
+
+🔹 Objects & Custom Types
+
+12. What is an Interface?
+Defines the structure of an object. Mostly used for object shapes and APIs.
+
+13. What is a Type Alias?
+Used to define custom types, including unions and complex structures.
+
+14. Difference between Interface and Type?
+
+Interface → extendable, used for objects
+Type → more flexible (supports unions, primitives)
+
+15. What is Readonly?
+Makes properties immutable (cannot be changed after initialization).
+
+16. What is Optional Property?
+Defined using ?, meaning the property may or may not exist.
+
+🔹 Functions & Generics
+
+17. How do you type a function?
+By defining parameter types and return type.
+Example: (a: number, b: number): number
+
+18. What are Generics?
+Generics allow creating reusable components that work with any type.
+
+19. Why use Generics?
+
+Reusability
+Type safety
+Avoid duplication
+🔹 Advanced Concepts
+
+20. What are Enums?
+Enums define a set of named constants.
+
+21. What is a Tuple?
+An array with fixed types and length.
+Example: [string, number]
+
+22. What is Type Assertion?
+Telling TypeScript to treat a value as a specific type.
+Example: value as string
+
+23. What are Utility Types?
+Predefined types to transform existing types:
+
+Partial
+Required
+Readonly
+Pick
+Omit
+Record
+🔹 Modules & Configuration
+
+24. What is tsconfig.json?
+Configuration file that controls TypeScript compilation settings.
+
+25. What is Module in TypeScript?
+A file that exports/imports variables, functions, or classes.
+
+-----------------------------------------------------------------------------------------
+
 🧠 TYPESCRIPT THEORY (INTERVIEW CORE) ⭐⭐⭐⭐⭐
    🔹 1. BASICS (⭐⭐⭐⭐⭐)
    What is TypeScript? Why use it?
@@ -314,3 +434,10 @@
 
 
 4.Scenarios Questions
+
+
+
+-----------------------------------------------------------------------------------------------
+Follow-up :
+         Date 13 April ->  read for Interview
+         Date 14 April ->  read for Interview

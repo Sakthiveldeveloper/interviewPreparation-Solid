@@ -457,3 +457,5 @@ Final React Coding Questions List (Beginner → Advanced)
     
 Follow-up :
     Date 26 march -> read
+    Date 13 April ->  read for Interview
+    Date 14 April ->  read for Interview
