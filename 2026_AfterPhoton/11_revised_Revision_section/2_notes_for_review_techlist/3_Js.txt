@@ -344,7 +344,7 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
          Move zeros to end
          Find pairs with given sum
          Find first non-repeating character  
-      🔥 PHASE 3: ADVANCED JS (HIGHLY ASKED) — ⭐⭐⭐⭐⭐
+   🔥 PHASE 3: ADVANCED JS (HIGHLY ASKED) — ⭐⭐⭐⭐⭐
          👉 VERY IMPORTANT FOR YOU
          Implement debounce
          Implement throttle
@@ -356,7 +356,7 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
          Infinite currying (sum(1)(2)(3))
          Once function (execute only once)
          Pipe / compose utility
-      ⚡ PHASE 4: PROMISE & ASYNC (CRITICAL) — ⭐⭐⭐⭐⭐
+   ⚡ PHASE 4: PROMISE & ASYNC (CRITICAL) — ⭐⭐⭐⭐⭐
          👉 This is where most people fail
          Implement Promise.all
          Implement Promise.race
@@ -364,7 +364,7 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
          Execute promises in parallel vs sequential
          Limit concurrent API calls
          Build async queue system
-      🧱 PHASE 5: POLYFILLS (INTERVIEW FAVORITE) — ⭐⭐⭐⭐⭐
+   🧱 PHASE 5: POLYFILLS (INTERVIEW FAVORITE) — ⭐⭐⭐⭐⭐
          👉 MUST prepares
          Polyfill for bind
          Polyfill for call
@@ -372,12 +372,12 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
          Polyfill for map
          Polyfill for filter
          Polyfill for reduce
-      🧩 PHASE 6: OBJECT & LOGIC — ⭐⭐⭐⭐
+   🧩 PHASE 6: OBJECT & LOGIC — ⭐⭐⭐⭐
          Deep object comparison
          Convert flat object → nested object
          Object flattening
          Immutable update function
-      🏗️ PHASE 7: REAL-WORLD PROBLEMS — ⭐⭐⭐⭐⭐
+   🏗️ PHASE 7: REAL-WORLD PROBLEMS — ⭐⭐⭐⭐⭐
          👉 This will impress interviewer (very important for MERN dev)
          Search input with debounce
          Infinite scroll logic
@@ -407,8 +407,103 @@ You now have a complete reference guide for HTML, CSS, and JavaScript. Do you wa
       👉 Phase 3:
          Mock interviews
 
-------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+🚀 ✅ UPDATED JS CODING + CONCEPT LIST (4 YEARS LEVEL)
+🧠 1. CORE JAVASCRIPT (MUST MASTER)
 
+These are non-negotiable — almost guaranteed questions:
+
+Closures (with real example)
+this keyword (all cases: normal, arrow, method, constructor)
+Hoisting (var, let, const)
+Scope (global, function, block)
+Event Loop (microtask vs macrotask 🔥)
+Call, Apply, Bind (implement also)
+Prototypes & Inheritance
+Execution Context
+⚙️ 2. FUNCTIONAL PROGRAMMING
+
+Very common in JS interviews:
+
+Currying
+Memoization
+Pure functions
+Higher-order functions
+
+👉 Coding:
+
+Custom map
+Custom filter
+Custom reduce
+📦 3. OBJECT & ARRAY PROBLEMS (IMPORTANT)
+
+You already did basics — now upgrade:
+
+Must Know:
+Flatten array (✅ you did)
+Flatten object 🔥
+Deep clone 🔥 (VERY IMPORTANT)
+Group By key
+Merge objects
+Remove duplicates (optimized using Set/Map)
+Sort array of objects
+🔢 4. DSA STYLE PROBLEMS (MEDIUM LEVEL)
+
+Interviewers expect at least 1 medium problem
+
+Must Prepare:
+Two Sum
+Longest substring without repeating characters 🔥
+First non-repeating character
+Frequency counter using Map
+Binary search
+Sliding window basics
+⏳ 5. ASYNC JAVASCRIPT (VERY IMPORTANT)
+
+This is where many fail ❌
+
+Concepts:
+Promise (resolve/reject/chain)
+Async/Await
+Error handling
+Parallel vs Sequential calls
+Coding:
+Promise.all
+Promise.race
+Retry API (3 times) 🔥
+API timeout logic
+Debounce (✅ done)
+Throttle (✅ done)
+🧩 6. REAL-WORLD PROBLEMS (4 YOE EXPECTATION)
+
+This is what separates you from juniors:
+
+LRU Cache 🔥🔥 (top question)
+Infinite scroll logic
+Pagination logic
+Rate limiter
+Search autocomplete (debounce use case)
+🧪 7. TRICKY INTERVIEW QUESTIONS
+
+Very frequently asked:
+
+Difference between:
+== vs ===
+null vs undefined
+map vs forEach
+Shallow vs Deep copy
+Object.freeze vs Object.seal
+setTimeout inside loop issue
+🧰 8. CODING IMPLEMENTATIONS (HIGH IMPACT)
+
+You should be able to write:
+
+call, apply, bind (polyfill)
+Debounce (you did ✅)
+Throttle (you did ✅)
+Deep clone
+    Custom Promise (basic level)
+--------------------------------------------------------------------------------------------------------
       4.Scenarios Questions
 
 
