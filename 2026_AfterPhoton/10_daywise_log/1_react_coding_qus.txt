@@ -1,0 +1,264 @@
+React coding Interview for $ year exprience
+1. Controlled  and Uncontrolled Input Component;
+2. Toggle Component
+3. List Rendering with Keys
+4. Counter with useEffect
+5. Debounced Search Input
+6. Custom Hook (useFetch)
+7. Lifting State Up
+8.Form Handling
+9.Memoization (React.memo / useMemo)
+10.Simple Todo App (MOST IMPORTANT)
+----------------------------------------------------------------------------------
+🟢 Core (5 problems)
+    Counter / Toggle
+    List rendering
+    Conditional rendering
+    Props passing
+    Basic form
+🟡 Real-world (5–6 problems)
+    Todo App (add/edit/delete) 🔥
+    Search filter
+    Form handling (multiple inputs)
+    API fetch + loading/error 🔥
+    Pagination
+    Custom hook (useFetch)
+🔥 Advanced / Interview Level (5–7 problems)
+    Debounced search + API 🔥🔥
+    Infinite scroll OR pagination table
+    Modal component
+    useMemo / React.memo optimization
+    Multi-step form
+    Context API (theme or auth)
+
+-----------------------------------------------
+🎯 ✅ FINAL REACT LIST (Follow THIS for interview prep)
+👉 This is optimized for 4 years experience + product companies
+🟢 1. CORE BASICS (Must be 100% strong)
+    Write and revise these:
+    Functional component + JSX
+    Props (parent → child)
+    useState (counter, toggle)
+    Conditional rendering
+    List rendering + keys
+
+👉 These are small but they check your foundation
+🟡 2. REAL-WORLD COMPONENTS (IMPORTANT)
+👉 Practice like mini projects:
+    Todo App (add, delete, edit) ✅ MUST
+    Search filter (real-time)
+    Form handling (multiple inputs)
+    Controlled vs uncontrolled inputs
+🔥 3. API + SIDE EFFECTS (VERY IMPORTANT)
+👉 This is asked in almost every interview
+    Fetch API using useEffect
+    Loading state
+    Error handling
+    Cleanup function
+    Dependency array issues
+💥 Practice:
+    API + list rendering
+    API + search
+⚡ 4. PERFORMANCE (HIGH PRIORITY)
+    👉 This is where 4yr dev gets filtered
+    React.memo
+    useMemo
+    useCallback
+    👉 Be ready for:
+    “Why re-render happening?”
+    “How to optimize?”
+🧠 5. CUSTOM HOOKS
+    Create useFetch
+    Create useDebounce
+👉 Shows senior-level thinking
+🏗 6. COMPONENT DESIGN
+    👉 VERY IMPORTANT for high salary
+    Practice:
+    Modal component
+    Reusable Input component
+    Table component (basic)
+🔁 7. ADVANCED UI (Machine Coding Level)
+👉 These are REAL interview questions
+    Debounced Search + API 🔥
+    Pagination
+    Infinite scroll
+    Multi-step form
+    Dropdown (multi-select)
+🌍 8. STATE MANAGEMENT
+    Context API
+    Basic Redux idea
+    👉 They may ask concept + small coding
+🚨 9. EDGE CASES (GAME CHANGER)
+👉 This is what most people MISS
+For every problem, think:
+    What if API fails?
+    What if empty data?
+    What if user types fast?
+    What if component unmounts?
+📒 How to Write Notes (VERY IMPORTANT)
+    Don’t write like theory ❌
+    Write like this ✅
+    Example (Debounce)
+    Problem:
+    User types fast → too many API calls
+    Solution:
+        useEffect + setTimeout + clearTimeout
+    Edge cases:
+    - Cancel previous API
+    - Handle empty input
+    Example (useEffect)
+    Common mistakes:
+    - Missing dependency → bug
+    - Infinite loop
+    - No cleanup → memory leak
+🔥 FINAL SHORTLIST (Revise Before Interview)
+
+If time is less, revise ONLY this:
+
+    Todo App
+    API fetch + loading/error
+    Debounced search
+    useEffect deep understanding
+    React.memo / useMemo
+    Form handling
+    Custom hook
+    Pagination
+👉 This covers 80% interviews
+-----------------------------------------------
+✅ FINAL FILTERED LIST (Follow THIS only)
+
+👉 I reduced your list to 18 HIGH-VALUE problems
+
+🟢 CORE (Must know – 5)
+    Hello World + Functional component
+    Props passing
+    useState (Counter / Toggle)
+    Conditional rendering
+    List rendering + keys
+🟡 REAL-WORLD (6)
+    Todo App (add/edit/delete) 🔥
+    Form handling (multiple inputs)
+    Search filter (real-time)
+    API fetch (useEffect + loading + error) 🔥
+    Pagination
+    Custom hook (useFetch)
+🔥 ADVANCED / INTERVIEW LEVEL (7)
+    Debounced search + API 🔥🔥
+    Context API (theme/auth)
+    React.memo optimization
+    useMemo / useCallback
+    Modal (Portal)
+    Form validation
+    Error handling (Error Boundary)
+❌ REMOVE THESE (Don’t waste time)
+
+    From your list:
+
+    TikTok UI clone
+    Memory Game
+    Drag & Drop Notes
+    EMI Calculator
+    Password Generator
+    Grid Lights
+    Currency Converter
+    Breadcrumbs
+    Job Board
+
+👉 Reason:
+These are UI practice, not interview-focused
+    ⚠️ Optional (ONLY if time available)
+    If you still have time:
+    Multi-step form
+    Infinite scroll
+    Multi-select dropdown
+    👉 These give extra edge
+🎯 FINAL ANSWER
+👉 YES — your list is good
+👉 BUT you should only prepare ~18 problems
+---------------------------------------------------------
+⚛️ ✅ FINAL REACT LIST (18 Problems)
+
+👉 This is your real interview weapon
+
+🟢 CORE (5)
+    Functional component
+    Props passing
+    useState (counter/toggle)
+    Conditional rendering
+    List rendering + keys
+🟡 REAL-WORLD (6)
+    Todo App (add/edit/delete) 🔥
+    Form handling (multiple inputs)
+    Search filter (real-time)
+    API fetch (useEffect + loading + error) 🔥
+    Pagination
+    Custom hook (useFetch)
+🔥 ADVANCED (7)
+    Debounced search + API 🔥🔥
+    Context API (theme/auth)
+    React.memo
+    useMemo / useCallback
+    Modal (Portal)
+    Form validation
+    Error Boundary
+
+---------------------------------------------------
+✅ Total Problems In Your Original List
+
+I’ll count each logical problem separately.
+
+🟢 Basic React (6)
+Hello World + Functional Component
+Props Passing
+useState (Counter / Toggle)
+Conditional Rendering
+List Rendering + Keys
+Todo App (add/edit/delete)
+🟢 Intermediate (7)
+Form Handling (multiple inputs)
+Search Filter (real-time)
+API Fetch (useEffect + loading + error)
+Pagination
+Custom Hook (useFetch)
+Debounced Search + API
+Context API
+🟢 Advanced React (6)
+React.memo
+useMemo
+useCallback
+Modal (Portal)
+Form Validation
+Error Boundary
+🟢 UI Projects (10)
+TikTok UI Clone
+Memory Game
+Drag & Drop Notes
+EMI Calculator
+Password Generator
+Grid Lights
+Currency Converter
+Breadcrumbs
+Job Board
+✅ TOTAL PROBLEMS = 28
+----------------------------------------------
+🎯 In a 4-Year React Interview
+Data table with pagination + sorting
+Debounced API search
+Authentication flow
+Protected routes
+Dynamic forms
+Modal with portal
+Custom hook (useDebounce / useFetch)
+Infinite scroll
+Error boundary
+Optimizing slow list
+Context-based theme switcher
+Drag & drop feature
+Complex state update logic
+Parallel API calls
+Role-based UI rendering
+Reusable component design
+List virtualization
+Form validation system
+Global error handling
+API interceptor setup

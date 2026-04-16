@@ -1,0 +1,27 @@
+🧠 ✅ FINAL JAVASCRIPT LIST (15 Problems)
+
+👉 This is your coding + concept combo
+
+🟢 BASICS (Foundation – 4)
+Reverse a string
+Check palindrome
+FizzBuzz
+Find max/min in array
+🟡 INTERMEDIATE (Core Logic – 5)
+Remove duplicates from array
+Flatten nested array
+Find second largest number
+Group objects by key (reduce)
+Sort array of objects
+🔥 ADVANCED (MUST for interviews – 6)
+Debounce function 🔥
+Throttle function 🔥
+Deep clone object
+Custom map, filter, reduce
+Closures (counter, private variable)
+Event loop (setTimeout, promises order) 🔥
+⚠️ MUST KNOW (Concepts – not just coding)
+Promises & async/await
+Call, Apply, Bind
+Hoisting
+Scope & closures

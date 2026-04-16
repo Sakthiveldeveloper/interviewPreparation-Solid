@@ -1,0 +1,42 @@
+🚀 ✅ FINAL NODE.JS LIST (15 Problems + Core Concepts)
+  🟢 CORE (Must know – 5)
+  👉 These are asked in almost every interview
+    1.Create basic HTTP server (without Express)
+        const http = require('http');
+        http.createServer((req, res) => {
+          res.end('Hello');
+        }).listen(3000);
+    2.Build simple API using Express (GET/POST)
+    3.Routing (multiple endpoints)
+    4.Middleware (custom logger/auth)
+    5.Environment variables (process.env)
+
+🟡 INTERMEDIATE (Real-world backend – 5)
+    CRUD API (Create, Read, Update, Delete) 🔥
+    Connect to DB (MongoDB / Mongoose)
+    Error handling middleware
+    File upload (basic)
+    Authentication (JWT basic login/signup) 🔥
+🔥 ADVANCED (High priority – 5)
+    Async handling (async/await, try/catch) 🔥
+    Streams (read/write large file)
+    Event loop understanding 🔥
+    Caching (basic Redis idea)
+    Rate limiting / security basics
+⚠️ MUST KNOW (Concepts – VERY IMPORTANT)
+👉 These are frequently asked as theory + scenarios:
+  Event loop (Node vs browser)
+  Non-blocking I/O
+  Callbacks vs Promises
+  Streams vs buffers
+  Cluster / scaling basics
+  REST API best practices
+🔥 REAL INTERVIEW QUESTIONS (You should handle)
+
+Be ready for:
+
+👉 “Build login API with JWT”
+👉 “Why Node is non-blocking?”
+👉 “How event loop works?”
+👉 “How to handle large file?”
+👉 “How to scale Node app?”

@@ -1,0 +1,30 @@
+Going to Temple 
+have 2 interviews plan to prepare and attend 2 interviews
+
+Plan 
+Tech list
+1.HTML
+2.CSS
+3.JS
+4.React
+5.TypeScript
+6.Node JS
+
+
+Review:
+The First Interview is canceled because panel is not available
+Second interviews is wanted not going because they give 2 coding question so i valunterly not attend
+
+Actullay from April 15 plan to make
+Mock INTERVIEW Each day
+mistakes i feel on my side
+
+Tech list
+1.HTML  - Theory and coding ok 
+2.CSS  - Theory and coding ok 
+3.JS  - Theory and coding ok  
+4.React  - Theory and coding  need to practices
+5.TypeScript - Theory and coding  need to practices
+6.Node JS - Theory and coding  need to practices
+
+Start practices react coding and next Node js
