@@ -25,3 +25,5 @@ Promises & async/await
 Call, Apply, Bind
 Hoisting
 Scope & closures
+
+---------------------------------

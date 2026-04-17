@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function App(){
+export default function App () {
   return(
-    <>
-    <h1>Check Run</h1>
-    </>
+    <div>
+      <h2>Sample go to Memorixation tmrw</h2>
+    </div>
   )
 }

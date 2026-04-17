@@ -262,3 +262,24 @@ List virtualization
 Form validation system
 Global error handling
 API interceptor setup
+
+----------------------
+sakthi final list
+1.React Counter,
+2.get data from url and need to display ,
+3.Lifiting Data up
+4.Toggle
+5.Controlled  and Uncontrolled Input Component;
+6.List Rendering with Keys
+7.Counter with useEffect
+8.Debounced Search Input
+9.Custom Hook (useFetch)
+
+10.Memorization , usememo, use callback, React 
+11.Todo App
+12.Search filter
+13.Pagination
+14.Hello World (basic structure)
+15.Props passing example (separate from lifting)
+need to update this list check above topic
+✅ Total Problems In Your Original List
