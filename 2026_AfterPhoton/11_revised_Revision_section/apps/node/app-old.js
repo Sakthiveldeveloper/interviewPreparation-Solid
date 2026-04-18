@@ -52,31 +52,31 @@ app.put('/users/:id', (req, res) => {
 
 // delete user
 
-app.delete('/user/id',(req, res)=>{
-    const id =  req.params.id;
-    users = users.filter(u=> u.id !==id);
-    res.json({message: 'Deleted'})
+app.delete('/user/id', (req, res) => {
+    const id = req.params.id;
+    users = users.filter(u => u.id !== id);
+    res.json({ message: 'Deleted' })
 })
 
 // middleware
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`)
     next();
 })
 
 // jwt token verify
 
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
     const token = req.header.authorization;
-    if(!token){
-        return res.status(401).json({message: 'No Token'})
+    if (!token) {
+        return res.status(401).json({ message: 'No Token' })
     }
-    try{
+    try {
         const decoded = jwt.verify(token, 'secret');
-        req.user= decoded;
+        req.user = decoded;
         next();
-    }catch(error){
-        res.status(500).json({message: 'Invalid token'})
+    } catch (error) {
+        res.status(500).json({ message: 'Invalid token' })
     }
 })
 
