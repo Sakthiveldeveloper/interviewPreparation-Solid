@@ -208,27 +208,27 @@ These are UI practice, not interview-focused
 I’ll count each logical problem separately.
 
 🟢 Basic React (6)
-Hello World + Functional Component
-Props Passing
-useState (Counter / Toggle)
-Conditional Rendering
-List Rendering + Keys
-Todo App (add/edit/delete)
+Hello World + Functional Component 1
+Props Passing 2
+useState (Counter / Toggle) 3
+Conditional Rendering  --n1
+List Rendering + Keys 4
+Todo App (add/edit/delete) 5
 🟢 Intermediate (7)
-Form Handling (multiple inputs)
-Search Filter (real-time)
-API Fetch (useEffect + loading + error)
-Pagination
-Custom Hook (useFetch)
-Debounced Search + API
-Context API
+Form Handling (multiple inputs) 6
+Search Filter (real-time) 7 
+API Fetch (useEffect + loading + error) 8
+Pagination 9
+Custom Hook (useFetch) 10
+Debounced Search + API 11
+Context API -n2
 🟢 Advanced React (6)
-React.memo
-useMemo
-useCallback
-Modal (Portal)
-Form Validation
-Error Boundary
+React.memo 12
+useMemo 12
+useCallback 12
+Modal (Portal) -n3
+Form Validation -n4 
+Error Boundary-n5
 🟢 UI Projects (10)
 TikTok UI Clone
 Memory Game

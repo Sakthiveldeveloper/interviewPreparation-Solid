@@ -147,30 +147,83 @@
    Here is a concise summary of the 25 key Node.js topics we covered, organized for quick revision.
    Core Fundamentals
       1. What is Node.js? A cross-platform, open-source JavaScript runtime built on Chrome's V8 engine that executes JS code outside the browser.
+         Node.js is a runtime environment that allows us to run JavaScript outside the browser, built on Chrome’s V8 engine.
+      It is mainly used for building fast, scalable server-side applications, especially APIs and real-time apps
       2. What is "Non-Blocking"? The ability of Node.js to start an I/O task and move to the next one without waiting for the first to finish.
+         Non-blocking means Node.js does not wait for a task (like file read or API call) to complete.
+      Instead, it starts the task and moves on, handling the result later via callbacks/promises.
       3. What is Event-Driven Architecture? A design where the flow is determined by events (clicks, data arrivals). The "Event Loop" listens for these signals to trigger functions.
+         In Node.js, everything works based on events.
+      When an event occurs (like request, click, data received), a callback function is triggered.
       4. What is the Event Loop? The mechanism that allows Node.js to perform non-blocking I/O operations by offloading tasks to the system kernel whenever possible.
+         The Event Loop is the core mechanism that manages asynchronous operations in Node.js.
+      It continuously checks:
+      Call stack
+      Callback queue
+      And executes tasks when the stack is free.
       5. What are Callbacks? Functions passed as arguments to other functions, executed once an asynchronous task completes (usually following the "error-first" pattern).
+         Callbacks are functions passed as arguments to other functions, executed after a task completes.
       6. What are Promises? Objects representing the eventual completion (or failure) of an async operation, providing .then() and .catch() methods.
+         Promises represent the result of an async operation (success or failure).
       7. What is Async/Await? Syntactic sugar built on Promises that allows asynchronous code to be written and read like synchronous code using try/catch.
+         Async/Await is a simpler way to write Promises using synchronous-style code.
 
    Frameworks & APIs
 
       1. What is Express.js? A minimalist, flexible web framework for Node.js that provides robust features for web and mobile applications (routing, middleware).
+         Express.js is a minimal and flexible web framework for Node.js used to build APIs and web apps.
+      It provides:
+      Routing
+      Middleware
+      Request/Response handling
       2. What is Fastify? A high-performance framework focused on low overhead and powerful plugin architecture, often 2x faster than Express.
+         Fastify is a high-performance Node.js framework focused on speed and low overhead.
+      👉 Key points:
+      Faster than Express (benchmark-wise)
+      Built-in schema validation
+      Plugin-based architecture
+      👉 One-liner:
+         Fastify is optimized for speed and scalability.
       3. What is a REST API? An architectural style for networked applications using HTTP methods (GET, POST, etc.) to manipulate resources at specific URLs.
+         A REST API is an architecture style where:
+      Each resource has a URL
+      Uses HTTP methods (GET, POST, etc.)
       4. What is GraphQL? A query language for APIs that allows clients to request exactly the data they need, preventing over-fetching.
+         GraphQL is a query language for APIs where the client requests exactly the data it needs.
       5. What are HTTP Methods? Standard "verbs" (GET, POST, PUT, DELETE, PATCH) that define the action a client wants the server to perform.
+         HTTP methods define what action to perform:
+      GET → Fetch data
+      POST → Create data
+      PUT → Update full data
+      PATCH → Update partial
+      DELETE → Remove data
+      👉 One-liner:
+      HTTP methods define CRUD operations in APIs.
       6. What is JSON? (JavaScript Object Notation) A lightweight, text-based data format used to exchange data between a server and a web application.
+         JSON (JavaScript Object Notation) is a lightweight data format used for data exchange
 
    Architecture & Data
 
       1. What is Middleware? Functions that have access to the Request and Response objects, sitting "in the middle" to perform tasks like logging or auth.
+         Middleware is a function between request and response.
       2. What are the Types of Middleware? Application-level, Router-level, Built-in, Error-handling, and Third-party.
+         Application-level
+      Router-level
+      Built-in (express.json())
+      Error-handling
+      Third-party (e.g., CORS)
+      👉 One-liner:
+      Middleware types define where and how logic is applied.
       3. What is an ORM? (Object-Relational Mapping) A tool like Prisma or Sequelize that lets you query a database using JS objects instead of raw SQL.
+         ORM (Object Relational Mapping) lets you interact with DB using JS instead of SQL.
       4. What are Environment Variables? External variables (stored in .env files) used to hide sensitive data like API keys and DB passwords from the source code.
+         Environment variables store sensitive/config data outside code.
       5. How do you structure a Node project? By using Layered Architecture (Folders for: Routes, Controllers, Services, Models, and Middlewares).
+
       6. How do you handle 1 Lakh+ records? By using Pagination (chunks), Streams (processing bit-by-bit), or Database Cursors.
+      Pagination (limit, skip)
+      Streams
+      DB cursors
 
    Security & Production
 
@@ -179,7 +232,14 @@
       3. What is Rate Limiting? Restricting the number of requests a user can make in a certain timeframe to prevent DDoS and brute-force attacks.
       4. What is Logging? Recording app events/errors (using Winston or Pino) to help debug issues in production.
       5. How do you handle Concurrency? Through the Event Loop, Worker Threads (for CPU tasks), or Clustering (multiple processes).
+      Node handles concurrency using:
+         Event Loop (default)
+         Worker Threads (CPU tasks)
+         Clustering (multi-core)
       6. How do you handle Production issues? By using APM tools (Datadog), Error Tracking (Sentry), and Process Managers (PM2) for auto-restarts.
+            Monitoring → Datadog
+      Error tracking → Sentry
+      Process manager → PM2
 
    Would you like me to turn these into a printable PDF or a quiz format for you?
    ✅ Node.js Theory – Q&A (Interview Revision Notes)
@@ -555,3 +615,4 @@ TOP NODE.JS CODING QUESTIONS (REAL INTERVIEW STYLE)
 Follow-up :
          Date 13 April ->  read for Interview
          Date 14 April ->  read for Interview
+         Date 21 April ->  read for Interview

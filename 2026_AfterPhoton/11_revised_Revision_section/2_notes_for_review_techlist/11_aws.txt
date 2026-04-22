@@ -5,8 +5,6 @@
 4.Scenarios Questions
 
 
-
-
 1.mindmap
     AWS MIND MAP
     1. Basics
@@ -15,6 +13,7 @@
     - Types of Cloud (Public, Private, Hybrid)
     - Global Infrastructure (Regions, Availability Zones)
     - Shared Responsibility Model
+    
     2. Core Services Overview
     - Compute (EC2, Lambda)
     - Storage (S3, EBS, EFS)

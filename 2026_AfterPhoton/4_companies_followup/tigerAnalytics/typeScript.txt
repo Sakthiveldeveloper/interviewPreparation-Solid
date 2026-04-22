@@ -1,0 +1,71 @@
+
+### ✅ TypeScript  Prep Structure:
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all JS topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code (what Tiger Analytics asks!) |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+--------------------------------------------------------------------------------------------------------
+TypeScript
+│
+├── 1. Core Types
+│   ├── Primitives: string, number, boolean, null, undefined
+│   ├── Arrays: string[], Array<number>
+│   ├── Tuples: [string, number]
+│   ├── Enums: enum Direction { Up, Down }
+│   ├── Any, Unknown, Never, Void
+│   └── Type vs Interface
+│
+├── 2. Functions
+│   ├── Typed parameters & return types
+│   ├── Optional & default params
+│   ├── Rest params (...args: string[])
+│   ├── Function overloads
+│   └── Arrow functions with types
+│
+├── 3. Interfaces & Types
+│   ├── Interface declaration & extension
+│   ├── Type alias
+│   ├── Union types (A | B)
+│   ├── Intersection types (A & B)
+│   ├── Readonly & Optional properties
+│   └── Index signatures
+│
+├── 4. Generics
+│   ├── Generic functions
+│   ├── Generic interfaces
+│   ├── Generic constraints (extends)
+│   ├── keyof & typeof
+│   └── Default type parameters
+│
+├── 5. Utility Types
+│   ├── Partial<T>, Required<T>
+│   ├── Pick<T, K>, Omit<T, K>
+│   ├── Readonly<T>
+│   ├── Record<K, V>
+│   ├── ReturnType<T>, Parameters<T>
+│   └── Exclude<T, U>, Extract<T, U>
+│
+├── 6. Advanced Types
+│   ├── Mapped Types
+│   ├── Conditional Types
+│   ├── Template Literal Types
+│   ├── Discriminated Unions
+│   └── Type Narrowing & Guards
+│
+├── 7. TypeScript + React
+│   ├── Typing props (interface Props)
+│   ├── Typing useState, useRef, useContext
+│   ├── Typing events (React.ChangeEvent)
+│   ├── FC vs explicit return type
+│   └── Generic components
+│
+└── 8. TypeScript Config
+    ├── tsconfig.json options
+    ├── strict mode
+    ├── Declaration files (.d.ts)
+    └── Module resolution
+--------------------------------------------------------------------------------------------------------
+2.

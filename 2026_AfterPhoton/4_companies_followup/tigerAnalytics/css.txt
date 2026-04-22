@@ -1,0 +1,409 @@
+Questions
+    🎨 CSS — Top 20 Most Asked Interview Questions (Recall Notes)
+
+    Explain the CSS Box Model (margin, padding, border, content)
+    What is CSS specificity? How to calculate it?
+    Flexbox vs CSS Grid — when to use each?
+    What is the cascade and inheritance in CSS?
+    Explain positioning (static, relative, absolute, fixed, sticky)
+    What are media queries? Mobile-first approach?
+    CSS selectors — types and specificity?
+    What is the z-index property?
+    Explain CSS pseudo-classes (:hover, :focus, :nth-child)?
+    What is CSS pseudo-elements (::before, ::after)?
+    Explain CSS transforms and transitions
+    What is BEM naming convention?
+    Difference between display: none, visibility: hidden, opacity: 0?
+    What are CSS custom properties (variables)?
+    Explain CSS Grid — grid-template, grid-auto?
+    What is CSS specificity wars and how to avoid them?
+    Responsive design best practices?
+    What is the difference between em, rem, px, %?
+    Explain CSS animations vs transitions?
+    What is the stacking context?
+-------------------------------------------------------------------------------
+Answers and Questions
+    Sure Sakthi! 😊 Let me clean the duplicates and give you full answers!
+
+    > **Duplicates removed:**
+    > - Q2 & Q16 (both CSS specificity — merged into one!)
+    > - Q11 & Q19 (both transitions/animations — merged into one!)
+    > - So we have **18 clean unique questions!**
+
+    ---
+
+    ## 🎨 CSS — Top 18 Interview Questions + Answers
+
+    ---
+
+    **Q1. Explain the CSS Box Model?**
+
+    Every HTML element is a box with 4 layers:
+    ```
+    | Margin (outside spacing)        |
+    |   | Border (visible border)   | |
+    |   |   | Padding (inside space)| |
+    |   |   |   | Content (text/img)| |
+    ```
+    - **Content** — actual text/image
+    - **Padding** — space between content and border
+    - **Border** — visible line around element
+    - **Margin** — space outside border (between elements)
+
+    ⚠️ Important: `box-sizing: border-box` includes padding + border in width calculation. Always use it!
+
+    ---
+
+    **Q2. What is CSS Specificity? How to calculate it? How to avoid specificity wars?**
+
+    Specificity decides which CSS rule wins when multiple rules target same element.
+
+    | Selector | Points |
+    |----------|--------|
+    | Inline style | 1000 |
+    | ID `#id` | 100 |
+    | Class `.class`, attribute, pseudo-class | 10 |
+    | Element `div`, `p` | 1 |
+
+    Example:
+    ```css
+    #header .nav a { } /* 100 + 10 + 1 = 111 points */
+    ```
+
+    **Avoid specificity wars by:**
+    - Using classes over IDs for styling
+    - Following BEM naming convention
+    - Avoiding `!important` unless absolutely necessary
+    - Keeping selectors short and flat
+
+    ---
+
+    **Q3. Flexbox vs CSS Grid — when to use each?**
+
+    | | Flexbox | CSS Grid |
+    |--|---------|----------|
+    | Dimension | 1D (row OR column) | 2D (rows AND columns) |
+    | Best for | Navigation, cards in a row, centering | Page layouts, complex grids |
+    | Axis control | Main axis + Cross axis | Both axes simultaneously |
+
+    **Real example:**
+    - Flexbox → Navbar items, centering a button, card row
+    - Grid → Full page layout, dashboard, image gallery
+
+    ---
+
+    **Q4. What is the Cascade and Inheritance in CSS?**
+
+    **Cascade** — When multiple rules apply to same element, CSS follows priority order:
+    1. `!important`
+    2. Inline styles
+    3. ID selectors
+    4. Class selectors
+    5. Element selectors
+    6. Browser defaults
+
+    **Inheritance** — Some CSS properties automatically pass from parent to child (like `color`, `font-family`). Others don't inherit (like `margin`, `padding`, `border`).
+
+    ---
+
+    **Q5. Explain CSS Positioning?**
+
+    | Position | Behavior |
+    |----------|----------|
+    | `static` | Default. Normal document flow |
+    | `relative` | Offset from its normal position. Still in flow |
+    | `absolute` | Removed from flow. Positioned relative to nearest positioned ancestor |
+    | `fixed` | Removed from flow. Always stays in same viewport position (sticky header) |
+    | `sticky` | Hybrid — relative until scroll threshold, then fixed |
+
+    **Real use case:**
+    - Tooltip → `absolute` inside `relative` parent
+    - Sticky header → `sticky` with `top: 0`
+    - Cookie banner → `fixed` at bottom
+
+    ---
+
+    **Q6. What are Media Queries? Mobile-first approach?**
+
+    Media queries apply CSS based on device/screen size:
+    ```css
+    /* Mobile first (recommended) */
+    .container { width: 100%; } /* Mobile default */
+
+    @media (min-width: 768px) { /* Tablet */
+    .container { width: 750px; }
+    }
+
+    @media (min-width: 1024px) { /* Desktop */
+    .container { width: 1200px; }
+    }
+    ```
+
+    **Mobile-first** = Start with mobile styles, then add complexity for larger screens using `min-width`. Better performance on mobile!
+
+    ---
+
+    **Q7. CSS Selectors — Types?**
+
+    ```css
+    * { }              /* Universal selector */
+    div { }            /* Element selector */
+    .class { }         /* Class selector */
+    #id { }            /* ID selector */
+    div p { }          /* Descendant selector */
+    div > p { }        /* Direct child selector */
+    div + p { }        /* Adjacent sibling */
+    div ~ p { }        /* General sibling */
+    [type="text"] { }  /* Attribute selector */
+    ```
+
+    ---
+
+    **Q8. What is z-index?**
+
+    Controls stacking order of positioned elements (which appears on top).
+    ```css
+    .modal { z-index: 1000; position: fixed; }
+    .overlay { z-index: 999; position: fixed; }
+    ```
+    ⚠️ Only works on elements with `position` other than `static`!
+
+    Higher z-index = appears on top.
+
+    ---
+
+    **Q9. CSS Pseudo-classes vs Pseudo-elements?**
+
+    **Pseudo-classes** (`:`) — style element based on STATE:
+    ```css
+    a:hover { color: red; }      /* mouse over */
+    input:focus { border: blue; } /* focused */
+    li:nth-child(2) { }           /* 2nd child */
+    li:first-child { }            /* first child */
+    li:last-child { }             /* last child */
+    ```
+
+    **Pseudo-elements** (`::`) — style PART of element:
+    ```css
+    p::before { content: "→"; }  /* inserts before content */
+    p::after { content: "←"; }   /* inserts after content */
+    p::first-line { }             /* styles first line only */
+    p::selection { }              /* styles selected text */
+    ```
+
+    ---
+
+    **Q10. CSS Transforms and Transitions vs Animations?**
+
+    **Transitions** — smooth change between TWO states (triggered by event):
+    ```css
+    .button {
+    background: blue;
+    transition: background 0.3s ease;
+    }
+    .button:hover { background: red; }
+    ```
+
+    **Transforms** — change element's shape/position without affecting layout:
+    ```css
+    .box {
+    transform: rotate(45deg);
+    transform: scale(1.5);
+    transform: translateX(100px);
+    }
+    ```
+
+    **Animations** — complex multi-step animations (no trigger needed):
+    ```css
+    @keyframes slide {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(200px); }
+    }
+    .box { animation: slide 2s infinite; }
+    ```
+
+    | | Transition | Animation |
+    |--|-----------|-----------|
+    | Steps | 2 states only | Multiple keyframes |
+    | Trigger | Needs event (hover, click) | Runs automatically |
+    | Control | Limited | Full control (loop, delay, direction) |
+
+    ---
+
+    **Q11. What is BEM Naming Convention?**
+
+    BEM = **Block, Element, Modifier**
+
+    ```css
+    /* Block — standalone component */
+    .card { }
+
+    /* Element — part of block (double underscore) */
+    .card__title { }
+    .card__image { }
+    .card__button { }
+
+    /* Modifier — variation of block/element (double dash) */
+    .card--featured { }
+    .card__button--disabled { }
+    ```
+
+    **Why use BEM?**
+    - Avoids CSS conflicts in large apps
+    - Makes code readable and maintainable
+    - Easy to understand component structure
+
+    ---
+
+    **Q12. Difference between `display: none`, `visibility: hidden`, `opacity: 0`?**
+
+    | | Display: none | Visibility: hidden | Opacity: 0 |
+    |--|--------------|-------------------|------------|
+    | Visible? | ❌ No | ❌ No | ❌ No |
+    | Takes space? | ❌ No | ✅ Yes | ✅ Yes |
+    | Clickable? | ❌ No | ❌ No | ✅ Yes! |
+    | Animation? | ❌ No | ✅ Yes | ✅ Yes |
+
+    **Real use case:**
+    - Hide and remove from layout → `display: none`
+    - Hide but keep space → `visibility: hidden`
+    - Fade animation → `opacity: 0`
+
+    ---
+
+    **Q13. What are CSS Custom Properties (Variables)?**
+
+    ```css
+    /* Define in :root for global access */
+    :root {
+    --primary-color: #3498db;
+    --font-size: 16px;
+    --spacing: 8px;
+    }
+
+    /* Use anywhere */
+    .button {
+    background: var(--primary-color);
+    font-size: var(--font-size);
+    padding: var(--spacing);
+    }
+    ```
+
+    **Benefits:**
+    - Change once, updates everywhere
+    - Great for theming (dark/light mode)
+    - Can be changed with JavaScript at runtime
+
+    ---
+
+    **Q14. CSS Grid Deep Dive?**
+
+    ```css
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns */
+    grid-template-rows: auto 300px;     /* 2 rows */
+    gap: 20px;                          /* spacing */
+    }
+
+    /* Place item in specific area */
+    .item {
+    grid-column: 1 / 3; /* span from col 1 to 3 */
+    grid-row: 1 / 2;    /* span row 1 to 2 */
+    }
+    ```
+
+    **Useful shorthands:**
+    - `fr` = fractional unit (flexible)
+    - `repeat(3, 1fr)` = 3 equal columns
+    - `minmax(200px, 1fr)` = minimum 200px, maximum flexible
+
+    ---
+
+    **Q15. Responsive Design Best Practices?**
+
+    1. Always use `meta viewport` tag
+    2. Use **mobile-first** approach (`min-width` media queries)
+    3. Use **relative units** (%, em, rem, vw, vh) not fixed px
+    4. Use **Flexbox/Grid** for layouts (not floats!)
+    5. Use `max-width` on containers
+    6. Use `srcset` for responsive images
+    7. Test on real devices/browser DevTools
+
+    ---
+
+    **Q16. Difference between `em`, `rem`, `px`, `%`?**
+
+    | Unit | Relative to | Best for |
+    |------|------------|---------|
+    | `px` | Fixed pixels | Borders, shadows |
+    | `%` | Parent element | Widths, heights |
+    | `em` | Parent font-size | Padding, margins relative to component |
+    | `rem` | Root (`html`) font-size | Font sizes, spacing (consistent!) |
+    | `vw/vh` | Viewport width/height | Full-screen sections |
+
+    **Best practice:** Use `rem` for font sizes, `%` or `fr` for layouts!
+
+    ---
+
+    **Q17. What is Stacking Context?**
+
+    A stacking context is a 3D concept where elements are grouped and rendered together.
+
+    Created by:
+    - `position` + `z-index` (not auto)
+    - `opacity` less than 1
+    - `transform`, `filter`, `will-change`
+
+    ```css
+    /* This creates a new stacking context */
+    .parent {
+    position: relative;
+    z-index: 1;
+    }
+    /* Child z-index only competes within parent's context */
+    .child { z-index: 9999; } /* Won't go above other stacking contexts! */
+    ```
+
+    **Real interview question:** "Why is my z-index not working?" — Answer is usually stacking context!
+
+    ---
+
+    **Q18. What are CSS Preprocessors? (Bonus Senior Question)**
+
+    Tools like **SASS/SCSS** that extend CSS with:
+    - Variables (`$primary-color`)
+    - Nesting
+    - Mixins (reusable blocks)
+    - Functions
+    - Imports
+
+    ```scss
+    $primary: #3498db;
+
+    .button {
+    background: $primary;
+    &:hover { background: darken($primary, 10%); }
+    }
+    ```
+
+    ---
+
+    ### ✅ That's your **clean CSS 18 Q&A recall sheet!**
+
+    ---
+
+    ### 🎯 Quick Summary — What Senior Interviewers Love to Ask:
+    - Box model + `box-sizing` ⭐⭐⭐
+    - Specificity calculation ⭐⭐⭐
+    - Flexbox vs Grid with real examples ⭐⭐⭐
+    - Positioning (absolute inside relative) ⭐⭐⭐
+    - `display:none` vs `visibility:hidden` vs `opacity:0` ⭐⭐⭐
+    - BEM naming ⭐⭐
+    - CSS Variables ⭐⭐
+    - Stacking context (z-index issues) ⭐⭐
+
+    ---
+
+    Ready to move to **JavaScript Top 30 Q&A** now? 🚀 That's the most critical section! 😊
+-------------------------------------------------------------------------------

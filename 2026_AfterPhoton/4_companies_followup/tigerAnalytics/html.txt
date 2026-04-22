@@ -1,0 +1,186 @@
+Questions
+    📋 HTML — Top 20 Most Asked Interview Questions (Recall Notes)
+
+    What is semantic HTML? (header, nav, section, article, footer, aside)
+    Difference between id and class?
+    What is the meta viewport tag? Why is it important?
+    Explain data attributes (data-*)
+    What are form elements? (input, textarea, select, button)
+    Difference between \ and ?
+    What is alt attribute in images? Why important?
+    Explain accessibility (WCAG, ARIA)
+    What is DOCTYPE?
+    Difference between \ and ?
+    What is the Canvas element?
+    Explain HTML5 APIs (localStorage, sessionStorage)
+    What is the difference between \ and \ tags?
+    How do you optimize images in HTML?
+    What is favicon and how to add it?
+    Explain form validation (HTML5 validation)
+    What is the purpose of \ vs ?
+    What are semantic elements? Benefits?
+    Difference between GET and POST in forms?
+    What is progressive enhancement?
+
+-------------------------------------------------------------------------------
+Answers and Questions
+    Welcome back, Sakthi! 😊 Great that we're on text now — much easier! Let me clean up the duplicates and give you **answers too!**
+    ---
+    ## 📋 HTML — Top 20 Interview Questions + Answers
+    ---
+    **Q1. What is Semantic HTML?**
+        Tags that describe their purpose/meaning. Examples: `<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`, `<aside>`. Helps SEO, accessibility, and screen readers understand page structure.
+    ---
+    **Q2. Difference between `id` and `class`?**
+        `id` is **unique** — only one element per page. `class` is **reusable** — multiple elements can share same class. `id` has higher CSS specificity than `class`.
+    ---
+
+    **Q3. What is the meta viewport tag?**
+    ```html
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    ```
+    Tells browser to match screen width of device. **Critical for responsive design** on mobile devices.
+
+    ---
+
+    **Q4. What are data attributes (`data-*`)?**
+    Custom attributes to store extra information on HTML elements without affecting layout.
+    ```html
+    <div data-user-id="123" data-role="admin">
+    ```
+    Accessible via JavaScript: `element.dataset.userId`
+
+    ---
+
+    **Q5. What are HTML form elements?**
+    `<input>` (text, email, password, checkbox, radio, file), `<textarea>`, `<select>`, `<option>`, `<button>`, `<label>`, `<fieldset>`, `<form>`
+
+    ---
+
+    **Q6. Difference between `<script>` async vs defer?**
+    - **async** — downloads script in parallel, executes immediately when ready (doesn't wait for HTML parsing)
+    - **defer** — downloads in parallel but executes AFTER HTML fully parsed
+    - **defer is safer** for DOM manipulation scripts
+
+    ---
+
+    **Q7. What is the `alt` attribute in images?**
+    Provides text description of image. Important for:
+    - Screen readers (accessibility)
+    - SEO (search engines read alt text)
+    - Displays when image fails to load
+
+    ---
+
+    **Q8. What is accessibility (WCAG, ARIA)?**
+    - **WCAG** — Web Content Accessibility Guidelines (standards for accessible web)
+    - **ARIA** — Accessible Rich Internet Applications (adds extra meaning to HTML for screen readers)
+    - Example: `aria-label`, `aria-hidden`, `role="button"`
+
+    ---
+
+    **Q9. What is DOCTYPE?**
+    ```html
+    <!DOCTYPE html>
+    ```
+    Tells browser which HTML version to use. `<!DOCTYPE html>` = HTML5. Without it, browser goes into **quirks mode** which causes layout issues.
+
+    ---
+
+    **Q10. What is the Canvas element?**
+    `<canvas>` is used to draw graphics, animations, charts using JavaScript.
+    ```html
+    <canvas id="myCanvas" width="500" height="300"></canvas>
+    ```
+    Used in games, data visualization, image editing tools.
+
+    ---
+
+    **Q11. Explain HTML5 APIs (localStorage vs sessionStorage)?**
+
+    | | localStorage | sessionStorage |
+    |--|--|--|
+    | Expiry | Never (until cleared) | Tab/session closes |
+    | Scope | All tabs same domain | Only current tab |
+    | Size | ~5MB | ~5MB |
+
+    ---
+
+    **Q12. How do you optimize images in HTML?**
+    - Use correct format (WebP > PNG > JPEG)
+    - Use `loading="lazy"` for below-fold images
+    - Specify width and height attributes
+    - Use `srcset` for responsive images
+    - Compress images before uploading
+
+    ---
+
+    **Q13. What is favicon and how to add it?**
+    Small icon shown in browser tab.
+    ```html
+    <link rel="icon" type="image/png" href="/favicon.png">
+    ```
+
+    ---
+
+    **Q14. Explain HTML5 form validation?**
+    Built-in validation without JavaScript:
+    - `required` — field must be filled
+    - `type="email"` — validates email format
+    - `minlength`, `maxlength` — length limits
+    - `pattern` — regex validation
+    - `min`, `max` — number ranges
+
+    ---
+
+    **Q15. Difference between `<b>` vs `<strong>` and `<i>` vs `<em>`?**
+    - `<b>` = bold visually only (no meaning)
+    - `<strong>` = bold + **important meaning** (semantic)
+    - `<i>` = italic visually only (no meaning)
+    - `<em>` = italic + **emphasis meaning** (semantic)
+    - Always prefer `<strong>` and `<em>` for accessibility!
+
+    ---
+
+    **Q16. Difference between GET and POST in forms?**
+
+    | | GET | POST |
+    |--|--|--|
+    | Data location | URL query string | Request body |
+    | Security | Less secure (visible in URL) | More secure |
+    | Data size | Limited (~2000 chars) | No limit |
+    | Use case | Search, filters | Login, forms, file upload |
+
+    ---
+
+    **Q17. What is progressive enhancement?**
+    Build for basic browsers first (HTML only), then add CSS for styling, then JavaScript for enhanced experience. Ensures website works for ALL users regardless of browser capability.
+
+    ---
+
+    **Q18. What is `<link>` vs `<script>` tag placement?**
+    - `<link>` (CSS) → always in `<head>` — loads styles before page renders
+    - `<script>` (JS) → best at bottom of `<body>` or use `defer` attribute — prevents blocking HTML parsing
+
+    ---
+
+    **Q19. What are `<iframe>` tags? When to use them?**
+    Embeds another HTML page inside current page. Used for:
+    - Embedding YouTube videos
+    - Google Maps
+    - Payment widgets
+    ⚠️ Security concern — always use `sandbox` attribute for untrusted content
+
+    ---
+
+    **Q20. What is the difference between `<div>` and `<span>`?**
+    - `<div>` = **block-level** container (takes full width, new line)
+    - `<span>` = **inline** container (only takes needed width, stays in line)
+    - Both are non-semantic — use semantic tags when possible!
+
+    ---
+
+    ### ✅ That's your clean HTML 20 Q&A recall sheet!
+
+    ---
+-------------------------------------------------------------------------------

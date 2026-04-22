@@ -1,0 +1,244 @@
+# ⚛️ State Management & Tools – Interview Notes
+
+---
+
+## 🗺️ 1. Mind Map
+
+Local State (useState)
+→ Shared State (Context API)
+→ Complex State (Redux / Zustand)
+→ Server State (React Query / SWR)
+
+👉 One line:
+State management controls how data flows and updates across components.
+
+---
+
+## 📖 2. Theory Questions & Answers
+
+### What is State in React?
+
+State is data that determines how a component renders and behaves.
+
+---
+
+### What is State Management?
+
+Managing and sharing data across components efficiently.
+
+---
+
+### What is useState?
+
+A hook used to manage local component state.
+
+---
+
+### What is Context API?
+
+A way to share state globally without prop drilling.
+
+---
+
+### What is Prop Drilling?
+
+Passing data through multiple components unnecessarily.
+
+---
+
+### What is Redux?
+
+A global state management library that stores state in a single store.
+
+---
+
+### Redux Core Concepts:
+
+* Store → holds state
+* Action → describes change
+* Reducer → updates state
+
+---
+
+### What is useReducer?
+
+An alternative to useState for complex state logic.
+
+---
+
+### Redux vs Context API
+
+Context:
+
+* Simple
+* Good for small apps
+
+Redux:
+
+* Scalable
+* Better for large applications
+
+---
+
+### What is Zustand?
+
+A lightweight state management library with less boilerplate than Redux.
+
+---
+
+### What is React Query?
+
+Used for server state management (API data caching, fetching).
+
+---
+
+### What is SWR?
+
+A data fetching library with caching and revalidation.
+
+---
+
+## 💻 3. Coding Snippets
+
+### useState Example
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+---
+
+### Context API Example
+
+```javascript
+const UserContext = React.createContext();
+
+<UserContext.Provider value={user}>
+  <Child />
+</UserContext.Provider>
+```
+
+---
+
+### useReducer Example
+
+```javascript
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+}
+```
+
+---
+
+### Redux Flow (Simple)
+
+```javascript
+dispatch({ type: "INCREMENT" });
+```
+
+---
+
+## 🎯 4. Scenario Questions
+
+### When to use Redux?
+
+* Large applications
+* Complex state logic
+* Multiple components sharing state
+
+---
+
+### When to use Context?
+
+* Small apps
+* Theme / auth data
+
+---
+
+### How to avoid unnecessary re-renders?
+
+* useMemo
+* useCallback
+* React.memo
+
+---
+
+### Handling API data?
+
+* Use React Query / SWR
+* Avoid storing server data in Redux
+
+---
+
+### Performance issue in state updates?
+
+* Avoid deep nested state
+* Normalize data
+* Use memoization
+
+---
+
+## 🧠 5. Tricky Questions
+
+### Context vs Redux – which is better?
+
+Depends on scale. Context is simple, Redux is scalable.
+
+---
+
+### Can Context replace Redux?
+
+Yes for small apps, but not ideal for large apps.
+
+---
+
+### Why Redux is predictable?
+
+Because state changes only through actions and reducers.
+
+---
+
+### What is single source of truth?
+
+Redux store holds all state in one place.
+
+---
+
+### What is server state vs client state?
+
+Client State:
+
+* UI data (form input)
+
+Server State:
+
+* API data (backend)
+
+---
+
+## 🚀 Quick Revision
+
+useState → local state
+Context → shared state
+Redux → global scalable state
+React Query → server state
+
+---
+
+## 🎤 Final Answer Tip
+
+Always say:
+
+* What it is
+* When to use
+* Why it matters
+
+Example:
+Redux is used in large applications where multiple components need access to shared state in a predictable way.
+
+---

@@ -242,7 +242,9 @@ React.js
         A way to share data globally across the component tree without "prop drilling" (passing data through every level).
     whats is React Fiber
         React Fiber is the internal reconciliation algorithm introduced in React 16 that enables asynchronous, interruptible, and priority-based rendering to improve UI performance and responsiveness.
-
+    useEffect vs useLayoutEffect
+        useEffect -> async, Runs after the browser paint the screen, non-blocking use see the update dat FIRSt
+        useLayoutEffect -> sync, Runs before the browser paint the screen, blocking use see the update dat FIRSt
 --------------------------------------------------------------------------------------------------------
 
 REACT THEORY – TOP ~50 IMPORTANT TOPICS
@@ -461,3 +463,5 @@ Follow-up :
     Date 26 march -> read
     Date 13 April ->  read for Interview
     Date 14 April ->  read for Interview
+    Date 20 April ->  read for Interview
+    Date 21 April ->  read for Interview
