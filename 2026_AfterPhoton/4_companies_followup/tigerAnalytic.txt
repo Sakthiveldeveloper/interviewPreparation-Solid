@@ -1,0 +1,10 @@
+self intro
+react component (said some HOC and anothers also )
+Coding question in react to show the url to table
+coding for delete the value in the middle of the array
+coding Longest Common Prefix in array
+
+
+all 4 answers are wrong and advise is be answer more with exmaple and exprience
+
+so status ; not possible

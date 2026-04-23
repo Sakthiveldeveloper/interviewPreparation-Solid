@@ -1,0 +1,1860 @@
+# ⚙️ BACKEND — NODE.JS + EXPRESS COMPLETE DEEP DIVE
+
+---
+
+## 🗺️ BACKEND MIND MAP
+
+```
+Backend (Node.js + Express)
+│
+├── 1. Node.js Core
+│   ├── What is Node.js? Event-driven architecture
+│   ├── Event Loop in Node.js
+│   ├── Modules (CommonJS vs ES Modules)
+│   ├── File System (fs module)
+│   ├── Streams & Buffers
+│   └── Child Processes & Clustering
+│
+├── 2. Express.js Fundamentals
+│   ├── Setting up Express server
+│   ├── Routing (GET, POST, PUT, DELETE)
+│   ├── Middleware (built-in, custom, third-party)
+│   ├── Request & Response objects
+│   └── Error Handling Middleware
+│
+├── 3. REST API Design
+│   ├── REST principles
+│   ├── HTTP methods & status codes
+│   ├── Request validation (Joi, express-validator)
+│   ├── API versioning
+│   └── Rate limiting
+│
+├── 4. Authentication & Security
+│   ├── JWT (JSON Web Tokens)
+│   ├── Sessions & Cookies
+│   ├── OAuth 2.0 basics
+│   ├── Password hashing (bcrypt)
+│   ├── CORS
+│   └── Helmet, XSS, CSRF protection
+│
+├── 5. Database Integration
+│   ├── Connecting to SQL (Sequelize)
+│   ├── Connecting to NoSQL (Mongoose)
+│   ├── Connection pooling
+│   └── Transactions
+│
+├── 6. Advanced Node.js
+│   ├── Cluster module (multi-core)
+│   ├── Worker threads
+│   ├── Caching (Redis)
+│   ├── Message queues (Bull, RabbitMQ)
+│   └── WebSockets (Socket.io)
+│
+├── 7. API Integration
+│   ├── Axios in Node.js
+│   ├── Third-party API integration
+│   ├── Webhook handling
+│   └── GraphQL basics
+│
+└── 8. Performance & Production
+    ├── Logging (Winston, Morgan)
+    ├── Environment config (dotenv)
+    ├── Process management (PM2)
+    ├── API documentation (Swagger)
+    └── Microservices basics
+```
+
+---
+
+## 📖 THEORY QUESTIONS + ANSWERS
+
+---
+
+**Q1. What is Node.js? How is it different from browser JavaScript?**
+
+Node.js is a JavaScript runtime built on Chrome's V8 engine that allows running JavaScript on the server side.
+
+```
+Browser JavaScript          Node.js
+─────────────────          ───────
+Runs in browser            Runs on server
+Has DOM, BOM               No DOM, BOM
+window, document           global, process
+Limited file access        Full file system access
+XMLHttpRequest/fetch       http, https modules
+localStorage               No localStorage
+```
+
+**Key features of Node.js:**
+- **Non-blocking I/O** — doesn't wait for operations to complete
+- **Event-driven** — uses events and callbacks
+- **Single-threaded** — one thread handles all requests via Event Loop
+- **NPM** — largest package ecosystem
+
+**Real use cases:** REST APIs, real-time apps, microservices, CLI tools
+
+---
+
+**Q2. Event Loop in Node.js — How does it work?**
+
+```
+   ┌──────────────────────────┐
+   │        timers            │  ← setTimeout, setInterval
+   ├──────────────────────────┤
+   │     pending callbacks    │  ← I/O callbacks
+   ├──────────────────────────┤
+   │       idle, prepare      │  ← internal use
+   ├──────────────────────────┤
+   │          poll            │  ← fetch new I/O events
+   ├──────────────────────────┤
+   │          check           │  ← setImmediate
+   └──────────────────────────┘
+
+Priority order:
+1. process.nextTick()     ← highest priority!
+2. Promise callbacks      ← microtasks
+3. setTimeout/setInterval ← timers phase
+4. setImmediate           ← check phase
+```
+
+```javascript
+console.log('1 - sync');
+
+setTimeout(() => console.log('2 - setTimeout'), 0);
+setImmediate(() => console.log('3 - setImmediate'));
+Promise.resolve().then(() => console.log('4 - Promise'));
+process.nextTick(() => console.log('5 - nextTick'));
+
+console.log('6 - sync');
+
+// Output: 1, 6, 5, 4, 2, 3
+// nextTick > Promise > setTimeout > setImmediate
+```
+
+---
+
+**Q3. CommonJS vs ES Modules?**
+
+```javascript
+// CommonJS (traditional Node.js)
+// Synchronous loading
+const express = require('express');
+const { Router } = require('express');
+
+module.exports = { myFunction };
+module.exports.myFunction = myFunction;
+
+// ES Modules (modern — use "type": "module" in package.json)
+// Asynchronous loading
+import express from 'express';
+import { Router } from 'express';
+
+export const myFunction = () => {};
+export default myFunction;
+
+// Key differences:
+// CommonJS: require() is synchronous, can be conditional
+// ES Modules: import is static, hoisted, async
+// CommonJS: __dirname, __filename available
+// ES Modules: use import.meta.url instead
+
+// Dynamic import (works in both)
+const module = await import('./myModule.js');
+```
+
+---
+
+**Q4. Streams & Buffers in Node.js?**
+
+```javascript
+// Buffer — temporary storage for binary data
+const buf = Buffer.from('Hello Sakthi');
+console.log(buf);           // <Buffer 48 65 6c 6c 6f>
+console.log(buf.toString()); // 'Hello Sakthi'
+
+// Streams — process data in chunks (memory efficient!)
+const fs = require('fs');
+
+// Without streams — loads ENTIRE file into memory!
+const data = fs.readFileSync('hugefile.csv'); // BAD for large files!
+
+// With streams — processes chunk by chunk
+const readStream = fs.createReadStream('hugefile.csv');
+const writeStream = fs.createWriteStream('output.csv');
+
+readStream
+  .pipe(writeStream) // pipe = connect streams
+  .on('finish', () => console.log('Done!'));
+
+// 4 types of streams:
+// Readable — fs.createReadStream, http.IncomingMessage
+// Writable — fs.createWriteStream, http.ServerResponse
+// Duplex   — both readable and writable (TCP socket)
+// Transform — modify data as it passes through (zlib.createGzip)
+
+// Real use case: Processing 1 lakh Excel rows
+// Instead of loading all rows in memory, stream and process!
+```
+
+---
+
+**Q5. Middleware in Express — Types & How it works?**
+
+```javascript
+const express = require('express');
+const app = express();
+
+// Middleware = function(req, res, next) {}
+// Executes in order — MUST call next() to continue!
+
+// 1. Built-in middleware
+app.use(express.json());           // parse JSON body
+app.use(express.urlencoded({ extended: true })); // parse form data
+app.use(express.static('public')); // serve static files
+
+// 2. Third-party middleware
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+app.use(cors());           // handle CORS
+app.use(helmet());         // security headers
+app.use(morgan('dev'));    // request logging
+
+// 3. Custom middleware
+// Logger
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url} - ${new Date()}`);
+  next(); // MUST call next!
+});
+
+// Auth middleware
+const authenticate = (req, res, next) => {
+  const token = req.headers.authorization?.split(' ')[1];
+  if (!token) return res.status(401).json({ message: 'Unauthorized' });
+
+  try {
+    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    next();
+  } catch {
+    res.status(401).json({ message: 'Invalid token' });
+  }
+};
+
+// Apply to specific routes only
+app.get('/protected', authenticate, (req, res) => {
+  res.json({ user: req.user });
+});
+
+// 4. Error handling middleware — 4 parameters!
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({
+    success: false,
+    message: err.message || 'Internal server error'
+  });
+});
+```
+
+---
+
+**Q6. JWT Authentication — How it works?**
+
+```javascript
+// JWT = Header.Payload.Signature
+// Example: eyJhbGc.eyJ1c2VySW.SflKxwRJS
+
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+
+// LOGIN — generate token
+app.post('/login', async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    // Find user
+    const user = await User.findOne({ email });
+    if (!user) throw new AppError('Invalid credentials', 401);
+
+    // Compare password
+    const isValid = await bcrypt.compare(password, user.password);
+    if (!isValid) throw new AppError('Invalid credentials', 401);
+
+    // Generate tokens
+    const accessToken = jwt.sign(
+      { userId: user._id, email: user.email, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: '15m' } // short lived!
+    );
+
+    const refreshToken = jwt.sign(
+      { userId: user._id },
+      process.env.REFRESH_SECRET,
+      { expiresIn: '7d' } // long lived
+    );
+
+    // Store refresh token in DB
+    await user.updateOne({ refreshToken });
+
+    res.json({
+      success: true,
+      accessToken,
+      refreshToken
+    });
+  } catch(err) {
+    next(err);
+  }
+});
+
+// PROTECT ROUTES — verify token
+const authenticate = (req, res, next) => {
+  try {
+    const token = req.headers.authorization?.split(' ')[1];
+    if (!token) throw new AppError('No token provided', 401);
+
+    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    next();
+  } catch(err) {
+    if (err.name === 'TokenExpiredError') {
+      return res.status(401).json({ message: 'Token expired' });
+    }
+    next(new AppError('Invalid token', 401));
+  }
+};
+
+// REFRESH TOKEN — get new access token
+app.post('/refresh', async (req, res, next) => {
+  try {
+    const { refreshToken } = req.body;
+    const decoded = jwt.verify(refreshToken, process.env.REFRESH_SECRET);
+
+    const user = await User.findOne({
+      _id: decoded.userId,
+      refreshToken
+    });
+    if (!user) throw new AppError('Invalid refresh token', 401);
+
+    const newAccessToken = jwt.sign(
+      { userId: user._id, email: user.email },
+      process.env.JWT_SECRET,
+      { expiresIn: '15m' }
+    );
+
+    res.json({ accessToken: newAccessToken });
+  } catch(err) {
+    next(err);
+  }
+});
+```
+
+---
+
+**Q7. REST API Best Practices?**
+
+```javascript
+// 1. Use proper HTTP methods
+GET    /users          // get all users
+GET    /users/:id      // get one user
+POST   /users          // create user
+PUT    /users/:id      // replace user
+PATCH  /users/:id      // partial update
+DELETE /users/:id      // delete user
+
+// 2. Use proper status codes
+200 OK                 // success
+201 Created            // resource created
+204 No Content         // success, no body (DELETE)
+400 Bad Request        // validation error
+401 Unauthorized       // not authenticated
+403 Forbidden          // authenticated but no permission
+404 Not Found          // resource not found
+409 Conflict           // duplicate resource
+422 Unprocessable      // business logic error
+500 Internal Error     // server error
+
+// 3. Consistent response structure
+const sendSuccess = (res, data, statusCode = 200) => {
+  res.status(statusCode).json({
+    success: true,
+    data,
+    timestamp: new Date().toISOString()
+  });
+};
+
+const sendError = (res, message, statusCode = 500, errors = null) => {
+  res.status(statusCode).json({
+    success: false,
+    message,
+    errors,
+    timestamp: new Date().toISOString()
+  });
+};
+
+// 4. API versioning
+app.use('/api/v1', v1Router);
+app.use('/api/v2', v2Router);
+
+// 5. Pagination
+app.get('/users', async (req, res) => {
+  const { page = 1, limit = 10, sort = 'createdAt', order = 'desc' } = req.query;
+
+  const users = await User.find()
+    .sort({ [sort]: order === 'desc' ? -1 : 1 })
+    .skip((page - 1) * limit)
+    .limit(parseInt(limit));
+
+  const total = await User.countDocuments();
+
+  res.json({
+    success: true,
+    data: users,
+    pagination: {
+      total,
+      page: parseInt(page),
+      pages: Math.ceil(total / limit),
+      limit: parseInt(limit)
+    }
+  });
+});
+```
+
+---
+
+**Q8. CORS & Security in Express?**
+
+```javascript
+const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
+
+// CORS — allow specific origins
+app.use(cors({
+  origin: ['https://myapp.com', 'https://admin.myapp.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // allow cookies
+}));
+
+// Helmet — security headers
+app.use(helmet()); // sets 11 security headers automatically!
+
+// Rate limiting — prevent abuse
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // max 100 requests per window
+  message: { error: 'Too many requests, please try again later' }
+});
+app.use('/api', limiter);
+
+// Stricter limit for auth routes
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5, // only 5 login attempts!
+});
+app.use('/api/auth', authLimiter);
+
+// Input sanitization — prevent XSS
+const mongoSanitize = require('express-mongo-sanitize');
+const xss = require('xss-clean');
+
+app.use(mongoSanitize()); // prevent NoSQL injection
+app.use(xss());           // prevent XSS attacks
+
+// Request size limit
+app.use(express.json({ limit: '10kb' })); // max 10KB body
+```
+
+---
+
+**Q9. Node.js Clustering for Performance?**
+
+```javascript
+// Single thread can only use 1 CPU core
+// Clustering = run multiple Node.js processes (one per CPU core)
+
+const cluster = require('cluster');
+const os = require('os');
+const express = require('express');
+
+if (cluster.isPrimary) {
+  const numCPUs = os.cpus().length;
+  console.log(`Primary process ${process.pid} running`);
+  console.log(`Forking ${numCPUs} workers...`);
+
+  // Fork workers (one per CPU core)
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+
+  // Restart crashed workers
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`Worker ${worker.process.pid} died`);
+    console.log('Starting new worker...');
+    cluster.fork(); // restart!
+  });
+
+} else {
+  // Worker processes run the actual server
+  const app = express();
+
+  app.get('/', (req, res) => {
+    res.json({ pid: process.pid, message: 'Hello!' });
+  });
+
+  app.listen(3000, () => {
+    console.log(`Worker ${process.pid} started`);
+  });
+}
+
+// Result: 8 CPUs = 8 workers = 8x more requests handled!
+// This is what you implemented for the 1 lakh Excel sheet processing!
+```
+
+---
+
+**Q10. Caching with Redis in Node.js?**
+
+```javascript
+const redis = require('redis');
+const client = redis.createClient({
+  url: process.env.REDIS_URL
+});
+
+client.connect();
+
+// Cache middleware
+const cache = (duration) => async (req, res, next) => {
+  const key = `cache:${req.url}`;
+
+  try {
+    const cached = await client.get(key);
+    if (cached) {
+      console.log('Cache HIT:', key);
+      return res.json(JSON.parse(cached));
+    }
+    console.log('Cache MISS:', key);
+
+    // Override res.json to cache the response
+    const originalJson = res.json.bind(res);
+    res.json = async (data) => {
+      await client.setEx(key, duration, JSON.stringify(data));
+      return originalJson(data);
+    };
+
+    next();
+  } catch(err) {
+    next(); // if Redis fails, continue without cache
+  }
+};
+
+// Usage — cache for 5 minutes
+app.get('/users', cache(300), async (req, res) => {
+  const users = await User.find();
+  res.json({ success: true, data: users });
+});
+
+// Invalidate cache when data changes
+app.post('/users', async (req, res) => {
+  const user = await User.create(req.body);
+
+  // Clear users cache
+  await client.del('cache:/users');
+
+  res.status(201).json({ success: true, data: user });
+});
+
+// Cache use cases:
+// - Frequently read, rarely changed data
+// - Expensive DB queries
+// - Third-party API responses
+// - Session data
+```
+
+---
+
+## 💻 CODING QUESTIONS
+
+---
+
+**C1. Build a complete Express server with proper structure:**
+```javascript
+// app.js
+const express = require('express');
+const cors = require('cors');
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+const userRoutes = require('./routes/users');
+const errorHandler = require('./middleware/errorHandler');
+const AppError = require('./utils/AppError');
+
+const app = express();
+
+// Security middleware
+app.use(helmet());
+app.use(cors({ origin: process.env.CLIENT_URL }));
+
+// Body parsing
+app.use(express.json({ limit: '10kb' }));
+app.use(express.urlencoded({ extended: true }));
+
+// Logging
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
+// Routes
+app.use('/api/v1/users', userRoutes);
+
+// Health check
+app.get('/health', (req, res) => {
+  res.json({ status: 'OK', timestamp: new Date() });
+});
+
+// 404 handler
+app.all('*', (req, res, next) => {
+  next(new AppError(`Route ${req.originalUrl} not found`, 404));
+});
+
+// Global error handler
+app.use(errorHandler);
+
+module.exports = app;
+
+// server.js
+const app = require('./app');
+const mongoose = require('mongoose');
+
+const PORT = process.env.PORT || 3000;
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('DB connected');
+    app.listen(PORT, () => console.log(`Server running on ${PORT}`));
+  })
+  .catch(err => {
+    console.error('DB connection failed:', err);
+    process.exit(1);
+  });
+
+// Graceful shutdown
+process.on('SIGTERM', () => {
+  console.log('SIGTERM received, shutting down...');
+  mongoose.connection.close();
+  process.exit(0);
+});
+```
+
+---
+
+**C2. Build request validation middleware:**
+```javascript
+const Joi = require('joi');
+
+// Generic validation middleware factory
+const validate = (schema) => (req, res, next) => {
+  const { error, value } = schema.validate(req.body, {
+    abortEarly: false, // return ALL errors not just first
+    stripUnknown: true // remove unknown fields
+  });
+
+  if (error) {
+    const errors = error.details.map(detail => ({
+      field: detail.path.join('.'),
+      message: detail.message.replace(/['"]/g, '')
+    }));
+
+    return res.status(400).json({
+      success: false,
+      message: 'Validation failed',
+      errors
+    });
+  }
+
+  req.body = value; // use sanitized values
+  next();
+};
+
+// Schema definitions
+const schemas = {
+  createUser: Joi.object({
+    name: Joi.string().min(2).max(50).required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).pattern(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/
+    ).required().messages({
+      'string.pattern.base': 'Password must contain uppercase, lowercase and number'
+    }),
+    role: Joi.string().valid('user', 'admin').default('user')
+  }),
+
+  updateUser: Joi.object({
+    name: Joi.string().min(2).max(50),
+    email: Joi.string().email()
+  }).min(1) // at least one field required
+};
+
+// Usage
+const userRouter = require('express').Router();
+userRouter.post('/users', validate(schemas.createUser), createUser);
+userRouter.patch('/users/:id', validate(schemas.updateUser), updateUser);
+```
+
+---
+
+**C3. Build a centralized error handling system:**
+```javascript
+// utils/AppError.js
+class AppError extends Error {
+  constructor(message, statusCode, errors = null) {
+    super(message);
+    this.statusCode = statusCode;
+    this.status = statusCode >= 400 && statusCode < 500 ? 'fail' : 'error';
+    this.isOperational = true; // our known errors
+    this.errors = errors;
+    Error.captureStackTrace(this, this.constructor);
+  }
+}
+
+// middleware/errorHandler.js
+const errorHandler = (err, req, res, next) => {
+  err.statusCode = err.statusCode || 500;
+
+  // Log error
+  console.error('ERROR:', {
+    message: err.message,
+    stack: err.stack,
+    url: req.url,
+    method: req.method
+  });
+
+  // Handle specific error types
+  if (err.name === 'ValidationError') { // Mongoose validation
+    err = new AppError('Validation failed', 400,
+      Object.values(err.errors).map(e => ({
+        field: e.path,
+        message: e.message
+      }))
+    );
+  }
+
+  if (err.code === 11000) { // MongoDB duplicate key
+    const field = Object.keys(err.keyValue)[0];
+    err = new AppError(`${field} already exists`, 409);
+  }
+
+  if (err.name === 'JsonWebTokenError') {
+    err = new AppError('Invalid token', 401);
+  }
+
+  if (err.name === 'TokenExpiredError') {
+    err = new AppError('Token expired', 401);
+  }
+
+  // Send response
+  res.status(err.statusCode).json({
+    success: false,
+    message: err.message,
+    ...(err.errors && { errors: err.errors }),
+    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
+  });
+};
+
+module.exports = errorHandler;
+```
+
+---
+
+**C4. Build file upload with multer + AWS S3:**
+```javascript
+const multer = require('multer');
+const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
+const sharp = require('sharp');
+const path = require('path');
+
+// S3 client
+const s3 = new S3Client({
+  region: process.env.AWS_REGION,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET_KEY
+  }
+});
+
+// Multer — store in memory for processing
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+  fileFilter: (req, file, cb) => {
+    const allowed = ['image/jpeg', 'image/png', 'image/webp'];
+    if (allowed.includes(file.mimetype)) {
+      cb(null, true);
+    } else {
+      cb(new AppError('Only images allowed', 400), false);
+    }
+  }
+});
+
+// Upload to S3
+const uploadToS3 = async (file, folder = 'uploads') => {
+  // Resize image with sharp
+  const processed = await sharp(file.buffer)
+    .resize(800, 800, { fit: 'inside', withoutEnlargement: true })
+    .webp({ quality: 80 })
+    .toBuffer();
+
+  const filename = `${folder}/${Date.now()}-${Math.random().toString(36).slice(2)}.webp`;
+
+  await s3.send(new PutObjectCommand({
+    Bucket: process.env.AWS_BUCKET,
+    Key: filename,
+    Body: processed,
+    ContentType: 'image/webp'
+  }));
+
+  return `https://${process.env.AWS_BUCKET}.s3.amazonaws.com/${filename}`;
+};
+
+// Route
+app.post('/upload',
+  authenticate,
+  upload.single('image'),
+  async (req, res, next) => {
+    try {
+      if (!req.file) throw new AppError('No file uploaded', 400);
+
+      const url = await uploadToS3(req.file, 'profile-pictures');
+
+      res.json({ success: true, url });
+    } catch(err) {
+      next(err);
+    }
+  }
+);
+```
+
+---
+
+**C5. Build WebSocket server with Socket.io:**
+```javascript
+const express = require('express');
+const http = require('http');
+const { Server } = require('socket.io');
+const jwt = require('jsonwebtoken');
+
+const app = express();
+const server = http.createServer(app);
+
+const io = new Server(server, {
+  cors: { origin: process.env.CLIENT_URL }
+});
+
+// Socket.io auth middleware
+io.use((socket, next) => {
+  try {
+    const token = socket.handshake.auth.token;
+    socket.user = jwt.verify(token, process.env.JWT_SECRET);
+    next();
+  } catch {
+    next(new Error('Unauthorized'));
+  }
+});
+
+// Track online users
+const onlineUsers = new Map();
+
+io.on('connection', (socket) => {
+  console.log(`User ${socket.user.userId} connected`);
+
+  // Add to online users
+  onlineUsers.set(socket.user.userId, socket.id);
+  io.emit('users:online', Array.from(onlineUsers.keys()));
+
+  // Join room
+  socket.on('room:join', (roomId) => {
+    socket.join(roomId);
+    socket.to(roomId).emit('room:userJoined', {
+      userId: socket.user.userId,
+      name: socket.user.name
+    });
+  });
+
+  // Handle message
+  socket.on('message:send', async (data) => {
+    const { roomId, content } = data;
+
+    // Save to DB
+    const message = await Message.create({
+      sender: socket.user.userId,
+      room: roomId,
+      content
+    });
+
+    // Emit to everyone in room
+    io.to(roomId).emit('message:new', {
+      id: message._id,
+      sender: socket.user,
+      content,
+      createdAt: message.createdAt
+    });
+  });
+
+  // Typing indicator
+  socket.on('typing:start', (roomId) => {
+    socket.to(roomId).emit('typing:user', {
+      userId: socket.user.userId,
+      isTyping: true
+    });
+  });
+
+  // Disconnect
+  socket.on('disconnect', () => {
+    onlineUsers.delete(socket.user.userId);
+    io.emit('users:online', Array.from(onlineUsers.keys()));
+  });
+});
+
+server.listen(3000);
+```
+
+---
+
+**C6. Build a rate limiter from scratch:**
+```javascript
+// Custom rate limiter using Redis
+const redis = require('redis');
+const client = redis.createClient();
+
+const rateLimiter = (options = {}) => {
+  const {
+    windowMs = 15 * 60 * 1000, // 15 minutes
+    max = 100,
+    keyGenerator = (req) => req.ip,
+    message = 'Too many requests'
+  } = options;
+
+  return async (req, res, next) => {
+    const key = `ratelimit:${keyGenerator(req)}`;
+    const windowSeconds = Math.floor(windowMs / 1000);
+
+    try {
+      const [[, count], [, ttl]] = await client.multi()
+        .incr(key)
+        .ttl(key)
+        .exec();
+
+      // Set expiry on first request
+      if (count === 1) {
+        await client.expire(key, windowSeconds);
+      }
+
+      // Set headers
+      res.setHeader('X-RateLimit-Limit', max);
+      res.setHeader('X-RateLimit-Remaining', Math.max(0, max - count));
+      res.setHeader('X-RateLimit-Reset', Date.now() + (ttl * 1000));
+
+      if (count > max) {
+        return res.status(429).json({
+          success: false,
+          message,
+          retryAfter: ttl
+        });
+      }
+
+      next();
+    } catch(err) {
+      next(); // if Redis fails, allow request
+    }
+  };
+};
+
+// Usage
+app.use('/api', rateLimiter({ windowMs: 15 * 60 * 1000, max: 100 }));
+app.use('/api/auth/login', rateLimiter({
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  keyGenerator: (req) => `${req.ip}:${req.body.email}`
+}));
+```
+
+---
+
+**C7. Build async wrapper to avoid try-catch repetition:**
+```javascript
+// Without wrapper — try-catch in every route!
+app.get('/users', async (req, res, next) => {
+  try {
+    const users = await User.find();
+    res.json({ success: true, data: users });
+  } catch(err) {
+    next(err); // repeat this in EVERY route!
+  }
+});
+
+// Async wrapper — DRY solution!
+const catchAsync = (fn) => (req, res, next) => {
+  fn(req, res, next).catch(next);
+};
+
+// Controller
+const getUsers = catchAsync(async (req, res) => {
+  const users = await User.find();
+  res.json({ success: true, data: users });
+  // No try-catch needed! catchAsync handles it!
+});
+
+const createUser = catchAsync(async (req, res) => {
+  const user = await User.create(req.body);
+  res.status(201).json({ success: true, data: user });
+});
+
+const getUserById = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+  if (!user) return next(new AppError('User not found', 404));
+  res.json({ success: true, data: user });
+});
+
+// Routes — clean!
+router.get('/users', getUsers);
+router.post('/users', validate(schemas.createUser), createUser);
+router.get('/users/:id', getUserById);
+```
+
+---
+
+**C8. Implement a queue with Bull for background jobs:**
+```javascript
+const Queue = require('bull');
+const nodemailer = require('nodemailer');
+
+// Create queues
+const emailQueue = new Queue('email', process.env.REDIS_URL);
+const reportQueue = new Queue('report', process.env.REDIS_URL);
+
+// Email processor
+emailQueue.process(async (job) => {
+  const { to, subject, template, data } = job.data;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+
+  await transporter.sendMail({
+    from: process.env.EMAIL_FROM,
+    to,
+    subject,
+    html: renderTemplate(template, data) // render email template
+  });
+
+  console.log(`Email sent to ${to}`);
+});
+
+// Report processor — heavy task
+reportQueue.process(async (job) => {
+  const { userId, dateRange } = job.data;
+
+  // Heavy data processing
+  const data = await processLakhRecords(dateRange);
+  const report = await generateExcel(data);
+  const url = await uploadToS3(report);
+
+  // Notify user when done
+  await emailQueue.add({
+    to: job.data.userEmail,
+    subject: 'Your report is ready',
+    template: 'report-ready',
+    data: { url }
+  });
+});
+
+// Add jobs to queue (non-blocking!)
+app.post('/reports/generate', authenticate, catchAsync(async (req, res) => {
+  const job = await reportQueue.add(
+    { userId: req.user.id, userEmail: req.user.email, dateRange: req.body },
+    {
+      attempts: 3, // retry 3 times on failure
+      backoff: { type: 'exponential', delay: 2000 },
+      removeOnComplete: true
+    }
+  );
+
+  res.json({
+    success: true,
+    message: 'Report generation started',
+    jobId: job.id
+  });
+}));
+
+// Check job status
+app.get('/reports/status/:jobId', authenticate, catchAsync(async (req, res) => {
+  const job = await reportQueue.getJob(req.params.jobId);
+  if (!job) throw new AppError('Job not found', 404);
+
+  const state = await job.getState();
+  const progress = job.progress();
+
+  res.json({ success: true, state, progress });
+}));
+```
+
+---
+
+**C9. Build a logger with Winston:**
+```javascript
+const winston = require('winston');
+const path = require('path');
+
+// Custom log format
+const logFormat = winston.format.combine(
+  winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
+  winston.format.errors({ stack: true }),
+  winston.format.printf(({ timestamp, level, message, stack, ...meta }) => {
+    let log = `${timestamp} [${level.toUpperCase()}]: ${message}`;
+    if (Object.keys(meta).length) log += ` ${JSON.stringify(meta)}`;
+    if (stack) log += `\n${stack}`;
+    return log;
+  })
+);
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: logFormat,
+  transports: [
+    // Console (dev only)
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.colorize(),
+        logFormat
+      )
+    }),
+    // Error log file
+    new winston.transports.File({
+      filename: path.join('logs', 'error.log'),
+      level: 'error',
+      maxsize: 5242880, // 5MB
+      maxFiles: 5
+    }),
+    // Combined log file
+    new winston.transports.File({
+      filename: path.join('logs', 'combined.log'),
+      maxsize: 5242880,
+      maxFiles: 10
+    })
+  ]
+});
+
+// Morgan integration — log HTTP requests
+const morgan = require('morgan');
+const morganStream = {
+  write: (message) => logger.http(message.trim())
+};
+
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms', {
+  stream: morganStream
+}));
+
+// Usage
+logger.info('Server started', { port: 3000 });
+logger.error('Database connection failed', { error: err.message });
+logger.warn('Rate limit exceeded', { ip: req.ip });
+```
+
+---
+
+**C10. Build Swagger API documentation:**
+```javascript
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Tiger Analytics API',
+      version: '1.0.0',
+      description: 'API documentation'
+    },
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT'
+        }
+      }
+    },
+    security: [{ bearerAuth: [] }]
+  },
+  apis: ['./routes/*.js'] // scan route files for JSDoc comments
+};
+
+const specs = swaggerJsdoc(options);
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(specs));
+
+// In route files — JSDoc comments
+/**
+ * @swagger
+ * /api/v1/users:
+ *   get:
+ *     summary: Get all users
+ *     tags: [Users]
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *         description: Page number
+ *     responses:
+ *       200:
+ *         description: List of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                 data:
+ *                   type: array
+ *       401:
+ *         description: Unauthorized
+ */
+router.get('/users', authenticate, getUsers);
+```
+
+---
+
+## 🎯 SCENARIO QUESTIONS
+
+---
+
+**S1. Your Node.js API is handling 10,000 concurrent requests and slowing down. How do you scale it?**
+
+**Answer:**
+
+**Step 1 — Identify bottleneck:**
+```javascript
+// Add performance monitoring
+const { performance } = require('perf_hooks');
+
+app.use((req, res, next) => {
+  const start = performance.now();
+  res.on('finish', () => {
+    const duration = performance.now() - start;
+    if (duration > 1000) { // log slow requests
+      logger.warn('Slow request', {
+        url: req.url,
+        duration: `${duration.toFixed(2)}ms`
+      });
+    }
+  });
+  next();
+});
+```
+
+**Step 2 — Scale solutions:**
+1. **Clustering** — use all CPU cores (you already did this!)
+2. **Caching** — Redis for frequent DB queries
+3. **Database indexes** — slow queries? Add indexes!
+4. **Connection pooling** — don't open new DB connection per request
+5. **Load balancer** — distribute across multiple servers (Nginx)
+6. **Horizontal scaling** — add more server instances
+7. **CDN** — serve static assets from CDN
+
+---
+
+**S2. How do you prevent SQL/NoSQL injection in your Node.js API?**
+
+**Answer:**
+
+```javascript
+// SQL Injection — NEVER concatenate user input!
+// BAD ❌
+const query = `SELECT * FROM users WHERE email = '${req.body.email}'`;
+
+// GOOD ✅ — use parameterized queries
+const query = 'SELECT * FROM users WHERE email = ?';
+db.query(query, [req.body.email]);
+
+// With Sequelize ORM — safe by default
+const user = await User.findOne({
+  where: { email: req.body.email } // auto-escapes!
+});
+
+// NoSQL Injection — MongoDB
+// BAD ❌
+const user = await User.findOne({ email: req.body.email });
+// If email = { $gt: '' }, returns ALL users!
+
+// GOOD ✅ — sanitize input
+const mongoSanitize = require('express-mongo-sanitize');
+app.use(mongoSanitize()); // removes $ and . from user input
+
+// Also validate types with Joi
+const schema = Joi.object({
+  email: Joi.string().email().required() // ensures string only!
+});
+```
+
+---
+
+**S3. How do you handle file uploads of 1 lakh rows Excel sheet efficiently in Node.js?**
+
+**Answer:** (This is your real project experience!)
+
+```javascript
+const xlsx = require('xlsx');
+const { Readable } = require('stream');
+
+// BAD ❌ — loads entire file into memory!
+app.post('/upload', upload.single('file'), (req, res) => {
+  const workbook = xlsx.read(req.file.buffer);
+  const rows = xlsx.utils.sheet_to_json(workbook.Sheets['Sheet1']);
+  // 1 lakh rows in memory = crash!
+  await processAllRows(rows); // blocks event loop!
+});
+
+// GOOD ✅ — stream processing with batching
+app.post('/upload', upload.single('file'), async (req, res) => {
+  // Send immediate response
+  res.json({ success: true, message: 'Processing started', jobId });
+
+  // Process in background
+  processExcelInBatches(req.file.buffer);
+});
+
+async function processExcelInBatches(buffer, batchSize = 1000) {
+  const workbook = xlsx.read(buffer);
+  const sheet = workbook.Sheets['Sheet1'];
+  const rows = xlsx.utils.sheet_to_json(sheet);
+
+  // Process in batches of 1000
+  for (let i = 0; i < rows.length; i += batchSize) {
+    const batch = rows.slice(i, i + batchSize);
+
+    // Process batch
+    await Promise.all(batch.map(row => processRow(row)));
+
+    // Update progress
+    const progress = Math.floor((i / rows.length) * 100);
+    await redis.set(`job:${jobId}:progress`, progress);
+
+    // Yield to event loop between batches
+    await new Promise(resolve => setImmediate(resolve));
+  }
+}
+```
+
+---
+
+**S4. How do you implement refresh token rotation for better security?**
+
+**Answer:**
+
+```javascript
+// Refresh token rotation — issue NEW refresh token on every refresh
+// Old refresh token becomes invalid immediately!
+
+app.post('/auth/refresh', catchAsync(async (req, res) => {
+  const { refreshToken } = req.cookies; // store in httpOnly cookie!
+
+  if (!refreshToken) throw new AppError('No refresh token', 401);
+
+  // Verify token
+  const decoded = jwt.verify(refreshToken, process.env.REFRESH_SECRET);
+
+  // Find user with this refresh token
+  const user = await User.findOne({
+    _id: decoded.userId,
+    refreshToken,
+    refreshTokenExpiry: { $gt: Date.now() }
+  });
+
+  if (!user) {
+    // Token reuse detected — possible theft!
+    // Invalidate ALL refresh tokens for this user
+    await User.updateOne(
+      { _id: decoded.userId },
+      { $unset: { refreshToken: 1 } }
+    );
+    throw new AppError('Token reuse detected — please login again', 401);
+  }
+
+  // Generate NEW tokens (rotation!)
+  const newAccessToken = jwt.sign(
+    { userId: user._id, role: user.role },
+    process.env.JWT_SECRET,
+    { expiresIn: '15m' }
+  );
+
+  const newRefreshToken = jwt.sign(
+    { userId: user._id },
+    process.env.REFRESH_SECRET,
+    { expiresIn: '7d' }
+  );
+
+  // Save new refresh token (old one invalidated!)
+  await user.updateOne({
+    refreshToken: newRefreshToken,
+    refreshTokenExpiry: Date.now() + 7 * 24 * 60 * 60 * 1000
+  });
+
+  // Set in httpOnly cookie (can't be accessed by JS — safer!)
+  res.cookie('refreshToken', newRefreshToken, {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'strict',
+    maxAge: 7 * 24 * 60 * 60 * 1000
+  });
+
+  res.json({ accessToken: newAccessToken });
+}));
+```
+
+---
+
+**S5. How do you design a Node.js microservice that communicates with other services?**
+
+**Answer:**
+
+```javascript
+// Microservice communication patterns:
+
+// 1. REST (sync) — simple request/response
+const axios = require('axios');
+
+class UserService {
+  constructor() {
+    this.client = axios.create({
+      baseURL: process.env.USER_SERVICE_URL,
+      timeout: 5000
+    });
+
+    // Retry on failure
+    this.client.interceptors.response.use(null, async (error) => {
+      if (error.config.retryCount < 3) {
+        error.config.retryCount = (error.config.retryCount || 0) + 1;
+        await new Promise(r => setTimeout(r, 1000 * error.config.retryCount));
+        return this.client(error.config);
+      }
+      return Promise.reject(error);
+    });
+  }
+
+  async getUser(userId) {
+    const { data } = await this.client.get(`/users/${userId}`);
+    return data;
+  }
+}
+
+// 2. Message Queue (async) — fire and forget
+const emailQueue = new Queue('email', process.env.REDIS_URL);
+
+// Order service publishes event
+await emailQueue.add('order-confirmed', {
+  userId,
+  orderId,
+  items
+});
+
+// Email service consumes event
+emailQueue.process('order-confirmed', async (job) => {
+  const { userId, orderId } = job.data;
+  const user = await userService.getUser(userId);
+  await sendOrderConfirmationEmail(user.email, orderId);
+});
+
+// 3. Service Discovery — find services dynamically
+const services = {
+  user: process.env.USER_SERVICE_URL,
+  order: process.env.ORDER_SERVICE_URL,
+  notification: process.env.NOTIFICATION_SERVICE_URL
+};
+
+// Circuit breaker — stop calling failing service
+const CircuitBreaker = require('opossum');
+const breaker = new CircuitBreaker(userService.getUser, {
+  timeout: 3000,
+  errorThresholdPercentage: 50,
+  resetTimeout: 30000
+});
+
+breaker.fallback(() => ({ id: userId, name: 'Unknown User' }));
+```
+
+---
+
+**S6. How do you implement API versioning when breaking changes are needed?**
+
+**Answer:**
+
+```javascript
+// Strategy 1 — URL versioning (most common)
+app.use('/api/v1', v1Router);
+app.use('/api/v2', v2Router);
+
+// Strategy 2 — Header versioning
+app.use((req, res, next) => {
+  req.apiVersion = req.headers['api-version'] || 'v1';
+  next();
+});
+
+app.get('/users', (req, res, next) => {
+  if (req.apiVersion === 'v2') return v2GetUsers(req, res, next);
+  return v1GetUsers(req, res, next);
+});
+
+// Best practice — maintain backward compatibility
+// v1 response
+{ id: 1, name: "Sakthi", phone: "9999999999" }
+
+// v2 response (breaking change — phone moved to contact object)
+{
+  id: 1,
+  name: "Sakthi",
+  contact: { phone: "9999999999", email: "sakthi@mail.com" }
+}
+
+// Deprecation headers — warn v1 users
+app.use('/api/v1', (req, res, next) => {
+  res.setHeader('Deprecation', 'true');
+  res.setHeader('Sunset', 'Sat, 01 Jan 2027 00:00:00 GMT');
+  res.setHeader('Link', '</api/v2>; rel="successor-version"');
+  next();
+});
+```
+
+---
+
+**S7. Your API logs show 500 errors spiking at midnight. How do you debug this?**
+
+**Answer:**
+
+```javascript
+// Step 1 — Structured logging to find pattern
+logger.error('API Error', {
+  url: req.url,
+  method: req.method,
+  userId: req.user?.id,
+  timestamp: new Date().toISOString(),
+  error: err.message,
+  stack: err.stack
+});
+
+// Step 2 — Check scheduled jobs running at midnight
+// cron jobs, batch processes, cleanup tasks
+
+// Step 3 — Check database connection pool exhaustion
+// Midnight batch job might be consuming all connections!
+const pool = new Pool({
+  max: 20, // max connections
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000
+});
+
+// Monitor pool
+pool.on('error', (err, client) => {
+  logger.error('Unexpected DB pool error', { error: err.message });
+});
+
+// Step 4 — Add circuit breaker for DB
+const dbBreaker = new CircuitBreaker(queryDatabase, {
+  timeout: 5000,
+  errorThresholdPercentage: 50
+});
+
+// Step 5 — Health check endpoint
+app.get('/health', async (req, res) => {
+  const checks = {
+    server: 'ok',
+    database: await checkDB(),
+    redis: await checkRedis(),
+    memory: process.memoryUsage()
+  };
+
+  const healthy = Object.values(checks).every(c => c === 'ok');
+  res.status(healthy ? 200 : 503).json(checks);
+});
+```
+
+---
+
+**S8. How do you implement graceful shutdown in Node.js?**
+
+**Answer:**
+
+```javascript
+const server = app.listen(PORT);
+
+// Track active connections
+let connections = new Set();
+
+server.on('connection', (conn) => {
+  connections.add(conn);
+  conn.on('close', () => connections.delete(conn));
+});
+
+// Graceful shutdown handler
+const gracefulShutdown = async (signal) => {
+  logger.info(`${signal} received — shutting down gracefully`);
+
+  // Stop accepting new connections
+  server.close(async () => {
+    logger.info('HTTP server closed');
+
+    try {
+      // Close existing connections
+      connections.forEach(conn => conn.destroy());
+
+      // Close database connections
+      await mongoose.connection.close();
+      logger.info('MongoDB connection closed');
+
+      // Close Redis connection
+      await redisClient.quit();
+      logger.info('Redis connection closed');
+
+      // Complete pending queue jobs
+      await emailQueue.close();
+      logger.info('Bull queues closed');
+
+      logger.info('Graceful shutdown complete');
+      process.exit(0);
+    } catch(err) {
+      logger.error('Error during shutdown:', err);
+      process.exit(1);
+    }
+  });
+
+  // Force exit after 30 seconds
+  setTimeout(() => {
+    logger.error('Could not close connections in time — forcing shutdown');
+    process.exit(1);
+  }, 30000);
+};
+
+// Handle shutdown signals
+process.on('SIGTERM', () => gracefulShutdown('SIGTERM')); // Docker stop
+process.on('SIGINT', () => gracefulShutdown('SIGINT'));   // Ctrl+C
+
+// Handle uncaught errors
+process.on('uncaughtException', (err) => {
+  logger.error('Uncaught exception:', err);
+  gracefulShutdown('uncaughtException');
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  logger.error('Unhandled rejection:', { reason, promise });
+  gracefulShutdown('unhandledRejection');
+});
+```
+
+---
+
+**S9. How do you implement multi-tenancy in a Node.js + Express API?**
+
+**Answer:**
+
+```javascript
+// Multi-tenancy = one app serving multiple clients (tenants)
+// Each tenant has isolated data
+
+// Strategy 1 — Tenant identification via subdomain
+const getTenantFromRequest = (req) => {
+  // From subdomain: tenant1.myapp.com
+  const subdomain = req.hostname.split('.')[0];
+  return subdomain;
+};
+
+// Tenant middleware
+const tenantMiddleware = async (req, res, next) => {
+  const tenantId = req.headers['x-tenant-id']
+    || getTenantFromRequest(req);
+
+  if (!tenantId) return res.status(400).json({
+    message: 'Tenant not specified'
+  });
+
+  const tenant = await Tenant.findOne({
+    slug: tenantId,
+    isActive: true
+  });
+
+  if (!tenant) return res.status(404).json({
+    message: 'Tenant not found'
+  });
+
+  req.tenant = tenant;
+  next();
+};
+
+app.use(tenantMiddleware);
+
+// Strategy 2 — Separate DB per tenant
+const getDBConnection = async (tenantId) => {
+  if (dbConnections[tenantId]) return dbConnections[tenantId];
+
+  const connection = await mongoose.createConnection(
+    `${process.env.DB_BASE_URL}/${tenantId}`
+  );
+
+  dbConnections[tenantId] = connection;
+  return connection;
+};
+
+// Strategy 3 — Shared DB with tenant filter (most common)
+// Always filter by tenantId in queries!
+const getAllUsers = catchAsync(async (req, res) => {
+  const users = await User.find({
+    tenantId: req.tenant._id // ALWAYS filter by tenant!
+  });
+
+  res.json({ success: true, data: users });
+});
+```
+
+---
+
+**S10. Senior/Lead question: How do you design a Node.js backend for a system that processes payments?**
+
+**Answer:**
+
+```javascript
+// Payment system design principles:
+// 1. Idempotency — same request can be safely retried
+// 2. Atomicity — either full success or full rollback
+// 3. Audit trail — log every state change
+// 4. Security — PCI DSS compliance
+
+// Idempotency key — prevent duplicate charges
+app.post('/payments', authenticate, catchAsync(async (req, res) => {
+  const idempotencyKey = req.headers['idempotency-key'];
+  if (!idempotencyKey) throw new AppError('Idempotency key required', 400);
+
+  // Check if request was already processed
+  const existing = await PaymentLog.findOne({ idempotencyKey });
+  if (existing) {
+    return res.json({ success: true, data: existing.result });
+  }
+
+  // Process payment in transaction
+  const session = await mongoose.startSession();
+  session.startTransaction();
+
+  try {
+    const { amount, currency, userId, orderId } = req.body;
+
+    // 1. Create pending payment record
+    const payment = await Payment.create([{
+      userId, orderId, amount, currency,
+      status: 'pending',
+      idempotencyKey
+    }], { session });
+
+    // 2. Call payment gateway (Stripe)
+    const stripePayment = await stripe.paymentIntents.create({
+      amount: amount * 100, // cents
+      currency,
+      metadata: { orderId, paymentId: payment[0]._id.toString() }
+    });
+
+    // 3. Update payment with gateway reference
+    await Payment.updateOne(
+      { _id: payment[0]._id },
+      { gatewayRef: stripePayment.id, status: 'processing' },
+      { session }
+    );
+
+    // 4. Log for audit
+    await PaymentLog.create([{
+      paymentId: payment[0]._id,
+      idempotencyKey,
+      event: 'payment_initiated',
+      result: stripePayment
+    }], { session });
+
+    await session.commitTransaction();
+
+    res.status(201).json({
+      success: true,
+      data: {
+        paymentId: payment[0]._id,
+        clientSecret: stripePayment.client_secret
+      }
+    });
+  } catch(err) {
+    await session.abortTransaction();
+    throw err;
+  } finally {
+    session.endSession();
+  }
+}));
+
+// Webhook — handle payment completion
+app.post('/webhooks/stripe',
+  express.raw({ type: 'application/json' }), // raw body for signature verification
+  async (req, res) => {
+    const sig = req.headers['stripe-signature'];
+
+    let event;
+    try {
+      event = stripe.webhooks.constructEvent(
+        req.body, sig, process.env.STRIPE_WEBHOOK_SECRET
+      );
+    } catch {
+      return res.status(400).send('Invalid signature');
+    }
+
+    if (event.type === 'payment_intent.succeeded') {
+      const { orderId, paymentId } = event.data.object.metadata;
+
+      await Payment.updateOne({ _id: paymentId }, { status: 'completed' });
+      await Order.updateOne({ _id: orderId }, { status: 'paid' });
+
+      // Notify user
+      await emailQueue.add({ type: 'payment-success', orderId });
+    }
+
+    res.json({ received: true });
+  }
+);
+```
+
+---
+
+## ✅ BACKEND COMPLETE SUMMARY
+
+| Section | Count |
+|---------|-------|
+| 🗺️ Mind Map | 8 categories |
+| 📖 Theory Questions | 10 ✅ |
+| 💻 Coding Questions | 10 ✅ |
+| 🎯 Scenario Questions | 10 ✅ |
+
+**Total: 30 Backend Questions — Complete!** 🎉
+
+---
+
+### 🏆 Topics Covered:
+✅ Node.js Core (Event Loop, Streams, Clustering)
+✅ Express.js (Middleware, Routing, Error Handling)
+✅ REST API Design (Best practices, Status codes, Pagination)
+✅ JWT Authentication + Refresh Token Rotation
+✅ Security (CORS, Helmet, Rate Limiting, Injection Prevention)
+✅ Redis Caching
+✅ WebSockets (Socket.io)
+✅ File Upload (Multer + S3)
+✅ Background Jobs (Bull Queue)
+✅ Logging (Winston)
+✅ Microservices Communication
+✅ Payment System Design
+✅ Multi-tenancy
+✅ Graceful Shutdown
+
+---
+
+Ready to move to **Database Deep Dive** with same format? 🚀😊

@@ -33,168 +33,124 @@ Answers and Questions
     ---
 
     ## 🎨 CSS — Top 18 Interview Questions + Answers
-
-    ---
-
     **Q1. Explain the CSS Box Model?**
-
-    Every HTML element is a box with 4 layers:
-    ```
-    | Margin (outside spacing)        |
-    |   | Border (visible border)   | |
-    |   |   | Padding (inside space)| |
-    |   |   |   | Content (text/img)| |
-    ```
-    - **Content** — actual text/image
-    - **Padding** — space between content and border
-    - **Border** — visible line around element
-    - **Margin** — space outside border (between elements)
-
-    ⚠️ Important: `box-sizing: border-box` includes padding + border in width calculation. Always use it!
-
-    ---
-
+        Every HTML element is a box with 4 layers:
+        ```
+        | Margin (outside spacing)        |
+        |   | Border (visible border)   | |
+        |   |   | Padding (inside space)| |
+        |   |   |   | Content (text/img)| |
+        ```
+        - **Content** — actual text/image
+        - **Padding** — space between content and border
+        - **Border** — visible line around element
+        - **Margin** — space outside border (between elements)
+        ⚠️ Important: `box-sizing: border-box` includes padding + border in width calculation. Always use it!
     **Q2. What is CSS Specificity? How to calculate it? How to avoid specificity wars?**
+        Specificity decides which CSS rule wins when multiple rules target same element.
 
-    Specificity decides which CSS rule wins when multiple rules target same element.
+        | Selector | Points |
+        |----------|--------|
+        | Inline style | 1000 |
+        | ID `#id` | 100 |
+        | Class `.class`, attribute, pseudo-class | 10 |
+        | Element `div`, `p` | 1 |
 
-    | Selector | Points |
-    |----------|--------|
-    | Inline style | 1000 |
-    | ID `#id` | 100 |
-    | Class `.class`, attribute, pseudo-class | 10 |
-    | Element `div`, `p` | 1 |
+        Example:
+        ```css
+        #header .nav a { } /* 100 + 10 + 1 = 111 points */
+        ```
 
-    Example:
-    ```css
-    #header .nav a { } /* 100 + 10 + 1 = 111 points */
-    ```
-
-    **Avoid specificity wars by:**
-    - Using classes over IDs for styling
-    - Following BEM naming convention
-    - Avoiding `!important` unless absolutely necessary
-    - Keeping selectors short and flat
-
-    ---
-
+        **Avoid specificity wars by:**
+        - Using classes over IDs for styling
+        - Following BEM naming convention
+        - Avoiding `!important` unless absolutely necessary
+        - Keeping selectors short and flat
     **Q3. Flexbox vs CSS Grid — when to use each?**
-
-    | | Flexbox | CSS Grid |
-    |--|---------|----------|
-    | Dimension | 1D (row OR column) | 2D (rows AND columns) |
-    | Best for | Navigation, cards in a row, centering | Page layouts, complex grids |
-    | Axis control | Main axis + Cross axis | Both axes simultaneously |
-
-    **Real example:**
-    - Flexbox → Navbar items, centering a button, card row
-    - Grid → Full page layout, dashboard, image gallery
-
-    ---
-
+        | | Flexbox | CSS Grid |
+        |--|---------|----------|
+        | Dimension | 1D (row OR column) | 2D (rows AND columns) |
+        | Best for | Navigation, cards in a row, centering | Page layouts, complex grids |
+        | Axis control | Main axis + Cross axis | Both axes simultaneously |
+        **Real example:**
+        - Flexbox → Navbar items, centering a button, card row
+        - Grid → Full page layout, dashboard, image gallery
     **Q4. What is the Cascade and Inheritance in CSS?**
-
-    **Cascade** — When multiple rules apply to same element, CSS follows priority order:
-    1. `!important`
-    2. Inline styles
-    3. ID selectors
-    4. Class selectors
-    5. Element selectors
-    6. Browser defaults
-
-    **Inheritance** — Some CSS properties automatically pass from parent to child (like `color`, `font-family`). Others don't inherit (like `margin`, `padding`, `border`).
-
-    ---
-
+        **Cascade** — When multiple rules apply to same element, CSS follows priority order:
+        1. `!important`
+        2. Inline styles
+        3. ID selectors
+        4. Class selectors
+        5. Element selectors
+        6. Browser defaults
+        **Inheritance** — Some CSS properties automatically pass from parent to child (like `color`, `font-family`). Others don't inherit (like `margin`, `padding`, `border`).
     **Q5. Explain CSS Positioning?**
+        | Position | Behavior |
+        |----------|----------|
+        | `static` | Default. Normal document flow |
+        | `relative` | Offset from its normal position. Still in flow |
+        | `absolute` | Removed from flow. Positioned relative to nearest positioned ancestor |
+        | `fixed` | Removed from flow. Always stays in same viewport position (sticky header) |
+        | `sticky` | Hybrid — relative until scroll threshold, then fixed |
 
-    | Position | Behavior |
-    |----------|----------|
-    | `static` | Default. Normal document flow |
-    | `relative` | Offset from its normal position. Still in flow |
-    | `absolute` | Removed from flow. Positioned relative to nearest positioned ancestor |
-    | `fixed` | Removed from flow. Always stays in same viewport position (sticky header) |
-    | `sticky` | Hybrid — relative until scroll threshold, then fixed |
-
-    **Real use case:**
-    - Tooltip → `absolute` inside `relative` parent
-    - Sticky header → `sticky` with `top: 0`
-    - Cookie banner → `fixed` at bottom
-
-    ---
-
+        **Real use case:**
+        - Tooltip → `absolute` inside `relative` parent
+        - Sticky header → `sticky` with `top: 0`
+        - Cookie banner → `fixed` at bottom
     **Q6. What are Media Queries? Mobile-first approach?**
+        Media queries apply CSS based on device/screen size:
+        ```css
+        /* Mobile first (recommended) */
+        .container { width: 100%; } /* Mobile default */
 
-    Media queries apply CSS based on device/screen size:
-    ```css
-    /* Mobile first (recommended) */
-    .container { width: 100%; } /* Mobile default */
+        @media (min-width: 768px) { /* Tablet */
+        .container { width: 750px; }
+        }
 
-    @media (min-width: 768px) { /* Tablet */
-    .container { width: 750px; }
-    }
-
-    @media (min-width: 1024px) { /* Desktop */
-    .container { width: 1200px; }
-    }
-    ```
-
-    **Mobile-first** = Start with mobile styles, then add complexity for larger screens using `min-width`. Better performance on mobile!
-
-    ---
-
+        @media (min-width: 1024px) { /* Desktop */
+        .container { width: 1200px; }
+        }
+        ```
+        **Mobile-first** = Start with mobile styles, then add complexity for larger screens using `min-width`. Better performance on mobile!
     **Q7. CSS Selectors — Types?**
-
-    ```css
-    * { }              /* Universal selector */
-    div { }            /* Element selector */
-    .class { }         /* Class selector */
-    #id { }            /* ID selector */
-    div p { }          /* Descendant selector */
-    div > p { }        /* Direct child selector */
-    div + p { }        /* Adjacent sibling */
-    div ~ p { }        /* General sibling */
-    [type="text"] { }  /* Attribute selector */
-    ```
-
-    ---
-
+        ```css
+        * { }              /* Universal selector */
+        div { }            /* Element selector */
+        .class { }         /* Class selector */
+        #id { }            /* ID selector */
+        div p { }          /* Descendant selector */
+        div > p { }        /* Direct child selector */
+        div + p { }        /* Adjacent sibling */
+        div ~ p { }        /* General sibling */
+        [type="text"] { }  /* Attribute selector */
+        ```
     **Q8. What is z-index?**
-
-    Controls stacking order of positioned elements (which appears on top).
-    ```css
-    .modal { z-index: 1000; position: fixed; }
-    .overlay { z-index: 999; position: fixed; }
-    ```
-    ⚠️ Only works on elements with `position` other than `static`!
-
-    Higher z-index = appears on top.
-
-    ---
-
+        Controls stacking order of positioned elements (which appears on top).
+        ```css
+        .modal { z-index: 1000; position: fixed; }
+        .overlay { z-index: 999; position: fixed; }
+        ```
+        ⚠️ Only works on elements with `position` other than `static`!
+        Higher z-index = appears on top.
     **Q9. CSS Pseudo-classes vs Pseudo-elements?**
 
-    **Pseudo-classes** (`:`) — style element based on STATE:
-    ```css
-    a:hover { color: red; }      /* mouse over */
-    input:focus { border: blue; } /* focused */
-    li:nth-child(2) { }           /* 2nd child */
-    li:first-child { }            /* first child */
-    li:last-child { }             /* last child */
-    ```
+        **Pseudo-classes** (`:`) — style element based on STATE:
+        ```css
+        a:hover { color: red; }      /* mouse over */
+        input:focus { border: blue; } /* focused */
+        li:nth-child(2) { }           /* 2nd child */
+        li:first-child { }            /* first child */
+        li:last-child { }             /* last child */
+        ```
 
-    **Pseudo-elements** (`::`) — style PART of element:
-    ```css
-    p::before { content: "→"; }  /* inserts before content */
-    p::after { content: "←"; }   /* inserts after content */
-    p::first-line { }             /* styles first line only */
-    p::selection { }              /* styles selected text */
-    ```
-
-    ---
-
+        **Pseudo-elements** (`::`) — style PART of element:
+        ```css
+        p::before { content: "→"; }  /* inserts before content */
+        p::after { content: "←"; }   /* inserts after content */
+        p::first-line { }             /* styles first line only */
+        p::selection { }              /* styles selected text */
+        ```
     **Q10. CSS Transforms and Transitions vs Animations?**
-
     **Transitions** — smooth change between TWO states (triggered by event):
     ```css
     .button {
