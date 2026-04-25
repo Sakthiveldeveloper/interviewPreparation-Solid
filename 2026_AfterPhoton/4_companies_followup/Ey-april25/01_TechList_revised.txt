@@ -1,0 +1,252 @@
+EY — AWS Full Stack Developer | Skills by Priority
+=====================================================
+
+✅ MUST KNOW (Core — Interview Essential)
+==========================================
+
+🎨 Frontend
+- JavaScript (ES6+)
+
+⚙️ Backend
+- Node.js runtime & event loop
+- Async / await / Promises
+- Express.js
+- NestJS
+- Python 3.x fundamentals
+- RESTful API design
+- OpenAPI / Swagger
+- API versioning
+- Middleware design
+- Error handling & validation
+- Microservices architecture
+- Event-driven architecture
+- Serverless patterns
+
+🗄️ Database
+- PostgreSQL
+- MySQL / Aurora
+- DynamoDB
+
+☁️ Cloud — AWS
+- AWS Lambda
+- AWS ECS
+- AWS EC2
+- API Gateway
+- S3
+- RDS / Aurora
+- DynamoDB
+- SQS
+- SNS
+- EventBridge
+- IAM (Roles & Policies)
+- CloudWatch
+- VPC / Subnets
+
+🔧 DevOps & CI/CD
+- Docker
+- GitHub Actions
+- Environment strategy (dev/staging/prod)
+
+🧪 Testing
+- Jest
+- Unit testing
+- Integration testing
+
+👨‍💻 Version Control
+- Git
+- GitHub / GitLab
+- Branching strategy (GitFlow)
+- PR / Code review process
+- Merge conflict resolution
+
+🏗️ System Design
+- HLD (High Level Design)
+- LLD (Low Level Design)
+- Microservices patterns
+- Monolith → Microservices migration
+- Observability (logs / metrics / tracing)
+- Fault tolerance & resilience
+- Scalability patterns
+
+🔐 Security
+- OAuth 2.0
+- JWT / Session auth
+- AWS IAM best practices
+- HTTPS / TLS
+- CORS handling
+- Least privilege principle
+
+👑 Leadership
+- Mentoring junior developers
+- Code reviews
+- Agile / Scrum
+- Technical design discussions
+- Ownership & accountability
+
+🧠 DSA
+- Arrays & Strings
+- Objects / Maps / Sets
+- Async patterns in JS
+- Event loop internals
+- Promises / async/await deep dive
+
+
+🟡 GOOD TO HAVE (Secondary — Shows Depth)
+==========================================
+
+🎨 Frontend
+- TypeScript
+- NPM / Yarn
+- ESLint / Prettier
+
+⚙️ Backend
+- Fastify
+- FastAPI
+- Flask / Django REST
+
+🗄️ Database
+- MongoDB
+- Redis
+- TypeORM / Sequelize
+- SQL query optimization
+- Data modeling (relational & NoSQL)
+
+☁️ Cloud — AWS
+- AWS EKS (Kubernetes)
+- Route 53
+- CloudFront / ACM
+- ECR
+- Lambda cold start optimization
+- AWS cost optimization
+
+🔧 DevOps & CI/CD
+- Docker Compose
+- Kubernetes (K8s) basics
+- AWS CodePipeline
+- AWS CodeDeploy
+- Terraform
+- AWS CloudFormation
+- Blue/Green deployment
+- Canary deployment
+- Multi-stage Docker builds
+
+🧪 Testing
+- Mocha / Chai
+- Supertest
+- PyTest / unittest
+- Test coverage & reporting
+- Mocking & stubbing
+
+👨‍💻 Version Control
+- Semantic versioning
+
+🏗️ System Design
+- CQRS
+- Saga pattern
+- Circuit breaker
+- API rate limiting
+- Re-platforming strategies
+- AWS X-Ray / Distributed tracing
+
+🔐 Security
+- OWASP Top 10 awareness
+- API key management
+- AWS Secrets Manager
+- Lambda Authorizer
+
+👑 Leadership
+- Stakeholder communication
+- Cross-team collaboration
+- Global / distributed team working
+
+🧠 DSA
+- Linked Lists
+- Recursion
+- Sorting & Searching
+- Time & Space complexity
+
+
+🎁 BONUS (Stand Out — Impressive to Mention)
+=============================================
+
+🎨 Frontend
+- React.js
+- HTML / CSS
+- Webpack / Vite / Babel
+- Frontend-Backend integration
+
+🔧 DevOps & CI/CD
+- AWS CDK
+
+👨‍💻 Version Control
+- Monorepo vs multi-repo
+
+🏗️ System Design
+- Datadog / New Relic (awareness)
+
+🤖 GenAI & Emerging Tech
+- LLM API integration
+- RAG (Retrieval Augmented Generation)
+- MCP (Model Context Protocol)
+- Prompt engineering
+- AI-enabled cloud workflows
+- Agent-based app patterns
+
+
+=====================================================
+SUMMARY
+-------
+✅ Must Know  : 56 skills  → Non-negotiable for EY interview
+🟡 Good       : 40 skills  → Shows senior-level depth
+🎁 Bonus      : 16 skills  → Makes you stand out
+📊 Total      : 112 skills
+=====================================================
+☁️ AWS — Proper Categorization (Your List → Structured)
+🧠 1. Compute (Where your code runs)
+    👉 Core of backend execution
+    AWS Lambda [must]
+    AWS EC2 [must]
+    AWS ECS [must]
+    AWS EKS [good]
+    💡 Interview tip:
+    If they ask “where does your app run?” → start here.
+💾 2. Storage (Where data/files are stored)
+    S3 [must]
+    ECR (Elastic Container Registry) [good]
+    💡 S3 = files
+    💡 ECR = Docker images
+🗄️ 3. Database (Structured & NoSQL data)
+    RDS / Aurora [must]
+    DynamoDB [must]
+    💡 RDS → SQL
+    💡 DynamoDB → NoSQL (high scale)
+🌐 4. Networking & CDN (How users reach your app)
+    VPC / Subnets [must]
+    Route 53 [good]
+    CloudFront [good]
+    ACM (SSL Certificates) [good]
+💡 This is where many people get weak → very important for interviews
+🔐 5. Security & Access Control
+    IAM (Roles & Policies) [must]
+    💡 IAM is one of the most asked topics
+📡 6. Integration & Messaging (Service communication)
+    SQS [must]
+    SNS [must]
+    EventBridge [must]
+    💡
+    SQS → queue
+    SNS → pub/sub
+    EventBridge → event routing
+
+🌍 7. API Layer
+    API Gateway [must]
+    💡 Used with Lambda → very common architecture
+📊 8. Monitoring & Logging
+    CloudWatch [must]
+    💡 Logs + metrics + alerts
+⚙️ 9. DevOps & Deployment (AWS side)
+    AWS CodePipeline [good]
+    AWS CodeDeploy [good]
+🚀 10. Advanced / Optimization Topics
+    Lambda cold start optimization [good]
+    AWS cost optimization [good]
