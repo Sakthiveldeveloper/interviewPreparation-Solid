@@ -1,129 +1,133 @@
 SYSTEM DESIGN
-│
-├── 0. 🔥 Design Flow (MOST IMPORTANT)
-│   ├── Clarify Requirements
-│   │   ├── Functional
-│   │   └── Non-Functional
-│   ├── Capacity Estimation (Users, RPS, Storage)
-│   ├── High-Level Design (HLD)
-│   ├── Database Design
-│   ├── Scaling & Optimization
-│   └── Trade-offs Discussion
-│
-├── 1. Basics
-│   ├── What is System Design?
-│   ├── HLD vs LLD
-│   ├── Functional vs Non-Functional Requirements
-│   ├── Monolithic vs Microservices
-│   └── Scalability, Reliability, Maintainability
-│
-├── 2. Architectural Patterns
-│   ├── Client-Server
-│   ├── Layered Architecture
-│   ├── Microservices
-│   ├── Event-Driven Architecture
-│   ├── SOA
-│   ├── P2P
-│   └── Serverless
-│
-├── 3. Core Components (🔥 HIGH PRIORITY)
-│   ├── Web Servers (Nginx, Apache)
-│   ├── Application Servers
-│   ├── Databases (SQL / NoSQL)
-│   ├── Cache (Redis, Memcached)
-│   ├── Load Balancer
-│   ├── CDN ⭐
-│   ├── API Gateway
-│   └── Message Brokers (Kafka, RabbitMQ)
-│
-├── 4. Scalability
-│   ├── Horizontal vs Vertical Scaling
-│   ├── Load Balancing
-│   ├── Sharding
-│   ├── Partitioning
-│   ├── Replication
-│   └── Auto Scaling
-│
-├── 5. Caching (🔥 VERY IMPORTANT)
-│   ├── Client-Side
-│   ├── CDN
-│   ├── DB Cache
-│   ├── App Cache
-│   ├── Cache Strategies
-│   │   ├── Cache Aside
-│   │   ├── Write Through
-│   │   └── Write Back
-│   └── Eviction (LRU, LFU)
-│
-├── 6. Databases
-│   ├── CAP Theorem
-│   ├── SQL vs NoSQL
-│   ├── Indexing
-│   ├── Query Optimization
-│   ├── Transactions (ACID)
-│   └── Eventual Consistency
-│
-├── 7. Communication / Networking
-│   ├── HTTP / HTTPS
-│   ├── REST vs GraphQL
-│   ├── WebSockets
-│   ├── gRPC
-│   ├── DNS
-│   └── Rate Limiting
-│
-├── 8. Messaging & Async Systems
-│   ├── Queues
-│   ├── Pub/Sub
-│   ├── Kafka, RabbitMQ
-│   ├── Dead Letter Queue
-│   └── Event Sourcing (low priority)
-│
-├── 9. Security
-│   ├── Authentication (JWT, OAuth)
-│   ├── Authorization (RBAC)
-│   ├── Encryption
-│   ├── HTTPS / TLS
-│   └── Attack Prevention (XSS, CSRF, SQLi)
-│
-├── 10. Reliability & Availability
-│   ├── High Availability
-│   ├── Fault Tolerance
-│   ├── Failover
-│   ├── Redundancy
-│   ├── Backups
-│   └── SLA / SLO / SLI
-│
-├── 11. Monitoring & Logging
-│   ├── Logging (ELK)
-│   ├── Metrics (Prometheus, Grafana)
-│   ├── Tracing
-│   └── Alerts
-│
-├── 12. Performance Optimization
-│   ├── Caching
-│   ├── Async Processing
-│   ├── DB Optimization
-│   ├── CDN Usage
-│   └── Code Optimization
-│
-├── 13. Design Principles
-│   ├── SOLID
-│   ├── DRY, KISS, YAGNI
-│   ├── 12-Factor App
-│   ├── API Design
-│   └── Idempotency
-│
-├── 14. Real-World Systems (🔥 PRACTICE)
-│   ├── URL Shortener
-│   ├── Chat System
-│   ├── Social Feed
-│   ├── Notification System
-│   ├── Ride Sharing
-│   └── Video Streaming
-│
-└── 15. Trade-offs (🔥 INTERVIEW KEY)
-    ├── Latency vs Throughput
-    ├── Consistency vs Availability
-    ├── Cost vs Performance
-    ├── Build vs Buy
-    └── Complexity vs Maintainability
+    │
+    ├── 0. 🔥 Design Flow (MOST IMPORTANT)
+    │   ├── Clarify Requirements
+    │   │   ├── Functional
+    │   │   └── Non-Functional
+    │   ├── Capacity Estimation (Users, RPS, Storage)
+    │   ├── High-Level Design (HLD)
+    │   ├── Database Design
+    │   ├── Scaling & Optimization
+    │   └── Trade-offs Discussion
+    │
+    ├── 1. Basics
+    │   ├── What is System Design?
+    │   ├── HLD vs LLD
+    │   ├── Functional vs Non-Functional Requirements
+    │   ├── Monolithic vs Microservices
+    │   └── Scalability, Reliability, Maintainability
+    │
+    ├── 2. Architectural Patterns
+    │   ├── Client-Server
+    │   ├── Layered Architecture
+    │   ├── Microservices
+    │   ├── Event-Driven Architecture
+    │   ├── SOA
+    │   ├── P2P
+    │   └── Serverless
+    │
+    ├── 3. Core Components (🔥 HIGH PRIORITY)
+    │   ├── Web Servers (Nginx, Apache)
+    │   ├── Application Servers
+    │   ├── Databases (SQL / NoSQL)
+    │   ├── Cache (Redis, Memcached)
+    │   ├── Load Balancer
+    │   ├── CDN ⭐
+    │   ├── API Gateway
+    │   └── Message Brokers (Kafka, RabbitMQ)
+    │
+    ├── 4. Scalability
+    │   ├── Horizontal vs Vertical Scaling
+    │   ├── Load Balancing
+    │   ├── Sharding
+    │   ├── Partitioning
+    │   ├── Replication
+    │   ├── Consistent Hashing ⭐
+    │   └── Auto Scaling
+    │
+    ├── 5. Caching (🔥 VERY IMPORTANT)
+    │   ├── Client-Side
+    │   ├── CDN
+    │   ├── DB Cache
+    │   ├── App Cache
+    │   ├── Cache Strategies
+    │   │   ├── Cache Aside
+    │   │   ├── Write Through
+    │   │   └── Write Back
+    │   └── Eviction (LRU, LFU)
+    │
+    ├── 6. Databases
+    │   ├── CAP Theorem
+    │   ├── SQL vs NoSQL
+    │   ├── Indexing
+    │   ├── Query Optimization
+    │   ├── Transactions (ACID)
+    │   ├── Normalization vs Denormalization
+    │   └── Eventual Consistency
+    │
+    ├── 7. Communication / Networking
+    │   ├── HTTP / HTTPS
+    │   ├── REST vs GraphQL
+    │   ├── WebSockets
+    │   ├── gRPC
+    │   ├── DNS
+    │   ├── Polling vs Long Polling vs WebSockets
+    │   └── Rate Limiting
+    │
+    ├── 8. Messaging & Async Systems
+    │   ├── Queues
+    │   ├── Pub/Sub
+    │   ├── Kafka, RabbitMQ
+    │   ├── Dead Letter Queue
+    │   └── Event Sourcing (low priority)
+    │
+    ├── 9. Security
+    │   ├── Authentication (JWT, OAuth)
+    │   ├── Authorization (RBAC)
+    │   ├── Encryption
+    │   ├── HTTPS / TLS
+    │   └── Attack Prevention (XSS, CSRF, SQLi)
+    │
+    ├── 10. Reliability & Availability
+    │   ├── High Availability
+    │   ├── Fault Tolerance
+    │   ├── Failover
+    │   ├── Redundancy
+    │   ├── Backups
+    │   ├── Circuit Breaker Pattern
+    │   └── SLA / SLO / SLI
+    │
+    ├── 11. Monitoring & Logging
+    │   ├── Logging (ELK)
+    │   ├── Metrics (Prometheus, Grafana)
+    │   ├── Tracing
+    │   └── Alerts
+    │
+    ├── 12. Performance Optimization
+    │   ├── Caching
+    │   ├── Async Processing
+    │   ├── DB Optimization
+    │   ├── CDN Usage
+    │   └── Code Optimization
+    │
+    ├── 13. Design Principles
+    │   ├── SOLID
+    │   ├── DRY, KISS, YAGNI
+    │   ├── 12-Factor App
+    │   ├── API Design
+    │   └── Idempotency
+    │
+    ├── 14. Real-World Systems (🔥 PRACTICE)
+    │   ├── URL Shortener
+    │   ├── Chat System
+    │   ├── Social Feed
+    │   ├── Notification System
+    │   ├── Ride Sharing
+    │   └── Video Streaming
+    │
+    └── 15. Trade-offs (🔥 INTERVIEW KEY)
+        ├── Latency vs Throughput
+        ├── Consistency vs Availability
+        ├── Cost vs Performance
+        ├── Build vs Buy
+        └── Complexity vs Maintainability

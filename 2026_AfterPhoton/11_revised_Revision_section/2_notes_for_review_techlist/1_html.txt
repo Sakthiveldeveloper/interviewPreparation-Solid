@@ -79,7 +79,7 @@
         ├── Alt text for images
         ├── Mobile-first responsive layout
         └── Validate HTML (W3C Validator)
-
+-----------------------------------------------------------------------------------------------
 2.Theory Questions
     Here is the complete list of the 24 topics you asked about, each with a simple, three-line explanation to help you remember them quickly:
    1. What is HTML?
@@ -234,10 +234,14 @@
           Explain in simple words
           Write small example
           Give real-world usage
+-----------------------------------------------------------------------------------------------
+
 3.Coding Questions
 
+-----------------------------------------------------------------------------------------------
 4.Scenarios Questions
 
+-----------------------------------------------------------------------------------------------
 
 
 Follow-up :
