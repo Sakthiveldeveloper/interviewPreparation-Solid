@@ -1,0 +1,300 @@
+🧠 🗄️ SQL – Complete Syllabus (Structured Roadmap)
+    🔹 1. SQL Basics
+        What is SQL
+        RDBMS (MySQL, PostgreSQL)
+        Tables, Rows, Columns
+        Data Types (INT, VARCHAR, DATE)
+    🔹 2. CRUD Operations
+        INSERT
+        SELECT
+        UPDATE
+        DELETE
+        WHERE, ORDER BY, LIMIT
+    🔹 3. Constraints & Keys
+        Primary Key
+        Foreign Key
+        UNIQUE
+        NOT NULL
+        DEFAULT
+    🔹 4. Joins (🔥 Very Important)
+        INNER JOIN
+        LEFT JOIN
+        RIGHT JOIN
+        FULL JOIN
+    🔹 5. Aggregations
+        COUNT()
+        SUM()
+        AVG()
+        MIN(), MAX()
+        GROUP BY
+        HAVING
+    🔹 6. Indexing (Performance 🔥)
+        What is Index
+        Types of Index
+        When to use / avoid
+        Trade-offs
+    🔹 7. Transactions & ACID
+        BEGIN / COMMIT / ROLLBACK
+        ACID properties
+        Isolation levels (basic idea)
+    🔹 8. Normalization
+        1NF, 2NF, 3NF
+        Removing redundancy
+        Denormalization (when needed)
+    🔹 9. Advanced Queries
+        Subqueries
+        Nested queries
+        EXISTS / IN
+        CASE statements
+    🔹 10. Window Functions (🔥 High Value)
+        ROW_NUMBER()
+        RANK()
+        PARTITION BY
+    👉 Frequently asked in good companies
+
+    🔹 11. Views & Stored Procedures
+        Views (virtual tables)
+        Stored Procedures
+        Functions
+    🔹 12. Query Optimization
+        EXPLAIN
+        Query planning
+        Avoid full table scans
+        Proper indexing
+    🔹 13. Database Design
+        ER Diagrams
+        Table relationships
+        Schema design
+    🔹 14. Real-World Use Cases
+        User & Order system
+        Authentication tables
+        Logging systems
+    🔹 15. SQL vs NoSQL (Interview)
+        Structured vs flexible
+        When to use SQL
+        When to use MongoDB
+    🔥 Priority (Very Important for YOU)
+    Since your goal is 12–15 LPA, focus on:
+    ✅ Must Master
+        CRUD
+        JOINS
+        INDEXING
+        TRANSACTIONS
+        BASIC DESIGN
+    ⚡ Good to Know
+        Window functions
+        Query optimization
+    ❌ Skip for now (later)
+        Complex stored procedures
+        Deep DB internals
+
+        ---------------------------------------------------------------------------------------------------
+        🧠 🍃 MongoDB – Complete Syllabus (Structured Roadmap)
+    🔹 1. MongoDB Basics
+    7
+    What is MongoDB (NoSQL)
+    Database → Collection → Document
+    JSON / BSON structure
+    Schema-less concept
+    🔹 2. CRUD Operations
+    insertOne(), insertMany()
+    find(), findOne()
+    updateOne(), updateMany()
+    deleteOne(), deleteMany()
+
+    👉 Equivalent to SQL CRUD
+
+    🔹 3. Data Modeling (🔥 Very Important)
+    7
+    Two approaches:
+    🔸 Embedding
+
+    👉 Store data inside document
+
+    {
+    "user": "Sakthi",
+    "orders": [{ "product": "Book" }]
+    }
+    🔸 Referencing
+
+    👉 Store relation using ID
+
+    💬 Interview:
+
+    “MongoDB supports embedding for performance and referencing for scalability.”
+
+    🔹 4. Querying & Filtering
+    find({ name: "Sakthi" })
+    $gt, $lt, $in
+    Projection (select fields)
+    🔹 5. Indexing (Performance 🔥)
+    8
+    createIndex()
+    Single field index
+    Compound index
+
+    💬 Interview:
+
+    “Indexing improves query performance in MongoDB similar to SQL.”
+
+    🔹 6. Aggregation Framework (🔥 Important)
+    $match
+    $group
+    $sort
+    $lookup (JOIN equivalent)
+
+    👉 Example:
+
+    db.orders.aggregate([
+    { $match: { status: "completed" } },
+    { $group: { _id: "$userId", total: { $sum: "$amount" } } }
+    ])
+    🔹 7. Relationships (Mongo Style)
+
+    👉 No JOIN like SQL
+    👉 Use:
+
+    Embedding
+    Referencing
+    $lookup (rare)
+    🔹 8. Transactions (Basic Idea)
+    Multi-document transactions (MongoDB supports now)
+    Not as strong as SQL ACID traditionally
+    🔹 9. Replication & High Availability
+    5
+    Replica Set
+    Primary → Secondary
+    Failover
+    🔹 10. Sharding (Scaling 🔥)
+    6
+
+    👉 Split data across servers
+
+    🔹 11. Performance Optimization
+    Indexing
+    Proper schema design
+    Avoid large documents
+    Use projection
+    🔹 12. MongoDB vs SQL (Interview)
+    Feature	MongoDB	SQL
+    Schema	Flexible	Fixed
+    Scaling	Easy	Moderate
+    Joins	Limited	Strong
+    Use	Dynamic data	Structured data
+    🔹 13. Real-World Use Cases
+    User profiles
+    Logs / analytics
+    Chat apps
+    Dynamic forms
+    🔥 Priority for YOU
+    ✅ Must Learn
+    CRUD
+    Data modeling (embedding vs referencing)
+    Aggregation
+    Indexing
+    ⚡ Good to Know
+    Sharding
+    Replication
+    🧠 Golden Interview Line
+
+    “MongoDB is a NoSQL database that stores data in flexible JSON-like documents, supports horizontal scaling, and is ideal for dynamic and unstructured data.”
+
+    ⚡ Simple Memory Trick
+    MongoDB → Flexible data
+    Embedding → Fast
+    Referencing → Scalable
+    Aggregation → Powerful queries
+
+    ---------------------------------------------------------------------------------------------------
+🧠 ⚡ Redis – Complete Understanding
+🔹 1. What is Redis?
+6
+
+👉 Redis = In-memory key-value database
+
+Stores data in RAM (not disk)
+Extremely fast ⚡
+Used mainly for caching
+🧠 2. Why Redis?
+Without Redis:
+Every request → DB 😓 (slow)
+With Redis:
+First request → DB → store in Redis
+Next request → Redis ⚡ (fast)
+🧠 3. Basic Data Types
+🔹 String (most used)
+SET user:1 "Sakthi"
+GET user:1
+🔹 Hash (object-like)
+HSET user:1 name "Sakthi" age 25
+HGET user:1 name
+🔹 List
+LPUSH tasks "task1"
+🔹 Set
+SADD users "A" "B"
+
+👉 Interview tip:
+
+“Redis supports multiple data structures like strings, hashes, lists, and sets.”
+
+🧠 4. Caching (Most Important 🔥)
+🔹 Flow:
+Check Redis
+If data exists → return
+Else → fetch from DB → store in Redis
+
+👉 Called:
+
+Cache Hit ✅
+Cache Miss ❌
+🧠 5. Expiry (TTL)
+SET user:1 "Sakthi" EX 60
+
+👉 Auto delete after 60 sec
+
+💬 Interview:
+
+“TTL helps keep cache fresh.”
+
+🧠 6. Use Cases (VERY IMPORTANT)
+🔥 Most Common:
+API caching
+Session storage
+Rate limiting
+Real-time analytics
+Leaderboards
+🧠 7. Redis vs SQL vs MongoDB
+Feature	Redis	SQL	MongoDB
+Storage	Memory	Disk	Disk
+Speed	Very fast	Medium	Fast
+Use	Cache	Structured	Flexible
+🧠 8. Real Project Example (🔥 MUST SAY)
+
+👉 E-commerce:
+
+Product list → Redis cache
+User session → Redis
+API response → Redis
+🧠 9. Important Concepts (Interview Gold)
+🔹 Cache Invalidation
+
+👉 When DB updates → clear cache
+
+🔹 Write Strategies
+Write-through
+Write-back
+Write-around
+
+👉 (You can mention lightly)
+
+🔥 Perfect Interview Answer
+
+“Redis is an in-memory key-value store used mainly for caching to improve application performance. It reduces database load by storing frequently accessed data and supports data structures like strings, hashes, and lists.”
+
+💥 This is strong
+
+⚡ Ultra Short Recall
+Redis → Cache
+Fast → In-memory
+Use → API, session
+TTL → Expir

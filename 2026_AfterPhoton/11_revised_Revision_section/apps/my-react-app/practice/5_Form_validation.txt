@@ -1,0 +1,43 @@
+import react, { useState } from 'react';
+
+export default function App() {
+  const [name, setName] = useState('');
+  const [error, setError] = useState('')
+  const [email, setEmail] = useState('')
+  const [dataSubmited, setDataSubmitted] = useState(false)
+  const updateName = (value) =>{
+     if(value.length < 3) {
+      setName(value)
+      setError('Name need atleast 3 latters')
+    } else{
+    setName(value)
+    setError('')
+    }
+  }
+  const updateEmail = (value) =>{
+    if(!value.includes('@')) {
+      setEmail(value)
+      setError('Email not Valid')
+    } else {
+      setEmail(value)
+      setError('')
+    }
+  }
+
+  const submitData  = () =>{
+    setDataSubmitted(true)
+  }
+  console.log(dataSubmited)
+  return (
+    <>
+      <div>
+        <h1>Form Validation</h1>
+        Name: <input value={name} onChange={(e)=>updateName(e.target.value)}/>
+        Email: <input value={email} onChange={(e)=>updateEmail(e.target.value)}/>
+        <p>{error? error:''}</p>
+        <button onClick={submitData}  disabled={error}>Submit</button>
+       {dataSubmited == true?( <><p> Name: {name}</p><p> Email: {email}</p></>): ''}
+      </div>
+    </>
+  )
+}

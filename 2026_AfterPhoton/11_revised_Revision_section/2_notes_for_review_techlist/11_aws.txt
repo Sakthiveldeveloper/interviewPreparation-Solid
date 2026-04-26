@@ -1,0 +1,482 @@
+
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+1.mindmap
+    AWS MIND MAP
+    1. Basics
+    - What is AWS? (Cloud computing platform)
+    - Benefits (Scalability, Pay-as-you-go, High availability)
+    - Types of Cloud (Public, Private, Hybrid)
+    - Global Infrastructure (Regions, Availability Zones)
+    - Shared Responsibility Model
+    
+    2. Core Services Overview
+    - Compute (EC2, Lambda)
+    - Storage (S3, EBS, EFS)
+    - Database (RDS, DynamoDB)
+    - Networking (VPC, Route 53)
+    - Security (IAM)
+
+    3. Compute Services
+    - EC2 (Virtual servers)
+    - EC2 Instance Types
+    - AMI (Amazon Machine Image)
+    - Auto Scaling
+    - Load Balancer (ALB, NLB)
+    - Lambda (Serverless functions)
+
+    4. Storage Services
+    - S3 (Object storage)
+    - S3 Storage Classes (Standard, IA, Glacier)
+    - EBS (Block storage for EC2)
+    - EFS (File storage)
+    - Backup & Lifecycle policies
+
+    5. Database Services
+    - RDS (MySQL, PostgreSQL, etc.)
+    - DynamoDB (NoSQL)
+    - Aurora
+    - Read Replicas
+    - Multi-AZ deployment
+
+    6. Networking
+    - VPC (Virtual Private Cloud)
+    - Subnets (Public, Private)
+    - Internet Gateway
+    - NAT Gateway
+    - Route Tables
+    - Security Groups vs NACL
+
+    7. IAM (Security)
+    - Users, Groups, Roles
+    - Policies (JSON)
+    - Permissions
+    - Least privilege principle
+    - MFA (Multi-Factor Authentication)
+
+    8. Monitoring & Logging
+    - CloudWatch (Metrics, Logs, Alarms)
+    - CloudTrail (API activity tracking)
+    - SNS (Notifications)
+    - SQS (Queue service)
+
+    9. Serverless
+    - Lambda (Event-driven functions)
+    - API Gateway
+    - EventBridge
+    - Step Functions
+
+    10. Deployment & DevOps
+    - Elastic Beanstalk
+    - CodeDeploy
+    - CodePipeline
+    - CI/CD concepts
+
+    11. Scaling & High Availability
+    - Auto Scaling Groups
+    - Load Balancers
+    - Multi-AZ vs Multi-Region
+    - Fault tolerance
+
+    12. Storage & CDN Optimization
+    - CloudFront (CDN)
+    - Caching strategies
+    - Edge locations
+
+    13. Security Best Practices
+    - IAM roles instead of access keys
+    - Enable MFA
+    - Encrypt data (at rest & in transit)
+    - Use security groups properly
+
+    14. Pricing & Cost Optimization
+    - Pay-as-you-go model
+    - Reserved instances
+    - Spot instances
+    - Cost Explorer
+    - Budget alerts
+
+    15. Common Architectures
+    - 3-tier architecture (Frontend, Backend, DB)
+    - Serverless architecture
+    - Microservices architecture
+
+    16. Real-world Use Cases
+    - Hosting web app using EC2 + RDS
+    - Static site hosting using S3 + CloudFront
+    - Serverless APIs using Lambda + API Gateway
+
+2.Theory Questions
+
+TOP AWS INTERVIEW QUESTIONS (4 YEARS EXPERIENCE)
+
+    1. What is AWS?
+    AWS is a cloud computing platform that provides services like compute, storage, and databases on a pay-as-you-go basis.
+
+    2. What are Regions and Availability Zones?
+    Regions are geographic locations, and Availability Zones are isolated data centers within a region.
+
+    3. What is the Shared Responsibility Model?
+    AWS handles infrastructure security, while the customer is responsible for application and data security.
+
+    4. What are the main AWS service categories?
+    Compute, Storage, Database, Networking, and Security.
+
+    5. What is EC2?
+    EC2 is a virtual server in AWS used to run applications.
+
+    6. What is AMI?
+    AMI (Amazon Machine Image) is a template used to launch EC2 instances.
+
+    7. What are EC2 instance types?
+    General purpose, Compute optimized, Memory optimized, and Storage optimized.
+
+    8. What is Auto Scaling?
+    Auto Scaling automatically increases or decreases EC2 instances based on traffic.
+
+    9. What is Load Balancer?
+    Distributes incoming traffic across multiple servers for better performance and availability.
+
+    10. What is S3?
+    S3 is an object storage service used to store files like images, videos, and backups.
+
+    11. What are S3 storage classes?
+    Standard, Intelligent-Tiering, Infrequent Access, and Glacier.
+
+    12. What is versioning in S3?
+    Versioning keeps multiple versions of an object to prevent data loss.
+
+    13. What is lifecycle policy in S3?
+    Automatically moves or deletes objects based on rules.
+
+    14. Difference between S3 and EBS?
+    S3 is object storage, EBS is block storage used with EC2.
+
+    15. What is RDS?
+    RDS is a managed relational database service.
+
+    16. What is DynamoDB?
+    DynamoDB is a NoSQL database service with high scalability.
+
+    17. RDS vs DynamoDB?
+    RDS is relational, DynamoDB is NoSQL and serverless.
+
+    18. What is Multi-AZ?
+    Multi-AZ provides high availability by replicating data across zones.
+
+    19. What are Read Replicas?
+    Used to improve read performance by creating copies of database.
+
+    20. What is VPC?
+    VPC is a virtual network where AWS resources are launched.
+
+    21. Public vs Private subnet?
+    Public subnet has internet access, private subnet does not.
+
+    22. What is Internet Gateway?
+    Allows communication between VPC and the internet.
+
+    23. What is NAT Gateway?
+    Allows private subnet resources to access the internet securely.
+
+    24. Security Group vs NACL?
+    Security Group is instance-level, NACL is subnet-level.
+
+    25. What is IAM?
+    IAM manages users, roles, and permissions in AWS.
+
+    26. What are Roles vs Users?
+    Users are individuals, roles are temporary permissions for services.
+
+    27. What is a Policy?
+    A JSON document that defines permissions.
+
+    28. What is least privilege principle?
+    Grant only necessary permissions to users/services.
+
+    29. What is AWS Lambda?
+    Lambda is a serverless compute service to run code without managing servers.
+
+    30. When to use Lambda vs EC2?
+    Lambda for event-driven small tasks, EC2 for long-running applications.
+
+    31. What is API Gateway?
+    API Gateway is used to create and manage APIs for backend services.
+
+    32. What is CloudWatch?
+    CloudWatch monitors logs, metrics, and system performance.
+
+    33. What is CloudTrail?
+    CloudTrail tracks API activity and user actions.
+
+    34. What is Auto Scaling?
+    Automatically adjusts resources based on demand.
+
+    35. What is Load Balancer?
+    Distributes traffic across multiple servers.
+
+    36. What is Elastic Beanstalk?
+    A service to deploy and manage applications easily.
+
+    37. How do you improve performance in AWS?
+    Use Auto Scaling, Load Balancer, caching, and CDN.
+
+    38. What is CloudFront?
+    CloudFront is a CDN that delivers content faster globally.
+
+    39. What are Reserved Instances?
+    Prepaid instances for long-term cost savings.
+
+    40. What are Spot Instances?
+    Low-cost instances using unused AWS capacity.
+
+    41. How to reduce AWS cost?
+    Use Reserved/Spot instances, monitor usage, and optimize resources.
+
+-----------------------------------------------------------------------------
+🚀 AWS SERVICES YOU MUST KNOW (FULL STACK DEV)
+    🧠 1. Compute (Run Your Backend)
+
+    👉 You MUST know:
+
+    EC2 → Run Node.js backend (like your Express app)
+    Lambda → Serverless APIs (no server management)
+
+    👉 Interview expectation:
+
+    When to use EC2 vs Lambda
+    💾 2. Storage (Files, Images, Uploads)
+
+    👉 Very important:
+
+    S3 → Store images, videos, documents
+    CloudFront → Fast delivery (CDN)
+
+    👉 Real use:
+
+    User profile images → S3
+    Faster loading → CloudFront
+    🗄️ 3. Database
+
+    👉 Must know both:
+
+    RDS (MySQL/PostgreSQL) → Structured data
+    DynamoDB → NoSQL (high scalability)
+
+    👉 Interview:
+
+    RDS vs DynamoDB
+    🌐 4. Networking (VERY IMPORTANT 🔥)
+    VPC → Your private network
+    Subnets → Public / Private
+    Internet Gateway
+    NAT Gateway
+
+    👉 Interview:
+
+    How to secure backend?
+    🔐 5. Security (CRITICAL 🔥🔥🔥)
+    IAM → Users, roles, permissions
+
+    👉 Must explain:
+
+    Roles vs Users
+    Least privilege
+    ⚡ 6. API Layer (Modern Backend)
+    API Gateway → Connect frontend to backend
+    Lambda → Serverless APIs
+
+    👉 Combo:
+
+    React + API Gateway + Lambda
+    📊 7. Monitoring
+    CloudWatch → Logs, metrics
+    CloudTrail → Track activity
+
+    👉 Real:
+
+    Debug production issues
+    🚀 8. Deployment (DevOps Basics)
+    Elastic Beanstalk → Easy app deployment
+    CodePipeline / CodeDeploy → CI/CD
+
+    👉 For you:
+
+    At least know Beanstalk
+    📦 9. Scaling & Performance
+    Auto Scaling → Handle traffic
+    Load Balancer (ALB) → Distribute traffic
+    💰 10. Cost Optimization (Bonus but valuable)
+    Reserved Instances
+    Spot Instances
+    Budget alerts
+🎯 🔥 MOST IMPORTANT (FOCUS LIST)
+
+If you’re short on time, focus ONLY on:
+
+    👉 MUST KNOW:
+    EC2
+    S3
+    RDS
+    VPC
+    IAM
+    Lambda
+    👉 NICE TO HAVE:
+    CloudFront
+    API Gateway
+    CloudWatch
+🧠 Real Full Stack Architecture (Interview GOLD)
+    👉 Example you should explain:
+    React frontend → hosted on S3
+    Backend → EC2 / Lambda
+    Database → RDS
+    Images → S3
+    CDN → CloudFront
+    Security → IAM``
+
+    🔥 If you explain this → interviewer impressed
+---------------------------------------------------------------------------------------
+
+🚀 AWS THEORY – TOP IMPORTANT TOPICS (FOR FULL-STACK DEV)
+    🧠 1. CLOUD FUNDAMENTALS (⭐⭐⭐⭐⭐)
+    What is Cloud Computing?
+    IaaS vs PaaS vs SaaS
+    Public vs Private vs Hybrid cloud
+    AWS global infrastructure (Regions, AZs)
+
+    👉 VERY COMMON:
+
+    “Why use AWS instead of traditional servers?”
+
+    ⚙️ 2. EC2 (VIRTUAL SERVERS) (⭐⭐⭐⭐⭐)
+
+    👉 MOST IMPORTANT
+
+    What is EC2?
+    Instance types
+    Security groups
+    Key pairs
+    AMI (Amazon Machine Image)
+
+    👉 REAL QUESTION:
+
+    “How do you deploy your Node app on EC2?”
+
+    📦 3. S3 (STORAGE) (⭐⭐⭐⭐⭐)
+
+    👉 VERY COMMON
+
+    What is S3?
+    Buckets & objects
+    Public vs private access
+    Use cases (images, files)
+
+    👉 REAL:
+
+    “How do you upload images from React to S3?”
+
+    🌐 4. IAM (SECURITY) (⭐⭐⭐⭐⭐)
+
+    👉 MUST KNOW
+
+    Users, roles, policies
+    Permissions
+    Least privilege principle
+
+    👉 VERY COMMON:
+
+    “How do you secure AWS resources?”
+
+    ⚡ 5. RDS (DATABASE) (⭐⭐⭐⭐⭐)
+    Managed MySQL/PostgreSQL
+    Backups
+    Scaling
+
+    👉 REAL:
+
+    “Why use RDS instead of installing MySQL manually?”
+
+    🔥 6. LAMBDA (SERVERLESS) (⭐⭐⭐⭐⭐)
+
+    👉 HIGH VALUE
+
+    What is Lambda?
+    Event-driven functions
+    No server management
+
+    👉 COMMON:
+
+    “When do you use Lambda instead of EC2?”
+
+    🌍 7. API GATEWAY (⭐⭐⭐⭐)
+    Create APIs without server
+    Connect with Lambda
+    ⚙️ 8. DEPLOYMENT (⭐⭐⭐⭐⭐)
+
+    👉 VERY IMPORTANT
+
+    Hosting React app on S3
+    Deploy Node app on EC2
+    Environment variables
+    🚀 9. CLOUD FRONT (CDN) (⭐⭐⭐⭐)
+    Content delivery network
+    Improve performance
+    🔐 10. SECURITY (⭐⭐⭐⭐⭐)
+    HTTPS
+    IAM roles
+    Secure APIs
+    ⚡ 11. SCALING (⭐⭐⭐⭐⭐) 🔥
+
+    👉 INTERVIEW FAVORITE
+
+    Auto Scaling
+    Load Balancer
+    High availability
+
+    👉 VERY COMMON:
+
+    “How will you scale your app for 1 lakh users?”
+
+    🧠 12. MONITORING (⭐⭐⭐⭐)
+    CloudWatch basics
+    Logs & alerts
+    🔥 13. REAL-WORLD SCENARIOS (VERY IMPORTANT)
+
+    👉 THIS is what gets you selected 💯
+
+    Deploy MERN app on AWS
+    Store images in S3
+    Use EC2 for backend
+    Use RDS for database
+    Scale using Load Balancer
+    Handle traffic spikes
+
+3.Coding Questions
+
+💻 AWS PRACTICAL / CODING TASKS
+    🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
+    Create AWS account
+    Launch EC2 instance
+    Connect via SSH
+    Install Node.js
+    ⚙️ PHASE 2: DEPLOYMENT (⭐⭐⭐⭐⭐)
+    Deploy Node app on EC2
+    Open port using security group
+    Run app using PM2
+    📦 PHASE 3: S3 (⭐⭐⭐⭐⭐)
+    Create bucket
+    Upload files
+    Connect React → S3
+    🌐 PHASE 4: FULL STACK DEPLOYMENT (⭐⭐⭐⭐⭐)
+    Deploy frontend (React/Next)
+    Deploy backend (Node)
+    Connect with DB (RDS or Mongo Atlas)
+    ⚡ PHASE 5: SCALING (⭐⭐⭐⭐⭐)
+    Add Load Balancer
+    Setup Auto Scaling
+    Handle traffic
+4.Scenarios Questions

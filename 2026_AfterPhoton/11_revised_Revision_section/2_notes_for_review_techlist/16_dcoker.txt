@@ -1,0 +1,199 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+🧠 1. MINDMAP (DOCKER CONCEPT MAP)
+    1. Basics
+    What is Docker?
+    Why Docker is used
+    Virtual Machine vs Docker
+    Containerization concept
+    Docker architecture (Client, Daemon, Registry)
+    2. Core Concepts
+    Image
+    Container
+    Dockerfile
+    Docker Hub
+    Layers & caching
+    3. Docker Commands
+    docker build
+    docker run
+    docker ps
+    docker stop
+    docker rm
+    docker images
+    4. Dockerfile
+    FROM
+    WORKDIR
+    COPY
+    RUN
+    CMD
+    EXPOSE
+    5. Volumes & Storage
+    Volumes
+    Bind mounts
+    Persisting data
+    6. Networking
+    Bridge network
+    Host network
+    Container communication
+    7. Docker Compose
+    docker-compose.yml
+    Multi-container apps
+    Services
+    Depends_on
+    8. Environment Variables
+    .env file
+    Passing env variables
+    9. Optimization
+    Layer caching
+    Small image size
+    Multi-stage builds
+    10. Security
+    Non-root user
+    Image vulnerabilities
+    11. Deployment
+    Docker in production
+    CI/CD basics
+    12. Real-world Usage
+    Node app container
+    React app container
+    Full-stack app (Node + DB)
+    Microservices
+--------------------------------------------------------------------------------
+🧠 2. DOCKER THEORY QUESTIONS (INTERVIEW CORE)
+    🔹 1. BASICS (⭐⭐⭐⭐⭐)
+    What is Docker?
+    Why use Docker?
+    Docker vs Virtual Machine
+
+    👉 VERY COMMON:
+
+    “Why Docker is faster than VM?”
+
+    🔹 2. CORE CONCEPTS (⭐⭐⭐⭐⭐)
+    Image vs Container
+    Docker architecture
+    Docker lifecycle
+
+    👉 COMMON:
+
+    “What happens when you run docker run?”
+
+    🔹 3. DOCKERFILE (⭐⭐⭐⭐⭐)
+    What is Dockerfile?
+    Important instructions (FROM, RUN, CMD)
+
+    👉 VERY COMMON:
+
+    “Difference between CMD and ENTRYPOINT?”
+
+    🔹 4. VOLUMES (⭐⭐⭐⭐⭐)
+    Why volumes needed?
+    Persisting data
+
+    👉 COMMON:
+
+    “What happens if container is deleted?”
+
+    🔹 5. NETWORKING (⭐⭐⭐⭐)
+    How containers communicate?
+    🔹 6. DOCKER COMPOSE (⭐⭐⭐⭐⭐)
+    Multi-container setup
+    Why needed?
+
+    👉 VERY COMMON:
+
+    “How do you run Node + DB together?”
+
+    🔹 7. PERFORMANCE & OPTIMIZATION (⭐⭐⭐⭐⭐)
+    Image size reduction
+    Layer caching
+    🔹 8. SECURITY (⭐⭐⭐⭐)
+    Best practices
+    🔹 9. REAL-WORLD QUESTIONS (🔥)
+
+    👉 MUST PREPARE
+
+    How to dockerize Node app?
+    How to connect DB in Docker?
+    How to deploy using Docker?
+
+    🧠 2. DOCKER THEORY QUESTIONS (INTERVIEW CORE)
+    🔹 1. BASICS (⭐⭐⭐⭐⭐)
+    What is Docker?
+    Why use Docker?
+    Docker vs Virtual Machine
+
+    👉 VERY COMMON:
+
+    “Why Docker is faster than VM?”
+
+    🔹 2. CORE CONCEPTS (⭐⭐⭐⭐⭐)
+    Image vs Container
+    Docker architecture
+    Docker lifecycle
+
+    👉 COMMON:
+
+    “What happens when you run docker run?”
+
+    🔹 3. DOCKERFILE (⭐⭐⭐⭐⭐)
+    What is Dockerfile?
+    Important instructions (FROM, RUN, CMD)
+
+    👉 VERY COMMON:
+
+    “Difference between CMD and ENTRYPOINT?”
+
+    🔹 4. VOLUMES (⭐⭐⭐⭐⭐)
+    Why volumes needed?
+    Persisting data
+
+    👉 COMMON:
+
+    “What happens if container is deleted?”
+
+    🔹 5. NETWORKING (⭐⭐⭐⭐)
+    How containers communicate?
+    🔹 6. DOCKER COMPOSE (⭐⭐⭐⭐⭐)
+    Multi-container setup
+    Why needed?
+
+    👉 VERY COMMON:
+
+    “How do you run Node + DB together?”
+
+    🔹 7. PERFORMANCE & OPTIMIZATION (⭐⭐⭐⭐⭐)
+    Image size reduction
+    Layer caching
+    🔹 8. SECURITY (⭐⭐⭐⭐)
+    Best practices
+    🔹 9. REAL-WORLD QUESTIONS (🔥)
+
+    👉 MUST PREPARE
+
+    How to dockerize Node app?
+    How to connect DB in Docker?
+    How to deploy using Docker?
+----------------------------------------------------------------------
+    3.Coding Questions
+-----------------------------------------------------------------
+🧠 4. SCENARIO QUESTIONS (INTERVIEW GOLD 🔥)
+    🔹 Scenario 1
+        👉 Your app works locally but not in production Docker
+        → Check ports, env variables, network
+    🔹 Scenario 2
+        👉 Data lost after container restart
+        → Use volumes
+    🔹 Scenario 3
+        👉 App size too large
+        → Use multi-stage build
+    🔹 Scenario 4
+        👉 Multiple services (Node + DB)
+        → Use Docker Compose
+    🔹 Scenario 5
+        👉 Need to scale containers
+        → Use orchestration (basic idea: Kubernetes)

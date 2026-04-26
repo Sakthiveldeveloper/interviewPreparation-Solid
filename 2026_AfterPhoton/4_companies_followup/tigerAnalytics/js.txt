@@ -1,0 +1,1732 @@
+1.Mind map
+2.Theory Questipons
+3.Coding Questions
+4.Senario questions
+
+### ✅ JavaScript Prep Structure:
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all JS topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code (what Tiger Analytics asks!) |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+
+
+------------------------------------------------------------------------------------------------
+1.## 🗺️ JavaScript Mind Map
+    JavaScript
+    │
+    ├── 1. Core Fundamentals
+    │   ├── Variables (var, let, const)
+    │   ├── Data Types (primitive vs reference)
+    │   ├── Type Coercion
+    │   ├── Hoisting
+    │   └── Scope (global, function, block)
+    │
+    ├── 2. Functions
+    │   ├── Function Declaration vs Expression
+    │   ├── Arrow Functions
+    │   ├── IIFE (Immediately Invoked)
+    │   ├── Closures
+    │   ├── Currying
+    │   └── Higher Order Functions
+    │
+    ├── 3. Objects & Arrays
+    │   ├── Object creation patterns
+    │   ├── Prototypes & Prototype Chain
+    │   ├── Destructuring
+    │   ├── Spread & Rest operator
+    │   ├── Array methods (map, filter, reduce, find, some, every)
+    │   └── Object methods (keys, values, entries, assign)
+    │
+    ├── 4. Asynchronous JS
+    │   ├── Event Loop
+    │   ├── Call Stack
+    │   ├── Callbacks
+    │   ├── Promises (then, catch, finally)
+    │   ├── Promise.all, Promise.race, Promise.allSettled
+    │   ├── Async/Await
+    │   └── Error handling in async code
+    │
+    ├── 5. ES6+ Features
+    │   ├── let/const
+    │   ├── Template literals
+    │   ├── Arrow functions
+    │   ├── Destructuring
+    │   ├── Modules (import/export)
+    │   ├── Optional chaining (?.)
+    │   └── Nullish coalescing (??)
+    │
+    ├── 6. DOM & Events
+    │   ├── DOM manipulation
+    │   ├── Event bubbling vs capturing
+    │   ├── Event delegation
+    │   └── preventDefault vs stopPropagation
+    │
+    ├── 7. Advanced Concepts
+    │   ├── this keyword
+    │   ├── call, apply, bind
+    │   ├── Prototype & Inheritance
+    │   ├── Generators & Iterators
+    │   └── WeakMap & WeakSet
+    │
+    └── 8. Performance & Patterns
+        ├── Debounce vs Throttle
+        ├── Memoization
+        ├── Design Patterns (Module(Creational), Singleton(Structural), Observer(Behavioral))
+        └── Memory management
+------------------------------------------------------------------------------------------------
+2.Theory Questipons
+## 📖 Theory Questions + Answers
+
+    **Q1. Difference between `var`, `let`, `const`?**
+
+    | | var | let | const |
+    |--|-----|-----|-------|
+    | Scope | Function | Block | Block |
+    | Hoisting | Yes (undefined) | Yes (TDZ error) | Yes (TDZ error) |
+    | Re-declare | ✅ Yes | ❌ No | ❌ No |
+    | Re-assign | ✅ Yes | ✅ Yes | ❌ No |
+
+    **TDZ = Temporal Dead Zone** — let/const exist but can't be accessed before declaration.
+    ---
+    **Q2. What is Hoisting?**
+
+    JavaScript moves **declarations** to the top of their scope before execution.
+
+    ```javascript
+    console.log(x); // undefined (not error!) — var is hoisted
+    var x = 5;
+
+    console.log(y); // ReferenceError — let is in TDZ
+    let y = 5;
+
+    greet(); // Works! — function declarations are fully hoisted
+    function greet() { console.log("Hello"); }
+
+    sayHi(); // TypeError — function expressions are NOT hoisted
+    var sayHi = function() { console.log("Hi"); }
+    ```
+
+    ---
+
+    **Q3. What is a Closure?**
+
+    A function that **remembers variables from its outer scope** even after the outer function has returned.
+
+    ```javascript
+    function counter() {
+    let count = 0; // outer variable
+    return function() {
+        count++;
+        return count;
+    }
+    }
+
+    const increment = counter();
+    console.log(increment()); // 1
+    console.log(increment()); // 2
+    console.log(increment()); // 3
+    // count is "closed over" — remembered between calls!
+    ```
+
+    **Real use cases:** Data privacy, memoization, partial application, module pattern.
+
+    ---
+
+    **Q4. What is the Event Loop?**
+
+    ```
+    Call Stack → Web APIs → Callback Queue → Event Loop → Call Stack
+    ```
+
+    1. **Call Stack** — executes synchronous code (LIFO)
+    2. **Web APIs** — handles async operations (setTimeout, fetch, DOM events)
+    3. **Callback Queue** — stores completed async callbacks
+    4. **Microtask Queue** — stores Promise callbacks (higher priority!)
+    5. **Event Loop** — moves callbacks from queue to call stack when stack is empty
+
+    **Priority:** Call Stack → Microtask Queue → Callback Queue
+
+    ```javascript
+    console.log("1");
+    setTimeout(() => console.log("2"), 0);
+    Promise.resolve().then(() => console.log("3"));
+    console.log("4");
+
+    // Output: 1, 4, 3, 2
+    // Promise (microtask) runs before setTimeout (callback queue)!
+    ```
+
+    ---
+
+    **Q5. Promises vs Async/Await?**
+
+    ```javascript
+    // Promise chain
+    fetch('/api/user')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+
+    // Async/Await (cleaner!)
+    async function getUser() {
+    try {
+        const res = await fetch('/api/user');
+        const data = await res.json();
+        console.log(data);
+    } catch(err) {
+        console.error(err);
+    }
+    }
+    ```
+
+    **Both do the same thing** — async/await is just **syntactic sugar** over Promises, making code more readable.
+
+    ---
+
+    **Q6. What is `this` keyword?**
+
+    `this` refers to the **object that is calling the function**.
+
+    ```javascript
+    // In object method — this = object
+    const user = {
+    name: "Sakthi",
+    greet() { console.log(this.name); } // "Sakthi"
+    }
+
+    // In regular function — this = window (or undefined in strict mode)
+    function greet() { console.log(this); } // window
+
+    // In arrow function — this = inherited from parent scope
+    const greet = () => { console.log(this); } // parent's this
+
+    // In event handler — this = element that triggered event
+    button.addEventListener('click', function() {
+    console.log(this); // button element
+    });
+    ```
+
+    ---
+
+    **Q7. call vs apply vs bind?**
+
+    All three **explicitly set `this`**:
+
+    ```javascript
+    function greet(greeting, punctuation) {
+    console.log(`${greeting}, ${this.name}${punctuation}`);
+    }
+
+    const user = { name: "Sakthi" };
+
+    // call — arguments passed individually
+    greet.call(user, "Hello", "!"); // Hello, Sakthi!
+
+    // apply — arguments passed as array
+    greet.apply(user, ["Hello", "!"]); // Hello, Sakthi!
+
+    // bind — returns NEW function with this bound (doesn't call immediately)
+    const greetSakthi = greet.bind(user, "Hello");
+    greetSakthi("!"); // Hello, Sakthi!
+    ```
+
+    ---
+
+    **Q8. What is Prototype & Prototype Chain?**
+
+    Every JS object has a hidden `__proto__` property pointing to its prototype. When a property isn't found on object, JS looks up the **prototype chain**.
+
+    ```javascript
+    const animal = { breathes: true };
+    const dog = Object.create(animal);
+    dog.barks = true;
+
+    console.log(dog.barks);   // true (own property)
+    console.log(dog.breathes); // true (from prototype chain!)
+    ```
+
+    ---
+
+    **Q9. Debounce vs Throttle?**
+
+    Both **limit how often a function runs** — critical for performance!
+
+    **Debounce** — waits until user **stops** triggering event, then runs ONCE:
+    ```javascript
+    // Search input — wait until user stops typing
+    function debounce(fn, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), delay);
+    }
+    }
+    ```
+
+    **Throttle** — runs function at **regular intervals** no matter how many triggers:
+    ```javascript
+    // Scroll event — run max once every 300ms
+    function throttle(fn, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+        fn(...args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+        }
+    }
+    }
+    ```
+
+    **Real use cases:**
+    - Debounce → Search input, window resize
+    - Throttle → Scroll events, button clicks
+
+    ---
+
+    **Q10. Optional Chaining & Nullish Coalescing?**
+
+    ```javascript
+    // Optional chaining (?.) — safely access nested properties
+    const user = { address: { city: "Chennai" } };
+    console.log(user?.address?.city);    // "Chennai"
+    console.log(user?.phone?.number);    // undefined (no error!)
+
+    // Nullish coalescing (??) — default value only for null/undefined
+    const name = null ?? "Default";     // "Default"
+    const age = 0 ?? 18;               // 0 (not 18! because 0 is not null/undefined)
+    const score = 0 || 18;             // 18 (|| treats 0 as falsy — different!)
+    ```
+
+---
+---------------------------------------------------------------------------------------------------
+## 💻 Coding Questions
+
+    ---
+
+    **C1. Flatten a nested array:**
+    ```javascript
+    const arr = [1, [2, [3, [4]]]];
+
+    // Method 1 — built-in
+    arr.flat(Infinity); // [1, 2, 3, 4]
+
+    // Method 2 — recursive
+    function flatten(arr) {
+    return arr.reduce((flat, item) =>
+        flat.concat(Array.isArray(item) ? flatten(item) : item), []);
+    }
+    ```
+
+    ---
+
+    **C2. Remove duplicates from array:**
+    ```javascript
+    const arr = [1, 2, 2, 3, 3, 4];
+
+    // Method 1 — Set (cleanest!)
+    const unique = [...new Set(arr)]; // [1, 2, 3, 4]
+
+    // Method 2 — filter
+    const unique2 = arr.filter((item, index) => arr.indexOf(item) === index);
+    ```
+
+    ---
+
+    **C3. Deep clone an object:**
+    ```javascript
+    const obj = { name: "Sakthi", address: { city: "Chennai" } };
+
+    // Method 1 — JSON (simple but loses functions/dates)
+    const clone = JSON.parse(JSON.stringify(obj));
+
+    // Method 2 — structuredClone (modern, recommended!)
+    const clone2 = structuredClone(obj);
+    ```
+
+    ---
+
+    **C4. Implement debounce:**
+    ```javascript
+    function debounce(fn, delay) {
+    let timer;
+    return function(...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn.apply(this, args), delay);
+    }
+    }
+
+    // Usage
+    const search = debounce((query) => console.log(query), 300);
+    input.addEventListener('input', (e) => search(e.target.value));
+    ```
+
+    ---
+
+    **C5. Implement memoization:**
+    ```javascript
+    function memoize(fn) {
+    const cache = {};
+    return function(...args) {
+        const key = JSON.stringify(args);
+        if (cache[key]) return cache[key];
+        cache[key] = fn(...args);
+        return cache[key];
+    }
+    }
+
+    const expensiveCalc = memoize((n) => n * n);
+    expensiveCalc(5); // calculates — 25
+    expensiveCalc(5); // returns from cache — 25
+    ```
+
+    ---
+
+    **C6. Promise.all vs Promise.allSettled:**
+    ```javascript
+    const p1 = fetch('/api/user');
+    const p2 = fetch('/api/posts');
+
+    // Promise.all — fails if ANY promise fails
+    Promise.all([p1, p2])
+    .then(([user, posts]) => console.log(user, posts))
+    .catch(err => console.error("One failed:", err));
+
+    // Promise.allSettled — waits for ALL, never fails
+    Promise.allSettled([p1, p2])
+    .then(results => {
+        results.forEach(result => {
+        if (result.status === 'fulfilled') console.log(result.value);
+        else console.log(result.reason);
+        });
+    });
+    ```
+
+---
+-------------------------------------------------------------------------------------------------
+## 🎯 Scenario Questions
+    ---
+    **S1. You have a search input that calls an API on every keystroke. The API is being called 50 times per second. How do you fix this?**
+
+    **Answer:** Use **debounce** — wait until user stops typing (300-500ms delay) before calling API. This reduces API calls from 50/second to just 1 per search intent.
+
+    ---
+
+    **S2. Your React app is re-rendering too many times and causing performance issues. How do you debug and fix it?**
+
+    **Answer:**
+    1. Use **React DevTools Profiler** to identify which components re-render
+    2. Use **React.memo** to prevent unnecessary re-renders of child components
+    3. Use **useCallback** to memoize functions passed as props
+    4. Use **useMemo** to memoize expensive calculations
+    5. Check if state updates are causing unnecessary parent re-renders
+    6. Use **lazy loading** for heavy components
+
+    ---
+
+    **S3. You need to make 5 API calls simultaneously and show results only when ALL succeed. How do you handle this?**
+
+    **Answer:** Use **Promise.all** — it runs all 5 in parallel and resolves when all succeed. If any fails, catch the error and handle gracefully. If you need results even when some fail, use **Promise.allSettled** instead.
+
+    ---
+
+    **S4. A junior developer asks: "Why is my closure not working as expected in a for loop?" How do you explain and fix it?**
+
+    ```javascript
+    // Problem — all click handlers show 3
+    for (var i = 0; i < 3; i++) {
+    buttons[i].addEventListener('click', function() {
+        console.log(i); // Always shows 3!
+    });
+    }
+
+    // Fix 1 — use let (block scope!)
+    for (let i = 0; i < 3; i++) {
+    buttons[i].addEventListener('click', function() {
+        console.log(i); // Shows 0, 1, 2 correctly!
+    });
+    }
+
+    // Fix 2 — IIFE closure
+    for (var i = 0; i < 3; i++) {
+    (function(j) {
+        buttons[j].addEventListener('click', function() {
+        console.log(j); // Shows 0, 1, 2 correctly!
+        });
+    })(i);
+    }
+    ```
+
+    **Explanation:** `var` is function-scoped so all handlers share the same `i`. By the time click happens, loop is done and `i = 3`. `let` creates a new block scope for each iteration!
+
+    ---
+
+    **S5. How would you handle API errors gracefully in a production React + Node.js application?**
+
+    **Answer:**
+    - **Frontend:** Global error boundary in React, axios interceptors for consistent error handling, user-friendly error messages
+    - **Backend:** Express error middleware, structured error responses (status code, message, error code), logging with Winston/Morgan
+    - **Both:** Retry logic for network failures, timeout handling, fallback UI states (skeleton screens, error states)
+
+---
+-------------------------------------------------------------------------------------------
+
+## 💻 Coding Questions (Remaining 4 — C7 to C10)
+
+    ---
+
+    **C7. Reverse a String without built-in reverse():**
+    ```javascript
+    function reverseString(str) {
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+    }
+
+    // OR using spread + reduce
+    const reverse = str => [...str].reduce((rev, char) => char + rev, '');
+
+    console.log(reverseString("Sakthi")); // "ihktaS"
+    ```
+
+    ---
+
+    **C8. Find the most frequent element in an array:**
+    ```javascript
+    function mostFrequent(arr) {
+    const frequency = {};
+    let maxCount = 0;
+    let result;
+
+    arr.forEach(item => {
+        frequency[item] = (frequency[item] || 0) + 1;
+        if (frequency[item] > maxCount) {
+        maxCount = frequency[item];
+        result = item;
+        }
+    });
+
+    return result;
+    }
+
+    console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4])); // 3
+    ```
+
+    ---
+
+    **C9. Implement a curry function:**
+    ```javascript
+    function curry(fn) {
+    return function curried(...args) {
+        if (args.length >= fn.length) {
+        return fn(...args);
+        }
+        return function(...moreArgs) {
+        return curried(...args, ...moreArgs);
+        }
+    }
+    }
+
+    // Usage
+    const add = curry((a, b, c) => a + b + c);
+    console.log(add(1)(2)(3)); // 6
+    console.log(add(1, 2)(3)); // 6
+    console.log(add(1)(2, 3)); // 6
+    ```
+
+    ---
+
+    **C10. Group array of objects by a key:**
+    ```javascript
+    const employees = [
+    { name: "Sakthi", dept: "Frontend" },
+    { name: "Kumar", dept: "Backend" },
+    { name: "Priya", dept: "Frontend" },
+    { name: "Raja", dept: "Backend" },
+    ];
+
+    function groupBy(arr, key) {
+    return arr.reduce((grouped, item) => {
+        const group = item[key];
+        grouped[group] = grouped[group] || [];
+        grouped[group].push(item);
+        return grouped;
+    }, {});
+    }
+
+    console.log(groupBy(employees, 'dept'));
+    // {
+    //   Frontend: [{name: "Sakthi"...}, {name: "Priya"...}],
+    //   Backend: [{name: "Kumar"...}, {name: "Raja"...}]
+    // }
+    ```
+
+    ---
+-------------------------------------------------------------------------------------------
+
+
+## 🎯 Scenario Questions (Remaining 5 — S6 to S10)
+
+    ---
+
+    **S6. Your app has a button that triggers an expensive API call. Users are clicking it multiple times rapidly. How do you prevent multiple calls?**
+
+    **Answer:**
+    Use **throttle OR disable button** approach:
+    ```javascript
+    // Option 1 — Disable button during API call
+    async function handleClick() {
+    button.disabled = true;
+    try {
+        await fetch('/api/data');
+    } finally {
+        button.disabled = false; // Always re-enable!
+    }
+    }
+
+    // Option 2 — Throttle
+    const handleClick = throttle(async () => {
+    await fetch('/api/data');
+    }, 2000); // Max once every 2 seconds
+    ```
+
+    **Senior answer:** Also add **loading state** in UI so user knows request is in progress!
+
+    ---
+
+    **S7. You have a large list of 10,000 items to render in React. The page is freezing. How do you fix it?**
+
+    **Answer:**
+    Use **Virtual List / Windowing** — only render items visible on screen:
+
+    1. Use **react-window** or **react-virtual** library
+    2. Only render ~20-30 items visible in viewport
+    3. As user scrolls, swap in new items and remove old ones
+    4. **Pagination** as alternative — load 20 items at a time
+    5. **Infinite scroll** — load more as user scrolls to bottom
+
+    This reduces DOM nodes from 10,000 to ~30 — massive performance gain!
+
+    ---
+
+    **S8. A junior developer wrote this code. What's wrong and how do you fix it?**
+
+    ```javascript
+    // Buggy code
+    async function getUsers() {
+    const users = await fetch('/api/users');
+    const posts = await fetch('/api/posts');
+    return { users, posts };
+    }
+    ```
+
+    **Answer:**
+    Two problems:
+    1. **Sequential calls** — posts won't start until users finishes (slow!)
+    2. **No error handling** — if fetch fails, whole function crashes
+
+    ```javascript
+    // Fixed code
+    async function getUsers() {
+    try {
+        // Run BOTH in parallel using Promise.all!
+        const [usersRes, postsRes] = await Promise.all([
+        fetch('/api/users'),
+        fetch('/api/posts')
+        ]);
+
+        const users = await usersRes.json();
+        const posts = await postsRes.json();
+
+        return { users, posts };
+    } catch(error) {
+        console.error('Failed to fetch:', error);
+        throw error; // Re-throw for caller to handle
+    }
+    }
+    ```
+
+    **This is a classic Senior-level interview question!** 💯
+
+    ---
+
+    **S9. How would you implement infinite scroll in a React application?**
+
+    **Answer:**
+    Use **Intersection Observer API** — watches when a sentinel element enters viewport:
+
+    ```javascript
+    function useInfiniteScroll(callback) {
+    const observerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+            callback(); // Load more data when sentinel is visible
+            }
+        },
+        { threshold: 0.1 }
+        );
+
+        if (observerRef.current) observer.observe(observerRef.current);
+        return () => observer.disconnect();
+    }, [callback]);
+
+    return observerRef;
+    }
+
+    // Usage in component
+    function NewsFeed() {
+    const [items, setItems] = useState([]);
+    const [page, setPage] = useState(1);
+
+    const loadMore = useCallback(() => {
+        fetchItems(page).then(newItems => {
+        setItems(prev => [...prev, ...newItems]);
+        setPage(prev => prev + 1);
+        });
+    }, [page]);
+
+    const sentinelRef = useInfiniteScroll(loadMore);
+
+    return (
+        <div>
+        {items.map(item => <NewsItem key={item.id} {...item} />)}
+        <div ref={sentinelRef} /> {/* Sentinel element */}
+        </div>
+    );
+    }
+    ```
+
+    ---
+
+    **S10. Production bug: Memory leak in your React app. Users report browser tabs crashing after 30 minutes. How do you debug and fix it?**
+
+    **Answer:**
+
+    **Common causes of memory leaks in React:**
+    1. **Event listeners not cleaned up**
+    2. **setInterval/setTimeout not cleared**
+    3. **Subscriptions not unsubscribed**
+    4. **Async operations updating unmounted components**
+
+    ```javascript
+    // Problem — memory leak!
+    useEffect(() => {
+    const interval = setInterval(() => {
+        fetchData().then(data => setData(data)); // Runs even after unmount!
+    }, 5000);
+    // Missing cleanup!
+    }, []);
+
+    // Fixed — proper cleanup!
+    useEffect(() => {
+    let isMounted = true; // Track mount status
+    
+    const interval = setInterval(async () => {
+        const data = await fetchData();
+        if (isMounted) setData(data); // Only update if still mounted!
+    }, 5000);
+
+    return () => {
+        isMounted = false;    // Prevent state updates
+        clearInterval(interval); // Clear interval on unmount!
+    };
+    }, []);
+    ```
+
+    **How to debug:**
+    1. **Chrome DevTools → Memory tab** → Take heap snapshots
+    2. Compare snapshots over time — growing objects = leak
+    3. **Performance tab** → Record and look for memory growth
+    4. Use **React DevTools Profiler** to spot unnecessary renders
+    ---
+
+-----------------------------------------------------------------------------------------------
+Sure Sakthi! 💯 Here's the **Complete JavaScript Theory — Every Mind Map Topic Covered** in easy copy format!
+
+---
+
+# 📖 JAVASCRIPT — COMPLETE THEORY QUESTIONS & ANSWERS
+
+---
+
+## 🔷 SECTION 1: Core Fundamentals
+
+    ---
+
+    **Q1. Difference between var, let, const?**
+
+    | | var | let | const |
+    |--|-----|-----|-------|
+    | Scope | Function | Block | Block |
+    | Hoisting | Yes (undefined) | Yes (TDZ error) | Yes (TDZ error) |
+    | Re-declare | ✅ Yes | ❌ No | ❌ No |
+    | Re-assign | ✅ Yes | ✅ Yes | ❌ No |
+
+    TDZ = Temporal Dead Zone — variable exists but cannot be accessed before declaration.
+
+    ---
+
+    **Q2. What are Primitive vs Reference data types?**
+
+    **Primitive** — stored by VALUE (copied):
+    - String, Number, Boolean, null, undefined, Symbol, BigInt
+    ```javascript
+    let a = 10;
+    let b = a; // b is a COPY
+    b = 20;
+    console.log(a); // 10 — not affected!
+    ```
+
+    **Reference** — stored by REFERENCE (shared):
+    - Object, Array, Function
+    ```javascript
+    let a = { name: "Sakthi" };
+    let b = a; // b points to SAME object
+    b.name = "Kumar";
+    console.log(a.name); // "Kumar" — affected!
+    ```
+
+    ---
+
+    **Q3. What is Type Coercion?**
+
+    JavaScript automatically converts types in certain operations.
+
+    ```javascript
+    // Implicit coercion
+    console.log(1 + "2");    // "12" (number → string)
+    console.log("5" - 2);    // 3 (string → number)
+    console.log(true + 1);   // 2 (boolean → number)
+    console.log(null + 1);   // 1
+    console.log(undefined + 1); // NaN
+
+    // == vs === 
+    console.log(0 == false);  // true (coercion happens!)
+    console.log(0 === false); // false (no coercion — strict!)
+    ```
+
+    Always use **===** to avoid coercion bugs!
+
+    ---
+
+    **Q4. What is Hoisting?**
+
+    JavaScript moves declarations to top of scope before execution.
+
+    ```javascript
+    // var is hoisted as undefined
+    console.log(x); // undefined
+    var x = 5;
+
+    // let/const — TDZ error
+    console.log(y); // ReferenceError
+    let y = 5;
+
+    // Function declarations fully hoisted
+    greet(); // Works!
+    function greet() { console.log("Hello"); }
+
+    // Function expressions NOT hoisted
+    sayHi(); // TypeError
+    var sayHi = function() { console.log("Hi"); }
+    ```
+
+    ---
+
+    **Q5. What is Scope? Types of Scope?**
+
+    Scope = where variables are accessible.
+
+    ```javascript
+    // Global scope — accessible everywhere
+    var globalVar = "I am global";
+
+    // Function scope — only inside function
+    function myFunc() {
+      var funcVar = "I am function scoped";
+      console.log(globalVar); // ✅ accessible
+    }
+    console.log(funcVar); // ❌ ReferenceError
+
+    // Block scope — only inside {}
+    if (true) {
+      let blockVar = "I am block scoped";
+      console.log(blockVar); // ✅ accessible
+    }
+    console.log(blockVar); // ❌ ReferenceError
+
+    // Lexical scope — inner function accesses outer variables
+    function outer() {
+      let x = 10;
+      function inner() {
+        console.log(x); // ✅ 10 — lexical scope
+      }
+      inner();
+    }
+    ```
+
+    ---
+
+## 🔷 SECTION 2: Functions
+
+    ---
+
+    **Q6. Function Declaration vs Expression vs Arrow Function?**
+
+    ```javascript
+    // Function Declaration — hoisted, has own this
+    function greet(name) {
+      return `Hello ${name}`;
+    }
+
+    // Function Expression — not hoisted
+    const greet = function(name) {
+      return `Hello ${name}`;
+    };
+
+    // Arrow Function — not hoisted, no own this, no arguments object
+    const greet = (name) => `Hello ${name}`;
+
+    // Key differences:
+    // 1. Arrow functions don't have own 'this'
+    // 2. Arrow functions can't be used as constructors
+    // 3. Arrow functions don't have 'arguments' object
+    ```
+
+    ---
+
+    **Q7. What is an IIFE?**
+
+    Immediately Invoked Function Expression — runs as soon as it's defined.
+
+    ```javascript
+    (function() {
+      var private = "I am private";
+      console.log("IIFE runs immediately!");
+    })();
+
+    console.log(private); // ❌ ReferenceError — private to IIFE
+
+    // Use case: Avoid polluting global scope
+    // Use case: Create private variables
+    // Modern alternative: Use modules (import/export)
+    ```
+
+    ---
+
+    **Q8. What is a Closure?**
+
+    Function that remembers variables from outer scope even after outer function returns.
+
+    ```javascript
+    function counter() {
+      let count = 0;
+      return {
+        increment: () => ++count,
+        decrement: () => --count,
+        getCount: () => count
+      };
+    }
+
+    const myCounter = counter();
+    myCounter.increment(); // 1
+    myCounter.increment(); // 2
+    myCounter.decrement(); // 1
+    myCounter.getCount();  // 1
+    // count is private — can't access directly!
+    ```
+
+    **Real use cases:** Data privacy, memoization, event handlers, module pattern.
+
+    ---
+
+    **Q9. What is Currying?**
+
+    Transforming a function with multiple arguments into a sequence of functions each taking ONE argument.
+
+    ```javascript
+    // Normal function
+    function add(a, b, c) { return a + b + c; }
+    add(1, 2, 3); // 6
+
+    // Curried version
+    function curriedAdd(a) {
+      return function(b) {
+        return function(c) {
+          return a + b + c;
+        }
+      }
+    }
+    curriedAdd(1)(2)(3); // 6
+
+    // Real use case — reusable partial functions
+    const add5 = curriedAdd(5);
+    add5(3)(2); // 10
+    add5(10)(1); // 16
+    ```
+
+    ---
+
+    **Q10. What are Higher Order Functions?**
+
+    Functions that take another function as argument OR return a function.
+
+    ```javascript
+    // Takes function as argument
+    function applyOperation(arr, operation) {
+      return arr.map(operation);
+    }
+    applyOperation([1,2,3], x => x * 2); // [2, 4, 6]
+
+    // Returns a function
+    function multiplier(factor) {
+      return (number) => number * factor;
+    }
+    const double = multiplier(2);
+    const triple = multiplier(3);
+    double(5); // 10
+    triple(5); // 15
+
+    // Built-in HOFs: map, filter, reduce, forEach, sort
+    ```
+
+    ---
+
+## 🔷 SECTION 3: Objects & Arrays
+
+    ---
+
+    **Q11. Array Methods — map, filter, reduce, find, some, every?**
+
+    ```javascript
+    const nums = [1, 2, 3, 4, 5];
+    const users = [
+      { name: "Sakthi", age: 28, active: true },
+      { name: "Kumar", age: 22, active: false },
+      { name: "Priya", age: 25, active: true }
+    ];
+
+    // map — transform each element, returns NEW array
+    const doubled = nums.map(n => n * 2); // [2,4,6,8,10]
+    const names = users.map(u => u.name); // ["Sakthi","Kumar","Priya"]
+
+    // filter — keep elements that pass test, returns NEW array
+    const evens = nums.filter(n => n % 2 === 0); // [2, 4]
+    const activeUsers = users.filter(u => u.active); // [Sakthi, Priya]
+
+    // reduce — reduce array to single value
+    const sum = nums.reduce((acc, curr) => acc + curr, 0); // 15
+    const totalAge = users.reduce((acc, u) => acc + u.age, 0); // 75
+
+    // find — returns FIRST element that passes test
+    const found = users.find(u => u.age > 24); // {name: "Sakthi"...}
+
+    // some — returns true if AT LEAST ONE element passes
+    const hasInactive = users.some(u => !u.active); // true
+
+    // every — returns true if ALL elements pass
+    const allActive = users.every(u => u.active); // false
+    ```
+
+    ---
+
+    **Q12. Object Methods — keys, values, entries, assign?**
+
+    ```javascript
+    const user = { name: "Sakthi", age: 28, city: "Chennai" };
+
+    // Object.keys — array of keys
+    Object.keys(user); // ["name", "age", "city"]
+
+    // Object.values — array of values
+    Object.values(user); // ["Sakthi", 28, "Chennai"]
+
+    // Object.entries — array of [key, value] pairs
+    Object.entries(user); // [["name","Sakthi"],["age",28],["city","Chennai"]]
+
+    // Object.assign — merge objects (shallow copy)
+    const updated = Object.assign({}, user, { age: 29 });
+    // { name: "Sakthi", age: 29, city: "Chennai" }
+
+    // Spread (modern alternative to assign)
+    const updated2 = { ...user, age: 29 };
+    // { name: "Sakthi", age: 29, city: "Chennai" }
+
+    // Object.freeze — prevent modifications
+    const frozen = Object.freeze(user);
+    frozen.age = 100; // silently fails!
+    console.log(frozen.age); // 28
+    ```
+
+    ---
+
+    **Q13. Destructuring — Objects & Arrays?**
+
+    ```javascript
+    // Object destructuring
+    const user = { name: "Sakthi", age: 28, city: "Chennai" };
+    const { name, age, city } = user;
+    const { name: userName, age: userAge } = user; // rename
+    const { name: n, country = "India" } = user; // default value
+
+    // Array destructuring
+    const [first, second, ...rest] = [1, 2, 3, 4, 5];
+    console.log(first); // 1
+    console.log(second); // 2
+    console.log(rest); // [3, 4, 5]
+
+    // Swap variables
+    let a = 1, b = 2;
+    [a, b] = [b, a];
+    console.log(a, b); // 2 1
+
+    // Function parameter destructuring
+    function greet({ name, age }) {
+      return `${name} is ${age} years old`;
+    }
+    greet(user); // "Sakthi is 28 years old"
+    ```
+
+    ---
+
+    **Q14. Spread & Rest Operator?**
+
+    ```javascript
+    // Spread (...) — expands iterable
+    // Arrays
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const combined = [...arr1, ...arr2]; // [1,2,3,4,5,6]
+
+    // Objects
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { c: 3, d: 4 };
+    const merged = { ...obj1, ...obj2 }; // {a:1,b:2,c:3,d:4}
+
+    // Function calls
+    Math.max(...arr1); // same as Math.max(1,2,3)
+
+    // Rest (...) — collects remaining arguments
+    function sum(...numbers) {
+      return numbers.reduce((a, b) => a + b, 0);
+    }
+    sum(1, 2, 3, 4, 5); // 15
+
+    // Rest in destructuring
+    const [first, ...others] = [1, 2, 3, 4];
+    console.log(first);  // 1
+    console.log(others); // [2, 3, 4]
+    ```
+
+    ---
+
+    **Q15. Prototype & Prototype Chain?**
+
+    ```javascript
+    // Every object has __proto__ pointing to its prototype
+    const animal = {
+      breathes: true,
+      eat() { console.log("eating"); }
+    };
+
+    const dog = Object.create(animal);
+    dog.barks = true;
+
+    console.log(dog.barks);    // true (own property)
+    console.log(dog.breathes); // true (from prototype!)
+    console.log(dog.eat());    // "eating" (from prototype!)
+
+    // Prototype chain: dog → animal → Object.prototype → null
+
+    // Constructor function
+    function Person(name) {
+      this.name = name;
+    }
+    Person.prototype.greet = function() {
+      return `Hi I am ${this.name}`;
+    };
+
+    const sakthi = new Person("Sakthi");
+    sakthi.greet(); // "Hi I am Sakthi"
+    ```
+
+    ---
+
+## 🔷 SECTION 4: Asynchronous JavaScript
+
+    ---
+
+    **Q16. What is the Event Loop?**
+
+    ```javascript
+    // Execution order:
+    // 1. Call Stack (sync code)
+    // 2. Microtask Queue (Promises)
+    // 3. Callback Queue (setTimeout, setInterval)
+
+    console.log("1");                          // sync
+    setTimeout(() => console.log("2"), 0);     // callback queue
+    Promise.resolve().then(() => console.log("3")); // microtask queue
+    console.log("4");                          // sync
+
+    // Output: 1, 4, 3, 2
+    // Microtask (Promise) ALWAYS runs before setTimeout!
+    ```
+
+    ---
+
+    **Q17. Callbacks vs Promises vs Async/Await?**
+
+    ```javascript
+    // Callbacks — leads to callback hell!
+    getUser(id, function(user) {
+      getPosts(user.id, function(posts) {
+        getComments(posts[0].id, function(comments) {
+          // deeply nested — hard to read!
+        });
+      });
+    });
+
+    // Promises — cleaner chain
+    getUser(id)
+      .then(user => getPosts(user.id))
+      .then(posts => getComments(posts[0].id))
+      .then(comments => console.log(comments))
+      .catch(err => console.error(err));
+
+    // Async/Await — most readable!
+    async function getData(id) {
+      try {
+        const user = await getUser(id);
+        const posts = await getPosts(user.id);
+        const comments = await getComments(posts[0].id);
+        return comments;
+      } catch(err) {
+        console.error(err);
+      }
+    }
+    ```
+
+    ---
+
+    **Q18. Promise.all vs Promise.race vs Promise.allSettled?**
+
+    ```javascript
+    const p1 = fetch('/api/users');
+    const p2 = fetch('/api/posts');
+    const p3 = fetch('/api/comments');
+
+    // Promise.all — waits for ALL, fails if ANY fails
+    Promise.all([p1, p2, p3])
+      .then(([users, posts, comments]) => {
+        // all succeeded
+      })
+      .catch(err => console.error("One failed:", err));
+
+    // Promise.race — resolves/rejects with FIRST settled promise
+    Promise.race([p1, p2, p3])
+      .then(first => console.log("Fastest:", first));
+
+    // Promise.allSettled — waits for ALL regardless of success/failure
+    Promise.allSettled([p1, p2, p3])
+      .then(results => {
+        results.forEach(result => {
+          if (result.status === 'fulfilled') {
+            console.log("Success:", result.value);
+          } else {
+            console.log("Failed:", result.reason);
+          }
+        });
+      });
+    ```
+
+    ---
+
+    **Q19. Error Handling in Async Code?**
+
+    ```javascript
+    // try/catch with async/await
+    async function fetchData() {
+      try {
+        const response = await fetch('/api/data');
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        return data;
+      } catch(error) {
+        if (error instanceof TypeError) {
+          console.error("Network error:", error);
+        } else {
+          console.error("API error:", error);
+        }
+        throw error; // re-throw for caller to handle
+      } finally {
+        console.log("Always runs — cleanup here!");
+      }
+    }
+
+    // Custom Error classes
+    class APIError extends Error {
+      constructor(message, statusCode) {
+        super(message);
+        this.name = 'APIError';
+        this.statusCode = statusCode;
+      }
+    }
+
+    throw new APIError("Not found", 404);
+    ```
+
+    ---
+
+## 🔷 SECTION 5: ES6+ Features
+
+    ---
+
+    **Q20. Template Literals?**
+
+    ```javascript
+    const name = "Sakthi";
+    const age = 28;
+
+    // Old way
+    const msg1 = "Hello " + name + " you are " + age + " years old";
+
+    // Template literal
+    const msg2 = `Hello ${name} you are ${age} years old`;
+
+    // Multi-line
+    const html = `
+      <div>
+        <h1>${name}</h1>
+        <p>Age: ${age}</p>
+      </div>
+    `;
+
+    // Expression inside ${}
+    const result = `${2 + 2} is four`;
+    const upper = `${name.toUpperCase()} is awesome`;
+
+    // Tagged templates (advanced)
+    function highlight(strings, ...values) {
+      return strings.reduce((result, str, i) =>
+        `${result}${str}${values[i] ? `<mark>${values[i]}</mark>` : ''}`, '');
+    }
+    highlight`Hello ${name} you are ${age}`; 
+    ```
+
+    ---
+
+    **Q21. Modules — import/export?**
+
+    ```javascript
+    // Named exports — multiple per file
+    // utils.js
+    export const add = (a, b) => a + b;
+    export const multiply = (a, b) => a * b;
+    export function greet(name) { return `Hello ${name}`; }
+
+    // Named imports
+    import { add, multiply } from './utils.js';
+    import { add as addNums } from './utils.js'; // rename
+
+    // Default export — ONE per file
+    // user.js
+    const User = { name: "Sakthi" };
+    export default User;
+
+    // Default import — any name works
+    import User from './user.js';
+    import MyUser from './user.js'; // same thing!
+
+    // Import everything
+    import * as Utils from './utils.js';
+    Utils.add(1, 2);
+
+    // Re-export
+    export { add } from './utils.js';
+    ```
+
+    ---
+
+    **Q22. Optional Chaining & Nullish Coalescing?**
+
+    ```javascript
+    // Optional chaining (?.) — safely access nested properties
+    const user = {
+      name: "Sakthi",
+      address: { city: "Chennai" },
+      greet() { return "Hello!"; }
+    };
+
+    console.log(user?.address?.city);     // "Chennai"
+    console.log(user?.phone?.number);     // undefined (no error!)
+    console.log(user?.greet());           // "Hello!"
+    console.log(user?.unknownMethod?.());  // undefined
+
+    // With arrays
+    const arr = [1, 2, 3];
+    console.log(arr?.[0]);  // 1
+    console.log(null?.[0]); // undefined
+
+    // Nullish coalescing (??) — default for null/undefined ONLY
+    console.log(null ?? "default");      // "default"
+    console.log(undefined ?? "default"); // "default"
+    console.log(0 ?? "default");         // 0 (not default! 0 is valid)
+    console.log("" ?? "default");        // "" (not default! empty string is valid)
+    console.log(false ?? "default");     // false
+
+    // vs OR operator (||) — default for ALL falsy values
+    console.log(0 || "default");         // "default" (0 is falsy!)
+    console.log("" || "default");        // "default" (empty string is falsy!)
+    ```
+
+    ---
+
+## 🔷 SECTION 6: DOM & Events
+
+    ---
+
+    **Q23. Event Bubbling vs Capturing?**
+
+    ```javascript
+    // HTML structure
+    // <div id="grandparent">
+    //   <div id="parent">
+    //     <button id="child">Click me</button>
+    //   </div>
+    // </div>
+
+    // BUBBLING (default) — event goes UP from child to parent
+    document.getElementById('child').addEventListener('click', () => {
+      console.log("Child clicked");      // fires 1st
+    });
+    document.getElementById('parent').addEventListener('click', () => {
+      console.log("Parent clicked");     // fires 2nd
+    });
+    document.getElementById('grandparent').addEventListener('click', () => {
+      console.log("Grandparent clicked"); // fires 3rd
+    });
+
+    // CAPTURING — event goes DOWN from parent to child
+    // Pass true as 3rd argument
+    document.getElementById('grandparent').addEventListener('click', () => {
+      console.log("Grandparent (capture)"); // fires 1st
+    }, true);
+    ```
+
+    ---
+
+    **Q24. Event Delegation?**
+
+    ```javascript
+    // Problem — adding listener to 1000 list items is slow!
+    // BAD:
+    document.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', handleClick); // 1000 listeners!
+    });
+
+    // GOOD — Event Delegation:
+    // Add ONE listener to parent, check which child was clicked
+    document.getElementById('list').addEventListener('click', (event) => {
+      if (event.target.tagName === 'LI') {
+        console.log('Clicked:', event.target.textContent);
+      }
+    });
+
+    // Benefits:
+    // 1. Only ONE event listener (memory efficient)
+    // 2. Works for dynamically added elements too!
+    // 3. Better performance
+    ```
+
+    ---
+
+    **Q25. preventDefault vs stopPropagation?**
+
+    ```javascript
+    // preventDefault — stops DEFAULT browser behavior
+    document.querySelector('a').addEventListener('click', (e) => {
+      e.preventDefault(); // stops link navigation
+      console.log("Link clicked but not navigated!");
+    });
+
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault(); // stops form submission/page reload
+      // handle form with JS instead
+    });
+
+    // stopPropagation — stops event bubbling up
+    document.getElementById('child').addEventListener('click', (e) => {
+      e.stopPropagation(); // stops event from reaching parent!
+      console.log("Only child fires, not parent");
+    });
+
+    // stopImmediatePropagation — stops ALL other listeners on SAME element
+    button.addEventListener('click', (e) => {
+      e.stopImmediatePropagation();
+      console.log("Only this listener fires");
+    });
+    button.addEventListener('click', () => {
+      console.log("This never fires!"); // blocked!
+    });
+    ```
+
+    ---
+
+## 🔷 SECTION 7: Advanced Concepts
+
+    ---
+
+    **Q26. this keyword — All scenarios?**
+
+    ```javascript
+    // 1. Global context
+    console.log(this); // window (browser) / {} (Node.js)
+
+    // 2. Object method
+    const obj = {
+      name: "Sakthi",
+      greet() { console.log(this.name); } // "Sakthi"
+    };
+
+    // 3. Regular function (strict mode)
+    function greet() {
+      'use strict';
+      console.log(this); // undefined
+    }
+
+    // 4. Arrow function — inherits parent's this
+    const obj2 = {
+      name: "Sakthi",
+      greet: () => console.log(this.name) // undefined! (inherits global this)
+    };
+
+    // 5. Constructor
+    function Person(name) {
+      this.name = name; // this = new object
+    }
+
+    // 6. Event handler
+    button.addEventListener('click', function() {
+      console.log(this); // button element
+    });
+
+    // 7. Explicit binding
+    function greet() { console.log(this.name); }
+    greet.call({ name: "Sakthi" });  // "Sakthi"
+    greet.apply({ name: "Sakthi" }); // "Sakthi"
+    const bound = greet.bind({ name: "Sakthi" });
+    bound(); // "Sakthi"
+    ```
+
+    ---
+
+    **Q27. Generators & Iterators?**
+
+    ```javascript
+    // Generator — function that can pause and resume
+    function* numberGenerator() {
+      yield 1;
+      yield 2;
+      yield 3;
+    }
+
+    const gen = numberGenerator();
+    console.log(gen.next()); // { value: 1, done: false }
+    console.log(gen.next()); // { value: 2, done: false }
+    console.log(gen.next()); // { value: 3, done: false }
+    console.log(gen.next()); // { value: undefined, done: true }
+
+    // Infinite sequence generator
+    function* infiniteCounter() {
+      let count = 0;
+      while(true) {
+        yield count++;
+      }
+    }
+
+    const counter = infiniteCounter();
+    counter.next().value; // 0
+    counter.next().value; // 1
+    counter.next().value; // 2
+    // never ends but doesn't freeze browser!
+
+    // Real use case: lazy evaluation, infinite scrolling data
+    ```
+
+    ---
+
+    **Q28. WeakMap & WeakSet?**
+
+    ```javascript
+    // WeakMap — keys must be objects, garbage collected when key removed
+    const weakMap = new WeakMap();
+    let user = { name: "Sakthi" };
+    weakMap.set(user, { role: "admin" });
+    console.log(weakMap.get(user)); // { role: "admin" }
+
+    user = null; // user object garbage collected
+    // weakMap entry automatically removed!
+
+    // vs Map — keeps reference alive
+    const map = new Map();
+    let obj = { name: "Sakthi" };
+    map.set(obj, "value");
+    obj = null;
+    // map still holds reference! — potential memory leak
+
+    // WeakSet — stores objects, garbage collected
+    const weakSet = new WeakSet();
+    let obj2 = { name: "Kumar" };
+    weakSet.add(obj2);
+    weakSet.has(obj2); // true
+    obj2 = null;
+    // automatically removed!
+
+    // Use case: Caching, tracking objects without memory leaks
+    ```
+
+    ---
+
+## 🔷 SECTION 8: Performance & Patterns
+
+  ---
+
+  **Q29. Design Patterns — Module, Singleton, Observer?**
+
+  ```javascript
+  // MODULE PATTERN — encapsulate private state
+  const UserModule = (() => {
+    let privateData = []; // private
+
+    return {
+      addUser(user) { privateData.push(user); },
+      getUsers() { return [...privateData]; },
+      getUserCount() { return privateData.length; }
+    };
+  })();
+
+  UserModule.addUser({ name: "Sakthi" });
+  UserModule.getUsers(); // [{ name: "Sakthi" }]
+  // privateData not accessible directly!
+
+  // SINGLETON — only ONE instance
+  class Database {
+    constructor() {
+      if (Database.instance) return Database.instance;
+      this.connection = "Connected to DB";
+      Database.instance = this;
+    }
+  }
+
+  const db1 = new Database();
+  const db2 = new Database();
+  console.log(db1 === db2); // true — same instance!
+
+  // OBSERVER — subscribe/publish pattern
+  class EventEmitter {
+    constructor() { this.events = {}; }
+
+    on(event, callback) {
+      this.events[event] = this.events[event] || [];
+      this.events[event].push(callback);
+    }
+
+    emit(event, data) {
+      (this.events[event] || []).forEach(cb => cb(data));
+    }
+
+    off(event, callback) {
+      this.events[event] = (this.events[event] || [])
+        .filter(cb => cb !== callback);
+    }
+  }
+
+  const emitter = new EventEmitter();
+  emitter.on('login', user => console.log(`${user} logged in`));
+  emitter.emit('login', 'Sakthi'); // "Sakthi logged in"
+  ```
+
+  ---
+
+  **Q30. Memory Management & Debounce/Throttle?**
+
+  ```javascript
+  // MEMORY MANAGEMENT
+  // Common memory leaks in JavaScript:
+
+  // 1. Forgotten timers
+  const timer = setInterval(() => {}, 1000);
+  clearInterval(timer); // Always clear!
+
+  // 2. Detached DOM nodes
+  let element = document.getElementById('myDiv');
+  document.body.removeChild(element);
+  element = null; // Release reference!
+
+  // 3. Closures holding large data
+  function processData() {
+    const largeData = new Array(1000000).fill('data');
+    return function() {
+      // largeData is held in closure even if not needed!
+    };
+  }
+
+  // DEBOUNCE — wait until user stops triggering
+  function debounce(fn, delay) {
+    let timer;
+    return function(...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
+
+  // THROTTLE — run at most once per interval
+  function throttle(fn, limit) {
+    let inThrottle;
+    return function(...args) {
+      if (!inThrottle) {
+        fn.apply(this, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
+    };
+  }
+
+  // Usage
+  const searchAPI = debounce((query) => fetch(`/api/search?q=${query}`), 300);
+  const handleScroll = throttle(() => console.log('scroll'), 100);
+  ```
+
+  ---
+
+## ✅ COMPLETE JAVASCRIPT THEORY — SUMMARY
+
+    | Section | Topics Covered |
+    |---------|---------------|
+    | 🔷 Core Fundamentals | var/let/const, Primitive vs Reference, Type Coercion, Hoisting, Scope |
+    | 🔷 Functions | Declaration vs Expression vs Arrow, IIFE, Closure, Currying, HOF |
+    | 🔷 Objects & Arrays | Array methods, Object methods, Destructuring, Spread/Rest, Prototype |
+    | 🔷 Async JS | Event Loop, Callbacks/Promises/Async-Await, Promise.all/race/allSettled, Error Handling |
+    | 🔷 ES6+ Features | Template Literals, Modules, Optional Chaining, Nullish Coalescing |
+    | 🔷 DOM & Events | Event Bubbling/Capturing, Event Delegation, preventDefault/stopPropagation |
+    | 🔷 Advanced | this keyword, call/apply/bind, Generators, WeakMap/WeakSet |
+    | 🔷 Performance | Design Patterns (Module/Singleton/Observer), Memory Management, Debounce/Throttle |
+
+**Total: 30 Theory Questions covering ALL mind map topics!** 🎉
+
+---
+
+### 🎯 Ready for React Deep Dive with same format? 🚀😊

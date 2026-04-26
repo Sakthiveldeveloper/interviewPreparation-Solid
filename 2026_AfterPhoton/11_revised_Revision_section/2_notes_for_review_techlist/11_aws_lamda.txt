@@ -1,0 +1,317 @@
+
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+    AWS Lambda
+    │
+    ├── 1. Core Concept
+    │   ├── Serverless Compute
+    │   ├── Event-driven Execution
+    │   ├── Stateless Functions
+    │   └── Pay-per-use Pricing
+    │
+    ├── 2. Function Basics
+    │   ├── Runtime Environments
+    │   │   ├── Node.js
+    │   │   ├── Python
+    │   │   ├── Java
+    │   │   ├── Go
+    │   │   └── .NET
+    │   │
+    │   ├── Handler Function
+    │   ├── Event Object (Input)
+    │   ├── Context Object
+    │   └── Return Response
+    │
+    ├── 3. Triggers (Event Sources)
+    │   ├── API Gateway (HTTP APIs)
+    │   ├── S3 (File Upload Events)
+    │   ├── DynamoDB (Streams)
+    │   ├── SQS (Queue Processing)
+    │   ├── SNS (Notifications)
+    │   ├── EventBridge (Cron / Events)
+    │   └── CloudWatch Logs
+    │
+    ├── 4. Execution Configuration
+    │   ├── Memory (128 MB – 10 GB)
+    │   ├── Timeout (Max 15 mins)
+    │   ├── Concurrency
+    │   │   ├── Reserved Concurrency
+    │   │   └── Provisioned Concurrency
+    │   ├── Environment Variables
+    │   └── Ephemeral Storage (/tmp)
+    │
+    ├── 5. Deployment Methods
+    │   ├── ZIP Upload
+    │   ├── AWS CLI
+    │   ├── Infrastructure as Code
+    │   │   ├── CloudFormation
+    │   │   ├── SAM
+    │   │   └── Terraform
+    │   └── Container Image (Docker)
+    │
+    ├── 6. Permissions & Security
+    │   ├── IAM Role (Execution Role)
+    │   ├── Resource-based Policies
+    │   ├── VPC Configuration
+    │   ├── Security Groups
+    │   └── Secrets Management
+    │
+    ├── 7. Integrations
+    │   ├── API Gateway (REST/HTTP APIs)
+    │   ├── Step Functions (Workflows)
+    │   ├── DynamoDB / RDS
+    │   ├── S3 Storage
+    │   └── Third-party APIs
+    │
+    ├── 8. Monitoring & Debugging
+    │   ├── CloudWatch Logs
+    │   ├── CloudWatch Metrics
+    │   ├── X-Ray (Tracing)
+    │   └── Alerts & Alarms
+    │
+    ├── 9. Scaling & Performance
+    │   ├── Automatic Scaling
+    │   ├── Cold Start
+    │   ├── Warm Start
+    │   ├── Provisioned Concurrency
+    │   └── Performance Tuning
+    │
+    ├── 10. Cost & Pricing
+    │   ├── Request Count
+    │   ├── Execution Duration (ms)
+    │   ├── Memory Allocation
+    │   └── Free Tier
+    │
+    ├── 11. Advanced Features
+    │   ├── Lambda Layers (shared code)
+    │   ├── Destinations (success/failure)
+    │   ├── Dead Letter Queue (DLQ)
+    │   ├── Versioning
+    │   ├── Aliases (dev, prod)
+    │   └── Extensions
+    │
+    ├── 12. Best Practices
+    │   ├── Keep functions small
+    │   ├── Use environment variables
+    │   ├── Handle errors properly
+    │   ├── Optimize cold starts
+    │   └── Use least-privilege IAM
+    │
+    └── 13. Common Use Cases
+        ├── REST APIs (backend)
+        ├── File Processing
+        ├── Automation Jobs
+        ├── Real-time Data Processing
+        └── Microservices
+----------------------------------------------------------------------------------
+🧩 How to Use This Mind Map (Important)
+
+Don’t try to learn everything at once ❌
+Follow this order 👇
+
+Core + Function Basics
+Triggers (VERY IMPORTANT for interviews)
+Execution Config
+Permissions (IAM)
+Deploy + Integrations
+Monitoring + Scaling
+Advanced
+
+-----------------------------------------------------------------------------------------
+🎯 AWS Lambda Interview Questions (with Answers)
+🧠 Basic Level (Must Know)
+1. What is AWS Lambda?
+
+👉 Lambda is a serverless compute service where you run code without managing servers. It executes code in response to events and scales automatically.
+
+2. What is serverless?
+
+👉 Serverless means:
+
+No server management
+Auto scaling
+Pay only for execution time
+3. What languages does Lambda support?
+
+👉 Node.js, Python, Java, Go, .NET
+
+4. What is a Lambda function?
+
+👉 A function is the unit of execution in Lambda. It contains your code + configuration.
+
+5. What triggers Lambda?
+
+👉 Common triggers:
+
+API Gateway (HTTP calls)
+S3 (file upload)
+DynamoDB streams
+SQS / SNS
+EventBridge (cron jobs)
+⚡ Intermediate Level (Very Important)
+6. What is cold start?
+
+👉 When Lambda runs for the first time (or after inactivity), it takes extra time to initialize.
+
+7. How to reduce cold start?
+
+👉
+
+Use smaller packages
+Choose faster runtime (Node.js)
+Use Provisioned Concurrency
+8. What is the max execution time?
+
+👉 15 minutes
+
+9. What is concurrency in Lambda?
+
+👉 Number of requests Lambda can handle at the same time.
+
+Types:
+
+Reserved concurrency
+Provisioned concurrency
+10. What is the difference between Lambda and EC2?
+Feature	Lambda	EC2
+Server	No	Yes
+Scaling	Auto	Manual
+Billing	Per request	Per hour
+Use case	Short tasks	Long-running apps
+11. What is API Gateway?
+
+👉 Amazon API Gateway is used to expose Lambda as an HTTP API.
+
+12. What is the event object?
+
+👉 Input data passed to Lambda (like request body, headers, etc.)
+
+13. What is context object?
+
+👉 Contains runtime info like:
+
+request ID
+execution time remaining
+🔐 Advanced Level (High Impact)
+14. What is IAM role in Lambda?
+
+👉 AWS Identity and Access Management role gives permission to Lambda to access other AWS services.
+
+Example:
+
+Access S3
+Read DynamoDB
+15. What is Lambda Layer?
+
+👉 Used to share common code (libraries) across multiple Lambda functions.
+
+16. What is DLQ (Dead Letter Queue)?
+
+👉 Stores failed events for debugging.
+
+17. What is Lambda destination?
+
+👉 Defines what happens after execution:
+
+Success → send to another service
+Failure → send to SQS/SNS
+18. How does Lambda scale?
+
+👉 Automatically creates multiple instances based on incoming requests.
+
+19. What is stateless in Lambda?
+
+👉 Each execution is independent
+(No memory of previous execution)
+
+20. Can we connect Lambda to VPC?
+
+👉 Yes, for accessing private resources (like RDS)
+
+🔥 Scenario-Based Questions (VERY IMPORTANT)
+21. How would you build a REST API using Lambda?
+
+👉 Answer:
+
+Use API Gateway for routing
+Lambda for business logic
+Database (DynamoDB / MongoDB)
+22. How to process file uploads using Lambda?
+
+👉 Answer:
+
+Upload file to S3
+Trigger Lambda
+Process file (resize, parse, etc.)
+23. How to handle high traffic?
+
+👉 Answer:
+
+Lambda auto scales
+Use reserved concurrency if needed
+Optimize function performance
+24. How to secure Lambda?
+
+👉 Answer:
+
+Use IAM roles
+Use API Gateway authentication (JWT, Cognito)
+Avoid hardcoding secrets
+25. How to debug Lambda?
+
+👉 Answer:
+
+Use CloudWatch Logs
+Use X-Ray for tracing
+
+------------------------------------------------------
+🎯 What More You Should Learn
+
+Let’s level you up 👇
+
+🔥 1. Architecture-Level Questions (VERY IMPORTANT)
+
+These are asked in good companies
+
+Example:
+
+👉 “Design a scalable file upload system using Lambda”
+
+Expected answer should include:
+
+Amazon S3 (upload)
+Lambda (processing)
+Amazon SQS (queue handling)
+Amazon DynamoDB (store metadata)
+⚡ 2. Edge Case Questions
+
+Interviewers love this:
+
+What happens if Lambda fails?
+How do you retry failed execution?
+How do you avoid duplicate processing?
+
+👉 You should mention:
+
+DLQ
+Retry policies
+Idempotency
+🔐 3. Security Deep Dive
+How IAM works internally
+Least privilege principle
+Securing API Gateway
+⚙️ 4. Performance Questions
+Cold start deep explanation
+How memory affects CPU
+How to optimize response time
+🔗 5. Integration Questions
+
+How Lambda works with:
+
+Amazon API Gateway
+AWS Step Functions
+Amazon EventBridge

@@ -1,0 +1,367 @@
+Alright — let’s turn **Git** into something you *actually understand deeply*, not just memorize. I’ll structure this exactly how you asked 👇
+
+---
+
+# 1 🗺️ Mind Map — Git (Big Picture)
+
+![Image](https://images.openai.com/static-rsc-4/hKhHNGLYU3uc_37V47siDX_rXgG0t00y8whom5xSasHcIUBFrAY53TbLsrIOuryCwC3lNanTopqWNtyRx3LiDuLeqk0P8oUbJeb4PDd00SzkLJfIQ-WirElP9RI66_NTD2Qu0uCNO-g4HkxKqk5CxM7DQj1hsC0SEu9LKy2NdgibqA_KzSmeJQI4-lMfUBsY?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/1J_50-nK1p-K9QZLgiKSGCdkO5QY4khUiuf9-UB1WlUIFUsW7cQOfje1dx7NpNFjV2OqIzJlKl-XrrHRP3WdCBHsy0-OZk8-kxOxinXdg6w5f4wJtkRRklE6Tof__GKdsAJecJyxEe3gY5xWLxbK9YkJ2exP3GRMCe5Xv7jhQb5p4CDX1TcGAOsKTdk13puX?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/7UbSq9IdwhNQv3p7VRB3kVGB2al7ctuAfmq_Ck0f1AJvmskugpHRL5RNCAdKkDHfv7FXaODMFgL4hyTToG_WF_Q3rTwT8XV6Ocd3BFKHcWujgRlcnrjsBT8uC8mC07-uZTpQJfCsBHf4ZkIiMGQjZUWtj0BFAxO88Pz8a3V26e_1PRqsIO4MoTHx8iLvuyo_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/k1ta10Rgrm5CzEHlMMjUKWnSSwbIgp10BZ0620uDYJXzvdGvhue0m59cvYreFhdyd6TFkUl3mM_cKQDLRvLV2Jy35nWAgo6WVuhwo6oBs7ZhBgSIQ77rYLIUumHRDfJGAhkmD4pS7qCbXP5w_8qs3e4qup6vBQhiqWsvdB11VbPw6MSATS8fMBOthpEqadAC?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/39IwcaoEhjXM3vylP0A5lzJAMdUYdmcU5z2YJ-Rz74rHJuWd4FmZkaF6yLiTXnKSvrp3ZyOaj-Wnv9d4K6pcaH7FnPf_FN52XYPgsE4Jnsyp8CUBejbZIjAxE8KJvYZ80NcU2j1_JQzrytNxEb0sDqEGJen6cnhuVZEiTJ51bzEkwVyqasLEuuv6LNToK9NR?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/hfurBe_jHhDshQDLFsA3zBTnjXdLN3Vg6auLZPRxt2Kq1fkYWWCEfO0qNtMRHZnvxByqEDsD1l-c0zkf0DLAOhSql2Xv-tan6dLIUfnnD84tvw-2hVU4gX75v0DeAGyIWApvwyp7eTtPyKlisvE6JvUeSciC_OO3AH24elOjWfZ5wVTzMWv4Z44QaBIaI90z?purpose=fullsize)
+
+Think of Git like this:
+
+```
+Git
+├── Basics
+│   ├── init, clone
+│   ├── add, commit
+│   ├── status, log
+│
+├── Branching
+│   ├── branch
+│   ├── checkout / switch
+│   ├── merge
+│   ├── rebase
+│
+├── Remote
+│   ├── push
+│   ├── pull
+│   ├── fetch
+│
+├── History Control
+│   ├── reset
+│   ├── revert
+│   ├── amend
+│
+├── Staging Area (IMPORTANT)
+│   ├── working dir → staging → repo
+│
+├── Advanced
+│   ├── cherry-pick
+│   ├── stash
+│   ├── hooks
+│   ├── conflict resolution
+```
+
+👉 Golden line:
+
+> **Working Directory → Staging Area → Local Repo → Remote Repo**
+
+---
+
+# 2 📖 Theory Questions (with clear understanding)
+
+### 🔹 Q1: What is Git?
+
+Git is a **distributed version control system** that tracks changes in code and allows multiple developers to collaborate.
+
+---
+
+### 🔹 Q2: What is the difference between Git and GitHub?
+
+* **Git** → tool (runs locally)
+* **GitHub** → cloud platform (stores repos, collaboration)
+
+---
+
+### 🔹 Q3: What is staging area?
+
+It’s a **buffer zone** between working directory and commit.
+
+👉 Why important?
+
+* You can control what goes into a commit
+
+---
+
+### 🔹 Q4: Difference between `merge` vs `rebase`?
+
+**Merge**
+
+* Keeps history
+* Creates extra commit
+
+**Rebase**
+
+* Rewrites history
+* Cleaner commits
+
+👉 Senior-level answer:
+
+> Use **rebase for clean history**, **merge for preserving team context**
+
+---
+
+### 🔹 Q5: What is `HEAD`?
+
+Pointer to current branch/latest commit.
+
+---
+
+### 🔹 Q6: Difference between `git pull` vs `fetch`?
+
+* `fetch` → just downloads
+* `pull` → fetch + merge
+
+---
+
+### 🔹 Q7: What is conflict?
+
+When same file/line changed by multiple people.
+
+---
+
+### 🔹 Q8: Difference between `reset` vs `revert`?
+
+| Command | Effect                     |
+| ------- | -------------------------- |
+| reset   | removes commit (dangerous) |
+| revert  | creates new commit (safe)  |
+
+---
+
+# 3 💻 Coding / Command Questions
+
+### 🔹 Q1: Initialize repo
+
+```bash
+git init
+```
+
+---
+
+### 🔹 Q2: Add & commit
+
+```bash
+git add .
+git commit -m "Initial commit"
+```
+
+---
+
+### 🔹 Q3: Create branch & switch
+
+```bash
+git checkout -b feature/login
+```
+
+---
+
+### 🔹 Q4: Merge branch
+
+```bash
+git checkout main
+git merge feature/login
+```
+
+---
+
+### 🔹 Q5: Rebase branch
+
+```bash
+git checkout feature/login
+git rebase main
+```
+
+---
+
+### 🔹 Q6: Fix last commit
+
+```bash
+git commit --amend
+```
+
+---
+
+### 🔹 Q7: Undo changes
+
+```bash
+git restore file.txt
+```
+
+---
+
+### 🔹 Q8: Stash work
+
+```bash
+git stash
+git stash pop
+```
+
+---
+
+### 🔹 Q9: View history
+
+```bash
+git log --oneline --graph
+```
+
+---
+
+# 4 🎯 Scenario Questions (Senior / Lead Level)
+
+These are **VERY IMPORTANT for interviews like Tiger Analytics 🔥**
+
+---
+
+### 🔥 Scenario 1: Conflict during merge
+
+👉 Situation:
+Two devs changed same file
+
+**Solution:**
+
+1. `git pull`
+2. Fix conflict manually
+3. `git add .`
+4. `git commit`
+
+---
+
+### 🔥 Scenario 2: Clean messy commit history
+
+👉 Use:
+
+```bash
+git rebase -i HEAD~5
+```
+
+👉 Why:
+
+* squash commits
+* clean PR
+
+---
+
+### 🔥 Scenario 3: Production bug fix
+
+👉 Steps:
+
+1. Create hotfix branch from main
+2. Fix issue
+3. Merge to main & dev
+
+---
+
+### 🔥 Scenario 4: Wrong commit pushed
+
+👉 Safe way:
+
+```bash
+git revert <commit_id>
+```
+
+---
+
+### 🔥 Scenario 5: Work not ready but need to switch branch
+
+👉 Use:
+
+```bash
+git stash
+```
+
+---
+
+### 🔥 Scenario 6: Large team workflow
+
+👉 Best practice:
+
+* feature branch
+* PR review
+* rebase before merge
+
+---
+
+# ⚠️ Tricky Interview Questions (VERY IMPORTANT)
+
+---
+
+### ❓1: Why not use rebase in shared branch?
+
+👉 Because it rewrites history → breaks others' code
+
+---
+
+### ❓2: What happens if you do:
+
+```bash
+git reset --hard HEAD~1
+```
+
+👉 Deletes last commit permanently
+
+---
+
+### ❓3: Difference between:
+
+```bash
+git pull --rebase
+```
+
+👉 avoids merge commit → cleaner history
+
+---
+
+### ❓4: Can commit exist without branch?
+
+👉 YES — detached HEAD
+
+---
+
+### ❓5: Why staging area exists?
+
+👉 To create **logical commits**
+
+---
+
+### ❓6: What is fast-forward merge?
+
+👉 No new commit, just pointer moves
+
+---
+
+### ❓7: Why Git is fast?
+
+👉 Uses **snapshots**, not file differences
+
+---
+
+# 💡 Real Understanding (Important for YOU)
+
+Since you're aiming for **12–15 LPA + senior role**, remember this:
+
+👉 Interviewers don’t care about commands
+👉 They care about **thinking**
+
+---
+
+### 🔥 Best Answer Style
+
+Instead of:
+
+> "I use git merge"
+
+Say:
+
+> "I prefer rebase for feature branches to keep history clean, but I avoid it on shared branches to prevent history rewrite issues."
+
+---
+
+# 🚀 If You Want Next Level
+
+I can give you:
+
+* 🔥 Git **real project workflow (MERN + team)**
+* 🔥 GitHub PR strategy (what seniors do)
+* 🔥 Hands-on **conflict simulation practice**
+
+Just tell me 👍

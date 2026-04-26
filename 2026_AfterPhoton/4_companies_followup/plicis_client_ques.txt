@@ -1,0 +1,33 @@
+1.Able to create a nested components and write clean JSX markup(uses automic design principle)
+2.Able to do conditional rendering
+3.Able to import and export Components through Different files(both default and names exports)
+4.Able to style the components using the trational Css or Css in JS?
+5.Able to demonstrate use of Fragement, useEffect, useState?
+6.Able to render component in the loop and understand best practice related to Key attributes
+7.Able to create form and handle submitting data use Ajax?
+8.Able to bind the events to form submit and add validation to form fields
+9.Able to write front end unit test cases for react component using enzyme/RTL (not snapshot)
+10.Able to demonstrate handling error using error bounderies
+
+11.Has work with Various rendering in React and Next js, eg, SSR, CSR, SSG, ISR, able to define them
+12.Able to Explain and Create react specific definition pattern , eg: cutstom hooks, higher orfder components, render props, compound compoments
+13.able to explain usecases for using using useContext API , and How to use with use Reducer position
+14.able to define the purpose of the use ref with real life se cases and best Practices
+15.able to demonstrate memorization in the react using use memo and use call back  and explain the different usecase for each of them
+16.able to explain react/next routing
+17. able to expl;ain route based chunking , react lazy and supense 
+18. Able to explain Pov of SPA and MPA
+19. able to giv Pov on Various state management techniques redux
+20.Redux tool kit, react query, recoil, jotai, Context API, Xstatem appolocilemnt,etc...
+21. able to give explain handling of side effects with statemanagement(redux thunk, saga)
+22.understand the public and private NPM registry and publishing of packages
+23. able to explain using env variables using dotenv module
+
+
+---------------------
+✅ Image 1 → Basics
+✅ Image 2 → Core React
+✅ Image 3 → API + caching
+✅ Image 4 → Multiple API
+✅ Image 5 → Query params
+✅ Image 6 → Parallel API

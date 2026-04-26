@@ -1,0 +1,454 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+1.mindmap
+    Vue.js Mindmap (Interview Notes)
+    1. Basics
+        What is Vue.js? (Progressive JS framework)
+        History & purpose (Evan You)
+        Vue vs React vs Angular
+        Single Page Applications (SPA)
+        Declarative rendering
+        Template syntax vs JSX
+        Virtual DOM
+        Reactivity system
+        Rendering lifecycle overview
+    2. Setting Up
+        Vue CLI
+        Vite (recommended)
+        Nuxt.js (SSR, SSG)
+        CDN usage
+        Project folder structure
+        Environment variables (.env)
+    3. Components
+        Single File Components (.vue)
+        Template, Script, Style sections
+        Props (parent to child)
+        Emits (child to parent)
+        Slots (default, named, scoped)
+        Dynamic components
+        Async components
+        Component communication
+    4. Templates & Directives
+        Interpolation {{ }}
+        v-bind (:)
+        v-model
+        v-if / v-else / v-show
+        v-for
+        v-on (@click)
+        Event modifiers (.stop, .prevent)
+        Conditional rendering
+        Lists with keys
+    5. Reactivity System
+        ref() vs reactive()
+        computed()
+        watch() vs watchEffect()
+        Dependency tracking
+        Proxy-based reactivity (Vue 3)
+        Shallow vs deep reactivity
+    6. Composition API
+        setup() function
+        ref, reactive, computed, watch
+        Lifecycle hooks in setup
+        Composables (reusable logic)
+    7. Options API
+        data()
+        methods
+        computed
+        watch
+        lifecycle hooks
+    8. Lifecycle Hooks
+        beforeCreate
+        created
+        beforeMount
+        mounted
+        beforeUpdate
+        updated
+        beforeUnmount
+        unmounted
+
+        (Vue 3 Composition)
+
+        onMounted
+        onUpdated
+        onUnmounted
+    9. State Management
+        Local state
+        Props & emits
+        provide / inject
+        Pinia
+        Vuex
+        Global vs local state
+    10. Routing
+        Vue Router
+        createRouter
+        createWebHistory
+        Dynamic routes
+        Nested routes
+        Route guards
+        Lazy loading
+    11. Forms
+        v-model (two-way binding)
+        Form validation
+        Custom inputs
+        Modifiers (.lazy, .trim, .number)
+    12. Event Handling
+        @click, @input
+        Passing arguments
+        Event modifiers
+        Custom events
+    13. Styling
+        Scoped CSS
+        CSS Modules
+        Tailwind CSS
+        Dynamic classes (:class, :style)
+    14. Data Fetching
+        fetch / axios
+        API calls in mounted/setup
+        Async setup
+        Error handling
+        Loading states
+    15. Performance Optimization
+        computed vs methods
+        v-once
+        v-memo
+        Lazy loading
+        KeepAlive
+        Avoid unnecessary watchers
+    16. Testing
+        Vitest / Jest
+        Vue Test Utils
+        Component testing
+        Cypress / Playwright
+    17. Advanced Concepts
+        Teleport
+        Suspense
+        Async components
+        SSR (Nuxt.js)
+        Hydration
+        Custom directives
+        Plugins
+    18. Accessibility
+        ARIA attributes
+        Keyboard navigation
+        Semantic HTML
+    19. Conditional Rendering
+        v-if vs v-show
+        Ternary usage
+        Logical rendering
+    20. Best Practices
+        Prefer Composition API
+        Keep components small
+        Reusable composables
+        Good folder structure
+        Avoid deep watchers
+        Use Pinia (modern)
+----------------------------------------------------------------------------------------------
+2. 📘 Theory Questions (Most Asked 🔥)
+    Basics
+    What is Vue.js?
+    What are advantages of Vue over React/Angular?
+    What is Virtual DOM in Vue?
+    What is reactivity in Vue?
+    Core Concepts
+    Difference between ref() and reactive()
+    What is computed vs methods?
+    What is watch vs watchEffect?
+    What is v-model?
+    Difference between v-if and v-show
+    APIs
+    Composition API vs Options API
+    What is setup()?
+    What are lifecycle hooks in Vue?
+    Components
+    What are props?
+    What are emits?
+    What are slots?
+    State Management
+    What is Pinia?
+    Difference between Pinia and Vuex
+    Routing
+    What is Vue Router?
+    What are route guards?
+------------------------------------------------------------------------------------------------
+    🔹 1. Core Fundamentals (Deep)
+    What is Vue reactivity system internally?
+    How does Vue 3 use Proxy instead of Object.defineProperty?
+    What are reactive dependencies?
+    What is effect tracking in Vue?
+
+    👉 Expected: You should mention track() and trigger() concept
+
+    🔹 2. ref vs reactive (VERY IMPORTANT 🔥)
+    Difference between ref() and reactive()
+    When to use ref vs reactive?
+    Why ref needs .value?
+    Can reactive hold primitive values?
+
+    👉 Trap question ⚠️
+    Answer: ❌ reactive cannot hold primitive directly
+
+    🔹 3. computed vs watch
+    Difference between computed and watch
+    Why computed is cached?
+    When to use watch instead of computed?
+    Difference between watch and watchEffect?
+
+    👉 Golden line:
+
+    computed → derived state
+    watch → side effects
+    🔹 4. Lifecycle Deep Questions
+    Explain full lifecycle flow
+    Difference between mounted vs created
+    When to use beforeUnmount?
+
+    👉 Advanced:
+
+    Lifecycle in Composition API vs Options API
+    🔹 5. Virtual DOM & Rendering
+    What is Virtual DOM?
+    How Vue updates DOM efficiently?
+    What is diffing algorithm?
+
+    👉 Bonus:
+
+    How Vue batching works (async updates)
+    🔹 6. Composition API Deep Dive
+    Why Composition API introduced?
+    Advantages over Options API
+    What are composables?
+    How to reuse logic in Vue?
+
+    👉 Real-world:
+
+    Compare with React hooks
+    🔹 7. v-model Internals
+    How v-model works internally?
+    What is modelValue?
+    How to create custom v-model?
+
+    👉 Expected:
+
+    prop: modelValue
+    emit: update:modelValue
+    🔹 8. Props & Emits
+    Props validation
+    One-way data flow
+    Why props should not be mutated?
+
+    👉 Trap:
+
+    What happens if you mutate props?
+    🔹 9. Slots Deep
+    What are slots?
+    Difference between default, named, scoped slots
+    When to use scoped slots?
+    🔹 10. State Management
+    Why not use props for global state?
+    What is Pinia?
+    How Pinia works internally?
+    Difference: Pinia vs Vuex
+
+    👉 Important:
+
+    Pinia uses reactive store (no mutations)
+    🔹 11. Routing (Vue Router)
+    How Vue Router works?
+    What are route guards?
+    Difference between beforeEach and beforeEnter?
+    🔹 12. Performance Optimization
+    How to optimize Vue app performance?
+    computed vs methods performance
+    What is v-once?
+    What is KeepAlive?
+    🔹 13. Advanced Concepts
+    What is Teleport?
+    What is Suspense?
+    What is SSR?
+    What is hydration?
+    🔹 14. Error Handling
+    How to handle global errors in Vue?
+    What is errorCaptured hook?
+    🔹 15. Security
+    How Vue prevents XSS?
+    What are risks with v-html?
+    🔹 16. Async Behavior
+    Why Vue updates are async?
+    What is nextTick()?
+    🔹 17. Comparison Questions (VERY COMMON 🔥)
+    Vue vs React
+    Vue vs Angular
+    Composition API vs React Hooks
+------------------------------------------------------------------------------------------------
+    🔹 1. What is Vue.js?
+
+    Answer:
+    Vue.js is a progressive JavaScript framework used to build user interfaces. It focuses on simplicity, reactivity, and component-based architecture.
+
+    🔹 2. What is reactivity in Vue?
+
+    Answer:
+    Reactivity means when data changes, the UI automatically updates. Vue tracks dependencies and updates only affected parts.
+
+    🔹 3. How Vue reactivity works internally?
+
+    Answer:
+    Vue 3 uses Proxy to track changes. It uses:
+
+    track() → collects dependencies
+    trigger() → updates components
+    🔹 4. Difference between ref() and reactive()
+
+    Answer:
+
+    ref() → used for primitive values
+    reactive() → used for objects
+    ref uses .value, reactive does not
+    🔹 5. Can reactive hold primitive values?
+
+    Answer:
+    No, reactive works only with objects.
+
+    🔹 6. What is computed?
+
+    Answer:
+    Computed is a derived state that is cached and recalculated only when dependencies change.
+
+    🔹 7. computed vs methods
+
+    Answer:
+
+    computed → cached
+    methods → runs every time
+    🔹 8. computed vs watch
+
+    Answer:
+
+    computed → for derived values
+    watch → for side effects
+    🔹 9. watch vs watchEffect
+
+    Answer:
+
+    watch → tracks specific value
+    watchEffect → auto tracks dependencies
+    🔹 10. What is v-model?
+
+    Answer:
+    v-model provides two-way data binding between input and state.
+
+    🔹 11. How v-model works internally?
+
+    Answer:
+
+    prop: modelValue
+    event: update:modelValue
+    🔹 12. What are components?
+
+    Answer:
+    Reusable UI blocks with template, logic, and styles.
+
+    🔹 13. What are props?
+
+    Answer:
+    Props are used to pass data from parent to child.
+
+    🔹 14. Why props should not be mutated?
+
+    Answer:
+    Because Vue follows one-way data flow. Mutating props causes unpredictable behavior.
+
+    🔹 15. What are emits?
+
+    Answer:
+    Used to send data from child to parent.
+
+    🔹 16. What are slots?
+
+    Answer:
+    Slots allow passing HTML content into components.
+
+    🔹 17. Types of slots
+
+    Answer:
+
+    Default
+    Named
+    Scoped
+    🔹 18. What is Composition API?
+
+    Answer:
+    A modern API that allows organizing logic using functions for better reusability.
+
+    🔹 19. Why Composition API?
+
+    Answer:
+
+    Better code organization
+    Reusability (composables)
+    Scalable
+    🔹 20. What is setup()?
+
+    Answer:
+    The entry point of Composition API where reactive data and logic are defined.
+
+    🔹 21. Lifecycle hooks in Vue
+
+    Answer:
+    mounted, updated, unmounted, etc.
+
+    🔹 22. mounted vs created
+
+    Answer:
+
+    created → data ready
+    mounted → DOM ready
+    🔹 23. What is Vue Router?
+
+    Answer:
+    Library used for navigation between pages in Vue apps.
+
+    🔹 24. What are route guards?
+
+    Answer:
+    Functions that control navigation (authentication, authorization).
+
+    🔹 25. What is Pinia?
+
+    Answer:
+    Modern state management library for Vue.
+
+    🔹 26. Pinia vs Vuex
+
+    Answer:
+
+    Pinia → simple, no mutations
+    Vuex → complex, uses mutations
+    🔹 27. What is Virtual DOM?
+
+    Answer:
+    A lightweight copy of real DOM used to optimize updates.
+
+    🔹 28. What is nextTick()?
+
+    Answer:
+    Executes code after DOM updates.
+
+    🔹 29. What is v-if vs v-show?
+
+    Answer:
+
+    v-if → adds/removes DOM
+    v-show → toggles visibility
+    🔹 30. How to optimize performance in Vue?
+
+    Answer:
+
+    Use computed
+    Avoid unnecessary watchers
+    Lazy load components
+    Use v-once

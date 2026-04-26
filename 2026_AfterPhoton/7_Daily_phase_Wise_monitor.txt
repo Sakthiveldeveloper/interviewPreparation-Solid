@@ -1,0 +1,43 @@
+
+    Phase1:Position Your self(1-2days)
+        1.Finalize Resume -> Done
+        2.Prepare
+            Tell me About your self -> Done
+            2-3 Strong Project explanation ->Done
+        3.Update
+            Naukri/linkedIn/Indeed (very Important) -> Done
+        [Goal: Start Getting Calls]
+    Phase2:Start Applyimg + HR Rounds(Day 2 to 10)
+        1.Apply daily(20-30 jobs) -------------> Inprogress
+        2.Talk Confidently with HR -------------> Inprogress
+            Notice Period -> "Immediate / 10 days"  
+            Current -> X
+            Expectet -> X + 40 -60 %
+        [Goal:Conver Hr -> Technical Round]
+    Phase3: Technical Preparation(parallel daily)
+        1.Dont wait -> Prepare + attend Interview -> to gether
+        2.Focus Only on Hight ROI Topic
+        [Goal: Crack the Interview While Learning]
+    Phase4: Interview -> offer -> negotition
+        1.Clear Rounds
+        2.Get offer
+        3.Negotiate Salary
+------------------------------------------------------------------------------------------------
+Days wise phase Monitor
+March 17 -> Phase1 -------------> Inprogress -> thuesday
+    Prepare the Resume 
+March 18 -> Phase1 -------------> Completed -> wednusday
+    Apply interview and Go to room for Virtusa but unfortunatly missed because of Link cant able to use
+March 19 -> Phase2 -------------> Inprogress -> Thurdays
+    Get Call from the Publicis , Study in Day night but in evening not perform well because of have Practice 
+March 20 -> Phase2 -------------> Inprogress -> Friday
+    Get review all JS Videos by Akshay for remember purpose
+March 21 -> Phase2 -------------> Inprogress -> staturday
+    come sister house and missed 2 interview, 1 cloud desitination , HCL walkin because i not have confident for attend
+March 22 -> Phase2 -------------> Inprogress ->Sunday
+    Just review the topic, Study AWS, SQL, TypeScript,
+March 23 -> Phase2 -------------> Inprogress -> mondy
+    Make Allignment of all process,
+    Make review process
+    As form Now go to review all topic each by Review_plan process and Plan Mock Each Day
+

@@ -1,0 +1,31 @@
+import React, { useState } from "react";
+
+export default function App() {
+  const [incrementCount, SetIncrementCount] = useState(0);
+  const incrementFun = () => {
+    if (incrementCount < 10) {
+      SetIncrementCount(incrementCount + 1)
+    }
+  }
+
+  const decrementFun = () => {
+    if (incrementCount > 0) {
+      SetIncrementCount(incrementCount - 1)
+    }
+  }
+
+  const resetCount = () => {
+    SetIncrementCount(0)
+  }
+  return (
+    <>
+      <div>
+        <h1>Counter App</h1>
+        <button onClick={incrementFun}>+</button>
+        <button onClick={decrementFun}>-</button>
+        <p>  {incrementCount == 10 ? `limit riched` : incrementCount}</p>
+        <button onClick={resetCount}>Reset</button>
+      </div>
+    </>
+  )
+}

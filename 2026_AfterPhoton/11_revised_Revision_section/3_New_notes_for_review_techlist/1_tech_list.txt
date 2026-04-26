@@ -1,0 +1,52 @@
+FRONTEND
+- HTML5, CSS3, Tailwind CSS, Ant Design, Material UI
+- JavaScript (ES6+), TypeScript
+- React.js (Primary), Next.js
+- Micro-Frontend Architecture (Module Federation)
+
+STATE MANAGEMENT
+- Redux Toolkit
+- TanStack Query (React Query)
+
+BACKEND & APIs
+- Node.js, Express.js, Fastify
+- REST API Design (scalable, versioned APIs)
+- GraphQL (basic to intermediate)
+- WebSocket / Socket.IO (real-time communication)
+
+ARCHITECTURE & SYSTEM DESIGN
+- Microservices Architecture
+- Micro-Frontend Architecture
+- Caching strategies (Redis)
+- API rate limiting & performance optimization
+- Multi-tenant system design (practical experience)
+
+DATABASES
+- MongoDB (Primary)
+- MySQL
+- Redis (caching)
+
+SECURITY & AUTHENTICATION
+- JWT Authentication
+- OAuth 2.0
+- RBAC (Role-Based Access Control)
+- Keycloak, FusionAuth (practical usage)
+
+DEVOPS & CLOUD
+- Git, GitHub, Jenkins
+- CI/CD pipelines
+- Docker (basic)
+
+AWS (PRACTICAL EXPERIENCE)
+- EC2 (deployment)
+- S3 (file storage, static assets)
+- IAM (basic roles & permissions)
+
+TESTING
+- Jest
+- React Testing Library
+
+PRACTICES
+- Agile / Scrum
+- Code Reviews
+- Performance Optimization (lazy loading, memoization, API optimization)

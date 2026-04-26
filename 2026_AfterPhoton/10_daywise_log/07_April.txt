@@ -1,0 +1,24 @@
+Mock interview Preparation
+React -->
+TypeScript
+Next JS
+-------------------
+L2 Interview of Axchange
+    Plan is same like as before go to check entire Node JS developer Preparation
+    going to follow the process of review TechList
+and Preparation for Tmrw Bangalore based one company
+
+review:
+L2 is completed in Axchange like i said i was not get oppojunity to learn the AWS so they said they will let you know once the check woth other canditates
+------------------------------------------------------------------------------------------------------
+Plan :
+    1.Check the JD
+    2.Prepare the TechList
+    3.Make a plan and time alignment
+    4.Preparation Mindmap, Theory, Coding, Scenarios
+    5.Go with confident
+    6.Self Pitch Practice
+    Tomorrow/interview day:
+        Don’t try to be perfect
+        Try to be clear + confident + honest
+

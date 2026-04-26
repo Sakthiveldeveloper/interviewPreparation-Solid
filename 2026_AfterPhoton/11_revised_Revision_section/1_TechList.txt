@@ -1,0 +1,50 @@
+Frontend
+  HTML5, CSS3, Bootstrap, Tailwind CSS, MUI, Ant Design
+  JavaScript (ES6+), TypeScript
+  React.js, Next.js, Angular, Vue.js
+
+State Management
+  Redux, Redux Toolkit, Redux Saga, Redux Thunk
+  Jotai, Zustand, Recoil, Apollo Client, TanStack Query
+
+Backend & APIs
+  Node.js, Express.js, Fastify
+  REST API, GraphQL, WebSocket / Socket.io
+  ORM: Sequelize, Knex, Prisma
+
+Architecture
+  Microservices, Micro-Frontend, Module Federation
+  System Design
+
+Databases
+  MySQL, PostgreSQL (RDBMS)
+  MongoDB (NoSQL)
+  Redis (Cache)
+
+Security & Auth
+  JWT, OAuth 2.0, Keycloak, FusionAuth, RBAC
+
+DevOps & Cloud
+  Git, GitHub, Jenkins, CI/CD
+  Docker, Kubernetes (basic)
+  AWS (EC2, S3)
+
+Testing
+  Jest, React Testing Library, Cypress
+
+Practices
+  Agile/Scrum, Code Reviews, Performance Optimization
+
+  ------------------------------------------------------------------------------------------
+  As a Developer need to know this AWS Concepts
+  👉 MUST KNOW:
+    EC2
+    S3
+    RDS
+    VPC
+    IAM
+    Lambda
+  👉 NICE TO HAVE
+    CloudFront
+    API Gateway
+    CloudWatch

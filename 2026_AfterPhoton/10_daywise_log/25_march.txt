@@ -1,0 +1,34 @@
+Plan :
+    All Process alignment
+    Make a Review Tech 
+    As per review list make strong revision Question in Mindmap, Theory, Coding, Scenarios
+    Start Preparation for Mock Interview
+
+Progress
+    All Process alignment ->Done
+    Make a Review Tech ->Done
+    Note -> Done
+    Start Preparation for Mock Interview -> In Progress(Only Tech not include the DSA things) 
+        Go to start with  revision topics
+            2.Architecture
+                Microservices, Micro-Frontend, Module Federation
+                System Design
+            3.DB
+                MySQL, PostgreSQL (RDBMS)
+                MongoDB (NoSQL)
+                Redis (Cache)
+            4.Security & Auth
+                JWT, OAuth 2.0, Keycloak, FusionAuth, RBAC
+            5.DevOps & Cloud
+                Git, GitHub, Jenkins, CI/CD
+                Docker, Kubernetes (basic)
+                AWS (EC2, S3, IAM, Lamda, RDS, VPS, CloudWatch)
+
+
+So if i complete this 5 topcis then plan to each day revision of all
+    1.Mindmap, Theory, Coding, Scenarios
+    and 
+    2.MockInterviews
+
+reference
+https://chatgpt.com/share/69c39937-8af0-8324-abfd-402026172e69

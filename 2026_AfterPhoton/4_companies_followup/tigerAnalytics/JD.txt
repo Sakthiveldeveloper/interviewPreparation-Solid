@@ -1,0 +1,56 @@
+Senior Engineer / Lead/ Senior Lead - (React+NodeJS)
+    Chennai, Bangalore, Hyderabad
+JOB DESCRIPTION
+    Job Title: Senior Engineer / Lead / Senior Lead - ReactJS+NodeJS
+    India Locations: Chennai | Hyderabad | Bangalore
+        Tiger Analytics is a global leader in AI and analytics, helping Fortune 1000 companies solve their
+        toughest challenges. We offer full-stack AI and analytics services &amp; solutions to empower businesses to achieve real outcomes and
+        value at scale. We are on a mission to push the boundaries of what AI and analytics can do to help enterprises navigate uncertainty and
+        move forward decisively. Our purpose is to provide certainty to shape a better tomorrow.
+        Our team of 4000+ technologists and consultants are based in the US, Canada, the UK, India, Singapore and Australia, working closely
+        with clients across CPG, Retail, Insurance, BFS, Manufacturing, Life Sciences, and Healthcare. Many of our team leaders rank in Top
+        10 and 40 Under 40 lists, exemplifying our dedication to innovation and excellence.
+        We are a Great Place to Work-Certified™ (2022-24), recognized by analyst firms such as Forrester,
+        Gartner, HFS, Everest, ISG and others. We have been ranked among the ‘Best’ and ‘Fastest Growing’
+        analytics firms lists by Inc., Financial Times, Economic Times and Analytics India Magazine.
+        We're looking for a talented and motivated React + Node.js Developer to join our dynamic team. If you're passionate about building
+        responsive, scalable web applications and enjoy working in a collaborative, innovative environment, we'd love to hear from you.
+Key Responsibilities:
+    • Develop and maintain user-facing features using React.js
+    • Build reusable, efficient, and scalable front-end components and libraries
+    • Design and implement server-side logic using Node.js
+    • Collaborate with cross-functional teams to define, design, and ship new features
+    • Optimize applications for maximum speed and scalability
+    • Write unit and integration tests to ensure code quality
+    • Integrate third-party APIs and services
+    • Troubleshoot, debug, and upgrade existing systems
+    • Stay up-to-date with the latest industry trends and technologies
+    • Participate in code reviews to ensure best practices and high-quality code
+    • Contribute to the overall architecture and improvement of our tech stack
+Requirements:
+    • Proven experience as a React.js Developer (3+ years preferred)
+    • Strong experience with Node.js and Express.js
+    • Proficiency in JavaScript, HTML5, CSS3, and RESTful API development
+    • Familiarity with modern front-end build pipelines and tools (e.g., Webpack, Babel, NPM)
+    • Experience with state management tools like Redux or Context API
+    • Understanding of version control systems (Git)
+    • Knowledge of database systems (SQL or NoSQL) and experience with ORM tools (e.g., Sequelize, Mongoose)
+    • Ability to write clean, modular, and well-documented code
+    • Strong problem-solving skills and attention to detail
+    • Excellent communication and teamwork skills
+    • Experience with cloud platforms (AWS, Azure, etc.) is a plus
+    • Familiarity with Docker and containerization is a plus
+EXPERTISE AND QUALIFICATIONS
+Requirements:
+    • Proven experience as a React.js Developer (3+ years preferred)
+    • Strong experience with Node.js and Express.js
+    • Proficiency in JavaScript, HTML5, CSS3, and RESTful API development
+    • Familiarity with modern front-end build pipelines and tools (e.g., Webpack, Babel, NPM)
+    • Experience with state management tools like Redux or Context API
+    • Understanding of version control systems (Git)
+    • Knowledge of database systems (SQL or NoSQL) and experience with ORM tools (e.g., Sequelize, Mongoose)
+    • Ability to write clean, modular, and well-documented code
+    • Strong problem-solving skills and attention to detail
+    • Excellent communication and teamwork skills
+    • Experience with cloud platforms (AWS, Azure, etc.) is a plus
+    • Familiarity with Docker and containerization is a plus

@@ -1,0 +1,505 @@
+0.definitions
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+--------------------------------------------
+0.definitions
+    1.What is
+    2.Why S3 is
+    3.Core Concepts
+    4.How to start
+    5.How to use
+    6.When to Use
+    7.Mini Practice Task
+    🧠 1. What is S3 (Simple Storage Service)?
+
+    👉 Amazon S3 = Cloud Storage (like Google Drive, but for apps)
+
+    You can store:
+    Images 🖼️
+    Videos 🎥
+    PDFs 📄
+    JSON / backups 💾
+    Static websites 🌐
+
+    📌 Think:
+
+    “S3 is a bucket where I can store unlimited files safely.”
+
+    🎯 2. Why S3 is Needed?
+    Real-world use cases:
+    Upload profile images in your app
+    Store large files instead of DB
+    Backup databases
+    Host frontend apps (React/Vue)
+    Store logs / analytics data
+
+    💡 Example (MERN):
+
+    User uploads image → store in S3 → save URL in MongoDB
+    🏗️ 3. Core Concepts (VERY IMPORTANT)
+    🪣 Bucket
+    Like a folder/container
+    Must be globally unique name
+    📦 Object
+    File stored in S3 (image, video, etc.)
+    🔐 Permissions
+    Public / Private access
+    Controlled using IAM policies
+    🌍 Region
+    Where your data is stored (e.g., ap-south-1 for India)
+    🚀 4. How to Start S3 (Step-by-Step)
+    Step 1: Create Bucket
+    Go to AWS Console
+    Open S3
+    Click Create Bucket
+    Enter:
+    Bucket name (unique)
+    Region (choose India: ap-south-1)
+    Step 2: Upload File
+    Open your bucket
+    Click Upload
+    Add file → Upload
+    Step 3: Access File
+    By default: ❌ Private
+    To make public:
+    Disable “Block Public Access”
+    Add permission
+    Step 4: Get URL
+    https://your-bucket-name.s3.amazonaws.com/file.jpg
+    💻 5. How to Use S3 in Node.js (MERN)
+
+    Install SDK:
+
+    npm install @aws-sdk/client-s3
+
+    Basic upload example:
+
+    import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
+    import fs from "fs";
+
+    const client = new S3Client({
+    region: "ap-south-1",
+    credentials: {
+        accessKeyId: "YOUR_KEY",
+        secretAccessKey: "YOUR_SECRET"
+    }
+    });
+
+    const upload = async () => {
+    const fileContent = fs.readFileSync("image.jpg");
+
+    const command = new PutObjectCommand({
+        Bucket: "your-bucket-name",
+        Key: "image.jpg",
+        Body: fileContent
+    });
+
+    await client.send(command);
+    };
+
+    upload();
+    🧠 6. When to Use S3 vs NOT
+    ✅ Use S3 when:
+    Files are large
+    Need scalability
+    Need CDN (CloudFront)
+    Static hosting
+    ❌ Avoid when:
+    Need relational queries → use DB
+    Need real-time updates → use DB / cache
+    ⚡ 7. S3 + Other AWS Services (Important for Interviews)
+    S3 + CloudFront → Fast CDN
+    S3 + Lambda → Auto processing (image resize)
+    S3 + EC2 → Store files
+    S3 + IAM → Security
+    🧪 8. Mini Practice Task (Do This)
+
+    Try this today:
+
+    Create bucket
+    Upload 1 image
+    Make it public
+    Open in browser
+
+    👉 This gives real confidence
+------------------------------------------------------------------
+🧠 1. IAM Mind Map (Big Picture)
+
+    🔐 What is IAM?
+
+    IAM (Identity and Access Management) = Security system of AWS
+    👉 Controls WHO can access WHAT in AWS
+
+    🧩 Core Components
+    👤 Users
+    Individual identities (developers, admins)
+    Have login credentials (password / access keys)
+    👥 Groups
+    Collection of users
+    Assign permissions once → applies to all users
+    🎭 Roles
+    Temporary access (no password)
+    Used by:
+    EC2 instances
+    Lambda
+    Cross-account access
+    📜 Policies
+    JSON rules that define permissions
+
+    Example:
+
+    {
+    "Effect": "Allow",
+    "Action": "s3:ListBucket",
+    "Resource": "*"
+    }
+    🔑 Credentials
+    Password (console login)
+    Access Key + Secret (programmatic access)
+    🔄 IAM Flow (Simple Understanding)
+
+    👉 User/Role → Attached Policy → AWS Service Access
+
+    🤔 2. WHY IAM Needed?
+
+    Without IAM ❌
+
+    Everyone gets full access → 🚨 security risk
+
+    With IAM ✅
+
+    Controlled access
+    Least privilege
+    Audit & tracking
+    🚀 3. How to Start IAM (Practical Steps)
+    Step 1: Create User
+    Go to IAM → Users → Create user
+    Choose:
+    Console access (UI login)
+    Programmatic access (API)
+    Step 2: Assign Permissions
+
+    Options:
+
+    Attach policy directly
+    Add to group
+    Copy from existing user
+    Step 3: Create Group (Best Practice)
+    Example:
+    Dev → limited access
+    Admin → full access
+    Step 4: Create Role
+    For services like:
+    EC2 → access S3
+    Lambda → access DB
+    Step 5: Test Access
+    Login as user
+    Try accessing service
+    📚 4. Theory Questions (Interview)
+    Basic
+    What is IAM in AWS?
+    Difference between user and role?
+    What is a policy?
+    What is least privilege principle?
+    What is IAM group?
+    Intermediate
+    Difference between inline and managed policies?
+    What is role assumption?
+    What is cross-account access?
+    What are access keys?
+    What is MFA in IAM?
+    Advanced
+    What is policy evaluation logic?
+    Explicit deny vs implicit deny?
+    Identity-based vs resource-based policy?
+    How IAM works with S3?
+    What is STS (Security Token Service)?
+    💻 5. Coding / Practical Questions
+    1. Create IAM user using CLI
+    aws iam create-user --user-name sakthi
+    2. Attach policy
+    aws iam attach-user-policy \
+    --user-name sakthi \
+    --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+    3. Create role
+    aws iam create-role \
+    --role-name MyRole \
+    --assume-role-policy-document file://trust.json
+    🧠 6. Scenario-Based Questions
+    🔹 Scenario 1
+
+    👉 Developer needs only S3 read access
+    ✔ Solution: Attach ReadOnly policy
+
+    🔹 Scenario 2
+
+    👉 EC2 needs access to S3
+    ❌ Don’t use access keys
+    ✔ Use IAM Role
+
+    🔹 Scenario 3
+
+    👉 Multiple users same permission
+    ✔ Use Group
+
+    🔹 Scenario 4
+
+    👉 Temporary access required
+    ✔ Use Role (STS)
+
+    🔹 Scenario 5
+
+    👉 Block a user even if allowed
+    ✔ Use Explicit Deny
+
+    ⚡ 7. Real-Time Understanding (Important)
+
+    Think like this:
+
+    Situation	Use
+    Human login	User
+    Many users same permission	Group
+    Service access	Role
+    Rules	Policy
+---------------------------------------------
+    1.mindmap
+    AWS IAM (Identity & Access Management)
+    │
+    ├── 🔐 Purpose
+    │   ├── Authentication (Who are you?)
+    │   ├── Authorization (What can you do?)
+    │   └── Security Control
+    │
+    ├── 👤 Users
+    │   ├── Individual account
+    │   ├── Login:
+    │   │   ├── Password (Console)
+    │   │   └── Access Keys (API/CLI)
+    │   └── Best Practice:
+    │       └── Avoid root user
+    │
+    ├── 👥 Groups
+    │   ├── Collection of users
+    │   ├── Permissions applied to group
+    │   └── Example:
+    │       ├── Admin Group
+    │       └── Developer Group
+    │
+    ├── 🎭 Roles
+    │   ├── Temporary access
+    │   ├── No password / access key
+    │   ├── Used by:
+    │   │   ├── EC2
+    │   │   ├── Lambda
+    │   │   └── Cross-account
+    │   └── Uses STS (temporary tokens)
+    │
+    ├── 📜 Policies
+    │   ├── JSON format
+    │   ├── Defines permissions
+    │   ├── Types:
+    │   │   ├── Managed Policy
+    │   │   └── Inline Policy
+    │   └── Structure:
+    │       ├── Effect (Allow/Deny)
+    │       ├── Action (s3:GetObject)
+    │       └── Resource (*)
+    │
+    ├── 🔑 Credentials
+    │   ├── Password
+    │   ├── Access Key + Secret Key
+    │   └── MFA (Multi-Factor Authentication)
+    │
+    ├── 🔄 Policy Evaluation Logic
+    │   ├── Default → Deny
+    │   ├── Explicit Allow → Allow
+    │   └── Explicit Deny → Always Deny ❗
+    │
+    ├── 🔗 Access Types
+    │   ├── Identity-based policies
+    │   └── Resource-based policies
+    │
+    ├── 🌍 IAM Use Cases
+    │   ├── Developer access control
+    │   ├── EC2 → S3 access
+    │   ├── Lambda permissions
+    │   └── Cross-account access
+    │
+    └── ✅ Best Practices
+        ├── Least privilege principle
+        ├── Use roles instead of access keys
+        ├── Enable MFA
+        ├── Rotate credentials
+        └── Use groups for permission management
+
+-----------------------------------------------------------------
+📚 1. THEORY QUESTIONS (with answers)
+🔹 Basic
+1. What is IAM?
+
+IAM (Identity and Access Management) is a service that controls who can access what in AWS.
+
+2. What is Authentication vs Authorization?
+Authentication → Who you are (login)
+Authorization → What you can do (permissions)
+3. What is an IAM User?
+
+An individual identity with credentials to access AWS.
+
+4. What is an IAM Role?
+
+A temporary identity with permissions, used by services or users.
+
+5. What is a Policy?
+
+A JSON document that defines permissions.
+
+🔹 Intermediate
+6. Difference: User vs Role
+User	Role
+Permanent	Temporary
+Has credentials	No credentials
+Used by humans	Used by services
+7. What is Least Privilege?
+
+Give only minimum required access.
+
+8. What is MFA?
+
+Multi-Factor Authentication → extra security layer.
+
+9. What are Access Keys?
+
+Used for programmatic access (CLI/API).
+
+10. Managed vs Inline Policy?
+Managed	Inline
+Reusable	Attached to one user
+AWS or custom	Custom only
+🔹 Advanced
+11. What is Policy Evaluation Logic?
+
+Order:
+
+Default → Deny
+Explicit Allow → Allow
+Explicit Deny → ❗ Always Deny
+12. Identity vs Resource Policy
+Identity → Attached to user/role
+Resource → Attached to resource (like S3)
+13. What is STS?
+
+Security Token Service → provides temporary credentials.
+
+14. What is Role Assumption?
+
+Switching to a role to get temporary permissions.
+
+15. What is Cross-Account Access?
+
+Accessing resources from another AWS account using roles.
+
+💻 2. CODING / PRACTICAL (CLI)
+🔹 Create User
+aws iam create-user --user-name sakthi
+🔹 Create Group
+aws iam create-group --group-name Developers
+🔹 Attach Policy to Group
+aws iam attach-group-policy \
+  --group-name Developers \
+  --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
+🔹 Add User to Group
+aws iam add-user-to-group \
+  --user-name sakthi \
+  --group-name Developers
+🔹 Create Role
+aws iam create-role \
+  --role-name EC2S3AccessRole \
+  --assume-role-policy-document file://trust.json
+🔹 Attach Policy to Role
+aws iam attach-role-policy \
+  --role-name EC2S3AccessRole \
+  --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
+🧠 3. SCENARIO-BASED QUESTIONS (VERY IMPORTANT 🔥)
+🔹 Scenario 1
+
+👉 A developer needs only read access to S3
+
+✅ Solution:
+
+Create user
+Attach AmazonS3ReadOnlyAccess
+🔹 Scenario 2
+
+👉 10 developers need same permissions
+
+✅ Solution:
+
+Create Group
+Add all users
+Attach policy to group
+🔹 Scenario 3
+
+👉 EC2 needs to access S3
+
+❌ Wrong: Access keys inside code
+✅ Correct: Use IAM Role
+
+🔹 Scenario 4
+
+👉 Temporary access for 1 hour
+
+✅ Solution:
+
+Use IAM Role + STS
+🔹 Scenario 5
+
+👉 User has allow + deny → what happens?
+
+✅ Answer:
+👉 Explicit Deny wins
+
+🔹 Scenario 6
+
+👉 Restrict access only from office IP
+
+✅ Solution:
+
+Use Condition in policy
+"IpAddress": {
+  "aws:SourceIp": "192.168.1.0/24"
+}
+🔹 Scenario 7
+
+👉 One AWS account needs access to another
+
+✅ Solution:
+
+Use Cross-account role
+🔹 Scenario 8
+
+👉 Secure root account
+
+✅ Solution:
+
+Enable MFA
+Avoid using root
+🔹 Scenario 9
+
+👉 Allow only specific S3 bucket
+
+✅ Solution:
+
+Define resource in policy:
+"Resource": "arn:aws:s3:::my-bucket/*"
+🔹 Scenario 10
+
+👉 Rotate credentials regularly
+
+✅ Solution:
+
+Use IAM best practices
+Rotate access keys

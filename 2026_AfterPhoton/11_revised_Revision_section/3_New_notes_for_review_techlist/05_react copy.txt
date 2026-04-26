@@ -1,0 +1,498 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+    React.js
+    ├── 1. Basics
+    │   ├── What is React? (UI library, component-based, unidirectional data flow)
+    │   ├── History & purpose (Facebook, scalability)
+    │   ├── Difference from other frameworks (Angular, Vue)
+    │   ├── Single Page Applications (SPA)
+    │   ├── Declarative vs Imperative
+    │   ├── JSX compilation (Babel, React.createElement) (babel-complier, webpack-bundler)
+    │   ├── Virtual DOM & Reconciliation (diffing algorithm)
+    │   ├── Fiber architecture basics -> reimplementaion of reat recongilation 
+    │   ├── StrictMode (development-only checks)
+    │   ├── Concurrent rendering & scheduling overview
+    │   └── React rendering cycle overview
+    │
+    ├── 2. Setting Up
+    │   ├── Create React App (CRA)
+    │   ├── Vite
+    │   ├── Next.js (SSR, SSG, ISR)
+    │   ├── Adding React via CDN
+    │   ├── Project folder structure conventions
+    │   └── Environment variables in React -> react key: value pair file 
+    │
+    ├── 3. Components
+    │   ├── Functional Components
+    │   ├── Class Components
+    │   ├── Pure Components (class) / React.memo (functional)
+    │   ├── Props (read-only data)
+    │   ├── State (useState, this.state)
+    │   ├── Lifting state up
+    │   ├── Derived state pitfalls
+    │   ├── Component Lifecycle (class) / Hooks (functional)
+    │   ├── Higher-Order Components (HOCs)
+    │   ├── Render props pattern
+    │   ├── Conditional Rendering
+    │   ├── Lists & Keys
+    │   ├── Fragments (<> </>)
+    │   └── Component reusability
+    │
+    ├── 4. JSX
+    │   ├── Embedding expressions
+    │   ├── Attributes in JSX (camelCase)
+    │   ├── JSX must return a single parent element
+    │   ├── Conditional & loop rendering
+    │   └── Shorthand fragments (<> </>)
+    │
+    ├── 5. Hooks (Functional Components)
+    │   ├── Rules of Hooks
+    │   ├── Basic Hooks
+    │   │   ├── useState -> store data
+    │   │   ├── useEffect (cleanup, AbortController) ->side effect
+    │   │   ├── useRef -> mutable ref
+    │   │   ├── useContext -> single source of data
+    │   │   └── useReducer -> complex state managing [purpose]
+    │   ├── Additional Hooks
+    │   │   ├── useMemo -> remorize the calculation
+    │   │   ├── useCallback -> remoriuze the function
+    │   │   ├── useLayoutEffect -> syncronous side effect
+    │   │   ├── useImperativeHandle
+    │   │   └── useDebugValue (custom hook debugging)
+    │   ├── React 18 Concurrent Features
+    │   │   ├── useTransition
+    │   │   └── useDeferredValue
+    │   └── Custom Hooks (patterns: data fetching, debouncing, forms)
+    │
+    ├── 6. State Management
+    │   ├── Local state
+    │   ├── Lifting state up
+    │   ├── Context API
+    │   ├── Context + Reducer pattern
+    │   ├── Immutable updates (Immer.js)
+    │   ├── Redux & Redux Toolkit
+    │   ├── Redux middlewares (Thunk, Saga)
+    │   ├── Zustand, Jotai, Recoil
+    │   ├── MobX
+    │   ├── Server state vs UI state
+    │   ├── TanStack Query / SWR
+    │   └── useSyncExternalStore (React 18)
+    │
+    ├── 7. Event Handling
+    │   ├── onClick, onChange, onSubmit
+    │   ├── Passing arguments to event handlers
+    │   ├── Synthetic Events
+    │   ├── Event pooling
+    │   ├── Event delegation in React
+    │   ├── Preventing default behavior
+    │   └── Native DOM events vs React events
+    │
+    ├── 8. Forms
+    │   ├── Controlled Components
+    │   ├── Uncontrolled Components
+    │   ├── Performance trade-offs between controlled/uncontrolled
+    │   ├── Multi-step forms
+    │   ├── Debounced input handling
+    │   ├── Form validation (manual, libraries)
+    │   ├── Accessibility in forms (label, aria-*)
+    │   └── Libraries: Formik, React Hook Form
+    │
+    ├── 9. Styling
+    │   ├── CSS Modules
+    │   ├── Styled Components (theming support)
+    │   ├── Tailwind CSS
+    │   ├── Inline styles
+    │   ├── Emotion
+    │   ├── Global styles in React
+    │   └── CSS-in-JS performance considerations
+    │
+    ├── 10. Routing
+    │   ├── React Router
+    │   │   ├── <BrowserRouter>
+    │   │   ├── <Routes> & <Route>
+    │   │   ├── useNavigate, useParams
+    │   │   ├── Nested routes
+    │   │   ├── Route guards
+    │   │   ├── Data APIs (loader, action in v6.4+)
+    │   │   ├── Code-splitting routes
+    │   │   └── Scroll restoration
+    │   ├── Next.js Routing
+    │   │   ├── File-based routing
+    │   │   ├── Dynamic routing
+    │   │   ├── Route transitions
+    │   │   └── API routes
+    │
+    ├── 11. Data Fetching
+    │   ├── Fetch API (with AbortController)
+    │   ├── Axios
+    │   ├── GraphQL (Apollo, urql)
+    │   ├── SWR
+    │   ├── React Query (TanStack Query)
+    │   ├── WebSockets / SSE
+    │   ├── Prefetching data
+    │   ├── useEffect data fetching pattern
+    │   ├── Suspense for data fetching
+    │   └── Streaming SSR (React 18)
+    │
+    ├── 12. Performance Optimization
+    │   ├── useMemo & useCallback
+    │   ├── React.memo
+    │   ├── Code splitting & lazy loading
+    │   ├── Avoid unnecessary re-renders
+    │   ├── Memoization pitfalls
+    │   ├── Windowing & virtualization (react-window, react-virtualized)
+    │   ├── Concurrent rendering benefits
+    │   ├── Profiling with React DevTools
+    │   ├── Image optimization
+    │   ├── Web Vitals measurement
+    │   └── Context selector optimization
+    │
+    ├── 13. Testing
+    │   ├── Jest (unit testing)
+    │   ├── React Testing Library
+    │   ├── Snapshot testing
+    │   ├── Mocking fetch/axios
+    │   ├── Cypress (E2E testing)
+    │   ├── MSW (Mock Service Worker)
+    │   ├── Integration with CI/CD
+    │   └── Test coverage metrics
+    │
+    ├── 14. Advanced Concepts
+    │   ├── Portals (controlled vs uncontrolled)
+    │   ├── Error Boundaries
+    │   ├── Suspense & Lazy Loading
+    │   ├── Server-Side Rendering (SSR)
+    │   ├── Static Site Generation (SSG)
+    │   ├── Incremental Static Regeneration (ISR)
+    │   ├── Hydration & Progressive Hydration
+    │   ├── Concurrent Mode basics
+    │   ├── React Server Components
+    │   ├── Streaming SSR edge cases
+    │   └── Progressive hydration in large apps
+    │
+    ├── 15. Accessibility
+    │   ├── ARIA attributes ->Accessible Rich Internet Applications
+    │   ├── Keyboard navigation
+    │   ├── Focus management
+    │   ├── Skip links
+    │   ├── Semantic HTML in React
+    │   ├── Color contrast tools
+    │   └── Accessibility testing tools
+    │
+    ├── 16. Conditional Rendering
+    │   ├── if/else
+    │   ├── Ternary operator
+    │   ├── Logical && operator
+    │   └── Switch rendering
+    │
+    ├── 17. Best Practices
+    │   ├── Keep components small
+    │   ├── Use semantic naming
+    │   ├── Folder-by-feature organization
+    │   ├── Extract reusable custom hooks
+    │   ├── Optimize for accessibility
+    │   ├── Avoid anonymous inline functions when possible
+    │   ├── Error logging & monitoring (Sentry, LogRocket)
+    │   ├── Security best practices (XSS prevention, HTML sanitization)
+    │   ├── Optimize bundle size (tree-shaking, webpack-bundle-analyzer)
+    │   └── Consistent code formatting
+
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    REACT THEORY QUESTIONS (TOP 30)
+
+    1. What is React?
+    2. What is Virtual DOM?
+    3. How React rendering works?
+    4. What is reconciliation?
+    5. What is JSX?
+
+    6. Props vs State?
+    7. Functional vs Class components?
+    8. What is re-render?
+    9. What is key prop?
+    10. What is fragment?
+
+    11. What are hooks?
+    12. Rules of hooks?
+    13. What is useState?
+    14. What is useEffect?
+    15. Dependency array behavior?
+
+    16. useMemo vs useCallback?
+    17. What is useRef?
+    18. What is custom hook?
+    19. What is Context API?
+    20. Context vs Redux?
+
+    21. What is React.memo?
+    22. What is lazy loading?
+    23. What is code splitting?
+    24. What is HOC?
+    25. What is render props?
+
+    26. What is portal?
+    27. What is error boundary?
+    28. Controlled vs uncontrolled?
+    29. What is lifting state up?
+    30. How to optimize React app?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    REACT THEORY QUESTIONS (TOP 30)
+
+    1. What is React?
+    2. What is Virtual DOM?
+    3. How React rendering works?
+    4. What is reconciliation?
+    5. What is JSX?
+
+    6. Props vs State?
+    7. Functional vs Class components?
+    8. What is re-render?
+    9. What is key prop?
+    10. What is fragment?
+
+    11. What are hooks?
+    12. Rules of hooks?
+    13. What is useState?
+    14. What is useEffect?
+    15. Dependency array behavior?
+
+    16. useMemo vs useCallback?
+    17. What is useRef?
+    18. What is custom hook?
+    19. What is Context API?
+    20. Context vs Redux?
+
+    21. What is React.memo?
+    22. What is lazy loading?
+    23. What is code splitting?
+    24. What is HOC?
+    25. What is render props?
+
+    26. What is portal?
+    27. What is error boundary?
+    28. Controlled vs uncontrolled?
+    29. What is lifting state up?
+    30. How to optimize React app?
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    REACT SCENARIO QUESTIONS (TOP 30)
+
+    1. Component re-rendering multiple times — why?
+    2. API called twice — why?
+    3. Infinite loop in useEffect?
+    4. State not updating — why?
+    5. Props not reflecting — why?
+
+    6. Large list slow — how optimize?
+    7. Form lagging — why?
+    8. Child re-rendering unnecessarily?
+    9. Context causing re-renders?
+    10. Memo not working?
+
+    11. useEffect dependency confusion?
+    12. API race condition?
+    13. Duplicate API calls?
+    14. UI flickering?
+    15. State inconsistency?
+
+    16. Event handler not working?
+    17. useRef not updating UI?
+    18. Async issue in component?
+    19. Cleanup not working?
+    20. Memory leak in React?
+
+    21. Routing issue?
+    22. Lazy loading not working?
+    23. Error boundary not catching?
+    24. State lost after navigation?
+    25. Component not unmounting?
+
+    26. Controlled form bug?
+    27. Debounce not working?
+    28. Performance issue?
+    29. Scroll lagging?
+    30. Data not syncing?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+        REACT TRICKY QUESTIONS (TOP 30)
+
+    1. Why React re-renders?
+    2. State update async?
+    3. setState batching?
+    4. useEffect runs twice?
+    5. dependency array issues?
+
+    6. key prop importance?
+    7. index as key issue?
+    8. closure issue in hooks?
+    9. stale state problem?
+    10. event pooling?
+
+    11. useMemo misuse?
+    12. useCallback misuse?
+    13. ref vs state?
+    14. controlled vs uncontrolled?
+    15. context performance issue?
+
+    16. memo not preventing re-render?
+    17. function recreation issue?
+    18. why inline functions bad?
+    19. useEffect cleanup timing?
+    20. render vs commit phase?
+
+    21. why state not immediate?
+    22. multiple state updates?
+    23. prop drilling problem?
+    24. SSR hydration issue?
+    25. lazy loading error?
+
+    26. suspense fallback issue?
+    27. error boundary limitation?
+    28. why useReducer?
+    29. hook rules violation?
+    30. render blocking?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    REACT DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build full dashboard
+    2. Create reusable component system
+    3. Build form engine
+    4. Create custom hooks library
+    5. Build API service layer
+
+    6. Create state management system
+    7. Build infinite scroll app
+    8. Create search with debounce
+    9. Build pagination system
+    10. Create modal system
+
+    11. Build drag-drop UI
+    12. Create theme switcher
+    13. Build notification system
+    14. Create reusable table
+    15. Build validation system
+
+    16. Optimize large list rendering
+    17. Debug re-render issues
+    18. Improve performance
+    19. Refactor messy components
+    20. Create reusable hooks
+
+    21. Implement caching
+    22. Build retry logic
+    23. Create error handling system
+    24. Handle loading states
+    25. Improve accessibility
+
+    26. Create folder structure
+    27. Optimize bundle size
+    28. Improve UX
+    29. Add analytics tracking
+    30. Production debugging
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    REACT REAL-WORLD MAPPING (TOP 30)
+
+    1. How do you fetch data?
+    → useEffect + async
+
+    2. How do you manage state?
+    → useState / Redux
+
+    3. How do you optimize performance?
+    → memo, useMemo
+
+    4. How do you avoid re-renders?
+    → memoization
+
+    5. How do you structure app?
+    → modular components
+
+    6. How do you handle forms?
+    → controlled inputs
+
+    7. How do you handle API errors?
+    → error state
+
+    8. How do you manage global data?
+    → context/redux
+
+    9. How do you debug issues?
+    → dev tools
+
+    10. How do you handle async?
+    → async/await
+
+    11. How do you reuse logic?
+    → custom hooks
+
+    12. How do you manage large lists?
+    → virtualization
+
+    13. How do you optimize UI?
+    → lazy loading
+
+    14. How do you handle routing?
+    → react-router
+
+    15. How do you prevent duplicate calls?
+    → debounce
+
+    16. How do you handle loading?
+    → loading state
+
+    17. How do you handle errors?
+    → error boundary
+
+    18. How do you scale app?
+    → modular structure
+
+    19. How do you improve UX?
+    → transitions
+
+    20. How do you manage forms?
+    → validation
+
+    21. How do you handle cleanup?
+    → useEffect cleanup
+
+    22. How do you prevent leaks?
+    → cleanup functions
+
+    23. How do you cache data?
+    → query libs
+
+    24. How do you test?
+    → RTL + Jest
+
+    25. How do you handle events?
+    → handlers
+
+    26. How do you maintain code?
+    → clean structure
+
+    27. How do you handle updates?
+    → state updates
+
+    28. How do you optimize API?
+    → caching
+
+    29. How do you manage components?
+    → reuse
+
+    30. How do you deliver production app?
+    → optimization + testing
+------------------------------------------------------------------------------------------------------

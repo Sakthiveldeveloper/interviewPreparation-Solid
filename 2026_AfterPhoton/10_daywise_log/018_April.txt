@@ -1,0 +1,25 @@
+coding question
+type -> i  was used but not have that much of  expriece we can convience  Tech round but need more time to Study
+next js  -> i  was used but not have that much of  expriece we can convience  Tech round but need more time to Study
+
+-----------------------------------------------------------------------------------------------------------------
+AWS
+Java
+Python
+
+----------------------------
+so now
+plan for 
+1. node js coding questions
+2. use type script in node js amd react js 
+then 
+3. review all theory
+4. revise all coding questions 
+5.AWS
+services
+docker, Kubernet
+
+
+ 
+review plan and plan for future
+and list the company wise ineterview and daily progress also 

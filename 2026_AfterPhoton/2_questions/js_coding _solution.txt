@@ -1,0 +1,145 @@
+// // 1.reverseString
+// function reverseString(inputParam){
+//     // return inputParam.split('').reverse().join('')
+//     let reversedValue = [];
+//     for(let i=inputParam.length-1; i>0; i--){
+//         reversedValue += inputParam[i]
+//     }
+//     return reversedValue
+// }
+// console.log( reverseString('Value'))
+
+// 2.Check Palindrome
+
+// function checkPalindrome(input){
+//     let updatedValue = input.toLowerCase();
+//     // let reversedValue = updatedValue.split('').reverse().join('');
+//     let reversedValue = '';
+//     for (let i = updatedValue.length-1; i>=0; i-- ){
+//       reversedValue += updatedValue[i]
+//     }
+//     return updatedValue === reversedValue
+// }
+// console.log(checkPalindrome('malayalam'))
+// console.log(checkPalindrome('omoa'))
+// 3.Find the largest number in an array
+// function CheckLargestNum(input){
+//     // return [Math.max(...input)]
+    
+//     let max = input[0];
+//     for(let i =0; i<input.length; i++){
+//         if(input[i]>max){
+//             max = input[i]
+//         }
+//     }
+//     return max
+// }
+// console.log(CheckLargestNum([1,2,3,55,111,87]))
+// 4.  Remove duplicates from an array
+// function findDuplicate(input){
+//     // use set
+//     // return [...new Set(input)]
+//     // use filter and Funcion 
+//     // return input.filter(function(value, index){
+//     //     return input.indexOf(value) == index
+//     // })
+//     // use Filter and Arrow function
+//     // return input.filter((value, index)=> input.indexOf(value)=== index)
+//     // useReducer
+    
+//     let value =  input.reduce((accumulator, current)=>{
+//         if(!accumulator.includes(current)){
+//             accumulator.push(current)
+//         }
+//         return accumulator
+//     },[])
+//     return value
+        
+// }
+
+// console.log(findDuplicate([1,2,3,1,2,3,4]))
+// 5.Count the occurrences of each character in a string
+// function findCharOccur(input){
+//     let charCount = {};
+//     for(let char of input){
+//     charCount[char] =( charCount[char] || 0 ) +  1;        
+//     }
+//     return charCount
+// }
+
+// console.log(findCharOccur('Check the Char'))
+// 6.Check if two strings are anagrams of each other.
+// function checkAnagram(input1, input2){
+//     // let inputSorted1 = input1.split('').sort().join('');
+//     // let inputSorted2 = input2.split('').sort().join('');
+//     // return inputSorted1 === inputSorted2
+//     console.log(input1.length);
+//     console.log(input2.length)
+//     if(input1.length  !=  input2.length){
+//         return false
+//     }
+//     let charCount1 = {};
+    
+//     for(let char of input1){
+//         charCount1[char] = (charCount1[char]||0) +1
+//     }
+//     for(let char2 of input2){
+//         console.log(char2)
+//         if(!charCount1[char2]){
+//             console.log('reach false')
+//             return false
+//         }
+//         charCount1[char2] -= -1
+//     }
+//     return true
+
+// }
+// console.log(checkAnagram('silenat', 'listen'))
+// 7.Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
+
+// function flattenArray(input){
+//     // return input.flat(Infinity)
+//     let flattedArray = [];
+//     for (let i =0; i<input.length; i++){
+//         if(Array.isArray(input[i])){
+//             flattedArray = flattedArray.concat(flattenArray(input[i]))
+//         }else{
+//             flattedArray.push(input[i])
+//         }
+//     }
+//     return flattedArray;
+// }
+// console.log(flattenArray([1, [2, [3, 4]]]))
+// 8.Implement a function that fetches data from an API and logs it.
+// async function getData (url){
+//     try{
+//         const res =await fetch(url); 
+//         const data =  await res.json();
+//         console.log(data)
+//     } catch(error){
+//         console.log('get the error', error)
+//     }
+// }
+// getData('https://jsonplaceholder.typicode.com')
+// 9.Implement a function that fetch as post data in js
+// async function postData (url, inputPayload){
+//     try{
+//         const res = await fetch(url, {
+//             method: "POST",
+//             headers:{
+//               'content-type': 'application/json'  
+//             },
+//             "body": JSON.stringify(inputPayload)
+//         })
+//         const data = await res.json();
+//         console.log('data', data)
+//     }catch(error){
+//         console.log('get error', error)
+//     }
+// }
+
+// postData('https://jsonplaceholder.typicode.com/posts', {
+//     title: 'New Post',
+//     body: 'This is the content',
+//     userId: 1
+// });

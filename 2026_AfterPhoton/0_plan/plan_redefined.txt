@@ -1,0 +1,44 @@
+After photon
+1.Solid Flow for Interview
+    1.mindset
+    2.Resume
+    3.Preparation
+    4.Apply/Convience HR
+    5.clear Interview /Technical Round
+    6.Salary negotition
+2.Solid flow for technical Interview
+    1.mind map
+    2.Theory Topic / Theory Questions
+    3.Coding Questions
+    4.Scenarios Questions
+4.Tech Skills
+FrondEnd
+    HTML
+    CSS, Bootstrap, MUI, antd, tailwind CSS
+    Javascript, React Js, Next JS, Typescript, angular, vie JS
+Backend
+    Node js, Express JS, Fastify,
+    REST, GraphQL,
+    ORM->sequalize, knex
+State
+    Redux,  Redux Tool kit,  JotAI, ZUSTAND, RECOIL Apllo client, Tanstak Query
+    Redux Saga,Redux thunk,
+Architeture
+    Miscro services/ micro front end / 
+Database
+    DBMS
+    RDBMS ->SQL -> mySql, postgrass SQL
+    No SQL -> mongoDb
+    Cache -> Redis
+Sequrity & Auth
+    JWT
+    Keycloak
+    Fusion Auth
+    OAuth
+Ci/Cd
+    Git, 
+    Github, 
+    Jenkins, AWs(EC2, S3)
+Pratice
+    Agile/Scrum, Code review
+    

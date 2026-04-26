@@ -1,0 +1,784 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+   JavaScript (JS)
+   ├── 1. Basics
+   │   ├── What is JavaScript? (client-side, server-side)
+   │   ├── Adding JS to HTML
+   │   │   ├── Inline: <button onclick="...">
+   │   │   ├── Internal: <script>...</script>
+   │   │   └── External: <script src="app.js"></script>
+   │   ├── Syntax & Case Sensitivity
+   │   ├── Comments: // single-line, /* multi-line */
+   │   └── "use strict" mode -> help to improve code quality and Security
+   │
+   ├── 2. Variables & Scope
+   │   ├── var (function-scoped)
+   │   ├── let (block-scoped)
+   │   ├── const (block-scoped, constant reference)
+   │   ├── Hoisting behavior
+   │   ├── Naming rules
+   │   ├── Global scope, function scope, block scope
+   │   ├── Lexical scope
+   │   └── Closures (data privacy, currying)
+   │
+   ├── 3. Data Types
+   │   ├── Primitive Types: string, number, boolean, null, undefined, symbol, bigint
+   │   ├── Non-primitive: object, array, function, date, regex
+   │   ├── Type checking: typeof, instanceof
+   │   ├── Type conversion: implicit & explicit
+   │   └── Truthy & Falsy values
+   │
+   ├── 4. Operators
+   │   ├── Arithmetic (+, -, *, /, %, **)
+   │   ├── Assignment (=, +=, -=, etc.)
+   │   ├── Comparison (==, ===, !=, !==, >, <, >=, <=)
+   │   ├── Logical (&&, ||, !)
+   │   ├── Ternary (condition ? value1 : value2)
+   │   ├── Spread & Rest (...)
+   │   ├── Optional chaining (?.)
+   │   └── Nullish coalescing (??)
+   │
+   ├── 5. Control Flow(condition statement, loop statement, jump statement)
+   │   ├── if, else if, else
+   │   ├── switch
+   │   ├── for, while, do...while, for...of, for...in
+   │   ├── break, continue
+   │   └── try...catch...finally
+   │
+   ├── 6. Functions
+   │   ├── Function Declaration
+   │   ├── Function Expression
+   │   ├── Arrow Functions (this binding differences)
+   │   ├── Parameters, Arguments, Default Parameters, Rest Parameters
+   │   ├── Return values
+   │   ├── IIFE (Immediately Invoked Function Expressions)
+   │   ├── Higher-order functions
+   │   ├── Callback functions
+   │   └── Recursion -> repeatly call itself for until reach the condition
+   │
+   ├── 7. Objects & Prototypes
+   │   ├── Object creation: literal, constructor, Object.create()
+   │   ├── Properties & Methods
+   │   ├── this keyword (implicit, explicit, new, arrow functions)
+   │   ├── Object destructuring
+   │   ├── Object.assign(), Object.keys(), Object.values(), Object.entries()
+   │   ├── Prototypes & prototype chain
+   │   ├── Inheritance: ES5 (prototype), ES6 classes & extends
+   │   └── instanceof vs isPrototypeOf
+   │
+   ├── 8. Arrays
+   │   ├── Creation & indexing
+   │   ├── Array methods
+   │   │   ├── push(), pop(), shift(), unshift()
+   │   │   ├── map(), filter(), reduce(), forEach(), some(), every(), find(), findIndex()
+   │   │   ├── concat(), slice(), splice()
+   │   │   ├── includes(), indexOf(), lastIndexOf()
+   │   │   ├── flat(), flatMap()
+   │   │   └── sort(), reverse()
+   │   ├── Spread & Destructuring
+   │   └── Iteration with for...of
+   │
+   ├── 9. Strings
+   │   ├── Template literals
+   │   ├── String methods: length, toUpperCase(), toLowerCase()
+   │   ├── trim(), split(), replace(), includes()
+   │   ├── charAt(), indexOf(), substring(), slice(), substr()
+   │   └── padStart(), padEnd(), repeat()
+   │
+   ├── 10. Dates & Math
+   │   ├── Date object & methods
+   │   ├── Date formatting
+   │   ├── Math methods: round(), floor(), ceil(), random(), min(), max(), abs()
+   │   └── Working with timestamps
+   │
+   ├── 11. Regular Expressions
+   │   ├── Creating RegExp (literal, constructor)
+   │   ├── Flags: g, i, m, u, s
+   │   ├── Common patterns
+   │   └── Methods: test(), exec(), match(), replace()
+   │
+   ├── 12. DOM Manipulation
+   │   ├── Selecting elements: getElementById(), getElementsByClassName(), querySelector()
+   │   ├── Changing content: textContent, innerHTML
+   │   ├── Changing styles: element.style.property, classList
+   │   ├── Creating/Removing elements: createElement(), append(), remove()
+   │   └── Modifying attributes: setAttribute(), getAttribute(), removeAttribute()
+   │
+   ├── 13. Events
+   │   ├── Mouse events (click, dblclick, mouseover, mouseout)
+   │   ├── Keyboard events (keydown, keyup, keypress)
+   │   ├── Form events (submit, change, input, focus, blur)
+   │   ├── Event bubbling & capturing
+   │   ├── Event delegation
+   │   └── Passive event listeners
+   │
+   ├── 14. ES6+ Features
+   │   ├── let & const
+   │   ├── Arrow functions
+   │   ├── Template literals
+   │   ├── Destructuring
+   │   ├── Default parameters
+   │   ├── Modules (import/export, default vs named, dynamic imports)
+   │   ├── async/await
+   │   ├── Object & Array spread/rest
+   │   └── New operators: ??, ?., ||=, &&=, ??=
+   │
+   ├── 15. JSON
+   │   ├── JSON.parse()
+   │   ├── JSON.stringify()
+   │   └── Data exchange with APIs
+   │
+   ├── 16. Asynchronous JS
+   │   ├── setTimeout(), setInterval(), clearTimeout(), clearInterval()
+   │   ├── Callbacks
+   │   ├── Promises (resolve, reject, then, catch, finally)
+   │   ├── Promise.all(), Promise.race(), Promise.any(), Promise.allSettled()
+   │   ├── async/await
+   │   ├── Fetch API / AJAX
+   │   └── Event loop, call stack, microtasks vs macrotasks
+   │
+   ├── 17. Error Handling
+   │   ├── try...catch
+   │   ├── throw
+   │   ├── finally
+   │   ├── Error objects (name, message, stack)
+   │   └── Handling async errors
+   │
+   ├── 18. Storage
+   │   ├── localStorage
+   │   ├── sessionStorage
+   │   ├── cookies
+   │   └── IndexedDB basics
+   │
+   ├── 19. Security
+   │   ├── Preventing XSS
+   │   ├── Avoiding eval()
+   │   └── Safe DOM manipulation
+   │
+   ├── 20. Performance
+   │   ├── Debouncing & throttling
+   │   ├── Lazy loading
+   │   ├── Minification & compression
+   │   └── Memory management & garbage collection
+   │
+   ├── 21. Testing (Basic)
+   │   ├── Unit testing concepts
+   │   ├── Simple Jest examples
+   │   └── Assertions & mocks
+
+-------------------------------------------------------------------------------------------------
+
+2.Theory Questions
+Here are your 25 JavaScript topics, summarized into simple, three-line explanations to complete your master list:
+   1. What is JS?
+      JavaScript is the "brain" of a website that adds interactivity, logic, and dynamic behavior. While HTML and CSS handle the look and structure, JS handles what happens when a user clicks, scrolls, or types. It is the engine that transforms static pages into full web applications.
+   2. Closure
+      A closure is a function that "remembers" the variables from its Outer scope, even after the Outer function has finished Execution. It creates a private "backpack" of data that stays attached to the inner function. This is the secret to data privacy and many modern coding patterns.
+   3. Scope
+      Scope determines where a variable can be seen or used in your code (Global, Function, or Block). Global variables are available everywhere, while variables inside a function or a {} block are protected from the outside. Proper scoping prevents "naming collisions" and keeps your code organized.
+   4. Var, Let, & Const
+      var is the old way and is function-scoped; let and const are the modern, block-scoped standards. Use const for values that shouldn't change and let for variables that will be updated (like a counter). Avoiding var helps prevent bugs caused by "leaky" variables.
+   5. Hoisting
+      Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope before execution. It allows you to call a function before it's written in the code, but it can lead to "undefined" errors with variables. Always declare your variables at the top to avoid confusion.
+   6. Event Loop
+      The Event Loop is the mechanism that allows JS to handle background tasks (like API calls) without freezing the page. Since JS is single-threaded, it uses a "queue" to manage asynchronous callbacks once the main stack is clear. It is what makes JavaScript feel fast and non-blocking.
+   7. Promise
+      A Promise is an object that represents the future result of an asynchronous task—it will either succeed (resolve) or fail (reject). It acts as a "placeholder" for data that hasn't arrived yet, like a buzzer at a restaurant. Promises replaced messy callbacks with a cleaner, chainable structure.
+   8. The "this" Keyword
+      this refers to the object that is currently executing a piece of code, but its value changes depending on how a function is called. In a method, it refers to the owner object; in a regular function, it refers to the global window. Using arrow functions helps "lock" this to the surrounding context.
+   9. Async/Await vs. Promise
+      Async/Await is "syntactic sugar" built on top of Promises to make asynchronous code look like normal, readable text. While Promises use .then() chains, Async/Await uses a try/catch block for a cleaner, linear flow. It is the modern industry standard for writing asynchronous logic.
+   10. Call, Bind, & Apply
+      These three methods are used to manually set the value of this for a function. call and apply run the function immediately, while bind creates a new function to be used later. They are perfect for "borrowing" methods from one object to use on another.
+   11. Callback Function
+      A callback is a function passed as an argument into another function to be executed once a task is finished. They are essential for handling events like button clicks or timers. However, nesting too many of them creates "Callback Hell," which is why we now use Promises.
+   12. Higher-Order Functions
+      A Higher-Order Function is a function that either takes another function as an input or returns a function as an output. They allow you to treat logic like data, making your code more flexible and reusable. Common examples include array methods like .map() and .filter().
+   13. Map vs. Filter vs. Reduce
+      .map() transforms every item in an array; 
+      .filter() picks specific items based on a test; 
+      .reduce() boils an entire array down to one single value. 
+      These three methods allow you to process data cleanly without writing long for loops. They are the "workhorses" of modern data manipulation.
+   14. Sync vs. Async
+      Synchronous code runs line-by-line and "blocks" the page until finished; Asynchronous code runs in the background and doesn't stop the rest of the script. Most web tasks (like fetching data) must be async so the user interface stays responsive. It is the difference between waiting in line and taking a buzzer.
+   15. JSON
+      JSON (JavaScript Object Notation) is a lightweight, text-based format used to exchange data between a server and a web app. It looks like a JS object but requires double quotes for all keys and strictly follows specific rules. It is the universal "language" for APIs today.
+   16. Shallow vs. Deep Copy
+      A shallow copy only copies the top level of an object, meaning nested items are still shared with the original. A deep copy creates a completely independent clone of every single level. Use structuredClone() for deep copies to ensure changing the copy doesn't break the original.
+   17. Prototypal Inheritance
+      In JS, objects inherit features from other objects through a hidden link called a "prototype." This allows all instances of a "User" to share one single "login" function instead of each having their own copy. It is a memory-efficient way to share logic across many objects.
+   18. Currying
+      Currying is a technique that transforms a function with multiple arguments into a series of functions that take one argument at a time. It allows you to "pre-fill" some arguments and save the function for later use. This is very useful for creating specialized utility functions.
+   19. Debounce vs. Throttle
+      Debounce waits for a "pause" in activity (like typing) before running; Throttle limits a function to running only once every X seconds (like scrolling). Both are used to improve performance by stopping "noisy" events from firing too many times. They keep your website smooth during heavy user interaction.
+   20. Error Handling
+      Error handling uses try...catch blocks to catch bugs before they crash your entire application. You "try" a risky block of code and "catch" the error if it fails to show a helpful message. This ensures your app stays stable even when an API fails or a user enters bad data.
+   21. How Async Operations Work
+      Async operations work by offloading tasks (like timers or network requests) to the browser's internal APIs. Once the task is done, the result is sent to a "Task Queue" to wait its turn. The Event Loop then pushes it back to the main thread once it’s empty.
+   22. Memory Leaks
+      A memory leak happens when your code keeps a reference to data that is no longer needed, preventing the "Garbage Collector" from cleaning it up. Common causes include forgotten timers, global variables, or unremoved event listeners. Avoiding leaks is key to keeping your app fast over long periods of time.
+   23. Execution Context
+      The Execution Context is the "environment" the JS engine creates to store variables and run your code. There is one Global context and a new Function context for every function call. It handles the two phases of JS: memory creation (hoisting) and code execution.
+   24. Lexical Scope
+      Lexical scope means that a function's access to variables is decided by where the function was written in the code, not where it is called. An inner function will always "remember" the scope it was born in. This is the logic that allows Closures to work.
+   25. Promise APIs (All, Race, etc.)
+      These methods handle multiple Promises at once: 
+      Promise.all() waits for everyone to succeed -> if one fail enire things fail; 
+      Promise.settle() -> come all even that fail or success
+      Promise.race() takes the fastest result , if fail or success; 
+      Promise.any() takes the first success. They are used to manage complex workflows where multiple background tasks need to coordinate.
+
+You now have a complete reference guide for HTML, CSS, and JavaScript. Do you want to try building a small project using all three, or do you have more JS questions?
+---------------------------------------------------------------------------------------------------------
+🔥Top JavaScript Concepts -  What you should prepare (THEORY MASTER LIST)
+
+   I’ll give you a focused list (~50 topics) — this is enough
+
+   🧠 1. Core JavaScript (VERY IMPORTANT)
+      var vs let vs const
+      Scope (global, block, function)
+      Closure (real use case)
+      Hoisting
+      Temporal Dead Zone
+      Execution context
+      Call stack
+   ⚙️ 2. Functions & this
+      this keyword (all cases)
+      Arrow vs normal function
+      bind / call / apply
+      First-class functions
+      Higher-order functions
+   🔥 3. Async JavaScript (CRITICAL)
+      👉 Most asked area
+      Event loop
+      Microtask vs macrotask
+      Promise lifecycle
+      async/await
+      setTimeout behavior
+      Callback vs Promise vs async
+   🧩 4. Objects & Prototypes
+      Prototype chain
+      Inheritance in JS
+      Object.create
+      Class vs function constructor
+   ⚡ 5. Memory & Performance
+      Shallow vs deep copy
+      Memory leaks (closures, event listeners)
+      Garbage collection basics
+   🧱 6. Advanced Concepts
+      Currying
+      Memoization
+      Debounce vs throttle
+      Immutability
+   🧪 7. Tricky JS Behavior
+      == vs ===
+      typeof null
+      NaN behavior
+      Floating point issues
+   🏗️ 8. Real-world (VERY IMPORTANT FOR YOU)
+      👉 THIS is what makes you stand out
+      How React uses closure
+      Why debounce in search
+      How async works in API calls
+      Performance optimization techniques
+   💥 HOW TO PREPARE THEORY (IMPORTANT)
+      Don’t do this ❌
+      Mug definitions
+   Do this ✅
+      Explain in your own words
+      Give real example
+      Connect to project
+   🧠 Golden Rule
+      👉 For every theory topic, you should be able to:
+      Explain simply
+      Give example
+      Write small code
+      Tell real-world usage
+--------------------------------------------------------------------------------------------------------
+3.Coding Questions
+   1.write a simple Promise that resolves after 1 seconds
+   2.Reverse string
+   3.Palindrome
+   4.Anagram
+   5.remove Duplicate
+   6.Coucurent words
+   7.Flat Array
+   8.Max number
+   9.debounce
+   10.second largest number
+   11.intersectin of 2 array -1
+   12. sort withput use sort in built -2
+   13.throttle 
+   14. deep clone of object -3
+   15.check object is empty -4
+   16.Find the missing number in an array of 1–N. -5
+   17.Implement a function that fetches data from an API and logs it using async/await.
+   18.Implement a function that fetch as post data in js
+
+--------------------------------------------------------------------------------------------------------
+🚀 TOP 50 JavaScript CODING QUESTIONS (4–6 YOE)
+   🧠 PHASE 1: MUST-DO (CORE FOUNDATION) — ⭐⭐⭐⭐⭐
+      👉 If you only do these, you can still clear many interviews
+         Reverse a string
+         Check palindrome
+         Find max/min in array
+         Remove duplicates from array
+         Count frequency of elements
+         Find second largest number
+         Find missing number in array
+         Flatten array (1 level)
+         Deep flatten array (nested)
+         Merge two arrays without duplicates
+   ⚙️ PHASE 2: ARRAY + STRING LOGIC — ⭐⭐⭐⭐⭐
+         Longest substring without repeating characters
+         Anagram check
+         Rotate array by k steps
+         Chunk array into size N
+         Group array of objects by key
+         Sort array without .sort()
+         Find intersection of two arrays
+         Move zeros to end
+         Find pairs with given sum
+         Find first non-repeating character  
+   🔥 PHASE 3: ADVANCED JS (HIGHLY ASKED) — ⭐⭐⭐⭐⭐
+         👉 VERY IMPORTANT FOR YOU
+         Implement debounce
+         Implement throttle
+         Deep clone object
+         Shallow vs deep copy implementation
+         Memoization function
+         Currying function
+         Function composition
+         Infinite currying (sum(1)(2)(3))
+         Once function (execute only once)
+         Pipe / compose utility
+   ⚡ PHASE 4: PROMISE & ASYNC (CRITICAL) — ⭐⭐⭐⭐⭐
+         👉 This is where most people fail
+         Implement Promise.all
+         Implement Promise.race
+         Retry failed API call (with limit)
+         Execute promises in parallel vs sequential
+         Limit concurrent API calls
+         Build async queue system
+   🧱 PHASE 5: POLYFILLS (INTERVIEW FAVORITE) — ⭐⭐⭐⭐⭐
+         👉 MUST prepares
+         Polyfill for bind
+         Polyfill for call
+         Polyfill for apply
+         Polyfill for map
+         Polyfill for filter
+         Polyfill for reduce
+   🧩 PHASE 6: OBJECT & LOGIC — ⭐⭐⭐⭐
+         Deep object comparison
+         Convert flat object → nested object
+         Object flattening
+         Immutable update function
+   🏗️ PHASE 7: REAL-WORLD PROBLEMS — ⭐⭐⭐⭐⭐
+         👉 This will impress interviewer (very important for MERN dev)
+         Search input with debounce
+         Infinite scroll logic
+         Pagination system
+         Cache API response (LRU cache basic)
+      🧠 HOW TO PRACTICE (DON’T SKIP THIS)
+         👉 For EACH question:
+         First try yourself (20–30 mins)
+         Write clean code
+         Optimize (time + space)
+         Explain out loud (VERY IMPORTANT)
+      🔥 PRIORITY (If time is less)
+         Focus first on:
+         👉 Debounce
+         👉 Promise.all
+         👉 Deep clone
+         👉 Currying
+         👉 Polyfills
+         👉 Array problems
+
+      👉 Phase 1:
+         Finish these 50 properly (10–12 days)
+      👉 Phase 2:
+         Practice variations (important)
+      Change conditions
+         Add constraints
+      👉 Phase 3:
+         Mock interviews
+
+--------------------------------------------------------------------------------------------------------
+🚀 ✅ UPDATED JS CODING + CONCEPT LIST (4 YEARS LEVEL)
+🧠 1. CORE JAVASCRIPT (MUST MASTER)
+
+These are non-negotiable — almost guaranteed questions:
+
+Closures (with real example)
+this keyword (all cases: normal, arrow, method, constructor)
+Hoisting (var, let, const)
+Scope (global, function, block)
+Event Loop (microtask vs macrotask 🔥)
+Call, Apply, Bind (implement also)
+Prototypes & Inheritance
+Execution Context
+⚙️ 2. FUNCTIONAL PROGRAMMING
+
+Very common in JS interviews:
+
+Currying
+Memoization
+Pure functions
+Higher-order functions
+
+👉 Coding:
+
+Custom map
+Custom filter
+Custom reduce
+📦 3. OBJECT & ARRAY PROBLEMS (IMPORTANT)
+
+You already did basics — now upgrade:
+
+Must Know:
+Flatten array (✅ you did)
+Flatten object 🔥
+Deep clone 🔥 (VERY IMPORTANT)
+Group By key
+Merge objects
+Remove duplicates (optimized using Set/Map)
+Sort array of objects
+🔢 4. DSA STYLE PROBLEMS (MEDIUM LEVEL)
+
+Interviewers expect at least 1 medium problem
+
+Must Prepare:
+Two Sum
+Longest substring without repeating characters 🔥
+First non-repeating character
+Frequency counter using Map
+Binary search
+Sliding window basics
+⏳ 5. ASYNC JAVASCRIPT (VERY IMPORTANT)
+
+This is where many fail ❌
+
+Concepts:
+Promise (resolve/reject/chain)
+Async/Await
+Error handling
+Parallel vs Sequential calls
+Coding:
+Promise.all
+Promise.race
+Retry API (3 times) 🔥
+API timeout logic
+Debounce (✅ done)
+Throttle (✅ done)
+🧩 6. REAL-WORLD PROBLEMS (4 YOE EXPECTATION)
+
+This is what separates you from juniors:
+
+LRU Cache 🔥🔥 (top question)
+Infinite scroll logic
+Pagination logic
+Rate limiter
+Search autocomplete (debounce use case)
+🧪 7. TRICKY INTERVIEW QUESTIONS
+
+Very frequently asked:
+
+Difference between:
+== vs ===
+null vs undefined
+map vs forEach
+Shallow vs Deep copy
+Object.freeze vs Object.seal
+setTimeout inside loop issue
+🧰 8. CODING IMPLEMENTATIONS (HIGH IMPACT)
+
+You should be able to write:
+
+call, apply, bind (polyfill)
+Debounce (you did ✅)
+Throttle (you did ✅)
+Deep clone
+    Custom Promise (basic level)
+--------------------------------------------------------------------------------------------------------
+      4.Scenarios Questions
+
+
+         
+      Follow-up :
+         Date 26 march -> read
+         Date 07 April -> read for Axchange L2 round interview
+         Date 12 April -> read for Interview
+         Date 13 April ->  read for Interview
+         Date 14 April ->  read for Interview
+         Date 20 April ->  read for Interview
+         Date 21 April ->  read for Interview
+         Date 22 April ->  read for Interview
+
+
+----------------------
+coding questions answers above 18s
+   // 1.Reverse String
+   // function reverseString(input){
+   //     // use in build function
+   //     // return input.split('').reverse().join('')
+   //     // use for loop
+   // let reversedValue = '';
+   //     for(let i = input.length-1; i>=0; i--){
+   //         reversedValue += input[i]
+   //     }
+   //     return reversedValue;
+   // }
+   // console.log(reverseString('input'))
+
+   // 2 . check palindrom
+   // function checkPalindrome(input){
+   //     let triggedValue = input.toLowerCase();
+   //     // use inbuild
+   //     // const reversedValue = triggedValue.split('').reverse().join('')
+   //     // use for loop
+   //     let reversedValue = '';
+   //     for (let i = input.length-1; i>=0; i--){
+   //         reversedValue += input[i]
+   //     }
+   //     return triggedValue === reversedValue
+   // }
+   // console.log(checkPalindrome('malayalam'))
+   // console.log(checkPalindrome('Tamil'))
+   // 3.Anagram
+   // function CheckAnagram(Input1, Input2){
+   //     let trimmedValue1 = Input1.toLowerCase();
+   //     let trimmedValue2 = Input2.toLowerCase();
+   //     if(trimmedValue1.length != trimmedValue2.length){
+   //         return false
+   //     }
+   //     // use sort in build
+   //     // let sortedValue1 =  trimmedValue1.split('').sort().join('');
+   //     // let sortedValue2 = trimmedValue2.split("").sort().join('');
+   //     // return sortedValue1 === sortedValue2
+   //     // use for loop
+   //     let charCount = {};
+   //     for(let char of trimmedValue1){
+   //         charCount[char] = (charCount[char] || 0) +1
+   //         // if(charCount[char){
+   //         //     charCount[char] = (charCount[char] || 0) +1
+   //         // } 
+   //     }
+
+   //     for (let char1 of trimmedValue2){
+   //         if(!charCount[char1]){
+   //             return false
+   //         } else{
+   //             charCount[char1] -= 1
+   //         }
+   //     }
+   //     return true
+   // }
+   // console.log(CheckAnagram('act', 'cat'))
+   // console.log(CheckAnagram('acta', 'cat'))
+
+   // 4. Remove duplicates in the Array
+   // function removeDuplicate(input){
+   //     // use Set
+   //     // return ( new Set(input))
+   //     // use filter
+   //     // return input.filter((value, index, array)=>{
+   //     //     return input.indexOf(value) == index
+   //     // })
+   //     // use reducer
+   //     return  input.reduce((acc, value)=>{
+   //          if(!acc.includes(value)){
+   //              acc.push(value)
+   //         } 
+   //         return acc
+   //     },[])
+   // }
+   // console.log(removeDuplicate([1,2,3,1,2,4,5,1,2,3]))
+
+   // 5.Coucurent words
+   // function ConcurrentWord (Input){
+   //     let charCounts = {};
+   //     for(let char of Input){
+   //         charCounts[char] = (charCounts[char] || 0) + 1
+   //     }
+   //     return charCounts
+   // }
+   // console.log(ConcurrentWord('strings'))
+
+   // 6.Flat Array
+   // function flattenArray(input){
+   //     // use for loop
+   //     // let flattedArray = [];
+   //     // for(let i = 0; i<input.length; i++){
+   //     //     if(Array.isArray(input[i])){
+   //     //         flattedArray = flattedArray.concat(flattenArray(input[i]))
+   //     //     } else {
+   //     //         flattedArray.push(input[i])
+   //     //     }
+   //     // }
+   //     // return flattedArray
+   //     // use flat in buid
+   //     return input.flat(Infinity)
+   // }
+
+   // console.log(flattenArray([1,2,3,4,[5,6,[7,8]]]))
+
+   // 7.max  Number
+   // function findMax(input){
+   //     // use for loop
+   //     // let maxNumber = input[0];
+   //     // for(let count of input){
+   //     //     if(count>maxNumber){
+   //     //         maxNumber = count
+   //     //     }
+   //     // }
+   //     // return maxNumber
+   // // use marth
+   //     return Math.max(...input)
+   // }
+
+   // console.log(findMax([1,2,311,212,11121, 77]))
+
+   // 8..find minimum
+   // function findMin(input){
+   //     // use for loop
+   //     let minNumber = input[0];
+   //     for(let count of input){
+   //         if(count<minNumber){
+   //             minNumber = count
+   //         }
+   //     }
+   //     return minNumber
+   // // use marth
+   //     // return Math.min(...input)
+   // }
+
+   // console.log(findMin([18,2,311,212,11121, 77]))
+
+   // 9.Second largest
+   // function secondLar(input){
+   // let largestNumber = -Infinity;
+   // let secondLargestNumber = -Infinity;
+   // for (let num of input)  {
+   //     if(num>largestNumber){
+   //         secondLargestNumber = largestNumber
+   //         largestNumber =num;
+   //     } else if( num > secondLargestNumber && num !== largestNumber){
+   //         secondLargestNumber = num
+   //     }
+   // }
+   //     return secondLargestNumber   
+   // }
+   // console.log(secondLar([19,233,11,32,11]))
+   // 10. debounce
+   // function debounce(func, delay){
+   //     let timer;
+   //     return function (...args) {
+   //         clearTimeout(timer);
+   //        timer =  setTimeout(()=>{
+   //             func.apply(this, args)
+   //         }, delay)
+   //     }
+   // }
+
+   // const  search = debounce(()=>{
+   //     console.log('Search Reached')
+   // }, 500)
+   // search()
+   // 11.throttle function
+   // function throtleFun(func, delay){
+   //     let lastCall =0;
+   //     return function (...args){
+   //         let now = Date.now();
+   //         if(now-lastCall>=delay){
+   //             lastCall = now;
+   //             func.apply(this, args);
+   //         }
+   //     }
+   // }
+   // const ScrollList = throtleFun(()=>{
+   //     console.log('Throttle  Started')
+   // }, 500)
+
+   // ScrollList();
+
+   // 12.Intersection of 2 array
+   // function arrayInteraction(input1, input2){
+   //     let set2 = new Set(input1);
+   //     return input2.filter(item => set2.has(item) )
+   // }
+
+   // console.log(arrayInteraction([1,3,2,4,5], [1,5,6,2,7]))
+   // 13.Sort without in-built asc, desc
+   // 14.Deep clone of Object
+   // 15.Check Object is Empty
+   // function ObjectemptyCheck(obj){
+   //     return Object.keys(obj).length ===0
+   // }
+   // console.log(ObjectemptyCheck({name:'sakthi'}))
+   // console.log(ObjectemptyCheck({}))
+   // 16.write a simple Promise that resolves after 1 seconds
+
+   // function dealyThePromise(){
+   //     return new Promise((resolve, reject)=>{
+   //         setTimeout(()=>{
+   //             resolve("Promise resolved");
+   //         }, 500)
+   //     })
+   // }
+   // dealyThePromise().then((message)=>{
+   //     console.log(message)
+   // })
+   // 17. fetch data from the URL
+   // async function getDetails(url) {
+   //     try {
+   //         const resp = await fetch(url);
+   //         const data =  resp.json();
+   //         console.log(data);
+   //     } catch(error){
+   //         console.log(error)
+   //     }
+   // }
+   // getDetails("https://jsonplaceholder.typicode.com/users")
+   // async function fetchUsers() {
+   //   try {
+   //     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+   //     // Check if response is OK
+   //     if (!response.ok) {
+   //       throw new Error("Network response was not ok");
+   //     }
+
+   //     const data = await response.json();
+
+   //     console.log("Users Data:", data);
+   //   } catch (error) {
+   //     console.error("Error fetching data:", error);
+   //   }
+   // }
+
+   // fetchUsers();
+   // 18.post data to URL 
+   // async function createUser(url,data){
+   //     try{
+   //         let res = await fetch(url, {
+   //             method: 'POST',
+   //             header: {
+   //                'Content-Type': 'application/json'
+   //             },
+   //             body: JSON.stringify(data)
+   //         })
+   //         const data =await res.json();
+   //         console.log(data)
+   //     }catch(error) {
+   //         console.log(error)
+   //     }
+   // }
+   // const creatingUser = createUser('https://jsonplaceholder.typicode.com/posts', {
+   //         title: "Hello",
+   //         body: "This is a post request",
+   //         userId: 1
+   //       })

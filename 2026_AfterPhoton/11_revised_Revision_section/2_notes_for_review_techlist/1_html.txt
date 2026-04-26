@@ -1,0 +1,256 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mind map
+    HTML (HyperText Markup Language)
+    ├── 1. Basics
+    │   ├── What is HTML?
+    │   ├── Structure of an HTML document
+    │   │   ├── <!DOCTYPE html>
+    │   │   ├── <html>
+    │   │   ├── <head>
+    │   │   └── <body>
+    │   ├── HTML Editors (VS Code, Sublime, etc.)
+    │   └── File extension: .html
+    │
+    ├── 2. Elements & Tags
+    │   ├── Headings: <h1> to <h6>
+    │   ├── Paragraphs: <p>
+    │   ├── Line Breaks & Horizontal Rules: <br>, <hr>
+    │   ├── Text Formatting: <b>, <i>, <strong>, <em>, <mark>, <small>, <del>, <ins>, <sub>, <sup>
+    │   ├── Comments: <!-- comment -->
+    │   └── Semantic vs. Non-semantic Elements
+    │
+    ├── 3. Attributes
+    │   ├── Global Attributes (id, class, style, title)
+    │   ├── Inline CSS (style attribute)
+    │   ├── Boolean Attributes (disabled, checked)
+    │   └── Custom data attributes (data-*)
+    │
+    ├── 4. Links & Media
+    │   ├── Anchor tag: <a href="">
+    │   ├── Images: <img src="" alt="">
+    │   ├── Audio: <audio controls>
+    │   ├── Video: <video controls>
+    │   └── Embedding: <iframe>, <embed>, <object>
+    │
+    ├── 5. Lists
+    │   ├── Ordered List: <ol>
+    │   ├── Unordered List: <ul>
+    │   └── Description List: <dl>, <dt>, <dd>
+    │
+    ├── 6. Tables
+    │   ├── Table: <table>
+    │   ├── Rows & Cells: <tr>, <td>, <th>
+    │   ├── Caption: <caption>
+    │   ├── Table Sections: <thead>, <tbody>, <tfoot>
+    │   └── Attributes: colspan, rowspan
+    │
+    ├── 7. Forms
+    │   ├── Form tag: <form>
+    │   ├── Input fields: <input type="">
+    │   │   ├── text, password, email, number, checkbox, radio, etc.
+    │   ├── Textarea: <textarea>
+    │   ├── Select & Options: <select>, <option>
+    │   ├── Labels: <label for="">
+    │   └── Buttons: <button>, <input type="submit">
+    │
+    ├── 8. Semantic HTML5 Elements
+    │   ├── Structural: <header>, <nav>, <main>, <section>, <article>, <footer>, <aside>
+    │   └── Media: <figure>, <figcaption>
+    │
+    ├── 9. Metadata & Head
+    │   ├── <title>
+    │   ├── <meta> (charset, viewport, description, etc.)
+    │   ├── <link> (external CSS)
+    │   ├── <style> (internal CSS)
+    │   └── <script> (JavaScript)
+    │
+    ├── 10. Accessibility
+    │   ├── alt text
+    │   ├── ARIA roles
+    │   └── Keyboard navigation
+    │
+    └── 11. Best Practices
+        ├── Use semantic tags
+        ├── Proper nesting
+        ├── Alt text for images
+        ├── Mobile-first responsive layout
+        └── Validate HTML (W3C Validator)
+-----------------------------------------------------------------------------------------------
+2.Theory Questions
+    Here is the complete list of the 24 topics you asked about, each with a simple, three-line explanation to help you remember them quickly:
+   1. What is HTML?
+        HTML (HyperText Markup Language) is the standard code used to structure the content of a web page. It acts as the "skeleton" or "bones" that hold text, images, and links together. Without it, a browser wouldn't know how to display your content.
+   2. Semantic HTML
+        This means using tags that describe their purpose, like <header>, <article>, and <footer>. Unlike generic <div> tags, semantic tags tell both the browser and the developer exactly what the content is. This makes your site easier to read for humans and machines alike.
+   3. Block Elements
+        Block elements (like <div>, <h1>, and <p>) always start on a new line. They automatically stretch to fill the full width of their container. Think of them as large "boxes" that stack on top of each other.
+   4. Inline Elements
+        Inline elements (like <span> and <a>) do not start on a new line and only take up as much width as their content needs. They sit side-by-side with other content, like words in a sentence. They are used for small details inside blocks.
+   5. div
+        The <div> is a generic "block-level" container used to group large chunks of content for layout. It has no special meaning on its own and is primarily used as a hook for CSS styling. It is the most common way to build "boxes" on a website.
+   6. span
+         The <span> is a generic "inline" container used to target a specific piece of text within a line. It is perfect for changing the color or font of a single word without breaking the flow of a paragraph. Like the div, it carries no inherent meaning.
+   7. id Attribute
+        An id is a unique name given to one specific element on a page. You can only use a specific ID once per document, much like a person’s fingerprint. It is best used for unique page sections or targeting a single item with JavaScript.
+   8. class Attribute
+        A class is a reusable label that can be applied to many different elements at once. This allows you to give multiple items the same CSS styling, like making all buttons look blue. One element can also have multiple classes at the same time.
+   9. DOCTYPE
+        The <!DOCTYPE html> declaration must be the very first line of your code. it tells the web browser exactly which version of HTML you are using (currently HTML5). This ensures the browser doesn't use "Quirks Mode," which can break your layout.
+   10. Meta Tags
+        Meta tags live in the <head> of your page and provide "data about data" to the browser. They handle things like character encoding, page descriptions for Google, and keywords. Users never see them, but they are vital for how a page behaves and ranks.
+   11. SEO & HTML
+        SEO (Search Engine Optimization) is how you help Google find and rank your site. HTML helps by using clear titles, correct heading hierarchies (<h1> to <h6>), and descriptive tags. Good HTML structure makes your content "searchable" and "understandable" for bots.
+   12. alt Attribute
+        The alt attribute provides a text description for an image if it fails to load. It is essential for accessibility, as screen readers read this text aloud to visually impaired users. It also helps search engines understand what is in your photos.
+   13. data- Attributes*
+        These allow you to store custom data directly on an HTML element without breaking the code. You can name them anything (e.g., data-user-id) and then access that data later using JavaScript. They are perfect for passing info from HTML to your scripts.
+   14. iframe
+        An <iframe> is like a small "window" that embeds another website inside your own page. It is commonly used for YouTube videos, Google Maps, or third-party ads. For security, you should always use the sandbox attribute when embedding content.
+   15. Form Element
+        The <form> tag is a container for interactive controls like text boxes and buttons. It collects user information and sends it to a server to be processed. It requires an action (where to send data) and a method (how to send it).
+   16. Input Types
+        The type attribute on an <input> tag determines what kind of data the user can enter. Common types include text, password, email, and checkbox. Modern types like date and color provide built-in pickers and validation.
+   17. HTML4 vs. HTML5
+        HTML4 was an older standard that relied on plugins like Flash for video and audio. HTML5 is the modern version that handles multimedia natively and introduces semantic tags. HTML5 also added offline storage and better support for mobile devices.
+   18. Accessibility (a11y)
+        Accessibility is the practice of making your site usable for everyone, including people with disabilities. Using proper HTML (like buttons instead of clickable divs) ensures keyboard and screen reader support. It’s about building a web that works for every single user.
+   19. async Attribute
+        The async attribute tells the browser to download a script in the background while still loading the page. The script will run as soon as it finishes downloading, which might be out of order. It is best used for independent scripts like ads or analytics.
+   20. defer Attribute
+        The defer attribute also downloads scripts in the background but waits until the page is fully finished "parsing" before running them. It keeps the scripts in the correct order they appear in your code. This is usually the best choice for your main app logic.
+   21. Browser Rendering
+        Rendering is the process where a browser turns your HTML and CSS into pixels on a screen. It builds a "DOM tree" for structure and a "CSSOM tree" for styles, then combines them to draw the layout. This complex process happens in milliseconds every time you load a page.
+   22. DOM (Document Object Model)
+        The DOM is a "live" map of your webpage that exists in the browser's memory. JavaScript uses the DOM to change text, colors, or elements on the fly without refreshing the page. Think of it as the remote control for your website's content.
+   23. Local vs. Session Storage
+        Local Storage saves data in the browser forever, even if you close the tab. Session Storage only keeps data as long as the tab is open and wipes it once you leave. Both are safer and hold more data than old-fashioned cookies.
+   24. Viewport Meta Tag
+        The viewport tag is a single line of code that makes your website "mobile-friendly." It tells the browser to match the website's width to the screen's width. Without it, your site will look like a tiny, unreadable desktop version on a phone.
+-----------------------------------------------------------------------------------------------
+🚀 HTML THEORY – TOP IMPORTANT TOPICS
+     🧠 1. CORE HTML FUNDAMENTALS (⭐⭐⭐⭐⭐)
+          What is HTML? How browser reads it
+          Structure of HTML document (DOCTYPE, html, head, body)
+          DOM (Document Object Model)
+          HTML parsing & rendering flow
+          Difference: HTML vs CSS vs JavaScript
+          👉 VERY COMMON:
+          “How browser renders a webpage?”
+     ⚙️ 2. ELEMENTS & TAGS (⭐⭐⭐⭐)
+          Block vs Inline elements
+          Semantic vs Non-semantic elements
+          div vs span
+          Self-closing tags
+          Nesting rules
+     👉 Interview focus:
+          Why semantic HTML?
+          When to use div?
+     🏷️ 3. ATTRIBUTES (⭐⭐⭐⭐)
+          Global attributes (id, class, style, title)
+          id vs class (🔥 VERY IMPORTANT)
+          Boolean attributes (disabled, checked)
+          data-* attributes
+          Custom attributes
+     👉 VERY COMMON:
+          “Difference between id and class?”
+     🔗 4. LINKS & MEDIA (⭐⭐⭐⭐)
+          Anchor tag <a>
+          Image <img> + alt (🔥 IMPORTANT)
+          Audio, Video tags
+          iframe (security concerns)
+     👉 Interview focus:
+          Why alt attribute?
+          iframe risks?
+     📋 5. LISTS & TABLES (⭐⭐⭐)
+          ul, ol, dl
+          table, tr, td, th
+          colspan, rowspan
+          thead, tbody, tfoot
+     🧾 6. FORMS (⭐⭐⭐⭐⭐)
+          form tag (action, method)
+          GET vs POST (🔥 VERY IMPORTANT)
+          Input types
+          label (🔥 IMPORTANT)
+          name attribute
+          Validation (required, pattern)
+     👉 VERY COMMON:
+          “Why name attribute is important?”
+     🧠 7. SEMANTIC HTML5 (⭐⭐⭐⭐⭐)
+          header, nav, main, section, article, footer, aside
+          figure, figcaption
+     👉 Interview focus:
+          section vs article
+          Why semantic improves SEO?
+     ⚡ 8. META & HEAD (⭐⭐⭐⭐)
+          meta tags (charset, viewport)
+          title
+          link (CSS)
+          script
+     👉 VERY IMPORTANT:
+          Viewport meta tag (mobile responsiveness)
+     🚀 9. SCRIPT LOADING (VERY IMPORTANT ⭐⭐⭐⭐⭐)
+          async vs defer (🔥 MUST KNOW)
+     👉 REAL QUESTION:
+          Why script blocks UI?
+          When to use defer vs async?
+     ♿ 10. ACCESSIBILITY (a11y) (⭐⭐⭐⭐⭐)
+          alt text
+          label usage
+          ARIA roles
+          Keyboard navigation
+     👉 Interview focus:
+          How to make site accessible?
+     🌐 11. SEO & PERFORMANCE (⭐⭐⭐⭐)
+          Proper heading structure
+          alt text
+          semantic tags
+          meta description
+     🧠 12. BROWSER & STORAGE (⭐⭐⭐⭐)
+          DOM vs HTML
+          Browser rendering process
+          LocalStorage vs SessionStorage
+     🧩 13. REAL-WORLD SCENARIOS (VERY IMPORTANT 🔥)
+     👉 THIS is what interviewers love
+          Why page not responsive?
+          Why form not submitting?
+          Why image not showing?
+          Why script running twice?
+          Why layout breaking?
+     💥 HOW THEY ACTUALLY ASK (IMPORTANT)
+     ❌ Not like:
+          What is HTML?
+          ✅ They ask:
+          “Why your page is not mobile friendly?”
+          “Why form data not coming in backend?”
+          “Why SEO is bad for this page?”
+          “Why script is blocking UI?”
+          “Why accessibility is failing?”
+     🔥 HOW TO PREPARE (SMART WAY)
+          For each topic:
+          Explain in simple words
+          Write small example
+          Give real-world usage
+-----------------------------------------------------------------------------------------------
+
+3.Coding Questions
+
+-----------------------------------------------------------------------------------------------
+4.Scenarios Questions
+
+-----------------------------------------------------------------------------------------------
+
+
+Follow-up :
+    Date 26 march -> read
+    Date 07 April -> read for Axchange L2 round interview
+    Date 12 April -> read for Interview
+    Date 13 April ->  read for Interview
+    Date 14 April ->  read for Interview
+    Date 20 April ->  read for Interview
+    Date 21 April ->  read for Interview
+    Date 22 April ->  read for Interview
+

@@ -1,0 +1,127 @@
+HTML
+HTML Basics: What is HTML and its purpose?
+Terminology: What is the difference between an Element, a Tag, and an Attribute?
+Structure: What are Semantic Elements (and why use them over <div>)?
+Layout: What is the difference between Block-level and Inline elements?
+Links: What is the difference between an Absolute URL and a Relative URL?
+Identifiers: What is the difference between an ID and a Class?
+Storage: How does Session Storage differ from Local Storage?
+Styling: How do you add CSS to HTML (External, Internal, and Inline)?
+Hyperlinks: How do you create a link using the <a> tag?
+Tables (Spacing): What is the difference between Cell Padding and Cell Spacing?
+Tables (Structure): How do you create a table using <table>, <tr>, <th>, and <td>?
+Forms (Checkboxes): How do you create a Checkbox and link it to a label?
+Forms (Dropdowns): How do you create a dropdown list using <select> and <option>?
+
+
+========================================================================
+CSS
+You’ve covered a massive amount of ground! Here is the list of topics we’ve discussed so far, in order:
+
+   1. What is CSS? (The basics)
+   2. Box Model (Content, Padding, Border, Margin)
+   3. Margin vs. Padding (Outside vs. Inside spacing)
+   4. visibility: hidden vs. display: none (Hiding elements)
+   5. Position Values (static, relative, absolute, fixed, sticky)
+   6. Flexbox (1D layout)
+   7. Grid (2D layout)
+   8. Combinators vs. Selectors (The "What" vs. the "Relationship")
+   9. Inline vs. External CSS (Where to write styles)
+   10. Mobile-First Design (Responsive strategy)
+   11. Pseudo-classes (State-based styling like :hover)
+   12. Block, Inline, and Inline-block (Display behaviors)
+   13. Z-index (Stacking order)
+   14. Media Queries (Responsive breakpoints)
+   15. Grid vs. Flexbox (When to use which)
+   16. Sass (CSS Preprocessors)
+   17. calc() (Mathematical calculations)
+   18. Transition and Animation (Moving elements)
+   19. Units, Float, Blend Modes, and will-change (Specific properties)
+
+
+========================================================================
+JS
+   1. JavaScript Definition: What is JS and its role in web development?
+   2. Execution Context: What is it and what are its components (Memory vs. Code)?
+   3. Call Stack & Code Execution: How does JS track function calls and run code?
+   4. Hoisting: How do var, let, const, and functions behave during the creation phase?
+   5. ReferenceError: What causes it and how does it differ from other errors?
+   6. Functions in JS: Different ways to define them (Declarations vs. Expressions).
+   7. Shortest Program in JS: What happens when you run an empty file?
+   8. Undefined vs. Not Defined: What is the technical difference between these two states?
+   9. Scope & Lexical Environment: Global, Local, and Function scope, plus the Scope Chain.
+   10. Block Scope & Shadowing: How {} affects let/const and what happens with variable name collisions.
+   11. Closures: How functions remember their outer lexical environment.
+   12. Currying: Transforming functions with multiple arguments into a series of single-argument functions.
+   13. Function Types: Statements, Expressions, Anonymous functions, and Named Function Expressions.
+   14. Parameters vs. Arguments: Defining placeholders vs. passing actual values.
+   15. First-Class & Callback Functions: Treating functions as variables and passing them as arguments.
+   16. Arrow Functions: Syntax differences and the behavior of the this keyword.
+   17. Event Loop: How JS handles asynchronous tasks (Call Stack, Web APIs, Callback/Microtask Queues).
+   18. JS Engine Architecture: How V8/SpiderMonkey parses, interprets, and optimizes code (JIT).
+   19. Higher-Order Functions: Functions that take or return other functions (Map, Filter, Reduce).
+   20. Polyfills: How to provide modern functionality to older browsers.
+   21. Callback Hell: The "Pyramid of Doom" and why it’s a problem.
+   22. Promises: The 3 states (Pending, Resolved, Rejected) and how to consume them.
+   23. Async/Await: Syntactic sugar for Promises to write cleaner async code.
+   24. Template Literals: Using backticks for interpolation and multi-line strings.
+   25. Event Bubbling & Capturing: How events propagate through the DOM tree.
+   26. IIFE (Immediately Invoked Function Expressions): Purpose and syntax for private scoping.
+   27. setTimeout vs. setInterval: One-time vs. repetitive execution and timing nuances.
+   28. Call, Apply, and Bind: Explicitly setting the this context of a function.
+   29. Event Delegation: Using bubbling to manage events on a parent container.
+   30. Generator Functions: Using yield to pause and resume function execution.
+   31. WeakMap & WeakSet: Memory-efficient collections that allow for Garbage Collection.
+
+========================================================================
+REACT
+1. The Basics
+    What is React? (Definition, library vs. framework, and its primary purpose).
+    Why do we use React? (Key benefits like performance, reusability, and the ecosystem).
+    What is an SPA (Single-Page Application)? (How it differs from traditional multi-page websites).
+2. Core Syntax & Structure
+    What is JSX? (Syntax, how it works under the hood, and why it's used).
+    What is a Component? (The building blocks of React).
+    Functional vs. Class Components: (Syntax differences, lifecycle methods vs. hooks, and modern recommendations).
+    Stateless vs. Stateful Components: (The difference between "presentational" and "container" logic).
+3. Data Management
+    What are Props? (Passing data, one-way data flow, and immutability).
+    State vs. Props: (A comparison of internal vs. external data).
+    Prop Drilling: (What it is, why it's a problem, and how to avoid it).
+    What is the Context API? (How it works and how it solves prop drilling).
+4. Advanced Concepts & Performance
+    What is the Virtual DOM? (How React optimizes rendering).
+    What is the Reconciliation Process? (The overall sync between Virtual and Real DOM).
+    What is the Diffing Algorithm? (The specific logic/rules used to find changes).
+    What is React Fiber? (The asynchronous engine that handles prioritization and incremental rendering).
+    Why do we use the key prop in lists? (Performance and state preservation).
+5. Specialized Features
+    Controlled vs. Uncontrolled Components: (Managing form data via React state vs. the DOM/Refs).
+    React Fragments: (Grouping elements without adding extra DOM nodes).
+    Higher-Order Components (HOC): (Reusing component logic by wrapping components).
+    React Portals: (Rendering children into a different part of the DOM tree, like for Modals).
+    React Strict Mode: (A development-only tool for catching bugs and deprecated APIs).
+    Lifecycle Methods & useState/useEffect: (Understanding the birth, growth, and death of a component).
+Advanced -----------------------------
+
+1. Advanced Hooks & Patterns
+    useMemo vs. useCallback: When to use them (and when NOT to, due to overhead) to prevent expensive re-calculations and unnecessary re-renders. 
+    useReducer: When to choose it over useState for managing complex state logic with multiple sub-values. 
+    useRef vs. State: Understanding that useRef persists values across renders without triggering a re-render. 
+    useLayoutEffect vs. useEffect: Knowing that useLayoutEffect runs synchronously after DOM mutations but before the browser paints (essential for measuring DOM elements). 
+    Custom Hooks: How to extract and share stateful logic between different components. 
+2. Performance at Scale
+    Memoization: Using React.memo for component-level optimization to avoid re-rendering children when props haven't changed. 
+    Windowing/Virtualization: How to efficiently render massive lists (10,000+ items) using libraries like react-window or react-virtualized. 
+    Code Splitting: Implementing React.lazy and Suspense to reduce initial bundle size by loading components only when needed. 
+    Debouncing & Throttling: Techniques to optimize high-frequency events like window resizing or search input typing. 
+3. Architecture & Ecosystem
+    State Management Strategy: When to use Context API vs. dedicated libraries like Redux, Zustand, or React Query. 
+    Server-Side Rendering (SSR) & Hydration: Explaining the benefits of SSR for SEO and performance, and how React "hydrates" static HTML to make it interactive. 
+    Error Boundaries: Implementing componentDidCatch to prevent the entire app from crashing due to local UI errors. 
+    Testing: Using React Testing Library and Jest to test component behavior rather than implementation details. 
+4. Modern React (v18+)
+    Automatic Batching: How React now groups multiple state updates into a single re-render for better performance. 
+    Concurrent Rendering: Understanding the new concurrent features that allow React to prepare multiple versions of the UI simultaneously. 
+    Transition API (useTransition): How to mark non-urgent updates as transitions to keep the UI responsive.
+========================================================================

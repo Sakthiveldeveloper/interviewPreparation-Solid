@@ -1,0 +1,247 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+
+1.mindmap
+    GIT & GITHUB MIND MAP
+
+    1. Basics
+    - What is Git? (Version control system)
+    - What is GitHub? (Cloud platform for Git repositories)
+    - Difference between Git and GitHub
+    - Why use Git? (Track changes, collaboration)
+    - Git workflow overview
+
+    2. Installation & Setup
+    - Install Git
+    - git config (username, email)
+    - git init (initialize repo)
+    - git clone (copy remote repo)
+    - SSH vs HTTPS
+
+    3. Core Commands (VERY IMPORTANT)
+    - git status
+    - git add (stage changes)
+    - git commit (save changes)
+    - git log (history)
+    - git diff (changes)
+    - git restore / git checkout
+
+    4. Branching (CRITICAL 🔥)
+    - What is branch?
+    - git branch
+    - git checkout / git switch
+    - git merge
+    - git rebase
+    - Main vs feature branches
+
+    5. Remote Repositories
+    - git remote add origin
+    - git push
+    - git pull
+    - git fetch
+    - origin meaning
+    - upstream concept
+
+    6. Merge & Conflict Resolution
+    - What is merge?
+    - Merge conflicts
+    - How to resolve conflicts
+    - Fast-forward vs non-fast-forward merge
+
+    7. GitHub Features
+    - Repositories
+    - Forking
+    - Pull Requests (PR)
+    - Code review
+    - Issues & discussions
+
+    8. Collaboration Workflow
+    - Feature branch workflow
+    - Fork & PR workflow
+    - Code review process
+    - Team collaboration best practices
+
+    9. Undo & Fix Mistakes (IMPORTANT 🔥)
+    - git reset (soft, mixed, hard)
+    - git revert
+    - git stash
+    - git clean
+
+    10. Tags & Releases
+    - git tag
+    - Annotated vs lightweight tags
+    - Versioning (v1.0.0)
+
+    11. Advanced Git
+    - git rebase vs merge
+    - cherry-pick
+    - squash commits
+    - interactive rebase
+
+    12. Git Hooks
+    - Pre-commit hooks
+    - Pre-push hooks
+    - Husky integration
+
+    13. .gitignore
+    - What is .gitignore?
+    - Ignoring files/folders
+    - Common use cases
+
+    14. GitHub Actions (CI/CD)
+    - What is CI/CD?
+    - GitHub Actions basics
+    - Workflow files (.yml)
+    - Automating build & deploy
+
+    15. Security & Best Practices
+    - SSH keys
+    - Access tokens
+    - Avoid committing secrets
+    - Use environment variables
+
+    16. Common Workflows
+    - Clone → Branch → Commit → Push → PR
+    - Sync with main branch
+    - Release workflow
+
+    17. Troubleshooting
+    - Undo last commit
+    - Fix wrong commit message
+    - Recover deleted branch
+    - Resolve push/pull errors
+
+2.Theory Questions
+🚀 GIT THEORY – TOP IMPORTANT TOPICS (INTERVIEW READY)
+    🧠 1. GIT FUNDAMENTALS (⭐⭐⭐⭐⭐)
+    What is Git?
+    Why Git is used?
+    Version control system (VCS)
+    Git vs GitHub
+
+    👉 VERY COMMON:
+
+    “Difference between Git and GitHub?”
+
+    ⚙️ 2. BASIC COMMANDS (⭐⭐⭐⭐⭐)
+
+    👉 MUST BE VERY COMFORTABLE
+
+    git init
+    git clone
+    git add
+    git commit
+    git status
+    git log
+    🔗 3. BRANCHING (⭐⭐⭐⭐⭐) 🔥
+
+    👉 MOST IMPORTANT
+
+    What is branch?
+    Create branch (git branch)
+    Switch branch (git checkout / switch)
+    Merge branch
+
+    👉 VERY COMMON:
+
+    “Why do we use branches?”
+
+    🔄 4. MERGE vs REBASE (⭐⭐⭐⭐⭐) 🔥
+
+    👉 INTERVIEW FAVORITE
+
+    Merge (creates commit history)
+    Rebase (clean history)
+
+    👉 VERY COMMON:
+
+    “Difference between merge and rebase?”
+
+    ⚡ 5. CONFLICT RESOLUTION (⭐⭐⭐⭐⭐)
+
+    👉 REAL-WORLD SKILL
+
+    What is merge conflict?
+    How to resolve conflict
+
+    👉 Interview:
+
+    “How do you handle conflicts?”
+
+    📦 6. REMOTE REPOSITORIES (⭐⭐⭐⭐⭐)
+    git push
+    git pull
+    git fetch
+    origin
+    🧠 7. STAGING AREA (⭐⭐⭐⭐⭐)
+
+    👉 VERY IMPORTANT
+
+    Working directory
+    Staging area
+    Repository
+
+    👉 COMMON:
+
+    “What happens when you run git add?”
+
+    ⚡ 8. RESET vs REVERT (⭐⭐⭐⭐⭐)
+
+    👉 CONFUSING BUT IMPORTANT
+
+    git reset → undo changes
+    git revert → safe undo
+
+    👉 VERY COMMON:
+
+    “Difference between reset and revert?”
+
+    🧩 9. STASH (⭐⭐⭐⭐)
+    git stash
+    Temporary save changes
+    🔐 10. GIT WORKFLOW (⭐⭐⭐⭐⭐)
+
+    👉 THIS IS WHAT COMPANIES CARE 💯
+
+    Feature branch workflow
+    Pull request (PR)
+    Code review
+    Main / develop branch
+    ⚙️ 11. ADVANCED (⭐⭐⭐⭐)
+    Cherry-pick
+    Squash commits
+    Hooks (basic idea)
+    🔥 12. REAL-WORLD SCENARIOS (VERY IMPORTANT)
+
+    👉 THIS is what interviewers ask 💯
+
+    Resolve merge conflict
+    Fix wrong commit
+    Undo pushed code
+    Work in team project
+    Clean commit history
+
+3.Coding Questions
+💻 GIT PRACTICAL TASKS (MUST DO)
+    🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
+    Initialize repo
+    Add & commit files
+    Check history
+    ⚙️ PHASE 2: BRANCHING (⭐⭐⭐⭐⭐)
+    Create feature branch
+    Switch branches
+    Merge branch
+    ⚡ PHASE 3: CONFLICT (⭐⭐⭐⭐⭐)
+    Create merge conflict
+    Resolve manually
+    🔄 PHASE 4: REBASE (⭐⭐⭐⭐⭐)
+    Rebase branch
+    Compare with merge
+    📦 PHASE 5: REMOTE (⭐⭐⭐⭐⭐)
+    Push to GitHub
+    Pull changes
+    Create PR
+4.Scenarios Questions

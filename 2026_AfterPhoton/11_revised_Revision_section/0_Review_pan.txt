@@ -1,0 +1,19 @@
+Review process plan
+1.Review the Tech list -> Complete 
+2.Take notes of all 
+    mindmap, 
+    Theory, 
+    Code 
+        and 
+    Scenarios Questions
+        (Speak & write) -> 
+( As per review list make strong revision Question in Mindmap, Theory, Coding, Scenarios)
+
+3.Take Mock Interview
+(Find the website or Any Apps)
+
+PlatformBest ForPramp.comFree peer mock interviewsInterviewing.ioReal engineers mock youLeetCodeCoding questionsGreatFrontEndFrontend specific questionsExcalidrawSystem design drawing practic
+4.Pick unToched Topic (Like DSA)
+5.Follow above 4 points (Repeat 4 Points each Day)
+--------------------------------------------------
+Hunt or to be Hunted

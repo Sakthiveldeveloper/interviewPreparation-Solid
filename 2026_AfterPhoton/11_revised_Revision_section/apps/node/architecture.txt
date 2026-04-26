@@ -1,0 +1,91 @@
+🧠 ⚡ Architecture – 2 Min Recall Sheet
+🔹 1. Microservices
+    👉 Definition
+    Small, independent backend services
+    👉 Key Points
+    Each service → own database
+    Communication → REST / Messaging (Kafka)
+    Independent deploy & scaling
+    👉 Why use?
+    Large apps
+    Multiple teams
+    Need scalability
+    👉 Problem
+    Distributed complexity
+    Network latency
+🔹 2. Micro-Frontend
+    👉 Definition
+    Split frontend into multiple apps
+    👉 Key Points
+    Each team owns one UI module
+    Integrated into a host app
+    Independent deployment
+    👉 Example (Your case 💯)
+    priceCurve
+    bom
+    pam
+    👉 Problem
+    State sharing
+    Version conflicts
+🔹 3. Module Federation
+    👉 Definition
+    Load frontend modules at runtime
+    👉 Key Points
+    Host + Remote apps
+    Uses remoteEntry.js
+    Share dependencies (React, libs)
+    👉 Why use?
+    Enables micro-frontend architecture
+    👉 Problem
+    Debugging complexity
+    Version mismatch
+🔹 4. System Design
+    👉 Definition
+    Design scalable, reliable systems
+    👉 Steps (must remember 🔥)
+    Requirements
+    High-Level Design
+    Database
+    Scaling
+    Optimization
+    👉 Core Concepts
+    Load Balancer
+    Caching (Redis)
+    Horizontal scaling
+    Stateless services
+-------------------------------------------------------------------
+🧠 HLD vs LLD (Simple + Interview Ready)
+🔹 1. HLD (High-Level Design)
+    👉 Big picture of the system
+    ✅ Focus:
+        Architecture
+        Components
+        How systems interact
+    📦 Includes:
+        Microservices / Monolith
+        Load Balancer
+        API Gateway
+        Database choice
+        Cache (Redis)
+    💬 Example:
+        “User → Load Balancer → API → Service → DB”
+🔹 2. LLD (Low-Level Design)
+    👉 Detailed internal design
+    ✅ Focus:
+        Code-level thinking
+        Data structures
+        Classes & logic
+    📦 Includes:
+        Class diagrams
+        Functions
+        DB schema (tables, relations)
+        API request/response format
+    💬 Example:
+    User {
+        id: string
+        name: string
+        email: string
+        }
+    🔥 Key Difference (Must Remember)
+        HLD → WHAT system looks like
+        LLD → HOW system works internally

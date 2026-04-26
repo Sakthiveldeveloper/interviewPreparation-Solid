@@ -1,0 +1,170 @@
+console.log('Js online Question Preparation');
+// 1.reverse String
+// with In build function
+// function reverseString(value){
+//     return value.split('').reverse().join('')
+// }
+// console.log(reverseString('sakthi'))
+
+// without In build function(spread operator)
+
+// function reverseString(value){
+//     return [...value].reverse().join('')
+// }
+// console.log(reverseString('varun'))
+
+// without In build function (for loop)
+// function reverseStringForloop(value){
+//     let reversedValue = '';
+//     for(let i = value.length - 1; i>=0; i--){
+//         reversedValue +=value[i]
+//     }
+//     return reversedValue;
+// };
+
+// console.log(reverseStringForloop('check'))
+
+
+// reverse string in 3 methods
+// function reverseString(inputValue){
+//     // in build function
+//     // return inputValue.split('').reverse().join('')
+//     // spread operator
+//     // return [...inputValue].reverse().join('')
+//     // for loop
+//     let reversedValue = '';
+//     for(let i = inputValue.length -1; i>=0; i--){
+//         reversedValue += inputValue[i] 
+//     }
+//     return reversedValue;
+// }
+// console.log(reverseString('ChennaiMadurai'))
+// 2.2.Check if a string is a palindrome.
+
+// function checkPalindrome(value){
+//     // with inbuild functio
+//     // let reversedValue = value.split('').reverse().join('');
+//     // return value == reversedValue
+//     // without in build function
+//     let valueNew = value.toLowerCase().replace(/[^a-z0-9]/g, '')
+//     let reversedValue = '';
+//     for(let i = valueNew.length-1; i>=0; i--){
+//         reversedValue += valueNew[i]
+//     }
+//     return valueNew ===reversedValue
+// }
+// // console.log(checkPalindrome('malayalam'))
+// console.log(checkPalindrome('kova'))
+
+// 3.Check if two strings are anagrams of each other.
+
+// function CheckAnagram(Value1, Value2){
+    // using Sort
+    // let Value1Updated = Value1.split('').sort().join('');
+    // let value2Updated = Value2.split('').sort().join('');
+    // return Value1Updated === value2Updated 
+    // using for and if
+    // let cleanValue1 = Value1.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    // let CleanValue2 = Value2.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    // if(cleanValue1.length !== CleanValue2.length){
+    //     return false;
+    // }
+    // let charCount = {};
+    // for(let char of cleanValue1){
+    //     charCount[char] = (charCount[char] || 0) + 1;
+    // }
+    
+    // for(let chara of CleanValue2){
+    //     if(!charCount[chara]){
+    //         return false;
+    //     }
+    //     charCount[chara] -= 1;
+    // }
+    // return true
+// }
+// console.log(CheckAnagram('cat','act'))
+
+// function checkAnagram (val1, val2){
+//     let updatedVal1 = val1.replace(/[^a-z0-9]/gi, '').toLowerCase();
+//     let updatedVal2 = val2.replace(/[^a-z0-9]/gi, '').toLowerCase();
+    
+//     if(updatedVal1.length != updatedVal2.length){
+//         return false
+//     }
+//     let CharCount = {};
+//     for(let char of updatedVal1){
+//         CharCount[char] = (CharCount[CharCount] || 0)  + 1
+//     }
+//     for(let char1 of updatedVal2) {
+//         if(!CharCount[char1]){
+//             return false
+//         }
+//         CharCount[char1] -=1
+//     }
+//     return true
+// }
+// console.log(checkAnagram('car', 'rac'))
+
+// 4.Remove duplicates from an array.
+// function removeDuplicate(value){
+//     // use set
+//     // return [...new Set(value)]
+//     // use filter
+// //   return value.filter((item, index, array)=>{
+// //       return array.indexOf(item) === index
+// //   })
+//     // forEach
+//     // let uniqueValue = [];
+//     // value.forEach((item)=>{
+//     //     if(!uniqueValue.includes(item)){
+//     //         uniqueValue.push(item)
+//     //     }
+//     // })
+//     // return uniqueValue
+// }
+// console.log(removeDuplicate([1,2,3,1,2,4,3,5,4, 1, 2]))
+
+// 5.Find the largest number in an array.
+// function largestNum(value){
+//     // use math operator 
+//     // return Math.max(...value)
+//     // use for loop
+//     // let maxNumber = value[0];
+//     // for(let i = 0; i<value.length; i++){
+//     //     if(value[i]>max){
+//     //         max =value[i]
+//     //     }
+//     // }
+//     // use reduce();
+//     const max= value.reduce((accumulator, currentValu)=>{
+//         return Math.max(accumulator, currentValu)
+//     }, value[0])
+//     return max
+// }
+// console.log(largestNum([1,2,44,11,22,88,232]))
+
+// 6.7.Count the occurrences of each character in a string.
+// function checkCouncurrent(value){
+//     let chatCount = {};
+//     for(let char of value){
+//         chatCount[char] = (chatCount[char] || 0) +1
+//     }
+//     return chatCount;
+// }
+
+// console.log(checkCouncurrent('sakthi'))
+
+// 7.9.Flatten a nested array (e.g., [1, [2, [3, 4]]] → [1, 2, 3, 4]).
+function flatenArray(value){
+    return [...value.flat(Infinity)]
+    // let flattedArrayFinal = [];
+    // for(let i =0; i= value.length; i++){
+    //     if(Array.isArray(value)){
+    //         flattedArrayFinal = flattedArrayFinal.concat(flatenArray(value[i]))
+    //     }else {
+    //         flattedArrayFinal.push(input[i])
+    //     }
+    // }
+    // return flattedArrayFinal
+}
+console.log(flatenArray([1, [2, [3, 4]]]))

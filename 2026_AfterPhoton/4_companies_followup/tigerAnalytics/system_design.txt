@@ -1,0 +1,334 @@
+Got you 👍 — you want a **clean copy-paste format** (like your AWS doc).
+Here’s a **structured SYSTEM DESIGN document** you can directly use 👇
+
+---
+
+```
+1. MIND MAP
+2. THEORY QUESTIONS
+3. CODING / DESIGN TASKS
+4. SCENARIO QUESTIONS
+```
+
+---
+
+# 🧠 1. MIND MAP
+
+## SYSTEM DESIGN MIND MAP
+
+### 1. Basics
+
+* What is System Design?
+* Functional Requirements (FR)
+* Non-Functional Requirements (NFR)
+* Scalability
+* Availability
+* Reliability
+* Latency vs Throughput
+
+---
+
+### 2. High-Level Design (HLD)
+
+* Client-Server Architecture
+* Monolith vs Microservices
+* 3-Tier Architecture (Frontend, Backend, DB)
+* Load Balancer
+* API Design
+
+---
+
+### 3. Low-Level Design (LLD)
+
+* Classes & Objects
+* Design Patterns (Singleton, Factory)
+* Database Schema Design
+* API Request/Response Structure
+
+---
+
+### 4. Database Design
+
+* SQL vs NoSQL
+* Indexing
+* Normalization vs Denormalization
+* Sharding
+* Replication
+
+---
+
+### 5. Caching
+
+* What is Caching?
+* Cache strategies
+* Cache invalidation
+* CDN
+
+---
+
+### 6. Messaging & Queues
+
+* Message Queue
+* Pub/Sub Model
+* Event-driven Architecture
+* Asynchronous Processing
+
+---
+
+### 7. Networking & APIs
+
+* REST APIs
+* GraphQL
+* HTTP / HTTPS
+* WebSockets
+* DNS
+
+---
+
+### 8. Scalability & Load Handling
+
+* Vertical Scaling
+* Horizontal Scaling
+* Load Balancing
+* Auto Scaling
+
+---
+
+### 9. Security
+
+* Authentication vs Authorization
+* JWT
+* OAuth
+* HTTPS
+* Rate Limiting
+
+---
+
+### 10. Monitoring & Logging
+
+* Logs
+* Metrics
+* Alerts
+* Observability
+
+---
+
+### 11. Deployment & DevOps
+
+* CI/CD
+* Docker
+* Kubernetes
+* Blue-Green Deployment
+
+---
+
+### 12. Storage Systems
+
+* Object Storage
+* File Storage
+* Block Storage
+
+---
+
+### 13. Real-World Architectures
+
+* 3-Tier Architecture
+* Microservices Architecture
+* Serverless Architecture
+
+---
+
+### 14. Common Use Cases
+
+* URL Shortener
+* Chat Application
+* E-commerce System
+* Notification System
+* Social Media Feed
+
+---
+
+# 🧠 2. THEORY QUESTIONS
+
+TOP SYSTEM DESIGN INTERVIEW QUESTIONS
+
+1. What is System Design?
+   System design is the process of designing scalable, reliable, and efficient systems.
+
+2. What are Functional Requirements?
+   They define what the system should do.
+
+3. What are Non-Functional Requirements?
+   They define performance, scalability, and reliability.
+
+4. What is Scalability?
+   Ability of a system to handle increasing load.
+
+5. Vertical vs Horizontal Scaling?
+   Vertical = increase server power
+   Horizontal = add more servers
+
+6. What is Load Balancer?
+   Distributes traffic across multiple servers.
+
+7. What is Caching?
+   Storing frequently accessed data for faster response.
+
+8. What is CDN?
+   Content Delivery Network to serve content faster.
+
+9. SQL vs NoSQL?
+   SQL = structured data
+   NoSQL = flexible, scalable
+
+10. What is Sharding?
+    Splitting database across multiple servers.
+
+11. What is Replication?
+    Copying data across servers for availability.
+
+12. What is API Gateway?
+    Entry point for all client requests.
+
+13. What is Rate Limiting?
+    Restricting number of requests per user.
+
+14. What is Microservices?
+    Small independent services communicating via APIs.
+
+15. Monolith vs Microservices?
+    Monolith = single app
+    Microservices = distributed services
+
+16. What is Event-driven architecture?
+    System reacts to events asynchronously.
+
+17. What is Message Queue?
+    Used for async communication.
+
+18. What is CAP Theorem?
+    Consistency, Availability, Partition tolerance.
+
+19. What is Latency?
+    Time taken to respond.
+
+20. What is Throughput?
+    Number of requests handled per second.
+
+---
+
+# 💻 3. CODING / DESIGN TASKS
+
+PHASE 1: BASICS
+
+* Design simple REST API
+* Design database schema for users
+
+PHASE 2: INTERMEDIATE
+
+* Add caching layer
+* Add pagination
+* Implement rate limiting
+
+PHASE 3: ADVANCED
+
+* Add load balancer
+* Design scalable DB (sharding/replication)
+* Add message queue
+
+PHASE 4: REAL SYSTEM
+
+* Design MERN architecture
+* Add authentication system
+* Optimize performance
+
+---
+
+# 🎯 4. SCENARIO QUESTIONS
+
+1. Design a URL Shortener
+
+* Generate unique ID
+* Store mapping
+* Redirect logic
+
+2. Design Instagram Feed
+
+* Store posts
+* Pagination
+* Caching
+
+3. Design Chat Application
+
+* Real-time messaging
+* WebSockets
+* Message storage
+
+4. Design E-commerce System
+
+* Product catalog
+* Orders
+* Payments
+
+5. Design Notification System
+
+* Email/SMS queue
+* Retry mechanism
+
+---
+
+# 🚀 MOST IMPORTANT (FOCUS LIST)
+
+👉 MUST KNOW:
+
+* Load Balancer
+* Caching
+* DB Design
+* API Design
+* Scalability
+
+👉 NICE TO HAVE:
+
+* Message Queues
+* Microservices
+* Rate Limiting
+* WebSockets
+
+---
+
+# 🧠 REAL INTERVIEW ARCHITECTURE
+
+Example:
+
+Frontend (React)
+→ Load Balancer
+→ Backend (Node.js)
+→ Cache
+→ Database
+
+* Queue for background jobs
+
+---
+
+🔥 If you explain this clearly → you will crack system design rounds
+
+```
+
+---
+
+# 🚀 Quick tip (very important for you)
+
+Don’t just **read this**.
+
+👉 Practice speaking like:
+- “First I will define requirements…”  
+- “Then I will design high-level…”  
+- “Then I will scale using…”
+
+---
+
+If you want next step, I’ll give you:
+
+👉 **“Step-by-step answer: Design WhatsApp / Instagram (interview style)”**  
+That’s where real selection happens 💯
+```

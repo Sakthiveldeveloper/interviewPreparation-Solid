@@ -1,0 +1,10 @@
+#Category
+    1🎨 Frontend (FE) — HTML, CSS, JS, React, TypeScript, Webpack, Babel, NPM, Yarn, ESLint, Prettier, Vite
+    2⚙️ Backend (BE) — Node.js, Express, API Integration
+    3🗄️ Database — SQL, NoSQL, ORM
+    4☁️ DevOps & Cloud — AWS, Docker, CI/CD
+    5🧪 Testing — Jest, React Testing Library
+    6👨‍💻 Version Control — Git, Branching strategies
+    7🏗️ System Design — HLD, LLD
+    8👑 Leadership Skills — Mentoring, Agile, Code Reviews
+    9🧠 DSA — Arrays, Strings, Linked Lists, Objects, Async patterns in JS

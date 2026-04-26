@@ -1,0 +1,581 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+    ├── 1. Basics
+    │   ├── What is SQL? (Definition, Purpose)
+    │   ├── Uses of SQL (Querying, Data Manipulation, DB Management)
+    │   ├── Categories of SQL Commands
+    │   │   ├── DDL (Data Definition Language)
+    │   │   ├── DML (Data Manipulation Language)
+    │   │   ├── DQL (Data Query Language)
+    │   │   ├── DCL (Data Control Language)
+    │   │   └── TCL (Transaction Control Language)
+    │   └── Popular SQL Databases (MySQL, PostgreSQL, SQL Server, Oracle)
+
+    ├── 2. Data Types
+    │   ├── Numeric (INT, DECIMAL, FLOAT)
+    │   ├── String/Text (CHAR, VARCHAR, TEXT)
+    │   ├── Date/Time (DATE, DATETIME, TIMESTAMP)
+    │   ├── Boolean (TRUE/FALSE)
+    │   └── Other (BLOB, JSON)
+
+    ├── 3. DDL – Data Definition Language
+    │   ├── CREATE (Database, Table, Index, View)
+    │   ├── ALTER (Add/Modify Columns, Constraints)
+    │   ├── DROP (Database, Table, Index, View)
+    │   └── TRUNCATE (Remove All Rows)
+
+    ├── 4. DML – Data Manipulation Language
+    │   ├── SELECT (Retrieve Data)
+    │   ├── INSERT (Add Data)
+    │   ├── UPDATE (Modify Data)
+    │   └── DELETE (Remove Data)
+
+    ├── 5. DQL – Data Query Language
+    │   ├── SELECT Basics
+    │   ├── Filtering (WHERE, AND, OR, NOT, BETWEEN, LIKE, IN)
+    │   ├── Sorting (ORDER BY ASC/DESC)
+    │   ├── Limiting (LIMIT / TOP)
+    │   └── Aliases (AS for Tables & Columns)
+
+    ├── 6. DCL – Data Control Language
+    │   ├── GRANT (Provide Access)
+    │   └── REVOKE (Remove Access)
+
+    ├── 7. TCL – Transaction Control Language
+    │   ├── COMMIT
+    │   ├── ROLLBACK
+    │   ├── SAVEPOINT
+    │   └── SET TRANSACTION
+
+    ├── 8. Constraints
+    │   ├── NOT NULL
+    │   ├── UNIQUE
+    │   ├── PRIMARY KEY
+    │   ├── FOREIGN KEY
+    │   ├── CHECK
+    │   └── DEFAULT
+
+    ├── 9. Joins
+    │   ├── INNER JOIN
+    │   ├── LEFT JOIN
+    │   ├── RIGHT JOIN
+    │   ├── FULL JOIN
+    │   ├── CROSS JOIN
+    │   └── SELF JOIN
+
+    ├── 10. Set Operations
+    │   ├── UNION
+    │   ├── UNION ALL
+    │   ├── INTERSECT
+    │   └── EXCEPT / MINUS
+
+    ├── 11. Aggregations & Grouping
+    │   ├── COUNT
+    │   ├── SUM
+    │   ├── AVG
+    │   ├── MIN
+    │   ├── MAX
+    │   ├── GROUP BY
+    │   └── HAVING
+
+    ├── 12. Subqueries
+    │   ├── Single-row Subquery
+    │   ├── Multi-row Subquery (IN, ANY, ALL)
+    │   ├── Correlated Subquery
+    │   └── EXISTS / NOT EXISTS
+
+    ├── 13. Advanced SQL
+    │   ├── CASE Statement
+    │   ├── COALESCE & NULLIF
+    │   ├── Window Functions (ROW_NUMBER, RANK, DENSE_RANK, LEAD, LAG)
+    │   ├── Common Table Expressions (CTEs)
+    │   └── Recursive Queries
+
+    ├── 14. Indexing
+    │   ├── Clustered Index
+    │   ├── Non-Clustered Index
+    │   ├── Composite Index
+    │   └── Covering Index
+
+    ├── 15. Views
+    │   ├── CREATE VIEW
+    │   ├── UPDATE VIEW
+    │   ├── DROP VIEW
+    │   └── Materialized Views (Refresh strategies)
+
+    ├── 16. Temporary Tables
+    │   ├── Local Temporary Tables
+    │   ├── Global Temporary Tables
+    │   └── Use cases
+
+    ├── 17. Stored Procedures & Functions
+    │   ├── CREATE PROCEDURE
+    │   ├── CREATE FUNCTION
+    │   ├── Parameters (IN, OUT, INOUT)
+    │   ├── Error Handling in Procedures
+    │   └── Advantages
+
+    ├── 18. Triggers
+    │   ├── BEFORE Trigger
+    │   ├── AFTER Trigger
+    │   ├── Row-level Trigger
+    │   └── Statement-level Trigger
+
+    ├── 19. Transactions & ACID
+    │   ├── Atomicity
+    │   ├── Consistency
+    │   ├── Isolation (Levels: READ UNCOMMITTED → SERIALIZABLE)
+    │   └── Durability
+
+    ├── 20. Optimization & Performance
+    │   ├── Query Optimization (EXPLAIN / EXPLAIN ANALYZE)
+    │   ├── Indexing Strategies
+    │   ├── Partitioning
+    │   ├── Caching
+    │   └── Denormalization for Performance
+
+    ├── 21. JSON in SQL
+    │   ├── JSON Functions (JSON_EXTRACT, JSONB, etc.)
+    │   ├── Storing JSON Data
+    │   └── Querying JSON
+
+    ├── 22. Data Import & Export
+    │   ├── LOAD DATA INFILE
+    │   ├── COPY (PostgreSQL)
+    │   ├── BULK INSERT
+    │   └── Export to CSV/Excel
+
+    └── 23. Security
+        ├── User Privileges
+        ├── Roles
+        ├── SQL Injection Prevention
+        └── Parameterized Queries
+---------------------------------------------------------------------------------------------
+
+2.Theory Questions
+🎯 MySQL / SQL Interview Questions (4 Years Experience)
+    🔹 1. Basics
+    What is SQL and why is it used?
+    What are different categories of SQL commands?
+    Difference between DDL, DML, DQL, DCL, TCL?
+    What is the difference between SQL and MySQL?
+    What are some popular relational databases?
+
+    👉 Follow-up:
+
+    Is SQL case-sensitive?
+    🔹 2. Data Types
+    What are different data types in MySQL?
+    Difference between CHAR and VARCHAR?
+    When would you use TEXT vs VARCHAR?
+    Difference between DATETIME and TIMESTAMP?
+    What is JSON data type in MySQL?
+
+    👉 Scenario:
+
+    Which datatype will you choose for storing price values?
+    🔹 3. DDL (Structure)
+    What is CREATE, ALTER, DROP, TRUNCATE?
+    Difference between DROP and TRUNCATE?
+    Can we rollback TRUNCATE?
+    What happens when you ALTER a large table?
+
+    👉 Real-world:
+
+    How do you safely modify a production table?
+    🔹 4. DML (Data Operations)
+    Difference between INSERT, UPDATE, DELETE?
+    What is the difference between DELETE and TRUNCATE?
+    Can we rollback DELETE?
+    How do you update multiple rows?
+    🔹 5. DQL (SELECT Queries)
+    Explain SELECT query execution order.
+    Difference between WHERE and HAVING?
+    What is GROUP BY?
+    What is ORDER BY?
+    What is LIMIT?
+
+    👉 Scenario:
+
+    Get top 5 highest salaries from a table.
+    🔹 6. DCL (Permissions)
+    What is GRANT and REVOKE?
+    How do you give read-only access to a user?
+    🔹 7. TCL (Transactions)
+    What is COMMIT and ROLLBACK?
+    What is SAVEPOINT?
+    What is transaction?
+
+    👉 Scenario:
+
+    Bank transfer fails in middle — how SQL handles it?
+    🔹 8. Constraints
+    What is PRIMARY KEY vs UNIQUE?
+    What is FOREIGN KEY?
+    What is NOT NULL and DEFAULT?
+    What is CHECK constraint?
+
+    👉 Real:
+
+    Can a table have multiple primary keys?
+    🔹 9. Joins (VERY IMPORTANT 🔥🔥)
+    What is INNER JOIN?
+    Difference between LEFT JOIN and RIGHT JOIN?
+    What is FULL JOIN?
+    What is SELF JOIN?
+    What is CROSS JOIN?
+
+    👉 Scenario:
+
+    Get employees who don’t have a department.
+    🔹 10. Set Operations
+    Difference between UNION and UNION ALL?
+    What is INTERSECT?
+    What is EXCEPT?
+    🔹 11. Aggregation
+    What are aggregate functions?
+    Difference between WHERE and HAVING?
+    What is GROUP BY?
+
+    👉 Scenario:
+
+    Count number of employees in each department.
+    🔹 12. Subqueries
+    What is subquery?
+    Difference between subquery and JOIN?
+    What is correlated subquery?
+    Difference between IN and EXISTS?
+
+    👉 Scenario:
+
+    Find second highest salary.
+    🔹 13. Advanced SQL
+    What is CASE statement?
+    What is COALESCE?
+    What are window functions?
+    Difference between RANK and DENSE_RANK?
+    What is CTE?
+
+    👉 Scenario:
+
+    Get top 3 employees per department.
+    🔹 14. Indexing (VERY IMPORTANT 🔥)
+    What is index?
+    Difference between clustered and non-clustered index?
+    What is composite index?
+    When should you NOT use index?
+
+    👉 Real:
+
+    Why query is slow even with index?
+    🔹 15. Views
+    What is a view?
+    Difference between view and table?
+    What is materialized view?
+    Can we update a view?
+    🔹 16. Temporary Tables
+    What are temporary tables?
+    Difference between temp table and normal table?
+    When to use temp tables?
+    🔹 17. Stored Procedures & Functions
+    What is stored procedure?
+    Difference between procedure and function?
+    Advantages of stored procedures?
+    What are IN, OUT parameters?
+    🔹 18. Triggers
+    What is trigger?
+    Difference between BEFORE and AFTER trigger?
+    What are use cases of triggers?
+    🔹 19. Transactions & ACID (VERY IMPORTANT 🔥🔥)
+    What is ACID properties?
+    Explain Atomicity, Consistency, Isolation, Durability.
+    What are isolation levels?
+
+    👉 Scenario:
+
+    Dirty read, phantom read — explain.
+    🔹 20. Performance Optimization (CRITICAL 🔥🔥🔥)
+    How do you optimize a slow query?
+    What is EXPLAIN?
+    What is indexing strategy?
+    What is normalization vs denormalization?
+
+    👉 Real:
+
+    Query taking 10 sec — how will you debug?
+    🔹 21. JSON in SQL
+    How do you store JSON in MySQL?
+    How to query JSON fields?
+    When to use JSON vs relational columns?
+    🔹 22. Data Import/Export
+    How to import large data into MySQL?
+    What is LOAD DATA INFILE?
+    How to export data?
+    🔹 23. Security
+    What is SQL Injection?
+    How to prevent SQL Injection?
+    What are parameterized queries?
+    What are roles and privileges?
+    🎯 Total Questions Count
+
+    Let’s count 👇
+
+    Basics → 5
+    Data Types → 5
+    DDL → 4
+    DML → 4
+    DQL → 5
+    DCL → 2
+    TCL → 3
+    Constraints → 4
+    Joins → 5
+    Set Ops → 3
+    Aggregation → 3
+    Subqueries → 4
+    Advanced → 5
+    Indexing → 4
+    Views → 4
+    Temp Tables → 3
+    Procedures → 4
+    Triggers → 3
+    ACID → 4
+    Performance → 4
+    JSON → 3
+    Import/Export → 3
+    Security → 4
+    🚀 Final Total = ~91 Questions
+------------------------------------------------------------
+TOP SQL INTERVIEW QUESTIONS AND ANSWERS
+
+    1. What is SQL?
+    SQL (Structured Query Language) is used to interact with relational databases. It helps in storing, retrieving, updating, and managing data.
+
+    2. SQL vs MySQL?
+    SQL is a query language, whereas MySQL is a relational database management system that uses SQL to manage data.
+
+    3. What are DDL, DML, DQL, DCL, TCL?
+    DDL – CREATE, ALTER, DROP (structure)
+    DML – INSERT, UPDATE, DELETE (data changes)
+    DQL – SELECT (data retrieval)
+    DCL – GRANT, REVOKE (permissions)
+    TCL – COMMIT, ROLLBACK (transactions)
+
+    4. Difference between DELETE, TRUNCATE, DROP?
+    DELETE – Removes specific rows, can rollback
+    TRUNCATE – Removes all rows, faster, cannot rollback (mostly)
+    DROP – Deletes entire table structure
+
+    5. Difference between WHERE and HAVING?
+    WHERE filters rows before grouping.
+    HAVING filters after GROUP BY.
+
+    Example:
+    SELECT dept, COUNT(*)
+    FROM emp
+    GROUP BY dept
+    HAVING COUNT(*) > 5;
+
+    6. What is INNER JOIN?
+    Returns only matching records from both tables.
+
+    7. INNER JOIN vs LEFT JOIN?
+    INNER JOIN – Only matching rows
+    LEFT JOIN – All left table rows + matching right rows
+
+    8. Find records not present in another table
+    SELECT e.*
+    FROM employees e
+    LEFT JOIN dept d ON e.dept_id = d.id
+    WHERE d.id IS NULL;
+
+    9. What is GROUP BY?
+    Used to group rows with same values and apply aggregate functions.
+
+    10. COUNT(*) vs COUNT(column)?
+    COUNT(*) counts all rows.
+    COUNT(column) ignores NULL values.
+
+    11. What is a Subquery?
+    A query inside another query used to get intermediate results.
+
+    12. JOIN vs Subquery?
+    JOIN combines tables.
+    Subquery is a nested query.
+    JOIN is usually faster.
+
+    13. IN vs EXISTS?
+    IN checks values.
+    EXISTS checks existence and is faster for large data.
+
+    14. Find Second Highest Salary
+    SELECT MAX(salary)
+    FROM emp
+    WHERE salary < (SELECT MAX(salary) FROM emp);
+
+    15. What is Index?
+    Index improves query performance by reducing data scan time.
+
+    16. Types of Index?
+    Clustered, Non-clustered, Composite.
+
+    17. Why query slow even with index?
+    Index not used properly
+    Wrong query structure
+    Large data scan
+    Missing composite index
+
+    18. What is EXPLAIN?
+    EXPLAIN shows how MySQL executes a query and helps identify performance issues.
+
+    19. What is ACID?
+    Atomicity – All or nothing
+    Consistency – Valid data
+    Isolation – No interference
+    Durability – Permanent data
+
+    20. What is Transaction?
+    A group of SQL operations executed as a single unit.
+    Example: Bank transfer (debit + credit must both succeed)
+🚀 MYSQL THEORY – TOP IMPORTANT TOPICS (INTERVIEW READY)
+    🧠 1. DATABASE FUNDAMENTALS (⭐⭐⭐⭐⭐)
+    What is RDBMS?
+    What is MySQL?
+    Tables, rows, columns
+    Primary key, foreign key
+    Constraints (NOT NULL, UNIQUE)
+
+    👉 VERY COMMON:
+
+    “Difference between DBMS and RDBMS?”
+
+    ⚙️ 2. SQL BASICS (⭐⭐⭐⭐⭐)
+    SELECT, INSERT, UPDATE, DELETE
+    WHERE, ORDER BY, LIMIT
+    LIKE, IN, BETWEEN
+
+    👉 BASIC but must be fast 💯
+
+    🔗 3. JOINS (⭐⭐⭐⭐⭐) 🔥
+
+    👉 MOST IMPORTANT
+
+    INNER JOIN
+    LEFT JOIN
+    RIGHT JOIN
+    SELF JOIN
+
+    👉 VERY COMMON:
+
+    “Difference between INNER JOIN and LEFT JOIN?”
+
+    🧩 4. GROUPING & AGGREGATION (⭐⭐⭐⭐⭐)
+    GROUP BY
+    HAVING
+    COUNT, SUM, AVG, MAX, MIN
+    🧠 5. INDEXES (⭐⭐⭐⭐⭐) 🔥
+
+    👉 INTERVIEW FAVORITE
+
+    What is index?
+    Types of index
+    How index improves performance
+    When NOT to use index
+
+    👉 VERY COMMON:
+
+    “Why query is slow? How index helps?”
+
+    ⚡ 6. NORMALIZATION (⭐⭐⭐⭐⭐)
+    1NF, 2NF, 3NF
+    Avoid redundancy
+    Data integrity
+
+    👉 COMMON:
+
+    “Explain normalization with example”
+
+    🔄 7. TRANSACTIONS (⭐⭐⭐⭐⭐)
+    ACID properties
+    COMMIT, ROLLBACK
+    Isolation levels (basic idea)
+
+    👉 VERY IMPORTANT:
+
+    “What happens if transaction fails?”
+
+    🔐 8. LOCKING & CONCURRENCY (⭐⭐⭐⭐)
+    Row-level locking
+    Deadlocks (basic idea)
+    🧠 9. STORED PROCEDURES & FUNCTIONS (⭐⭐⭐)
+    Basic usage
+    When to use
+    ⚡ 10. VIEWS (⭐⭐⭐)
+    What is view?
+    Use cases
+    📦 11. PERFORMANCE OPTIMIZATION (⭐⭐⭐⭐⭐) 🔥
+
+    👉 VERY IMPORTANT
+
+    Query optimization
+    EXPLAIN keyword
+    Index usage
+    Avoid SELECT *
+
+    👉 COMMON:
+
+    “How do you optimize slow query?”
+
+    🌐 12. MYSQL + NODE.JS (⭐⭐⭐⭐⭐)
+
+    👉 For you VERY IMPORTANT 💯
+
+    Connection pooling
+    Query execution
+    Prevent SQL injection
+    ORM vs raw queries
+    🔥 13. REAL-WORLD SCENARIOS (VERY IMPORTANT)
+
+    👉 THIS gets you selected 💯
+
+    Pagination (LIMIT + OFFSET)
+    Search + filtering
+    Handling large data
+    Logging tables
+    Audit tables
+    Transactions in APIs
+----------------------------------------
+3.Coding Questions
+💻 MYSQL CODING QUESTIONS (INTERVIEW STYLE)
+    🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
+    Create table with constraints
+    Insert sample data
+    Write SELECT queries with conditions
+    Update & delete records
+    ⚙️ PHASE 2: JOINS (⭐⭐⭐⭐⭐)
+    Join 2 tables (users + orders)
+    Get users with no orders (LEFT JOIN)
+    Self join example (employee-manager)
+    🧩 PHASE 3: AGGREGATION (⭐⭐⭐⭐⭐)
+    Count users per city
+    Find highest salary
+    Group by with HAVING
+    ⚡ PHASE 4: ADVANCED QUERIES (⭐⭐⭐⭐⭐)
+    Find second highest salary
+    Remove duplicate records
+    Top N records
+    Pagination query
+    🔥 PHASE 5: PERFORMANCE (⭐⭐⭐⭐⭐)
+    Add index and compare query
+    Optimize slow query
+    Use EXPLAIN
+    🌐 PHASE 6: REAL-WORLD (⭐⭐⭐⭐⭐)
+    Design users + orders schema
+    Write API-level queries
+    Transaction example (money transfer)
+    Prevent SQL injection
+------------------------------------------------------------------------------------------------
+4.Scenarios Questions

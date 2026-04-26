@@ -1,0 +1,467 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+ JavaScript (JS)
+   ├── 1. Basics
+   │   ├── What is JavaScript? (client-side, server-side)
+   │   ├── Adding JS to HTML
+   │   │   ├── Inline: <button onclick="...">
+   │   │   ├── Internal: <script>...</script>
+   │   │   └── External: <script src="app.js"></script>
+   │   ├── Syntax & Case Sensitivity
+   │   ├── Comments: // single-line, /* multi-line */
+   │   └── "use strict" mode -> help to improve code quality and Security
+   │
+   ├── 2. Variables & Scope
+   │   ├── var (function-scoped)
+   │   ├── let (block-scoped)
+   │   ├── const (block-scoped, constant reference)
+   │   ├── Hoisting behavior
+   │   ├── Naming rules
+   │   ├── Global scope, function scope, block scope
+   │   ├── Lexical scope
+   │   └── Closures (data privacy, currying)
+   │
+   ├── 3. Data Types
+   │   ├── Primitive Types: string, number, boolean, null, undefined, symbol, bigint
+   │   ├── Non-primitive: object, array, function, date, regex
+   │   ├── Type checking: typeof, instanceof
+   │   ├── Type conversion: implicit & explicit
+   │   └── Truthy & Falsy values
+   │
+   ├── 4. Operators
+   │   ├── Arithmetic (+, -, *, /, %, **)
+   │   ├── Assignment (=, +=, -=, etc.)
+   │   ├── Comparison (==, ===, !=, !==, >, <, >=, <=)
+   │   ├── Logical (&&, ||, !)
+   │   ├── Ternary (condition ? value1 : value2)
+   │   ├── Spread & Rest (...)
+   │   ├── Optional chaining (?.)
+   │   └── Nullish coalescing (??)
+   │
+   ├── 5. Control Flow(condition statement, loop statement, jump statement)
+   │   ├── if, else if, else
+   │   ├── switch
+   │   ├── for, while, do...while, for...of, for...in
+   │   ├── break, continue
+   │   └── try...catch...finally
+   │
+   ├── 6. Functions
+   │   ├── Function Declaration
+   │   ├── Function Expression
+   │   ├── Arrow Functions (this binding differences)
+   │   ├── Parameters, Arguments, Default Parameters, Rest Parameters
+   │   ├── Return values
+   │   ├── IIFE (Immediately Invoked Function Expressions)
+   │   ├── Higher-order functions
+   │   ├── Callback functions
+   │   └── Recursion -> repeatly call itself for until reach the condition
+   │
+   ├── 7. Objects & Prototypes
+   │   ├── Object creation: literal, constructor, Object.create()
+   │   ├── Properties & Methods
+   │   ├── this keyword (implicit, explicit, new, arrow functions)
+   │   ├── Object destructuring
+   │   ├── Object.assign(), Object.keys(), Object.values(), Object.entries()
+   │   ├── Prototypes & prototype chain
+   │   ├── Inheritance: ES5 (prototype), ES6 classes & extends
+   │   └── instanceof vs isPrototypeOf
+   │
+   ├── 8. Arrays
+   │   ├── Creation & indexing
+   │   ├── Array methods
+   │   │   ├── push(), pop(), shift(), unshift()
+   │   │   ├── map(), filter(), reduce(), forEach(), some(), every(), find(), findIndex()
+   │   │   ├── concat(), slice(), splice()
+   │   │   ├── includes(), indexOf(), lastIndexOf()
+   │   │   ├── flat(), flatMap()
+   │   │   └── sort(), reverse()
+   │   ├── Spread & Destructuring
+   │   └── Iteration with for...of
+   │
+   ├── 9. Strings
+   │   ├── Template literals
+   │   ├── String methods: length, toUpperCase(), toLowerCase()
+   │   ├── trim(), split(), replace(), includes()
+   │   ├── charAt(), indexOf(), substring(), slice(), substr()
+   │   └── padStart(), padEnd(), repeat()
+   │
+   ├── 10. Dates & Math
+   │   ├── Date object & methods
+   │   ├── Date formatting
+   │   ├── Math methods: round(), floor(), ceil(), random(), min(), max(), abs()
+   │   └── Working with timestamps
+   │
+   ├── 11. Regular Expressions
+   │   ├── Creating RegExp (literal, constructor)
+   │   ├── Flags: g, i, m, u, s
+   │   ├── Common patterns
+   │   └── Methods: test(), exec(), match(), replace()
+   │
+   ├── 12. DOM Manipulation
+   │   ├── Selecting elements: getElementById(), getElementsByClassName(), querySelector()
+   │   ├── Changing content: textContent, innerHTML
+   │   ├── Changing styles: element.style.property, classList
+   │   ├── Creating/Removing elements: createElement(), append(), remove()
+   │   └── Modifying attributes: setAttribute(), getAttribute(), removeAttribute()
+   │
+   ├── 13. Events
+   │   ├── Mouse events (click, dblclick, mouseover, mouseout)
+   │   ├── Keyboard events (keydown, keyup, keypress)
+   │   ├── Form events (submit, change, input, focus, blur)
+   │   ├── Event bubbling & capturing
+   │   ├── Event delegation
+   │   └── Passive event listeners
+   │
+   ├── 14. ES6+ Features
+   │   ├── let & const
+   │   ├── Arrow functions
+   │   ├── Template literals
+   │   ├── Destructuring
+   │   ├── Default parameters
+   │   ├── Modules (import/export, default vs named, dynamic imports)
+   │   ├── async/await
+   │   ├── Object & Array spread/rest
+   │   └── New operators: ??, ?., ||=, &&=, ??=
+   │
+   ├── 15. JSON
+   │   ├── JSON.parse()
+   │   ├── JSON.stringify()
+   │   └── Data exchange with APIs
+   │
+   ├── 16. Asynchronous JS
+   │   ├── setTimeout(), setInterval(), clearTimeout(), clearInterval()
+   │   ├── Callbacks
+   │   ├── Promises (resolve, reject, then, catch, finally)
+   │   ├── Promise.all(), Promise.race(), Promise.any(), Promise.allSettled()
+   │   ├── async/await
+   │   ├── Fetch API / AJAX
+   │   └── Event loop, call stack, microtasks vs macrotasks
+   │
+   ├── 17. Error Handling
+   │   ├── try...catch
+   │   ├── throw
+   │   ├── finally
+   │   ├── Error objects (name, message, stack)
+   │   └── Handling async errors
+   │
+   ├── 18. Storage
+   │   ├── localStorage
+   │   ├── sessionStorage
+   │   ├── cookies
+   │   └── IndexedDB basics
+   │
+   ├── 19. Security
+   │   ├── Preventing XSS
+   │   ├── Avoiding eval()
+   │   └── Safe DOM manipulation
+   │
+   ├── 20. Performance
+   │   ├── Debouncing & throttling
+   │   ├── Lazy loading
+   │   ├── Minification & compression
+   │   └── Memory management & garbage collection
+   │
+   ├── 21. Testing (Basic)
+   │   ├── Unit testing concepts
+   │   ├── Simple Jest examples
+   │   └── Assertions & mocks
+
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    JS THEORY QUESTIONS (TOP 30)
+
+    1. What is JavaScript?
+    2. What is execution context?
+    3. What is call stack?
+    4. What is hoisting?
+    5. What is temporal dead zone?
+
+    6. var vs let vs const?
+    7. What is scope?
+    8. What is closure?
+    9. What is lexical scope?
+    10. What is this keyword?
+
+    11. Arrow vs normal function?
+    12. What is event loop?
+    13. Microtask vs macrotask?
+    14. What is promise?
+    15. Promise lifecycle?
+
+    16. async/await vs promise?
+    17. What is callback?
+    18. What is callback hell?
+    19. What is prototype?
+    20. Prototype chain?
+
+    21. Class vs function constructor?
+    22. Shallow vs deep copy?
+    23. What is immutability?
+    24. What is currying?
+    25. What is memoization?
+
+    26. What is debounce?
+    27. What is throttle?
+    28. What is garbage collection?
+    29. What are memory leaks?
+    30. How JS handles async operations?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    JS CODING QUESTIONS (TOP 30)
+
+    1. Reverse a string
+    2. Check palindrome
+    3. Find max number
+    4. Find second largest
+    5. Remove duplicates
+
+    6. Flatten array
+    7. Deep flatten array
+    8. Count frequency
+    9. Anagram check
+    10. Find missing number
+
+    11. Two sum
+    12. Longest substring
+    13. First non-repeating char
+    14. Move zeros to end
+    15. Rotate array
+
+    16. Chunk array
+    17. Group by key
+    18. Sort without sort()
+    19. Intersection of arrays
+    20. Merge arrays
+
+    21. Implement debounce
+    22. Implement throttle
+    23. Deep clone object
+    24. Memoization function
+    25. Currying function
+
+    26. Promise.all implementation
+    27. Retry API call
+    28. Limit concurrent calls
+    29. Polyfill for map
+    30. Polyfill for bind
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    JS SCENARIO QUESTIONS (TOP 30)
+
+    1. API call slow — how to optimize?
+    2. Multiple API calls — parallel or sequential?
+    3. UI freezing — why?
+    4. setTimeout not working — why?
+    5. Promise not resolving — why?
+
+    6. Data not updating in UI — why?
+    7. Closure causing bug — why?
+    8. Event not triggering — why?
+    9. Event delegation needed — when?
+    10. Infinite loop issue — why?
+
+    11. Async error not caught — why?
+    12. Memory leak issue — where?
+    13. Duplicate API calls — how to fix?
+    14. Debounce vs throttle — when to use?
+    15. Race condition issue?
+
+    16. Data mismatch — shallow copy issue?
+    17. Object mutation bug?
+    18. API retry logic needed?
+    19. Cache API response?
+    20. Large list performance issue?
+
+    21. Scroll performance issue?
+    22. Form validation issue?
+    23. setInterval memory leak?
+    24. Event listener not removed?
+    25. Async order mismatch?
+
+    26. Promise.all failing?
+    27. Error handling missing?
+    28. UI lagging?
+    29. Re-render issue?
+    30. State inconsistency?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    JS TRICKY QUESTIONS (TOP 30)
+
+    1. [] == false ?
+    2. {} == false ?
+    3. typeof null?
+    4. NaN === NaN?
+    5. 0.1 + 0.2 !== 0.3?
+
+    6. var hoisting behavior?
+    7. let hoisting?
+    8. this in arrow function?
+    9. this in setTimeout?
+    10. function vs arrow?
+
+    11. == vs ===?
+    12. null vs undefined?
+    13. map vs forEach?
+    14. shallow vs deep copy?
+    15. object reference issue?
+
+    16. setTimeout in loop issue?
+    17. closure inside loop?
+    18. promise vs async?
+    19. async return value?
+    20. try-catch async issue?
+
+    21. bind vs call vs apply?
+    22. prototype vs class?
+    23. event bubbling vs capturing?
+    24. stopPropagation?
+    25. event delegation?
+
+    26. memory leak examples?
+    27. infinite recursion?
+    28. JSON stringify limits?
+    29. delete operator?
+    30. typeof array?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    JS DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build debounce search
+    2. Build throttle scroll
+    3. Create API retry system
+    4. Build cache system
+    5. Implement LRU cache
+
+    6. Build pagination logic
+    7. Infinite scroll system
+    8. Build form validation
+    9. Create modal logic
+    10. Build dropdown logic
+
+    11. Create event delegation system
+    12. Build custom promise
+    13. Implement async queue
+    14. Limit concurrent API calls
+    15. Build task scheduler
+
+    16. Deep clone utility
+    17. Immutable update function
+    18. Object flatten function
+    19. Build logger system
+    20. Error handling wrapper
+
+    21. Build timer system
+    22. Create pub-sub system
+    23. Build state manager (basic)
+    24. Create middleware system
+    25. Build retry with delay
+
+    26. Optimize large list rendering
+    27. Debug memory leak
+    28. Optimize event listeners
+    29. Improve performance
+    30. Refactor messy JS code
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    JS REAL-WORLD MAPPING (TOP 30)
+
+    1. How do you handle API calls?
+    → async/await with error handling
+
+    2. How do you optimize performance?
+    → debounce/throttle
+
+    3. How do you handle state?
+    → immutability
+
+    4. How do you debug issues?
+    → console + dev tools
+
+    5. How do you handle async?
+    → promises/async-await
+
+    6. How do you prevent memory leaks?
+    → cleanup listeners
+
+    7. How do you manage large data?
+    → pagination/infinite scroll
+
+    8. How do you reuse logic?
+    → functions/HOF
+
+    9. How do you handle errors?
+    → try/catch
+
+    10. How do you optimize UI?
+    → reduce re-renders
+
+    11. How do you handle events?
+    → delegation
+
+    12. How do you manage closures?
+    → careful scoping
+
+    13. How do you avoid mutation?
+    → spread/clone
+
+    14. How do you cache data?
+    → memoization
+
+    15. How do you handle retries?
+    → retry logic
+
+    16. How do you handle race conditions?
+    → Promise.all / control flow
+
+    17. How do you structure code?
+    → modular approach
+
+    18. How do you improve speed?
+    → optimize loops
+
+    19. How do you handle async bugs?
+    → logging/debugging
+
+    20. How do you manage APIs?
+    → service layer
+
+    21. How do you scale JS apps?
+    → modular + clean code
+
+    22. How do you handle forms?
+    → validation + state
+
+    23. How do you prevent duplicate calls?
+    → debounce
+
+    24. How do you handle UI lag?
+    → async optimization
+
+    25. How do you manage timers?
+    → cleanup
+
+    26. How do you debug production?
+    → logs
+
+    27. How do you ensure consistency?
+    → immutability
+
+    28. How do you handle complex logic?
+    → split functions
+
+    29. How do you test JS?
+    → unit testing
+
+    30. How do you write maintainable code?
+    → clean structure
+------------------------------------------------------------------------------------------------------

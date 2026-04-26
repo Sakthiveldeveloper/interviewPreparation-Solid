@@ -1,0 +1,332 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+NEXT JS MIND MAP
+
+    1. Basics
+    - What is Next.js? (React Framework)
+    - Why Next.js? (SSR, SSG, Performance, SEO)
+    - Next.js vs React (CRA/Vite)
+    - Folder structure (app / pages)
+    - Running app (npx create-next-app)
+
+    2. Routing
+    - File-based routing
+    - Pages Router (/pages)
+    - App Router (/app) (modern)
+    - Dynamic routes ([id], [...slug])
+    - Nested routes
+    - Route groups & layouts
+
+    3. Rendering Methods
+    - CSR (Client Side Rendering)
+    - SSR (Server Side Rendering)
+    - SSG (Static Site Generation)
+    - ISR (Incremental Static Regeneration)
+    - Streaming & Partial Rendering (App Router)
+
+    4. Data Fetching
+    - fetch() in Server Components
+    - getServerSideProps (Pages Router)
+    - getStaticProps
+    - getStaticPaths
+    - API Routes (/api)
+    - Caching (force-cache, no-store)
+
+    5. Components
+    - Server Components (default in App Router)
+    - Client Components ("use client")
+    - Shared components
+    - Layouts (layout.js)
+    - Templates
+    - Loading & Error UI (loading.js, error.js)
+
+    6. Styling
+    - CSS Modules
+    - Global CSS
+    - Tailwind CSS
+    - Styled-components
+    - Sass support
+
+    7. Middleware
+    - middleware.ts
+    - Authentication checks
+    - Redirects
+    - Rewrites
+    - Edge runtime
+
+    8. API & Backend Features
+    - API Routes (/pages/api)
+    - Route Handlers (/app/api)
+    - Request & Response handling
+    - Authentication (JWT, sessions)
+    - Edge Functions
+
+    9. Image & Optimization
+    - next/image (Image optimization)
+    - next/link (Client navigation)
+    - Font optimization (next/font)
+    - Script optimization (next/script)
+
+    10. Authentication
+    - NextAuth.js
+    - JWT-based auth
+    - Session-based auth
+    - Middleware protection
+    - OAuth (Google, GitHub)
+
+    11. Environment & Config
+    - .env.local
+    - next.config.js
+    - Public vs Private env variables
+    - Runtime configs
+
+    12. Deployment
+    - Vercel (recommended)
+    - Self-hosting (Node server)
+    - Static export
+    - Edge deployment
+
+    13. Performance Optimization
+    - Code splitting
+    - Lazy loading (dynamic imports)
+    - Image optimization
+    - Caching strategies
+    - Bundle analysis
+
+    14. Advanced Features
+    - Server Actions (App Router)
+    - Suspense & Streaming
+    - Parallel routes
+    - Intercepting routes
+    - Metadata API (SEO)
+
+    15. Error Handling
+    - error.js
+    - try/catch in server actions
+    - 404 handling (not-found.js)
+    - Logging & monitoring
+
+    16. Best Practices
+    - Prefer Server Components
+    - Use caching properly
+    - Avoid unnecessary client components
+    - Structure folders cleanly
+    - Keep components small & reusable
+
+2.Theory Questions
+    Here is the summary of our Next.js deep dive. You can use these as quick-reference notes to remember the core purpose of each feature.
+    1. The Fundamentals
+
+    * What is Next.js? A full-stack React framework that adds routing, SSR, and optimizations to standard React.
+    * Why use it over React? It provides SEO out of the box, faster performance through pre-rendering, and a built-in backend (API routes).
+    * Hydration: The process where React "attaches" JavaScript logic to the static HTML sent by the server to make it interactive.
+
+    2. Rendering Strategies
+
+    * SSR (Server-Side Rendering): HTML is generated on every request. Best for live, personalized data.
+    * SSG (Static Site Generation): HTML is generated once at build time. Best for speed and SEO (blogs, docs).
+    * CSR (Client-Side Rendering): The browser builds the page using JS. Best for private dashboards and heavy interactivity.
+    * ISR (Incremental Static Regeneration): Updates static pages in the background without a full site rebuild.
+
+    3. Routing & API
+
+    * File-Based Routing: Folders in the /app or /pages directory automatically become URLs (e.g., app/about/page.js = /about).
+    * Dynamic Routing: Using [slug] in folder names to create variable URLs like /blog/my-post.
+    * API Routing: Creating backend endpoints (JSON) within your project using route.js files.
+    * Middleware: A "gatekeeper" script that runs before a request completes (used for auth/redirects).
+
+    4. Data Fetching (Pages Router)
+
+    * getStaticProps: Fetches data at build time for SSG.
+    * getStaticPaths: Tells Next.js which dynamic paths to pre-build for SSG.
+    * getServerSideProps: Fetches data on every request for SSR.
+
+    5. Performance & Optimization
+
+    * Image Optimization: The <Image> component automatically resizes and compresses images to modern formats (WebP).
+    * Code Splitting: Breaking the app into small chunks so users only download the code for the page they are on.
+    * Lazy Loading: Delaying the loading of heavy components until they are needed (via next/dynamic).
+    * Environment Config: Using .env files to store secrets (server-only) and public keys (NEXT_PUBLIC_).
+
+    6. SEO & Auth
+
+    * SEO Advantages: Fast load times and pre-rendered HTML make it easy for Google to index your site.
+    * Auth Handling: Managed via libraries like Auth.js (NextAuth), Clerk, or Lucia, usually involving secure HTTP-only cookies and Middleware.
+
+    Would you like me to create a Next.js Cheat Sheet code file that you can save and refer to later?
+🚀 NEXT.JS THEORY – TOP IMPORTANT TOPICS (INTERVIEW READY)
+    🧠 1. NEXT.JS FUNDAMENTALS (⭐⭐⭐⭐⭐)
+    What is Next.js?
+    Why Next.js over React?
+    SSR vs CSR vs SSG
+    File-based routing
+    Pages vs App Router (VERY IMPORTANT 🔥)
+    Folder structure
+
+    👉 VERY COMMON:
+
+    “Difference between React and Next.js?”
+
+    ⚙️ 2. RENDERING METHODS (⭐⭐⭐⭐⭐) 🔥
+
+    👉 MOST ASKED IN INTERVIEWS
+
+    SSR (Server-Side Rendering)
+    SSG (Static Site Generation)
+    ISR (Incremental Static Regeneration)
+    CSR (Client-Side Rendering)
+
+    👉 You must explain:
+
+    When to use each
+    Performance differences
+
+    👉 VERY COMMON:
+
+    “Which rendering strategy will you choose and why?”
+
+    📁 3. ROUTING SYSTEM (⭐⭐⭐⭐⭐)
+    File-based routing
+    Dynamic routes [id].js
+    Nested routes
+    Route groups (App Router)
+    Layouts (layout.js)
+    Loading UI (loading.js)
+    Error UI (error.js)
+    🧩 4. APP ROUTER (NEW – VERY IMPORTANT 🔥)
+
+    👉 This is where interviews focus now
+
+    Server Components vs Client Components
+    use client
+    Data fetching in server components
+    Streaming UI
+    Layouts & nested layouts
+
+    👉 VERY COMMON:
+
+    “Difference between Server Component and Client Component?”
+
+    🌐 5. DATA FETCHING (⭐⭐⭐⭐⭐)
+    fetch in Next.js
+    getServerSideProps (old)
+    getStaticProps (old)
+    getStaticPaths
+    New App Router data fetching
+
+    👉 VERY IMPORTANT:
+
+    Caching
+    Revalidation
+    🔐 6. AUTHENTICATION (⭐⭐⭐⭐⭐)
+    JWT with Next.js
+    Cookies handling
+    Session management
+    Protected routes
+
+    👉 Tools:
+
+    NextAuth (basic idea)
+    ⚡ 7. API ROUTES (⭐⭐⭐⭐⭐)
+    Creating backend inside Next.js
+    Route handlers (app/api)
+    Request & response handling
+    Middleware in Next.js
+
+    👉 VERY COMMON:
+
+    “Can Next.js replace Node backend?”
+
+    🎨 8. STYLING (⭐⭐⭐⭐)
+    CSS Modules
+    Tailwind CSS
+    Styled-components
+    🧠 9. PERFORMANCE OPTIMIZATION (⭐⭐⭐⭐⭐)
+
+    👉 VERY IMPORTANT
+
+    Image optimization (next/image)
+    Code splitting
+    Lazy loading
+    Caching
+    Edge functions
+    🌍 10. DEPLOYMENT (⭐⭐⭐⭐)
+    Build process
+    Vercel deployment
+    Environment variables
+    🧩 11. MIDDLEWARE (⭐⭐⭐⭐⭐)
+    Request interception
+    Authentication checks
+    Redirects
+    📦 12. SEO (⭐⭐⭐⭐⭐)
+
+    👉 BIG advantage of Next.js
+
+    Meta tags
+    Dynamic SEO
+    Server rendering benefits
+
+    👉 VERY COMMON:
+
+    “How Next.js improves SEO?”
+
+    🔥 13. REAL-WORLD SCENARIOS (VERY IMPORTANT)
+
+    👉 THIS is what gets you selected 💯
+
+    Dashboard with SSR
+    Auth + protected routes
+    API + frontend in same app
+    Pagination + filtering
+    Image-heavy app optimization
+    Handling large data pages
+
+
+3.Coding Questions
+💻 NEXT.JS CODING QUESTIONS (LIKE YOUR OTHER STACK)
+    🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
+    Create Next.js app
+    Create pages using file routing
+    Add navigation between pages
+    Create dynamic route (/user/[id])
+    Create layout
+    ⚙️ PHASE 2: DATA FETCHING (⭐⭐⭐⭐⭐)
+    Fetch API data (server component)
+    Build SSR page
+    Build static page (SSG)
+    Implement ISR
+    Handle loading & error UI
+    📁 PHASE 3: APP ROUTER (⭐⭐⭐⭐⭐)
+    Create server component
+    Convert to client component
+    Use use client
+    Build nested layouts
+    Implement loading & error UI
+    🌐 PHASE 4: API ROUTES (⭐⭐⭐⭐⭐)
+    Create API route
+    Handle GET/POST request
+    Connect with frontend
+    Add middleware
+    🔐 PHASE 5: AUTH SYSTEM (⭐⭐⭐⭐⭐)
+    Login system (JWT/cookies)
+    Protect routes
+    Middleware-based auth
+    Logout flow
+    ⚡ PHASE 6: PERFORMANCE (⭐⭐⭐⭐⭐)
+    Optimize images using next/image
+    Lazy load components
+    Implement caching
+    Improve page load time
+    🚀 PHASE 7: REAL-WORLD PROJECTS (🔥)
+
+    👉 DO AT LEAST 1
+
+    Admin dashboard (SSR + auth)
+    Blog app (SSG + ISR)
+    E-commerce (filters + SEO)
+    Full-stack app (API + frontend)
+4.Scenarios Questions

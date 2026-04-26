@@ -1,0 +1,22 @@
+import react, { useState } from 'react';
+
+export default function App () {
+  const [show, setShow] = useState(true);
+  const enableShow = () =>{
+    if(show){
+    setShow(false)
+    } else {
+      setShow(true)
+    }
+  }
+  return(
+      <>
+      <div>
+        <button onClick={enableShow}>
+          {show ? "Hide": "show" }
+        </button>
+        <p>{show && "Hi sakthi"}</p>
+      </div>
+      </>
+  )
+}

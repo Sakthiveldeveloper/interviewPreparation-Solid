@@ -1,0 +1,301 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    MICRO-FRONTEND THEORY QUESTIONS (TOP 30)
+
+    1. What is Micro-Frontend?
+    2. Why Micro-Frontend?
+    3. Monolith vs Micro-Frontend?
+    4. What is Module Federation?
+    5. Host vs Remote?
+
+    6. What is expose?
+    7. What is shared dependency?
+    8. Why shared config important?
+    9. What is container app?
+    10. How routing works?
+
+    11. How apps communicate?
+    12. What is independent deployment?
+    13. Benefits of Micro-Frontend?
+    14. Drawbacks?
+    15. When to use Micro-Frontend?
+
+    16. What is version conflict?
+    17. How to manage state?
+    18. Global vs local state?
+    19. What is event-based communication?
+    20. What is pub-sub?
+
+    21. How authentication handled?
+    22. Token sharing?
+    23. How styling handled?
+    24. CSS isolation?
+    25. Performance challenges?
+
+    26. Lazy loading in MF?
+    27. Error handling?
+    28. Debugging issues?
+    29. Deployment strategy?
+    30. How to scale MF architecture?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    MICRO-FRONTEND CODING QUESTIONS (TOP 30)
+
+    1. Setup Module Federation
+    2. Create host app
+    3. Create remote app
+    4. Expose component
+    5. Import remote component
+
+    6. Share React dependency
+    7. Configure webpack federation
+    8. Dynamic import remote module
+    9. Lazy load remote app
+    10. Handle fallback UI
+
+    11. Pass props to remote
+    12. Communicate between apps
+    13. Setup routing integration
+    14. Load remote on demand
+    15. Handle errors in remote
+
+    16. Share utility functions
+    17. Share UI components
+    18. Configure shared libs
+    19. Handle version mismatch
+    20. Setup env config
+
+    21. Integrate authentication
+    22. Handle API calls
+    23. Secure token sharing
+    24. Setup build config
+    25. Optimize bundle size
+
+    26. Create common layout
+    27. Setup global state sharing
+    28. Handle event communication
+    29. Debug remote loading issue
+    30. Optimize performance
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    MICRO-FRONTEND SCENARIOS (TOP 30)
+
+    1. Remote app not loading — why?
+    2. Version conflict issue?
+    3. Shared dependency mismatch?
+    4. Routing not working?
+    5. Navigation breaking?
+
+    6. State not syncing?
+    7. Props not passing?
+    8. Auth not shared?
+    9. Token expired issue?
+    10. API duplication?
+
+    11. Styling conflict?
+    12. CSS overriding?
+    13. UI inconsistency?
+    14. Slow loading remote?
+    15. Bundle size large?
+
+    16. Deployment mismatch?
+    17. Remote version outdated?
+    18. Caching issue?
+    19. Error handling across apps?
+    20. Debugging difficulty?
+
+    21. Performance lag?
+    22. Memory leak?
+    23. Event communication failing?
+    24. Integration issue?
+    25. Build failure?
+
+    26. Dev vs prod mismatch?
+    27. Lazy loading failure?
+    28. Security issue?
+    29. Data inconsistency?
+    30. Scaling issue?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    MICRO-FRONTEND TRICKY QUESTIONS (TOP 30)
+
+    1. MF vs microservices?
+    2. Why not monolith?
+    3. Module Federation vs iframe?
+    4. Shared vs duplicate libs?
+    5. Version conflict handling?
+
+    6. State sharing difficulty?
+    7. CSS leakage issue?
+    8. How isolation works?
+    9. Lazy loading behavior?
+    10. Dynamic remote loading?
+
+    11. Auth across apps?
+    12. Token sync problem?
+    13. Routing complexity?
+    14. Debugging MF?
+    15. Build vs runtime integration?
+
+    16. Performance trade-offs?
+    17. Network overhead?
+    18. Bundle duplication?
+    19. SSR in MF?
+    20. Next.js + MF?
+
+    21. Error boundary across apps?
+    22. Fallback UI handling?
+    23. Cache invalidation?
+    24. Deployment sync?
+    25. Dev experience issues?
+
+    26. Security risks?
+    27. Cross-team coordination?
+    28. Testing MF?
+    29. Logging issues?
+    30. When NOT to use MF?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    MICRO-FRONTEND DEEP PRACTICE (TOP 30)
+
+    1. Build host + 2 remotes
+    2. Create shared UI library
+    3. Setup independent deployment
+    4. Build auth system
+    5. Share token across apps
+
+    6. Implement routing sync
+    7. Setup lazy loading
+    8. Optimize bundle
+    9. Handle versioning
+    10. Create fallback UI
+
+    11. Build event bus
+    12. Implement pub-sub
+    13. Share state
+    14. Handle API layer
+    15. Create error handling system
+
+    16. Debug integration issues
+    17. Optimize performance
+    18. Reduce duplication
+    19. Build reusable modules
+    20. Setup CI/CD
+
+    21. Implement logging system
+    22. Handle caching
+    23. Test MF apps
+    24. Improve developer experience
+    25. Refactor structure
+
+    26. Add monitoring
+    27. Optimize loading time
+    28. Improve UX
+    29. Scale architecture
+    30. Production debugging
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    MICRO-FRONTEND REAL-WORLD (TOP 30)
+
+    1. Why MF used in your project?
+    → scalability
+
+    2. How apps communicate?
+    → props/events
+
+    3. How routing handled?
+    → centralized
+
+    4. How state managed?
+    → shared/store
+
+    5. How auth handled?
+    → token sharing
+
+    6. How deployment works?
+    → independent
+
+    7. How version managed?
+    → shared config
+
+    8. How performance optimized?
+    → lazy loading
+
+    9. How debugging done?
+    → logs
+
+    10. How API handled?
+    → common service
+
+    11. How UI consistency?
+    → shared components
+
+    12. How CSS handled?
+    → scoped styles
+
+    13. How errors handled?
+    → fallback UI
+
+    14. How caching handled?
+    → browser/cache
+
+    15. How scaling done?
+    → modular apps
+
+    16. How teams work?
+    → independent teams
+
+    17. How testing done?
+    → integration tests
+
+    18. How security ensured?
+    → auth middleware
+
+    19. How bundle optimized?
+    → shared deps
+
+    20. How duplication avoided?
+    → shared libs
+
+    21. How env handled?
+    → config
+
+    22. How dev experience improved?
+    → modular
+
+    23. How maintainability?
+    → separation
+
+    24. How flexibility achieved?
+    → independent deploy
+
+    25. How integration done?
+    → federation
+
+    26. How logs tracked?
+    → monitoring
+
+    27. How failures handled?
+    → fallback
+
+    28. How updates deployed?
+    → CI/CD
+
+    29. How large app managed?
+    → MF architecture
+
+    30. Why MF better for your use case?
+    → scalability + team independence
+------------------------------------------------------------------------------------------------------

@@ -1,0 +1,465 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+   1. Basics
+      ├── What is TypeScript? (Definition, Purpose)
+      ├── Benefits over JavaScript (Static typing, Tooling, Maintainability)
+      ├── TypeScript vs JavaScript
+      ├── How TypeScript works (Compilation to JavaScript)
+      └── Installing & Running (tsc, ts-node)
+
+   2. Basic Types
+      ├── number, string, boolean
+      ├── null, undefined
+      ├── any, unknown, never
+      ├── arrays (number[], string[])
+      ├── tuples ([string, number])
+      ├── enums (Numeric, String)
+      └── type inference
+
+   3. Functions
+      ├── Function parameter types
+      ├── Return type annotations
+      ├── Optional parameters
+      ├── Default parameters
+      ├── Rest parameters
+      └── Function overloads
+
+   4. Objects & Interfaces
+      ├── Object type annotation
+      ├── Optional & readonly properties
+      ├── Index signatures
+      ├── Extending interfaces
+      ├── Merging interfaces
+      └── Interface vs Type alias
+
+   5. Classes
+      ├── Class properties & methods
+      ├── Access modifiers (public, private, protected)
+      ├── readonly properties
+      ├── Constructors
+      ├── Inheritance (extends, super)
+      ├── Abstract classes
+      ├── Getters & setters
+      └── Static properties/methods
+
+   6. Advanced Types
+      ├── Union types
+      ├── Intersection types
+      ├── Literal types
+      ├── Type aliases
+      ├── Type assertions (as, <type>)
+      ├── Non-null assertion (!)
+      ├── keyof operator
+      ├── typeof operator
+      ├── Conditional types
+      └── Mapped types
+
+   7. Generics
+      ├── Generic functions
+      ├── Generic classes
+      ├── Generic constraints (extends)
+      └── Default generic types
+
+   8. Modules & Namespaces
+      ├── ES Modules (import/export)
+      ├── Default exports
+      ├── Type-only imports/exports
+      ├── Namespaces
+      └── Declaration merging
+
+   9. Type Guards & Narrowing
+      ├── typeof checks
+      ├── instanceof checks
+      ├── in operator
+      ├── Custom type predicates
+      └── Discriminated unions
+
+   10. Utility Types
+      ├── Partial
+      ├── Required
+      ├── Readonly
+      ├── Pick
+      ├── Omit
+      ├── Record
+      ├── Exclude
+      ├── Extract
+      ├── NonNullable
+      ├── ReturnType
+      └── Parameters
+
+   11. Decorators (Experimental)
+      ├── Class decorators
+      ├── Method decorators
+      ├── Property decorators
+      └── Parameter decorators
+
+   12. Working with External Code
+      ├── Declaration files (.d.ts)
+      ├── DefinitelyTyped (@types packages)
+      ├── Type casting for third-party libraries
+      └── Ambient declarations
+
+   13. Configuration & Compilation
+      ├── tsconfig.json
+      │    ├── compilerOptions
+      │    ├── include / exclude
+      │    ├── strict mode
+      │    ├── module, target, lib
+      │    └── sourceMap
+      ├── Compiling TypeScript (tsc)
+      ├── Watch mode
+      └── Project references
+
+   14. Advanced Features
+      ├── Indexed access types
+      ├── Template literal types
+      ├── Readonly arrays & tuples
+      ├── Conditional mapped types
+      └── Recursive types
+
+   15. Error Handling
+      ├── Type-safe error handling
+      ├── unknown vs any for errors
+      └── never in exhaustive checks
+
+   16. Performance & Best Practices
+      ├── Avoid overusing any
+      ├── Use strict null checks
+      ├── Favor interfaces over types for objects
+      ├── Keep tsconfig strict
+      └── Use utility types effectively
+      TypeScript (Interview Mind Map - Final)
+
+    Core
+    ├── Types (primitive, union, literal)
+    ├── Type Inference
+    ├── any vs unknown vs never
+    ├── Type Assertions
+
+    Objects
+    ├── Interfaces vs Types
+    ├── Optional / Readonly
+    ├── Index signatures
+    ├── Extends / Implements
+
+    Functions
+    ├── Typed params
+    ├── Return types
+    ├── Overloads
+
+    Advanced
+    ├── Generics
+    ├── Utility types
+    ├── Conditional types
+    ├── Mapped types
+
+    Safety
+    ├── Type narrowing
+    ├── Type guards
+    ├── Strict mode
+
+    Ecosystem
+    ├── tsconfig
+    ├── Modules
+    ├── React typing
+    ├── API typing
+
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    TYPESCRIPT THEORY QUESTIONS (TOP 30)
+
+    1. What is TypeScript?
+    2. TypeScript vs JavaScript?
+    3. What is static typing?
+    4. What is type inference?
+    5. any vs unknown vs never?
+
+    6. What is union type?
+    7. What is intersection type?
+    8. What is literal type?
+    9. What is tuple?
+    10. What is enum?
+
+    11. What is interface?
+    12. Interface vs type?
+    13. What is optional property?
+    14. What is readonly?
+    15. What is index signature?
+
+    16. What is generic?
+    17. Why generics?
+    18. What is constraint in generics?
+    19. What is keyof?
+    20. What is typeof in TS?
+
+    21. What is type narrowing?
+    22. What are type guards?
+    23. What is discriminated union?
+    24. What is Partial?
+    25. What is Pick / Omit?
+
+    26. What is Record type?
+    27. What is tsconfig?
+    28. What is strict mode?
+    29. What is module system?
+    30. How TS improves large apps?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    TYPESCRIPT CODING QUESTIONS (TOP 30)
+
+    1. Declare typed variables
+    2. Function with typed params
+    3. Function with return type
+    4. Use union type in function
+    5. Create tuple
+
+    6. Create enum usage
+    7. Create typed object
+    8. Interface for user object
+    9. Optional property example
+    10. Readonly property example
+
+    11. Function returning object
+    12. Array of objects typing
+    13. Generic function
+    14. Generic array handler
+    15. Generic API response
+
+    16. Constrained generic
+    17. Type narrowing using typeof
+    18. Custom type guard
+    19. Discriminated union example
+    20. Type assertion usage
+
+    21. Use Partial
+    22. Use Pick
+    23. Use Omit
+    24. Use Record
+    25. Custom utility type
+
+    26. Type API response
+    27. Type async function
+    28. Type error handling
+    29. Type React props
+    30. Type event handler
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    TYPESCRIPT SCENARIO QUESTIONS (TOP 30)
+
+    1. Type error in API response — how fix?
+    2. any used everywhere — how refactor?
+    3. Unknown type error — how handle?
+    4. Optional field causing crash?
+    5. Type mismatch in function?
+
+    6. API returning different shapes?
+    7. Type not narrowing correctly?
+    8. Generic not working?
+    9. Interface conflict?
+    10. Module import issue?
+
+    11. React props type issue?
+    12. useState type issue?
+    13. Form data typing problem?
+    14. Event type mismatch?
+    15. Async error type handling?
+
+    16. Object mutation issue?
+    17. Partial update issue?
+    18. Deep nested type issue?
+    19. Dynamic object typing?
+    20. Third-party lib no types?
+
+    21. Strict mode errors?
+    22. Null undefined issue?
+    23. Type assertion misuse?
+    24. Union type confusion?
+    25. Index signature problem?
+
+    26. Enum misuse?
+    27. Performance issue due to types?
+    28. Duplicate type definitions?
+    29. Wrong generic usage?
+    30. Type safety vs flexibility tradeoff?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    TYPESCRIPT TRICKY QUESTIONS (TOP 30)
+
+    1. any vs unknown?
+    2. never vs void?
+    3. type vs interface?
+    4. enum vs union?
+    5. null vs undefined?
+
+    6. readonly vs const?
+    7. Partial vs Required?
+    8. Pick vs Omit?
+    9. keyof vs typeof?
+    10. Record vs object?
+
+    11. generic vs any?
+    12. type assertion dangers?
+    13. strict null check?
+    14. union narrowing issue?
+    15. discriminated union?
+
+    16. optional chaining vs ?
+    17. index signature risk?
+    18. interface merging?
+    19. module vs namespace?
+    20. type inference limits?
+
+    21. deep vs shallow typing?
+    22. async typing issues?
+    23. event typing issue?
+    24. function overload vs union?
+    25. unknown safety?
+
+    26. never use case?
+    27. template literal types?
+    28. mapped types?
+    29. conditional types?
+    30. TS compile vs runtime?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    TYPESCRIPT DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build typed API service
+    2. Create reusable types
+    3. Build generic utility
+    4. Type React components
+    5. Type custom hooks
+
+    6. Build form validation types
+    7. Type Redux state
+    8. Type API responses
+    9. Create error handling system
+    10. Build type-safe config
+
+    11. Create generic table component
+    12. Build reusable form types
+    13. Create dynamic object types
+    14. Type event system
+    15. Build type-safe fetch wrapper
+
+    16. Implement Partial updates
+    17. Create reusable enums
+    18. Build type-safe store
+    19. Create mapped types
+    20. Implement conditional types
+
+    21. Type backend models
+    22. Build DTO types
+    23. Create validation schema types
+    24. Refactor JS to TS
+    25. Improve type safety
+
+    26. Debug TS errors
+    27. Optimize type usage
+    28. Avoid any usage
+    29. Improve maintainability
+    30. Build scalable type system
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    TYPESCRIPT REAL-WORLD MAPPING (TOP 30)
+
+    1. How do you type APIs?
+    → interface + generics
+
+    2. How do you handle unknown data?
+    → type guards
+
+    3. How do you avoid any?
+    → union/generics
+
+    4. How do you type React props?
+    → interface
+
+    5. How do you type state?
+    → generics
+
+    6. How do you handle forms?
+    → typed objects
+
+    7. How do you manage API errors?
+    → typed error response
+
+    8. How do you ensure safety?
+    → strict mode
+
+    9. How do you reuse types?
+    → utility types
+
+    10. How do you handle dynamic data?
+    → Record / index signature
+
+    11. How do you type async?
+    → Promise<T>
+
+    12. How do you improve code quality?
+    → strict typing
+
+    13. How do you debug TS errors?
+    → compiler + logs
+
+    14. How do you scale code?
+    → modular types
+
+    15. How do you manage large app?
+    → shared types
+
+    16. How do you type backend data?
+    → DTOs
+
+    17. How do you handle null?
+    → optional chaining
+
+    18. How do you enforce rules?
+    → readonly
+
+    19. How do you design APIs?
+    → generic responses
+
+    20. How do you avoid runtime errors?
+    → compile checks
+
+    21. How do you maintain consistency?
+    → shared interfaces
+
+    22. How do you type third-party libs?
+    → declaration files
+
+    23. How do you optimize dev experience?
+    → IntelliSense
+
+    24. How do you handle version changes?
+    → strict typing
+
+    25. How do you handle optional data?
+    → ?
+
+    26. How do you structure types?
+    → modular
+
+    27. How do you improve readability?
+    → clear types
+
+    28. How do you handle complexity?
+    → break types
+
+    29. How do you test TS?
+    → type checks
+
+    30. How do you maintain code?
+    → strict + reusable types
+------------------------------------------------------------------------------------------------------

@@ -1,0 +1,352 @@
+1.mindmap
+2.Theory Questions
+3.Coding Questions
+4.Scenarios Questions
+
+1.mindmap
+        CSS (Cascading Style Sheets)
+    ├── 1. Basics
+    │   ├── What is CSS?
+    │   ├── Types of CSS
+    │   │   ├── Inline CSS
+    │   │   ├── Internal CSS
+    │   │   └── External CSS
+    │   ├── Syntax: selector { property: value; }
+    │   └── File extension: .css
+    │
+    ├── 2. Selectors
+    │   ├── Basic Selectors
+    │   │   ├── Universal (*)
+    │   │   ├── Type (p, h1, div)
+    │   │   ├── Class (.classname)
+    │   │   ├── ID (#id)
+    │   │   └── Grouping (,)
+    │   ├── Combinators
+    │   │   ├── Descendant ( )
+    │   │   ├── Child (>)
+    │   │   ├── Adjacent sibling (+)
+    │   │   └── General sibling (~)
+    │   ├── Attribute selectors
+    │   │   ├── [attr]
+    │   │   ├── [attr="value"]
+    │   │   └── [attr^="start"], [attr$="end"], [attr*="contains"]
+    │   └── Pseudo-classes & Pseudo-elements
+    │       ├── Pseudo-classes (:hover, :focus, :nth-child)
+    │       └── Pseudo-elements (::before, ::after, ::first-letter)
+    │       └── content property (used with pseudo-elements)
+    │
+    ├── 3. Colors & Units
+    │   ├── Color formats: name, HEX, RGB, RGBA, HSL, HSLA
+    │   ├── Units: px, %, em, rem, vw, vh
+    │   ├── Transparent colors
+    │   └── Opacity
+    │
+    ├── 4. Box Model
+    │   ├── Content
+    │   ├── Padding
+    │   ├── Border
+    │   ├── Margin
+    │   ├── box-sizing: content-box | border-box
+    │   ├── box-shadow
+    │   └── text-shadow
+    │
+    ├── 5. Typography
+    │   ├── font-family
+    │   ├── font-size
+    │   ├── font-weight
+    │   ├── line-height
+    │   ├── text-align
+    │   ├── text-decoration
+    │   ├── letter-spacing, word-spacing
+    │   └── responsive typography (fluid typography, clamp())
+    │
+    ├── 6. Backgrounds & Visual Effects
+    │   ├── background-color
+    │   ├── background-image
+    │   ├── background-repeat
+    │   ├── background-position
+    │   ├── background-size
+    │   ├── background-attachment
+    │   ├── opacity
+    │   └── box-shadow, text-shadow (also in Box Model)
+    │
+    ├── 7. Layout
+    │   ├── Display
+    │   │   ├── block, inline, inline-block
+    │   │   ├── flex, grid
+    │   │   └── none
+    │   ├── Position
+    │   │   ├── static
+    │   │   ├── relative
+    │   │   ├── absolute
+    │   │   ├── fixed
+    │   │   └── sticky
+    │   ├── Float & Clear
+    │   ├── Z-index
+    │   ├── Overflow
+    │   │   ├── overflow-x
+    │   │   └── overflow-y
+    │   ├── Visibility
+    │   │   ├── visible
+    │   │   └── hidden
+    │   ├── pointer-events
+    │   └── CSS `calc()` (for dynamic sizing & layout)
+    │
+    ├── 8. Flexbox
+    │   ├── display: flex
+    │   ├── flex-direction
+    │   ├── justify-content
+    │   ├── align-items
+    │   ├── flex-wrap
+    │   └── align-content
+    │
+    ├── 9. CSS Grid
+    │   ├── display: grid
+    │   ├── grid-template-rows
+    │   ├── grid-template-columns
+    │   ├── grid-gap
+    │   ├── grid-row & grid-column
+    │   ├── justify-items & align-items
+    │   ├── grid-auto-flow
+    │   └── grid-template-areas
+    │
+    ├── 10. Transitions & Animations
+    │   ├── transition-property, duration, timing-function, delay
+    │   ├── @keyframes
+    │   └── animation properties (name, duration, iteration-count)
+    │
+    ├── 11. Transformations
+    │   ├── rotate()
+    │   ├── scale()
+    │   ├── translate()
+    │   └── skew()
+    │
+    ├── 12. Responsive Design
+    │   ├── Media queries
+    │   ├── Mobile-first approach
+    │   ├── Relative units (%, em, rem, vw, vh)
+    │   ├── Responsive images & typography
+    │   └── fluid typography & clamp() (also in Typography)
+    │
+    ├── 13. Variables & Functions
+    │   ├── CSS variables (--var-name)
+    │   ├── var()
+    │   ├── calc()
+    │   ├── min(), max(), clamp()
+    │   └── Custom properties
+    │
+    ├── 14. CSS Specificity & Inheritance
+    │   ├── Specificity hierarchy
+    │   ├── !important usage
+    │   └── Inheritable properties
+    │
+    └── 15. Best Practices
+        ├── Keep styles modular
+        ├── Use external CSS for maintainability
+        ├── Prefer semantic class names
+        ├── Avoid overusing !important
+        ├── Validate CSS (W3C Validator)
+        └── Consider CSS preprocessors (Sass, LESS) — optional for advanced users
+--------------------------------------------------------------------------------------------------------
+
+2.Theory Questions
+ Questions
+   1. What is CSS?
+        CSS (Cascading Style Sheets) is the language used to design the visual presentation of a webpage. While HTML provides the "bones," CSS provides the "skin," controlling colors, fonts, and spacing. It allows you to change the look of an entire site by editing just one file.
+   2. CSS Selectors
+        Selectors are patterns used to "point to" the HTML elements you want to style. You can target tags directly (p), classes (.btn), or unique IDs (#header). They tell the browser, "Find these specific items and apply these design rules to them."
+   3. Pseudo-classes
+        A pseudo-class (like :hover or :nth-child) styles an element based on its state or position. It allows you to change a button's color when a mouse moves over it without adding extra HTML classes. It’s perfect for making a site feel interactive and dynamic.
+   4. The Box Model
+        The Box Model treats every HTML element as a rectangular box consisting of four layers: Content, Padding, Border, and Margin. Understanding how these layers stack is the key to controlling the size and spacing of your layout. It is the most fundamental concept in CSS design.
+   5. Margin vs. Padding
+        Padding is the space inside the border, pushing content away from the element's edge. Margin is the space outside the border, pushing neighboring elements away from the box. Use padding to grow the inside and margin to create "breathing room" between boxes.
+   6. The Display Property
+        The display property determines how an element fits into the page flow and interacts with others. Common values include block (starts a new line), inline (stays in a row), and none (removes it entirely). It is the most powerful tool for controlling basic layout behavior.
+   7. Inline, Block, & Inline-Block
+        Block elements take the full width; Inline elements only take the space of their content and ignore height settings. Inline-block is a hybrid that stays in a row like inline but respects width and height like block. This trio handles 90% of basic element positioning.
+   8. Flexbox
+        Flexbox is a 1D layout system designed to align items in a single row or column. It is the best tool for centering items vertically and horizontally or distributing space in a navigation bar. It makes "flexible" layouts easy without complex math.
+   9. CSS Grid
+        Grid is a 2D layout system that handles both rows and columns at the same time. It is the master of "page skeletons," allowing you to build complex newspaper-style layouts with ease. Use Grid for the big structure and Flexbox for the small details inside.
+   10. Justify Content vs. Align Items
+        justify-content aligns items along the "Main Axis" (usually horizontal left-to-right). align-items aligns items along the "Cross Axis" (usually vertical top-to-bottom). Together, they are the secret to perfectly centering any element in a box.
+   11. Flex vs. Grid
+        Flexbox is "content-first" and works best for small components in a single line. Grid is "layout-first" and works best for large-scale, two-dimensional page structures. Most modern websites use both: Grid for the map and Flexbox for the furniture.
+   12. Position Properties
+        The position property defines how an element sits in the document flow using values like static, relative, absolute, fixed, and sticky. It allows you to break elements out of their normal order to create overlays or "stuck" headers. It is vital for precise, pixel-perfect placement.
+   13. Relative vs. Absolute
+        Relative keeps an element in the flow but acts as an "anchor" for its children. Absolute rips an element out of the flow and positions it relative to its nearest relative parent. This duo is how you place "Sale" badges on images or icons inside input fields.
+   14. z-index
+        z-index controls the "stacking order" of overlapping elements along the depth axis. A higher number stays on top of a lower number, but it only works on elements that have a position set. It’s like deciding which piece of paper sits on top of the pile.
+   15. Overflow
+        The overflow property decides what happens when content is too big for its container. hidden clips the extra content, while scroll or auto adds scrollbars to let the user see the rest. It prevents your layout from "breaking" when text or images get too long.
+   16. Visibility vs. Display
+        display: none removes an element and its space entirely from the page. visibility: hidden makes the element invisible but keeps the "ghost" space it originally occupied. Use display to hide menus and visibility to keep a layout from shifting.
+   17. !important
+        !important is the "nuclear option" that forces a CSS style to override all other rules regardless of specificity. It should be avoided because it makes debugging very difficult and breaks the natural "cascade" of CSS. Only use it as a last resort for third-party styles.
+   18. Media Queries
+        Media queries are the foundation of "Responsive Design," allowing you to apply different styles based on screen size. They detect if a user is on a phone, tablet, or desktop and swap the layout to fit. This ensures your site looks great on every possible device.
+   19. Box-Sizing
+        The box-sizing property changes how the browser calculates the width of a box. Setting it to border-box includes padding and borders inside the width you set, making layout math much easier. Most pros apply this to every element at the start of a project.
+   20. How to Center a Div
+        The most modern way to center a div is using Flexbox with justify-content: center and align-items: center. You can also use CSS Grid's place-items: center for a two-line solution. Centering is a classic CSS challenge that these modern tools finally solved.
+   21. CSS Preprocessors (Sass/LESS)
+        Preprocessors add programming features like variables, nesting, and functions to standard CSS. You write code in a "fancy" version (like Sass) which is then compiled into regular CSS for the browser. They help keep large projects organized and reduce repetitive code.
+   22. Reflow & Repaint
+         Reflow is when the browser calculates the size and position of elements; Repaint is when it draws the pixels (colors). Reflow is "expensive" and slow, while Repaint is faster. Optimizing CSS means choosing properties that avoid constant Reflows for smoother performance.
+
+--------------------------------------------------------------------------------------------------------
+🚀 CSS THEORY – TOP IMPORTANT TOPICS
+     🧠 1. CORE CSS FUNDAMENTALS (⭐⭐⭐⭐⭐)
+          What is CSS? How it works with HTML
+          CSS syntax (selector + property + value)
+          Types of CSS (inline, internal, external)
+          CSS cascade (🔥 VERY IMPORTANT)
+          Specificity rules (🔥 MUST KNOW)
+     👉 VERY COMMON:
+          “Why your CSS not applied?”
+     🎯 2. SELECTORS (⭐⭐⭐⭐⭐)
+     Basic selectors (tag, class, id)
+          Combinators (>, +, ~, space)
+          Attribute selectors
+          Pseudo-classes (:hover, :nth-child)
+          Pseudo-elements (::before, ::after)
+     👉 Interview focus:
+          Specificity calculation
+          Which selector wins?
+     📦 3. BOX MODEL (⭐⭐⭐⭐⭐)
+          Content, Padding, Border, Margin
+          Margin vs Padding (🔥 VERY COMMON)
+          box-sizing (content-box vs border-box)
+     👉 REAL QUESTION:
+          “Why element size is different than expected?”
+     📐 4. LAYOUT BASICS (⭐⭐⭐⭐)
+          display property
+          block vs inline vs inline-block
+          visibility vs display
+          overflow
+     ⚡ 5. FLEXBOX (VERY IMPORTANT ⭐⭐⭐⭐⭐)
+          flex container & flex items
+          justify-content
+          align-items
+          flex-direction
+          gap
+     👉 VERY COMMON:
+          “How to center a div?”
+     🧩 6. CSS GRID (⭐⭐⭐⭐⭐)
+          grid container
+          rows & columns
+          grid-template
+          gap
+          grid vs flex (🔥 IMPORTANT)
+     📍 7. POSITIONING (⭐⭐⭐⭐⭐)
+          static, relative, absolute, fixed, sticky
+          relative vs absolute (🔥 MUST KNOW)
+          z-index (stacking context)
+     👉 REAL QUESTION:
+          “Why z-index not working?”
+     📱 8. RESPONSIVE DESIGN (⭐⭐⭐⭐⭐)
+          Media queries
+          Mobile-first approach
+          breakpoints
+          viewport units (vh, vw)
+     👉 VERY IMPORTANT:
+          “Why UI breaks in mobile?”
+     🎨 9. STYLING & UNITS (⭐⭐⭐⭐)
+          colors (hex, rgb)
+          units (px, %, em, rem)
+          font styling
+          line-height, spacing
+     👉 Interview focus:
+          em vs rem difference
+     ⚙️ 10. ADVANCED CSS (⭐⭐⭐⭐⭐)
+          CSS variables (custom properties)
+          transitions
+          animations
+          transforms
+          object-fit
+     🚀 11. PERFORMANCE (ADVANCED ⭐⭐⭐⭐)
+          Reflow vs Repaint (🔥 IMPORTANT)
+          Avoid layout thrashing
+          Efficient selectors
+     🧠 12. PREPROCESSORS (⭐⭐⭐)
+          Sass / LESS
+          variables, nesting
+     🧩 13. REAL-WORLD SCENARIOS (VERY IMPORTANT 🔥)
+     👉 THIS is where interviews are won
+     🔥 SCENARIO 1
+          👉 CSS not applying
+          ✅ Check:
+          specificity
+          override
+          !important misuse
+     🔥 SCENARIO 2
+     👉 Element not centered
+          ✅ Use:
+          flexbox or grid
+     🔥 SCENARIO 3
+     👉 z-index not working
+          ✅ Reason:
+          no position applied
+          stacking context issue
+     🔥 SCENARIO 4
+     👉 Layout breaking on mobile
+          ✅ Fix:
+          media queries
+          responsive units
+     🔥 SCENARIO 5
+     👉 Extra scroll appearing
+          ✅ Fix:
+          overflow handling
+          width issues
+     🔥 SCENARIO 6
+     👉 Animation lagging
+          ✅ Reason:
+          reflow-heavy properties
+          use transform instead
+     💥 HOW THEY ACTUALLY ASK (IMPORTANT)
+     ❌ Not like:
+     What is Flexbox?
+          ✅ They ask:
+          “Why your div not centered?”
+          “Why layout breaking in mobile?”
+          “Why z-index not working?”
+          “Why CSS override not happening?”
+          “Why animation lagging?”
+     🔥 HOW TO PREPARE (SMART WAY)
+     For each topic:
+          Explain simply
+          Write small example
+          Give real-world usage
+          💯 FINAL ADVICE (VERY IMPORTANT FOR YOU)
+     At your level (target 12–15 LPA):
+     👉 CSS is NOT just styling
+     👉 It is layout + problem solving
+     Most devs:
+     ❌ Know React
+     ❌ Weak in CSS
+     If YOU:
+     ✔ Strong in CSS
+     ✔ Strong in React
+
+
+--------------------------------------------------------------------------------------------------------
+3.Coding Questions
+
+
+--------------------------------------------------------------------------------------------------------
+4.Scenarios Questions
+    
+
+--------------------------------------------------------------------------------------------------------
+    
+Follow-up :
+    Date 26 march -> read
+    Date 07 April -> read for Axchange L2 round interview
+    Date 12 April -> read for Interview
+    Date 13 April ->  read for Interview
+    Date 14 April ->  read for Interview
+    Date 20 April ->  read for Interview
+    Date 21 April ->  read for Interview
+    Date 22 April ->  read for Interview

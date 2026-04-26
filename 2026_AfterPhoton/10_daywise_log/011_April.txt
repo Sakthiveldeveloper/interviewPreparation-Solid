@@ -1,0 +1,260 @@
+prepare for the interview 
+    1.REO digital and Appexpert
+    2.Swass
+    3. Mock interview
+-----------------------------------------------------
+PLAN
+First be master in the normal
+FIRST -> HTML, CSS, js, REACT, TYPE SCRIPT, next JS, REDUX, NODE,
+
+NEXT IS -> VUE
+
+----------------------------------------------
+PROGRESS
+Js is coding round complete
+React Inprogress
+
+---------------------------------------------------------
+
+1.js coding return Practice
+// 1.resverse String
+// function resverseString(param){
+//   // use inbuild
+//   // return param.split('').reverse().join('')
+//   // for loop
+//   let reversedValue = '';
+//   for(let i = param.length-1; i>=0 ;i--){
+//     reversedValue += param[i]
+//   }
+//   return reversedValue;
+// }
+// console.log(resverseString('check'))
+
+// // 2.palindrome
+// function CheckPalindrom(input){
+//   // use reverse
+//   // let reversedValue  = input.split('').reverse().join('');
+//   // return reversedValue === input;
+//   // use for loop
+//   let reversedValue = '';
+//   for (let i = input.length-1; i>=0; i--){
+//     reversedValue += input[i]
+//   }
+//   return reversedValue == input
+// }
+// console.log(CheckPalindrom('malayalam'))
+// console.log(CheckPalindrom('text'))
+
+// 3. count value 
+// function checkCount(input){
+//   let trimmedValue = input.toLowerCase();
+//   let countValue = {};
+//   for (let char of trimmedValue){
+//     countValue[char] = (countValue[char] | 0) + 1
+//   }
+//   return countValue
+// }
+
+// console.log(checkCount('checkLL'))
+
+// 4. anagram
+// function CheckAnagram(input1, input2){
+//   // use sort
+//   // let sortedValue1 = input1.split('').sort().join('');
+//   // let sortedValue2 = input2.split('').sort().join('');
+//   // return sortedValue1 ==  sortedValue2
+//   // use for loop
+//   let countValue1 = {};
+  
+//   for(let char of input1){
+//     countValue1[char] = (countValue1 [char] | 0) + 1;
+//   }
+  
+//   for (let charValue of input2) {
+//     if(!countValue1[charValue]){
+//       return false
+//     } else {
+//       countValue1[charValue] -= 1
+//     }
+//     return true
+//   }
+// }
+
+// console.log(CheckAnagram('checkLL', 'sasa'));
+// console.log(CheckAnagram('cat', 'act'))
+
+// 5. duplicate
+// function removeDuplicate(inputParam){
+//   // use Set
+//   // return new Set(inputParam)
+//   // use filter
+//   // return inputParam.filter((value, index, arr)=>{
+//   //   return inputParam.indexOf(value) == index
+//   // })
+//   // use reduce
+//   return inputParam.reduce((acc, value)=>{
+//     if(!acc.includes(value)){
+//       acc.push(value)
+//     }
+//     return acc;
+//   },[])
+// }
+// console.log(removeDuplicate([1,2,3,4,1,2,3,4,5,1,3,6,7]))
+
+// 6. max and min value 
+// function minValue(input){
+//   // max value
+//   // let maxValue = input[0];
+//   // for(let value of input){
+//   //   if(value> maxValue){
+//   //     maxValue = value
+//   //   }
+//   // }
+//   // return maxValue;
+//   // min value
+//   let minValue = input[0];
+//   for(let value of input){
+//     if(value< minValue){
+//       minValue = value
+//     }
+//   }
+//   return minValue;
+// }
+// console.log(minValue([91,22,11,43]))
+
+// 7.second largest value
+// function secondLargestValue(inputValue) {
+//   let firstLargestValue = -Infinity;
+//   let secondLargestValue = -Infinity;
+//   for(let value of inputValue){
+//     if(value>firstLargestValue){
+//       secondLargestValue = firstLargestValue;
+//       firstLargestValue = value
+//     } else if (value>secondLargestValue&& value<firstLargestValue){
+//       secondLargestValue = value
+//     }
+//   }
+//   return secondLargestValue
+// }
+
+// console.log(secondLargestValue([311,322,433,411,]))
+
+// 8. flat Array
+// function flattenArray(inputValue){
+//   // console.log('inputValue', inputValue)
+//   // let flatedArray = []
+//   // for(let i=0; i<inputValue.length; i++){
+//   //   // console.log(i,'i')
+//   //   if(Array.isArray(inputValue[i])){
+//   //     flatedArray = flatedArray.concat(flattenArray(inputValue[i]))
+//   //   }else {
+//   //     flatedArray.push(inputValue[i])
+//   //   }
+//   // }
+ 
+//   // return flatedArray
+//   // use  flatedArray
+//   return inputValue.flat(Infinity)
+// }
+
+// console.log(flattenArray([1,2,3,[4,5,6],[7,8],[9]]))
+
+// 9. fetch
+//async function getData(url){
+//   try{
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     return data;
+//   }catch(error){
+//     console.log(error)
+//   }
+// }
+
+// console.log(getData('url'))
+// 10.post data
+// async function postData(url, payload){
+//   try{
+//     const response = await fetch(url, {
+//       method, 'POST',
+//       header:{
+//         Content-Type  : 'application/json';
+        
+//       },
+//       payload: JSON.stringify(payload)
+//     })
+//     const data =  await response.json();
+//     return data;
+//   } catch(error){
+//     console.log(error)
+//   }
+// }
+
+// 11. debounce
+// function debounce(func, delay){
+//   let timer;
+//   return function (...args){
+//     clearTimeout(timer);
+//     timer = setTimeout(()=>{
+//       return func.apply(this, args)
+//     },delay)
+//   }
+// }
+
+// const searchTimer = debounce(()=>{
+//   console.log('Check the search debounce')
+// },200)
+
+// searchTimer();
+// searchTimer()
+
+// 12.throttle
+// function throttle(func, limit){
+//   let startScroll = false;
+//   return function (...args){
+//     if(!startScroll){
+//       startScroll = false;
+//       setTimeout(()=>{
+//         func.apply(this, args)        
+//         startScroll = false;
+//         console.log('check')
+//       },limit)
+//     }
+//   }
+// }
+
+// const myThrottle= throttle(()=>{
+//   console.log('my scroll throttle')
+// },200)
+
+// myThrottle();
+
+//13. promise
+// const promise = (vale, limit) =>{ new Promise((resolve, reject)=>{
+//   setTimeout(()=>{
+//     console.log(`${vale}`)
+//   },limit)
+// }) }
+
+// promise('1000 after come  SA', 1000)
+
+// 14.intersectin of 2 array 
+function intersectinArray(arr1, arr2){
+  // use filter
+// const set2 = new Set(inputValue2);
+//   const intersection = inputValue1.filter(item => set2.has(item));
+//   return intersection
+// use for loop
+const intersection = [];
+
+for (let i = 0; i < arr1.length; i++) {
+  for (let j = 0; j < arr2.length; j++) {
+    if (arr1[i] === arr2[j]) {
+      intersection.push(arr1[i]);
+      break; // Found a match, move to the next element in arr1
+    }
+  }
+
+} 
+return intersection  
+}
+console.log(intersectinArray([1,3,4], [1,2,3,4]))

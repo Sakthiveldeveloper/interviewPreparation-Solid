@@ -1,0 +1,62 @@
+JWT → Token
+OAuth → Login flow
+RBAC → Permissions
+Keycloak/FusionAuth → Auth 
+
+
+----------------------------------------------------------------------------------------------
+🧠 🔐 Security & Auth — Quick Recall Sheet
+    🔹 1. JWT (JSON Web Token)
+        👉 What?
+        Token-based authentication
+        👉 Flow
+        Login → Server gives JWT
+        Client sends JWT in every request
+        👉 Key Point
+        Stateless (no session)
+        👉 Use
+        Secure APIs
+    🔹 2. OAuth 2.0
+        👉 What?
+        Authorization framework
+        👉 Use Case
+        “Login with Google”
+        👉 Flow
+        Redirect → Permission → Token
+        👉 Key Point
+        No password sharing 
+    🔹 3. RBAC (Role-Based Access Control)
+        👉 What?
+        Access based on roles
+        👉 Example
+        Admin → full access
+        User → limited access
+        👉 Structure
+        User → Role → Permissions
+    🔹 4. Keycloak
+        👉 What?
+        Open-source IAM tool
+        👉 Handles
+        Login
+        JWT
+        OAuth
+        RBAC
+        👉 Use
+        Enterprise auth system
+    🔹 5. FusionAuth
+        👉 What?
+        Modern auth platform (Keycloak alternative)
+        👉 Handles
+        JWT
+        OAuth
+        User management
+        👉 Use
+        Faster setup, developer-friendly
+    🔥 One-Line Master Answer (Must Remember)
+        “JWT is used for stateless authentication, OAuth2 handles secure authorization like social login, RBAC controls access, and tools like Keycloak or FusionAuth manage authentication and authorization centrally.”
+    💥 This line = clean + professional
+    ⚡ Ultra Short Memory Trick
+        JWT → Token
+        OAuth → Login flow
+        RBAC → Permissions
+        Keycloak/FusionAuth → Auth system
