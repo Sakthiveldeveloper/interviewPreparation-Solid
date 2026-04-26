@@ -1,0 +1,413 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+
+    1. Basics
+    - What is Next.js? (React Framework)
+    - Why Next.js? (SSR, SSG, Performance, SEO)
+    - Next.js vs React (CRA/Vite)
+    - Folder structure (app / pages)
+    - Running app (npx create-next-app)
+
+    2. Routing
+    - File-based routing
+    - Pages Router (/pages)
+    - App Router (/app) (modern)
+    - Dynamic routes ([id], [...slug])
+    - Nested routes
+    - Route groups & layouts
+
+    3. Rendering Methods
+    - CSR (Client Side Rendering)
+    - SSR (Server Side Rendering)
+    - SSG (Static Site Generation)
+    - ISR (Incremental Static Regeneration)
+    - Streaming & Partial Rendering (App Router)
+
+    4. Data Fetching
+    - fetch() in Server Components
+    - getServerSideProps (Pages Router)
+    - getStaticProps
+    - getStaticPaths
+    - API Routes (/api)
+    - Caching (force-cache, no-store)
+
+    5. Components
+    - Server Components (default in App Router)
+    - Client Components ("use client")
+    - Shared components
+    - Layouts (layout.js)
+    - Templates
+    - Loading & Error UI (loading.js, error.js)
+
+    6. Styling
+    - CSS Modules
+    - Global CSS
+    - Tailwind CSS
+    - Styled-components
+    - Sass support
+
+    7. Middleware
+    - middleware.ts
+    - Authentication checks
+    - Redirects
+    - Rewrites
+    - Edge runtime
+
+    8. API & Backend Features
+    - API Routes (/pages/api)
+    - Route Handlers (/app/api)
+    - Request & Response handling
+    - Authentication (JWT, sessions)
+    - Edge Functions
+
+    9. Image & Optimization
+    - next/image (Image optimization)
+    - next/link (Client navigation)
+    - Font optimization (next/font)
+    - Script optimization (next/script)
+
+    10. Authentication
+    - NextAuth.js
+    - JWT-based auth
+    - Session-based auth
+    - Middleware protection
+    - OAuth (Google, GitHub)
+
+    11. Environment & Config
+    - .env.local
+    - next.config.js
+    - Public vs Private env variables
+    - Runtime configs
+
+    12. Deployment
+    - Vercel (recommended)
+    - Self-hosting (Node server)
+    - Static export
+    - Edge deployment
+
+    13. Performance Optimization
+    - Code splitting
+    - Lazy loading (dynamic imports)
+    - Image optimization
+    - Caching strategies
+    - Bundle analysis
+
+    14. Advanced Features
+    - Server Actions (App Router)
+    - Suspense & Streaming
+    - Parallel routes
+    - Intercepting routes
+    - Metadata API (SEO)
+
+    15. Error Handling
+    - error.js
+    - try/catch in server actions
+    - 404 handling (not-found.js)
+    - Logging & monitoring
+
+    16. Best Practices
+    - Prefer Server Components
+    - Use caching properly
+    - Avoid unnecessary client components
+    - Structure folders cleanly
+    - Keep components small & reusable
+
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    NEXT.JS THEORY QUESTIONS (TOP 30)
+
+    1. What is Next.js?
+    2. Next.js vs React?
+    3. What is SSR?
+    4. What is SSG?
+    5. What is ISR?
+
+    6. CSR vs SSR vs SSG?
+    7. What is hydration?
+    8. What is App Router?
+    9. Pages vs App Router?
+    10. What is file-based routing?
+
+    11. What are dynamic routes?
+    12. What is layout in Next.js?
+    13. What is loading.js?
+    14. What is error.js?
+    15. What is not-found.js?
+
+    16. Server vs Client components?
+    17. What is "use client"?
+    18. What is server action?
+    19. What is data fetching in Next.js?
+    20. What is caching?
+
+    21. What is revalidation?
+    22. What is middleware?
+    23. What are API routes?
+    24. What is route handler?
+    25. How authentication works?
+
+    26. What is next/image?
+    27. What is next/link?
+    28. What is SEO in Next.js?
+    29. What is deployment process?
+    30. When to use Next.js?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    NEXT.JS CODING QUESTIONS (TOP 30)
+
+    1. Create Next.js app
+    2. Create basic page
+    3. Navigation using next/link
+    4. Dynamic route (/user/[id])
+    5. Nested layout
+
+    6. Server component example
+    7. Client component example
+    8. use client usage
+    9. Fetch data (server)
+    10. Fetch data (client)
+
+    11. SSR page
+    12. SSG page
+    13. ISR example
+    14. Loading UI
+    15. Error UI
+
+    16. Create API route
+    17. Handle GET request
+    18. Handle POST request
+    19. Connect frontend to API
+    20. Middleware example
+
+    21. Auth using JWT
+    22. Protected route
+    23. Cookie handling
+    24. next/image usage
+    25. Lazy loading component
+
+    26. Dynamic import
+    27. Cache API response
+    28. Pagination page
+    29. Infinite scroll
+    30. SEO meta setup
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    NEXT.JS SCENARIO QUESTIONS (TOP 30)
+
+    1. Page slow — which rendering choose?
+    2. SEO issue — how fix?
+    3. API called twice — why?
+    4. Hydration error — why?
+    5. Data mismatch server/client?
+
+    6. SSR vs SSG — when use?
+    7. Dynamic route not working?
+    8. Middleware not triggering?
+    9. Auth not protecting route?
+    10. Cookie not accessible?
+
+    11. Page flickering?
+    12. Loading UI not showing?
+    13. Error boundary not working?
+    14. Cache not updating?
+    15. Revalidation not working?
+
+    16. Client component heavy — optimize?
+    17. Server component issue?
+    18. API route failing?
+    19. Form submit not working?
+    20. Navigation slow?
+
+    21. next/image not loading?
+    22. SEO not indexing?
+    23. Environment variable issue?
+    24. Build failing?
+    25. Deployment issue?
+
+    26. Infinite scroll slow?
+    27. Pagination bug?
+    28. API race condition?
+    29. Auth session lost?
+    30. Performance issue?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    NEXT.JS TRICKY QUESTIONS (TOP 30)
+
+    1. SSR vs CSR difference?
+    2. SSG vs ISR?
+    3. Hydration problem?
+    4. Server vs client component?
+    5. use client necessity?
+
+    6. Why API called twice?
+    7. Why useEffect runs twice?
+    8. Cache vs no-store?
+    9. Revalidate vs rebuild?
+    10. Edge vs Node runtime?
+
+    11. next/image vs img?
+    12. next/link vs anchor?
+    13. Dynamic routes edge cases?
+    14. Middleware order?
+    15. Cookies vs localStorage?
+
+    16. SEO vs CSR tradeoff?
+    17. Data fetching location?
+    18. Server action vs API route?
+    19. Streaming benefits?
+    20. Suspense behavior?
+
+    21. Environment variable scope?
+    22. Build vs runtime?
+    23. Static export limitation?
+    24. Auth best practice?
+    25. Performance optimization?
+
+    26. Bundle size issue?
+    27. Lazy loading issue?
+    28. Route handler vs API route?
+    29. Why Next.js faster?
+    30. When NOT to use Next.js?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    NEXT.JS DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build blog (SSG)
+    2. Build dashboard (SSR)
+    3. Build e-commerce (ISR)
+    4. Create full-stack app
+    5. Build auth system
+
+    6. Create protected routes
+    7. Middleware auth
+    8. Build API layer
+    9. Server actions usage
+    10. Cache system
+
+    11. Pagination system
+    12. Infinite scroll
+    13. Search with debounce
+    14. Form handling
+    15. Error handling system
+
+    16. Optimize images
+    17. Improve SEO
+    18. Lazy loading components
+    19. Code splitting
+    20. Reduce bundle size
+
+    21. Build reusable layout
+    22. Create dynamic routes
+    23. Nested routing system
+    24. Loading states
+    25. Error UI
+
+    26. Deploy to Vercel
+    27. Handle env variables
+    28. Debug production issue
+    29. Improve performance
+    30. Refactor app structure
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    NEXT.JS REAL-WORLD MAPPING (TOP 30)
+
+    1. How do you improve SEO?
+    → SSR/SSG
+
+    2. How do you fetch data?
+    → server fetch
+
+    3. How do you handle auth?
+    → cookies + middleware
+
+    4. How do you protect routes?
+    → middleware
+
+    5. How do you optimize images?
+    → next/image
+
+    6. How do you improve performance?
+    → caching
+
+    7. How do you structure app?
+    → app router
+
+    8. How do you handle API?
+    → route handlers
+
+    9. How do you debug?
+    → logs/devtools
+
+    10. How do you manage state?
+    → client + server
+
+    11. How do you reduce load time?
+    → SSG
+
+    12. How do you handle dynamic pages?
+    → dynamic routes
+
+    13. How do you cache data?
+    → revalidate
+
+    14. How do you handle errors?
+    → error.js
+
+    15. How do you handle loading?
+    → loading.js
+
+    16. How do you scale app?
+    → modular structure
+
+    17. How do you deploy?
+    → Vercel
+
+    18. How do you handle env?
+    → .env
+
+    19. How do you optimize bundle?
+    → code splitting
+
+    20. How do you manage navigation?
+    → next/link
+
+    21. How do you handle forms?
+    → server action/API
+
+    22. How do you prevent duplicate calls?
+    → caching
+
+    23. How do you improve UX?
+    → streaming
+
+    24. How do you handle large data?
+    → pagination
+
+    25. How do you manage sessions?
+    → cookies
+
+    26. How do you handle async?
+    → async/await
+
+    27. How do you ensure security?
+    → middleware
+
+    28. How do you debug production?
+    → logs
+
+    29. How do you maintain code?
+    → clean structure
+
+    30. How do you deliver app?
+    → optimized build
+------------------------------------------------------------------------------------------------------

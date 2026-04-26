@@ -1,0 +1,464 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+        CSS (Cascading Style Sheets)
+    ├── 1. Basics
+    │   ├── What is CSS?
+    │   ├── Types of CSS
+    │   │   ├── Inline CSS
+    │   │   ├── Internal CSS
+    │   │   └── External CSS
+    │   ├── Syntax: selector { property: value; }
+    │   └── File extension: .css
+    │
+    ├── 2. Selectors
+    │   ├── Basic Selectors
+    │   │   ├── Universal (*)
+    │   │   ├── Type (p, h1, div)
+    │   │   ├── Class (.classname)
+    │   │   ├── ID (#id)
+    │   │   └── Grouping (,)
+    │   ├── Combinators
+    │   │   ├── Descendant ( )
+    │   │   ├── Child (>)
+    │   │   ├── Adjacent sibling (+)
+    │   │   └── General sibling (~)
+    │   ├── Attribute selectors
+    │   │   ├── [attr]
+    │   │   ├── [attr="value"]
+    │   │   └── [attr^="start"], [attr$="end"], [attr*="contains"]
+    │   └── Pseudo-classes & Pseudo-elements
+    │       ├── Pseudo-classes (:hover, :focus, :nth-child)
+    │       └── Pseudo-elements (::before, ::after, ::first-letter)
+    │       └── content property (used with pseudo-elements)
+    │
+    ├── 3. Colors & Units
+    │   ├── Color formats: name, HEX, RGB, RGBA, HSL, HSLA
+    │   ├── Units: px, %, em, rem, vw, vh
+    │   ├── Transparent colors
+    │   └── Opacity
+    │
+    ├── 4. Box Model
+    │   ├── Content
+    │   ├── Padding
+    │   ├── Border
+    │   ├── Margin
+    │   ├── box-sizing: content-box | border-box
+    │   ├── box-shadow
+    │   └── text-shadow
+    │
+    ├── 5. Typography
+    │   ├── font-family
+    │   ├── font-size
+    │   ├── font-weight
+    │   ├── line-height
+    │   ├── text-align
+    │   ├── text-decoration
+    │   ├── letter-spacing, word-spacing
+    │   └── responsive typography (fluid typography, clamp())
+    │
+    ├── 6. Backgrounds & Visual Effects
+    │   ├── background-color
+    │   ├── background-image
+    │   ├── background-repeat
+    │   ├── background-position
+    │   ├── background-size
+    │   ├── background-attachment
+    │   ├── opacity
+    │   └── box-shadow, text-shadow (also in Box Model)
+    │
+    ├── 7. Layout
+    │   ├── Display
+    │   │   ├── block, inline, inline-block
+    │   │   ├── flex, grid
+    │   │   └── none
+    │   ├── Position
+    │   │   ├── static
+    │   │   ├── relative
+    │   │   ├── absolute
+    │   │   ├── fixed
+    │   │   └── sticky
+    │   ├── Float & Clear
+    │   ├── Z-index
+    │   ├── Overflow
+    │   │   ├── overflow-x
+    │   │   └── overflow-y
+    │   ├── Visibility
+    │   │   ├── visible
+    │   │   └── hidden
+    │   ├── pointer-events
+    │   └── CSS `calc()` (for dynamic sizing & layout)
+    │
+    ├── 8. Flexbox
+    │   ├── display: flex
+    │   ├── flex-direction
+    │   ├── justify-content
+    │   ├── align-items
+    │   ├── flex-wrap
+    │   └── align-content
+    │
+    ├── 9. CSS Grid
+    │   ├── display: grid
+    │   ├── grid-template-rows
+    │   ├── grid-template-columns
+    │   ├── grid-gap
+    │   ├── grid-row & grid-column
+    │   ├── justify-items & align-items
+    │   ├── grid-auto-flow
+    │   └── grid-template-areas
+    │
+    ├── 10. Transitions & Animations
+    │   ├── transition-property, duration, timing-function, delay
+    │   ├── @keyframes
+    │   └── animation properties (name, duration, iteration-count)
+    │
+    ├── 11. Transformations
+    │   ├── rotate()
+    │   ├── scale()
+    │   ├── translate()
+    │   └── skew()
+    │
+    ├── 12. Responsive Design
+    │   ├── Media queries
+    │   ├── Mobile-first approach
+    │   ├── Relative units (%, em, rem, vw, vh)
+    │   ├── Responsive images & typography
+    │   └── fluid typography & clamp() (also in Typography)
+    │
+    ├── 13. Variables & Functions
+    │   ├── CSS variables (--var-name)
+    │   ├── var()
+    │   ├── calc()
+    │   ├── min(), max(), clamp()
+    │   └── Custom properties
+    │
+    ├── 14. CSS Specificity & Inheritance
+    │   ├── Specificity hierarchy
+    │   ├── !important usage
+    │   └── Inheritable properties
+    │
+    Browser Rendering (IMPORTANT)
+    ├── Style calculation
+    ├── Layout (Reflow)
+    ├── Paint
+    ├── Composite
+    Performance
+    ├── Avoid layout thrashing
+    ├── Use transform instead of top/left
+    ├── Minimize reflow
+    └── 15. Best Practices
+        ├── Keep styles modular
+        ├── Use external CSS for maintainability
+        ├── Prefer semantic class names
+        ├── Avoid overusing !important
+        ├── Validate CSS (W3C Validator)
+        └── Consider CSS preprocessors (Sass, LESS) — optional for advanced users
+
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    CSS THEORY QUESTIONS (TOP 30)
+
+    🧠 BASICS
+    1. What is CSS and how it works with HTML?
+    2. What are types of CSS?
+    3. What is CSS cascade?
+    4. What is specificity?
+    5. Why CSS sometimes not applied?
+
+    🎯 SELECTORS
+    6. Difference between class and id selector?
+    7. What are combinators?
+    8. What are pseudo-classes?
+    9. What are pseudo-elements?
+    10. What is attribute selector?
+
+    📦 BOX MODEL
+    11. Explain box model?
+    12. Margin vs padding?
+    13. What is box-sizing?
+    14. content-box vs border-box?
+    15. Why element size is different than expected?
+
+    📐 LAYOUT
+    16. Difference between block, inline, inline-block?
+    17. What is display property?
+    18. display none vs visibility hidden?
+    19. What is overflow?
+    20. What is z-index?
+
+    ⚡ FLEXBOX
+    21. What is flexbox?
+    22. justify-content vs align-items?
+    23. flex-direction?
+    24. How to center a div?
+
+    🧩 GRID
+    25. What is CSS grid?
+    26. Grid vs flexbox?
+
+    📍 POSITION
+    27. Difference between relative and absolute?
+    28. What is fixed and sticky?
+
+    📱 RESPONSIVE
+    29. What are media queries?
+    30. em vs rem?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+        CSS CODING QUESTIONS (TOP 30)
+
+    1. Center a div using flexbox
+    2. Center a div using grid
+    3. Create responsive navbar
+    4. Build card layout using flexbox
+    5. Create grid layout (3 columns)
+
+    6. Add hover effect to button
+    7. Create dropdown menu using CSS
+    8. Build login form UI
+    9. Create image gallery grid
+    10. Add box shadow and styling
+
+    11. Create sticky header
+    12. Build sidebar layout
+    13. Make responsive layout using media queries
+    14. Create animation using keyframes
+    15. Add transition effects
+
+    16. Build pricing card UI
+    17. Create responsive table
+    18. Design profile card
+    19. Use z-index to overlay elements
+    20. Create modal popup UI
+
+    21. Create loading spinner
+    22. Build responsive footer
+    23. Create flex wrap layout
+    24. Use clamp() for responsive text
+    25. Add gradient background
+
+    26. Build dashboard layout
+    27. Create tooltip using pseudo-element
+    28. Add transform animation
+    29. Create multi-column layout
+    30. Build responsive form UI
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    CSS SCENARIO QUESTIONS (TOP 30)
+
+    1. CSS not applying — what will you check?
+    2. Why class style overridden?
+    3. Why z-index not working?
+    4. Why margin collapsing happening?
+    5. Why element not centered?
+
+    6. Layout breaking on mobile — why?
+    7. Flex not aligning properly — why?
+    8. Grid not working — possible reasons?
+    9. Why overflow causing scroll?
+    10. Why element hidden unexpectedly?
+
+    11. Why position absolute not working?
+    12. Why sticky not working?
+    13. Why fixed element overlapping?
+    14. Why height not applying?
+    15. Why width behaving weird?
+
+    16. Why animation lagging?
+    17. Why hover not working?
+    18. Why media query not working?
+    19. Why CSS working locally but not in prod?
+    20. Why styles flickering?
+
+    21. Why flex items shrinking?
+    22. Why grid gaps not applying?
+    23. Why font size inconsistent?
+    24. Why image stretched?
+    25. Why layout shifts?
+
+    26. Why CSS file not loading?
+    27. Why inline CSS overriding external?
+    28. Why important breaking styles?
+    29. Why scroll appearing unexpectedly?
+    30. Why responsive breakpoints failing?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    CSS TRICKY QUESTIONS (TOP 30)
+
+    1. Specificity vs !important?
+    2. Can inline CSS override external?
+    3. Why z-index not working?
+    4. What creates stacking context?
+    5. Margin collapsing?
+
+    6. Difference between display none & visibility hidden?
+    7. Why height 100% not working?
+    8. What happens with overflow hidden?
+    9. Can we animate display?
+    10. Difference between opacity and visibility?
+
+    11. em vs rem?
+    12. vh vs %?
+    13. Why position absolute moves?
+    14. Relative vs absolute?
+    15. Why flex item not shrinking?
+
+    16. Why grid better than flex sometimes?
+    17. What is min-content vs max-content?
+    18. Why transform is faster than top/left?
+    19. Why animation causes reflow?
+    20. Why CSS variables useful?
+
+    21. Why pseudo-element not visible?
+    22. Difference between ::before and :before?
+    23. Why hover not working on mobile?
+    24. Why flex gap not working older browsers?
+    25. Why text overflow?
+
+    26. Why fixed breaks in mobile?
+    27. Why sticky fails?
+    28. Why inline-block gap issue?
+    29. Why border-box better?
+    30. Why CSS debugging hard?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    CSS DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build full landing page layout
+    2. Create responsive dashboard
+    3. Build complex grid layout
+    4. Create responsive navbar + sidebar
+    5. Build admin panel UI
+
+    6. Create advanced form UI
+    7. Build modal system
+    8. Create tooltip system
+    9. Build dropdown menu
+    10. Create tab system
+
+    11. Build image gallery with grid
+    12. Create responsive cards
+    13. Build pricing section
+    14. Create blog layout
+    15. Build product UI
+
+    16. Create animation system
+    17. Build loader animations
+    18. Optimize performance CSS
+    19. Reduce reflow issues
+    20. Improve accessibility styles
+
+    21. Create dark/light theme using CSS variables
+    22. Build responsive typography system
+    23. Create reusable utility classes
+    24. Build layout system (grid + flex mix)
+    25. Create responsive breakpoints system
+
+    26. Debug real CSS issues
+    27. Fix broken layouts
+    28. Optimize large DOM styles
+    29. Improve UI consistency
+    30. Refactor messy CSS
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    CSS REAL-WORLD MAPPING (TOP 30)
+
+    1. How did you structure layout?
+    → Used flexbox/grid for scalable layout
+
+    2. How did you handle responsiveness?
+    → Used media queries + mobile-first
+
+    3. How did you center elements?
+    → Flexbox/grid
+
+    4. How did you fix layout breaking?
+    → Checked box model & overflow
+
+    5. How did you debug CSS issues?
+    → DevTools + inspect
+
+    6. How did you manage styles?
+    → Modular CSS / component-based
+
+    7. Why avoid !important?
+    → breaks maintainability
+
+    8. How did you handle z-index issues?
+    → stacking context debugging
+
+    9. How did you optimize CSS performance?
+    → minimized reflow/repaint
+
+    10. How did you handle animations?
+    → used transform instead of layout props
+
+    11. How did you implement theming?
+    → CSS variables
+
+    12. How did you manage spacing?
+    → consistent margin/padding system
+
+    13. How did you ensure consistency?
+    → design system
+
+    14. How did you fix responsive bugs?
+    → breakpoints testing
+
+    15. How did you handle large UI?
+    → component reuse
+
+    16. How did you fix overflow issues?
+    → proper width + overflow control
+
+    17. How did you debug flex issues?
+    → checked alignment + direction
+
+    18. How did you use grid?
+    → for page layout
+
+    19. How did you handle fonts?
+    → rem units
+
+    20. How did you improve UX?
+    → hover + transitions
+
+    21. How did you fix mobile UI?
+    → viewport + media queries
+
+    22. How did you manage CSS scaling?
+    → modular approach
+
+    23. How did you avoid CSS conflicts?
+    → scoped classes
+
+    24. How did you improve load performance?
+    → minimized CSS
+
+    25. How did you debug production issue?
+    → browser dev tools
+
+    26. How did you handle browser compatibility?
+    → fallback styles
+
+    27. How did you manage UI states?
+    → pseudo-classes
+
+    28. How did you handle animations lag?
+    → optimized properties
+
+    29. How did you structure design system?
+    → reusable styles
+
+    30. How did you maintain CSS?
+    → clean naming + modular files
+------------------------------------------------------------------------------------------------------

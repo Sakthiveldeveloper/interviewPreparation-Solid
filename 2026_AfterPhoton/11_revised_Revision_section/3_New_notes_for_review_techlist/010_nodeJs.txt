@@ -1,0 +1,295 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+    Node.js (Interview Mind Map - Final)
+
+Core
+├── Event Loop
+├── Non-blocking I/O
+├── Single-thread model
+├── V8 engine
+
+Async
+├── Callbacks
+├── Promises
+├── async/await
+├── process.nextTick
+
+Modules
+├── CommonJS
+├── ES Modules
+├── Built-in modules
+
+Server
+├── HTTP module
+├── Express.js
+├── Routing & middleware
+
+Data
+├── File system
+├── Streams & buffers
+├── Databases (Mongo, SQL)
+
+Security
+├── JWT
+├── bcrypt
+├── Rate limiting
+├── Validation
+
+Scaling
+├── Cluster
+├── Worker threads
+├── Caching (Redis)
+
+Real-time
+├── WebSockets
+├── Socket.IO
+
+DevOps
+├── PM2
+├── Docker
+├── CI/CD
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+NODE.JS THEORY QUESTIONS (TOP 30)
+
+1. What is Node.js?
+2. How Node.js works internally?
+3. What is V8 engine?
+4. What is event loop?
+5. Event loop phases?
+
+6. What is non-blocking I/O?
+7. Single-threaded vs multi-threaded?
+8. Callback vs Promise vs async?
+9. What is process.nextTick?
+10. setImmediate vs setTimeout?
+
+11. What are modules?
+12. CommonJS vs ES modules?
+13. What is module caching?
+14. What is EventEmitter?
+15. What are streams?
+
+16. Buffer vs stream?
+17. What is Express.js?
+18. What is middleware?
+19. Types of middleware?
+20. What is REST API?
+
+21. What is JWT?
+22. What is bcrypt?
+23. What is CORS?
+24. What is rate limiting?
+25. What is environment variable?
+
+26. What is clustering?
+27. What are worker threads?
+28. How Node handles concurrency?
+29. How to scale Node app?
+30. Best practices in Node.js?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+NODE.JS CODING QUESTIONS (TOP 30)
+
+1. Create HTTP server
+2. Create Express app
+3. Build REST API
+4. Create middleware logger
+5. Error handling middleware
+
+6. Read file async
+7. Write file
+8. Stream large file
+9. Handle file upload
+10. Create custom module
+
+11. JWT auth middleware
+12. Login API
+13. Password hashing (bcrypt)
+14. Protect route
+15. Validate request
+
+16. Create CRUD API
+17. Pagination API
+18. Filter & search API
+19. Retry API logic
+20. Rate limiter
+
+21. Use process.env
+22. Setup MongoDB
+23. Perform CRUD DB
+24. Handle DB errors
+25. Bulk insert
+
+26. Promise.all example
+27. Async queue
+28. Chunk large data (100 records)
+29. WebSocket setup
+30. Logging system
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+NODE.JS SCENARIOS (TOP 30)
+
+1. API slow — why?
+2. High CPU usage?
+3. Memory leak?
+4. Event loop blocked?
+5. Too many requests?
+
+6. DB query slow?
+7. API timeout?
+8. File upload slow?
+9. Large data handling?
+10. API crashing?
+
+11. Duplicate API calls?
+12. Race condition?
+13. Error not handled?
+14. Logging missing?
+15. Rate limit needed?
+
+16. Auth failure?
+17. Token expired?
+18. Data inconsistency?
+19. API not scalable?
+20. Deployment issue?
+
+21. Socket disconnect?
+22. Cluster not working?
+23. Cache issue?
+24. Env variable missing?
+25. Build vs prod issue?
+
+26. Middleware not working?
+27. API response delayed?
+28. Infinite loop?
+29. DB connection issue?
+30. High latency?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+NODE.JS TRICKY QUESTIONS (TOP 30)
+
+1. Node single-threaded — how handles multiple users?
+2. Event loop vs thread?
+3. nextTick vs setImmediate?
+4. Blocking vs non-blocking?
+5. Sync vs async?
+
+6. Streams vs buffer?
+7. Why streams better?
+8. Module caching?
+9. Circular dependency?
+10. require vs import?
+
+11. Middleware flow?
+12. next() purpose?
+13. Error middleware?
+14. Async error handling?
+15. Promise vs callback?
+
+16. JWT vs session?
+17. Stateless vs stateful?
+18. CORS issue?
+19. Rate limiting?
+20. Security risks?
+
+21. Cluster vs worker threads?
+22. Scaling Node?
+23. Memory leak causes?
+24. Debugging Node?
+25. Logging best practice?
+
+26. API design mistakes?
+27. DB optimization?
+28. File handling issue?
+29. Real-time scaling?
+30. When NOT to use Node?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+NODE.JS DEEP PRACTICE (TOP 30)
+
+1. Build REST API
+2. Build auth system
+3. JWT + refresh token
+4. Role-based auth
+5. Middleware system
+
+6. API error handling
+7. Logging system
+8. Validation system
+9. Rate limiter
+10. Cache system
+
+11. Handle large data (chunking)
+12. Stream large files
+13. File upload system
+14. Pagination system
+15. Search & filter
+
+16. DB integration
+17. Optimize queries
+18. Bulk operations
+19. Retry logic
+20. Async queue
+
+21. WebSocket app
+22. Notification system
+23. Real-time chat
+24. Cluster setup
+25. Worker threads
+
+26. Performance tuning
+27. Debugging production
+28. CI/CD setup
+29. Dockerize app
+30. Refactor backend
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+NODE.JS TRICKY QUESTIONS (TOP 30)
+
+1. Node single-threaded — how handles multiple users?
+2. Event loop vs thread?
+3. nextTick vs setImmediate?
+4. Blocking vs non-blocking?
+5. Sync vs async?
+
+6. Streams vs buffer?
+7. Why streams better?
+8. Module caching?
+9. Circular dependency?
+10. require vs import?
+
+11. Middleware flow?
+12. next() purpose?
+13. Error middleware?
+14. Async error handling?
+15. Promise vs callback?
+
+16. JWT vs session?
+17. Stateless vs stateful?
+18. CORS issue?
+19. Rate limiting?
+20. Security risks?
+
+21. Cluster vs worker threads?
+22. Scaling Node?
+23. Memory leak causes?
+24. Debugging Node?
+25. Logging best practice?
+
+26. API design mistakes?
+27. DB optimization?
+28. File handling issue?
+29. Real-time scaling?
+30. When NOT to use Node?
+------------------------------------------------------------------------------------------------------

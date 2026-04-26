@@ -9,7 +9,13 @@ DATA STRUCTURES & ALGORITHMS (DSA)
 │   ├── Backtracking Pattern
 │   ├── Greedy Thinking
 │   ├── Kadane’s Algorithm
-│   └── Monotonic Stack
+│   ├── Monotonic Stack
+├── ├── Hashing (VERY IMPORTANT)
+│   ├── Prefix Sum
+│   ├── Recursion Pattern
+│   ├── Dynamic Programming (basic)
+│   ├── Heap / Priority Queue
+│   ├── Union-Find (basic awareness)
 │
 ├── 1. Fundamentals
 │   ├── Complexity Analysis

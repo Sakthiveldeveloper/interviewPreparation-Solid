@@ -1,0 +1,439 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+-------------------------------------------------------------------------------------------------------
+
+1.🗺️ **Mind Map**
+    HTML (HyperText Markup Language)
+    ├── 1. Basics
+    │   ├── What is HTML?
+    │   ├── Structure of an HTML document
+    │   │   ├── <!DOCTYPE html>
+    │   │   ├── <html>
+    │   │   ├── <head>
+    │   │   └── <body>
+    │   ├── HTML Editors (VS Code, Sublime, etc.)
+    │   └── File extension: .html
+    │
+    ├── 2. Elements & Tags
+    │   ├── Headings: <h1> to <h6>
+    │   ├── Paragraphs: <p>
+    │   ├── Line Breaks & Horizontal Rules: <br>, <hr>
+    │   ├── Text Formatting: <b>, <i>, <strong>, <em>, <mark>, <small>, <del>, <ins>, <sub>, <sup>
+    │   ├── Comments: <!-- comment -->
+    │   └── Semantic vs. Non-semantic Elements
+    │
+    ├── 3. Attributes
+    │   ├── Global Attributes (id, class, style, title)
+    │   ├── Inline CSS (style attribute)
+    │   ├── Boolean Attributes (disabled, checked)
+    │   └── Custom data attributes (data-*)
+    │
+    ├── 4. Links & Media
+    │   ├── Anchor tag: <a href="">
+    │   ├── Images: <img src="" alt="">
+    │   ├── Audio: <audio controls>
+    │   ├── Video: <video controls>
+    │   └── Embedding: <iframe>, <embed>, <object>
+    │
+    ├── 5. Lists
+    │   ├── Ordered List: <ol>
+    │   ├── Unordered List: <ul>
+    │   └── Description List: <dl>, <dt>, <dd>
+    │
+    ├── 6. Tables
+    │   ├── Table: <table>
+    │   ├── Rows & Cells: <tr>, <td>, <th>
+    │   ├── Caption: <caption>
+    │   ├── Table Sections: <thead>, <tbody>, <tfoot>
+    │   └── Attributes: colspan, rowspan
+    │
+    ├── 7. Forms
+    │   ├── Form tag: <form>
+    │   ├── Input fields: <input type="">
+    │   │   ├── text, password, email, number, checkbox, radio, etc.
+    │   ├── Textarea: <textarea>
+    │   ├── Select & Options: <select>, <option>
+    │   ├── Labels: <label for="">
+    │   └── Buttons: <button>, <input type="submit">
+    │
+    ├── 8. Semantic HTML5 Elements
+    │   ├── Structural: <header>, <nav>, <main>, <section>, <article>, <footer>, <aside>
+    │   └── Media: <figure>, <figcaption>
+    │
+    ├── 9. Metadata & Head
+    │   ├── <title>
+    │   ├── <meta> (charset, viewport, description, etc.)
+    │   ├── <link> (external CSS)
+    │   ├── <style> (internal CSS)
+    │   └── <script> (JavaScript)
+    │
+    ├── 10. Accessibility
+    │   ├── alt text
+    │   ├── ARIA roles
+    │   └── Keyboard navigation
+    │
+    ├── Browser Working
+    |    ├── DOM creation
+    |   ├── CSSOM
+    |   ├── Render Tree
+    |   ├── Reflow & Repaint
+    │
+    │──Performance
+    |     ├── Lazy loading images
+    |     ├── Script loading (async/defer)
+    |     ├── Minification
+    |     ├── Critical rendering path
+    Debugging
+    |      ├── Why CSS not applying?
+    |      ├── Why JS not loading?
+    |      ├── Why form not submitting?
+    |      ├── Why layout breaking?
+    └── 11. Best Practices
+        ├── Use semantic tags
+        ├── Proper nesting
+        ├── Alt text for images
+        ├── Mobile-first responsive layout
+        └── Validate HTML (W3C Validator)
+-----------------------------------------------------------------------------------------------
+2. 📖 **Theory Questions** 
+    HTML TOP 30 INTERVIEW QUESTIONS
+    🧠 BASICS
+    1. What is HTML and how browser reads it?
+    2. What is the structure of an HTML document?
+    3. What is DOM?
+    4. How browser renders a webpage?
+    5. Difference between HTML, CSS, and JavaScript?
+
+    🏷️ ELEMENTS & TAGS
+    6. What is difference between block and inline elements?
+    7. What is semantic HTML? Why is it important?
+    8. Difference between <div> and <span>?
+    9. What are self-closing tags?
+    10. What are semantic tags in HTML5?
+
+    🏷️ ATTRIBUTES
+    11. Difference between id and class?
+    12. What are global attributes?
+    13. What are data-* attributes?
+    14. What are boolean attributes?
+
+    🔗 LINKS & MEDIA
+    15. What is <a> tag and how it works?
+    16. What is alt attribute and why important?
+    17. What is iframe? Any security risks?
+
+    📋 FORMS (VERY IMPORTANT)
+    18. What is form tag?
+    19. Difference between GET and POST?
+    20. Why name attribute is important in form?
+    21. What are input types in HTML?
+    22. What is form validation?
+
+    ⚡ SCRIPT LOADING
+    23. Difference between async and defer?
+    24. Why script blocks UI?
+
+    ♿ ACCESSIBILITY
+    25. What is accessibility (a11y)?
+    26. How to make website accessible?
+
+    🌐 SEO & META
+    27. What is meta tag?
+    28. What is viewport meta tag?
+
+    🧠 STORAGE & BROWSER
+    29. Difference between localStorage and sessionStorage?
+    30. What is browser rendering process?
+-----------------------------------------------------------------------------------------------
+3.💻 **Coding Questions** 
+    HTML CODING QUESTIONS (TOP 30)
+
+    🧱 BASIC STRUCTURE
+    1. Create a basic HTML5 page with proper structure (doctype, head, body)
+    2. Create a webpage with title, heading, and paragraph
+    3. Add favicon to a webpage
+    4. Link external CSS file to HTML
+    5. Add internal and inline CSS example
+
+    📝 TEXT & FORMATTING
+    6. Create all heading tags (h1–h6) with sample text
+    7. Format text using <b>, <i>, <strong>, <em>, <mark>
+    8. Display chemical formula using subscript and superscript
+    9. Add comments in HTML
+    10. Create a paragraph with line breaks and horizontal rule
+
+    🔗 LINKS & MEDIA
+    11. Create a clickable link that opens in a new tab
+    12. Add an image with proper alt text
+    13. Create image as a clickable link
+    14. Embed a YouTube video using iframe
+    15. Add audio and video players with controls
+
+    📋 LISTS & TABLES
+    16. Create ordered and unordered lists
+    17. Create nested lists
+    18. Create a table with header, body, and footer
+    19. Use colspan and rowspan in table
+    20. Create a responsive table structure
+
+    📨 FORMS (VERY IMPORTANT)
+    21. Create a login form (email + password)
+    22. Create a registration form with validation (required fields)
+    23. Use different input types (text, email, number, checkbox, radio)
+    24. Create dropdown using select and option
+    25. Submit form using GET and POST methods
+
+    ⚡ SEMANTIC HTML
+    26. Create layout using semantic tags (header, nav, main, footer)
+    27. Create blog structure using article and section
+    28. Add figure and figcaption for image
+
+    ♿ ACCESSIBILITY
+    29. Create accessible form using label and input association
+    30. Add ARIA roles to improve accessibility
+-----------------------------------------------------------------------------------------------
+4.🎯 **Scenario Questions**
+    HTML SCENARIO BASED QUESTIONS (REAL INTERVIEW)
+
+    🧱 BASICS & STRUCTURE
+    1. Your page is not rendering correctly in browser. What will you check first?
+    2. Why your HTML page is going into quirks mode?
+    3. Why elements are not aligning properly even though HTML is correct?
+    4. Why content is not visible even though it's in DOM?
+    5. Why HTML file not loading CSS/JS?
+
+    🔗 LINKS & MEDIA
+    6. Image is not showing on page. What could be the reasons?
+    7. Link is not working or not navigating. Why?
+    8. iframe content is not loading. Possible issues?
+    9. Video/audio not playing in browser. Why?
+    10. Image loading slowly — how to optimize?
+
+    📋 FORMS (VERY IMPORTANT)
+    11. Form is not submitting — what could be wrong?
+    12. Form data is not reaching backend — why?
+    13. Input validation not working — possible reasons?
+    14. GET vs POST — when to use in real project?
+    15. Why "name" attribute is required in form?
+
+    ⚡ SCRIPT & PERFORMANCE
+    16. Page is slow — how will you debug HTML-related issues?
+    17. Script is blocking UI rendering — how to fix?
+    18. When to use async vs defer in real project?
+    19. Why script is executing twice?
+    20. How to optimize initial page load?
+
+    ♿ ACCESSIBILITY
+    21. Screen reader not reading content — what went wrong?
+    22. Button is not accessible via keyboard — why?
+    23. Image is accessible issue — how to fix?
+    24. How to make form accessible?
+
+    🌐 SEO & META
+    25. Website not ranking in Google — HTML issues?
+    26. Why meta viewport is important?
+    27. Why headings structure matters for SEO?
+
+    🧠 REAL-WORLD DEBUGGING
+    28. Layout breaking in production but not in local — why?
+    29. Same HTML behaves differently in browsers — why?
+    30. Why page is not responsive on mobile?
+-----------------------------------------------------------------------------------------------
+5 | 🎯 **Tricky Questions**
+    HTML TRICKY QUESTIONS (INTERVIEW KILLER SET)
+
+    🧠 CORE TRICKS
+    1. Difference between <div> and <section>?
+    2. Can we have multiple <h1> tags in a page?
+    3. What happens if you don’t close a tag?
+    4. Is HTML case-sensitive?
+    5. What is the difference between <b> and <strong>?
+
+    🏷️ ELEMENT BEHAVIOR
+    6. Difference between inline, block, and inline-block?
+    7. Why margin not working on inline elements?
+    8. Can we put block element inside inline?
+    9. What happens if nested tags are incorrect?
+    10. Why layout breaks unexpectedly?
+
+    🏷️ ATTRIBUTES
+    11. Difference between id and class?
+    12. Can we use same id multiple times?
+    13. What happens if name attribute missing in form?
+    14. Difference between disabled and readonly?
+    15. What is data-* attribute real use?
+
+    📋 FORMS TRAPS
+    16. Why form is refreshing page?
+    17. Why input value not coming in backend?
+    18. Difference between button and input type="submit"?
+    19. Why checkbox value not sent sometimes?
+    20. What happens if method is not defined in form?
+
+    ⚡ SCRIPT & LOADING
+    21. Difference between async and defer?
+    22. What happens if script placed in head without defer?
+    23. Why JS runs before HTML loads?
+    24. Why script runs multiple times?
+    25. Why DOM not accessible in JS sometimes?
+
+    🔗 LINKS & MEDIA
+    26. Difference between absolute and relative path?
+    27. Why image works in local but not in server?
+    28. Why iframe is risky?
+    29. Why video not autoplaying?
+    30. What happens if alt attribute missing?
+-----------------------------------------------------------------------------------------------
+6 | 🎯 **Deep Dive Practice** 
+    HTML DEEP DIVE PRACTICE (REAL-WORLD TASKS)
+
+    🧱 PAGE STRUCTURE
+    1. Build a complete landing page structure using semantic HTML
+    2. Create a multi-section webpage (header, nav, main, footer)
+    3. Design a blog page using article and section tags
+    4. Build a portfolio page layout (about, projects, contact)
+    5. Create reusable layout structure (header + sidebar + content)
+
+    📋 FORMS (VERY IMPORTANT)
+    6. Build a login form with validation (required, email type)
+    7. Create a registration form with multiple input types
+    8. Design a multi-step form (step1 → step2 → submit)
+    9. Build a feedback form with textarea and rating options
+    10. Create a search form with query input
+
+    🔗 MEDIA & CONTENT
+    11. Create image gallery with figure and figcaption
+    12. Embed YouTube video with responsive iframe
+    13. Add audio/video player with controls and fallback text
+    14. Create profile card with image and details
+    15. Build a product card (image + title + price + button)
+
+    📊 TABLES & DATA
+    16. Create a table with header, body, footer
+    17. Build a pricing table with multiple plans
+    18. Create table with rowspan and colspan
+    19. Design a responsive table structure
+    20. Create dashboard-like table layout
+
+    ⚡ PERFORMANCE & SCRIPT
+    21. Add script using async and defer properly
+    22. Optimize image loading using lazy loading
+    23. Reduce blocking scripts in HTML
+    24. Structure HTML for faster rendering
+    25. Add meta tags for performance and SEO
+
+    ♿ ACCESSIBILITY
+    26. Build accessible form using label and aria attributes
+    27. Make navigation keyboard accessible
+    28. Add alt text and semantic structure for screen readers
+    29. Create accessible button and link usage
+    30. Improve accessibility of existing HTML page
+-----------------------------------------------------------------------------------------------
+7 | 🎯 **Real-World Mapping**
+    HTML REAL-WORLD MAPPING (INTERVIEW ANSWERS)
+
+    🧱 STRUCTURE & SEMANTICS
+    1. How did you structure your application layout?
+    → Used semantic tags (header, nav, main, footer) for clarity and SEO
+
+    2. How did you design reusable UI structure?
+    → Created consistent layout containers using semantic sections
+
+    3. Why did you avoid too many divs?
+    → Used semantic HTML for readability and maintainability
+
+    4. How did you handle large page layouts?
+    → Split into sections (header/sidebar/content/footer)
+
+    5. How did you improve HTML readability?
+    → Proper nesting, indentation, and semantic tags
+
+    📋 FORMS (VERY IMPORTANT)
+    6. How did you handle forms in your project?
+    → Used proper input types, labels, and validation
+
+    7. How did you ensure form accessibility?
+    → Linked label with input using "for" and "id"
+
+    8. Why is "name" attribute important in your forms?
+    → Required for backend payload mapping
+
+    9. How did you handle form validation?
+    → Used HTML validation (required, type) + JS validation
+
+    10. How did you debug form submission issues?
+    → Checked network tab, payload, method (GET/POST), API
+
+    🔗 MEDIA & CONTENT
+    11. How did you handle images in your app?
+    → Used alt attribute for accessibility and SEO
+
+    12. How did you optimize image loading?
+    → Used lazy loading and optimized formats
+
+    13. How did you embed external content?
+    → Used iframe with proper security consideration
+
+    14. How did you manage media content?
+    → Used video/audio tags with controls and fallback
+
+    15. How did you handle broken images?
+    → Used alt text and fallback UI
+
+    ⚡ PERFORMANCE
+    16. How did you improve page load performance?
+    → Used defer for scripts and optimized HTML structure
+
+    17. How did you reduce render blocking?
+    → Moved scripts to bottom or used defer
+
+    18. How did you optimize initial load?
+    → Minimized DOM size and used efficient structure
+
+    19. How did you handle large DOM?
+    → Reduced unnecessary elements and optimized layout
+
+    20. How did you debug slow page?
+    → Used browser DevTools (performance + network)
+
+    ♿ ACCESSIBILITY
+    21. How did you make your app accessible?
+    → Used semantic HTML, labels, alt text, keyboard support
+
+    22. How did you support screen readers?
+    → Used ARIA roles and meaningful tags
+
+    23. How did you ensure keyboard navigation?
+    → Used proper HTML elements like button, input
+
+    24. Why not use div for everything?
+    → It breaks accessibility and semantics
+
+    25. How did you test accessibility?
+    → Used browser tools and manual keyboard testing
+
+    🌐 SEO & META
+    26. How did you improve SEO in your project?
+    → Proper heading structure, meta tags, semantic HTML
+
+    27. Why is meta viewport important?
+    → Ensures responsiveness on mobile devices
+
+    28. How did you handle page metadata?
+    → Used title, description, and meta tags
+
+    🧠 DEBUGGING (REAL EXPERIENCE)
+    29. Tell me a real issue you faced with HTML?
+    → Example: form not submitting due to missing name attribute
+
+    30. How did you fix layout breaking issue?
+    → Checked nesting, CSS conflicts, and DOM structure
+-----------------------------------------------------------------------------------------------

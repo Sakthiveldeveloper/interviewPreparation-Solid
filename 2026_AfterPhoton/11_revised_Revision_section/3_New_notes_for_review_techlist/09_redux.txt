@@ -1,0 +1,344 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+    Redux (Interview Mind Map)
+
+    Core
+    ├── What is Redux?
+    ├── State management concept
+    ├── Single source of truth
+
+    Architecture
+    ├── Store
+    ├── Actions
+    ├── Reducers
+    ├── Dispatch flow
+
+    Redux Toolkit (IMPORTANT)
+    ├── configureStore
+    ├── createSlice
+    ├── createAsyncThunk
+    ├── Immer (immutable updates)
+
+    State
+    ├── Global vs local state
+    ├── Normalized state
+    ├── Derived state
+
+    Async
+    ├── Thunks
+    ├── API calls
+    ├── Loading & error state
+
+    Integration
+    ├── React-Redux
+    ├── useSelector
+    ├── useDispatch
+
+    Advanced
+    ├── Middleware
+    ├── Redux DevTools
+    ├── Performance optimization
+
+    Best Practices
+    ├── Slice-based structure
+    ├── Avoid overuse
+    ├── Keep state minimal
+------------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    REDUX THEORY QUESTIONS (TOP 30)
+
+    1. What is Redux?
+    2. Why Redux?
+    3. When to use Redux?
+    4. Redux vs Context API?
+    5. What is store?
+
+    6. What is action?
+    7. What is reducer?
+    8. What is dispatch?
+    9. What is state?
+    10. Redux flow?
+
+    11. What is Redux Toolkit?
+    12. Why Redux Toolkit?
+    13. What is createSlice?
+    14. What is configureStore?
+    15. What is createAsyncThunk?
+
+    16. What is immutability?
+    17. Why immutability important?
+    18. What is middleware?
+    19. What is thunk?
+    20. What is selector?
+
+    21. What is normalized state?
+    22. What is derived state?
+    23. How Redux handles async?
+    24. What is DevTools?
+    25. What is re-render issue?
+
+    26. Redux performance optimization?
+    27. Redux vs MobX?
+    28. Redux vs Zustand?
+    29. When NOT to use Redux?
+    30. Best practices in Redux?
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    REDUX CODING QUESTIONS (TOP 30)
+
+    1. Setup Redux store
+    2. Create slice
+    3. Add reducer
+    4. Dispatch action
+    5. Use useSelector
+
+    6. Use useDispatch
+    7. Create async thunk
+    8. Fetch API data
+    9. Handle loading state
+    10. Handle error state
+
+    11. Update state immutably
+    12. Add item to list
+    13. Remove item
+    14. Update item
+    15. Reset state
+
+    16. Combine reducers
+    17. Configure middleware
+    18. Use Redux DevTools
+    19. Create reusable slice
+    20. Normalize state
+
+    21. Pagination state
+    22. Filter state
+    23. Search state
+    24. Cache API data
+    25. Debounce API calls
+
+    26. Handle multiple API calls
+    27. Optimistic update
+    28. Error handling
+    29. Refactor large store
+    30. Performance optimization
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    REDUX SCENARIO QUESTIONS (TOP 30)
+
+    1. State not updating — why?
+    2. Component not re-rendering?
+    3. Redux state too large?
+    4. Multiple API calls issue?
+    5. Duplicate data issue?
+
+    6. Loading state flicker?
+    7. Error state not handled?
+    8. Async thunk failing?
+    9. State mutation bug?
+    10. Selector not working?
+
+    11. Performance issue?
+    12. Unnecessary re-renders?
+    13. Complex state structure?
+    14. Data inconsistency?
+    15. Cache not working?
+
+    16. Form state handling?
+    17. Pagination bug?
+    18. Filter not working?
+    19. Race condition?
+    20. Store too complex?
+
+    21. Debugging Redux issue?
+    22. DevTools not showing?
+    23. Middleware issue?
+    24. State reset unexpectedly?
+    25. API retry needed?
+
+    26. Global vs local confusion?
+    27. Overusing Redux?
+    28. State duplication?
+    29. Async order issue?
+    30. Scaling Redux app?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    REDUX TRICKY QUESTIONS (TOP 30)
+
+    1. Redux vs Context?
+    2. Redux vs Zustand?
+    3. Why Redux Toolkit?
+    4. Immutability vs mutation?
+    5. Immer usage?
+
+    6. Why reducer pure?
+    7. Why no side effects?
+    8. Async in reducer?
+    9. Thunk vs saga?
+    10. Selector memoization?
+
+    11. Why re-render happens?
+    12. How to avoid re-render?
+    13. Normalized state?
+    14. Derived state?
+    15. Store structure?
+
+    16. Middleware purpose?
+    17. DevTools usage?
+    18. Why dispatch async?
+    19. Action payload design?
+    20. Slice design?
+
+    21. Performance issues?
+    22. State duplication?
+    23. API caching?
+    24. Error handling?
+    25. Reset state?
+
+    26. Global state misuse?
+    27. Redux overkill?
+    28. Debugging complexity?
+    29. Testing Redux?
+    30. Scaling Redux?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    REDUX DEEP DIVE PRACTICE (TOP 30)
+
+    1. Build global store
+    2. Create multiple slices
+    3. Build async flow
+    4. API integration
+    5. Error handling system
+
+    6. Loading state system
+    7. Cache API data
+    8. Pagination system
+    9. Filter system
+    10. Search system
+
+    11. Normalize state
+    12. Optimize performance
+    13. Avoid re-renders
+    14. Memoize selectors
+    15. Debug using DevTools
+
+    16. Build auth system
+    17. Store user session
+    18. Handle logout
+    19. Secure state
+
+    20. Create reusable slices
+    21. Modular structure
+    22. Large app scaling
+    23. Middleware logging
+    24. Custom middleware
+
+    25. Retry API logic
+    26. Optimistic updates
+    27. Refactor store
+    28. Improve UX
+    29. Reduce complexity
+    30. Production debugging
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    REDUX REAL-WORLD MAPPING (TOP 30)
+
+    1. Why Redux used?
+    → global state
+
+    2. How state managed?
+    → store + slices
+
+    3. How API handled?
+    → async thunk
+
+    4. How loading handled?
+    → loading state
+
+    5. How errors handled?
+    → error state
+
+    6. How performance optimized?
+    → memoization
+
+    7. How re-renders reduced?
+    → selector optimization
+
+    8. How large data handled?
+    → normalized state
+
+    9. How caching handled?
+    → store
+
+    10. How debugging done?
+    → DevTools
+
+    11. How auth handled?
+    → global state
+
+    12. How logout handled?
+    → reset state
+
+    13. How scaling achieved?
+    → modular slices
+
+    14. How duplication avoided?
+    → shared state
+
+    15. How consistency maintained?
+    → central store
+
+    16. How API integrated?
+    → thunk
+
+    17. How complex logic handled?
+    → middleware
+
+    18. How structure maintained?
+    → feature-based
+
+    19. How performance improved?
+    → avoid unnecessary updates
+
+    20. How UX improved?
+    → loading states
+
+    21. How errors prevented?
+    → strict flow
+
+    22. How testing done?
+    → unit tests
+
+    23. How state reset?
+    → action
+
+    24. How updates handled?
+    → reducers
+
+    25. How debugging production?
+    → logs
+
+    26. How maintainability?
+    → clean slices
+
+    27. How flexibility achieved?
+    → modular design
+
+    28. How reuse achieved?
+    → shared logic
+
+    29. How integration done?
+    → React-Redux
+
+    30. How app delivered?
+    → optimized store
+------------------------------------------------------------------------------------------------------

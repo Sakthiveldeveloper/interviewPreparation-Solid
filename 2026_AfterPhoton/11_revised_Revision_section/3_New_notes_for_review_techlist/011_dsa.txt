@@ -1,0 +1,1186 @@
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+| 3 | 💻 **Coding Questions** | Write actual code  |
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+------------------------------------------------------------------------------------------------------
+| 1 | 🗺️ **Mind Map** | Visual overview of all topics |
+    DATA STRUCTURES & ALGORITHMS (DSA)
+    │
+    ├── 0. 🔥 Problem-Solving Patterns (TOP PRIORITY)
+    │   ├── Sliding Window
+    │   ├── Two Pointer
+    │   ├── Fast & Slow Pointer
+    │   ├── Binary Search Pattern
+    │   ├── DFS / BFS Pattern
+    │   ├── Backtracking Pattern
+    │   ├── Greedy Thinking
+    │   ├── Kadane’s Algorithm
+    │   ├── Monotonic Stack
+    ├── ├── Hashing (VERY IMPORTANT)
+    │   ├── Prefix Sum
+    │   ├── Recursion Pattern
+    │   ├── Dynamic Programming (basic)
+    │   ├── Heap / Priority Queue
+    │   ├── Union-Find (basic awareness)
+    │
+    ├── 1. Fundamentals
+    │   ├── Complexity Analysis
+    │   │   ├── Time Complexity (Big O, Ω, Θ)
+    │   │   ├── Space Complexity
+    │   │   ├── Best, Worst, Average Case Analysis
+    │   │   └── Amortized Analysis
+    │   ├── Recursion
+    │   │   ├── Base & Recursive Cases
+    │   │   ├── Tail vs Non-tail Recursion
+    │   │   └── Recurrence Relations (basic understanding)
+    │   └── Problem-Solving Techniques
+    │       ├── Brute Force
+    │       ├── Greedy
+    │       ├── Divide & Conquer
+    │       ├── Dynamic Programming
+    │       └── Backtracking
+    │
+    ├── 2. Linear Data Structures
+    │   ├── Arrays
+    │   │   ├── Traversal, Insertion, Deletion
+    │   │   ├── Prefix Sum
+    │   │   ├── Sliding Window ⭐
+    │   │   ├── Two Pointer ⭐
+    │   │   └── Kadane’s Algorithm ⭐
+    │   ├── Strings
+    │   │   ├── Palindrome, Anagram
+    │   │   ├── Pattern Searching
+    │   │   └── (Advanced: KMP, Rabin-Karp - low priority)
+    │   ├── Linked Lists
+    │   │   ├── Singly, Doubly, Circular
+    │   │   ├── Reverse Linked List
+    │   │   ├── Detect Cycle (Floyd) ⭐
+    │   │   └── Fast & Slow Pointer ⭐
+    │   ├── Stacks
+    │   │   ├── LIFO Principle
+    │   │   ├── Balanced Parentheses
+    │   │   ├── Next Greater Element
+    │   │   └── Monotonic Stack ⭐
+    │   └── Queues
+    │       ├── FIFO Principle
+    │       ├── Circular Queue, Deque
+    │       └── Priority Queue & Heap
+    │
+    ├── 3. Non-linear Data Structures
+    │   ├── Trees
+    │   │   ├── Binary Tree
+    │   │   ├── Binary Search Tree
+    │   │   ├── DFS / BFS Traversals ⭐
+    │   │   ├── Heap (Min/Max)
+    │   │   ├── Trie (Prefix Tree)
+    │   │   ├── (Advanced: Segment Tree, Fenwick Tree)
+    │   ├── Graphs
+    │   │   ├── Representations (Adjacency List/Matrix)
+    │   │   ├── BFS, DFS ⭐
+    │   │   ├── Topological Sort ⭐
+    │   │   ├── Shortest Path (Dijkstra, Bellman-Ford)
+    │   │   ├── Minimum Spanning Tree (Kruskal, Prim)
+    │   │   └── Union-Find (Disjoint Set)
+    │   └── Hashing
+    │       ├── HashMap, HashSet ⭐
+    │       ├── Collision Handling
+    │       └── Applications (Counting, Lookup)
+    │
+    ├── 4. Algorithms
+    │   ├── Sorting
+    │   │   ├── Bubble, Selection, Insertion
+    │   │   ├── Merge Sort, Quick Sort, Heap Sort
+    │   │   └── (Advanced: Counting, Radix, Bucket)
+    │   ├── Searching
+    │   │   ├── Linear Search
+    │   │   ├── Binary Search ⭐
+    │   │   └── Binary Search on Answer ⭐
+    │   ├── Greedy Algorithms
+    │   │   ├── Activity Selection
+    │   │   └── (Low priority: Huffman Coding)
+    │   ├── Dynamic Programming
+    │   │   ├── Memoization & Tabulation
+    │   │   ├── Knapsack
+    │   │   ├── LCS / LIS
+    │   │   └── Coin Change
+    │   ├── Backtracking
+    │   │   ├── N-Queens
+    │   │   ├── Rat in a Maze
+    │   │   └── Sudoku Solver
+    │   └── Bit Manipulation
+    │       ├── AND, OR, XOR
+    │       ├── Bit Tricks
+    │       └── Subset Generation
+    │
+    ├── 5. Problem-Solving & Practice
+    │   ├── Pattern-based Practice ⭐
+    │   ├── LeetCode Problems
+    │   ├── Mock Interviews
+    │   ├── Timed Practice
+    │   └── Revision Strategy
+    │
+    └── 6. Best Practices
+        ├── Analyze Before Coding
+        ├── Identify Pattern First ⭐
+        ├── Optimize Step-by-step
+        ├── Use Right Data Structure
+        ├── Write Clean Code
+        └── Practice Consistently
+------------------------------------------------------------------------------------------------------
+1.1 Definitions 
+    DATA STRUCTURES & ALGORITHMS (DSA) — DEFINITIONS
+
+    --------------------------------------------------
+    0. 🔥 Problem-Solving Patterns
+    --------------------------------------------------
+
+    Definition:
+    Problem-solving patterns are common approaches used to solve different types of problems efficiently by recognizing similar structures.
+
+    Purpose:
+    Instead of solving every problem from scratch, patterns help quickly identify the right approach.
+
+    Examples:
+    Sliding Window, Two Pointer, DFS/BFS, Greedy, etc.
+
+    🪟 1. Sliding Window
+    Definition:
+    Used to solve subarray/substring problems by maintaining a moving window.
+
+    When to use:
+    - Subarray / substring
+    - Continuous elements
+    - Longest / shortest
+
+    Questions:
+    1. Maximum Sum Subarray of Size K
+    2. Longest Substring Without Repeating Characters
+    3. Minimum Window Substring
+    4. Longest Repeating Character Replacement
+
+    👯 2. Two Pointer
+    Definition:
+    Use two pointers to reduce time complexity (start & end).
+
+    When to use:
+    - Sorted arrays
+    - Pair problems
+
+    Questions:
+    5. Two Sum II (sorted)
+    6. Container With Most Water
+    7. 3Sum
+
+    🐢 3. Fast & Slow Pointer
+    Definition:
+    Two pointers move at different speeds.
+
+    When to use:
+    - Linked list cycle detection
+
+    Questions:
+    8. Linked List Cycle
+    9. Find Middle of Linked List
+
+    🔍 4. Binary Search Pattern
+    Definition:
+    Search by dividing search space.
+
+    When to use:
+    - Sorted data
+    - Monotonic condition
+
+    Questions:
+    10. Binary Search
+    11. Search in Rotated Sorted Array
+    12. Find Peak Element
+    13. Koko Eating Bananas
+
+    🌳 5. DFS / BFS
+    Definition:
+    Traversal techniques for trees & graphs.
+
+    When to use:
+    - Tree/graph traversal
+
+    Questions:
+    14. Maximum Depth of Binary Tree
+    15. Level Order Traversal
+    16. Number of Islands
+    17. Clone Graph
+
+    🔁 6. Backtracking
+    Definition:
+    Try all possibilities, backtrack on failure.
+
+    When to use:
+    - Permutations / combinations
+
+    Questions:
+    18. Subsets
+    19. Permutations
+    20. Combination Sum
+
+    💰 7. Greedy
+    Definition:
+    Take best choice at each step.
+
+    When to use:
+    - Optimization problems
+
+    Questions:
+    21. Jump Game
+    22. Gas Station
+    23. Activity Selection
+
+    📈 8. Kadane’s Algorithm
+    Definition:
+    Find maximum subarray sum in O(n).
+
+    When to use:
+    - Maximum sum problems
+
+    Questions:
+    24. Maximum Subarray
+    25. Maximum Circular Subarray
+
+    📊 9. Monotonic Stack
+    Definition:
+    Stack that maintains increasing/decreasing order.
+
+    When to use:
+    - Next greater/smaller element
+
+    Questions:
+    26. Next Greater Element
+    27. Daily Temperatures
+    28. Largest Rectangle in Histogram
+
+    🧮 10. Hashing
+    Definition:
+    Use HashMap/Set for fast lookup.
+
+    When to use:
+    - Frequency / duplicates
+
+    Questions:
+    29. Two Sum
+    30. Longest Consecutive Sequence
+    --------------------------------------------------
+    1. Fundamentals
+    --------------------------------------------------
+
+    Definition:
+    Fundamentals are the basic concepts that help you understand how algorithms work and how to analyze their performance.
+
+    Purpose:
+    They guide how to think, optimize, and evaluate solutions.
+
+    Includes:
+    - Complexity Analysis
+    - Recursion
+    - Problem-Solving Techniques
+
+    --------------------------------------------------
+    1.1 Complexity Analysis
+    --------------------------------------------------
+
+    Definition:
+    Complexity analysis measures how the performance (time and memory) of an algorithm changes with input size.
+
+    Types:
+    - Time Complexity → Execution time
+    - Space Complexity → Memory usage
+
+    Notations:
+    - Big O (O) → Worst case
+    - Omega (Ω) → Best case
+    - Theta (Θ) → Average case
+
+    --------------------------------------------------
+    1.2 Recursion
+    --------------------------------------------------
+
+    Definition:
+    Recursion is a technique where a function calls itself to solve smaller parts of a problem.
+
+    Key Concepts:
+    - Base Case → stopping condition
+    - Recursive Case → repeated call
+
+    Used in:
+    Trees, backtracking, divide & conquer
+
+    --------------------------------------------------
+    1.3 Problem-Solving Techniques
+    --------------------------------------------------
+
+    Definition:
+    General strategies used to approach and solve problems efficiently.
+
+    Types:
+    - Brute Force → Try all possibilities
+    - Greedy → Choose best option at each step
+    - Divide & Conquer → Break problem into parts
+    - Dynamic Programming → Store results
+    - Backtracking → Explore all solutions
+
+    --------------------------------------------------
+    2. Linear Data Structures
+    --------------------------------------------------
+
+    Definition:
+    Linear data structures store elements in a sequential order where each element has a single predecessor and successor.
+
+    Examples:
+    - Array
+    - Linked List
+    - Stack
+    - Queue
+
+    Characteristics:
+    - Easy traversal
+    - Single level structure
+
+    --------------------------------------------------
+    2.1 Arrays
+    --------------------------------------------------
+
+    Definition:
+    A collection of elements stored in contiguous memory locations.
+
+    Used for:
+    Fast access and iteration
+
+    --------------------------------------------------
+    2.2 Strings
+    --------------------------------------------------
+
+    Definition:
+    A sequence of characters treated as a data structure similar to arrays.
+
+    Used for:
+    Text processing problems
+
+    --------------------------------------------------
+    2.3 Linked Lists
+    --------------------------------------------------
+
+    Definition:
+    A data structure where elements (nodes) are connected using pointers.
+
+    Types:
+    Singly, Doubly, Circular
+
+    --------------------------------------------------
+    2.4 Stack
+    --------------------------------------------------
+
+    Definition:
+    A linear data structure that follows LIFO (Last In First Out).
+
+    Used in:
+    Recursion, expression evaluation
+
+    --------------------------------------------------
+    2.5 Queue
+    --------------------------------------------------
+
+    Definition:
+    A linear data structure that follows FIFO (First In First Out).
+
+    Used in:
+    Scheduling, BFS traversal
+
+    --------------------------------------------------
+    3. Non-Linear Data Structures
+    --------------------------------------------------
+
+    Definition:
+    Data structures where elements are arranged in hierarchical or network-based relationships.
+
+    Examples:
+    - Trees
+    - Graphs
+
+    --------------------------------------------------
+    3.1 Trees
+    --------------------------------------------------
+
+    Definition:
+    A hierarchical structure consisting of nodes connected in parent-child relationships.
+
+    Used in:
+    Search, hierarchical data
+
+    --------------------------------------------------
+    3.2 Graphs
+    --------------------------------------------------
+
+    Definition:
+    A collection of nodes connected by edges representing relationships.
+
+    Used in:
+    Networks, shortest path problems
+
+    --------------------------------------------------
+    3.3 Hashing
+    --------------------------------------------------
+
+    Definition:
+    A technique to map data to fixed-size values using a hash function for fast lookup.
+
+    Examples:
+    HashMap, HashSet
+
+    --------------------------------------------------
+    4. Algorithms
+    --------------------------------------------------
+
+    Definition:
+    Step-by-step procedures used to solve problems or perform computations.
+
+    --------------------------------------------------
+    4.1 Sorting
+    --------------------------------------------------
+
+    Definition:
+    Arranging data in a specific order (ascending/descending).
+
+    --------------------------------------------------
+    4.2 Searching
+    --------------------------------------------------
+
+    Definition:
+    Finding an element within a data structure.
+
+    --------------------------------------------------
+    4.3 Greedy Algorithms
+    --------------------------------------------------
+
+    Definition:
+    Algorithms that make the locally optimal choice at each step.
+
+    --------------------------------------------------
+    4.4 Dynamic Programming
+    --------------------------------------------------
+
+    Definition:
+    An optimization technique that stores results of subproblems to avoid recomputation.
+
+    --------------------------------------------------
+    4.5 Backtracking
+    --------------------------------------------------
+
+    Definition:
+    A method that tries all possible solutions and backtracks when a solution fails.
+
+    --------------------------------------------------
+    4.6 Bit Manipulation
+    --------------------------------------------------
+
+    Definition:
+    Techniques that use binary representation of numbers to solve problems efficiently.
+
+    --------------------------------------------------
+    5. Problem-Solving & Practice
+    --------------------------------------------------
+
+    Definition:
+    The process of applying concepts and patterns through practice to improve problem-solving skills.
+
+    Includes:
+    - LeetCode practice
+    - Mock interviews
+    - Timed coding
+
+    --------------------------------------------------
+    6. Best Practices
+    --------------------------------------------------
+
+    Definition:
+    Guidelines to write efficient, readable, and optimized code.
+
+    Includes:
+    - Analyze before coding
+    - Identify pattern first
+    - Optimize step-by-step
+    - Use correct data structure
+    - Write clean code
+    - Practice consistently
+
+-----------------------------------------------------------------------------------------------------
+| 2 | 📖 **Theory Questions** | Concept-based questions + answers |
+    DATA STRUCTURES & ALGORITHMS (DSA) — THEORY QUESTIONS
+
+    --------------------------------------------------
+    0. 🔥 Problem-Solving Patterns
+    --------------------------------------------------
+
+    1. What is a problem-solving pattern?
+    2. What is Sliding Window and when to use it?
+    3. Difference between fixed and variable window?
+    4. What is Two Pointer technique?
+    5. When do you use Fast & Slow pointers?
+    6. What is Binary Search pattern?
+    7. What is DFS vs BFS?
+    8. When to use Backtracking?
+    9. What is Greedy approach?
+    10. What is Kadane’s Algorithm?
+    11. What is Monotonic Stack?
+    12. What is Hashing and why is it important?
+    13. What is Prefix Sum?
+    14. What is Recursion pattern?
+    15. What is Dynamic Programming pattern?
+
+    --------------------------------------------------
+    1. Fundamentals
+    --------------------------------------------------
+
+    16. What is time complexity?
+    17. What is space complexity?
+    18. Difference between Big O, Omega, Theta?
+    19. What is worst case vs average case?
+    20. What is amortized complexity?
+    21. What is recursion?
+    22. What is base case?
+    23. What is recursion stack?
+    24. Tail vs non-tail recursion?
+    25. What is recurrence relation?
+    26. What is brute force approach?
+    27. What is divide and conquer?
+    28. What is greedy technique?
+    29. What is dynamic programming?
+    30. What is backtracking?
+
+    --------------------------------------------------
+    2. Linear Data Structures
+    --------------------------------------------------
+
+    31. What is an array?
+    32. Advantages of arrays?
+    33. What is prefix sum in arrays?
+    34. What is sliding window in arrays?
+    35. What is two pointer technique in arrays?
+    36. What is a string?
+    37. What is substring vs subsequence?
+    38. What is palindrome?
+    39. What is anagram?
+    40. What is string immutability?
+
+    41. What is a linked list?
+    42. Types of linked list?
+    43. Difference between array and linked list?
+    44. What is a node?
+    45. How to detect cycle in linked list?
+
+    46. What is a stack?
+    47. What is LIFO?
+    48. What is a queue?
+    49. What is FIFO?
+    50. What is deque?
+    51. What is priority queue?
+
+    --------------------------------------------------
+    3. Non-Linear Data Structures
+    --------------------------------------------------
+
+    52. What is a tree?
+    53. What is a binary tree?
+    54. What is a binary search tree (BST)?
+    55. Difference between DFS and BFS?
+    56. What is height of a tree?
+    57. What is a heap?
+    58. What is a trie?
+
+    59. What is a graph?
+    60. Types of graphs?
+    61. What is adjacency list?
+    62. What is BFS?
+    63. What is DFS?
+    64. What is topological sort?
+    65. What is shortest path?
+    66. What is union-find?
+
+    67. What is a hash function?
+    68. What is HashMap?
+    69. What is HashSet?
+    70. What is collision in hashing?
+    71. How are collisions handled?
+
+    --------------------------------------------------
+    4. Algorithms
+    --------------------------------------------------
+
+    72. What is sorting?
+    73. Types of sorting algorithms?
+    74. What is bubble sort?
+    75. What is merge sort?
+    76. What is quick sort?
+    77. What is heap sort?
+
+    78. What is searching?
+    79. What is linear search?
+    80. What is binary search?
+    81. When should binary search be used?
+    82. What is binary search on answer?
+
+    83. What is dynamic programming?
+    84. Difference between DP and greedy?
+    85. What is memoization?
+    86. What is tabulation?
+    87. What is knapsack problem?
+    88. What is LCS (Longest Common Subsequence)?
+    89. What is LIS (Longest Increasing Subsequence)?
+
+    90. What is backtracking?
+    91. When should backtracking be used?
+    92. What is N-Queens problem?
+    93. What is Sudoku solver?
+
+    94. What is bit manipulation?
+    95. What is AND, OR, XOR?
+    96. What is XOR trick?
+
+    --------------------------------------------------
+    5. Problem-Solving & Practice
+    --------------------------------------------------
+
+    97. What is pattern-based problem solving?
+    98. Why is practice important in DSA?
+    99. What are mock interviews?
+    100. What is timed practice?
+    101. How to revise DSA topics effectively?
+
+    --------------------------------------------------
+    6. Best Practices
+    --------------------------------------------------
+
+    102. Why analyze before coding?
+    103. Why is pattern identification important?
+    104. How to optimize step-by-step?
+    105. Why choose correct data structure?
+    106. What is clean code?
+    107. Why consistency is important in DSA?
+
+------------------------------------------------------------------------------------------------------
+| 3 | 💻 **Coding Questions** | Write actual code  |
+    DSA CODING QUESTIONS — TOPIC-WISE (INTERVIEW MASTER LIST)
+
+    --------------------------------------------------
+    1. ARRAYS & STRINGS (30)
+    --------------------------------------------------
+
+    1. Two Sum
+    2. Best Time to Buy/Sell Stock
+    3. Maximum Subarray (Kadane)
+    4. Product of Array Except Self
+    5. Move Zeroes
+    6. Find Duplicate Number
+    7. Merge Sorted Array
+    8. Rotate Array
+    9. Missing Number
+    10. Subarray Sum Equals K
+
+    11. Longest Substring Without Repeating Characters
+    12. Longest Palindromic Substring
+    13. Valid Palindrome
+    14. Group Anagrams
+    15. Valid Anagram
+    16. String Compression
+    17. Reverse Words in String
+    18. Check Permutation
+    19. First Unique Character
+    20. Longest Common Prefix
+
+    21. Minimum Window Substring
+    22. Longest Repeating Character Replacement
+    23. Permutation in String
+    24. Count Binary Substrings
+    25. String to Integer (atoi)
+    26. Roman to Integer
+    27. Integer to Roman
+    28. Encode and Decode Strings
+    29. Reorganize String
+    30. Zigzag Conversion
+
+    --------------------------------------------------
+    2. HASHING (30)
+    --------------------------------------------------
+
+    31. Contains Duplicate
+    32. Two Sum (HashMap)
+    33. Longest Consecutive Sequence
+    34. Subarray Sum Equals K
+    35. First Non-Repeating Character
+    36. Intersection of Two Arrays
+    37. Happy Number
+    38. Majority Element
+    39. Top K Frequent Elements
+    40. Isomorphic Strings
+
+    41. Group Anagrams
+    42. Find All Anagrams in String
+    43. Longest Substring Without Repeat
+    44. Word Pattern
+    45. Ransom Note
+    46. Find Duplicate Files
+    47. Design HashMap
+    48. Design HashSet
+    49. Count Distinct Elements
+    50. Frequency Sort
+
+    51. Find All Duplicates
+    52. Missing Numbers
+    53. Continuous Subarray Sum
+    54. Subarray Divisible by K
+    55. Minimum Index Sum of Two Lists
+    56. Longest Arithmetic Sequence
+    57. Count Nice Subarrays
+    58. Subarray Product Less Than K
+    59. Equal Row and Column Pairs
+    60. Unique Number of Occurrences
+
+    --------------------------------------------------
+    3. SLIDING WINDOW (30)
+    --------------------------------------------------
+
+    61. Maximum Sum Subarray of Size K
+    62. Average of Subarrays of Size K
+    63. Longest Substring Without Repeating Characters
+    64. Minimum Window Substring
+    65. Longest Repeating Character Replacement
+    66. Permutation in String
+    67. Fruit Into Baskets
+    68. Subarray Product Less Than K
+    69. Maximum Consecutive Ones III
+    70. Longest Subarray with Sum K
+
+    71. Minimum Size Subarray Sum
+    72. Count Subarrays with K Distinct
+    73. Longest Substring with K Distinct
+    74. Sliding Window Maximum
+    75. Binary Subarrays With Sum
+    76. Subarrays with Product < K
+    77. Max Sum of Non-Overlapping Subarrays
+    78. Count Nice Subarrays
+    79. Longest Continuous Subarray
+    80. Max Score from Cards
+
+    81. Longest Ones After Replacement
+    82. Min Window Substring Variation
+    83. Fixed Window Sum
+    84. Find All Anagrams
+    85. Longest Substring with At Most K Distinct
+    86. Subarray Sum Equals K
+    87. Minimum Operations to Reduce X
+    88. Count Vowel Substrings
+    89. Max Average Subarray
+    90. Longest Balanced Substring
+
+    --------------------------------------------------
+    4. TWO POINTER (30)
+    --------------------------------------------------
+
+    91. Two Sum II
+    92. Container With Most Water
+    93. 3Sum
+    94. 4Sum
+    95. Remove Duplicates from Sorted Array
+    96. Move Zeroes
+    97. Valid Palindrome
+    98. Reverse String
+    99. Merge Sorted Arrays
+    100. Squares of Sorted Array
+
+    101. Sort Colors
+    102. Partition Array
+    103. Find Pair with Given Sum
+    104. Closest Pair Sum
+    105. Remove Element
+    106. Longest Palindrome
+    107. Subsequence Check
+    108. Reverse Vowels
+    109. Trapping Rain Water
+    110. Dutch National Flag
+
+    111. Intersection of Arrays
+    112. Pair Difference
+    113. Cycle Detection
+    114. Linked List Intersection
+    115. Two Sum Less Than K
+    116. Maximum Distance Pair
+    117. Longest Subarray <= K
+    118. Min Window Substring (two pointer)
+    119. Remove Duplicates II
+    120. K-diff pairs
+
+    --------------------------------------------------
+    5. STACK & QUEUE (30)
+    --------------------------------------------------
+
+    121. Valid Parentheses
+    122. Min Stack
+    123. Next Greater Element
+    124. Daily Temperatures
+    125. Largest Rectangle in Histogram
+    126. Sliding Window Maximum
+    127. Implement Stack using Queue
+    128. Implement Queue using Stack
+    129. Evaluate Reverse Polish Notation
+    130. Remove K Digits
+
+    131. Decode String
+    132. Basic Calculator
+    133. Simplify Path
+    134. Stock Span Problem
+    135. Max Rectangle in Matrix
+    136. Asteroid Collision
+    137. Car Fleet
+    138. Monotonic Stack Next Smaller
+    139. Circular Next Greater
+    140. Stack Permutation
+
+    141. Queue Reconstruction
+    142. Rotten Oranges
+    143. BFS using Queue
+    144. Design Circular Queue
+    145. Design Deque
+    146. Kth Largest Element
+    147. Task Scheduler
+    148. Sliding Window Median
+    149. Shortest Path BFS
+    150. Time to Rot All Oranges
+
+    --------------------------------------------------
+    6. BINARY SEARCH (30)
+    --------------------------------------------------
+
+    151. Binary Search
+    152. Search in Rotated Sorted Array
+    153. Find Peak Element
+    154. First and Last Position
+    155. Square Root (sqrt)
+    156. Koko Eating Bananas
+    157. Capacity to Ship Packages
+    158. Min Days to Make Bouquets
+    159. Aggressive Cows
+    160. Allocate Books
+
+    161. Median of Two Sorted Arrays
+    162. Find Minimum in Rotated Array
+    163. Peak Index in Mountain Array
+    164. Search 2D Matrix
+    165. Find Duplicate Number
+    166. Smallest Divisor
+    167. Split Array Largest Sum
+    168. Magnetic Force Between Balls
+    169. Minimum Speed to Arrive
+    170. Find Kth Missing Number
+
+    171. Count Occurrences
+    172. Find Rotation Count
+    173. Binary Search on Answer
+    174. First Bad Version
+    175. Search Insert Position
+    176. Find Single Element
+    177. Find Peak in 2D Grid
+    178. Maximum Value at Index
+    179. Kth Smallest Element
+    180. Minimize Max Distance
+
+    --------------------------------------------------
+    7. TREES (DFS/BFS) (30)
+    --------------------------------------------------
+
+    181. Maximum Depth of Binary Tree
+    182. Same Tree
+    183. Invert Binary Tree
+    184. Level Order Traversal
+    185. Lowest Common Ancestor
+    186. Diameter of Binary Tree
+    187. Balanced Binary Tree
+    188. Path Sum
+    189. Symmetric Tree
+    190. Binary Tree Right Side View
+
+    191. Zigzag Traversal
+    192. Validate BST
+    193. Kth Smallest in BST
+    194. Build Tree from Traversals
+    195. Serialize/Deserialize Tree
+    196. Sum Root to Leaf
+    197. Count Nodes
+    198. Min Depth
+    199. Max Path Sum
+    200. Flatten Binary Tree
+
+    201. Vertical Order Traversal
+    202. Boundary Traversal
+    203. Distance K Nodes
+    204. Burn Tree
+    205. Top View
+    206. Bottom View
+    207. Left View
+    208. Right View
+    209. Diameter Variation
+    210. Subtree Check
+------------------------------------------------------------------------------------------------------
+| 4 | 🎯 **Scenario Questions** | Real-world problem solving (Senior/Lead level) |
+    DSA SCENARIO QUESTIONS (TOP 30)
+
+    --------------------------------------------------
+    ARRAYS / SLIDING WINDOW
+    --------------------------------------------------
+
+    1. You need to find the longest substring without repeating characters in real-time typing. How would you design it?
+    2. Given a large stream of data, how will you maintain the maximum sum of last K elements?
+    3. How do you efficiently find subarrays with sum = K?
+    4. How would you handle millions of log entries to find patterns?
+    5. How to detect duplicate entries in a large dataset efficiently?
+
+    --------------------------------------------------
+    HASHING
+    --------------------------------------------------
+
+    6. How would you design a system to check duplicates in real-time?
+    7. How do you store and retrieve user sessions efficiently?
+    8. How would you count frequency of elements in large data?
+    9. How would you design a URL shortener using hashing?
+    10. How do you detect unique visitors on a website?
+
+    --------------------------------------------------
+    TWO POINTER
+    --------------------------------------------------
+
+    11. How would you find pair of numbers that sum to target in sorted data?
+    12. How to remove duplicates from sorted data efficiently?
+    13. How to optimize pair search in large datasets?
+    14. How would you handle merging two sorted streams?
+    15. How do you process two ends of data efficiently?
+
+    --------------------------------------------------
+    STACK / QUEUE
+    --------------------------------------------------
+
+    16. How would you validate parentheses in a code editor?
+    17. How do you implement undo/redo functionality?
+    18. How to process tasks in order of arrival?
+    19. How to design a browser history system?
+    20. How would you handle real-time notifications queue?
+
+    --------------------------------------------------
+    BINARY SEARCH
+    --------------------------------------------------
+
+    21. How would you search efficiently in large sorted data?
+    22. How do you find threshold value satisfying condition?
+    23. How to optimize search in large datasets?
+    24. How would you allocate resources efficiently?
+    25. How to find minimum time to complete tasks?
+
+    --------------------------------------------------
+    TREES / GRAPHS
+    --------------------------------------------------
+
+    26. How would you represent hierarchical data (like file system)?
+    27. How do you find shortest path in navigation system?
+    28. How to traverse large tree structure efficiently?
+    29. How to detect cycles in a network?
+    30. How would you recommend friends in social network?
+------------------------------------------------------------------------------------------------------
+| 5 | 🎯 **Tricky Questions** | Real-world problem solving (Senior/Lead level) |
+    DSA TRICKY QUESTIONS (TOP 30)
+
+    --------------------------------------------------
+    ARRAYS / STRINGS
+    --------------------------------------------------
+
+    1. Why does ["1","2","10"].sort() give wrong result?
+    2. Difference between == and === in comparisons?
+    3. What happens with floating point (0.1 + 0.2)?
+    4. Why does NaN !== NaN?
+    5. Edge case in reverse string (empty / single char)?
+
+    --------------------------------------------------
+    SLIDING WINDOW
+    --------------------------------------------------
+
+    6. Why forgetting to shrink window breaks logic?
+    7. Difference between fixed vs variable window?
+    8. Why duplicates break sliding window?
+    9. What if input size = 0?
+    10. Handling negative numbers in window sum?
+
+    --------------------------------------------------
+    HASHING
+    --------------------------------------------------
+
+    11. Why use Map instead of Object?
+    12. Hash collision — what happens?
+    13. Why Set removes duplicates?
+    14. What happens if key is object?
+    15. Memory issue with large hash map?
+
+    --------------------------------------------------
+    TWO POINTER
+    --------------------------------------------------
+
+    16. Why two pointer works only on sorted arrays?
+    17. What if array is not sorted?
+    18. Infinite loop bug in pointers?
+    19. Edge case when pointers meet?
+    20. Handling duplicates in 3Sum?
+
+    --------------------------------------------------
+    STACK / QUEUE
+    --------------------------------------------------
+
+    21. Why stack is used for parentheses?
+    22. What happens if stack empty pop?
+    23. Difference between stack and recursion?
+    24. Queue overflow issue?
+    25. Circular queue vs normal queue?
+
+    --------------------------------------------------
+    BINARY SEARCH
+    --------------------------------------------------
+
+    26. Why binary search fails on unsorted data?
+    27. Overflow in mid = (l+r)/2?
+    28. Infinite loop condition in binary search?
+    29. First vs last occurrence difference?
+    30. Binary search on answer concept?
+------------------------------------------------------------------------------------------------------
+| 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
+    DSA DEEP DIVE PRACTICE (TOP 30)
+
+    --------------------------------------------------
+    SLIDING WINDOW
+    --------------------------------------------------
+
+    1. Why sliding window reduces O(n²) to O(n)?
+    2. When sliding window does NOT work?
+    3. How to handle negative numbers in window?
+    4. Difference between fixed vs variable window internally?
+    5. Can sliding window work on non-contiguous data?
+
+    --------------------------------------------------
+    HASHING
+    --------------------------------------------------
+
+    6. Why hashing gives O(1) average?
+    7. What happens during hash collision?
+    8. When hashmap becomes slow?
+    9. Difference between Map vs Object internally?
+    10. Memory vs speed trade-off in hashing?
+
+    --------------------------------------------------
+    TWO POINTER
+    --------------------------------------------------
+
+    11. Why two pointer requires sorted array?
+    12. Can we use it on unsorted array?
+    13. What is time complexity improvement logic?
+    14. When two pointer fails?
+    15. How to extend to 3Sum/4Sum?
+
+    --------------------------------------------------
+    STACK / QUEUE
+    --------------------------------------------------
+
+    16. Why stack is used in recursion internally?
+    17. What is monotonic stack and why useful?
+    18. How stack helps in next greater element?
+    19. Queue vs deque — real use case?
+    20. How BFS uses queue internally?
+
+    --------------------------------------------------
+    BINARY SEARCH
+    --------------------------------------------------
+
+    21. Why binary search is O(log n)?
+    22. What is binary search on answer?
+    23. When binary search fails?
+    24. How to avoid infinite loop?
+    25. How to apply binary search in real problems?
+
+    --------------------------------------------------
+    TREES / GRAPHS
+    --------------------------------------------------
+
+    26. Why DFS uses recursion?
+    27. BFS vs DFS — when to use which?
+    28. Why tree traversal is O(n)?
+    29. How graph cycle detection works?
+    30. Difference between tree and graph traversal?
+------------------------------------------------------------------------------------------------------
+| 7 | 🎯 **Real-World Mapping** | Real-world problem solving (Senior/Lead level) |
+    DSA REAL-WORLD MAPPING (TOP 30)
+
+    --------------------------------------------------
+    ARRAYS / SLIDING WINDOW
+    --------------------------------------------------
+
+    1. Search autocomplete → Sliding window + hashing
+    2. Real-time analytics dashboard → Sliding window
+    3. Log monitoring system → Subarray processing
+    4. Streaming data processing → Fixed window
+    5. Fraud detection (recent transactions) → Window tracking
+
+    --------------------------------------------------
+    HASHING
+    --------------------------------------------------
+
+    6. User session management → HashMap
+    7. Caching system (Redis) → Hashing
+    8. Duplicate detection → HashSet
+    9. URL shortener → Hashing
+    10. Frequency counting (analytics) → HashMap
+
+    --------------------------------------------------
+    TWO POINTER
+    --------------------------------------------------
+
+    11. Pair matching system → Two pointer
+    12. Sorted data merging → Two pointer
+    13. Data cleaning (remove duplicates) → Two pointer
+    14. Matching transactions → Two pointer
+    15. Memory optimization scans → Two pointer
+
+    --------------------------------------------------
+    STACK / QUEUE
+    --------------------------------------------------
+
+    16. Undo/Redo feature → Stack
+    17. Browser history → Stack
+    18. Task scheduling → Queue
+    19. Print queue → Queue
+    20. Notification system → Queue
+
+    --------------------------------------------------
+    BINARY SEARCH
+    --------------------------------------------------
+
+    21. Search in database → Binary search
+    22. Finding threshold values → Binary search
+    23. Load balancing limits → Binary search on answer
+    24. Performance tuning → Binary search
+    25. Resource allocation → Binary search
+
+    --------------------------------------------------
+    TREES / GRAPHS
+    --------------------------------------------------
+
+    26. File system structure → Tree
+    27. Organization hierarchy → Tree
+    28. Social network connections → Graph
+    29. GPS navigation → Graph (shortest path)
+    30. Recommendation systems → Graph traversal
+------------------------------------------------------------------------------------------------------
