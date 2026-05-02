@@ -243,8 +243,8 @@ React.js
     whats is React Fiber
         React Fiber is the internal reconciliation algorithm introduced in React 16 that enables asynchronous, interruptible, and priority-based rendering to improve UI performance and responsiveness.
     useEffect vs useLayoutEffect
-        useEffect -> async, Runs after the browser paint the screen, non-blocking use see the update dat FIRSt
-        useLayoutEffect -> sync, Runs before the browser paint the screen, blocking use see the update dat FIRSt
+        useEffect -> async, Runs after the browser paint the screen, non-blocking use see the update Data FIRSt
+        useLayoutEffect -> sync, Runs before the browser paint the screen, blocking use see the update Data FIRSt
 --------------------------------------------------------------------------------------------------------
 
 REACT THEORY – TOP ~50 IMPORTANT TOPICS
@@ -341,70 +341,70 @@ REACT THEORY – TOP ~50 IMPORTANT TOPICS
 
 ---------------------------------------------------------------------------------------------------
 🚀 TOP 50 REACT CODING QUESTIONS
-🧠 PHASE 1: BASIC UI + STATE (⭐⭐⭐⭐)
-    👉 Warm-up but very important
-        Build a counter app
-        Toggle show/hide component
-        Create dynamic list rendering
-        Add/remove items from list
-        Controlled input field
-        Two-way data binding
-        Form with validation
-        Checkbox select all / unselect
-        Radio button selection
-        Simple todo app
-⚙️ PHASE 2: COMPONENT LOGIC (⭐⭐⭐⭐⭐)
-    👉 Core React thinking
-        Parent → Child communication
-        Child → Parent callback
-        Sibling communication
-        Props drilling problem demo
-        Lift state up example
-        Create reusable button component
-        Create reusable modal
-        Create reusable input component
-        Dynamic form generation
-        Conditional rendering scenarios
-🔥 PHASE 3: HOOKS CODING (VERY IMPORTANT) ⭐⭐⭐⭐⭐
-    👉 Most asked in interviews
-        Implement custom useDebounce hook
-        Implement custom useThrottle hook
-        useEffect API call with cleanup
-        Prevent infinite re-render
-        Track previous value using useRef
-        Build useLocalStorage hook
-        useMemo optimization example
-        useCallback optimization example
-        Custom hook for API fetching
-        Custom hook for window resize
-⚡ PHASE 4: API + ASYNC (⭐⭐⭐⭐⭐)
+    🧠 PHASE 1: BASIC UI + STATE (⭐⭐⭐⭐)
+        👉 Warm-up but very important
+            Build a counter app
+            Toggle show/hide component
+            Create dynamic list rendering
+            Add/remove items from list
+            Controlled input field
+            Two-way data binding
+            Form with validation
+            Checkbox select all / unselect
+            Radio button selection
+            Simple todo app
+    ⚙️ PHASE 2: COMPONENT LOGIC (⭐⭐⭐⭐⭐)
+        👉 Core React thinking
+            Parent → Child communication
+            Child → Parent callback
+            Sibling communication
+            Props drilling problem demo
+            Lift state up example
+            Create reusable button component
+            Create reusable modal
+            Create reusable input component
+            Dynamic form generation
+            Conditional rendering scenarios
+    🔥 PHASE 3: HOOKS CODING (VERY IMPORTANT) ⭐⭐⭐⭐⭐
+        👉 Most asked in interviews
+            Implement custom useDebounce hook
+            Implement custom useThrottle hook
+            useEffect API call with cleanup
+            Prevent infinite re-render
+            Track previous value using useRef
+            Build useLocalStorage hook
+            useMemo optimization example
+            useCallback optimization example
+            Custom hook for API fetching
+            Custom hook for window resize
+    ⚡ PHASE 4: API + ASYNC (⭐⭐⭐⭐⭐)
 
-    👉 Very real interview scenarios
+        👉 Very real interview scenarios
 
-    Fetch API and display data
-    Loading + error handling UI
-    Retry API call on failure
-    Parallel API calls
-    Sequential API calls
-    Cancel API request (AbortController)
-    Pagination with API
-    Infinite scrolling list
-    Search with debounce API
-    Cache API response
-🧩 PHASE 5: PERFORMANCE + OPTIMIZATION (⭐⭐⭐⭐⭐)
+        Fetch API and display data
+        Loading + error handling UI
+        Retry API call on failure
+        Parallel API calls
+        Sequential API calls
+        Cancel API request (AbortController)
+        Pagination with API
+        Infinite scrolling list
+        Search with debounce API
+        Cache API response
+    🧩 PHASE 5: PERFORMANCE + OPTIMIZATION (⭐⭐⭐⭐⭐)
 
-    👉 THIS is senior-level filter
+        👉 THIS is senior-level filter
 
-    Prevent unnecessary re-renders
-    Optimize large list rendering
-    Virtualized list (basic concept)
-    Memoized component using React.memo
-    Split components for performance
-    Lazy loading component
-    Code splitting using React.lazy
-    Optimize form rendering
-    Avoid prop re-creation issue
-    Fix performance issue in given component
+        Prevent unnecessary re-renders
+        Optimize large list rendering
+        Virtualized list (basic concept)
+        Memoized component using React.memo
+        Split components for performance
+        Lazy loading component
+        Code splitting using React.lazy
+        Optimize form rendering
+        Avoid prop re-creation issue
+        Fix performance issue in given component
 
 ----------------------------------------------------------------------------------------------------
 //this questions are get back from last time time prepared
@@ -465,3 +465,4 @@ Follow-up :
     Date 14 April ->  read for Interview
     Date 20 April ->  read for Interview
     Date 21 April ->  read for Interview
+    Date 30 April ->  read for Interview

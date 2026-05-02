@@ -265,6 +265,201 @@
     * Consistency vs Availability
     * Latency vs Throughput
     * Cost vs Performance
+
+---------------------------------------------
+2.1
+    ========================
+    0. DESIGN FLOW
+    ========================
+    1. What is System Design?
+    2. What are functional requirements?
+    3. What are non-functional requirements?
+    4. Why is capacity estimation important?
+    5. What is RPS (Requests Per Second)?
+    6. What is High-Level Design (HLD)?
+    7. What is Low-Level Design (LLD)?
+    8. Why are trade-offs important in system design?
+
+    ========================
+    1. BASICS
+    ========================
+    1. What is scalability?
+    2. What is performance?
+    3. Difference between scalability and performance?
+    4. What is availability?
+    5. What is reliability?
+    6. What is latency?
+    7. What is throughput?
+    8. What is fault tolerance?
+
+    ========================
+    2. CORE COMPONENTS
+    ========================
+    1. What is a web server?
+    2. What is an application server?
+    3. Difference between web server and application server?
+    4. What is a load balancer?
+    5. Why do we need a load balancer?
+    6. What is CDN?
+    7. What is API Gateway?
+    8. What is a message queue?
+
+    ========================
+    3. DATABASE DESIGN
+    ========================
+    1. What is SQL?
+    2. What is NoSQL?
+    3. Difference between SQL and NoSQL?
+    4. What is indexing?
+    5. What is normalization?
+    6. What is denormalization?
+    7. What is sharding?
+    8. What is replication?
+    9. What is CAP theorem?
+
+    ========================
+    4. SCALABILITY & PERFORMANCE
+    ========================
+    1. What is vertical scaling?
+    2. What is horizontal scaling?
+    3. Difference between vertical and horizontal scaling?
+    4. What is caching?
+    5. What is rate limiting?
+    6. What is auto-scaling?
+    7. How does CDN improve performance?
+
+    ========================
+    5. COMMUNICATION
+    ========================
+    1. What is HTTP?
+    2. What is HTTPS?
+    3. Difference between HTTP and HTTPS?
+    4. What is REST API?
+    5. What is GraphQL?
+    6. What are WebSockets?
+    7. What is DNS?
+    8. Polling vs Long Polling vs WebSockets?
+
+    ========================
+    6. MESSAGING & QUEUES
+    ========================
+    1. What is a message queue?
+    2. Why use asynchronous processing?
+    3. What is Pub/Sub model?
+    4. What is Kafka?
+    5. What is RabbitMQ?
+    6. Difference between Kafka and RabbitMQ?
+    7. What is Dead Letter Queue?
+
+    ========================
+    7. CACHING
+    ========================
+    1. What is caching?
+    2. Why is caching important?
+    3. What is cache-aside pattern?
+    4. What is write-through cache?
+    5. What is write-back cache?
+    6. What is cache invalidation?
+    7. What is LRU?
+    8. What is LFU?
+
+    ========================
+    8. SECURITY
+    ========================
+    1. What is authentication?
+    2. What is authorization?
+    3. Difference between authentication and authorization?
+    4. What is JWT?
+    5. What is OAuth?
+    6. What is HTTPS/TLS?
+    7. What is SQL Injection?
+    8. What is XSS?
+    9. What is CSRF?
+    10. What is rate limiting?
+
+    ========================
+    9. RELIABILITY & AVAILABILITY
+    ========================
+    1. What is availability?
+    2. What is reliability?
+    3. Difference between availability and reliability?
+    4. What is redundancy?
+    5. What is failover?
+    6. What is fault tolerance?
+    7. What is idempotency?
+    8. What is circuit breaker?
+    9. What are SLA, SLO, SLI?
+
+    ========================
+    10. MONITORING & LOGGING
+    ========================
+    1. What is logging?
+    2. What are metrics?
+    3. What is tracing?
+    4. What is alerting?
+    5. What is observability?
+
+    ========================
+    11. CLOUD & DEPLOYMENT
+    ========================
+    1. What is cloud computing?
+    2. What is AWS?
+    3. What is EC2?
+    4. What is S3?
+    5. What is Docker?
+    6. What is Kubernetes?
+    7. What is CI/CD?
+    8. What is Blue-Green deployment?
+    9. What is Rolling deployment?
+
+    ========================
+    12. DESIGN PRINCIPLES
+    ========================
+    1. What are SOLID principles?
+    2. What is DRY?
+    3. What is KISS?
+    4. What is YAGNI?
+    5. What is idempotency?
+    6. What is loose coupling?
+    7. What is high cohesion?
+    8. What is separation of concerns?
+
+    ========================
+    13. REAL-WORLD SYSTEMS
+    ========================
+    1. How to design a URL shortener?
+    2. How to design a chat system?
+    3. How to design a notification system?
+    4. How to design a social media feed?
+
+    ========================
+    14. TRADE-OFFS
+    ========================
+    1. Consistency vs Availability?
+    2. Latency vs Throughput?
+    3. SQL vs NoSQL trade-offs?
+    4. Cache vs database trade-offs?
+    5. Sync vs Async processing?
+    6. Monolith vs Microservices?
+    7. Cost vs Performance?
+
+    --------------------------------------
+        0. Design Flow → 8
+        1. Basics → 8
+        2. Core Components → 8
+        3. Database Design → 9
+        4. Scalability & Performance → 7
+        5. Communication → 8
+        6. Messaging & Queues → 7
+        7. Caching → 8
+        8. Security → 10
+        9. Reliability & Availability → 9
+        10. Monitoring & Logging → 5
+        11. Cloud & Deployment → 9
+        12. Design Principles → 8
+        13. Real-World Systems → 4
+        14. Trade-offs → 7
+    --------------------------------------
 --------------------------------------------------------------------------------------------------
 3 | 💻 **Coding Questions** |
     # 💻 System Design — Top 30 Coding Questions
@@ -341,6 +536,82 @@
     * Write code in Node.js (your strength)
     * Focus on logic, not UI
     * Explain your approach while coding
+
+    -----------------------------------
+
+    ========================
+    1. CACHE DESIGN
+    ========================
+    1. Design LRU Cache
+    2. Design LFU Cache
+    3. Design In-Memory Cache System
+
+    ========================
+    2. RATE LIMITING
+    ========================
+    1. Design Rate Limiter (Token Bucket)
+    2. Design Rate Limiter (Leaky Bucket)
+    3. API Rate Limiter for users
+
+    ========================
+    3. STORAGE SYSTEMS
+    ========================
+    1. Design URL Shortener (basic code)
+    2. Design Key-Value Store
+    3. Design File System
+    4. Design Log Storage System
+
+    ========================
+    4. MESSAGING SYSTEMS
+    ========================
+    1. Design Message Queue
+    2. Design Pub/Sub System
+    3. Design Notification System (basic code)
+    4. Design Chat Message Storage
+
+    ========================
+    5. SOCIAL SYSTEMS
+    ========================
+    1. Design Twitter (LLD)
+    2. Design News Feed System
+    3. Design Like/Follow System
+
+    ========================
+    6. DATA STREAM / PROCESSING
+    ========================
+    1. Moving Average from Data Stream
+    2. Design Hit Counter
+    3. Design Analytics Counter (Top K)
+    4. Design Sliding Window Counter
+
+    ========================
+    7. SCHEDULING SYSTEMS
+    ========================
+    1. Task Scheduler
+    2. Job Queue System
+    3. Cron Job System (basic design)
+
+    ========================
+    8. PARKING / BOOKING SYSTEMS
+    ========================
+    1. Design Parking System
+    2. Design Movie Ticket Booking System
+    3. Design Hotel Booking System
+
+    ========================
+    9. API DESIGN PROBLEMS
+    ========================
+    1. Design REST API for E-commerce
+    2. Design User Authentication Service
+    3. Design Payment API (idempotent)
+
+    ========================
+    10. CONCURRENCY (ADVANCED)
+    ========================
+    1. Thread-safe Singleton
+    2. Producer-Consumer problem
+    3. Read-Write Lock system
+    ------------------------------------
 --------------------------------------------------------------------------------------------------
 4 | 🎯 **Scenario Questions**
     # 🎯 System Design — Top 30 Scenario Questions
@@ -440,6 +711,98 @@
     * DB → shortId → original URL
     * Scale → 10M users
     * Optimization → caching + sharding
+
+    ---------------------------------------
+    ========================
+    1. SCALE & TRAFFIC SCENARIOS
+    ========================
+    1. Your system suddenly gets 10x traffic. What will you do?
+    2. Database is overloaded. How will you reduce load?
+    3. One server is failing frequently. How will you handle it?
+    4. Your API latency increased. How will you debug?
+    5. System is slow during peak hours. How to fix it?
+
+    ========================
+    2. DATABASE SCENARIOS
+    ========================
+    1. Your database is becoming a bottleneck. What changes will you make?
+    2. Read-heavy vs write-heavy system — how will you design DB?
+    3. Data size grows to TBs. How will you scale DB?
+    4. Need strong consistency vs high availability — what will you choose?
+    5. How will you design DB for chat system?
+
+    ========================
+    3. CACHING SCENARIOS
+    ========================
+    1. Frequently accessed data is slow. How will you optimize?
+    2. Cache is returning stale data. What will you do?
+    3. Cache miss rate is high. How to improve?
+    4. When should you NOT use cache?
+    5. How will you invalidate cache properly?
+
+    ========================
+    4. MESSAGING & QUEUE SCENARIOS
+    ========================
+    1. Email service is slow. How will you improve it?
+    2. System needs to handle background jobs. What will you use?
+    3. Queue is overloaded. How to handle it?
+    4. Message processing fails. What will you do?
+    5. When to use async vs sync?
+
+    ========================
+    5. COMMUNICATION SCENARIOS
+    ========================
+    1. Real-time updates needed. What will you use?
+    2. Polling vs WebSockets — when to use?
+    3. How to design communication for chat app?
+    4. How will microservices communicate?
+    5. REST vs GraphQL — which to choose?
+
+    ========================
+    6. SECURITY SCENARIOS
+    ========================
+    1. Users are getting unauthorized access. What will you fix?
+    2. API is under attack. How to protect?
+    3. How to secure user authentication?
+    4. How to prevent SQL injection?
+    5. How to implement rate limiting?
+
+    ========================
+    7. RELIABILITY SCENARIOS
+    ========================
+    1. System crashes during failure. How to handle?
+    2. One service is down. How to keep system running?
+    3. Data loss happens. What is your solution?
+    4. Payment API is called twice. How to handle?
+    5. How to design fault-tolerant system?
+
+    ========================
+    8. DEPLOYMENT SCENARIOS
+    ========================
+    1. New release breaks production. What will you do?
+    2. How to deploy without downtime?
+    3. Rollback strategy?
+    4. CI/CD pipeline fails. How to debug?
+    5. How to scale app in cloud?
+
+    ========================
+    9. DESIGN DECISION SCENARIOS
+    ========================
+    1. When will you choose SQL vs NoSQL?
+    2. When will you choose microservices vs monolith?
+    3. When will you use cache vs direct DB?
+    4. When will you use queue?
+    5. How to decide architecture for new system?
+
+    ========================
+    10. REAL-WORLD SYSTEM SCENARIOS
+    ========================
+    1. Design a chat system for 1M users
+    2. Design a URL shortener
+    3. Design a notification system
+    4. Design an Instagram feed
+    5. Design a payment system
+    ---------------------------------------
 --------------------------------------------------------------------------------------------------
 5 | 🎯 **Tricky Questions**
     # 🎯 System Design — Top 30 Tricky Questions (With Answers)
@@ -562,7 +925,97 @@
     👉 how you handle uncertainty
 
     ---
+    ----------------------------------------
+    ========================
+        1. SCALE & TRAFFIC TRAPS
+        ========================
+        1. Your system works fine for 1K users but fails at 1M users. What breaks first?
+        2. Traffic suddenly spikes 10x during an event. What immediate and long-term actions will you take?
+        3. Your system handles reads well but writes are failing. How will you fix it?
+        4. Load balancer is healthy but users still see errors. Where is the issue?
+        5. System works in staging but fails in production. What could be the reason?
 
+        ========================
+        2. DATABASE TRAPS
+        ========================
+        1. You chose NoSQL, but now need strong consistency. What will you do?
+        2. Your DB queries are slow even after indexing. What next?
+        3. Sharding causes uneven data distribution. How will you fix it?
+        4. Replication is causing stale reads. How to handle it?
+        5. You normalized DB, but performance dropped. Why?
+
+        ========================
+        3. CACHING TRAPS
+        ========================
+        1. Cache improves speed but users see outdated data. What’s your fix?
+        2. Cache hit rate is very low. What could be wrong?
+        3. Cache server crashes. What happens to system?
+        4. When should you avoid caching completely?
+        5. How do you prevent cache stampede (multiple DB hits)?
+
+        ========================
+        4. MESSAGING & QUEUE TRAPS
+        ========================
+        1. Messages are getting delayed in queue. Why?
+        2. Consumer crashes while processing message. What happens?
+        3. Same message processed twice. How to prevent?
+        4. Queue is growing infinitely. What’s the issue?
+        5. When should you NOT use a message queue?
+
+        ========================
+        5. COMMUNICATION TRAPS
+        ========================
+        1. You used REST, but system needs real-time updates. What now?
+        2. WebSockets connection drops frequently. What will you do?
+        3. Polling causes high load. Alternative?
+        4. Microservices communication is slow. Why?
+        5. API response size is too large. How to optimize?
+
+        ========================
+        6. SECURITY TRAPS
+        ========================
+        1. JWT token is stolen. What will you do?
+        2. Users bypass authorization checks. Where is the flaw?
+        3. System is vulnerable to SQL injection. Fix?
+        4. Too many requests from one user. What to do?
+        5. Passwords stored in DB are leaked. How to secure?
+
+        ========================
+        7. RELIABILITY TRAPS
+        ========================
+        1. One microservice fails and brings down entire system. Why?
+        2. Retry mechanism causes duplicate operations. Fix?
+        3. System recovers slowly after crash. What to improve?
+        4. Circuit breaker not working as expected. Why?
+        5. Backup exists but restore fails. What’s missing?
+
+        ========================
+        8. DEPLOYMENT TRAPS
+        ========================
+        1. New deployment breaks system partially. Why?
+        2. Rolling deployment causes inconsistent behavior. Fix?
+        3. Blue-green deployment fails during switch. What happened?
+        4. CI/CD pipeline succeeds but app crashes. Why?
+        5. App works locally but not in Docker. Why?
+
+        ========================
+        9. DESIGN DECISION TRAPS
+        ========================
+        1. You chose microservices but system became complex. Why?
+        2. You chose monolith but scaling is hard. What next?
+        3. You added cache but performance didn’t improve. Why?
+        4. You added queue but system is still slow. Why?
+        5. You optimized DB but latency still high. What else to check?
+
+        ========================
+        10. REAL-WORLD TRICKY SCENARIOS
+        ========================
+        1. Chat messages are delivered out of order. Fix?
+        2. URL shortener generates duplicate IDs. Why?
+        3. Notification system sends duplicate messages. Fix?
+        4. Payment system charges user twice. How to prevent?
+        5. Feed system shows outdated posts. Why?
+    ----------------------------------------
 --------------------------------------------------------------------------------------------------
 | 6 | 🎯 **Deep Dive Practice** | Real-world problem solving (Senior/Lead level) |
     # 🔥 System Design — Deep Dive Practice (30 Topics)
@@ -731,3 +1184,5 @@
 --------------------------------------------------------------------------------------------------
 reference:
 https://chatgpt.com/share/69ed0b4d-74a8-8320-b9b2-05e9c9ae62d9
+
+https://chatgpt.com/share/69f4ec18-6ae0-8322-a47f-a64b515e8e44

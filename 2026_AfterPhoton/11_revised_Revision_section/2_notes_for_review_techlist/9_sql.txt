@@ -352,94 +352,84 @@
 TOP SQL INTERVIEW QUESTIONS AND ANSWERS
 
     1. What is SQL?
-    SQL (Structured Query Language) is used to interact with relational databases. It helps in storing, retrieving, updating, and managing data.
-
+        SQL (Structured Query Language) is used to interact with relational databases. It helps in storing, retrieving, updating, and managing data.
     2. SQL vs MySQL?
-    SQL is a query language, whereas MySQL is a relational database management system that uses SQL to manage data.
-
+        SQL is a query language, whereas MySQL is a relational database management system that uses SQL to manage data.
     3. What are DDL, DML, DQL, DCL, TCL?
-    DDL – CREATE, ALTER, DROP (structure)
-    DML – INSERT, UPDATE, DELETE (data changes)
-    DQL – SELECT (data retrieval)
-    DCL – GRANT, REVOKE (permissions)
-    TCL – COMMIT, ROLLBACK (transactions)
-
+        DDL – CREATE, ALTER, DROP (structure)
+        DML – INSERT, UPDATE, DELETE (data changes)
+        DQL – SELECT (data retrieval)
+        DCL – GRANT, REVOKE (permissions)
+        TCL – COMMIT, ROLLBACK (transactions)
     4. Difference between DELETE, TRUNCATE, DROP?
-    DELETE – Removes specific rows, can rollback
-    TRUNCATE – Removes all rows, faster, cannot rollback (mostly)
-    DROP – Deletes entire table structure
-
+        DELETE – Removes specific rows, can rollback
+        TRUNCATE – Removes all rows, faster, cannot rollback (mostly)
+        DROP – Deletes entire table structure
     5. Difference between WHERE and HAVING?
-    WHERE filters rows before grouping.
-    HAVING filters after GROUP BY.
+        WHERE filters rows before grouping.
+        HAVING filters after GROUP BY.
 
-    Example:
-    SELECT dept, COUNT(*)
-    FROM emp
-    GROUP BY dept
-    HAVING COUNT(*) > 5;
+        Example:
+        SELECT dept, COUNT(*)
+        FROM emp
+        GROUP BY dept
+        HAVING COUNT(*) > 5;
 
     6. What is INNER JOIN?
-    Returns only matching records from both tables.
-
+        Returns only matching records from both tables.
     7. INNER JOIN vs LEFT JOIN?
-    INNER JOIN – Only matching rows
-    LEFT JOIN – All left table rows + matching right rows
-
+        INNER JOIN – Only matching rows
+        LEFT JOIN – All left table rows + matching right rows
     8. Find records not present in another table
-    SELECT e.*
-    FROM employees e
-    LEFT JOIN dept d ON e.dept_id = d.id
-    WHERE d.id IS NULL;
-
+        SELECT e.*
+        FROM employees e
+        LEFT JOIN dept d ON e.dept_id = d.id
+        WHERE d.id IS NULL;
     9. What is GROUP BY?
-    Used to group rows with same values and apply aggregate functions.
-
+        Used to group rows with same values and apply aggregate functions.
     10. COUNT(*) vs COUNT(column)?
-    COUNT(*) counts all rows.
-    COUNT(column) ignores NULL values.
+        COUNT(*) counts all rows.
+        COUNT(column) ignores NULL values.
 
     11. What is a Subquery?
-    A query inside another query used to get intermediate results.
-
+        A query inside another query used to get intermediate results.
     12. JOIN vs Subquery?
-    JOIN combines tables.
-    Subquery is a nested query.
-    JOIN is usually faster.
-
+        JOIN combines tables.
+        Subquery is a nested query.
+        JOIN is usually faster.
     13. IN vs EXISTS?
-    IN checks values.
-    EXISTS checks existence and is faster for large data.
+        IN checks values.
+        EXISTS checks existence and is faster for large data.
 
     14. Find Second Highest Salary
-    SELECT MAX(salary)
-    FROM emp
-    WHERE salary < (SELECT MAX(salary) FROM emp);
+        SELECT MAX(salary)
+        FROM emp
+        WHERE salary < (SELECT MAX(salary) FROM emp);
 
     15. What is Index?
-    Index improves query performance by reducing data scan time.
+        Index improves query performance by reducing data scan time.
 
     16. Types of Index?
-    Clustered, Non-clustered, Composite.
+        Clustered, Non-clustered, Composite.
 
     17. Why query slow even with index?
-    Index not used properly
-    Wrong query structure
-    Large data scan
-    Missing composite index
+        Index not used properly
+        Wrong query structure
+        Large data scan
+        Missing composite index
 
     18. What is EXPLAIN?
-    EXPLAIN shows how MySQL executes a query and helps identify performance issues.
+        EXPLAIN shows how MySQL executes a query and helps identify performance issues.
 
     19. What is ACID?
-    Atomicity – All or nothing
-    Consistency – Valid data
-    Isolation – No interference
-    Durability – Permanent data
+        Atomicity – All or nothing
+        Consistency – Valid data
+        Isolation – No interference
+        Durability – Permanent data
 
     20. What is Transaction?
-    A group of SQL operations executed as a single unit.
-    Example: Bank transfer (debit + credit must both succeed)
+        A group of SQL operations executed as a single unit.
+        Example: Bank transfer (debit + credit must both succeed)
 🚀 MYSQL THEORY – TOP IMPORTANT TOPICS (INTERVIEW READY)
     🧠 1. DATABASE FUNDAMENTALS (⭐⭐⭐⭐⭐)
     What is RDBMS?
@@ -579,3 +569,4 @@ TOP SQL INTERVIEW QUESTIONS AND ANSWERS
     Prevent SQL injection
 ------------------------------------------------------------------------------------------------
 4.Scenarios Questions
+

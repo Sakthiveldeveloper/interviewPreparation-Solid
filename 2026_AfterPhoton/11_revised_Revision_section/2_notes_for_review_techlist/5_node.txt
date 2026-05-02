@@ -243,141 +243,141 @@
 
    Would you like me to turn these into a printable PDF or a quiz format for you?
    ✅ Node.js Theory – Q&A (Interview Revision Notes)
-🔹 Core Fundamentals
-   1. What is Node.js?
-   Node.js is a cross-platform, open-source JavaScript runtime built on Chrome’s V8 engine that allows execution of JavaScript outside the browser.
-   2. What is Non-Blocking in Node.js?
-   Non-blocking means Node.js can start an I/O operation and continue executing other tasks without waiting for the first operation to complete.
-   3. What is Event-Driven Architecture?
-   It is a design pattern where the program flow is determined by events such as user actions, data streams, or messages. Functions are triggered when events occur.
-   4. What is the Event Loop?
-   The Event Loop is the core mechanism in Node.js that handles asynchronous operations by continuously checking the call stack and callback queue.
-   5. What are Callbacks?
-   Callbacks are functions passed as arguments to other functions and are executed after an asynchronous operation completes.
-   6. What are Promises?
-   Promises are objects that represent the eventual completion or failure of an asynchronous operation and allow chaining using .then() and .catch().
-   7. What is Async/Await?
-   Async/Await is syntactic sugar over Promises that makes asynchronous code look like synchronous code using async and await.
+   🔹 Core Fundamentals
+      1. What is Node.js?
+      Node.js is a cross-platform, open-source JavaScript runtime built on Chrome’s V8 engine that allows execution of JavaScript outside the browser.
+      2. What is Non-Blocking in Node.js?
+      Non-blocking means Node.js can start an I/O operation and continue executing other tasks without waiting for the first operation to complete.
+      3. What is Event-Driven Architecture?
+      It is a design pattern where the program flow is determined by events such as user actions, data streams, or messages. Functions are triggered when events occur.
+      4. What is the Event Loop?
+      The Event Loop is the core mechanism in Node.js that handles asynchronous operations by continuously checking the call stack and callback queue.
+      5. What are Callbacks?
+      Callbacks are functions passed as arguments to other functions and are executed after an asynchronous operation completes.
+      6. What are Promises?
+      Promises are objects that represent the eventual completion or failure of an asynchronous operation and allow chaining using .then() and .catch().
+      7. What is Async/Await?
+      Async/Await is syntactic sugar over Promises that makes asynchronous code look like synchronous code using async and await.
 
-   🔹 Frameworks & APIs
-   8. What is Express.js?
-   Express.js is a lightweight and flexible Node.js web framework used for building APIs and web applications.
-   9. What is Fastify?
-   Fastify is a high-performance Node.js framework designed for speed and low overhead, often faster than Express.
-   10. What is a REST API?
-   A REST API is an architectural style that uses HTTP methods to perform operations on resources via URLs.
-   11. What is GraphQL?
-   GraphQL is a query language for APIs that allows clients to request only the data they need.
-   12. What are HTTP Methods?
-   HTTP methods define actions:
-
-
-   GET → Fetch data
+      🔹 Frameworks & APIs
+      8. What is Express.js?
+      Express.js is a lightweight and flexible Node.js web framework used for building APIs and web applications.
+      9. What is Fastify?
+      Fastify is a high-performance Node.js framework designed for speed and low overhead, often faster than Express.
+      10. What is a REST API?
+      A REST API is an architectural style that uses HTTP methods to perform operations on resources via URLs.
+      11. What is GraphQL?
+      GraphQL is a query language for APIs that allows clients to request only the data they need.
+      12. What are HTTP Methods?
+      HTTP methods define actions:
 
 
-   POST → Create data
+      GET → Fetch data
 
 
-   PUT → Update data (full)
+      POST → Create data
 
 
-   PATCH → Update data (partial)
+      PUT → Update data (full)
 
 
-   DELETE → Remove data
+      PATCH → Update data (partial)
 
 
-   13. What is JSON?
-   JSON (JavaScript Object Notation) is a lightweight data format used for data exchange between client and server.
-
-   🔹 Architecture & Data
-   14. What is Middleware?
-   Middleware functions run between request and response and are used for tasks like authentication, logging, and validation.
-   15. What are the Types of Middleware?
+      DELETE → Remove data
 
 
-   Application-level
+      13. What is JSON?
+      JSON (JavaScript Object Notation) is a lightweight data format used for data exchange between client and server.
+
+      🔹 Architecture & Data
+      14. What is Middleware?
+      Middleware functions run between request and response and are used for tasks like authentication, logging, and validation.
+      15. What are the Types of Middleware?
 
 
-   Router-level
+      Application-level
 
 
-   Built-in
+      Router-level
 
 
-   Error-handling
+      Built-in
 
 
-   Third-party
+      Error-handling
 
 
-   16. What is an ORM?
-   ORM (Object-Relational Mapping) allows interacting with databases using JavaScript objects instead of SQL queries.
-   17. What are Environment Variables?
-   Environment variables are external variables used to store sensitive data like API keys and database credentials.
-   18. How do you structure a Node.js project?
-   Using layered architecture:
+      Third-party
 
 
-   Routes
+      16. What is an ORM?
+      ORM (Object-Relational Mapping) allows interacting with databases using JavaScript objects instead of SQL queries.
+      17. What are Environment Variables?
+      Environment variables are external variables used to store sensitive data like API keys and database credentials.
+      18. How do you structure a Node.js project?
+      Using layered architecture:
 
 
-   Controllers
+      Routes
 
 
-   Services
+      Controllers
 
 
-   Models
+      Services
 
 
-   Middleware
+      Models
 
 
-   19. How do you handle large data (1 Lakh+ records)?
+      Middleware
 
 
-   Pagination (limit & skip)
+      19. How do you handle large data (1 Lakh+ records)?
 
 
-   Streams (process chunk-by-chunk)
+      Pagination (limit & skip)
 
 
-   Database cursors
+      Streams (process chunk-by-chunk)
+
+
+      Database cursors
 
 
 
-   🔹 Security & Production
-   20. What is JWT?
-   JWT (JSON Web Token) is a token-based authentication method used to securely transmit user identity.
-   21. What is Validation?
-   Validation ensures user input is correct and secure before processing.
-   22. What is Rate Limiting?
-   Rate limiting restricts the number of requests from a user within a time period to prevent abuse.
-   23. What is Logging?
-   Logging records application events and errors for debugging and monitoring.
-   24. How do you handle Concurrency in Node.js?
+      🔹 Security & Production
+      20. What is JWT?
+      JWT (JSON Web Token) is a token-based authentication method used to securely transmit user identity.
+      21. What is Validation?
+      Validation ensures user input is correct and secure before processing.
+      22. What is Rate Limiting?
+      Rate limiting restricts the number of requests from a user within a time period to prevent abuse.
+      23. What is Logging?
+      Logging records application events and errors for debugging and monitoring.
+      24. How do you handle Concurrency in Node.js?
 
 
-   Event Loop (I/O tasks)
+      Event Loop (I/O tasks)
 
 
-   Worker Threads (CPU tasks)
+      Worker Threads (CPU tasks)
 
 
-   Clustering (multi-core usage)
+      Clustering (multi-core usage)
 
 
-   25. How do you handle Production Issues?
+      25. How do you handle Production Issues?
 
 
-   APM tools (monitoring)
+      APM tools (monitoring)
 
 
-   Error tracking (logs & alerts)
+      Error tracking (logs & alerts)
 
 
-   Process managers (auto restart apps)
+      Process managers (auto restart apps)
 
 
 
@@ -606,6 +606,7 @@ TOP NODE.JS CODING QUESTIONS (REAL INTERVIEW STYLE)
       Handle concurrent requests safely
 
       ------------------------------------------------------------------------
+
 4.Scenarios Questions
 
 
@@ -617,3 +618,4 @@ Follow-up :
          Date 14 April ->  read for Interview
          Date 21 April ->  read for Interview
          Date 22 April ->  read for Interview
+         Date 30 April ->  read for Interview

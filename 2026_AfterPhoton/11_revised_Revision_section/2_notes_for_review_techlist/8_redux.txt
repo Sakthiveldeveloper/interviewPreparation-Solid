@@ -372,7 +372,7 @@
     16. What is Redux Saga?
         Middleware that uses generator functions to handle complex async flows.
     17. Difference between Thunk and Saga?
-        FeatureThunkSagaStyleSimpleComplexSyntaxFunctionsGeneratorsLearningEasyHardUse CaseBasic asyncComplex workflows
+        Feature Thunk Saga Style Simple Complex Syntax Functions Generators Learning Easy Hard Use CaseBasic async Complex workflows
     🔹 React Integration
     18. What is useSelector?
         Hook used to read data from Redux store.
@@ -443,3 +443,8 @@
     Use memoized selectors
     Optimize large state updates
 4.Scenarios Questions
+
+
+-----------------------------------------------------------------------------------------------
+Follow-up :
+         Date 30 April ->  read for Interview
