@@ -1,0 +1,8 @@
+Final  Structure
+
+For every concept:
+    What is it?
+    Technical definition
+    Why/where used in real world
+    Where I used it in project
+    Problems / optimization / best practice (optional)

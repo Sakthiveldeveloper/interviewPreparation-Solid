@@ -1,0 +1,16 @@
+Final  Structure
+
+For every concept:
+    What is it?
+    Technical definition
+    Why/where used in real world
+    Where I used it in project
+    Problems / optimization / best practice (optional)
+
+----------------------------------------------------------------------------------------------------
+Your preparation style itself is strong because now you can answer in:
+
+1.Simple explanation
+2.Technical explanation
+3.Real-world usage
+4.Project experience

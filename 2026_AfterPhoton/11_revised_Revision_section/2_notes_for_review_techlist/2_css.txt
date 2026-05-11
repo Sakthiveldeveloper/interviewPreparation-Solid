@@ -197,6 +197,179 @@
          Reflow is when the browser calculates the size and position of elements; Repaint is when it draws the pixels (colors). Reflow is "expensive" and slow, while Repaint is faster. Optimizing CSS means choosing properties that avoid constant Reflows for smoother performance.
 
 --------------------------------------------------------------------------------------------------------
+2.1: New flow for Interview Questions
+
+     1. What is CSS?
+          1. One-line
+          CSS is used to style and design web pages.
+          2. Technical Definition
+          CSS (Cascading Style Sheets) controls the visual presentation of HTML elements including colors, spacing, layout, fonts, and responsiveness.
+          3. Real-world Usage
+          Used to create responsive UI designs, animations, layouts, themes, and mobile-friendly applications.
+          4. Where I Used
+          I used CSS in React and MERN applications for responsive dashboards, forms, tables, and component styling.
+     2. CSS Selectors
+          1. One-line
+          Selectors target HTML elements for styling.
+          2. Technical Definition
+          CSS selectors identify elements based on tag, class, ID, attribute, or hierarchy to apply specific style rules.
+          3. Real-world Usage
+          Used for reusable styling systems, component targeting, and dynamic UI customization.
+          4. Where I Used
+          I used class selectors, pseudo selectors, and nested selectors in React components and Ant Design customization.
+     3. Pseudo-classes
+          1. One-line
+          Pseudo-classes style elements based on state or interaction.
+          2. Technical Definition
+          Pseudo-classes like :hover, :focus, and :nth-child() apply styles dynamically without additional JavaScript.
+          3. Real-world Usage
+          Used for hover effects, form validation styles, active menus, and interactive UI behavior.
+          4. Where I Used
+          I used pseudo-classes for button hover effects, input focus styling, and responsive navigation menus.
+     4. Box Model
+          1. One-line
+          Every HTML element is treated as a rectangular box in CSS.
+          2. Technical Definition
+          The CSS Box Model consists of content, padding, border, and margin which together determine the element’s final size and spacing.
+          3. Real-world Usage
+          Used to manage spacing, layouts, alignment, and responsive design structure.
+          4. Where I Used
+          I used box model concepts while designing responsive cards, tables, forms, and dashboard layouts.
+     5. Margin vs Padding
+          1. One-line
+          Margin creates outer spacing, while padding creates inner spacing.
+          2. Technical Definition
+          Margin controls space outside the border, whereas padding controls space between content and border.
+          3. Real-world Usage
+          Used for layout spacing, UI consistency, and responsive component design.
+          4. Where I Used
+          I used margin for spacing between sections and padding for internal component spacing in dashboards and forms.
+     6. Display Property
+          1. One-line
+          The display property controls how elements appear in the layout.
+          2. Technical Definition
+          It defines the rendering behavior of elements using values like block, inline, inline-block, flex, grid, and none.
+          3. Real-world Usage
+          Used for layouts, hiding elements, responsive alignment, and component structuring.
+          4. Where I Used
+          I used display properties extensively for responsive layouts, conditional rendering, and Flexbox/Grid containers.
+     7. Inline vs Block vs Inline-Block
+          1. One-line
+          These define how elements occupy space in a webpage.
+          2. Technical Definition
+          Block elements take full width, inline elements take content width, and inline-block combines inline flow with block sizing support.
+          3. Real-world Usage
+          Used for navigation menus, buttons, cards, labels, and responsive alignment.
+          4. Where I Used
+          I used inline-block for menu items and block elements for responsive layout structures.
+     8. Flexbox
+          1. One-line
+          Flexbox is a one-dimensional layout system.
+          2. Technical Definition
+          Flexbox aligns and distributes elements efficiently along main and cross axes using flexible containers and items.
+          3. Real-world Usage
+          Used for navigation bars, responsive cards, center alignment, and dynamic layouts.
+          4. Where I Used
+          I used Flexbox in React dashboards, table layouts, and responsive UI alignment.
+     9. CSS Grid
+          1. One-line
+          CSS Grid is a two-dimensional layout system.
+          2. Technical Definition
+          Grid allows developers to design layouts using rows and columns simultaneously for complex responsive structures.
+          3. Real-world Usage
+          Used for full-page layouts, dashboards, gallery designs, and responsive UI grids.
+          4. Where I Used
+          I used CSS Grid for dashboard layouts and responsive content sections in enterprise applications.
+     10. justify-content vs align-items
+          1. One-line
+          justify-content aligns horizontally, align-items aligns vertically.
+          2. Technical Definition
+          In Flexbox/Grid, justify-content controls alignment along the main axis, while align-items controls alignment along the cross axis.
+          3. Real-world Usage
+          Used for centering elements, responsive alignment, and balanced UI layouts.
+          4. Where I Used
+          I used both properties to center loaders, modals, forms, and responsive dashboard components.
+     11. Position Properties
+          1. One-line
+          Position controls how elements are placed on a webpage.
+          2. Technical Definition
+          CSS position values like static, relative, absolute, fixed, and sticky define element placement and document flow behavior.
+          3. Real-world Usage
+          Used for sticky headers, modals, floating buttons, overlays, and tooltips.
+          4. Where I Used
+          I used sticky headers, absolute-position badges, and fixed navigation bars in enterprise dashboards.
+     12. Relative vs Absolute
+          1. One-line
+          Relative positions within normal flow, absolute removes element from flow.
+          2. Technical Definition
+          Relative positioning keeps the element in document flow, while absolute positioning aligns elements relative to the nearest positioned parent.
+          3. Real-world Usage
+          Used for badges, icons, overlays, dropdowns, and floating UI elements.
+          4. Where I Used
+          I used relative and absolute positioning for notification badges, icons inside inputs, and modal overlays.
+
+     13. z-index
+          1. One-line
+          z-index controls stacking order of overlapping elements.
+          2. Technical Definition
+          z-index defines the depth level of positioned elements along the z-axis.
+          3. Real-world Usage
+          Used for modals, dropdowns, tooltips, overlays, and layered UI components.
+          4. Where I Used
+          I used z-index management for modals, sidebars, popups, and sticky navigation components.
+
+     14. Media Queries
+          1. One-line
+          Media queries make websites responsive across devices.
+          2. Technical Definition
+          Media queries apply different CSS styles based on screen size, resolution, or device characteristics.
+          3. Real-world Usage
+          Used for mobile responsiveness, tablet layouts, and adaptive UI design.
+          4. Where I Used
+          I used media queries to create responsive enterprise dashboards and mobile-friendly React applications.
+     15. Box-Sizing
+          1. One-line
+          Box-sizing controls how width and height are calculated.
+          2. Technical Definition
+          box-sizing: border-box includes padding and border within the defined width and height.
+          3. Real-world Usage
+          Used to simplify responsive layout calculations and prevent overflow issues.
+          4. Where I Used
+          I applied border-box globally in projects to maintain consistent layout sizing.
+
+     16. Reflow vs Repaint
+          1. One-line
+          Reflow recalculates layout, repaint redraws visuals.
+          2. Technical Definition
+          Reflow updates element size and structure, while repaint updates visual appearance without changing layout.
+          3. Real-world Usage
+          Used in frontend optimization and performance improvement.
+          4. Where I Used
+
+     I optimized React UI updates and animations to reduce unnecessary reflows and improve rendering performance.
+
+--------------------------------------------------------------------------------------------------------
+     Prepare CSS in this order:
+     Phase 1
+          Box Model
+          Display
+          Position
+          Flexbox
+          Grid
+     Phase 2
+          Media Queries
+          Overflow
+          z-index
+          Visibility vs Display
+          Box-sizing
+     Phase 3
+          Performance concepts
+          Reflow/Repaint
+          CSS specificity
+          !important
+          Preprocessors
+--------------------------------------------------------------------------------------------------------
+
 🚀 CSS THEORY – TOP IMPORTANT TOPICS
      🧠 1. CORE CSS FUNDAMENTALS (⭐⭐⭐⭐⭐)
           What is CSS? How it works with HTML

@@ -1,0 +1,11 @@
+MERN Stack – TL
+• Strong Technical candidate with in-depth experience in MERN Stack
+• Hands on working experience in NodeJS (Express / Loopback / Hapi JS)
+• Strong knowledge and working experience in using ORM, REST API, Caching, performance
+optimization is required
+• Knowledge in Cloud services (AWS/GCP/Azure) is required
+• Excellent problem solving, critical thinking, and communication skills
+• Highly organized and self-motivated
+• Strong knowledge of RDBMS & OOPS is required.
+• Good knowledge in standards, design patterns are required
+• Any certifications or technical writing done on the related technologies is a value add

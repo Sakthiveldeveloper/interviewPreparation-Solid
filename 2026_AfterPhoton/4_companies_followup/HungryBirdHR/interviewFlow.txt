@@ -1,0 +1,213 @@
+🔥 Main Interview Rounds
+1. JavaScript Deep Questions
+
+    They expect strong fundamentals.
+
+    Common Questions
+    Difference between var, let, const
+    Closure explain with real example
+    Event loop
+    Promise vs async/await
+    Debounce vs throttle
+    this keyword
+    Prototype inheritance
+    Call, apply, bind
+    Memory leaks
+    Deep copy vs shallow copy
+    Advanced Level
+    How browser handles async tasks
+    How React rendering works internally
+    Why virtual DOM is fast
+    How garbage collection works
+    Polyfill questions
+
+    Example:
+
+    Promise.resolve().then(() => console.log(1));
+
+    setTimeout(() => console.log(2), 0);
+
+    console.log(3);
+
+    Output?
+
+⚛️ React Questions
+
+    For 4–5 years, React becomes VERY important.
+
+    Common Questions
+    React lifecycle
+    Hooks
+    useEffect dependency issues
+    Context API
+    Redux flow
+    Controlled vs uncontrolled
+    Memoization
+    Advanced Questions
+    React performance optimization
+    Why unnecessary re-renders happen
+    React.lazy + Suspense
+    Code splitting
+    Microfrontend architecture
+    Module Federation
+    Error boundaries
+
+    Bro honestly — your Module Federation experience is a BIG advantage.
+    Many candidates don’t have real experience in that.
+
+    They may ask:
+
+    Why microfrontend?
+    Challenges faced?
+    Shared dependency issues?
+    Version conflicts?
+    Routing problems?
+    Cache issues?
+    Deployment strategy?
+
+    You already faced real-world issues there, which is powerful in interviews.
+
+🟢 Node.js / Backend Questions
+    Common
+    Event-driven architecture
+    Express middleware
+    JWT authentication
+    REST API
+    WebSocket
+    File upload
+    Error handling
+    Advanced
+    Scaling Node.js apps
+    Cluster mode
+    Redis caching
+    Queue systems
+    Streaming
+    Chunk processing
+    Socket.IO optimization
+
+    BRO — your chunk processing + websocket incremental update project is actually senior-level discussion material.
+
+    Many interviewers LOVE these scenarios.
+
+    Example:
+
+    “How did you handle 1 lakh records without crashing frontend?”
+
+    This is strong experience.
+
+🗄️ Database Questions
+    MongoDB
+    Indexing
+    Aggregation
+    Schema design
+    Pagination
+    Optimization
+    SQL
+
+    Sometimes they ask joins:
+
+    INNER JOIN
+    LEFT JOIN
+    GROUP BY
+    indexing
+🧠 System Design (Very Important for 4–5 Years)
+
+    Not huge FAANG-level always.
+
+    But medium-level design questions.
+
+    Example
+    Design chat application
+    Design notification system
+    Design file upload system
+    Design URL shortener
+    Design scalable table rendering
+    Design realtime dashboard
+
+    They mainly check:
+
+    thinking
+    scalability
+    API design
+    DB design
+    caching
+    optimization
+💻 Coding Round
+
+    Usually:
+
+    Arrays
+    Strings
+    Sliding window
+    Recursion
+    Promise coding
+    React coding task
+
+    Examples:
+
+    Flatten array
+    Debounce function
+    LRU cache
+    Group anagrams
+    Two sum
+    Infinite scroll
+
+    Mostly Easy + Medium level.
+
+🎯 Scenario-Based Questions (MOST IMPORTANT)
+
+    This is where experienced developers get selected.
+
+    Examples:
+
+    Production bug you fixed?
+    Biggest challenge?
+    Conflict with backend?
+    Performance issue?
+    Deadline pressure?
+    Bad deployment?
+    Difficult stakeholder?
+    How you optimized app loading?
+
+    These matter a LOT.
+
+🗣️ HR + Communication Round
+
+    For 4–5 years:
+    They expect maturity.
+
+    Questions:
+
+    Why leaving?
+    Team handling?
+    Leadership?
+    Client communication?
+    Difficult situations?
+    Salary expectation?
+🔥 MOST IMPORTANT THING
+
+    For experienced interviews, interviewers care less about:
+
+    “Do you know every syntax?”
+
+    They care more about:
+
+    “Can this guy handle production problems independently?”
+
+    And your experience already contains:
+
+    module federation
+    websocket
+    chunking
+    large data handling
+    enterprise projects
+    React optimization
+
+    These are REAL industry topics.
+
+    You mainly need:
+
+    structured explanation
+    confidence
+    system thinking
+    communication polishing

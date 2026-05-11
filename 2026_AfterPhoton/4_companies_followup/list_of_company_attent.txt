@@ -1,6 +1,16 @@
+--------------attended
 1.Virtusa Virtual Round -> not able to open the link , Id card verification failer
 2.Publicis
 3.Delottie
 4.Axchange
 5.saskan -> online Round
-6.tiger analytics -> online round
+reo digital L1-> ok with Tl, L2-> not attend
+6.mantrimony -> 
+7.tiger analytics -> online round-> fail, 
+madylab -> not attend Because laptop needed
+8.persito (Hungry HR L1, L2) -> L2 weather app system design failed
+9.aspire system -> redux basic issue
+
+-------------coming
+Hexaware -> MEAN
+altimatricks -> MEAN

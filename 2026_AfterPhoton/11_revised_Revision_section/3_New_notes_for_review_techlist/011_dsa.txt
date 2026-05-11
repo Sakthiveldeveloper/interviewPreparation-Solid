@@ -3189,7 +3189,1004 @@ Pattern wise explanation
 
         👉 THIS = real mastery
     -------------------------------------------------------------------------------
+    🧠 📘 DSA SUMMARY NOTE (Linear + Non-Linear)
+        🔹 LINEAR DATA STRUCTURES
+        1. ARRAY
+
+        What?
+        Collection of elements stored in contiguous memory (index-based).
+
+        Why?
+        Fast access → O(1)
+
+        When?
+
+        Need index access
+        Sequential processing
+
+        How?
+
+        Access via index
+        Traverse using loop
+
+        Where?
+
+        Sliding Window
+        Two Pointer
+        Prefix Sum
+        2. STRING
+
+        What?
+        Array of characters
+
+        Why?
+        Efficient text handling
+
+        When?
+
+        Palindrome
+        Anagram
+        Substring problems
+
+        How?
+
+        Access via index
+        Use string methods
+
+        Where?
+
+        Sliding Window
+        Hashing
+        3. LINKED LIST
+
+        What?
+        Nodes connected using pointers
+
+        Why?
+        Dynamic size, fast insert/delete
+
+        When?
+
+        Frequent insert/delete
+        No random access needed
+
+        How?
+
+        Each node → value + next
+
+        Where?
+
+        Fast & Slow Pointer
+        LRU Cache
+        4. STACK
+
+        What?
+        LIFO (Last In First Out)
+
+        Why?
+        Track recent operations
+
+        When?
+
+        Undo operations
+        Parentheses problems
+
+        How?
+
+        push()
+        pop()
+
+        Where?
+
+        Monotonic Stack
+        DFS (iterative)
+        5. QUEUE
+
+        What?
+        FIFO (First In First Out)
+
+        Why?
+        Process in order
+
+        When?
+
+        Scheduling
+        Level traversal
+
+        How?
+
+        enqueue()
+        dequeue()
+
+        Where?
+
+        BFS
+        Task scheduling
+        6. DEQUE
+
+        What?
+        Insert/remove from both ends
+
+        Why?
+        Flexible operations
+
+        When?
+
+        Sliding Window optimization
+
+        How?
+
+        push_front()
+        push_back()
+
+        Where?
+
+        Window maximum problems
+        7. HASHMAP / HASHSET
+
+        What?
+        Key-value storage (hashing)
+
+        Why?
+        O(1) lookup
+
+        When?
+
+        Frequency count
+        Fast lookup
+
+        How?
+
+        map[key] = value
+
+        Where?
+
+        Two Sum
+        Prefix Sum
+        🔹 NON-LINEAR DATA STRUCTURES
+        8. TREE
+
+        What?
+        Hierarchical structure (parent-child)
+
+        Why?
+        Represents hierarchy
+
+        When?
+
+        Recursive structure
+        Hierarchical data
+
+        How?
+
+        DFS (recursion)
+        BFS (queue)
+
+        Where?
+
+        File system
+        DOM
+        Tree problems
+        9. BINARY SEARCH TREE (BST)
+
+        What?
+        Sorted tree (left < node < right)
+
+        Why?
+        Fast search (O(log n))
+
+        When?
+
+        Sorted data
+        Range queries
+
+        How?
+
+        Compare values while traversing
+
+        Where?
+
+        Databases
+        Search systems
+        10. HEAP
+
+        What?
+        Complete tree with priority rule
+
+        Why?
+        Fast min/max retrieval
+
+        When?
+
+        Top K problems
+        Priority tasks
+
+        How?
+
+        Insert → maintain heap
+        Remove → rebalance
+
+        Where?
+
+        Priority Queue
+        Scheduling
+        11. GRAPH
+
+        What?
+        Nodes connected by edges
+
+        Why?
+        Represents relationships
+
+        When?
+
+        Network problems
+        Path finding
+
+        How?
+
+        Adjacency list
+        DFS / BFS
+
+        Where?
+
+        Social networks
+        Maps / routing
+        🧠 FINAL RECALL SUMMARY
+        Linear → Sequence (Array, List, Stack, Queue)
+        Non-Linear → Structure (Tree, Graph)
+
+        Array → Index
+        HashMap → Lookup
+        Stack → Undo
+        Queue → Order
+        Tree → Hierarchy
+        Graph → Network
+        Heap → Priority
+        💡 ONE-LINE MEMORY TRICK
+
+        👉 “Store smart → access fast → choose right DS”
     -------------------------------------------------------------------------------
+    🧠 📘 ALGORITHMS MASTER SUMMARY (RECALL NOTE)
+        🔹 1. LINEAR SEARCH
+
+        What?
+        Check each element one by one
+
+        Why?
+        Simple, works on any data
+
+        When?
+
+        Unsorted data
+        Small input
+
+        How?
+        Loop through array and compare
+
+        Where?
+        Basic search problems
+
+        🔹 2. BINARY SEARCH ⭐
+
+        What?
+        Divide sorted array into halves to search
+
+        Why?
+        Very fast → O(log n)
+
+        When?
+
+        Sorted data 📌
+        Search / min / max problems
+
+        How?
+        Compare mid → go left or right
+
+        Where?
+
+        Search problems
+        Optimization problems
+        🔹 3. BUBBLE SORT
+
+        What?
+        Swap adjacent elements repeatedly
+
+        Why?
+        Simple to understand
+
+        When?
+
+        Learning
+        Very small arrays
+
+        How?
+        Nested loops → swap neighbors
+
+        Where?
+        Rarely used
+
+        🔹 4. SELECTION SORT
+
+        What?
+        Pick minimum and place correctly
+
+        Why?
+        Fewer swaps
+
+        When?
+        Small datasets
+
+        How?
+        Find min → swap
+
+        Where?
+        Rare use
+
+        🔹 5. INSERTION SORT
+
+        What?
+        Insert element into correct position
+
+        Why?
+        Efficient for nearly sorted data
+
+        When?
+
+        Small arrays
+        Almost sorted
+
+        How?
+        Shift elements and insert
+
+        Where?
+        Used inside other algorithms
+
+        🔹 6. MERGE SORT ⭐
+
+        What?
+        Divide → sort → merge
+
+        Why?
+        Stable and guaranteed O(n log n)
+
+        When?
+
+        Large data
+        Stable sorting needed
+
+        How?
+        Split array recursively → merge sorted halves
+
+        Where?
+        Databases, external sorting
+
+        🔹 7. QUICK SORT ⭐
+
+        What?
+        Partition around pivot
+
+        Why?
+        Very fast in practice
+
+        When?
+        General sorting
+
+        How?
+        Pick pivot → split → recurse
+
+        Where?
+        Most systems
+
+        🔹 8. HEAP SORT
+
+        What?
+        Use heap to sort
+
+        Why?
+        No extra memory
+
+        When?
+        Memory constraint
+
+        How?
+        Build heap → remove max repeatedly
+
+        Where?
+        System-level usage
+
+        🔹 9. BFS (GRAPH) ⭐
+
+        What?
+        Level-by-level traversal
+
+        Why?
+        Shortest path (unweighted)
+
+        When?
+
+        Minimum steps 📌
+        Level problems
+
+        How?
+        Use queue
+
+        Where?
+        Graphs, trees
+
+        🔹 10. DFS (GRAPH) ⭐
+
+        What?
+        Go deep then backtrack
+
+        Why?
+        Explore all paths
+
+        When?
+
+        Path problems
+        Components
+
+        How?
+        Recursion / stack
+
+        Where?
+        Graphs, trees
+
+        🔹 11. DIJKSTRA ⭐
+
+        What?
+        Shortest path in weighted graph
+
+        Why?
+        Efficient path finding
+
+        When?
+
+        Weighted graph 📌
+        Min distance
+
+        How?
+        Use min heap
+
+        Where?
+        GPS, routing
+
+        🔹 12. TOPOLOGICAL SORT ⭐
+
+        What?
+        Order nodes based on dependencies
+
+        Why?
+        Resolve order constraints
+
+        When?
+
+        DAG 📌
+        Scheduling
+
+        How?
+        Indegree + queue
+
+        Where?
+        Course schedule
+
+        🔹 13. GREEDY ALGORITHM ⭐
+
+        What?
+        Pick best option at each step
+
+        Why?
+        Fast and simple
+
+        When?
+
+        Min/max problems 📌
+        Intervals
+
+        How?
+        Sort → choose best
+
+        Where?
+        Scheduling, intervals
+
+        🔹 14. DYNAMIC PROGRAMMING ⭐
+
+        What?
+        Solve once → store → reuse
+
+        Why?
+        Avoid repeated work
+
+        When?
+
+        Min/max/count 📌
+        Repeated subproblems
+
+        How?
+        Memoization / Tabulation
+
+        Where?
+        Optimization problems
+
+        🔹 15. BACKTRACKING ⭐
+
+        What?
+        Try all possibilities + undo
+
+        Why?
+        Find all solutions
+
+        When?
+
+        Combinations 📌
+        Permutations
+
+        How?
+        Choose → explore → undo
+
+        Where?
+        N-Queens, subsets
+
+        🔹 16. TREE TRAVERSAL ⭐
+
+        What?
+        Visit tree nodes
+
+        Why?
+        Process tree data
+
+        When?
+        Tree problems 📌
+
+        How?
+        DFS / BFS
+
+        Where?
+        All tree problems
+
+        🔹 17. DIAMETER OF TREE ⭐
+
+        What?
+        Longest path in tree
+
+        Why?
+        Path optimization
+
+        When?
+        Longest path problems
+
+        How?
+        Left height + right height
+
+        Where?
+        Advanced tree problems
+
+        🔹 18. LCA (Lowest Common Ancestor) ⭐
+
+        What?
+        Common parent of two nodes
+
+        Why?
+        Relationship queries
+
+        When?
+        Ancestor problems
+
+        How?
+        Recursive DFS
+
+        Where?
+        Tree queries
+
+        🔹 19. KADANE’S ALGORITHM ⭐
+
+        What?
+        Maximum subarray sum
+
+        Why?
+        O(n) optimization
+
+        When?
+        Subarray problems 📌
+
+        How?
+        Keep sum, reset if negative
+
+        Where?
+        DP problems
+
+        🔹 20. FLOYD CYCLE DETECTION ⭐
+
+        What?
+        Detect cycle using 2 pointers
+
+        Why?
+        No extra memory
+
+        When?
+        Cycle problems 📌
+
+        How?
+        Slow + Fast pointer
+
+        Where?
+        Linked list / array
+
+        🔹 21. KMP (STRING MATCHING)
+
+        What?
+        Efficient substring search
+
+        Why?
+        Avoid rechecking
+
+        When?
+        Pattern search
+
+        How?
+        LPS array
+
+        Where?
+        Text processing
+
+        🔹 22. BIT MANIPULATION
+
+        What?
+        Binary operations
+
+        Why?
+        Fast computation
+
+        When?
+        XOR problems 📌
+
+        How?
+        Bit operations
+
+        Where?
+        Subsets, unique numbers
+
+        🧠 FINAL RECALL MAP
+        Search → Linear, Binary
+        Sort → Bubble, Selection, Insertion, Merge, Quick
+        Graph → BFS, DFS, Dijkstra, Topo
+        Greedy → Best choice
+        DP → Store & reuse
+        Backtracking → Try all
+        Tree → DFS/BFS, LCA, Diameter
+        Special → Kadane, Floyd, KMP, Bit
+        💡 ONE-LINE MASTER RULE
+
+        👉 “Choose the right algorithm based on problem pattern”
+    -------------------------------------------------------------------------------
+    🧠 📘 DSA MASTER NOTE (FINAL)
+        🔹 FLOW
+        Problem → Pattern → Data Structure → Algorithm → Optimize
+        🔹 PATTERNS
+        Sliding Window → Subarray/substring
+        Two Pointer → Pair problems
+        Hashing → Fast lookup
+        Binary Search → Sorted / answer space
+        DFS/BFS → Tree/Graph traversal
+        Prefix Sum → Range sum
+        Fast-Slow Pointer → Cycle/middle
+        Heap → Top K / priority
+        Greedy → Best choice now
+        Backtracking → All possibilities
+        DP → Optimize repeated work
+        Monotonic Stack → Next greater/smaller
+        Union-Find → Connectivity
+        🔹 DATA STRUCTURES
+        Linear:
+        Array → Index-based
+        String → Text
+        Linked List → Dynamic nodes
+        Stack → LIFO
+        Queue → FIFO
+        HashMap → Lookup
+
+        Non-Linear:
+        Tree → Hierarchy
+        BST → Sorted tree
+        Heap → Priority
+        Graph → Network
+        🔹 FUNDAMENTALS
+        Time Complexity:
+        O(1), O(log n), O(n), O(n log n), O(n²)
+
+        Space Complexity:
+        O(1), O(n), recursion stack
+
+        Recursion:
+        Base case + recursive call + stack
+        🔹 ALGORITHMS
+        Searching:
+        Linear, Binary
+
+        Sorting:
+        Bubble, Selection, Insertion, Merge, Quick
+
+        Graph:
+        BFS, DFS, Dijkstra, Topological
+
+        Greedy:
+        Local optimal choice
+
+        DP:
+        Store & reuse
+
+        Backtracking:
+        Try all possibilities
+
+        Tree:
+        Traversal, LCA, Diameter
+
+        Special:
+        Kadane, Floyd Cycle, KMP, Bit
+        🔹 PROBLEM THINKING
+        1. Understand problem
+        2. Identify pattern
+        3. Choose DS
+        4. Choose algorithm
+        5. Optimize
+        🔹 INTERVIEW THINKING
+        Explain:
+        - Approach
+        - Complexity
+        - Trade-offs
+        💡 FINAL TRUTH
+
+        👉 “DSA mastery = Practice + Pattern recognition + Explanation”
+    -------------------------------------------------------------------------------
+    🚀 TOP 50 DSA PROBLEMS (INTERVIEW SET)
+
+        👉 These are high-frequency + pattern coverage
+
+        🔥 PHASE 1 (Foundation – 15 problems)
+        Two Sum ⭐
+        Valid Anagram
+        Contains Duplicate
+        Maximum Subarray (Kadane) ⭐
+        Best Time to Buy & Sell Stock
+        Product of Array Except Self ⭐
+        Valid Parentheses
+        Merge Intervals ⭐
+        Binary Search ⭐
+        Search in Rotated Sorted Array ⭐
+        Climbing Stairs ⭐
+        House Robber ⭐
+        Maximum Depth of Binary Tree ⭐
+        Same Tree
+        Invert Binary Tree
+        ⚡ PHASE 2 (Core Patterns – 20 problems)
+        Longest Substring Without Repeating ⭐
+        Longest Repeating Character Replacement ⭐
+        3Sum ⭐
+        Container With Most Water ⭐
+        Group Anagrams ⭐
+        Longest Consecutive Sequence ⭐
+        Subarray Sum Equals K ⭐
+        Kth Largest Element ⭐
+        Top K Frequent Elements ⭐
+        Merge K Sorted Lists ⭐
+        Number of Islands ⭐
+        Rotting Oranges ⭐
+        Course Schedule ⭐
+        Lowest Common Ancestor ⭐
+        Diameter of Binary Tree ⭐
+        Balanced Binary Tree
+        Subsets ⭐
+        Permutations ⭐
+        Combination Sum ⭐
+        Daily Temperatures ⭐
+        🧠 PHASE 3 (Advanced – 15 problems)
+        Trapping Rain Water ⭐
+        Sliding Window Maximum ⭐
+        Minimum Window Substring ⭐
+        Word Ladder ⭐
+        Network Delay Time ⭐
+        Gas Station ⭐
+        Jump Game II
+        Partition Equal Subset Sum ⭐
+        Coin Change ⭐
+        Longest Increasing Subsequence ⭐
+        Longest Common Subsequence ⭐
+        Edit Distance ⭐
+        N-Queens ⭐
+        Sudoku Solver ⭐
+        Accounts Merge ⭐
+        🧠 HOW YOU SHOULD SOLVE
+
+        For each problem:
+
+        👉 Do this:
+
+        Identify pattern
+        Think brute force
+        Optimize
+        Write code
+        Analyze complexity
+        ⚡ RULES (IMPORTANT)
+
+        ❌ Don’t jump to solution
+        ❌ Don’t memorize
+
+        ✅ Think first
+        ✅ Struggle a bit
+        ✅ Then learn
+    ------------------------------------------------------------------------------
+    🧠 How to understand the 3 Phases
+        🔥 PHASE 1 = Foundation (Basic Thinking)
+
+        👉 Goal:
+        Learn how to solve problems correctly
+
+        👉 Characteristics:
+
+        Mostly single pattern
+        Easier logic
+        Builds confidence
+        🧩 Examples
+        Two Sum → Hashing
+        Valid Parentheses → Stack
+        Binary Search → Binary Search
+        Climbing Stairs → DP
+
+        👉 Here:
+        ✔ Pattern is clear
+        ✔ Logic is straightforward
+
+        ⚡ PHASE 2 = Core Patterns (Real DSA Level)
+
+        👉 Goal:
+        Strengthen pattern recognition + combine ideas
+
+        👉 Characteristics:
+
+        Medium difficulty
+        Some problems combine patterns
+        You start thinking more
+        🧩 Examples
+        3Sum → Two Pointer + Sorting
+        Group Anagrams → Hashing
+        Number of Islands → DFS/BFS
+        Top K Frequent → Heap + Hashing
+
+        👉 Here:
+        ✔ Pattern is not always obvious
+        ✔ You must think more
+
+        🧠 PHASE 3 = Advanced (Interview Level)
+
+        👉 Goal:
+        Handle tricky + multi-pattern problems
+
+        👉 Characteristics:
+
+        Hard problems
+        Combine multiple patterns
+        Requires deep thinking
+        🧩 Examples
+        Trapping Rain Water → Two Pointer / Stack
+        Minimum Window Substring → Sliding Window + Hashing
+        Word Ladder → BFS + Graph
+        N-Queens → Backtracking
+
+        👉 Here:
+        ✔ Pattern is hidden
+        ✔ You must identify it
+
+        🎯 FINAL CLARITY
+        Phase	Focus	Pattern Type
+        Phase 1	Learn basics	Single pattern
+        Phase 2	Strengthen	Mixed patterns
+        Phase 3	Mastery	Complex + hidden
+    -------------------------------------------------------------------------------
+    🚀 Now I’ll give you EXACT problems (no wasting time)
+        🧠 First — How many patterns?
+            👉 We’ll lock 13 core patterns (clean + interview-focused):
+            1. Sliding Window  
+            2. Two Pointer  
+            3. Hashing  
+            4. Binary Search  
+            5. DFS / BFS  
+            6. Prefix Sum  
+            7. Fast & Slow Pointer  
+            8. Heap / Priority Queue  
+            9. Greedy  
+            10. Backtracking  
+            11. Dynamic Programming  
+            12. Monotonic Stack  
+            13. Union-Find 
+    🧠 PATTERN → BEST 3–5 PROBLEMS
+        1️⃣ Sliding Window
+        Longest Substring Without Repeating ⭐
+        Longest Repeating Character Replacement ⭐
+        Minimum Window Substring ⭐
+        Sliding Window Maximum
+
+        2️⃣ Two Pointer
+        Valid Palindrome
+        Container With Most Water ⭐
+        3Sum ⭐
+        Trapping Rain Water ⭐
+
+        3️⃣ Hashing
+        Two Sum ⭐
+        Group Anagrams ⭐
+        Longest Consecutive Sequence ⭐
+        Subarray Sum Equals K ⭐
+
+        4️⃣ Binary Search
+        Binary Search
+        Search in Rotated Sorted Array ⭐
+        Find First & Last Position
+        Koko Eating Bananas ⭐
+
+        5️⃣ DFS / BFS
+        Maximum Depth of Binary Tree
+        Number of Islands ⭐
+        Binary Tree Level Order ⭐
+        Course Schedule ⭐
+
+        6️⃣ Prefix Sum
+        Subarray Sum Equals K ⭐
+        Product of Array Except Self ⭐
+        Pivot Index
+        Binary Subarrays With Sum
+
+        7️⃣ Fast & Slow Pointer
+        Linked List Cycle ⭐
+        Find Duplicate Number ⭐
+        Happy Number
+        Middle of Linked List
+
+        8️⃣ Heap
+        Kth Largest Element ⭐
+        Top K Frequent Elements ⭐
+        Merge K Sorted Lists ⭐
+        Find Median from Data Stream ⭐
+
+        9️⃣ Greedy
+        Jump Game ⭐
+        Merge Intervals ⭐
+        Gas Station ⭐
+        Partition Labels
+
+        🔟 Backtracking
+        Subsets ⭐
+        Permutations ⭐
+        Combination Sum ⭐
+        N-Queens ⭐
+
+        1️⃣1️⃣ Dynamic Programming
+        Climbing Stairs ⭐
+        House Robber ⭐
+        Coin Change ⭐
+        Longest Increasing Subsequence ⭐
+        LCS ⭐
+
+        1️⃣2️⃣ Monotonic Stack
+        Next Greater Element
+        Daily Temperatures ⭐
+        Largest Rectangle in Histogram ⭐
+        Trapping Rain Water ⭐
+
+        1️⃣3️⃣ Union-Find
+        Number of Provinces ⭐
+        Redundant Connection ⭐
+        Accounts Merge ⭐
+
+        🎯 Final Plan
+        👉 13 patterns × ~4 problems
+        ➡️ ~50–60 problems total
+        👉 Then:
+        ➡️ Move to Top 50 mixed
+
+        💡 Final Truth
+        👉 “Depth in patterns → speed in interviews”
+
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
     -------------------------------------------------------------------------------
