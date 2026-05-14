@@ -1215,16 +1215,16 @@ TOP NODE.JS CODING QUESTIONS (REAL INTERVIEW STYLE)
 
    🧠 PHASE 1: CORE NODE BASICS (⭐⭐⭐⭐)
       👉 Warm-up but VERY important
-      Create a basic HTTP server using http module
-      Create a simple API (GET route) without Express
-      Read a file using fs (async)
-      Write data to a file
-      Create a simple logger using fs.appendFile
-      Use environment variables (process.env)
-      Create a custom module and import it
-      Demonstrate blocking vs non-blocking code
-      Create a delay function using setTimeout
-      Handle errors using try/catch (sync vs async)
+         Create a basic HTTP server using http module
+         Create a simple API (GET route) without Express
+         Read a file using fs (async)
+         Write data to a file
+         Create a simple logger using fs.appendFile
+         Use environment variables (process.env)
+         Create a custom module and import it
+         Demonstrate blocking vs non-blocking code
+         Create a delay function using setTimeout
+         Handle errors using try/catch (sync vs async)
    ⚙️ PHASE 2: EXPRESS + API (⭐⭐⭐⭐⭐)
       👉 Core backend development
       Setup Express server
@@ -1251,64 +1251,64 @@ TOP NODE.JS CODING QUESTIONS (REAL INTERVIEW STYLE)
       Create throttle function
    ⚡ PHASE 4: DATABASE + REAL API (⭐⭐⭐⭐⭐)
       👉 Real-world backend scenarios
-      Connect to MongoDB using Mongoose
-      Create schema & model
-      Perform CRUD operations
-      Implement pagination
-      Implement filtering & sorting
-      Handle database errors
-      Create relationship between collections
-      Implement bulk insert/update
-      Optimize query performance
-      Use indexes (basic understanding)
+         Connect to MongoDB using Mongoose
+         Create schema & model
+         Perform CRUD operations
+         Implement pagination
+         Implement filtering & sorting
+         Handle database errors
+         Create relationship between collections
+         Implement bulk insert/update
+         Optimize query performance
+         Use indexes (basic understanding)
    🧩 PHASE 5: AUTH + SECURITY (⭐⭐⭐⭐⭐)
       👉 VERY IMPORTANT for interviews
-      Implement JWT authentication
-      Login API with token generation
-      Protect routes using middleware
-      Hash password using bcrypt
-      Compare hashed passwords
-      Implement refresh token logic (basic)
-      Handle CORS
-      Rate limiting (basic)
-      Input sanitization
-      Prevent common attacks (basic awareness)
+         Implement JWT authentication
+         Login API with token generation
+         Protect routes using middleware
+         Hash password using bcrypt
+         Compare hashed passwords
+         Implement refresh token logic (basic)
+         Handle CORS
+         Rate limiting (basic)
+         Input sanitization
+         Prevent common attacks (basic awareness)
    🚀 PHASE 6: PERFORMANCE + SCALING (⭐⭐⭐⭐⭐)
       👉 THIS is senior-level filter 🔥
-      Implement caching (in-memory / Redis concept)
-      Create cluster using cluster module
-      Handle large file upload using streams
-      Stream large file instead of loading full data
-      Implement API rate limiting
-      Optimize API response time
-      Handle memory leaks
-      Log requests efficiently
-      Graceful shutdown of server
-      Compression middleware
+         Implement caching (in-memory / Redis concept)
+         Create cluster using cluster module
+         Handle large file upload using streams
+         Stream large file instead of loading full data
+         Implement API rate limiting
+         Optimize API response time
+         Handle memory leaks
+         Log requests efficiently
+         Graceful shutdown of server
+         Compression middleware
    🌐 PHASE 7: REAL-TIME + ADVANCED (⭐⭐⭐⭐⭐)
       👉 Differentiator 💯
-      Setup Socket.IO server
-      Send real-time updates
-      Handle multiple clients
-      Implement chat system (basic)
-      Handle WebSocket events
-      Broadcast messages
-      Integrate WebSocket with REST API
-      Handle reconnect logic
-      Emit events after DB update
-      Build live notification system
+         Setup Socket.IO server
+         Send real-time updates
+         Handle multiple clients
+         Implement chat system (basic)
+         Handle WebSocket events
+         Broadcast messages
+         Integrate WebSocket with REST API
+         Handle reconnect logic
+         Emit events after DB update
+         Build live notification system
    🧠 PHASE 8: REAL-WORLD SCENARIOS (VERY IMPORTANT)
       👉 This is where YOU shine (based on your experience)
-      Handle 1 lakh records with chunking
-      Send data in batches (100 records per API)
-      Process queue system (basic idea)
-      Build file upload system (large files)
-      Create centralized logging system
-      Handle API failures gracefully
-      Implement retry with exponential backoff
-      Prevent duplicate API calls
-      Design scalable backend structure
-      Handle concurrent requests safely
+         Handle 1 lakh records with chunking
+         Send data in batches (100 records per API)
+         Process queue system (basic idea)
+         Build file upload system (large files)
+         Create centralized logging system
+         Handle API failures gracefully
+         Implement retry with exponential backoff
+         Prevent duplicate API calls
+         Design scalable backend structure
+         Handle concurrent requests safely
 
       ------------------------------------------------------------------------
 

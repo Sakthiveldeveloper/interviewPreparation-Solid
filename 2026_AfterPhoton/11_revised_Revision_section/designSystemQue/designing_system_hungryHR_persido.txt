@@ -1,0 +1,93 @@
+Weather App DB Design (Without Users)
+1. Main Entities
+
+    For weather system, main entities are:
+
+    1.Cities
+    2.CurrentWeather
+    3.Forecast
+    4.WeatherCondition
+    5.AirQuality
+    6.WeatherAlerts
+2. Proper Database Tables
+    1.Cities Table
+        Stores all searchable cities.
+            Column	Type	Description
+            city_id	PK	Unique city ID
+            city_name	VARCHAR	Chennai
+            state	VARCHAR	Tamil Nadu
+            country	VARCHAR	India
+            latitude	FLOAT	Geo location
+            longitude	FLOAT	Geo location
+            timezone	VARCHAR	IST
+    2.WeatherCondition Table
+        Reusable weather conditions.
+            Column	Type
+            condition_id	PK
+            condition_name	VARCHAR
+            icon	VARCHAR
+            description	TEXT
+            Example:
+                Sunny
+                Rainy
+                Cloudy
+    3.CurrentWeather Table
+        Stores latest weather.
+            Column	Type
+            weather_id	PK
+            city_id	FK
+            condition_id	FK
+            temperature	FLOAT
+            feels_like	FLOAT
+            humidity	INT
+            pressure	INT
+            wind_speed	FLOAT
+            visibility	FLOAT
+            uv_index	FLOAT
+            recorded_at	TIMESTAMP
+    4.Forecast Table
+        Stores future predictions.
+            Column	Type
+            forecast_id	PK
+            city_id	FK
+            condition_id	FK
+            forecast_date	DATE
+            min_temp	FLOAT
+            max_temp	FLOAT
+            humidity	INT
+            rain_probability	FLOAT
+            wind_speed	FLOAT
+    5.AirQuality Table
+        Stores pollution data.
+            Column	Type
+            air_quality_id	PK
+            city_id	FK
+            aqi	INT
+            co	FLOAT
+            no2	FLOAT
+            pm25	FLOAT
+            pm10	FLOAT
+            recorded_at	TIMESTAMP
+    6.WeatherAlerts Table
+        Stores alerts.
+            Column	Type
+            alert_id	PK
+            city_id	FK
+            title	VARCHAR
+            severity	VARCHAR
+            description	TEXT
+            start_time	TIMESTAMP
+            end_time	TIMESTAMP
+3. Proper ER Diagram
+
+This is what interviewer expects.
+
+Cities
+   |
+   |----< CurrentWeather >---- WeatherCondition
+   |
+   |----< Forecast >---------- WeatherCondition
+   |
+   |----< AirQuality
+   |
+   |----< WeatherAlerts

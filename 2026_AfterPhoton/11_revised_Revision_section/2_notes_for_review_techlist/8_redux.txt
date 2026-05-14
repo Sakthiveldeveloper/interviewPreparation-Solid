@@ -419,10 +419,10 @@
     
 💻 REDUX CODING QUESTIONS (INTERVIEW STYLE)
     🧠 PHASE 1: BASICS (⭐⭐⭐⭐)
-    Create Redux store manually
-    Create simple counter using Redux
-    Dispatch actions from UI
-    Update state using reducer
+        Create Redux store manually
+        Create simple counter using Redux
+        Dispatch actions from UI
+        Update state using reducer
     ⚙️ PHASE 2: TOOLKIT (⭐⭐⭐⭐⭐)
     Create slice using createSlice
     Implement counter using Redux Toolkit
@@ -444,7 +444,79 @@
     Optimize large state updates
 4.Scenarios Questions
 
+----------------------------------------------------------------------------------------------
+mental model redux
+    Install Redux
+        ↓
+    Create Slice
+        ↓
+    Slice gives reducer + actions
+        ↓
+    Add reducer to Store
+        ↓
+    Provider gives store to app
+        ↓
+    useDispatch → send action
+    useSelector → read state
+    ---------------------------------------------
+    1. Install Redux Toolkit
+        npm install @reduxjs/toolkit react-redux
+    2. Create Slice
+        import { createSlice } from "@reduxjs/toolkit";
 
+        const counterSlice = createSlice({
+        name: "counter",
+
+        initialState: {
+            count: 0
+        },
+
+        reducers: {
+            increment: (state) => {
+            state.count += 1;
+            }
+        }
+        });
+
+        export const { increment } = counterSlice.actions;
+
+        export default counterSlice.reducer;
+    3. Create Store
+        import { configureStore } from "@reduxjs/toolkit";
+        import counterReducer from "./counterSlice";
+
+        export const store = configureStore({
+        reducer: {
+            counter: counterReducer
+        }
+        })
+    4. Wrap App with Provider
+        import { Provider } from "react-redux";
+        import { store } from "./store";
+
+        <Provider store={store}>
+        <App />
+        </Provider>
+    5. Use useDispatch + useSelector
+        import { useDispatch, useSelector } from "react-redux";
+        import { increment } from "./counterSlice";
+        export default function App() {
+        const dispatch = useDispatch();
+        const count = useSelector(
+            (state) => state.counter.count
+        );
+        return (
+            <div>
+            <h1>{count}</h1>
+            <button
+                onClick={() => dispatch(increment())}
+            >
+                Increment
+            </button>
+            </div>
+        )
+        }
+    
 -----------------------------------------------------------------------------------------------
 Follow-up :
          Date 30 April ->  read for Interview
