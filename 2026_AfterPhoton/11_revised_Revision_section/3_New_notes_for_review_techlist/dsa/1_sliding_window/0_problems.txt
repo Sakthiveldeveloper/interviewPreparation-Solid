@@ -1,0 +1,10 @@
+1. Average of Subarray of Size K
+2. Maximum Sum Subarray of Size K
+3. Longest Substring Without Repeating Characters
+4. Minimum Size Subarray Sum
+5. Fruits Into Baskets
+6. Longest Repeating Character Replacement
+7. Permutation in String
+8. Minimum Window Substring
+9. Subarrays with K Different Integers
+10. Sliding Window Maximum

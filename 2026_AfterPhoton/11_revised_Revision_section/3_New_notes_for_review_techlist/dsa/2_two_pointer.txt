@@ -1,0 +1,525 @@
+# 🚀 Two Pointer — Final Recall Notes (JavaScript)
+
+Based on your Sliding Window notes style 😎
+Here’s the FULL Two Pointer recall sheet.
+
+
+---
+
+# What is Two Pointer?
+
+Two Pointer is a **DSA pattern** where:
+
+```txt
+two variables move through data
+```
+
+to solve problems efficiently.
+
+Instead of:
+
+```js
+for(i){
+   for(j){
+
+   }
+}
+```
+
+We use:
+
+```txt
+left pointer
+right pointer
+```
+
+to reduce complexity.
+
+---
+
+# Why Use Two Pointer?
+
+Convert:
+
+```txt
+O(n²) → O(n)
+```
+
+Optimize brute force solutions.
+
+---
+
+# Core Idea
+
+Pointers move intelligently.
+
+Example:
+
+```txt
+1 2 3 4 5
+L       R
+```
+
+Move:
+
+* left++
+* right--
+
+depending on condition.
+
+---
+
+# Types of Two Pointer
+
+| Type               | Usage             |
+| ------------------ | ----------------- |
+| Opposite Direction | left ↔ right      |
+| Same Direction     | slow & fast       |
+| Multiple Pointer   | partition/sorting |
+| Expand & Shrink    | advanced hybrid   |
+
+---
+
+# 1️⃣ Opposite Direction Pointer
+
+Used when:
+
+* sorted array
+* palindrome
+* pair sum
+* reverse operations
+
+Keywords:
+
+```txt
+sorted
+pair
+palindrome
+reverse
+target sum
+```
+
+---
+
+# Opposite Pointer Template
+
+```js
+function twoPointer(arr) {
+
+    let left = 0;
+    let right = arr.length - 1;
+
+    while (left < right) {
+
+        let value = arr[left] + arr[right];
+
+        if (condition) {
+
+            left++;
+
+        } else {
+
+            right--;
+        }
+    }
+}
+```
+
+---
+
+# Opposite Pointer Flow
+
+```txt
+Compare both sides
+↓
+Condition matched?
+↓
+Move pointers
+↓
+Repeat
+```
+
+---
+
+# Example Visualization
+
+```txt
+1 2 3 4 6
+L       R
+
+1+6 = 7
+move right--
+
+1 2 3 4 6
+L     R
+
+1+4 = 5
+move left++
+
+1 2 3 4 6
+  L   R
+
+2+4 = 6
+FOUND
+```
+
+---
+
+# Common Problems
+
+* Two Sum II
+* Valid Palindrome
+* Reverse String
+* Container With Most Water
+* Squares of Sorted Array
+
+---
+
+# 2️⃣ Same Direction Pointer (Fast & Slow)
+
+Used when:
+
+* remove duplicates
+* move elements
+* linked list cycle
+* array rearrangement
+
+Keywords:
+
+```txt
+remove duplicates
+move zeros
+cycle
+middle node
+```
+
+---
+
+# Fast & Slow Template
+
+```js
+function fastSlow(arr) {
+
+    let slow = 0;
+
+    for (let fast = 0; fast < arr.length; fast++) {
+
+        if (condition) {
+
+            arr[slow] = arr[fast];
+
+            slow++;
+        }
+    }
+}
+```
+
+---
+
+# Fast & Slow Flow
+
+```txt
+fast → scans array
+slow → stores valid position
+```
+
+---
+
+# Example Visualization
+
+```txt
+[0,1,0,3,12]
+
+slow
+↓
+0 1 0 3 12
+↑
+fast
+
+non-zero?
+swap
+```
+
+---
+
+# Common Problems
+
+* Move Zeroes
+* Remove Duplicates
+* Remove Element
+* Middle of Linked List
+* Linked List Cycle
+
+---
+
+# 3️⃣ Partitioning Pointer
+
+Used in:
+
+* sorting
+* partitioning
+* rearranging arrays
+
+Keywords:
+
+```txt
+sort colors
+partition
+rearrange
+pivot
+```
+
+---
+
+# Partition Template
+
+```js
+function partition(arr) {
+
+    let left = 0;
+
+    for (let right = 0; right < arr.length; right++) {
+
+        if (condition) {
+
+            [arr[left], arr[right]] =
+            [arr[right], arr[left]];
+
+            left++;
+        }
+    }
+}
+```
+
+---
+
+# Common Problems
+
+* Sort Colors
+* Dutch National Flag
+* Quick Sort Partition
+
+---
+
+# 4️⃣ Nested Two Pointer
+
+Used in:
+
+* triplets
+* combinations
+
+Keywords:
+
+```txt
+3sum
+4sum
+triplets
+quadruplets
+```
+
+---
+
+# 3Sum Main Idea
+
+```txt
+Fix one element
++
+Two Pointer for remaining
+```
+
+---
+
+# Template
+
+```js
+nums.sort((a, b) => a - b);
+
+for (let i = 0; i < nums.length; i++) {
+
+    let left = i + 1;
+    let right = nums.length - 1;
+
+    while (left < right) {
+
+    }
+}
+```
+
+---
+
+# Golden Formula
+
+## Window Size
+
+Sometimes:
+
+```txt
+right - left + 1
+```
+
+---
+
+# Most Common Variables
+
+| Variable | Meaning          |
+| -------- | ---------------- |
+| left     | left pointer     |
+| right    | right pointer    |
+| slow     | slow position    |
+| fast     | fast scanner     |
+| mid      | middle pointer   |
+| sum      | pair/triplet sum |
+
+---
+
+# Common Pointer Movements
+
+## Move Left
+
+```js
+left++;
+```
+
+---
+
+## Move Right
+
+```js
+right--;
+```
+
+---
+
+## Move Both
+
+```js
+left++;
+right--;
+```
+
+---
+
+# Important Patterns
+
+| Problem           | Pattern            |
+| ----------------- | ------------------ |
+| Pair Sum          | Opposite Pointer   |
+| Palindrome        | Opposite Pointer   |
+| Reverse String    | Opposite Pointer   |
+| Move Zeroes       | Fast & Slow        |
+| Remove Duplicates | Fast & Slow        |
+| 3Sum              | Nested Two Pointer |
+| Sort Colors       | Partition          |
+
+---
+
+# Hard Pattern Tricks
+
+---
+
+## Sorted Array + Pair
+
+Think:
+
+```txt
+Two Pointer immediately
+```
+
+---
+
+## Triplets
+
+Think:
+
+```txt
+Sort + Two Pointer
+```
+
+---
+
+## Rearrangement
+
+Think:
+
+```txt
+Fast & Slow
+```
+
+---
+
+# Time Complexity
+
+| Type               | Complexity |
+| ------------------ | ---------- |
+| Basic Two Pointer  | O(n)       |
+| Nested Two Pointer | O(n²)      |
+| Space              | O(1)       |
+
+---
+
+# How To Identify Two Pointer Problems
+
+Look for:
+
+✅ sorted array
+✅ palindrome
+✅ pair sum
+✅ reverse
+✅ duplicates
+✅ rearrangement
+✅ linked list cycle
+✅ triplets
+
+---
+
+# Master Mental Model
+
+```txt
+left/right move intelligently
+to avoid unnecessary loops
+```
+
+That is the whole Two Pointer pattern 🔥
+
+---
+
+# Best Practice Order
+
+```txt
+1. Valid Palindrome
+2. Reverse String
+3. Two Sum II
+4. Move Zeroes
+5. Remove Duplicates
+6. Squares of Sorted Array
+7. Container With Most Water
+8. 3Sum
+9. Sort Colors
+10. Trapping Rain Water
+```
+
+---
+
+# Interview Strategy
+
+In interviews:
+
+```txt
+1. Explain brute force
+2. Explain optimization
+3. Apply Two Pointer
+4. Mention complexity
+```
+
+---
+
+# Final One-Line Definition
+
+```txt
+Two Pointer is an optimization pattern
+where multiple pointers move through data
+efficiently to reduce unnecessary iterations.
+```
+----------------------------------
+reference
+https://chatgpt.com/share/6a06fc53-4448-8322-a139-c3687d1ef8ba

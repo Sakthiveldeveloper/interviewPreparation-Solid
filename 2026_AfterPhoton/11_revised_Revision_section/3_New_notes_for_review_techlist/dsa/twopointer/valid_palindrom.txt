@@ -1,0 +1,300 @@
+Absolutely 😎🔥
+We’ll do Two Pointer pattern properly step-by-step like interview prep.
+
+# 🚀 Two Pointer Learning Path
+
+We’ll go in this order:
+
+```txt
+1. Valid Palindrome
+2. Reverse String
+3. Two Sum II
+4. Move Zeroes
+5. Remove Duplicates
+6. Squares of Sorted Array
+7. Container With Most Water
+8. 3Sum
+9. Sort Colors
+10. Trapping Rain Water
+```
+
+---
+
+# Problem 1️⃣ — Valid Palindrome
+
+Difficulty: Easy
+Pattern: Opposite Direction Two Pointer
+
+---
+
+# 📌 Problem
+
+Given a string `s`, return:
+
+```txt
+true  -> palindrome
+false -> not palindrome
+```
+
+Palindrome means:
+
+* same forward
+* same backward
+
+Example:
+
+```js
+"madam"    -> true
+"racecar"  -> true
+"hello"    -> false
+```
+
+---
+
+# 🧠 Brute Force Idea
+
+Reverse string and compare.
+
+```js
+str === str.split('').reverse().join('')
+```
+
+But interviewers want:
+
+* optimized
+* two pointer approach
+
+---
+
+# ✅ Two Pointer Idea
+
+Use:
+
+* left pointer
+* right pointer
+
+Compare both sides.
+
+---
+
+# Visualization
+
+```txt
+m a d a m
+L       R
+```
+
+Compare:
+
+```txt
+m === m ✅
+```
+
+Move:
+
+```txt
+left++
+right--
+```
+
+---
+
+Next:
+
+```txt
+m a d a m
+  L   R
+```
+
+Compare:
+
+```txt
+a === a ✅
+```
+
+Move again.
+
+Now:
+
+```txt
+L == R
+```
+
+DONE.
+
+---
+
+# 🚀 Algorithm
+
+```txt
+1. left = 0
+2. right = last index
+
+3. while left < right
+
+4. compare chars
+
+5. if different
+      return false
+
+6. move both pointers
+
+7. return true
+```
+
+---
+
+# ✅ Code (JavaScript)
+
+```javascript
+function isPalindrome(str) {
+
+    let left = 0;
+    let right = str.length - 1;
+
+    while (left < right) {
+
+        if (str[left] !== str[right]) {
+            return false;
+        }
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+```
+
+---
+
+# 🧪 Dry Run
+
+Input:
+
+```js
+"madam"
+```
+
+---
+
+## Step 1
+
+```txt
+left = 0 -> m
+right = 4 -> m
+```
+
+same ✅
+
+Move:
+
+```txt
+left++
+right--
+```
+
+---
+
+## Step 2
+
+```txt
+left = 1 -> a
+right = 3 -> a
+```
+
+same ✅
+
+Move again.
+
+---
+
+## Step 3
+
+```txt
+left = 2
+right = 2
+```
+
+Loop stops.
+
+Return:
+
+```js
+true
+```
+
+---
+
+# ⏱ Complexity
+
+Time:
+
+```txt
+O(n)
+```
+
+Space:
+
+```txt
+O(1)
+```
+
+---
+
+# 🔥 Important Interview Observation
+
+If question contains:
+
+* palindrome
+* reverse checking
+* compare from both ends
+
+➡️ Think:
+
+```txt
+Two Pointer
+```
+
+---
+
+# Small Challenge 😎
+
+What will this return?
+
+```js
+isPalindrome("abba")
+```
+
+and
+
+```js
+isPalindrome("abc")
+```
+
+Try mentally once.
+-----------------------
+str === str.split('').reverse().join('')
+
+-----------------------------
+function isPalindrome(str) {
+
+    let left = 0;
+    let right = str.length - 1;
+
+    while (left < right) {
+
+        if (str[left] !== str[right]) {
+            return false;
+        }
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+------------------------
+reference
+https://chatgpt.com/share/6a06fc53-4448-8322-a139-c3687d1ef8ba

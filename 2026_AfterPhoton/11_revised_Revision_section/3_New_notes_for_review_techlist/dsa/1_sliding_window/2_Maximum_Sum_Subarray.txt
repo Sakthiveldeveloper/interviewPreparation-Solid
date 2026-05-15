@@ -1,0 +1,530 @@
+# 2️⃣ Maximum Sum Subarray of Size K — Complete Interview Notes
+
+---
+
+# Problem Statement
+
+Given:
+
+* an array of numbers
+* integer `k`
+
+Find the maximum sum of any contiguous subarray of size `k`.
+
+---
+
+# Example
+
+```js id="jlwm50"
+arr = [2,1,5,1,3,2]
+k = 3
+```
+
+Subarrays:
+
+```txt id="’wini51"
+[2,1,5] = 8
+[1,5,1] = 7
+[5,1,3] = 9
+[1,3,2] = 6
+```
+
+Output:
+
+```txt id="’wini52"
+9
+```
+
+---
+
+# Step 1 — Understand Problem
+
+Need:
+
+```txt id="’wini53"
+maximum sum
+```
+
+from:
+
+```txt id="’wini54"
+contiguous subarray
+```
+
+of:
+
+```txt id="’wini55"
+fixed size k
+```
+
+---
+
+# Step 2 — Pattern Identification
+
+Keywords:
+
+```txt id="’wini56"
+subarray
+contiguous
+size k
+maximum sum
+```
+
+Immediately think:
+
+# ✅ Fixed Sliding Window
+
+---
+
+# Why Sliding Window?
+
+Every next window overlaps previous window.
+
+Example:
+
+```txt id="’wini57"
+[2,1,5]
+[1,5,1]
+```
+
+Instead of recalculating full sum:
+
+* remove left
+* add right
+
+Efficient.
+
+---
+
+# Why NOT Other Patterns?
+
+| Pattern       | Why Not           |
+| ------------- | ----------------- |
+| Two Pointers  | no pair searching |
+| Binary Search | no searching      |
+| DFS/BFS       | no graph/tree     |
+| DP            | unnecessary       |
+
+Sliding Window is the perfect fit.
+
+---
+
+# Step 3 — Brute Force Approach
+
+## Thinking
+
+For every index:
+
+* calculate next `k` elements sum
+* track maximum
+
+---
+
+# Brute Force Code
+
+```js id="’wini58"
+function maxSumBruteForce(arr, k) {
+
+    let maxSum = 0;
+
+    for (let i = 0; i <= arr.length - k; i++) {
+
+        let sum = 0;
+
+        for (let j = i; j < i + k; j++) {
+
+            sum += arr[j];
+        }
+
+        maxSum = Math.max(maxSum, sum);
+    }
+
+    return maxSum;
+}
+```
+
+---
+
+# Complexity
+
+Outer loop:
+
+```txt id="’wini59"
+O(n)
+```
+
+Inner loop:
+
+```txt id="’wini60"
+O(k)
+```
+
+Total:
+
+O(n\times k)
+
+---
+
+# Step 4 — Optimization Thinking
+
+Question:
+
+```txt id="’wini61"
+Do we need to calculate every window sum again?
+```
+
+NO.
+
+---
+
+# Key Observation
+
+Window 1:
+
+```txt id="’wini62"
+[2,1,5]
+sum = 8
+```
+
+Next window:
+
+```txt id="’wini63"
+[1,5,1]
+```
+
+Instead of:
+
+```txt id="’wini64"
+1+5+1
+```
+
+Do:
+
+```txt id="’wini65"
+8 - 2 + 1 = 7
+```
+
+This is Sliding Window optimization.
+
+---
+
+# Step 5 — Build Sliding Window Logic
+
+---
+
+# Variables Needed
+
+```js id="’wini66"
+let windowSum = 0;
+let maxSum = 0;
+let left = 0;
+```
+
+---
+
+# Main Loop
+
+```js id="’wini67"
+for (let right = 0; right < arr.length; right++)
+```
+
+---
+
+# Add Right Element
+
+```js id="’wini68"
+windowSum += arr[right];
+```
+
+---
+
+# Check Window Size
+
+```js id="’wini69"
+if (right >= k - 1)
+```
+
+Now window size becomes `k`.
+
+---
+
+# Update Maximum
+
+```js id="’wini70"
+maxSum = Math.max(maxSum, windowSum);
+```
+
+---
+
+# Slide Window
+
+Remove left:
+
+```js id="’wini71"
+windowSum -= arr[left];
+```
+
+Move left:
+
+```js id="’wini72"
+left++;
+```
+
+---
+
+# Final Optimized Code
+
+```js id="’wini73"
+function maxSumSubarray(arr, k) {
+
+    let windowSum = 0;
+    let maxSum = 0;
+    let left = 0;
+
+    for (let right = 0; right < arr.length; right++) {
+
+        // add right element
+        windowSum += arr[right];
+
+        // window size reached
+        if (right >= k - 1) {
+
+            // update maximum
+            maxSum = Math.max(maxSum, windowSum);
+
+            // remove left element
+            windowSum -= arr[left];
+
+            // move left pointer
+            left++;
+        }
+    }
+
+    return maxSum;
+}
+```
+
+---
+
+# Dry Run
+
+Input:
+
+```js id="’wini74"
+[2,1,5,1,3,2]
+k = 3
+```
+
+---
+
+## right = 0
+
+```txt id="’wini75"
+sum = 2
+```
+
+---
+
+## right = 1
+
+```txt id="’wini76"
+sum = 3
+```
+
+---
+
+## right = 2
+
+```txt id="’wini77"
+sum = 8
+```
+
+Window reached.
+
+```txt id="’wini78"
+max = 8
+```
+
+Remove:
+
+```txt id="’wini79"
+8 - 2 = 6
+```
+
+Move left.
+
+---
+
+## right = 3
+
+```txt id="’wini80"
+6 + 1 = 7
+```
+
+```txt id="’wini81"
+max = 8
+```
+
+Continue.
+
+---
+
+## right = 4
+
+```txt id="’wini82"
+sum = 9
+```
+
+```txt id="’wini83"
+max = 9
+```
+
+Final answer:
+
+```txt id="’wini84"
+9
+```
+
+---
+
+# Complexity
+
+Time:
+
+O(n)
+
+Space:
+
+```txt id="’wini85"
+O(1)
+```
+
+---
+
+# Fixed Sliding Window Template
+
+```js id="’wini86"
+let left = 0;
+
+for (let right = 0; right < arr.length; right++) {
+
+    // add right
+
+    if (right >= k - 1) {
+
+        // calculate answer
+
+        // remove left
+
+        left++;
+    }
+}
+```
+
+---
+
+# Important Interview Points
+
+---
+
+## Signal To Use Sliding Window
+
+```txt id="’wini87"
+subarray + fixed size k
+```
+
+---
+
+## Main Optimization
+
+```txt id="’wini88"
+reuse previous window computation
+```
+
+---
+
+## Core Formula
+
+Window size:
+
+WindowSize=right-left+1
+
+---
+
+# Similar Problems
+
+Same Fixed Window pattern:
+
+* Average of Subarray of Size K
+* Find All Anagrams
+* Permutation in String
+
+---
+
+# Final Mental Model
+
+```txt id="’wini89"
+Add right
+↓
+Window size reached?
+↓
+Update answer
+↓
+Remove left
+↓
+Move left
+```
+
+Fixed Sliding Window complete ✅
+-----------------------------------------
+
+
+2.Maximum Sum Subarray of Size K
+// function maxSumBruteForce(arr, k) {
+
+//     let maxSum = 0;
+
+//     for (let i = 0; i <= arr.length - k; i++) {
+
+//         let sum = 0;
+
+//         for (let j = i; j < i + k; j++) {
+
+//             sum += arr[j];
+//         }
+
+//         maxSum = Math.max(maxSum, sum);
+//     }
+
+//     return maxSum;
+// }
+// console.log(maxSumBruteForce([11,44,12,53,153], 2))
+
+function maxSumSubarray(arr, k) {
+
+    let windowSum = 0;
+    let maxSum = 0;
+    let left = 0;
+
+    for (let right = 0; right < arr.length; right++) {
+
+        // add right element
+        windowSum += arr[right];
+
+        // window size reached
+        if (right >= k - 1) {
+
+            // update maximum
+            maxSum = Math.max(maxSum, windowSum);
+
+            // remove left element
+            windowSum -= arr[left];
+
+            // move left pointer
+            left++;
+        }
+    }
+
+    return maxSum;
+}
+console.log(maxSumSubarray([11,44,12,53,153], 2))

@@ -1,0 +1,218 @@
+That happens because of how JavaScript stores floating-point numbers internally.
+
+Your logic is CORRECT ✅
+
+---
+
+# Example
+
+```js id="jlwm4k"
+134 / 3
+```
+
+Mathematically:
+
+```txt id="jlwm4l"
+44.666666666666...
+```
+
+This is an infinite decimal number.
+
+JavaScript stores numbers using:
+
+```txt id="jlwm4m"
+IEEE 754 floating-point format
+```
+
+So sometimes you see:
+
+```txt id="jlwm4n"
+44.666666666666664
+```
+
+instead of:
+
+```txt id="jlwm4o"
+44.666666666666667
+```
+
+This is normal floating-point precision behavior.
+
+---
+
+# Your Input
+
+```js id="jlwm4p"
+[1,92,41,4,5,4,8,32,54]
+```
+
+First window:
+
+```txt id="jlwm4q"
+1 + 92 + 41 = 134
+```
+
+Average:
+
+```txt id="jlwm4r"
+134 / 3
+=
+44.666666666666664
+```
+
+Correct.
+
+---
+
+# If You Want Cleaner Output
+
+Use:
+
+```js id="jlwm4s"
+toFixed()
+```
+
+---
+
+# Example
+
+```js id="jlwm4t"
+result.push((windowSum / k).toFixed(2));
+```
+
+Output:
+
+```js id="jlwm4u"
+[
+  "44.67",
+  "45.67",
+  "16.67"
+]
+```
+
+---
+
+# If You Need Number Instead of String
+
+Because `toFixed()` returns string.
+
+Use:
+
+```js id="jlwm4v"
+result.push(Number((windowSum / k).toFixed(2)));
+```
+
+---
+
+# Cleaner Version
+
+```js id="jlwm4w"
+function findAverage(arr, k) {
+
+    let result = [];
+    let windowSum = 0;
+    let left = 0;
+
+    for (let right = 0; right < arr.length; right++) {
+
+        windowSum += arr[right];
+
+        if (right >= k - 1) {
+
+            result.push(
+                Number((windowSum / k).toFixed(2))
+            );
+
+            windowSum -= arr[left];
+
+            left++;
+        }
+    }
+
+    return result;
+}
+```
+
+---
+
+# Output
+
+```js id="jlwm4x"
+[
+  44.67,
+  45.67,
+  16.67,
+  4.33
+]
+```
+
+---
+
+# Important Interview Point
+
+This is NOT a DSA issue.
+
+This is:
+
+```txt id="jlwm4y"
+floating point precision issue
+```
+
+Very common in:
+
+* JavaScript
+* Python
+* Java
+* C++
+
+Almost all languages 😄
+
+-----------------------------
+
+
+
+// // 1. Average of Subarray of Size K
+// // brte force
+// function findAverage(arr, k) {
+//     let result = [];
+//     for(let i =0; i<=arr.length-k; i++){
+//         let sum = 0;
+        
+//         for(let j = i; j<i+k; j++){
+//             sum += arr[j];
+//         }
+//         result.push(sum/k);
+//     }
+//     return result;
+// }
+// console.log(findAverage([1,92,41,4,5,4,8,32,54], 3))
+// sliding window approach 
+// function findAverage(arr, k) {
+
+//     let result = [];
+//     let windowSum = 0;
+//     let left = 0;
+
+//     for (let right = 0; right < arr.length; right++) {
+
+//         // add right element
+//         windowSum += arr[right];
+
+//         // window size reached
+//         if (right >= k - 1) {
+
+//             // calculate average
+//             result.push(windowSum / k);
+
+//             // remove left element
+//             windowSum -= arr[left];
+
+//             // move left pointer
+//             left++;
+//         }
+//     }
+
+//     return result;
+// }
+// console.log(findAverage([1,92,41,4,5,4,8,32,54], 3))
+// ------------------------------------------

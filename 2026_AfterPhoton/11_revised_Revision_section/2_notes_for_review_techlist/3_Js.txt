@@ -232,52 +232,89 @@
       Promise.any() takes the first success. They are used to manage complex workflows where multiple background tasks need to coordinate.
    26.What is polyfill?
       Polyfill means creating our own implementation of built-in JavaScript methods so older browsers can support modern features.
+   27.what is prototype?
+      In JavaScript, a prototype is a mechanism that allows objects to inherit properties and methods from other objects. 
+   28.Spread Operator
+      Spread Operator (Expanding)The spread operator is used to distribute the elements of an array or properties of an object into a new context
+   29.rest operator
+      The rest operator is used to gather the "rest" of the elements into a single array variable.
+   30.Destructuring
+      Destructuring is a shorthand syntax in JavaScript (introduced in ES6) that allows you to "unpack" values from arrays or properties from objects into distinct variables. 
+---------------------------------------------------------------------------------------------------------
+examples
+   1.Polyfills:
+         // 1. Check if the method already exists in the browser
+      if (!Array.prototype.includes) {
+      
+      // 2. If it doesn't exist, define it manually
+      Array.prototype.includes = function(searchElement, fromIndex) {
+         // Basic implementation using a for-loop
+         let len = this.length;
+         let start = fromIndex || 0;
+
+         // Handle negative starting index
+         if (start < 0) start = Math.max(len + start, 0);
+
+         for (let i = start; i < len; i++) {
+            // Check if the current element matches the search element
+            if (this[i] === searchElement) {
+            return true;
+            }
+         }
+         return false;
+      };
+      }
+
+      // 3. Usage (Now works even in older browsers!)
+      const fruits = ['apple', 'banana', 'mango'];
+      console.log(fruits.includes('banana')); // Returns: true
+
 ----------------------------------- ----------------------------------------------------------------------
 🔥Top JavaScript Concepts -  What you should prepare (THEORY MASTER LIST)
 
    I’ll give you a focused list (~50 topics) — this is enough
 
    🧠 1. Core JavaScript (VERY IMPORTANT)
-      var vs let vs const
-      Scope (global, block, function)
-      Closure (real use case)
-      Hoisting
-      Temporal Dead Zone
-      Execution context
-      Call stack
+         var vs let vs const
+         Scope (global, block, function)
+         Closure (real use case)
+         Hoisting
+         Temporal Dead Zone
+         Execution context
+         Call stack
    ⚙️ 2. Functions & this
-      this keyword (all cases)
-      Arrow vs normal function
-      bind / call / apply
-      First-class functions
-      Higher-order functions
+         this keyword (all cases)
+         Arrow vs normal function
+         bind / call / apply
+         First-class functions
+         Higher-order functions
    🔥 3. Async JavaScript (CRITICAL)
       👉 Most asked area
-      Event loop
-      Microtask vs macrotask
-      Promise lifecycle
-      async/await
-      setTimeout behavior
-      Callback vs Promise vs async
+         Event loop
+         Microtask vs macrotask
+         Promise lifecycle
+         async/await
+         setTimeout behavior
+         Callback vs Promise vs async
    🧩 4. Objects & Prototypes
-      Prototype chain
-      Inheritance in JS
-      Object.create
-      Class vs function constructor
+         Prototype chain
+         Inheritance in JS
+         Object.create
+         Class vs function constructor
    ⚡ 5. Memory & Performance
-      Shallow vs deep copy
-      Memory leaks (closures, event listeners)
-      Garbage collection basics
+         Shallow vs deep copy
+         Memory leaks (closures, event listeners)
+         Garbage collection basics
    🧱 6. Advanced Concepts
-      Currying
-      Memoization
-      Debounce vs throttle
-      Immutability
+         Currying
+         Memoization
+         Debounce vs throttle
+         Immutability
    🧪 7. Tricky JS Behavior
-      == vs ===
-      typeof null
-      NaN behavior
-      Floating point issues
+         == vs ===
+         typeof null
+         NaN behavior
+         Floating point issues
    🏗️ 8. Real-world (VERY IMPORTANT FOR YOU)
       👉 THIS is what makes you stand out
       How React uses closure
@@ -1010,6 +1047,8 @@ Deep clone
          Date 21 April ->  read for Interview
          Date 22 April ->  read for Interview
          Date 30 April ->  read for Interview
+
+         Date 14 May ->  read for Interview
 
 
 ----------------------

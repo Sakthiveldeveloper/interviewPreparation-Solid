@@ -1,0 +1,490 @@
+Yes 😎
+You should build **Dynamic Programming (DP)** notes exactly like your Two Pointer recall sheet style.
+
+Your Two Pointer notes are actually SUPER GOOD for interview recall 🔥
+
+So now let’s build:
+
+# 🚀 Dynamic Programming — Final Recall Notes (JavaScript)
+
+Inspired by your Two Pointer style 😎
+
+---
+
+# What is Dynamic Programming?
+
+Dynamic Programming (DP) is a problem-solving technique where:
+
+```txt
+solve smaller problems
+store answers
+reuse them later
+```
+
+instead of recalculating again and again.
+
+---
+
+# Why Use DP?
+
+Convert:
+
+```txt
+O(2ⁿ) → O(n)
+```
+
+or
+
+```txt
+O(n²)
+```
+
+by avoiding repeated work.
+
+---
+
+# Main Idea
+
+```txt
+Overlapping Subproblems
++
+Optimal Substructure
+```
+
+---
+
+# Real Meaning
+
+Instead of:
+
+```txt
+solve same thing many times
+```
+
+We:
+
+```txt
+save answer once
+reuse later
+```
+
+---
+
+# Example
+
+## Fibonacci
+
+Without DP:
+
+```txt
+fib(5)
+→ fib(4) + fib(3)
+
+fib(4)
+→ fib(3) + fib(2)
+
+fib(3)
+→ repeated again and again
+```
+
+Huge repeated work 😵
+
+---
+
+# DP Solution
+
+Store answers:
+
+```js
+memo[3] = 2
+```
+
+Next time:
+
+```txt
+reuse directly
+```
+
+---
+
+# Two Main DP Types
+
+| Type        | Meaning              |
+| ----------- | -------------------- |
+| Memoization | Top Down (Recursion) |
+| Tabulation  | Bottom Up (Loop)     |
+
+---
+
+# 1️⃣ Memoization (Top Down)
+
+## Flow
+
+```txt
+Recursion
++
+Store answers
+```
+
+---
+
+# Template
+
+```js
+function dp(n, memo = {}) {
+
+    if (n in memo) {
+        return memo[n];
+    }
+
+    if (base condition) {
+        return value;
+    }
+
+    memo[n] = recurrence relation;
+
+    return memo[n];
+}
+```
+
+---
+
+# Fibonacci Example
+
+```js
+function fib(n, memo = {}) {
+
+    if (n in memo) {
+        return memo[n];
+    }
+
+    if (n <= 2) {
+        return 1;
+    }
+
+    memo[n] =
+        fib(n - 1, memo) +
+        fib(n - 2, memo);
+
+    return memo[n];
+}
+```
+
+---
+
+# Visualization
+
+```txt
+fib(5)
+↓
+store fib(3)
+↓
+reuse fib(3)
+```
+
+---
+
+# 2️⃣ Tabulation (Bottom Up)
+
+## Flow
+
+```txt
+Start from smallest problem
+Build answer step by step
+```
+
+---
+
+# Template
+
+```js
+function dp(n) {
+
+    let table = new Array(n + 1).fill(0);
+
+    table[0] = baseValue;
+
+    for (let i = 0; i <= n; i++) {
+
+        // build next states
+    }
+
+    return table[n];
+}
+```
+
+---
+
+# Fibonacci Tabulation
+
+```js
+function fib(n) {
+
+    let dp = [0, 1, 1];
+
+    for (let i = 3; i <= n; i++) {
+
+        dp[i] = dp[i - 1] + dp[i - 2];
+    }
+
+    return dp[n];
+}
+```
+
+---
+
+# Core DP Formula
+
+Called:
+
+```txt
+Recurrence Relation
+```
+
+Example:
+
+dp[i]=dp[i-1]+dp[i-2]
+
+---
+
+# How To Identify DP Problems
+
+Look for:
+
+✅ repeated calculations
+✅ minimum / maximum
+✅ count ways
+✅ best possible answer
+✅ choices at every step
+
+---
+
+# Common DP Keywords
+
+| Keyword        | Think DP |
+| -------------- | -------- |
+| minimum cost   | ✅        |
+| maximum profit | ✅        |
+| count ways     | ✅        |
+| combinations   | ✅        |
+| longest        | ✅        |
+| optimal        | ✅        |
+
+---
+
+# Famous DP Problems
+
+| Problem                        | Pattern     |
+| ------------------------------ | ----------- |
+| Fibonacci                      | Basic DP    |
+| Climbing Stairs                | 1D DP       |
+| House Robber                   | Decision DP |
+| Coin Change                    | Knapsack    |
+| Longest Common Subsequence     | String DP   |
+| Longest Increasing Subsequence | Sequence DP |
+| 0/1 Knapsack                   | Classic DP  |
+| Edit Distance                  | String DP   |
+
+---
+
+# Most Important DP Patterns
+
+| Pattern         | Example      |
+| --------------- | ------------ |
+| 1D DP           | Fibonacci    |
+| 2D DP           | LCS          |
+| Knapsack        | Coin Change  |
+| Decision Making | House Robber |
+| Grid DP         | Unique Paths |
+| Interval DP     | Matrix Chain |
+
+---
+
+# 1️⃣ Climbing Stairs Pattern
+
+## Idea
+
+```txt
+current step =
+previous 1 step +
+previous 2 step
+```
+
+Formula:
+
+dp[i]=dp[i-1]+dp[i-2]
+
+---
+
+# 2️⃣ House Robber Pattern
+
+## Idea
+
+Choice:
+
+```txt
+rob current
+OR
+skip current
+```
+
+Formula:
+
+dp[i]=\max(dp[i-1],dp[i-2]+nums[i])
+
+---
+
+# 3️⃣ Coin Change Pattern
+
+## Idea
+
+```txt
+minimum coins needed
+```
+
+Formula:
+
+dp[i]=\min(dp[i],dp[i-coin]+1)
+
+---
+
+# Golden DP Steps
+
+---
+
+## Step 1
+
+Define:
+
+```txt
+What does dp[i] mean?
+```
+
+---
+
+## Step 2
+
+Find recurrence relation.
+
+---
+
+## Step 3
+
+Find base condition.
+
+---
+
+## Step 4
+
+Build answer.
+
+---
+
+# DP Mental Model
+
+```txt
+Big problem
+↓
+Break into smaller problems
+↓
+Store answers
+↓
+Reuse answers
+```
+
+---
+
+# Time Complexity
+
+| Method      | Complexity |
+| ----------- | ---------- |
+| Recursion   | O(2ⁿ)      |
+| Memoization | O(n)       |
+| Tabulation  | O(n)       |
+
+---
+
+# DP vs Recursion
+
+| Recursion     | DP         |
+| ------------- | ---------- |
+| repeated work | reuse work |
+| slow          | optimized  |
+| exponential   | polynomial |
+
+---
+
+# Common Interview Trick
+
+If recursion has:
+
+```txt
+same repeated calls
+```
+
+Think:
+
+```txt
+Can I memoize?
+```
+
+---
+
+# Best Beginner DP Problems
+
+```txt
+1. Fibonacci
+2. Climbing Stairs
+3. Min Cost Climbing Stairs
+4. House Robber
+5. Coin Change
+6. Unique Paths
+7. Decode Ways
+8. Longest Increasing Subsequence
+9. Longest Common Subsequence
+10. Edit Distance
+```
+
+---
+
+# Interview Strategy
+
+```txt
+1. Write brute force recursion
+2. Find repeated calls
+3. Add memoization
+4. Convert to tabulation
+5. Optimize space
+```
+
+---
+
+# Final One-Line Definition
+
+```txt
+Dynamic Programming is an optimization technique
+that stores previously solved subproblems
+to avoid repeated calculations.
+```
+
+Your Two Pointer notes were already interview-level good 🔥
+If you want, next I can also make same style recall sheets for:
+
+* Sliding Window
+* Binary Search
+* Backtracking
+* Greedy
+* Graph
+* Tree
+* Recursion
+* Heap/Priority Queue
+* Stack & Monotonic Stack
+* BFS / DFS
+
+And organize them as:
+
+```txt
+Pattern → Keywords → Template → Problems
+```
+
+Super powerful for interviews 🚀

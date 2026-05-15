@@ -245,6 +245,8 @@ React.js
     useEffect vs useLayoutEffect
         useEffect -> async, Runs after the browser paint the screen, non-blocking use see the update Data FIRSt
         useLayoutEffect -> sync, Runs before the browser paint the screen, blocking use see the update Data FIRSt
+    useRef
+    useRef is a React Hook that allows you to persist values between renders without triggering a re-render when the value changes.
 --------------------------------------------------------------------------------------------------------
 2.1: New flow for Interview Questions
     1. What is React?
@@ -520,79 +522,79 @@ React.js
 
 REACT THEORY – TOP ~50 IMPORTANT TOPICS
     🧠 1. CORE REACT FUNDAMENTALS (⭐⭐⭐⭐⭐)
-        What is React? How it works internally
-        JSX (how it converts to JS)
-        Virtual DOM vs Real DOM
-        Reconciliation process
-        Component lifecycle (functional vs class)
-        Rendering flow
+            What is React? How it works internally
+            JSX (how it converts to JS)
+            Virtual DOM vs Real DOM
+            Reconciliation process
+            Component lifecycle (functional vs class)
+            Rendering flow
     👉 VERY COMMON: “How React re-renders?”
     ⚙️ 2. COMPONENTS & PROPS (⭐⭐⭐⭐)
-        Functional vs Class components
-        Props vs State
-        Controlled vs uncontrolled components
-        Props drilling problem
-        Composition vs inheritance
+            Functional vs Class components
+            Props vs State
+            Controlled vs uncontrolled components
+            Props drilling problem
+            Composition vs inheritance
     🔥 3. HOOKS (MOST IMPORTANT) ⭐⭐⭐⭐⭐
-        useState deep understanding
-        useEffect (VERY IMPORTANT)
-        useRef
-        useMemo
-        useCallback
-        Custom hooks
-        Rules of hooks
-    👉 Interview focus:
-        Why useMemo/useCallback?
-        When NOT to use them?
+            useState deep understanding
+            useEffect (VERY IMPORTANT)
+            useRef
+            useMemo
+            useCallback
+            Custom hooks
+            Rules of hooks
+        👉 Interview focus:
+            Why useMemo/useCallback?
+            When NOT to use them?
     ⚡ 4. STATE MANAGEMENT (⭐⭐⭐⭐⭐)
-        Lifting state up
-        Context API
-        Redux basics
-        Redux vs Context
-        Global vs local state
+            Lifting state up
+            Context API
+            Redux basics
+            Redux vs Context
+            Global vs local state
     👉 Real question:
         “When will you use Redux instead of Context?”
     🧩 5. PERFORMANCE OPTIMIZATION (⭐⭐⭐⭐⭐)
-        React.memo
-        useMemo vs useCallback
-        Avoid unnecessary re-renders
-        Lazy loading (React.lazy, Suspense)
-        Code splitting
+            React.memo
+            useMemo vs useCallback
+            Avoid unnecessary re-renders
+            Lazy loading (React.lazy, Suspense)
+            Code splitting
     👉 VERY IMPORTANT for your level
     🧱 6. LIFECYCLE & EFFECTS (⭐⭐⭐⭐⭐)
-        useEffect lifecycle
-        Dependency array behavior
-        Cleanup function
-        Infinite loop problems
+            useEffect lifecycle
+            Dependency array behavior
+            Cleanup function
+            Infinite loop problems
     👉 Common:
         “Why is useEffect running multiple times?”
     🧪 7. FORMS & EVENTS (⭐⭐⭐⭐)
-        Controlled forms
-        Form validation
-        Synthetic events
-        Event handling
+            Controlled forms
+            Form validation
+            Synthetic events
+            Event handling
     🏗️ 8. ADVANCED CONCEPTS (⭐⭐⭐⭐⭐)
-        Higher Order Components (HOC)
-        Render props
-        Compound components
-        Portals
-        Error boundaries
+            Higher Order Components (HOC)
+            Render props
+            Compound components
+            Portals
+            Error boundaries
     ⚙️ 9. ROUTING (⭐⭐⭐⭐)
-        React Router basics
-        Dynamic routing
-        Protected routes
+            React Router basics
+            Dynamic routing
+            Protected routes
     🌐 10. API & ASYNC HANDLING (⭐⭐⭐⭐⭐)
-        API calls in React
-        Handling loading/error states
-        Retry logic
-        Parallel vs sequential calls
+            API calls in React
+            Handling loading/error states
+            Retry logic
+            Parallel vs sequential calls
     🧠 11. REAL-WORLD SCENARIOS (VERY IMPORTANT)
-    👉 THIS is what interviewers love
-        How to structure large React app
-        Folder structure
-        Handling large lists (virtualization)
-        Debounce in search
-        Infinite scroll
+        👉 THIS is what interviewers love
+            How to structure large React app
+            Folder structure
+            Handling large lists (virtualization)
+            Debounce in search
+            Infinite scroll
     💥 HOW THEY ACTUALLY ASK (IMPORTANT)
     ❌ Not like:
         What is useEffect?
@@ -737,3 +739,5 @@ Follow-up :
     Date 20 April ->  read for Interview
     Date 21 April ->  read for Interview
     Date 30 April ->  read for Interview
+
+    Date 14 May ->  read for Interview

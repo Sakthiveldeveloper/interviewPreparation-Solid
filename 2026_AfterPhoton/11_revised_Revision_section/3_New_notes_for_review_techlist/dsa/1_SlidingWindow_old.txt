@@ -1,0 +1,651 @@
+Yes 👍
+Sliding Window is a **DSA pattern**.
+
+Think of it like a reusable technique/template to solve a group of problems efficiently.
+
+---
+
+# What is Sliding Window Pattern?
+
+Instead of:
+
+* checking every subarray/substring again and again
+
+We:
+
+* maintain a moving window
+* expand/shrink it smartly
+
+This reduces time complexity.
+
+---
+
+# Normal Approach
+
+Example:
+
+```txt id="6om0ld"
+Find max sum subarray of size 3
+```
+
+Brute force:
+
+```txt id="u8f7jv"
+[1,2,3]
+[2,3,4]
+[3,4,5]
+...
+```
+
+Recalculate every sum again.
+
+Time:
+
+```txt id="vb3qhm"
+O(n*k)
+```
+
+---
+
+# Sliding Window Approach
+
+Use one moving window.
+
+```txt id="fqztfm"
+remove left
+add right
+```
+
+Example:
+
+```txt id="d1dr3g"
+[1,2,3] => sum = 6
+```
+
+Next:
+
+```txt id="2p3i0g"
+[2,3,4]
+```
+
+Instead of recalculating:
+
+```txt id="jlwm3u"
+6 - 1 + 4 = 9
+```
+
+Time:
+
+```txt id="9ydmyx"
+O(n)
+```
+
+---
+
+# Why Called "Sliding Window"?
+
+Because the window moves like this:
+
+```txt id="jcr9bk"
+[1 2 3] 4 5
+ 1 [2 3 4] 5
+ 1 2 [3 4 5]
+```
+
+Window slides → → →
+
+---
+
+# Types of Sliding Window
+
+## 1️⃣ Fixed Size Window
+
+Window size always same.
+
+Example:
+
+* Maximum Sum Subarray of Size K
+* Average of Subarray of Size K
+
+Template:
+
+```js id="skbyef"
+for (let end = 0; end < arr.length; end++) {
+
+    // add element
+
+    if (window size == k) {
+
+        // calculate answer
+
+        // remove left
+
+        left++;
+    }
+}
+```
+
+---
+
+# 2️⃣ Dynamic Size Window
+
+Window size changes.
+
+Example:
+
+* Longest Substring Without Repeating Characters
+* Minimum Window Substring
+
+Template:
+
+```js id="b8tv8n"
+for (let right = 0; right < arr.length; right++) {
+
+    // expand window
+
+    while (window invalid) {
+
+        // shrink window
+        left++;
+    }
+
+    // update answer
+}
+```
+
+---
+
+# When to Use Sliding Window?
+
+Look for keywords:
+
+✅ subarray
+✅ substring
+✅ contiguous
+✅ longest
+✅ shortest
+✅ maximum
+✅ minimum
+✅ fixed size `k`
+
+---
+
+# Common Sliding Window Problems
+
+| Problem                  | Type        |
+| ------------------------ | ----------- |
+| Maximum Sum Subarray     | Fixed       |
+| Average of Subarray      | Fixed       |
+| Longest Unique Substring | Dynamic     |
+| Minimum Window Substring | Dynamic     |
+| Fruits Into Baskets      | Dynamic     |
+| Permutation in String    | Fixed + Map |
+| Sliding Window Maximum   | Advanced    |
+
+---
+
+# Main Goal
+
+Convert:
+
+O(n^2)\rightarrow O(n)
+
+using smart window movement 🚀
+---------------------------------------------------------------------
+Good question 😄
+These are common DSA/interview terms.
+
+---
+
+# 1️⃣ Brute Force Approach
+
+Brute force means:
+
+👉 Solve the problem using the most basic/direct method
+without optimization.
+
+Usually:
+
+* checks all possibilities
+* simple logic
+* slower
+
+---
+
+# Example
+
+## Problem
+
+Find maximum sum subarray of size `3`
+
+Array:
+
+```js id="ztz0g5"
+[1,2,3,4,5]
+```
+
+---
+
+# Brute Force Method
+
+Check every subarray manually:
+
+```txt id="7c2c5w"
+[1,2,3] = 6
+[2,3,4] = 9
+[3,4,5] = 12
+```
+
+Code:
+
+```js id="xt5v5f"
+function bruteForce(arr, k) {
+
+    let maxSum = 0;
+
+    for (let i = 0; i <= arr.length - k; i++) {
+
+        let sum = 0;
+
+        for (let j = i; j < i + k; j++) {
+
+            sum += arr[j];
+        }
+
+        maxSum = Math.max(maxSum, sum);
+    }
+
+    return maxSum;
+}
+```
+
+---
+
+# Why Called Brute Force?
+
+Because computer is:
+
+* forcefully checking everything 😄
+
+Like:
+
+```txt id="vwmrhm"
+Try all
+Check all
+Calculate all
+```
+
+No smart optimization.
+
+---
+
+# Time Complexity
+
+Outer loop:
+
+```txt id="0f7qws"
+O(n)
+```
+
+Inner loop:
+
+```txt id="i4z4z9"
+O(k)
+```
+
+Total:
+
+O(n\times k)
+
+---
+
+# 2️⃣ Optimized Approach
+
+Now Sliding Window:
+
+Instead of recalculating whole sum:
+
+```txt id="gg5c4t"
+remove left
+add right
+```
+
+Example:
+
+```txt id="nnr4wq"
+[1,2,3] = 6
+```
+
+Next:
+
+```txt id="55keb4"
+6 - 1 + 4 = 9
+```
+
+Efficient 🚀
+
+---
+
+# Sliding Window Code
+
+```js id="07qy44"
+function slidingWindow(arr, k) {
+
+    let windowSum = 0;
+
+    for (let i = 0; i < k; i++) {
+        windowSum += arr[i];
+    }
+
+    let maxSum = windowSum;
+
+    for (let i = k; i < arr.length; i++) {
+
+        windowSum =
+            windowSum - arr[i - k] + arr[i];
+
+        maxSum = Math.max(maxSum, windowSum);
+    }
+
+    return maxSum;
+}
+```
+
+---
+
+# Complexity
+
+O(n)
+
+Much faster.
+
+---
+
+# Interview Flow
+
+Most DSA interviews expect:
+
+```txt id="zgdwt0"
+1. Explain brute force
+2. Explain problem with brute force
+3. Optimize it
+4. Give better complexity
+```
+
+---
+
+# Easy Understanding
+
+| Term            | Meaning                |
+| --------------- | ---------------------- |
+| Brute Force     | Basic slow solution    |
+| Optimized       | Better faster solution |
+| Pattern         | Reusable technique     |
+| Sliding Window  | Optimization pattern   |
+| Time Complexity | Speed measurement      |
+
+---
+
+# Real-Life Analogy
+
+Finding a red shirt in room:
+
+## Brute Force
+
+Check every cloth one by one.
+
+## Optimized
+
+Use labeled sections:
+
+```txt id="yob34n"
+shirts → red shirts
+```
+
+Faster 😄
+
+-----------------------------------------------------------------
+Yes 🔥
+Sliding Window has very common templates/pattern syntax.
+
+Most problems are solved using these templates.
+
+---
+
+# 1️⃣ Fixed Size Sliding Window Template
+
+    Used when:
+
+    * window size always fixed
+    * like `k`
+
+    Examples:
+
+    * Maximum Sum Subarray of Size K
+    * Average of Subarray of Size K
+
+    ---
+
+    # Template
+
+    ```js id="t17iqi"
+    function fixedWindow(arr, k) {
+
+        let left = 0;
+        let windowSum = 0;
+
+        for (let right = 0; right < arr.length; right++) {
+
+            // 1. add right element
+            windowSum += arr[right];
+
+            // 2. when window size becomes k
+            if (right >= k - 1) {
+
+                // 3. calculate answer
+                console.log(windowSum);
+
+                // 4. remove left element
+                windowSum -= arr[left];
+
+                // 5. move left
+                left++;
+            }
+        }
+    }
+    ```
+
+    ---
+
+    # Flow
+
+    ```txt id="4owng9"
+    Add right
+    ↓
+    Window size reached?
+    ↓
+    Calculate answer
+    ↓
+    Remove left
+    ↓
+    Move left
+    ```
+
+    ---
+
+    # Visualization
+
+    ```txt id="3gj5up"
+    [1 2 3] 4 5
+    ```
+
+    Slide →
+
+    ```txt id="lsvx76"
+    1 [2 3 4] 5
+    ```
+
+    ---
+
+# 2️⃣ Dynamic Sliding Window Template
+
+    Used when:
+
+    * window size changes dynamically
+
+    Examples:
+
+    * Longest Substring Without Repeating Characters
+    * Minimum Window Substring
+    * Fruits Into Baskets
+
+    ---
+
+    # Template
+
+    ```js id="m6pk19"
+    function dynamicWindow(arr) {
+
+        let left = 0;
+
+        for (let right = 0; right < arr.length; right++) {
+
+            // 1. expand window
+            console.log(arr[right]);
+
+            // 2. shrink while invalid
+            while (windowIsInvalid) {
+
+                left++;
+            }
+
+            // 3. calculate answer
+        }
+    }
+    ```
+
+    ---
+
+    # Real Dynamic Template
+
+    ```js id="hhg6f6"
+    function longestSubstring(s) {
+
+        let set = new Set();
+
+        let left = 0;
+        let maxLen = 0;
+
+        for (let right = 0; right < s.length; right++) {
+
+            // expand
+            while (set.has(s[right])) {
+
+                set.delete(s[left]);
+
+                left++;
+            }
+
+            set.add(s[right]);
+
+            // calculate answer
+            maxLen = Math.max(
+                maxLen,
+                right - left + 1
+            );
+        }
+
+        return maxLen;
+    }
+    ```
+
+    ---
+
+    # Dynamic Window Flow
+
+    ```txt id="90zv7x"
+    Expand window
+    ↓
+    Invalid?
+    ↓ yes
+    Shrink window
+    ↓
+    Valid again
+    ↓
+    Update answer
+    ```
+
+    ---
+
+    # Golden Formula
+
+    Window size:
+
+    WindowSize=right-left+1
+
+    VERY IMPORTANT 🚀
+
+    ---
+
+    # Common Sliding Window Variables
+
+    | Variable  | Purpose         |
+    | --------- | --------------- |
+    | left      | start of window |
+    | right     | end of window   |
+    | windowSum | track sum       |
+    | set/map   | track frequency |
+    | maxLen    | longest answer  |
+    | minLen    | shortest answer |
+
+    ---
+
+    # How To Identify Which Template?
+
+    ## Fixed Window
+
+    Keywords:
+
+    ```txt id="hlzsgk"
+    size k
+    fixed size
+    average
+    maximum sum
+    ```
+
+    Use:
+
+    ```txt id="mvyk7f"
+    if(right >= k - 1)
+    ```
+
+    ---
+
+    ## Dynamic Window
+
+    Keywords:
+
+    ```txt id="m0g6l7"
+    longest
+    shortest
+    at most k
+    without repeating
+    minimum window
+    ```
+
+    Use:
+
+    ```txt id="n0tymi"
+    while(window invalid)
+    ```
+
+    ---
+
+# Master Mental Model
+
+    ```txt id="yn4hz6"
+    right → expands window
+    left  → shrinks window
+    ```
+
+    That’s the entire sliding window pattern 😄

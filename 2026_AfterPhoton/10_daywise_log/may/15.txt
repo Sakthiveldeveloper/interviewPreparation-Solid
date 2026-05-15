@@ -1,0 +1,19 @@
+Ds day
+🔥 Tier 1 (Must Master First)
+    Sliding Window
+    Two Pointer
+    Hashing
+    Binary Search
+    DFS / BFS
+🔥 Tier 2 (High Value)
+    Prefix Sum
+    Fast & Slow Pointer
+    Heap / Priority Queue
+    Greedy
+🔥 Tier 3 (Advanced / Differentiator)
+    Backtracking
+    Dynamic Programming
+    Monotonic Stack
+    Union-Find
+-----------------------
+Sliding Window

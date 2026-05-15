@@ -1,0 +1,579 @@
+# 3️⃣ Longest Substring Without Repeating Characters ⭐
+
+---
+
+# Problem Statement
+
+Given a string `s`,
+find the length of the longest substring without repeating characters.
+
+---
+
+# Example
+
+```js id="llswrc1"
+s = "abcabcbb"
+```
+
+Substrings without repeating chars:
+
+```txt id="llswrc2"
+"abc" → length 3
+"bca" → length 3
+"cab" → length 3
+```
+
+Output:
+
+```txt id="llswrc3"
+3
+```
+
+---
+
+# Step 1 — Understand Problem
+
+Need:
+
+```txt id="llswrc4"
+longest substring
+```
+
+Condition:
+
+```txt id="llswrc5"
+no duplicate characters
+```
+
+Substring means:
+
+```txt id="llswrc6"
+contiguous
+```
+
+---
+
+# Step 2 — Pattern Identification
+
+Keywords:
+
+```txt id="llswrc7"
+longest
+substring
+without repeating
+```
+
+Immediately think:
+
+# ✅ Dynamic Sliding Window
+
+---
+
+# Why Dynamic Window?
+
+Because:
+
+* window size is NOT fixed
+* duplicates decide shrinking
+
+Example:
+
+```txt id="llswrc8"
+abc
+```
+
+valid window.
+
+Add:
+
+```txt id="llswrc9"
+a
+```
+
+Now invalid:
+
+```txt id="llswrc10"
+abca
+```
+
+Need shrinking dynamically.
+
+---
+
+# Why NOT Fixed Window?
+
+Because:
+
+```txt id="llswrc11"
+window size changes
+```
+
+No fixed `k`.
+
+---
+
+# Why NOT Two Pointers?
+
+This IS technically two pointers,
+but the solving pattern is:
+
+```txt id="llswrc12"
+Dynamic Sliding Window
+```
+
+---
+
+# Step 3 — Brute Force Approach
+
+## Thinking
+
+Generate all substrings.
+Check:
+
+```txt id="llswrc13"
+does substring contain duplicates?
+```
+
+Track longest.
+
+---
+
+# Brute Force Code
+
+```js id="llswrc14"
+function bruteForce(s) {
+
+    let maxLen = 0;
+
+    for (let i = 0; i < s.length; i++) {
+
+        let set = new Set();
+
+        for (let j = i; j < s.length; j++) {
+
+            if (set.has(s[j])) {
+                break;
+            }
+
+            set.add(s[j]);
+
+            maxLen = Math.max(maxLen, j - i + 1);
+        }
+    }
+
+    return maxLen;
+}
+```
+
+---
+
+# Complexity
+
+Worst case:
+
+O(n^2)
+
+---
+
+# Step 4 — Optimization Thinking
+
+Question:
+
+```txt id="llswrc15"
+Do we need to restart checking every time?
+```
+
+NO.
+
+We can maintain:
+
+* one moving window
+* remove duplicates dynamically
+
+---
+
+# Key Observation
+
+Window:
+
+```txt id="llswrc16"
+abc
+```
+
+Add:
+
+```txt id="llswrc17"
+a
+```
+
+Now duplicate exists.
+
+Instead of restarting:
+
+* remove left chars
+* until duplicate removed
+
+---
+
+# Core Dynamic Window Idea
+
+```txt id="llswrc18"
+Expand right
+↓
+Duplicate?
+↓ yes
+Shrink left
+↓
+Valid again
+```
+
+---
+
+# Step 5 — Build Sliding Window Logic
+
+---
+
+# Variables Needed
+
+```js id="llswrc19"
+let set = new Set();
+let left = 0;
+let maxLen = 0;
+```
+
+---
+
+# Main Loop
+
+```js id="llswrc20"
+for (let right = 0; right < s.length; right++)
+```
+
+---
+
+# Check Duplicate
+
+If:
+
+```js id="llswrc21"
+set.has(s[right])
+```
+
+window becomes invalid.
+
+---
+
+# Shrink Window
+
+```js id="llswrc22"
+while (set.has(s[right]))
+```
+
+Remove left chars:
+
+```js id="llswrc23"
+set.delete(s[left]);
+left++;
+```
+
+---
+
+# Add Current Character
+
+```js id="llswrc24"
+set.add(s[right]);
+```
+
+---
+
+# Update Maximum
+
+Window size:
+
+right-left+1
+
+Update:
+
+```js id="llswrc25"
+maxLen = Math.max(maxLen, right - left + 1);
+```
+
+---
+
+# Final Optimized Code
+
+```js id="llswrc26"
+function lengthOfLongestSubstring(s) {
+
+    let set = new Set();
+
+    let left = 0;
+    let maxLen = 0;
+
+    for (let right = 0; right < s.length; right++) {
+
+        // shrink until valid
+        while (set.has(s[right])) {
+
+            set.delete(s[left]);
+
+            left++;
+        }
+
+        // add current char
+        set.add(s[right]);
+
+        // update answer
+        maxLen = Math.max(
+            maxLen,
+            right - left + 1
+        );
+    }
+
+    return maxLen;
+}
+```
+
+---
+
+# Dry Run
+
+Input:
+
+```js id="llswrc27"
+"abcabcbb"
+```
+
+---
+
+## right = 0
+
+```txt id="llswrc28"
+a
+```
+
+Set:
+
+```txt id="llswrc29"
+[a]
+```
+
+Length:
+
+```txt id="llswrc30"
+1
+```
+
+---
+
+## right = 1
+
+```txt id="llswrc31"
+ab
+```
+
+Length:
+
+```txt id="llswrc32"
+2
+```
+
+---
+
+## right = 2
+
+```txt id="llswrc33"
+abc
+```
+
+Length:
+
+```txt id="llswrc34"
+3
+```
+
+---
+
+## right = 3
+
+Char:
+
+```txt id="llswrc35"
+a
+```
+
+Duplicate!
+
+Shrink:
+
+Remove:
+
+```txt id="llswrc36"
+a
+```
+
+Now valid again.
+
+Continue.
+
+---
+
+# Complexity
+
+Time:
+
+O(n)
+
+Why?
+
+* each char added once
+* removed once
+
+---
+
+Space:
+
+```txt id="llswrc37"
+O(k)
+```
+
+where:
+
+```txt id="llswrc38"
+k = unique characters
+```
+
+---
+
+# Important Interview Points
+
+---
+
+## Signal To Use Dynamic Window
+
+```txt id="llswrc39"
+longest substring
+without repeating
+```
+
+---
+
+## Why `while` not `if`?
+
+VERY IMPORTANT.
+
+Because:
+
+```txt id="llswrc40"
+multiple duplicates may exist
+```
+
+Example:
+
+```txt id="llswrc41"
+abba
+```
+
+Need continuous shrinking.
+
+---
+
+# Core Dynamic Window Template
+
+```js id="llswrc42"
+for (right) {
+
+    while (window invalid) {
+
+        left++;
+    }
+
+    update answer
+}
+```
+
+---
+
+# Similar Problems
+
+Same pattern:
+
+* Fruits Into Baskets
+* Longest Repeating Character Replacement
+* Minimum Window Substring
+
+---
+
+# Final Mental Model
+
+```txt id="llswrc43"
+Expand right
+↓
+Duplicate found?
+↓ yes
+Shrink left
+↓
+Valid again
+↓
+Update longest
+```
+
+Dynamic Sliding Window complete 🔥
+
+---------------------------------------
+
+// 3.Longest Substring Without Repeating Character
+// function bruteForce(s) {
+
+//     let maxLen = 0;
+
+//     for (let i = 0; i < s.length; i++) {
+
+//         let set = new Set();
+
+//         for (let j = i; j < s.length; j++) {
+
+//             if (set.has(s[j])) {
+//                 break;
+//             }
+
+//             set.add(s[j]);
+
+//             maxLen = Math.max(maxLen, j - i + 1);
+//         }
+//     }
+
+//     return maxLen;
+// }
+// console.log(bruteForce("abcabcmnaamnopdfopdf"))
+
+// function lengthOfLongestSubstring(s) {
+
+//     let set = new Set();
+
+//     let left = 0;
+//     let maxLen = 0;
+
+//     for (let right = 0; right < s.length; right++) {
+
+//         // shrink until valid
+//         while (set.has(s[right])) {
+
+//             set.delete(s[left]);
+
+//             left++;
+//         }
+
+//         // add current char
+//         set.add(s[right]);
+
+//         // update answer
+//         maxLen = Math.max(
+//             maxLen,
+//             right - left + 1
+//         );
+//     }
+
+//     return maxLen;
+// }
+// console.log(lengthOfLongestSubstring('abcabc'))

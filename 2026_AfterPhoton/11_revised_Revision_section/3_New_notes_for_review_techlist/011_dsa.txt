@@ -1347,6 +1347,37 @@ Pattern wise explanation
         🚀 Final Advice
             👉 Don’t just read this
             👉 Apply it while learning each pattern
+        Template   
+        Types of Sliding Window
+        1️⃣ Fixed Size Window
+            Window size always same.
+                for (let end = 0; end < arr.length; end++) {
+
+                    // add element
+
+                    if (window size == k) {
+
+                        // calculate answer
+
+                        // remove left
+
+                        left++;
+                    }
+                }
+        2️⃣ Dynamic Size Window
+            Window size changes.
+            Example:
+                Longest Substring Without Repeating Characters
+                Minimum Window Substring
+            Template:
+                for (let right = 0; right < arr.length; right++) {
+                    // expand window
+                    while (window invalid) {
+                        // shrink window
+                        left++;
+                    }
+                    // update answer
+                }
     -------------------------------------------------------------------------------
     🧠 Pattern 2: Two Pointer
         🔹 1. What?
@@ -3017,16 +3048,16 @@ Pattern wise explanation
             Minimum Window Substring ⭐
             Sliding Window Maximum ⭐
         2️⃣ Two Pointer (10)
-        Valid Palindrome
-        Remove Duplicates from Sorted Array
-        Two Sum II (Sorted)
-        Squares of Sorted Array
-        Container With Most Water ⭐
-        3Sum ⭐
-        3Sum Closest
-        Sort Colors
-        Trapping Rain Water ⭐
-        4Sum
+            Valid Palindrome
+            Remove Duplicates from Sorted Array
+            Two Sum II (Sorted)
+            Squares of Sorted Array
+            Container With Most Water ⭐
+            3Sum ⭐
+            3Sum Closest
+            Sort Colors
+            Trapping Rain Water ⭐
+            4Sum
         3️⃣ Hashing (10)
         Two Sum ⭐
         Contains Duplicate

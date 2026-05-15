@@ -1,0 +1,315 @@
+# 🚀 Sliding Window — Final Recall Notes (JavaScript)
+
+---
+
+# What is Sliding Window?
+    Sliding Window is a **DSA pattern** used to solve:
+    * subarray
+    * substring
+    * contiguous sequence problems
+    efficiently.
+    Instead of recalculating everything again and again:
+    ```txt id="v3z6ok"
+        remove left
+        add right
+    ```
+    We maintain a moving window.
+    ---
+
+# Why Use Sliding Window?
+    Convert:
+    O(n^2)\rightarrow O(n)
+    Optimize brute force solutions.
+---
+# Brute Force vs Sliding Window
+
+    ## Brute Force
+        Check every subarray manually.
+        ```js id="r9w9pd"
+        for (...) {
+            for (...) {
+            }
+        }
+        ```
+        Time:
+        ```txt id="s7k6r8"
+            O(n²)
+        ```
+        ---
+    ## Sliding Window
+        Reuse previous computation.
+        ```txt id="6jlwmn"
+            previousSum - left + right
+        ```
+        Time:
+        ```txt id="v0ys2f"
+            O(n)
+        ```
+    ---
+
+# Core Idea
+    Window moves like:
+    ```txt id="c08n8w"
+    [1 2 3] 4 5
+    1 [2 3 4] 5
+    1 2 [3 4 5]
+    ```
+    Window slides → → →
+    ---
+# Types of Sliding Window
+
+    | Type              | Usage                   |
+    | ----------------- | ----------------------- |
+    | Fixed Size Window | Window size always same |
+    | Dynamic Window    | Window size changes     |
+
+---
+
+# 1️⃣ Fixed Size Window
+    Used when:
+        * size `k`
+        * fixed length
+    Keywords:
+        ```txt id="kldg3x"
+        size k
+        average
+        maximum sum
+        fixed window
+        ```
+    ---
+    # Fixed Window Template
+        ```js id="mkhmh0"
+        function fixedWindow(arr, k) {
+
+            let left = 0;
+            let sum = 0;
+
+            for (let right = 0; right < arr.length; right++) {
+
+                // add right element
+                sum += arr[right];
+
+                // window size reached
+                if (right >= k - 1) {
+
+                    // calculate answer
+                    console.log(sum);
+
+                    // remove left
+                    sum -= arr[left];
+
+                    // move left
+                    left++;
+                }
+            }
+        }
+        ```
+        ---
+    # Fixed Window Flow
+        ```txt id="ql0w2y"
+        Add right
+        ↓
+        Window size reached?
+        ↓
+        Calculate answer
+        ↓
+        Remove left
+        ↓
+        Move left
+        ```
+    ---
+    # Fixed Window Problems
+        * Maximum Sum Subarray of Size K
+        * Average of Subarray of Size K
+        * Permutation in String
+    ---
+# 2️⃣ Dynamic Sliding Window
+
+    Used when:
+        * window grows/shrinks dynamically
+
+    Keywords:
+        ```txt id="o7kk7x"
+        longest
+        shortest
+        minimum
+        without repeating
+        at most k
+        ```
+    ---
+    # Dynamic Window Template
+        ```js id="4qjlwm"
+        function dynamicWindow(arr) {
+            let left = 0;
+            for (let right = 0; right < arr.length; right++) {
+                // expand window
+                while (window invalid) {
+                    // shrink window
+                    left++;
+                }
+                // calculate answer
+            }
+        }
+        ```
+    ---
+    # Dynamic Window Flow
+        ```txt id="c26v5p"
+        Expand window
+        ↓
+        Window invalid?
+        ↓ yes
+        Shrink window
+        ↓
+        Valid again
+        ↓
+        Update answer
+        ```
+---
+# Golden Formula
+Window size:
+WindowSize=right-left+1
+VERY IMPORTANT.
+---
+# Most Common Variables
+
+| Variable | Meaning            |
+| -------- | ------------------ |
+| left     | start pointer      |
+| right    | end pointer        |
+| sum      | current window sum |
+| set      | unique tracking    |
+| map      | frequency tracking |
+| maxLen   | longest answer     |
+| minLen   | shortest answer    |
+
+---
+
+# Common Sliding Window Conditions
+    ## Fixed Window
+        ```js id="4ljlwm"
+        if (right >= k - 1)
+        ```
+    ---
+    ## Shrink Invalid Window
+        ```js id="4j8j1m"
+        while (window invalid)
+        ```
+    ---
+    # Frequency Map Pattern
+        Used in:
+        * Minimum Window Substring
+        * Fruits Into Baskets
+        * Permutation in String
+    Template:
+        ```js id="bqg56d"
+        map.set(
+        char,
+        (map.get(char) || 0) + 1
+        );
+        ```
+    Remove:
+        ```js id="2jqc0v"
+        map.set(char, map.get(char) - 1);
+
+        if (map.get(char) === 0) {
+        map.delete(char);
+        }
+        ```
+    ---
+# Set Pattern
+
+    Used for:
+
+    * unique characters
+    * no duplicates
+
+    ```js id="8u0hvg"
+    while(set.has(s[right])) {
+
+    set.delete(s[left]);
+
+    left++;
+    }
+    ```
+
+    ---
+
+# Important Patterns
+
+| Problem                  | Pattern            |
+| ------------------------ | ------------------ |
+| Maximum Sum              | Fixed              |
+| Average Subarray         | Fixed              |
+| Longest Unique Substring | Set                |
+| Character Replacement    | Frequency          |
+| Fruits Into Baskets      | At Most K Distinct |
+| Minimum Window           | Frequency + Shrink |
+| Sliding Window Maximum   | Monotonic Queue    |
+
+---
+
+# Hard Pattern Trick
+    Exactly K distinct:
+    Exactly(K)=AtMost(K)-AtMost(K-1)
+    Used in:
+    * Subarrays with K Different Integers
+---
+# Sliding Window Maximum
+    Special advanced pattern.
+    Uses:
+    ```txt id="nwr7m9"
+    Monotonic Deque
+    ```
+    Not normal window.
+---
+# How To Identify Sliding Window Problems
+    Look for:
+    ✅ subarray
+    ✅ substring
+    ✅ contiguous
+    ✅ longest
+    ✅ shortest
+    ✅ maximum
+    ✅ minimum
+    ✅ fixed size `k`
+---
+# Master Mental Model
+    ```txt id="3j32o2"
+    right → expand window
+    left  → shrink window
+    ```
+That is the whole Sliding Window pattern 🔥
+---
+# Best Practice Order
+
+    ```txt id="bgkhtx"
+    1. Average of Subarray of Size K
+    2. Maximum Sum Subarray of Size K
+    3. Longest Substring Without Repeating Characters
+    4. Minimum Size Subarray Sum
+    5. Fruits Into Baskets
+    6. Longest Repeating Character Replacement
+    7. Permutation in String
+    8. Minimum Window Substring
+    9. Subarrays with K Different Integers
+    10. Sliding Window Maximum
+    ```
+    ---
+# Interview Strategy
+    In interviews:
+    ```txt id="pkdz5w"
+    1. Explain brute force
+    2. Explain optimization
+    3. Apply sliding window
+    4. Mention time complexity
+    ```
+    ---
+# Final One-Line Definition
+    ```txt id="q00wpk"
+    Sliding Window is an optimization pattern
+    used to solve contiguous subarray/substring
+    problems efficiently by maintaining a moving window.
+    ```
+------------------------------------------------------------------------------------------------
+reference
+https://chatgpt.com/share/6a06bcef-d874-8324-881b-af24435472c7
