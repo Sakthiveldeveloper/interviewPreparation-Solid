@@ -1,0 +1,349 @@
+JavaScript Roadmap
+
+Modern Way
+    JavaScript Language
+    ↓
+    Core JavaScript Fundamentals
+    ↓
+    Advanced JavaScript
+    ↓
+    Browser APIs & DOM
+    ↓
+    Asynchronous JavaScript
+    ↓
+    ES6+ Features
+    ↓
+    TypeScript
+    ↓
+    Design Patterns
+    ↓
+    DSA in JavaScript
+    ↓
+    Frontend Frameworks
+        React
+        Next.js
+        Angular
+    ↓
+    Backend Development
+        Node.js
+        Express.js
+    ↓
+    Database
+    ↓
+    Authentication & Security
+    ↓
+    Testing
+    ↓
+    System Design
+    ↓
+    Cloud & Deployment
+
+Traditional Way
+    JavaScript
+    ↓
+    DOM Manipulation
+    ↓
+    jQuery
+    ↓
+    AJAX
+    ↓
+    Node.js
+    ↓
+    Express.js
+    ↓
+    React / Angular
+
+------------------------------------------------------------------------------------------
+First Understand Big Picture
+JavaScript Language
+    What is JavaScript
+    History of JavaScript
+    ECMAScript
+    How JavaScript Executes
+    Install Node.js
+    Install VS Code
+    First JavaScript Program
+    Compilation vs Interpretation
+    JavaScript Engine (V8)    
+Core JavaScript Fundamentals
+    Basics
+        Variables
+            var
+            let
+            const
+
+        Data Types
+            Primitive Types
+            Reference Types
+
+        Type Conversion
+
+        Operators
+
+        User Input
+
+        Conditional Statements
+
+        Loops
+
+        Arrays
+
+        Functions
+    Functions
+        Function Declaration
+        Function Expression
+        Arrow Function
+        IIFE
+        Callback Function
+        Higher Order Function
+        Pure Function
+    Objects
+        Object Creation
+        Object Methods
+        Object Destructuring
+        Spread Operator
+        Rest Operator
+        Object.keys()
+        Object.values()
+        Object.entries()
+    OOP in JavaScript
+        Prototype
+        Prototype Chain
+
+        Class
+        Object
+        Constructor
+
+        this keyword
+
+        Static
+
+        Inheritance
+
+        Polymorphism
+
+        Encapsulation
+
+        Abstraction
+    String Handling
+        String
+
+        Template Literals
+
+        String Methods
+
+        String Immutability
+
+        String Searching
+
+        Regular Expressions Basics
+    Arrays
+        push
+        pop
+        shift
+        unshift
+
+        slice
+        splice
+
+        map
+        filter
+        reduce
+
+        find
+        findIndex
+
+        some
+        every
+
+        sort
+
+        flat
+        flatMap
+Advanced JavaScript
+    Execution Context
+        Execution Context
+
+        Call Stack
+
+        Memory Creation Phase
+
+        Execution Phase
+    Scope
+        Global Scope
+
+        Function Scope
+
+        Block Scope
+
+        Lexical Scope
+    Hoisting
+        var
+
+        let
+
+        const
+
+        Function Hoisting
+    Closures
+        What is Closure
+
+        Practical Examples
+    this Keyword
+        Global Context
+
+        Object Context
+
+        Function Context
+
+        Arrow Function Context
+    Call Apply Bind
+        call()
+
+        apply()
+
+        bind()
+Asynchronous JavaScript
+        Event Loop
+
+        Callback
+
+        Promise
+
+        Promise Chaining
+
+        Promise.all()
+
+        Promise.race()
+
+        Async Await
+
+        Microtask Queue
+
+        Macrotask Queue
+Browser APIs
+        DOM
+
+        BOM
+
+        Events
+
+        Event Bubbling
+
+        Event Capturing
+
+        Event Delegation
+
+        LocalStorage
+
+        SessionStorage
+
+        Cookies
+
+        Fetch API
+
+        WebSocket Basics
+ES6+ Features
+        let
+
+        const
+
+        Arrow Functions
+
+        Template Literals
+
+        Destructuring
+
+        Spread Operator
+
+        Rest Operator
+
+        Modules
+
+        Default Parameters
+
+        Optional Chaining
+
+        Nullish Coalescing
+Error Handling
+        try
+
+        catch
+
+        finally
+
+        throw
+
+        Custom Error
+TypeScript
+        Types
+
+        Interfaces
+
+        Type Alias
+
+        Enums
+
+        Generics
+
+        Classes
+
+        Decorators Basics
+
+        Utility Types
+Modules
+    Import
+
+    Export
+
+    Default Export
+
+    Named Export
+
+    Module Pattern
+Design Patterns
+    Module Pattern
+
+    Singleton Pattern
+
+    Factory Pattern
+
+    Observer Pattern
+
+    Pub Sub Pattern
+React
+    JSX
+
+    Components
+
+    Props
+
+    State
+
+    Event Handling
+
+    Conditional Rendering
+
+    Lists & Keys
+
+    Forms
+
+    Hooks
+        useState
+        useEffect
+        useMemo
+        useCallback
+        useRef
+        useReducer
+
+    Context API
+
+    React Router
+
+    Custom Hooks
+
+    Performance Optimization
+
+    Error Boundaries
+
+    Testing

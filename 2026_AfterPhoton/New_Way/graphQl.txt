@@ -1,0 +1,555 @@
+# Top 30 GraphQL Interview Questions
+
+## Fundamentals
+
+1. What is GraphQL?
+
+2. Why was GraphQL created?
+
+3. What problems does GraphQL solve?
+
+4. What is the difference between GraphQL and REST API?
+
+5. What are the advantages of GraphQL?
+
+6. What are the disadvantages of GraphQL?
+
+7. What is a GraphQL Schema?
+
+8. What is a Type in GraphQL?
+
+9. What are Scalar Types in GraphQL?
+
+10. What is the difference between Query and Mutation?
+
+---
+
+## Queries & Schema
+
+11. What is a Query in GraphQL?
+
+12. What are GraphQL Variables and why are they used?
+
+13. What are Aliases in GraphQL?
+
+14. What are Fragments in GraphQL?
+
+15. What are Nested Queries?
+
+16. What is the purpose of the ID type?
+
+17. What is the meaning of the exclamation mark (!) in GraphQL?
+
+18. What is the difference between:
+
+    * String
+    * String!
+    * [String]
+    * [String!]!
+
+19. What are Input Types and why are they used?
+
+20. How does GraphQL handle relationships between entities?
+
+---
+
+## Resolvers
+
+21. What is a Resolver?
+
+22. Explain the Resolver execution flow.
+
+23. What are the four Resolver parameters?
+
+    * parent
+    * args
+    * context
+    * info
+
+24. What is the purpose of Context in GraphQL?
+
+25. What is the difference between Parent and Args?
+
+---
+
+## Apollo & Implementation
+
+26. What is Apollo Server?
+
+27. What is Apollo Client?
+
+28. What is Apollo Cache and why is it important?
+
+---
+
+## Authentication & Performance
+
+29. How is JWT Authentication implemented in GraphQL?
+
+30. What is the N+1 Problem in GraphQL and how can DataLoader solve it?
+---------------------------------------------------------------------------------------
+# GraphQL Top 30 Interview Questions with Answers
+
+## 1. What is GraphQL?
+
+GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need. It was developed by Facebook (Meta) to solve over-fetching and under-fetching problems.
+
+---
+
+## 2. Why was GraphQL created?
+
+GraphQL was created to:
+
+* Reduce multiple API calls
+* Avoid over-fetching data
+* Avoid under-fetching data
+* Improve frontend flexibility
+
+---
+
+## 3. What problems does GraphQL solve?
+
+* Over-fetching
+* Under-fetching
+* Multiple network requests
+* Rigid API responses
+
+---
+
+## 4. GraphQL vs REST?
+
+| GraphQL               | REST                    |
+| --------------------- | ----------------------- |
+| Single Endpoint       | Multiple Endpoints      |
+| Client Chooses Data   | Server Decides Response |
+| No Over-fetching      | Over-fetching Possible  |
+| No Under-fetching     | Under-fetching Possible |
+| Strongly Typed Schema | No Standard Schema      |
+
+---
+
+## 5. Advantages of GraphQL?
+
+* Single endpoint
+* Flexible queries
+* Strong typing
+* Better frontend performance
+* Self-documenting schema
+
+---
+
+## 6. Disadvantages of GraphQL?
+
+* Complex caching
+* Learning curve
+* Query complexity issues
+* Difficult file uploads
+* Extra server processing
+
+---
+
+## 7. What is a GraphQL Schema?
+
+A schema is the blueprint of a GraphQL API. It defines types, queries, mutations, and relationships.
+
+Example:
+
+```graphql
+type User {
+  id: ID!
+  name: String!
+}
+```
+
+---
+
+## 8. What is a Type in GraphQL?
+
+A Type defines the structure of data.
+
+Example:
+
+```graphql
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+}
+```
+
+---
+
+## 9. What are Scalar Types?
+
+Built-in primitive types:
+
+```text
+String
+Int
+Float
+Boolean
+ID
+```
+
+---
+
+## 10. Query vs Mutation?
+
+Query:
+
+* Read data
+
+Mutation:
+
+* Create
+* Update
+* Delete data
+
+---
+
+## 11. What is a Query?
+
+A Query is used to fetch data from a GraphQL API.
+
+Example:
+
+```graphql
+query {
+  users {
+    name
+  }
+}
+```
+
+---
+
+## 12. What are Variables?
+
+Variables allow dynamic values in queries and mutations.
+
+Example:
+
+```graphql
+query GetUser($id: ID!) {
+  user(id: $id) {
+    name
+  }
+}
+```
+
+---
+
+## 13. What are Aliases?
+
+Aliases rename query results.
+
+Example:
+
+```graphql
+query {
+  userOne: user(id: "1") {
+    name
+  }
+
+  userTwo: user(id: "2") {
+    name
+  }
+}
+```
+
+---
+
+## 14. What are Fragments?
+
+Fragments are reusable field collections.
+
+Example:
+
+```graphql
+fragment UserFields on User {
+  id
+  name
+  email
+}
+```
+
+---
+
+## 15. What are Nested Queries?
+
+Nested queries allow fetching related data.
+
+Example:
+
+```graphql
+query {
+  user(id: "1") {
+    name
+    posts {
+      title
+    }
+  }
+}
+```
+
+---
+
+## 16. What is ID Type?
+
+ID is a special scalar used for unique identifiers.
+
+Example:
+
+```graphql
+id: ID!
+```
+
+---
+
+## 17. What does ! mean?
+
+The exclamation mark means Non-Nullable.
+
+Example:
+
+```graphql
+name: String!
+```
+
+The field must always contain a value.
+
+---
+
+## 18. Explain String, String!, [String], [String!]!
+
+String
+
+* Nullable string
+
+String!
+
+* Required string
+
+[String]
+
+* Nullable array of nullable strings
+
+[String!]!
+
+* Required array of required strings
+
+---
+
+## 19. What are Input Types?
+
+Input Types group multiple inputs together.
+
+Example:
+
+```graphql
+input CreateUserInput {
+  name: String!
+  email: String!
+}
+```
+
+Used in mutations.
+
+---
+
+## 20. How does GraphQL handle relationships?
+
+Using nested object types.
+
+Example:
+
+```graphql
+type User {
+  id: ID!
+  posts: [Post]
+}
+```
+
+---
+
+## 21. What is a Resolver?
+
+A resolver is a function responsible for fetching and returning data for a GraphQL field.
+
+Example:
+
+```javascript
+Query: {
+  users() {
+    return users;
+  }
+}
+```
+
+---
+
+## 22. Explain Resolver Flow.
+
+```text
+Client
+↓
+Query
+↓
+Resolver
+↓
+Database
+↓
+Response
+```
+
+---
+
+## 23. What are Resolver Parameters?
+
+```javascript
+(parent, args, context, info)
+```
+
+* parent
+* args
+* context
+* info
+
+---
+
+## 24. What is Context?
+
+Context contains shared data available to all resolvers.
+
+Examples:
+
+* JWT Token
+* Logged-in User
+* Database Connection
+* Request Object
+
+---
+
+## 25. Parent vs Args?
+
+Parent:
+
+* Result from previous resolver
+
+Args:
+
+* Query or mutation arguments
+
+Example:
+
+```javascript
+user(parent, args)
+```
+
+```graphql
+user(id: "1")
+```
+
+args:
+
+```javascript
+{
+  id: "1"
+}
+```
+
+---
+
+## 26. What is Apollo Server?
+
+Apollo Server is a GraphQL server implementation used to build GraphQL APIs in Node.js.
+
+Responsibilities:
+
+* Execute Queries
+* Execute Mutations
+* Run Resolvers
+* Connect Databases
+
+---
+
+## 27. What is Apollo Client?
+
+Apollo Client is a GraphQL client library used in React applications.
+
+Features:
+
+* Fetch data
+* Cache data
+* Manage state
+* Execute mutations
+
+---
+
+## 28. What is Apollo Cache?
+
+Apollo Cache stores query results locally.
+
+Benefits:
+
+* Faster UI
+* Reduced network calls
+* Better performance
+
+---
+
+## 29. How is JWT Authentication implemented?
+
+Steps:
+
+1. User logs in
+2. Server generates JWT
+3. Client stores token
+4. Client sends token in Authorization header
+5. GraphQL Context validates token
+6. Protected resolvers check user access
+
+Example:
+
+```javascript
+context: ({ req }) => {
+  const token = req.headers.authorization;
+}
+```
+
+---
+
+## 30. What is N+1 Problem?
+
+The N+1 problem occurs when GraphQL executes one query and then many additional queries for related data.
+
+Example:
+
+```text
+Get 100 Users
+↓
+Run 100 Post Queries
+```
+
+Total:
+
+```text
+101 Queries
+```
+
+Bad performance.
+
+Solution:
+
+DataLoader
+
+DataLoader batches requests into a single database query.
+
+Benefits:
+
+* Fewer DB calls
+* Better performance
+* Reduced latency
+
+```
+```

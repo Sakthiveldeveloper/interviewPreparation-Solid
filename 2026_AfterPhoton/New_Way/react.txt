@@ -1,0 +1,698 @@
+Roadmap
+    Modern
+        React Fundamentals
+        ↓
+        Core React Concepts
+        ↓
+        React Hooks
+        ↓
+        Advanced React
+        ↓
+        State Management
+        ↓
+        Performance Optimization
+        ↓
+        Testing
+        ↓
+        React Architecture
+        ↓
+        Design Patterns
+        ↓
+        System Design for React
+        ↓
+        Next.js
+    Traditional Way
+        React
+        ↓
+        Class Components
+        ↓
+        Lifecycle Methods
+        ↓
+        Redux
+        ↓
+        React Router
+        ↓
+        API Integration
+--------------------------------------------------------------------------------------------------
+First Understand Big Picture
+    React
+    What is React
+
+    History of React
+
+    Why React
+
+    Virtual DOM
+
+    Real DOM
+
+    How React Works
+
+    SPA vs MPA
+
+    Install Node.js
+
+    Create React App
+
+    Vite
+
+    Project Structure
+
+    First React Application
+------------------------------------------------------------------------------------------------
+    Perfect. Now let's do React the same way we did Java and JavaScript.
+
+The goal is:
+
+✅ Learn React from fundamentals to advanced
+✅ Cover interview topics
+✅ Cover real project development
+✅ Modern React (2026)
+✅ Separate React from Next.js
+
+---
+
+# React Roadmap
+
+## Modern Way
+
+```text
+React Fundamentals
+↓
+Core React Concepts
+↓
+React Hooks
+↓
+Advanced React
+↓
+State Management
+↓
+Performance Optimization
+↓
+Testing
+↓
+React Architecture
+↓
+Design Patterns
+↓
+System Design for React
+↓
+Next.js
+```
+
+---
+
+## Traditional Way
+
+```text
+React
+↓
+Class Components
+↓
+Lifecycle Methods
+↓
+Redux
+↓
+React Router
+↓
+API Integration
+```
+
+Today focus mostly on Functional Components + Hooks.
+
+---
+
+# First Understand Big Picture
+
+## React
+
+```text
+What is React
+
+History of React
+
+Why React
+
+Virtual DOM
+
+Real DOM
+
+How React Works
+
+SPA vs MPA
+
+Install Node.js
+
+Create React App
+
+Vite
+
+Project Structure
+
+First React Application
+```
+
+---
+
+# Core React Fundamentals
+
+## JSX
+
+```text
+What is JSX
+
+JSX Rules
+
+Expressions in JSX
+
+JSX vs HTML
+
+Fragments
+```
+
+---
+
+## Components
+
+```text
+Functional Components
+
+Class Components
+
+Component Composition
+
+Reusable Components
+```
+
+---
+
+## Props
+
+```text
+Props
+
+Passing Data
+
+Default Props
+
+Children Props
+
+Props Drilling
+```
+
+---
+
+## State
+
+```text
+useState
+
+Updating State
+
+State vs Props
+
+Derived State
+```
+
+---
+
+## Event Handling
+
+```text
+Click Events
+
+Input Events
+
+Form Events
+
+Synthetic Events
+```
+
+---
+
+## Conditional Rendering
+
+```text
+if
+
+ternary
+
+&& operator
+
+switch case
+```
+
+---
+
+## List Rendering
+
+```text
+map()
+
+Keys
+
+Dynamic Lists
+```
+
+---
+
+## Forms
+
+```text
+Controlled Components
+
+Uncontrolled Components
+
+Form Validation
+
+Dynamic Forms
+```
+
+---
+
+# React Hooks
+
+## Basic Hooks
+
+```text
+useState
+
+useEffect
+
+useRef
+
+useContext
+```
+
+---
+
+## Advanced Hooks
+
+```text
+useMemo
+
+useCallback
+
+useReducer
+
+useLayoutEffect
+
+useImperativeHandle
+
+useId
+
+useTransition
+
+useDeferredValue
+```
+
+---
+
+## Custom Hooks
+
+```text
+Creating Custom Hooks
+
+Reusable Logic
+
+Hook Rules
+```
+
+---
+
+# Component Lifecycle
+
+## Class Component Lifecycle
+
+```text
+Mounting
+
+Updating
+
+Unmounting
+```
+
+---
+
+## Functional Lifecycle
+
+```text
+useEffect
+
+Cleanup Function
+
+Dependency Array
+```
+
+---
+
+# React Routing
+
+## React Router
+
+```text
+BrowserRouter
+
+Routes
+
+Route
+
+Link
+
+NavLink
+
+useNavigate
+
+useParams
+
+Nested Routes
+
+Protected Routes
+```
+
+---
+
+# API Handling
+
+```text
+Fetch API
+
+Axios
+
+GET
+
+POST
+
+PUT
+
+DELETE
+
+PATCH
+
+Loading State
+
+Error Handling
+```
+
+---
+
+# State Management
+
+## Context API
+
+```text
+Context
+
+Provider
+
+Consumer
+
+useContext
+```
+
+---
+
+## Redux Toolkit
+
+```text
+Store
+
+Slice
+
+Reducer
+
+Actions
+
+Middleware
+
+Async Thunk
+
+RTK Query
+```
+
+---
+
+## Alternative State Management
+
+```text
+Zustand
+
+Recoil
+
+Jotai
+```
+
+---
+
+# React Performance Optimization
+
+```text
+React.memo
+
+useMemo
+
+useCallback
+
+Code Splitting
+
+Lazy Loading
+
+Suspense
+
+Debouncing
+
+Throttling
+
+Virtualization
+```
+
+---
+
+# Error Handling
+
+```text
+Error Boundaries
+
+Fallback UI
+
+Global Error Handling
+```
+
+---
+
+# React Internals
+
+```text
+Virtual DOM
+
+Reconciliation
+
+Diffing Algorithm
+
+Fiber Architecture
+
+Rendering Process
+```
+
+These are common senior-level interview topics.
+
+---
+
+# React Design Patterns
+
+```text
+Container Pattern
+
+Presentational Pattern
+
+Compound Components
+
+Higher Order Components
+
+Render Props
+
+Custom Hooks Pattern
+```
+
+---
+
+# Authentication
+
+```text
+JWT
+
+OAuth
+
+Role Based Access
+
+Protected Routes
+
+Refresh Token
+```
+
+---
+
+# Testing
+
+## Unit Testing
+
+```text
+Jest
+
+React Testing Library
+```
+
+---
+
+## Integration Testing
+
+```text
+Component Testing
+
+API Mocking
+```
+
+---
+
+## E2E Testing
+
+```text
+Cypress
+
+Playwright
+```
+
+---
+
+# React Architecture
+
+```text
+Folder Structure
+
+Feature Based Structure
+
+Reusable Components
+
+Custom Hooks
+
+Service Layer
+
+API Layer
+```
+
+---
+
+# React Security
+
+```text
+XSS
+
+CSRF
+
+Secure Token Storage
+
+Environment Variables
+```
+
+---
+
+# TypeScript with React
+
+```text
+Props Types
+
+Interfaces
+
+Types
+
+Generic Components
+
+Custom Hooks Typing
+```
+
+---
+
+# React System Design
+
+```text
+Large Scale React Applications
+
+Micro Frontends
+
+Module Federation
+
+State Management Strategy
+
+Performance Strategy
+
+Caching
+
+Real Time Applications
+```
+
+---
+
+# Complete React Learning Flow
+
+```text
+React Introduction
+↓
+JSX
+↓
+Components
+↓
+Props
+↓
+State
+↓
+Event Handling
+↓
+Conditional Rendering
+↓
+List Rendering
+↓
+Forms
+↓
+Hooks
+↓
+Lifecycle
+↓
+Routing
+↓
+API Handling
+↓
+Context API
+↓
+Redux Toolkit
+↓
+Performance Optimization
+↓
+Error Handling
+↓
+React Internals
+↓
+Design Patterns
+↓
+Authentication
+↓
+Testing
+↓
+Architecture
+↓
+TypeScript
+↓
+System Design
+```
+
+For your background (MERN + Module Federation experience), I'd pay extra attention to:
+
+1. React Hooks
+2. React Internals (Virtual DOM, Reconciliation, Fiber)
+3. Redux Toolkit
+4. Performance Optimization
+5. React Design Patterns
+6. React Architecture
+7. Module Federation
+8. TypeScript with React
+
+Those topics are what usually separate a 6–10 LPA developer from a 12–20+ LPA React developer in interviews.

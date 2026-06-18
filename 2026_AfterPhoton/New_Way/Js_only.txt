@@ -1,0 +1,16 @@
+ROAD MAP
+    Java Language
+    ↓
+    Core JavaScript Fundamentals
+    ↓
+    Advanced JavaScript Fundamentals
+    ↓
+    Browser & Runtime Concepts
+    ↓
+    JavaScript Internals
+    ↓
+    JavaScript Design Patterns
+    ↓
+    DSA in JavaScript
+    ↓
+    Then Frameworks

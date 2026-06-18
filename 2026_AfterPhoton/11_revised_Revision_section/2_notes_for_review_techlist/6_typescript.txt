@@ -389,6 +389,7 @@ Follow-up :
          Date 13 April ->  read for Interview
          Date 14 April ->  read for Interview
          Date 14 May ->  read for Interview
+         Date 13 Jun ->  read for Interview -> EMMES
 
 -----------------------------------------------------------------------------------------------
 Generics vs decorators
