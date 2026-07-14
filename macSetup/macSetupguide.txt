@@ -1,0 +1,339 @@
+Absolutely! This is actually a great idea. Every developer eventually gets a new laptop or a company Mac, and having your own **"Mac Development Setup Guide"** saves hours.
+
+I reviewed your terminal log.  Based on what you actually did, here's a clean checklist.
+
+---
+
+# 🍎 MacBook Air M5 - Development Setup Guide
+
+## Phase 1 - Install Homebrew
+
+### Install Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Add Homebrew to PATH
+
+```bash
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+### Verify
+
+```bash
+brew --version
+```
+
+---
+
+# Phase 2 - Install Git
+
+```bash
+brew install git
+```
+
+Verify
+
+```bash
+git --version
+```
+
+---
+
+# Phase 3 - Configure Git
+
+```bash
+git config --global user.name "Sakthivel A"
+
+git config --global user.email "sakthivel24498@gmail.com"
+```
+
+Verify
+
+```bash
+git config --list
+```
+
+Expected
+
+```
+user.name=Sakthivel A
+user.email=sakthivel24498@gmail.com
+```
+
+---
+
+# Phase 4 - GitHub SSH Authentication
+
+## Generate SSH Key
+
+```bash
+ssh-keygen -t ed25519 -C "sakthivel24498@gmail.com"
+```
+
+Press **Enter** for all prompts.
+
+---
+
+## Start SSH Agent
+
+```bash
+eval "$(ssh-agent -s)"
+```
+
+---
+
+## Add SSH Key
+
+```bash
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+---
+
+## Copy Public Key
+
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+---
+
+## GitHub
+
+GitHub
+
+→ Settings
+
+→ SSH and GPG Keys
+
+→ New SSH Key
+
+Paste the copied key.
+
+---
+
+## Test GitHub
+
+```bash
+ssh -T git@github.com
+```
+
+First time:
+
+```
+yes
+```
+
+Expected
+
+```
+Hi Sakthiveldeveloper!
+You've successfully authenticated.
+```
+
+---
+
+# Phase 5 - Clone Repository
+
+```bash
+git clone git@github.com:Sakthiveldeveloper/interviewPreparation-Solid.git
+```
+
+Open project
+
+```bash
+cd interviewPreparation-Solid
+```
+
+---
+
+# Phase 6 - Verify Git Workflow
+
+Create file
+
+```bash
+touch test.txt
+```
+
+Stage
+
+```bash
+git add .
+```
+
+Switch branch
+
+```bash
+git checkout after_photon
+```
+
+Commit
+
+```bash
+git commit -m "First commit from Mac"
+```
+
+Push
+
+```bash
+git push
+```
+
+---
+
+# Phase 7 - Install NVM
+
+Install
+
+```bash
+brew install nvm
+```
+
+Create directory
+
+```bash
+mkdir ~/.nvm
+```
+
+---
+
+## Configure nvm
+
+```bash
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+
+echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc
+
+echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
+```
+
+Reload
+
+```bash
+source ~/.zshrc
+```
+
+Verify
+
+```bash
+nvm --version
+```
+
+---
+
+# Phase 8 - Install Node
+
+View versions
+
+```bash
+nvm ls-remote
+```
+
+Install Node 22
+
+```bash
+nvm install 22
+```
+
+Verify
+
+```bash
+node -v
+```
+
+```bash
+npm -v
+```
+
+```bash
+nvm ls
+```
+
+---
+
+# Phase 9 - Next Tools
+
+Install pnpm
+
+```bash
+npm install -g pnpm
+```
+
+Verify
+
+```bash
+pnpm -v
+```
+
+---
+
+Install VS Code
+
+```bash
+brew install --cask visual-studio-code
+```
+
+---
+
+Install Docker Desktop
+
+```bash
+brew install --cask docker
+```
+
+---
+
+# Future Tools
+
+```bash
+brew install wget
+brew install jq
+brew install tree
+brew install redis
+brew install postgresql
+```
+
+---
+
+# Verification Checklist
+
+```bash
+brew --version
+git --version
+git config --list
+ssh -T git@github.com
+nvm --version
+node -v
+npm -v
+pnpm -v
+code --version
+docker --version
+```
+
+---
+
+## One suggestion
+
+Since I know you'll be setting up future office Macs as well, I'd go one step further and create a **single `mac-setup.sh` script**. You'd only need to run:
+
+```bash
+sh mac-setup.sh
+```
+
+and it would automatically:
+
+* Install Homebrew
+* Install Git
+* Configure Git
+* Install NVM
+* Install Node
+* Install pnpm
+* Install VS Code
+* Install Docker
+* Verify all installations
+
+That way, setting up a new Mac would take about **10–15 minutes** instead of manually repeating every step. I think it's well worth creating as your personal setup script.

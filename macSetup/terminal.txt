@@ -1,0 +1,1772 @@
+Last login: Sat Jun 27 13:35:00 on console
+sakthi@Sakthis-MacBook-Air ~ % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> This script will install:
+/opt/homebrew/bin/brew
+/opt/homebrew/share/doc/homebrew
+/opt/homebrew/share/man/man1/brew.1
+/opt/homebrew/share/zsh/site-functions/_brew
+/opt/homebrew/etc/bash_completion.d/brew
+/opt/homebrew
+/etc/paths.d/homebrew
+==> The following new directories will be created:
+/opt/homebrew/bin
+/opt/homebrew/etc
+/opt/homebrew/include
+/opt/homebrew/lib
+/opt/homebrew/sbin
+/opt/homebrew/share
+/opt/homebrew/var
+/opt/homebrew/opt
+/opt/homebrew/share/zsh
+/opt/homebrew/share/zsh/site-functions
+/opt/homebrew/var/homebrew
+/opt/homebrew/var/homebrew/linked
+/opt/homebrew/Cellar
+/opt/homebrew/Caskroom
+/opt/homebrew/Frameworks
+==> The Xcode Command Line Tools will be installed.
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/bin/install -d -o root -g wheel -m 0755 /opt/homebrew
+==> /usr/bin/sudo /bin/mkdir -p /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions
+==> /usr/bin/sudo /usr/sbin/chown sakthi /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/bin/chgrp admin /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/sbin/chown -R sakthi:admin /opt/homebrew
+==> Searching online for the Command Line Tools
+==> /usr/bin/sudo /usr/bin/touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Installing Command Line Tools for Xcode 26.6-26.6
+==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode\ 26.6-26.6
+Software Update Tool
+
+Finding available software
+
+Downloading Command Line Tools for Xcode 26.6
+Downloaded Command Line Tools for Xcode 26.6
+Installing Command Line Tools for Xcode 26.6
+Done with Command Line Tools for Xcode 26.6
+Done.
+==> /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+==> /usr/bin/sudo /bin/rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 345249, done.
+remote: Counting objects: 100% (856/856), done.
+remote: Compressing objects: 100% (283/283), done.
+remote: Total 345249 (delta 687), reused 619 (delta 573), pack-reused 344393 (from 6)
+remote: Enumerating objects: 55, done.
+remote: Counting objects: 100% (33/33), done.
+remote: Total 55 (delta 33), reused 33 (delta 33), pack-reused 22 (from 1)
+==> /usr/bin/sudo /bin/mkdir -p /etc/paths.d
+==> /usr/bin/sudo tee /etc/paths.d/homebrew
+/opt/homebrew/bin
+==> /usr/bin/sudo /usr/sbin/chown root:wheel /etc/paths.d/homebrew
+==> /usr/bin/sudo /bin/chmod a+r /etc/paths.d/homebrew
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:4ba8d535df01e4bf97e6661c3815796fd77364ea2552606e891659133a76f0e1
+################################################################################################################# 100.0%
+==> Pouring portable-ruby-4.0.5_1.arm64_big_sur.bottle.tar.gz
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/sakthi/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/sakthi/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+sakthi@Sakthis-MacBook-Air ~ % brew --version
+zsh: command not found: brew
+sakthi@Sakthis-MacBook-Air ~ % brew --version
+zsh: command not found: brew
+sakthi@Sakthis-MacBook-Air ~ % brew install git
+zsh: command not found: brew
+sakthi@Sakthis-MacBook-Air ~ % echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile
+sakthi@Sakthis-MacBook-Air ~ % eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+sakthi@Sakthis-MacBook-Air ~ % brew --version                                                     
+Homebrew 6.0.9
+sakthi@Sakthis-MacBook-Air ~ % brew install git                                                   
+==> Would install 1 formula:
+git
+==> Downloading https://ghcr.io/v2/homebrew/core/git/manifests/2.55.0
+################################################################################################################# 100.0%
+==> Would install 4 dependencies for git:
+pcre2
+json-c
+libunistring
+gettext
+==> Do you want to proceed with the installation? [y/n]
+==> Fetching downloads for: git
+✔︎ Bottle Manifest libunistring (1.4.2)                                                       Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest pcre2 (10.47_1)                                                            Downloaded   11.7KB/ 11.7KB
+✔︎ Bottle Manifest gettext (1.0)                                                              Downloaded   21.6KB/ 21.6KB
+✔︎ Bottle Manifest json-c (0.19)                                                              Downloaded    7.2KB/  7.2KB
+✔︎ Bottle json-c (0.19)                                                                       Downloaded  106.9KB/106.9KB
+✔︎ Bottle pcre2 (10.47_1)                                                                     Downloaded    2.4MB/  2.4MB
+✔︎ Bottle libunistring (1.4.2)                                                                Downloaded    1.9MB/  1.9MB
+✔︎ Bottle gettext (1.0)                                                                       Downloaded   10.2MB/ 10.2MB
+✔︎ Bottle git (2.55.0)                                                                        Downloaded   23.0MB/ 23.0MB
+==> Installing dependencies for git: pcre2, json-c, libunistring and gettext
+==> Installing git dependency: pcre2
+==> Pouring pcre2--10.47_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/pcre2/10.47_1: 244 files, 7.3MB
+==> Installing git dependency: json-c
+==> Pouring json-c--0.19.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/json-c/0.19: 34 files, 377.9KB
+==> Installing git dependency: libunistring
+==> Pouring libunistring--1.4.2.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libunistring/1.4.2: 59 files, 5.8MB
+==> Installing git dependency: gettext
+==> Pouring gettext--1.0.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/gettext/1.0: 2,499 files, 35.3MB
+==> Installing git
+==> Pouring git--2.55.0.arm64_tahoe.bottle.tar.gz
+==> Caveats
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
+==> Summary
+🍺  /opt/homebrew/Cellar/git/2.55.0: 1,730 files, 63.4MB
+==> Running `brew cleanup git`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+zsh completions and functions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+==> git
+The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.
+Subversion interoperability (git-svn) is now in the `git-svn` formula.
+sakthi@Sakthis-MacBook-Air ~ % git --version                                
+git version 2.50.1 (Apple Git-155)
+sakthi@Sakthis-MacBook-Air ~ % git config --global user.name "Sakthivel A"                 
+sakthi@Sakthis-MacBook-Air ~ % git config --global user.email "sakthivel24498@gmail.com"
+
+sakthi@Sakthis-MacBook-Air ~ %  git config --list
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.name=Sakthivel A
+user.email=sakthivel24498@gmail.com
+sakthi@Sakthis-MacBook-Air ~ % ssh-keygen -t ed25519 -C "sakthivel24498@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/sakthi/.ssh/id_ed25519): 
+Created directory '/Users/sakthi/.ssh'.
+Enter passphrase for "/Users/sakthi/.ssh/id_ed25519" (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/sakthi/.ssh/id_ed25519
+Your public key has been saved in /Users/sakthi/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:/dXBy6Skbl63NK4I4+4TZ4Pvac4NRAAdL2Vwago+opE sakthivel24498@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|       .o+o+     |
+|         .B   .  |
+|     .   + o . + |
+|  . . . o.o o +.o|
+| E . o .S oo ..o.|
+|  o . .  oo= .   |
+| .       o=+o. + |
+|        ..*o* + o|
+|        o+=B o.o |
++----[SHA256]-----+
+sakthi@Sakthis-MacBook-Air ~ % eval "$(ssh-agent -s)"
+Agent pid 6841
+sakthi@Sakthis-MacBook-Air ~ % ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+Identity added: /Users/sakthi/.ssh/id_ed25519 (sakthivel24498@gmail.com)
+sakthi@Sakthis-MacBook-Air ~ % 
+sakthi@Sakthis-MacBook-Air ~ % 
+sakthi@Sakthis-MacBook-Air ~ % pbcopy < ~/.ssh/id_ed25519.pub
+sakthi@Sakthis-MacBook-Air ~ % ssh -T git@github.com
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is: SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi Sakthiveldeveloper! You've successfully authenticated, but GitHub does not provide shell access.
+sakthi@Sakthis-MacBook-Air ~ %  git config --list                                 
+credential.helper=osxkeychain
+init.defaultbranch=main
+user.name=Sakthivel A
+user.email=sakthivel24498@gmail.com
+sakthi@Sakthis-MacBook-Air ~ % git clone git@github.com:Sakthiveldeveloper/interviewPreparation-Solid.git
+Cloning into 'interviewPreparation-Solid'...
+remote: Enumerating objects: 868, done.
+remote: Counting objects: 100% (194/194), done.
+remote: Compressing objects: 100% (149/149), done.
+remote: Total 868 (delta 75), reused 119 (delta 41), pack-reused 674 (from 1)
+Receiving objects: 100% (868/868), 881.62 KiB | 846.00 KiB/s, done.
+Resolving deltas: 100% (437/437), done.
+sakthi@Sakthis-MacBook-Air ~ % cd repository
+
+cd: no such file or directory: repository
+sakthi@Sakthis-MacBook-Air ~ % cd interviewPreparation-Solid
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % touch test.txt
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git add .
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git branch
+* main
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git checkout after_photon 
+A	test.txt
+branch 'after_photon' set up to track 'origin/after_photon'.
+Switched to a new branch 'after_photon'
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git add .                
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git commit -m "First commit from Mac"
+
+[after_photon 434e7f7] First commit from Mac
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 140.00 KiB/s, done.
+Total 3 (delta 1), reused 1 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Sakthiveldeveloper/interviewPreparation-Solid.git
+   1c6e2eb..434e7f7  after_photon -> after_photon
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git --version
+git version 2.50.1 (Apple Git-155)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm use 18
+zsh: command not found: nvm
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install nvm
+
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 formula:
+nvm
+==> Downloading https://ghcr.io/v2/homebrew/core/nvm/manifests/0.40.5
+################################################################################################################# 100.0%
+==> Fetching downloads for: nvm
+✔︎ Bottle nvm (0.40.5)                                                                        Downloaded   54.6KB/ 54.6KB
+==> Pouring nvm--0.40.5.all.bottle.tar.gz
+==> Caveats
+Please note that upstream has asked us to make explicit managing
+nvm via Homebrew is unsupported by them and you should check any
+problems against the standard nvm install method prior to reporting.
+
+You should create NVM's working directory if it doesn't exist:
+  mkdir ~/.nvm
+
+Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+You can set $NVM_DIR to any location, but leaving it unchanged from
+/opt/homebrew/Cellar/nvm/0.40.5 will destroy any nvm-installed Node installations
+upon upgrade/reinstall.
+
+Type `nvm help` for further information.
+==> Summary
+🍺  /opt/homebrew/Cellar/nvm/0.40.5: 10 files, 218.1KB
+==> Running `brew cleanup nvm`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm --version   
+zsh: command not found: nvm
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % node 
+zsh: command not found: node
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mkdir ~/.nvm
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm --version
+zsh: command not found: nvm
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
+
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % source ~/.zshrc
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm --version
+0.40.5
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm ls-remote
+        v0.1.14
+        v0.1.15
+        v0.1.16
+        v0.1.17
+        v0.1.18
+        v0.1.19
+        v0.1.20
+        v0.1.21
+        v0.1.22
+        v0.1.23
+        v0.1.24
+        v0.1.25
+        v0.1.26
+        v0.1.27
+        v0.1.28
+        v0.1.29
+        v0.1.30
+        v0.1.31
+        v0.1.32
+        v0.1.33
+        v0.1.90
+        v0.1.91
+        v0.1.92
+        v0.1.93
+        v0.1.94
+        v0.1.95
+        v0.1.96
+        v0.1.97
+        v0.1.98
+        v0.1.99
+       v0.1.100
+       v0.1.101
+       v0.1.102
+       v0.1.103
+       v0.1.104
+         v0.2.0
+         v0.2.1
+         v0.2.2
+         v0.2.3
+         v0.2.4
+         v0.2.5
+         v0.2.6
+         v0.3.0
+         v0.3.1
+         v0.3.2
+         v0.3.3
+         v0.3.4
+         v0.3.5
+         v0.3.6
+         v0.3.7
+         v0.3.8
+         v0.4.0
+         v0.4.1
+         v0.4.2
+         v0.4.3
+         v0.4.4
+         v0.4.5
+         v0.4.6
+         v0.4.7
+         v0.4.8
+         v0.4.9
+        v0.4.10
+        v0.4.11
+        v0.4.12
+         v0.5.0
+         v0.5.1
+         v0.5.2
+         v0.5.3
+         v0.5.4
+         v0.5.5
+         v0.5.6
+         v0.5.7
+         v0.5.8
+         v0.5.9
+        v0.5.10
+         v0.6.0
+         v0.6.1
+         v0.6.2
+         v0.6.3
+         v0.6.4
+         v0.6.5
+         v0.6.6
+         v0.6.7
+         v0.6.8
+         v0.6.9
+        v0.6.10
+        v0.6.11
+        v0.6.12
+        v0.6.13
+        v0.6.14
+        v0.6.15
+        v0.6.16
+        v0.6.17
+        v0.6.18
+        v0.6.19
+        v0.6.20
+        v0.6.21
+         v0.7.0
+         v0.7.1
+         v0.7.2
+         v0.7.3
+         v0.7.4
+         v0.7.5
+         v0.7.6
+         v0.7.7
+         v0.7.8
+         v0.7.9
+        v0.7.10
+        v0.7.11
+        v0.7.12
+         v0.8.0
+         v0.8.1
+         v0.8.2
+         v0.8.3
+         v0.8.4
+         v0.8.5
+         v0.8.6
+         v0.8.7
+         v0.8.8
+         v0.8.9
+        v0.8.10
+        v0.8.11
+        v0.8.12
+        v0.8.13
+        v0.8.14
+        v0.8.15
+        v0.8.16
+        v0.8.17
+        v0.8.18
+        v0.8.19
+        v0.8.20
+        v0.8.21
+        v0.8.22
+        v0.8.23
+        v0.8.24
+        v0.8.25
+        v0.8.26
+        v0.8.27
+        v0.8.28
+         v0.9.0
+         v0.9.1
+         v0.9.2
+         v0.9.3
+         v0.9.4
+         v0.9.5
+         v0.9.6
+         v0.9.7
+         v0.9.8
+         v0.9.9
+        v0.9.10
+        v0.9.11
+        v0.9.12
+        v0.10.0
+        v0.10.1
+        v0.10.2
+        v0.10.3
+        v0.10.4
+        v0.10.5
+        v0.10.6
+        v0.10.7
+        v0.10.8
+        v0.10.9
+       v0.10.10
+       v0.10.11
+       v0.10.12
+       v0.10.13
+       v0.10.14
+       v0.10.15
+       v0.10.16
+       v0.10.17
+       v0.10.18
+       v0.10.19
+       v0.10.20
+       v0.10.21
+       v0.10.22
+       v0.10.23
+       v0.10.24
+       v0.10.25
+       v0.10.26
+       v0.10.27
+       v0.10.28
+       v0.10.29
+       v0.10.30
+       v0.10.31
+       v0.10.32
+       v0.10.33
+       v0.10.34
+       v0.10.35
+       v0.10.36
+       v0.10.37
+       v0.10.38
+       v0.10.39
+       v0.10.40
+       v0.10.41
+       v0.10.42
+       v0.10.43
+       v0.10.44
+       v0.10.45
+       v0.10.46
+       v0.10.47
+       v0.10.48
+        v0.11.0
+        v0.11.1
+        v0.11.2
+        v0.11.3
+        v0.11.4
+        v0.11.5
+        v0.11.6
+        v0.11.7
+        v0.11.8
+        v0.11.9
+       v0.11.10
+       v0.11.11
+       v0.11.12
+       v0.11.13
+       v0.11.14
+       v0.11.15
+       v0.11.16
+        v0.12.0
+        v0.12.1
+        v0.12.2
+        v0.12.3
+        v0.12.4
+        v0.12.5
+        v0.12.6
+        v0.12.7
+        v0.12.8
+        v0.12.9
+       v0.12.10
+       v0.12.11
+       v0.12.12
+       v0.12.13
+       v0.12.14
+       v0.12.15
+       v0.12.16
+       v0.12.17
+       v0.12.18
+    iojs-v1.0.0
+    iojs-v1.0.1
+    iojs-v1.0.2
+    iojs-v1.0.3
+    iojs-v1.0.4
+    iojs-v1.1.0
+    iojs-v1.2.0
+    iojs-v1.3.0
+    iojs-v1.4.1
+    iojs-v1.4.2
+    iojs-v1.4.3
+    iojs-v1.5.0
+    iojs-v1.5.1
+    iojs-v1.6.0
+    iojs-v1.6.1
+    iojs-v1.6.2
+    iojs-v1.6.3
+    iojs-v1.6.4
+    iojs-v1.7.1
+    iojs-v1.8.1
+    iojs-v1.8.2
+    iojs-v1.8.3
+    iojs-v1.8.4
+    iojs-v2.0.0
+    iojs-v2.0.1
+    iojs-v2.0.2
+    iojs-v2.1.0
+    iojs-v2.2.0
+    iojs-v2.2.1
+    iojs-v2.3.0
+    iojs-v2.3.1
+    iojs-v2.3.2
+    iojs-v2.3.3
+    iojs-v2.3.4
+    iojs-v2.4.0
+    iojs-v2.5.0
+    iojs-v3.0.0
+    iojs-v3.1.0
+    iojs-v3.2.0
+    iojs-v3.3.0
+    iojs-v3.3.1
+         v4.0.0
+         v4.1.0
+         v4.1.1
+         v4.1.2
+         v4.2.0   (LTS: Argon)
+         v4.2.1   (LTS: Argon)
+         v4.2.2   (LTS: Argon)
+         v4.2.3   (LTS: Argon)
+         v4.2.4   (LTS: Argon)
+         v4.2.5   (LTS: Argon)
+         v4.2.6   (LTS: Argon)
+         v4.3.0   (LTS: Argon)
+         v4.3.1   (LTS: Argon)
+         v4.3.2   (LTS: Argon)
+         v4.4.0   (LTS: Argon)
+         v4.4.1   (LTS: Argon)
+         v4.4.2   (LTS: Argon)
+         v4.4.3   (LTS: Argon)
+         v4.4.4   (LTS: Argon)
+         v4.4.5   (LTS: Argon)
+         v4.4.6   (LTS: Argon)
+         v4.4.7   (LTS: Argon)
+         v4.5.0   (LTS: Argon)
+         v4.6.0   (LTS: Argon)
+         v4.6.1   (LTS: Argon)
+         v4.6.2   (LTS: Argon)
+         v4.7.0   (LTS: Argon)
+         v4.7.1   (LTS: Argon)
+         v4.7.2   (LTS: Argon)
+         v4.7.3   (LTS: Argon)
+         v4.8.0   (LTS: Argon)
+         v4.8.1   (LTS: Argon)
+         v4.8.2   (LTS: Argon)
+         v4.8.3   (LTS: Argon)
+         v4.8.4   (LTS: Argon)
+         v4.8.5   (LTS: Argon)
+         v4.8.6   (LTS: Argon)
+         v4.8.7   (LTS: Argon)
+         v4.9.0   (LTS: Argon)
+         v4.9.1   (Latest LTS: Argon)
+         v5.0.0
+         v5.1.0
+         v5.1.1
+         v5.2.0
+         v5.3.0
+         v5.4.0
+         v5.4.1
+         v5.5.0
+         v5.6.0
+         v5.7.0
+         v5.7.1
+         v5.8.0
+         v5.9.0
+         v5.9.1
+        v5.10.0
+        v5.10.1
+        v5.11.0
+        v5.11.1
+        v5.12.0
+         v6.0.0
+         v6.1.0
+         v6.2.0
+         v6.2.1
+         v6.2.2
+         v6.3.0
+         v6.3.1
+         v6.4.0
+         v6.5.0
+         v6.6.0
+         v6.7.0
+         v6.8.0
+         v6.8.1
+         v6.9.0   (LTS: Boron)
+         v6.9.1   (LTS: Boron)
+         v6.9.2   (LTS: Boron)
+         v6.9.3   (LTS: Boron)
+         v6.9.4   (LTS: Boron)
+         v6.9.5   (LTS: Boron)
+        v6.10.0   (LTS: Boron)
+        v6.10.1   (LTS: Boron)
+        v6.10.2   (LTS: Boron)
+        v6.10.3   (LTS: Boron)
+        v6.11.0   (LTS: Boron)
+        v6.11.1   (LTS: Boron)
+        v6.11.2   (LTS: Boron)
+        v6.11.3   (LTS: Boron)
+        v6.11.4   (LTS: Boron)
+        v6.11.5   (LTS: Boron)
+        v6.12.0   (LTS: Boron)
+        v6.12.1   (LTS: Boron)
+        v6.12.2   (LTS: Boron)
+        v6.12.3   (LTS: Boron)
+        v6.13.0   (LTS: Boron)
+        v6.13.1   (LTS: Boron)
+        v6.14.0   (LTS: Boron)
+        v6.14.1   (LTS: Boron)
+        v6.14.2   (LTS: Boron)
+        v6.14.3   (LTS: Boron)
+        v6.14.4   (LTS: Boron)
+        v6.15.0   (LTS: Boron)
+        v6.15.1   (LTS: Boron)
+        v6.16.0   (LTS: Boron)
+        v6.17.0   (LTS: Boron)
+        v6.17.1   (Latest LTS: Boron)
+         v7.0.0
+         v7.1.0
+         v7.2.0
+         v7.2.1
+         v7.3.0
+         v7.4.0
+         v7.5.0
+         v7.6.0
+         v7.7.0
+         v7.7.1
+         v7.7.2
+         v7.7.3
+         v7.7.4
+         v7.8.0
+         v7.9.0
+        v7.10.0
+        v7.10.1
+         v8.0.0
+         v8.1.0
+         v8.1.1
+         v8.1.2
+         v8.1.3
+         v8.1.4
+         v8.2.0
+         v8.2.1
+         v8.3.0
+         v8.4.0
+         v8.5.0
+         v8.6.0
+         v8.7.0
+         v8.8.0
+         v8.8.1
+         v8.9.0   (LTS: Carbon)
+         v8.9.1   (LTS: Carbon)
+         v8.9.2   (LTS: Carbon)
+         v8.9.3   (LTS: Carbon)
+         v8.9.4   (LTS: Carbon)
+        v8.10.0   (LTS: Carbon)
+        v8.11.0   (LTS: Carbon)
+        v8.11.1   (LTS: Carbon)
+        v8.11.2   (LTS: Carbon)
+        v8.11.3   (LTS: Carbon)
+        v8.11.4   (LTS: Carbon)
+        v8.12.0   (LTS: Carbon)
+        v8.13.0   (LTS: Carbon)
+        v8.14.0   (LTS: Carbon)
+        v8.14.1   (LTS: Carbon)
+        v8.15.0   (LTS: Carbon)
+        v8.15.1   (LTS: Carbon)
+        v8.16.0   (LTS: Carbon)
+        v8.16.1   (LTS: Carbon)
+        v8.16.2   (LTS: Carbon)
+        v8.17.0   (Latest LTS: Carbon)
+         v9.0.0
+         v9.1.0
+         v9.2.0
+         v9.2.1
+         v9.3.0
+         v9.4.0
+         v9.5.0
+         v9.6.0
+         v9.6.1
+         v9.7.0
+         v9.7.1
+         v9.8.0
+         v9.9.0
+        v9.10.0
+        v9.10.1
+        v9.11.0
+        v9.11.1
+        v9.11.2
+        v10.0.0
+        v10.1.0
+        v10.2.0
+        v10.2.1
+        v10.3.0
+        v10.4.0
+        v10.4.1
+        v10.5.0
+        v10.6.0
+        v10.7.0
+        v10.8.0
+        v10.9.0
+       v10.10.0
+       v10.11.0
+       v10.12.0
+       v10.13.0   (LTS: Dubnium)
+       v10.14.0   (LTS: Dubnium)
+       v10.14.1   (LTS: Dubnium)
+       v10.14.2   (LTS: Dubnium)
+       v10.15.0   (LTS: Dubnium)
+       v10.15.1   (LTS: Dubnium)
+       v10.15.2   (LTS: Dubnium)
+       v10.15.3   (LTS: Dubnium)
+       v10.16.0   (LTS: Dubnium)
+       v10.16.1   (LTS: Dubnium)
+       v10.16.2   (LTS: Dubnium)
+       v10.16.3   (LTS: Dubnium)
+       v10.17.0   (LTS: Dubnium)
+       v10.18.0   (LTS: Dubnium)
+       v10.18.1   (LTS: Dubnium)
+       v10.19.0   (LTS: Dubnium)
+       v10.20.0   (LTS: Dubnium)
+       v10.20.1   (LTS: Dubnium)
+       v10.21.0   (LTS: Dubnium)
+       v10.22.0   (LTS: Dubnium)
+       v10.22.1   (LTS: Dubnium)
+       v10.23.0   (LTS: Dubnium)
+       v10.23.1   (LTS: Dubnium)
+       v10.23.2   (LTS: Dubnium)
+       v10.23.3   (LTS: Dubnium)
+       v10.24.0   (LTS: Dubnium)
+       v10.24.1   (Latest LTS: Dubnium)
+        v11.0.0
+        v11.1.0
+        v11.2.0
+        v11.3.0
+        v11.4.0
+        v11.5.0
+        v11.6.0
+        v11.7.0
+        v11.8.0
+        v11.9.0
+       v11.10.0
+       v11.10.1
+       v11.11.0
+       v11.12.0
+       v11.13.0
+       v11.14.0
+       v11.15.0
+        v12.0.0
+        v12.1.0
+        v12.2.0
+        v12.3.0
+        v12.3.1
+        v12.4.0
+        v12.5.0
+        v12.6.0
+        v12.7.0
+        v12.8.0
+        v12.8.1
+        v12.9.0
+        v12.9.1
+       v12.10.0
+       v12.11.0
+       v12.11.1
+       v12.12.0
+       v12.13.0   (LTS: Erbium)
+       v12.13.1   (LTS: Erbium)
+       v12.14.0   (LTS: Erbium)
+       v12.14.1   (LTS: Erbium)
+       v12.15.0   (LTS: Erbium)
+       v12.16.0   (LTS: Erbium)
+       v12.16.1   (LTS: Erbium)
+       v12.16.2   (LTS: Erbium)
+       v12.16.3   (LTS: Erbium)
+       v12.17.0   (LTS: Erbium)
+       v12.18.0   (LTS: Erbium)
+       v12.18.1   (LTS: Erbium)
+       v12.18.2   (LTS: Erbium)
+       v12.18.3   (LTS: Erbium)
+       v12.18.4   (LTS: Erbium)
+       v12.19.0   (LTS: Erbium)
+       v12.19.1   (LTS: Erbium)
+       v12.20.0   (LTS: Erbium)
+       v12.20.1   (LTS: Erbium)
+       v12.20.2   (LTS: Erbium)
+       v12.21.0   (LTS: Erbium)
+       v12.22.0   (LTS: Erbium)
+       v12.22.1   (LTS: Erbium)
+       v12.22.2   (LTS: Erbium)
+       v12.22.3   (LTS: Erbium)
+       v12.22.4   (LTS: Erbium)
+       v12.22.5   (LTS: Erbium)
+       v12.22.6   (LTS: Erbium)
+       v12.22.7   (LTS: Erbium)
+       v12.22.8   (LTS: Erbium)
+       v12.22.9   (LTS: Erbium)
+      v12.22.10   (LTS: Erbium)
+      v12.22.11   (LTS: Erbium)
+      v12.22.12   (Latest LTS: Erbium)
+        v13.0.0
+        v13.0.1
+        v13.1.0
+        v13.2.0
+        v13.3.0
+        v13.4.0
+        v13.5.0
+        v13.6.0
+        v13.7.0
+        v13.8.0
+        v13.9.0
+       v13.10.0
+       v13.10.1
+       v13.11.0
+       v13.12.0
+       v13.13.0
+       v13.14.0
+        v14.0.0
+        v14.1.0
+        v14.2.0
+        v14.3.0
+        v14.4.0
+        v14.5.0
+        v14.6.0
+        v14.7.0
+        v14.8.0
+        v14.9.0
+       v14.10.0
+       v14.10.1
+       v14.11.0
+       v14.12.0
+       v14.13.0
+       v14.13.1
+       v14.14.0
+       v14.15.0   (LTS: Fermium)
+       v14.15.1   (LTS: Fermium)
+       v14.15.2   (LTS: Fermium)
+       v14.15.3   (LTS: Fermium)
+       v14.15.4   (LTS: Fermium)
+       v14.15.5   (LTS: Fermium)
+       v14.16.0   (LTS: Fermium)
+       v14.16.1   (LTS: Fermium)
+       v14.17.0   (LTS: Fermium)
+       v14.17.1   (LTS: Fermium)
+       v14.17.2   (LTS: Fermium)
+       v14.17.3   (LTS: Fermium)
+       v14.17.4   (LTS: Fermium)
+       v14.17.5   (LTS: Fermium)
+       v14.17.6   (LTS: Fermium)
+       v14.18.0   (LTS: Fermium)
+       v14.18.1   (LTS: Fermium)
+       v14.18.2   (LTS: Fermium)
+       v14.18.3   (LTS: Fermium)
+       v14.19.0   (LTS: Fermium)
+       v14.19.1   (LTS: Fermium)
+       v14.19.2   (LTS: Fermium)
+       v14.19.3   (LTS: Fermium)
+       v14.20.0   (LTS: Fermium)
+       v14.20.1   (LTS: Fermium)
+       v14.21.0   (LTS: Fermium)
+       v14.21.1   (LTS: Fermium)
+       v14.21.2   (LTS: Fermium)
+       v14.21.3   (Latest LTS: Fermium)
+        v15.0.0
+        v15.0.1
+        v15.1.0
+        v15.2.0
+        v15.2.1
+        v15.3.0
+        v15.4.0
+        v15.5.0
+        v15.5.1
+        v15.6.0
+        v15.7.0
+        v15.8.0
+        v15.9.0
+       v15.10.0
+       v15.11.0
+       v15.12.0
+       v15.13.0
+       v15.14.0
+        v16.0.0
+        v16.1.0
+        v16.2.0
+        v16.3.0
+        v16.4.0
+        v16.4.1
+        v16.4.2
+        v16.5.0
+        v16.6.0
+        v16.6.1
+        v16.6.2
+        v16.7.0
+        v16.8.0
+        v16.9.0
+        v16.9.1
+       v16.10.0
+       v16.11.0
+       v16.11.1
+       v16.12.0
+       v16.13.0   (LTS: Gallium)
+       v16.13.1   (LTS: Gallium)
+       v16.13.2   (LTS: Gallium)
+       v16.14.0   (LTS: Gallium)
+       v16.14.1   (LTS: Gallium)
+       v16.14.2   (LTS: Gallium)
+       v16.15.0   (LTS: Gallium)
+       v16.15.1   (LTS: Gallium)
+       v16.16.0   (LTS: Gallium)
+       v16.17.0   (LTS: Gallium)
+       v16.17.1   (LTS: Gallium)
+       v16.18.0   (LTS: Gallium)
+       v16.18.1   (LTS: Gallium)
+       v16.19.0   (LTS: Gallium)
+       v16.19.1   (LTS: Gallium)
+       v16.20.0   (LTS: Gallium)
+       v16.20.1   (LTS: Gallium)
+       v16.20.2   (Latest LTS: Gallium)
+        v17.0.0
+        v17.0.1
+        v17.1.0
+        v17.2.0
+        v17.3.0
+        v17.3.1
+        v17.4.0
+        v17.5.0
+        v17.6.0
+        v17.7.0
+        v17.7.1
+        v17.7.2
+        v17.8.0
+        v17.9.0
+        v17.9.1
+        v18.0.0
+        v18.1.0
+        v18.2.0
+        v18.3.0
+        v18.4.0
+        v18.5.0
+        v18.6.0
+        v18.7.0
+        v18.8.0
+        v18.9.0
+        v18.9.1
+       v18.10.0
+       v18.11.0
+       v18.12.0   (LTS: Hydrogen)
+       v18.12.1   (LTS: Hydrogen)
+       v18.13.0   (LTS: Hydrogen)
+       v18.14.0   (LTS: Hydrogen)
+       v18.14.1   (LTS: Hydrogen)
+       v18.14.2   (LTS: Hydrogen)
+       v18.15.0   (LTS: Hydrogen)
+       v18.16.0   (LTS: Hydrogen)
+       v18.16.1   (LTS: Hydrogen)
+       v18.17.0   (LTS: Hydrogen)
+       v18.17.1   (LTS: Hydrogen)
+       v18.18.0   (LTS: Hydrogen)
+       v18.18.1   (LTS: Hydrogen)
+       v18.18.2   (LTS: Hydrogen)
+       v18.19.0   (LTS: Hydrogen)
+       v18.19.1   (LTS: Hydrogen)
+       v18.20.0   (LTS: Hydrogen)
+       v18.20.1   (LTS: Hydrogen)
+       v18.20.2   (LTS: Hydrogen)
+       v18.20.3   (LTS: Hydrogen)
+       v18.20.4   (LTS: Hydrogen)
+       v18.20.5   (LTS: Hydrogen)
+       v18.20.6   (LTS: Hydrogen)
+       v18.20.7   (LTS: Hydrogen)
+       v18.20.8   (Latest LTS: Hydrogen)
+        v19.0.0
+        v19.0.1
+        v19.1.0
+        v19.2.0
+        v19.3.0
+        v19.4.0
+        v19.5.0
+        v19.6.0
+        v19.6.1
+        v19.7.0
+        v19.8.0
+        v19.8.1
+        v19.9.0
+        v20.0.0
+        v20.1.0
+        v20.2.0
+        v20.3.0
+        v20.3.1
+        v20.4.0
+        v20.5.0
+        v20.5.1
+        v20.6.0
+        v20.6.1
+        v20.7.0
+        v20.8.0
+        v20.8.1
+        v20.9.0   (LTS: Iron)
+       v20.10.0   (LTS: Iron)
+       v20.11.0   (LTS: Iron)
+       v20.11.1   (LTS: Iron)
+       v20.12.0   (LTS: Iron)
+       v20.12.1   (LTS: Iron)
+       v20.12.2   (LTS: Iron)
+       v20.13.0   (LTS: Iron)
+       v20.13.1   (LTS: Iron)
+       v20.14.0   (LTS: Iron)
+       v20.15.0   (LTS: Iron)
+       v20.15.1   (LTS: Iron)
+       v20.16.0   (LTS: Iron)
+       v20.17.0   (LTS: Iron)
+       v20.18.0   (LTS: Iron)
+       v20.18.1   (LTS: Iron)
+       v20.18.2   (LTS: Iron)
+       v20.18.3   (LTS: Iron)
+       v20.19.0   (LTS: Iron)
+       v20.19.1   (LTS: Iron)
+       v20.19.2   (LTS: Iron)
+       v20.19.3   (LTS: Iron)
+       v20.19.4   (LTS: Iron)
+       v20.19.5   (LTS: Iron)
+       v20.19.6   (LTS: Iron)
+       v20.20.0   (LTS: Iron)
+       v20.20.1   (LTS: Iron)
+       v20.20.2   (Latest LTS: Iron)
+        v21.0.0
+        v21.1.0
+        v21.2.0
+        v21.3.0
+        v21.4.0
+        v21.5.0
+        v21.6.0
+        v21.6.1
+        v21.6.2
+        v21.7.0
+        v21.7.1
+        v21.7.2
+        v21.7.3
+        v22.0.0
+        v22.1.0
+        v22.2.0
+        v22.3.0
+        v22.4.0
+        v22.4.1
+        v22.5.0
+        v22.5.1
+        v22.6.0
+        v22.7.0
+        v22.8.0
+        v22.9.0
+       v22.10.0
+       v22.11.0   (LTS: Jod)
+       v22.12.0   (LTS: Jod)
+       v22.13.0   (LTS: Jod)
+       v22.13.1   (LTS: Jod)
+       v22.14.0   (LTS: Jod)
+       v22.15.0   (LTS: Jod)
+       v22.15.1   (LTS: Jod)
+       v22.16.0   (LTS: Jod)
+       v22.17.0   (LTS: Jod)
+       v22.17.1   (LTS: Jod)
+       v22.18.0   (LTS: Jod)
+       v22.19.0   (LTS: Jod)
+       v22.20.0   (LTS: Jod)
+       v22.21.0   (LTS: Jod)
+       v22.21.1   (LTS: Jod)
+       v22.22.0   (LTS: Jod)
+       v22.22.1   (LTS: Jod)
+       v22.22.2   (LTS: Jod)
+       v22.22.3   (LTS: Jod)
+       v22.23.0   (LTS: Jod)
+       v22.23.1   (Latest LTS: Jod)
+        v23.0.0
+        v23.1.0
+        v23.2.0
+        v23.3.0
+        v23.4.0
+        v23.5.0
+        v23.6.0
+        v23.6.1
+        v23.7.0
+        v23.8.0
+        v23.9.0
+       v23.10.0
+       v23.11.0
+       v23.11.1
+        v24.0.0
+        v24.0.1
+        v24.0.2
+        v24.1.0
+        v24.2.0
+        v24.3.0
+        v24.4.0
+        v24.4.1
+        v24.5.0
+        v24.6.0
+        v24.7.0
+        v24.8.0
+        v24.9.0
+       v24.10.0
+       v24.11.0   (LTS: Krypton)
+       v24.11.1   (LTS: Krypton)
+       v24.12.0   (LTS: Krypton)
+       v24.13.0   (LTS: Krypton)
+       v24.13.1   (LTS: Krypton)
+       v24.14.0   (LTS: Krypton)
+       v24.14.1   (LTS: Krypton)
+       v24.15.0   (LTS: Krypton)
+       v24.16.0   (LTS: Krypton)
+       v24.17.0   (LTS: Krypton)
+       v24.18.0   (Latest LTS: Krypton)
+        v25.0.0
+        v25.1.0
+        v25.2.0
+        v25.2.1
+        v25.3.0
+        v25.4.0
+        v25.5.0
+        v25.6.0
+        v25.6.1
+        v25.7.0
+        v25.8.0
+        v25.8.1
+        v25.8.2
+        v25.9.0
+        v26.0.0
+        v26.1.0
+        v26.2.0
+        v26.3.0
+        v26.3.1
+        v26.4.0
+        v26.5.0
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm install 22
+Downloading and installing node v22.23.1...
+Downloading https://nodejs.org/dist/v22.23.1/node-v22.23.1-darwin-arm64.tar.xz...
+################################################################################################################# 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v22.23.1 (npm v10.9.8)
+Creating default alias: default -> 22 (-> v22.23.1 *)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % node --version
+v22.23.1
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % npm -v
+10.9.8
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % nvm ls
+->     v22.23.1
+default -> 22 (-> v22.23.1)
+iojs -> N/A (default)
+unstable -> N/A (default)
+node -> stable (-> v22.23.1) (default)
+stable -> 22.23 (-> v22.23.1) (default)
+lts/* -> lts/krypton (-> N/A)
+lts/argon -> v4.9.1 (-> N/A)
+lts/boron -> v6.17.1 (-> N/A)
+lts/carbon -> v8.17.0 (-> N/A)
+lts/dubnium -> v10.24.1 (-> N/A)
+lts/erbium -> v12.22.12 (-> N/A)
+lts/fermium -> v14.21.3 (-> N/A)
+lts/gallium -> v16.20.2 (-> N/A)
+lts/hydrogen -> v18.20.8 (-> N/A)
+lts/iron -> v20.20.2 (-> N/A)
+lts/jod -> v22.23.1
+lts/krypton -> v24.18.0 (-> N/A)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install --cask cursor            
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 cask:
+cursor
+==> Fetching downloads for: cursor
+✔︎ Cask cursor (3.10.20,23b9fb205fe595ea2be29da7214e19762d037fc3)                             Verified    273.8MB/273.8MB
+==> Installing Cask cursor
+==> Moving App 'Cursor.app' to '/Applications/Cursor.app'
+==> Linking Binary 'code' to '/opt/homebrew/bin/cursor'
+🍺  cursor was successfully installed!
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git checkout the_mac                          
+error: pathspec 'the_mac' did not match any file(s) known to git
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git checkout -b the_mac
+Switched to a new branch 'the_mac'
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git checkout main         
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % git checkout -b the_mac_era
+Switched to a new branch 'the_mac_era'
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % ls /Applications | grep Cursor
+Cursor.app
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % open -a Cursor
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install mysql
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 formula:
+mysql
+==> Downloading https://ghcr.io/v2/homebrew/core/mysql/manifests/9.7.1-1
+################################################################################################################# 100.0%
+==> Would install 9 dependencies for mysql:
+abseil
+icu4c@78
+lz4
+ca-certificates
+openssl@3
+protobuf
+zlib-ng-compat
+xz
+zstd
+==> Do you want to proceed with the installation? [y/n]
+==> Fetching downloads for: mysql
+⠙ Bottle Manifest abseil (20260107.1)
+✔︎ Bottle Manifest ca-certificates (2026-05-14)                                               Downloaded    1.7KB/  1.7KB
+✔︎ Bottle Manifest zlib-ng-compat (2.3.3_1)                                                   Downloaded    7.3KB/  7.3KB
+✔︎ Bottle Manifest xz (5.8.3)                                                                 Downloaded   11.8KB/ 11.8KB
+✔︎ Bottle Manifest zstd (1.5.7_1)                                                             Downloaded   13.2KB/ 13.2KB
+✔︎ Bottle ca-certificates (2026-05-14)                                                        Downloaded  112.1KB/112.1KB
+✔︎ Bottle Manifest protobuf (35.1)                                                            Downloaded   10.7KB/ 10.7KB
+✔︎ Bottle Manifest abseil (20260107.1)                                                        Downloaded   63.0KB/ 63.0KB
+✔︎ Bottle lz4 (1.10.0)                                                                        Downloaded  279.7KB/279.7KB
+✔︎ Bottle xz (5.8.3)                                                                          Downloaded  770.8KB/770.8KB
+✔︎ Bottle zstd (1.5.7_1)                                                                      Downloaded  793.6KB/793.6KB
+✔︎ Bottle abseil (20260107.1)                                                                 Downloaded    1.9MB/  1.9MB
+✔︎ Bottle Manifest icu4c@78 (78.3)                                                            Downloaded    9.7KB/  9.7KB
+✔︎ Bottle icu4c@78 (78.3)                                                                     Downloaded   31.8MB/ 31.8MB
+✔︎ Bottle protobuf (35.1)                                                                     Downloaded    3.7MB/  3.7MB
+✔︎ Bottle zlib-ng-compat (2.3.3_1)                                                            Downloaded  170.3KB/170.3KB
+✔︎ Bottle openssl@3 (3.6.3)                                                                   Downloaded   10.9MB/ 10.9MB
+✔︎ Bottle Manifest openssl@3 (3.6.3)                                                          Downloaded   12.0KB/ 12.0KB
+✔︎ Bottle mysql (9.7.1)                                                                       Downloaded   80.0MB/ 80.0MB
+✔︎ Bottle Manifest lz4 (1.10.0)                                                               Downloaded   13.8KB/ 13.8KB
+==> Installing dependencies for mysql: abseil, icu4c@78, lz4, ca-certificates, openssl@3, protobuf, zlib-ng-compat, xz and zstd
+==> Installing mysql dependency: abseil
+==> Pouring abseil--20260107.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/abseil/20260107.1: 806 files, 12.8MB
+==> Installing mysql dependency: icu4c@78
+==> Pouring icu4c@78--78.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/icu4c@78/78.3: 279 files, 87.7MB
+==> Installing mysql dependency: lz4
+==> Pouring lz4--1.10.0.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/lz4/1.10.0: 24 files, 767.6KB
+==> Installing mysql dependency: ca-certificates
+==> Pouring ca-certificates--2026-05-14.all.bottle.tar.gz
+
+==> Regenerating CA certificate bundle from keychain, this may take a while...
+🍺  /opt/homebrew/Cellar/ca-certificates/2026-05-14: 4 files, 199.2KB
+==> Installing mysql dependency: openssl@3
+==> Pouring openssl@3--3.6.3.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/openssl@3/3.6.3: 7,633 files, 37.7MB
+==> Installing mysql dependency: protobuf
+==> Pouring protobuf--35.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/protobuf/35.1: 373 files, 17.5MB
+==> Installing mysql dependency: zlib-ng-compat
+==> Pouring zlib-ng-compat--2.3.3_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/zlib-ng-compat/2.3.3_1: 17 files, 444.1KB
+==> Installing mysql dependency: xz
+==> Pouring xz--5.8.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xz/5.8.3: 96 files, 2.7MB
+==> Installing mysql dependency: zstd
+==> Pouring zstd--1.5.7_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/zstd/1.5.7_1: 32 files, 2.3MB
+==> Installing mysql
+==> Pouring mysql--9.7.1.arm64_tahoe.bottle.1.tar.gz
+2026-07-09T10:01:56.050030Z 0 [System] [MY-015017] [Server] MySQL Server Initialization - start.
+2026-07-09T10:01:56.052649Z 0 [System] [MY-013169] [Server] /opt/homebrew/Cellar/mysql/9.7.1/bin/mysqld (mysqld 9.7.1) initializing of server in progress as process 17724
+2026-07-09T10:01:56.054472Z 0 [Warning] [MY-010159] [Server] Setting lower_case_table_names=2 because file system for /opt/homebrew/var/mysql/ is case insensitive
+2026-07-09T10:01:56.057718Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-07-09T10:01:56.096442Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-07-09T10:01:56.365271Z 6 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2026-07-09T10:01:56.545509Z 0 [System] [MY-013172] [Server] Received SHUTDOWN from user <via user signal>. Shutting down mysqld (Version: 9.7.1).
+2026-07-09T10:01:57.238910Z 0 [System] [MY-015018] [Server] MySQL Server Initialization - end.
+==> Caveats
+A "/etc/my.cnf" or "/etc/mysql/my.cnf" from another install may interfere
+with a Homebrew-built server starting up correctly.
+
+Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:
+ - brew services stop mysql
+ - brew install mysql@8.4
+ - brew services start mysql@8.4
+ - brew services stop mysql@8.4
+ - brew services start mysql
+
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -u root
+
+To start mysql now and restart at login:
+  brew services start mysql
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+==> Summary
+🍺  /opt/homebrew/Cellar/mysql/9.7.1: 344 files, 308.7MB
+==> Running `brew cleanup mysql`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> mysql
+A "/etc/my.cnf" or "/etc/mysql/my.cnf" from another install may interfere
+with a Homebrew-built server starting up correctly.
+
+Upgrading from MySQL <8.4 to MySQL >9.0 requires running MySQL 8.4 first:
+ - brew services stop mysql
+ - brew install mysql@8.4
+ - brew services start mysql@8.4
+ - brew services stop mysql@8.4
+ - brew services start mysql
+
+We've installed your MySQL database without a root password. To secure it run:
+    mysql_secure_installation
+
+MySQL is configured to only allow connections from localhost by default
+
+To connect run:
+    mysql -u root
+
+To start mysql now and restart at login:
+  brew services start mysql
+Or, if you don't want/need a background service you can just run:
+  /opt/homebrew/opt/mysql/bin/mysqld_safe --datadir\=/opt/homebrew/var/mysql
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mysql --version
+mysql  Ver 9.7.1 for macos26.4 on arm64 (Homebrew)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew services start mysql
+==> Successfully started `mysql` (label: homebrew.mxcl.mysql)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mysql_secure_installation
+
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+
+VALIDATE PASSWORD COMPONENT can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No: Yes
+
+There are three levels of password validation policy:
+
+LOW    Length >= 8
+MEDIUM Length >= 8, numeric, mixed case, and special characters
+STRONG Length >= 8, numeric, mixed case, special characters and dictionary                  file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: mac@25
+
+Invalid option provided.
+
+There are three levels of password validation policy:
+
+LOW    Length >= 8
+MEDIUM Length >= 8, numeric, mixed case, and special characters
+STRONG Length >= 8, numeric, mixed case, special characters and dictionary                  file
+
+Please enter 0 = LOW, 1 = MEDIUM and 2 = STRONG: 2
+Please set the password for root here.
+
+New password: 
+
+Re-enter new password: 
+
+Estimated strength of the password: 25 
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
+ ... Failed! Error: Your password does not satisfy the current policy requirements
+
+New password: 
+
+Re-enter new password: 
+
+Estimated strength of the password: 50 
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
+ ... Failed! Error: Your password does not satisfy the current policy requirements
+
+New password: 
+
+Re-enter new password: 
+Sorry, passwords do not match.
+
+New password: 
+
+Re-enter new password: 
+
+Estimated strength of the password: 50 
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
+ ... Failed! Error: Your password does not satisfy the current policy requirements
+
+New password: 
+
+Re-enter new password: 
+
+Estimated strength of the password: 100 
+Do you wish to continue with the password provided?(Press y|Y for Yes, any other key for No) : y
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : y
+ - Dropping test database...
+Success.
+
+ - Removing privileges on test database...
+Success.
+
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : y
+Success.
+
+All done! 
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 11
+Server version: 9.7.1 Homebrew
+
+Copyright (c) 2000, 2026, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES:
+    -> EXIT
+    -> 
+    -> 
+    -> 
+    -> 
+    -> EXIT()
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':
+EXIT
+
+
+
+
+EXIT()' at line 1
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.008 sec)
+
+mysql> EXIT;
+Bye
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew services stop mysql
+Stopping `mysql`... (might take a while)
+==> Successfully stopped `mysql` (label: homebrew.mxcl.mysql)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew services list
+Name  Status User File
+mysql none        
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install --cask mysqlworkbench
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 cask:
+mysqlworkbench
+==> Fetching downloads for: mysqlworkbench
+✔︎ Cask mysqlworkbench (8.0.47)                                                               Verified    348.8MB/348.8MB
+==> Installing Cask mysqlworkbench
+==> Moving App 'MySQLWorkbench.app' to '/Applications/MySQLWorkbench.app'
+🍺  mysqlworkbench was successfully installed!
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mysql -u root -p                  
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mysql -u root -p
+Enter password: 
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew services start mysql         
+==> Successfully started `mysql` (label: homebrew.mxcl.mysql)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install --cask postman
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 cask:
+postman
+==> Fetching downloads for: postman
+✔︎ Cask postman (12.18.4)                                                                     Verified    137.9MB/137.9MB
+==> Installing Cask postman
+==> Moving App 'Postman.app' to '/Applications/Postman.app'
+🍺  postman was successfully installed!
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install openjdk@21
+✔︎ JSON API packages.arm64_tahoe.jws.json                                                     Downloaded   15.2MB/ 15.2MB
+==> Would install 1 formula:
+openjdk@21
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/21/manifests/21.0.11
+################################################################################################################# 100.0%
+==> Would install 21 dependencies for openjdk@21:
+libpng
+freetype
+giflib
+fontconfig
+glib
+xorgproto
+libxau
+libxdmcp
+libxcb
+libx11
+libxext
+libxrender
+lzo
+pixman
+cairo
+graphite2
+harfbuzz
+jpeg-turbo
+webp
+libtiff
+little-cms2
+==> Do you want to proceed with the installation? [y/n]
+==> Fetching downloads for: openjdk@21
+⠋ Bottle Manifest libpng (1.6.58)
+✔︎ Bottle Manifest freetype (2.14.3)                                                          Downloaded    9.4KB/  9.4KB
+✔︎ Bottle Manifest giflib (6.1.3)                                                             Downloaded    7.7KB/  7.7KB
+✔︎ Bottle Manifest libpng (1.6.58)                                                            Downloaded    8.6KB/  8.6KB
+✔︎ Bottle Manifest xorgproto (2025.1)                                                         Downloaded   13.1KB/ 13.1KB
+✔︎ Bottle Manifest libxau (1.0.12)                                                            Downloaded   10.3KB/ 10.3KB
+✔︎ Bottle Manifest libxdmcp (1.1.5)                                                           Downloaded   12.0KB/ 12.0KB
+✔︎ Bottle fontconfig (2.18.1)                                                                 Downloaded  417.1KB/417.1KB
+✔︎ Bottle libxdmcp (1.1.5)                                                                    Downloaded   36.8KB/ 36.8KB
+✔︎ Bottle freetype (2.14.3)                                                                   Downloaded  996.4KB/996.4KB
+✔︎ Bottle libxau (1.0.12)                                                                     Downloaded   33.4KB/ 33.4KB
+✔︎ Bottle xorgproto (2025.1)                                                                  Downloaded  720.1KB/720.1KB
+✔︎ Bottle Manifest libxcb (1.17.0)                                                            Downloaded   19.2KB/ 19.2KB
+✔︎ Bottle Manifest libxext (1.3.7)                                                            Downloaded   11.5KB/ 11.5KB
+✔︎ Bottle libxcb (1.17.0)                                                                     Downloaded  999.8KB/999.8KB
+✔︎ Bottle libxrender (0.9.12)                                                                 Downloaded   54.6KB/ 54.6KB
+✔︎ Bottle Manifest lzo (2.10)                                                                 Downloaded   16.7KB/ 16.7KB
+✔︎ Bottle Manifest pixman (0.46.4)                                                            Downloaded    9.3KB/  9.3KB
+✔︎ Bottle Manifest libxrender (0.9.12)                                                        Downloaded   14.2KB/ 14.2KB
+✔︎ Bottle lzo (2.10)                                                                          Downloaded  149.6KB/149.6KB
+✔︎ Bottle Manifest graphite2 (1.3.15)                                                         Downloaded    8.0KB/  8.0KB
+✔︎ Bottle pixman (0.46.4)                                                                     Downloaded  416.2KB/416.2KB
+✔︎ Bottle Manifest harfbuzz (14.2.1)                                                          Downloaded   33.9KB/ 33.9KB
+✔︎ Bottle Manifest jpeg-turbo (3.2.0)                                                         Downloaded    8.3KB/  8.3KB
+✔︎ Bottle cairo (1.18.4)                                                                      Downloaded    1.6MB/  1.6MB
+✔︎ Bottle libxext (1.3.7)                                                                     Downloaded  109.6KB/109.6KB
+✔︎ Bottle Manifest webp (1.6.0)                                                               Downloaded   19.5KB/ 19.5KB
+✔︎ Bottle Manifest little-cms2 (2.19)                                                         Downloaded   13.0KB/ 13.0KB
+✔︎ Bottle Manifest libtiff (4.7.2)                                                            Downloaded   61.8KB/ 61.8KB
+✔︎ Bottle glib (2.88.2)                                                                       Downloaded    9.3MB/  9.3MB
+✔︎ Bottle jpeg-turbo (3.2.0)                                                                  Downloaded    1.3MB/  1.3MB
+✔︎ Bottle libtiff (4.7.2)                                                                     Downloaded    2.0MB/  2.0MB
+✔︎ Bottle little-cms2 (2.19)                                                                  Downloaded  433.7KB/433.7KB
+✔︎ Bottle harfbuzz (14.2.1)                                                                   Downloaded    3.5MB/  3.5MB
+✔︎ Bottle libx11 (1.8.13)                                                                     Downloaded    2.3MB/  2.3MB
+✔︎ Bottle libpng (1.6.58)                                                                     Downloaded  459.8KB/459.8KB
+✔︎ Bottle Manifest cairo (1.18.4)                                                             Downloaded   29.8KB/ 29.8KB
+✔︎ Bottle graphite2 (1.3.15)                                                                  Downloaded   92.4KB/ 92.4KB
+✔︎ Bottle giflib (6.1.3)                                                                      Downloaded  143.2KB/143.2KB
+✔︎ Bottle Manifest libx11 (1.8.13)                                                            Downloaded   14.4KB/ 14.4KB
+✔︎ Bottle Manifest fontconfig (2.18.1)                                                        Downloaded   13.8KB/ 13.8KB
+✔︎ Bottle Manifest glib (2.88.2)                                                              Downloaded   20.9KB/ 20.9KB
+✔︎ Bottle webp (1.6.0)                                                                        Downloaded  901.9KB/901.9KB
+✔︎ Bottle openjdk@21 (21.0.11)                                                                Downloaded  200.3MB/200.3MB
+==> Installing dependencies for openjdk@21: libpng, freetype, giflib, fontconfig, glib, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, graphite2, harfbuzz, jpeg-turbo, webp, libtiff and little-cms2
+==> Installing openjdk@21 dependency: libpng
+==> Pouring libpng--1.6.58.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libpng/1.6.58: 28 files, 1.4MB
+==> Installing openjdk@21 dependency: freetype
+==> Pouring freetype--2.14.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/freetype/2.14.3: 68 files, 2.7MB
+==> Installing openjdk@21 dependency: giflib
+==> Pouring giflib--6.1.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/giflib/6.1.3: 19 files, 532.8KB
+==> Installing openjdk@21 dependency: fontconfig
+==> Pouring fontconfig--2.18.1.arm64_tahoe.bottle.1.tar.gz
+
+==> Regenerating font cache, this may take a while
+==> /opt/homebrew/Cellar/fontconfig/2.18.1/bin/fc-cache --force --really-force --verbose
+🍺  /opt/homebrew/Cellar/fontconfig/2.18.1: 102 files, 1.8MB
+==> Installing openjdk@21 dependency: glib
+==> Pouring glib--2.88.2.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/glib/2.88.2: 506 files, 39.9MB
+==> Installing openjdk@21 dependency: xorgproto
+==> Pouring xorgproto--2025.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xorgproto/2025.1: 268 files, 4.1MB
+==> Installing openjdk@21 dependency: libxau
+==> Pouring libxau--1.0.12.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxau/1.0.12: 21 files, 135.0KB
+==> Installing openjdk@21 dependency: libxdmcp
+==> Pouring libxdmcp--1.1.5.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxdmcp/1.1.5: 12 files, 140.6KB
+==> Installing openjdk@21 dependency: libxcb
+==> Pouring libxcb--1.17.0.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/libxcb/1.17.0: 2,498 files, 7.9MB
+==> Installing openjdk@21 dependency: libx11
+==> Pouring libx11--1.8.13.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libx11/1.8.13: 1,043 files, 7.4MB
+==> Installing openjdk@21 dependency: libxext
+==> Pouring libxext--1.3.7.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxext/1.3.7: 88 files, 466.2KB
+==> Installing openjdk@21 dependency: libxrender
+==> Pouring libxrender--0.9.12.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxrender/0.9.12: 13 files, 224KB
+==> Installing openjdk@21 dependency: lzo
+==> Pouring lzo--2.10.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/lzo/2.10: 32 files, 578.4KB
+==> Installing openjdk@21 dependency: pixman
+==> Pouring pixman--0.46.4.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/pixman/0.46.4: 11 files, 1.4MB
+==> Installing openjdk@21 dependency: cairo
+==> Pouring cairo--1.18.4.arm64_tahoe.bottle.2.tar.gz
+🍺  /opt/homebrew/Cellar/cairo/1.18.4: 58 files, 4.6MB
+==> Installing openjdk@21 dependency: graphite2
+==> Pouring graphite2--1.3.15.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/graphite2/1.3.15: 19 files, 274.4KB
+==> Installing openjdk@21 dependency: harfbuzz
+==> Pouring harfbuzz--14.2.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/harfbuzz/14.2.1: 94 files, 13MB
+==> Installing openjdk@21 dependency: jpeg-turbo
+==> Pouring jpeg-turbo--3.2.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/jpeg-turbo/3.2.0: 47 files, 4.3MB
+==> Installing openjdk@21 dependency: webp
+==> Pouring webp--1.6.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/webp/1.6.0: 64 files, 2.6MB
+==> Installing openjdk@21 dependency: libtiff
+==> Pouring libtiff--4.7.2.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/libtiff/4.7.2: 493 files, 9.3MB
+==> Installing openjdk@21 dependency: little-cms2
+==> Pouring little-cms2--2.19.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/little-cms2/2.19: 23 files, 1.5MB
+==> Installing openjdk@21
+==> Pouring openjdk@21--21.0.11.arm64_tahoe.bottle.tar.gz
+==> Caveats
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+
+openjdk@21 is keg-only, which means it was not symlinked into /opt/homebrew,
+because this is an alternate version of another formula.
+
+If you need to have openjdk@21 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk@21 you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"
+==> Summary
+🍺  /opt/homebrew/Cellar/openjdk@21/21.0.11: 600 files, 347.3MB
+==> Running `brew cleanup openjdk@21`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> openjdk@21
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+
+openjdk@21 is keg-only, which means it was not symlinked into /opt/homebrew,
+because this is an alternate version of another formula.
+
+If you need to have openjdk@21 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find openjdk@21 you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk@21/include"
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % sudo ln -sfn /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-21.jdk
+Password:
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo 'export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"' >> ~/.zshrc
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo 'export JAVA_HOME=$(/usr/libexec/java_home -v 21)' >> ~/.zshrc
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % java --version
+openjdk 21.0.11 2026-04-21
+OpenJDK Runtime Environment Homebrew (build 21.0.11)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.11, mixed mode, sharing)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % source ~/.zshrc
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % java --version 
+openjdk 21.0.11 2026-04-21
+OpenJDK Runtime Environment Homebrew (build 21.0.11)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.11, mixed mode, sharing)
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % echo $JAVA_HOME
+/opt/homebrew/Cellar/openjdk@21/21.0.11/libexec/openjdk.jdk/Contents/Home
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % touch Hello.java
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % brew install maven
+==> Would install 1 formula:
+maven
+==> Downloading https://ghcr.io/v2/homebrew/core/maven/manifests/3.9.16
+################################################################################################################# 100.0%
+==> Would install 1 dependency for maven:
+openjdk
+==> Do you want to proceed with the installation? [y/n]
+==> Fetching downloads for: maven
+✔︎ Bottle Manifest openjdk (26.0.1)                                                           Downloaded   44.1KB/ 44.1KB
+✔︎ Bottle maven (3.9.16)                                                                      Downloaded    9.4MB/  9.4MB
+✔︎ Bottle openjdk (26.0.1)                                                                    Downloaded  223.1MB/223.1MB
+==> Installing maven dependency: openjdk
+==> Pouring openjdk--26.0.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/openjdk/26.0.1: 550 files, 398.7MB
+==> Installing maven
+==> Pouring maven--3.9.16.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/maven/3.9.16: 100 files, 10.9MB
+==> Running `brew cleanup maven`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % mvn -version
+Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+Maven home: /opt/homebrew/Cellar/maven/3.9.16/libexec
+Java version: 21.0.11, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk@21/21.0.11/libexec/openjdk.jdk/Contents/Home
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "mac os x", version: "26.4", arch: "aarch64", family: "mac"
+sakthi@Sakthis-MacBook-Air interviewPreparation-Solid % 
